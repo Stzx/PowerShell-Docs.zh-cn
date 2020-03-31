@@ -1,13 +1,13 @@
 ---
 title: 安装 Windows PowerShell SDK
-ms.date: 09/13/2016
+ms.date: 03/30/2020
 ms.topic: article
-ms.openlocfilehash: e7ca38377b3e6533eec1a70027f6de1a9fb3091b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b47dddaf167024d30a7a31596f96569f976109d7
+ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73444499"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80394989"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>安装 Windows PowerShell SDK
 
@@ -18,7 +18,7 @@ ms.locfileid: "73444499"
 ## <a name="installing-windows-powershell-30-sdk-for-windows-8-and-windows-server-2012"></a>安装用于 Windows 8 和 Windows Server 2012 的 Windows PowerShell 3.0 SDK
 
 Windows PowerShell 3.0 随 Windows 8 和 Windows Server 2012 自动安装。 此外，可以下载并安装 Windows PowerShell 3.0 的引用程序集作为 Windows 8 SDK 的一部分。 你可以使用这些程序集为 Windows PowerShell 3.0 编写 cmdlet、提供商和主机程序。 在 Windows 8 中安装 Windows SDK 时，将在引用程序集文件夹（位于 `\Program Files
-(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0`）中自动安装 Windows PowerShell 程序集。 有关详细信息，请参阅 Windows 8 SDK 下载站点。 Windows powershell 代码示例也位于[Windows powershell 3.0 SDK 示例包](https://code.msdn.microsoft.com/Windows-PowerShell-30-SDK-9a34641d)的开发中心。
+(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0`）中自动安装 Windows PowerShell 程序集。 有关详细信息，请参阅 Windows 8 SDK 下载站点。 [Powershell-sdk-示例](https://github.com/MicrosoftDocs/powershell-sdk-samples/tree/master/SDK-3.0)存储库中也提供了 Windows powershell 代码示例。
 
 ## <a name="installing-windows-powershell-30-sdk-for-windows-7-and-windows-server-2008-r2"></a>安装用于 Windows 7 和 Windows Server 2008 R2 的 Windows PowerShell 3.0 SDK
 
@@ -34,9 +34,7 @@ Windows PowerShell 2.0 SDK 提供了用于编写 cmdlet、提供程序和托管�
 Assemblies\Microsoft\WindowsPowerShell\V1.0`。
 
 > [!NOTE]
->
 > 无法将针对 Windows PowerShell 2.0 程序集编译的代码加载到 Windows PowerShell 1.0 安装中。 但可以将针对 Windows PowerShell 1.0 程序集编译的代码加载到 Windows PowerShell 2.0 安装中。
-
 
 ### <a name="samples"></a>示例
 
@@ -73,13 +71,13 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`。 以下部分提供对�
 #### <a name="hosting-application-samples"></a>托管应用程序示例
 
 - Runspace01-演示如何使用 PowerShell 类同步运行 `Get-Process` cmdlet。
-`Get-Process` cmdlet 返回在本地计算机上运行的每个进程的进程对象。
+  `Get-Process` cmdlet 返回在本地计算机上运行的每个进程的进程对象。
 - Runspace02-演示如何使用 PowerShell 类同步运行 `Get-Process` 和 `Sort-Object` cmdlet。 `Get-Process` cmdlet 返回在本地计算机上运行的每个进程的进程对象，而 `Sort-Object` 基于其 Id 属性对对象进行排序。 使用 DataGridView 控件显示这些命令的结果。
 - Runspace03-演示如何使用 PowerShell 类同步运行脚本，以及如何处理非终止错误。 该脚本可接收一系列进程名称，然后检索这些进程。 脚本的结果（包括运行脚本时生成的非终止错误）显示在控制台窗口中。
 - Runspace04-演示如何使用 PowerShell 类来运行命令，以及如何捕获运行命令时引发的终止错误。 运行了两个命令，最后一个命令传递给了一个无效的参数。 因此，未返回对象并引发了终止错误。
-- Runspace05-演示如何将管理单元添加到 InitialSessionState 对象，以便打开运行空间时可以使用管理单元的 cmdlet。 管理单元提供了一个通过使用 PowerShell 对象同步运行的 GetProcessSample01 cmdlet （由 "" 示例定义）。
-- Runspace06-演示如何将模块添加到 InitialSessionState 对象，以便在打开运行空间时加载模块。 该模块提供了一个通过使用 PowerShell 对象同步运行的 GetProcessSample02 cmdlet （由 "" 示例定义）。
-- Runspace07-演示如何创建运行空间，并使用该运行空间通过 PowerShell 对象同步运行两个 cmdlet。
+- Runspace05-演示如何将管理单元添加到 InitialSessionState 对象，以便打开运行空间时可以使用管理单元的 cmdlet。 管理单元提供了一个使用 PowerShell 对象同步运行的 GetProcessSample01 cmdlet （由 "" 示例定义）。
+- Runspace06-演示如何将模块添加到 InitialSessionState 对象，以便在打开运行空间时加载模块。 该模块提供了一个使用 PowerShell 对象同步运行的 GetProcessSample02 cmdlet （由 "" 示例定义）。
+- Runspace07-演示如何创建运行空间，并使用该运行空间以同步使用 PowerShell 对象运行两个 cmdlet。
 - Runspace08-演示如何将命令和参数添加到 PowerShell 对象的管道，以及如何同步运行命令。
 - Runspace09-演示如何将脚本添加到 PowerShell 对象的管道，以及如何以异步方式运行脚本。 使用事件处理脚本的输出。
 - Runspace10-演示如何创建默认初始会话状态，如何将 cmdlet 添加到 InitialSessionState，如何创建使用初始会话状态的运行空间，以及如何使用 PowerShell 对象运行命令。
@@ -89,7 +87,7 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`。 以下部分提供对�
 
 #### <a name="host-samples"></a>主机示例
 
-- Host01-演示如何实现使用自定义主机的主机应用程序。 在此示例中，创建了一个使用自定义主机的运行空间，然后使用 PowerShell API 来运行调用 "exit" 的脚本。 主机应用程序随后查看脚本输出并打印出结果。
+- Host01-演示如何实现使用自定义主机的主机应用程序。 在此示例中，创建了一个使用自定义主机的运行空间，然后使用 PowerShell API 来运行调用 `exit`的脚本。 主机应用程序随后查看脚本输出并打印出结果。
 - Host02-演示如何编写使用 Windows PowerShell 运行时以及自定义主机实现的主机应用程序。 主机应用程序将主机区域性设置为德语，运行 `Get-Process` cmdlet，并显示使用 pwrsh 时显示的结果，然后输出德语的当前数据和时间。
 - Host03-演示如何生成基于控制台的交互式主机应用程序，该应用程序可从命令行读取命令，执行命令，然后将结果显示到控制台。
 - Host04-演示如何生成基于控制台的交互式主机应用程序，该应用程序可从命令行读取命令，执行命令，然后将结果显示到控制台。 此主机应用程序还支持显示允许用户指定多个选项的提示。
