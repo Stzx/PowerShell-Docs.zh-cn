@@ -2,22 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用资源设计器工具
-ms.openlocfilehash: 4f678f4586c75c830bf876b891fe4784aa3b4e95
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71952854"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500629"
 ---
 # <a name="using-the-resource-designer-tool"></a>使用资源设计器工具
 
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
-资源设计器工具是一组由 **xDscResourceDesigner** 模块公开的 cmdlet，它使 Windows PowerShell Desired State Configuration (DSC) 的创建更加轻松简单。 此资源中的 cmdlet 能帮助你创建新资源的 MOF 架构、脚本模块和目录结构。 有关 DSC 资源的详细信息，请参阅[构建自定义 Windows PowerShell Desired State Configuration 资源](authoringResource.md)。
-在本主题中，我们将创建一个管理 Active Directory 用户的 DSC 资源。
-使用 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet 安装 **xDscResourceDesigner** 模块。
-
->**注意**：Install-Module  包含在 PowerShellGet  模块中，后者纳入 PowerShell 5.0。 可在 [PackageManagement PowerShell 模块预览](https://www.microsoft.com/en-us/download/details.aspx?id=49186)中下载适用于 PowerShell 3.0 和 4.0 的 **PowerShellGet**。
+资源设计器工具是一组由 **xDscResourceDesigner** 模块公开的 cmdlet，它使 Windows PowerShell Desired State Configuration (DSC) 的创建更加轻松简单。 此资源中的 cmdlet 能帮助你创建新资源的 MOF 架构、脚本模块和目录结构。 有关 DSC 资源的详细信息，请参阅[构建自定义 Windows PowerShell Desired State Configuration 资源](authoringResource.md)。 在本主题中，我们将创建一个管理 Active Directory 用户的 DSC 资源。 使用 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet 安装 **xDscResourceDesigner** 模块。
 
 ## <a name="creating-resource-properties"></a>创建资源属性
 我们首先要确定资源将公开的属性。 在此示例中，我们将通过以下属性来定义 Active Directory 用户。
@@ -26,7 +22,7 @@ ms.locfileid: "71952854"
 * **UserName**：唯一标识用户的键属性。
 * **Ensure**：指定用户帐户应该为 Present 还是 Absent。 此参数只有两个可能的值。
 * **DomainCredential**：用户的域密码。
-* **Password**：允许必要时配置对用户密码进行更改所需的用户密码。
+* **密码**：允许必要时配置对用户密码进行更改所需的用户密码。
 
 我们使用 **New-xDscResourceProperty** cmdlet 来创建属性。 下面的 PowerShell 命令可以创建上述属性。
 
@@ -60,7 +56,8 @@ class Demo_ADUser : OMI_BaseResource
 };
 ```
 
-资源脚本位于 **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**。 资源脚本不包含实现资源的实际逻辑，你必须自己添加。 主干脚本的内容如下。
+资源脚本位于 **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**。
+资源脚本不包含实现资源的实际逻辑，你必须自己添加。 主干脚本的内容如下。
 
 ```powershell
 function Get-TargetResource

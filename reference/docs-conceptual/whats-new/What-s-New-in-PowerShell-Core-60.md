@@ -2,12 +2,12 @@
 title: PowerShell Core 6.0 中的最近更新
 description: PowerShell Core 6.0 中发布的新功能和更改
 ms.date: 08/06/2018
-ms.openlocfilehash: d1bc1ef2676da60062b8bdd57042331f0f245bec
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 39bcb343c44c32d183c8bb90306a8f4a57397eb6
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995496"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500477"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>PowerShell Core 6.0 中的最近更新
 
@@ -231,7 +231,7 @@ PowerShell Core 已对我们支持的所有主要平台（包括多个 Linux 发
 - 支持 web cmdlet 中的链接标头分页 (#3828)
   - 对于 `Invoke-WebRequest`，当响应包括链接标头时，我们创建一个 RelationLink 属性作为表示 URL 和 `rel` 属性的字典，并确保 URL 是绝对的，从而使其更易于开发人员使用。
   - 对于 `Invoke-RestMethod`，当响应包括“链接”头时，我们公开 `-FollowRelLink` 开关，以自动跟踪 `next` `rel` 链接，直到它们不再存在或我们选中可选的 `-MaximumFollowRelLink` 参数值。
-- 已向 web cmdlet 添加 `-CustomMethod` 参数，从而支持非标准方法谓词。 (#3142)（感谢 [@Lee303](https://github.com/Lee303)！）
+- 已向 web cmdlet 添加 `-CustomMethod` 参数，从而支持非标准方法谓词。 (#3142)（感谢 @Lee303！）
 - 已向 Web Cmdlet 添加 `SslProtocol` 支持。 (#5329)（感谢 [@markekraus](https://github.com/markekraus)！）
 - 已向 web cmdlet 添加 Multipart 支持。 (#4782)（感谢 [@markekraus](https://github.com/markekraus)）
 - 已向 web cmdlet 添加 `-NoProxy`，从而使其忽略系统范围的代理设置。 (#3447)（感谢 [@TheFlyingCorpse](https://github.com/TheFlyingCorpse)！）
@@ -248,7 +248,7 @@ PowerShell Core 已对我们支持的所有主要平台（包括多个 Linux 发
 - 已将 web cmdlet `UserAgent` 从 `WindowsPowerShell` 更改为 `PowerShell`。 (#4914)（感谢 [@markekraus](https://github.com/markekraus)）
 - 已将显式 `ContentType` 检测添加到 `Invoke-RestMethod` (#4692)
 - 已修复 web cmdlet `-SkipHeaderValidation`，以便可适用于非标准用户代理标头。 （#4479 和
-  #<a name="4512-thanks-markekraushttpsgithubcommarkekraus"></a>4512）（感谢 [@markekraus](https://github.com/markekraus)）
+  #<a name="4512-thanks-markekraus"></a>4512）（感谢 [@markekraus](https://github.com/markekraus)）
 
 ### <a name="json-cmdlets"></a>JSON cmdlet
 
@@ -311,7 +311,7 @@ PowerShell Core 已对我们支持的所有主要平台（包括多个 Linux 发
   (#3443)（感谢 [@iSazonov](https://github.com/iSazonov)！）
 - 修复了 tab 自动补全中的 bug，以使 `native.exe --<tab>` 调用到本机完成程序。 (#3633)（感谢 [@powercode](https://github.com/powercode)！）
 
-## <a name="breaking-changes"></a>重大更改
+## <a name="breaking-changes"></a>中断性变更
 
 我们在 PowerShell Core 6.0 中引入大量重大更改。
 要了解其详细信息，请参阅 [PowerShell Core 6.0 中的重大更改][breaking-changes]。

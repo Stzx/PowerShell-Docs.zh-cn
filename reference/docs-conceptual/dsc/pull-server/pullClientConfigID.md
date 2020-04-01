@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 在 PowerShell 5.0 及更高版本中使用配置 ID 设置请求客户端
-ms.openlocfilehash: bd173a1079b916c450a0292dca7a595a9bcff985
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a014e04fc5fbf2e813d9b0d79f39fe5aa3836f86
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417235"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500738"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>在 PowerShell 5.0 及更高版本中使用配置 ID 设置请求客户端
 
@@ -46,7 +46,7 @@ Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientC
 [System.Guid]::NewGuid()
 ```
 
-有关在环境中使用 Guid  的详细信息，请参阅[规划 Guid](/powershell/scripting/dsc/secureserver#guids)。
+有关在环境中使用 Guid  的详细信息，请参阅[规划 Guid](secureserver.md#guids)。
 
 ## <a name="set-up-a-pull-client-to-download-configurations"></a>设置请求客户端以下载配置
 
@@ -244,8 +244,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-若要指定报表服务器，请使用 **ReportRepositoryWeb** 块。 报表服务器不能为 SMB 服务器。
-以下元配置将请求客户端配置为从 **CONTOSO-PullSrv** 获取其配置、从 **CONTOSO-ResourceSrv** 获取资源、将状态报告发送到 **CONTOSO-ReportSrv**：
+若要指定报表服务器，请使用 **ReportRepositoryWeb** 块。 报表服务器不能为 SMB 服务器。 以下元配置将请求客户端配置为从 **CONTOSO-PullSrv** 获取其配置、从 **CONTOSO-ResourceSrv** 获取资源、将状态报告发送到 **CONTOSO-ReportSrv**：
 
 ```powershell
 [DSCLocalConfigurationManager()]

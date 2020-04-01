@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: 使用 JEA
-ms.openlocfilehash: 912e7a3c46be40ff5b5dfa37fe92b67bab5f98dc
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 1c424eb4a476dd0db3cc69c0e6f14c89a3c523ba
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995422"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500519"
 ---
 # <a name="using-jea"></a>使用 JEA
 
@@ -91,8 +91,8 @@ $filteredCommands = $commands.Name | Where-Object { $jeaDefaultCmdlets -notconta
 Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredCommands
 ```
 
-还可以使用 [Export-pssession](/powershell/microsoft.powershell.utility/Export-PSSession) 通过隐式远程处理保留代理 cmdlet。
-有关隐式远程处理的详细信息，请参阅 [Import-PSSession](/powershell/microsoft.powershell.utility/import-pssession) 和 [Import-Module](/powershell/microsoft.powershell.core/import-module) 的文档。
+还可以使用 [Export-pssession](/powershell/module/microsoft.powershell.utility/Export-PSSession) 通过隐式远程处理保留代理 cmdlet。
+有关隐式远程处理的详细信息，请参阅 [Import-PSSession](/powershell/module/microsoft.powershell.utility/import-pssession) 和 [Import-Module](/powershell/module/microsoft.powershell.core/import-module) 的文档。
 
 ## <a name="using-jea-programmatically"></a>以编程方式使用 JEA
 

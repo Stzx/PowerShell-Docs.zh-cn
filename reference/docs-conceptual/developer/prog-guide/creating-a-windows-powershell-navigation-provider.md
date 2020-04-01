@@ -3,12 +3,12 @@ title: 创建 Windows PowerShell 导航提供程序
 ms.date: 09/13/2016
 ms.topic: article
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
-ms.openlocfilehash: 96a9167019c047bb9c6e56362b2c1110ece553dd
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 7ca7e3ca6feeba018ad793d074caf67cd9506a68
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870687"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500801"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>创建 Windows PowerShell 导航提供程序
 
@@ -27,8 +27,7 @@ ms.locfileid: "75870687"
 
 Windows PowerShell 导航提供程序必须创建一个从[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)基类派生的 .net 类的 .net 类。 下面是本部分中所述的导航提供程序的类定义。
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32
-"AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
 
 请注意，在此提供程序中， [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)属性包括两个参数。 第一个参数指定 Windows PowerShell 使用的提供程序的用户友好名称。 第二个参数指定 Windows PowerShell 特定功能，该功能是在命令处理过程中提供给 Windows PowerShell 运行时的。 对于此提供程序，没有添加的 Windows PowerShell 特定功能。
 
@@ -97,7 +96,7 @@ Windows PowerShell 导航提供程序可实现[Navigationcmdletprovider. Getpare
 
 下面的代码演示了示例导航提供程序中的[Navigationcmdletprovider. Isitemcontainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer)实现。 方法验证指定的路径是否正确，并且如果表存在，则返回 true; 如果路径指示容器，则返回 true。
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
 
 #### <a name="things-to-remember-about-implementing-isitemcontainer"></a>有关实现 IsItemContainer 的注意事项
 

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery,psget
 title: PowerShell 库
-ms.openlocfilehash: d3e3b9d8bb3d6cefd3a3bfe79b012bb1dc1d8a2d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e489d2dd4db087b53eb07d2a8793c8f586c9b210
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327858"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500558"
 ---
 # <a name="the-powershell-gallery"></a>PowerShell 库
 
@@ -21,31 +21,20 @@ PowerShellGet 模块包含用于发现、安装、更新和发布包含来自 [P
 
 ## <a name="getting-started-with-the-gallery"></a>库入门
 
-从库安装包需要 PowerShellGet 模块的最新版本。
-请参阅[安装 PowerShellGet](installing-psget.md)，获取完整说明。
+从库安装包需要 PowerShellGet 模块的最新版本。 请参阅[安装 PowerShellGet](installing-psget.md)，获取完整说明。
 
 有关如何在库中使用 PowerShellGet 命令的详细信息，请参阅[入门](getting-started.md)页面。 你也可运行 *Update-Help -Module PowerShellGet* 安装这些命令的本地帮助。
 
 ## <a name="supported-operating-systems"></a>受支持的操作系统
 
-PowerShellGet  模块需要 Windows PowerShell 3.0 或更高版本  或 PowerShell Core 6.0 或更高版本  。
-
-针对以下操作系统提供对应的 Windows PowerShell  版本：
-
-- Windows 10
-- Windows 8.1 专业版
-- Windows 8.1 企业版
-- Windows 7 SP1
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2008 R2 SP1
+**PowerShellGet** 模块需要 **PowerShell 3.0 或更高版本**。
 
 PowerShellGet  需要 .NET Framework 4.5 或更高版本。 你可从[此处](https://msdn.microsoft.com/library/5a4x27ek.aspx)安装 .NET Framework 4.5 或更高版本。
 
-由于 PowerShell Core  是跨平台的，这意味着它可以在 Windows、Linux 和 MacOS 上工作，这也使得 PowerShellGet  在这些系统上均可用。 有关 PowerShell Core  支持的完整系统列表，请参阅[安装 PowerShell](/powershell/scripting/setup/installing-powershell)。
+由于 PowerShell Core  是跨平台的，这意味着它可以在 Windows、Linux 和 MacOS 上工作，这也使得 PowerShellGet  在这些系统上均可用。 有关 PowerShell Core  支持的完整系统列表，请参阅[安装 PowerShell](/powershell/scripting/install/installing-powershell)。
 
-许多托管在库中的模块都支持不同的操作系统并具有附加要求。 有关详细信息，请参阅模块文档。
+许多托管在库中的模块都支持不同的操作系统并具有附加要求。
+有关详细信息，请参阅模块文档。
 
 ## <a name="got-a-question-have-feedback"></a>遇到问题？ 有反馈？
 

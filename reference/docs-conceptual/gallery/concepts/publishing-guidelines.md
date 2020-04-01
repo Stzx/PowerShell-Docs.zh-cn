@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: 库,powershell,cmdlet,psgallery
 description: 面向发行者的指南
 title: PowerShell 库发布指南和最佳做法
-ms.openlocfilehash: 07271e037100350d3efc7ae63860f42afd22aae7
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 5ee33ba12475f9d3e5ceb3b31f37d9f2acc19d9e
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78278201"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500600"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 库发布指南和最佳做法
 
@@ -165,7 +165,8 @@ PowerShell 支持通过以下两种主要方法来验证代码签名：
 
 对 PowerShell 文件进行签名是一种由来已久的方法，可确保在执行的代码是由可靠的源生成，并且尚未经过修改。 [关于签名](/powershell/module/microsoft.powershell.core/about/about_signing)一文详细介绍了如何对 PowerShell 脚本文件进行签名。 总而言之，可以向 PowerShell 在加载脚本时验证的任何 `.PS1` 文件添加签名。 可以使用[执行策略](/powershell/module/microsoft.powershell.core/about/about_execution_policies) cmdlet 来约束 PowerShell，以确保使用已签名脚本。
 
-对模块进行目录签名是 PowerShell 版本 5.1 中新增的功能。 [目录 Cmdlet](/powershell/scripting/wmf/5.1/catalog-cmdlets) 一文中介绍了如何对模块进行签名。 总而言之，对模块进行目录签名是通过创建目录文件（其中包含模块中每个文件的哈希值），再对此文件进行签名完成的。
+对模块进行目录签名是 PowerShell 版本 5.1 中新增的功能。 [目录 Cmdlet](/powershell/scripting/wmf/whats-new/new-updated-cmdlets#catalog-cmdlets) 一文中介绍了如何对模块进行签名。
+总而言之，对模块进行目录签名是通过创建目录文件（其中包含模块中每个文件的哈希值），再对此文件进行签名完成的。
 
 PowerShellGet  `Publish-Module`、`Install-Module` 和 `Update-Module` cmdlet 将检查签名，以确保签名有效，然后确认每个包的哈希值是否与目录中的值一致。 `Save-Module` 不验证签名。 如果在系统中安装了旧版模块，`Install-Module` 将确认新版本的签名颁发机构是否与之前安装的版本一致。 如果未对包进行目录签名，`Install-Module` 和 `Update-Module` 将对 `.PSD1` 文件使用签名。 目录签名可与签名脚本文件结合使用，但不会替换它。 PowerShell 不会在模块加载时验证目录签名。
 

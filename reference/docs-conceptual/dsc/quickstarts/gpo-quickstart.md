@@ -2,12 +2,12 @@
 ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,配置,安装程序
 title: 快速入门 - 将组策略转换为 DSC
-ms.openlocfilehash: 8c89dbbce5b2b146194b799d7e36ecce3105bfeb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5e6b86be5127332fe4fd400980c8e147b735247b
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71953464"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500654"
 ---
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
@@ -56,6 +56,6 @@ Mode                LastWriteTime     Length Name
 
 ## <a name="next-steps"></a>后续步骤
 
-- 要将配置脚本上传到 Azure 自动化状态配置，请参阅[入门](/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation)。
+- 要将配置脚本上传到 Azure 自动化状态配置，请参阅[入门](/azure/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation)。
 - 将 SecurityPolicyDSC 和 AuditPolicyDSC 模块添加到[自动化帐户](/azure/automation/shared-resources/modules)   。
 - 在 [PowerShell 库](https://www.powershellgallery.com/)中查找 DSC 配置和资源。

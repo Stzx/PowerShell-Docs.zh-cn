@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell Web 访问的授权规则和安全功能
-ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 9bc1be125ebab4e9ba29ba832b442777e9bfc859
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402604"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500886"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Windows PowerShell Web 访问的授权规则和安全功能
 
@@ -85,7 +85,7 @@ Windows PowerShell Web 访问的最后安全层是目标计算机自身的安全
 
 默认情况下，Windows PowerShell Web 访问使用主要用户名和密码，在网关和目标计算机上进行身份验证。 在标题为**可选的连接设置**部分，基于 Web 的登录页面为用户提供一个为目标计算机提供其他凭据的选项（如有必要）。 如果用户不提供备用凭据，则照样可使用连接网关时所用的主要用户名和密码，连接目标计算机。
 
-授权规则可让用户访问特定的会话配置。 可以为 Windows PowerShell Web 访问创建受限的运行空间  或会话配置，并可让特定用户在登录到 Windows PowerShell Web 访问时仅连接到特定的会话配置。 你可使用访问控制列表 (ACL) 确定哪个用户具有访问特定终结点的权限，并使用本部分中的授权规则进一步限制特定用户组合访问终结点的权限。 有关受限运行空间的详细信息，请参阅 [Creating a constrained runspace](https://msdn.microsoft.com/library/dn614668)（创建受限运行空间）。
+授权规则可让用户访问特定的会话配置。 可以为 Windows PowerShell Web 访问创建受限的运行空间  或会话配置，并可让特定用户在登录到 Windows PowerShell Web 访问时仅连接到特定的会话配置。 你可使用访问控制列表 (ACL) 确定哪个用户具有访问特定终结点的权限，并使用本部分中的授权规则进一步限制特定用户组合访问终结点的权限。 有关受限运行空间的详细信息，请参阅 [Creating a constrained runspace](/powershell/scripting/developer/hosting/creating-a-constrained-runspace)（创建受限运行空间）。
 
 ### <a name="configuring-authorization-rules"></a>配置授权规则
 
@@ -112,7 +112,7 @@ Windows PowerShell Web 访问 cmdlet 支持一个通配符，即星号 ( \* )。
 
    如果尚未创建这些配置，则使用 [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configuration_files) 中用于创建会话配置的说明。
 
-3. 本授权规则允许特定用户通过他们通常访问的网络访问一台计算机，以及可让特定用户拥有对满足用户常见脚本和 cmdlet 需求的特定会话配置的权限。 键入以下命令，然后按**Enter**。
+3. 本授权规则允许特定用户通过他们通常访问的网络访问一台计算机，以及可让特定用户拥有对满足用户常见脚本和 cmdlet 需求的特定会话配置的权限&trade;。 键入以下命令，然后按**Enter**。
 
    ```
    Add-PswaAuthorizationRule -UserName <domain\user | computer\user> `
@@ -151,7 +151,8 @@ Windows PowerShell Web 访问 cmdlet 支持一个通配符，即星号 ( \* )。
 
 #### <a name="other-authorization-rule-scenario-examples"></a>其他授权规则方案示例
 
-每个 Windows PowerShell 会话都使用会话配置；如果尚未为会话指定任何会话配置，Windows PowerShell 将使用默认的内置 Windows PowerShell 会话配置（被称为 Microsoft.PowerShell）。 默认的会话配置包括计算机上可用的所有 cmdlet。 管理员可利用受限的运行空间（有限范围内的其最终用户可执行的 cmdlet 和任务）定义会话配置，从而限制对所有计算机的访问权限。 对于有权访问一台具有所有语言访问权限的计算机或仅可访问 Windows PowerShell 远程管理 cmdlet 的用户，可连接到其他与第一台计算机连接的计算机。 定义受限的运行空间可阻止用户从其获准许的 Windows PowerShell 运行空间访问其他计算机，从而改善你的 Windows PowerShell Web 访问环境的安全性。 可（通过使用组策略）将会话配置分配给所有管理员想通过 Windows PowerShell Web 访问进行访问的计算机。 有关会话配置的详细信息，请参阅 [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)。 以下是本方案的一些示例。
+每个 Windows PowerShell 会话都使用会话配置；如果尚未为会话指定任何会话配置，Windows PowerShell 将使用默认的内置 Windows PowerShell 会话配置（被称为 Microsoft.PowerShell）。 默认的会话配置包括计算机上可用的所有 cmdlet。 管理员可利用受限的运行空间（有限范围内的其最终用户可执行的 cmdlet 和任务）定义会话配置，从而限制对所有计算机的访问权限。 对于有权访问一台具有所有语言访问权限的计算机或仅可访问 Windows PowerShell 远程管理 cmdlet 的用户，可连接到其他与第一台计算机连接的计算机。 定义受限的运行空间可阻止用户从其获准许的 Windows PowerShell 运行空间访问其他计算机，从而改善你的 Windows PowerShell Web 访问环境的安全性。 可（通过使用组策略）将会话配置分配给所有管理员想通过 Windows PowerShell Web 访问进行访问的计算机。 有关会话配置的详细信息，请参阅 [about_Session_Configurations](/powershell/module/Microsoft.PowerShell.Core/About/about_session_configurations)。
+以下是本方案的一些示例。
 
 - 管理员创建名为 **PswaEndpoint** 的终结点，其中带有受限的运行空间。 然后管理员创建规则 `*,*,PswaEndpoint`，并将终结点分配给其他计算机。 规则可让所有用户访问所有带有终结点 **PswaEndpoint** 的计算机。
   如果这只是在规则集中定义的授权规则，则不能访问不带有终结点的计算机。
@@ -181,8 +182,8 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal `
 2. 目标计算机上的身份验证，方法是使用“可选连接设置”  区域的登录页面中提供的备用凭据
 
    > [!NOTE]
-   > 如果网关和目标计算机位于不同的工作组或域中，则必须在两个工作组计算机之间、两个域之间或工作组和域之间建立信任关系。 不能使用 Windows PowerShell Web 访问授权规则 cmdlet 配置此关系。 授权规则不会定义计算机之间的信任关系，它们仅可授权用户连接到特定目标计算机和会话配置。 有关如何配置不同域之间信任关系的详细信息，请参阅[创建域和林信任](https://technet.microsoft.com/library/cc794775.aspx)。
-   > 有关如何向受信任主机列表中添加工作组计算机的详细信息，请参阅[使用服务器管理器进行远程管理](https://technet.microsoft.com/library/dd759202.aspx)。
+   > 如果网关和目标计算机位于不同的工作组或域中，则必须在两个工作组计算机之间、两个域之间或工作组和域之间建立信任关系。 不能使用 Windows PowerShell Web 访问授权规则 cmdlet 配置此关系。 授权规则不会定义计算机之间的信任关系，它们仅可授权用户连接到特定目标计算机和会话配置。 有关如何配置不同域之间信任关系的详细信息，请参阅[创建域和林信任](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794775(v=ws.10))。
+   > 有关如何向受信任主机列表中添加工作组计算机的详细信息，请参阅[使用服务器管理器进行远程管理](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759202(v=ws.11))。
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>对多个网站使用单一的授权规则集
 
@@ -198,7 +199,7 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal `
 
 ### <a name="setting-default-parameters-on-the-sign-in-page"></a>在登录页上设置默认参数
 
-如果您的 Windows PowerShell Web 访问网关在 Windows Server 2012 R2 上运行，您可以配置在 Windows PowerShell Web 访问登录页上显示的设置的默认值。 可以配置上一段所述的 **web.config** 文件中的值。 登录页设置的默认值位于 web.config 文件的 **appSettings** 部分中；以下是 **appSettings** 部分的示例。 其中许多设置的有效值与 Windows PowerShell 中 [New-PSSession](https://technet.microsoft.com/library/hh849717.aspx) cmdlet 的相应参数的有效值相同。
+如果您的 Windows PowerShell Web 访问网关在 Windows Server 2012 R2 上运行，您可以配置在 Windows PowerShell Web 访问登录页上显示的设置的默认值。 可以配置上一段所述的 **web.config** 文件中的值。 登录页设置的默认值位于 web.config 文件的 **appSettings** 部分中；以下是 **appSettings** 部分的示例。 其中许多设置的有效值与 Windows PowerShell 中 [New-PSSession](/powershell/module/Microsoft.PowerShell.Core/New-PSSession) cmdlet 的相应参数的有效值相同。
 
 例如，`defaultApplicationName` 键（如以下代码块中所示）是目标计算机上 $PSSessionApplicationName 首选项变量的值  。
 
@@ -225,8 +226,8 @@ Windows PowerShell Web 访问会话超时。在 Windows Server 2012 上运行的
 
 ## <a name="see-also"></a>另请参阅
 
-[安装和使用 Windows PowerShell Web 访问](https://technet.microsoft.com/library/hh831611(v=ws.11).aspx)
+[安装和使用 Windows PowerShell Web 访问](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831611(v=ws.11))
 
-[about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
+[about_Session_Configurations](/powershell/module/microsoft.powershell.core/about/about_Session_Configurations)
 
 [Windows PowerShell Web 访问 Cmdlet](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps)
