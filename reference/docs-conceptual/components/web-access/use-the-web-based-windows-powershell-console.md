@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: 使用基于 Web 的 Windows PowerShell 控制台
-ms.openlocfilehash: 4c1bac2c712e430263d748b36897f4cfd8885919
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 29aa123049884004dd4e1a8f042783538d80abc6
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402584"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500866"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>使用基于 Web 的 Windows PowerShell 控制台
 
@@ -102,7 +102,7 @@ Windows PowerShell Web 访问管理员应为你提供一个 URL，该 URL 是贵
 
 - 关闭正在运行浏览器的客户端设备，或将它从网络中断开。
 
-- 在 Web 控制台中运行“退出”  命令。 如果已连接的会话配置为支持 [NoLanguage](https://msdn.microsoft.com/library/windows/desktop/system.management.automation.pslanguagemode.aspx) 模式，或处于受限的运行空间中，则此命令不可用。
+- 在 Web 控制台中运行“退出”  命令。 如果已连接的会话配置为支持 [NoLanguage](/dotnet/api/system.management.automation.pslanguagemode) 模式，或处于受限的运行空间中，则此命令不可用。
 
 如果你想再次登录，可再次打开 Windows PowerShell Web 访问网页，然后执行本主题中[登录到 Windows PowerShell Web 访问](#signing-in-to-windows-powershell-web-access)部分的以下步骤，即可登录。
 
@@ -211,12 +211,9 @@ Alt+F7          | 清空命令历史记录列表
 
     你可以使用类似的方式更改控制台的高度。
 
-    如要获取自定义控制台视图的其他示例，请参阅 [Windows PowerShell 团队博客](hhttps://devblogs.microsoft.com/powershell)。
+    如要获取自定义控制台视图的其他示例，请参阅 [Windows PowerShell 团队博客](h https://devblogs.microsoft.com/powershell)。
 
 ## <a name="see-also"></a>另请参阅
 
-- [Windows PowerShell cmdlet 参考资料](https://technet.microsoft.com/library/ee407531(ws.10).aspx)
-- [Microsoft TechNet 上的 Windows PowerShell](https://technet.microsoft.com/library/bb978526.aspx)
-- [TechNet 脚本中心储存库](https://gallery.technet.microsoft.com/scriptcenter)
-- [脚本中心 -“嗨, 脚本专家!”](https://technet.microsoft.com/scriptcenter)
-- [Windows PowerShell 团队博客](https://blogs.msdn.com/b/powershell/)
+- [你好，脚本专家！](https://devblogs.microsoft.com/scripting/)
+- [PowerShell 团队博客](https://devblogs.microsoft.com/powershell/)

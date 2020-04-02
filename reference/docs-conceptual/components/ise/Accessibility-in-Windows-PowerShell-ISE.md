@@ -2,12 +2,12 @@
 ms.date: 12/19/2019
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 中的辅助功能
-ms.openlocfilehash: e618daca98d76f767a8b60a3425760bfc0bd0f64
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: 89eff839d69fdbd5a1fa48b61dab627ef83f751b
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75736277"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500952"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Windows PowerShell ISE 中的辅助功能
 
@@ -46,15 +46,15 @@ Microsoft 致力于使其产品和服务更便于每个人使用。 下列主题
 
 执行下列操作之一：
 
-- 若要将脚本窗格移动到控制台窗格上方，请按 <kbd>CTRL</kbd>+<kbd>1</kbd>，或单击工具栏上的“顶部显示脚本窗格”图标，或单击“视图”菜单上的“顶部显示脚本窗格”。
+- 若要将脚本窗格移动到控制台窗格上方，请按 <kbd>CTRL</kbd>+<kbd>1</kbd>，或单击工具栏上的“顶部显示脚本窗格”图标，或单击“视图”菜单上的“顶部显示脚本窗格”。   
 
-- 若要将脚本窗格移动到控制台窗格的右侧，请按 <kbd>CTRL</kbd>+<kbd>2</kbd>，或单击工具栏上的“右侧显示脚本窗格”图标，或单击“视图”菜单上的“右侧显示脚本窗格”。
+- 若要将脚本窗格移动到控制台窗格的右侧，请按 <kbd>CTRL</kbd>+<kbd>2</kbd>，或单击工具栏上的“右侧显示脚本窗格”图标，或单击“视图”菜单上的“右侧显示脚本窗格”。   
 
-- 若要最大化脚本窗格，请按 <kbd>CTRL</kbd>+<kbd>3</kbd>，或单击工具栏上的“最大化显示脚本窗格”图标，或单击“视图”菜单上的“最大化显示脚本窗格”。
+- 若要最大化脚本窗格，请按 <kbd>CTRL</kbd>+<kbd>3</kbd>，或单击工具栏上的“最大化显示脚本窗格”图标，或单击“视图”菜单上的“最大化显示脚本窗格”。   
 
-- 若要最大化控制台窗格并隐藏脚本窗格，请在选项卡行的最右侧边缘上单击“隐藏脚本窗格”图标，在“视图”菜单上单击以取消选择“显示脚本窗格”菜单选项。
+- 若要最大化控制台窗格并隐藏脚本窗格，请在选项卡行的最右侧边缘上单击“隐藏脚本窗格”图标，在“视图”菜单上单击以取消选择“显示脚本窗格”菜单选项。   
 
-- 若要在控制台窗格最大化时显示脚本窗格，请在选项卡行的最右侧边缘上单击“隐藏脚本窗格”图标，或在“视图”菜单上单击以选择“显示脚本窗格”菜单选项。
+- 若要在控制台窗格最大化时显示脚本窗格，请在选项卡行的最右侧边缘上单击“隐藏脚本窗格”图标，或在“视图”菜单上单击以选择“显示脚本窗格”菜单选项。   
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>编辑文本的键盘快捷方式
 
@@ -121,7 +121,7 @@ Microsoft 致力于使其产品和服务更便于每个人使用。 下列主题
 | **停止调试器**          | <kbd>SHIFT</kbd>+<kbd>F5</kbd>                 | 脚本窗格，调试脚本时 |
 
 > [!NOTE]
-> 在 Windows PowerShell ISE 中调试脚本时，也可以使用为 Windows PowerShell 控制台而设计的键盘快捷方式。 若要使用这些快捷方式，必须在控制台窗格中输入该快捷方式并按 ENTER。
+> 在 Windows PowerShell ISE 中调试脚本时，也可以使用为 Windows PowerShell 控制台而设计的键盘快捷方式。 若要使用这些快捷方式，必须在控制台窗格中键入快捷方式，然后按 <kbd>ENTER</kbd>。
 
 |                 操作                  |      键盘快捷方式       |                用于                 |
 | --------------------------------------- | ---------------------------- | ------------------------------------- |
@@ -143,12 +143,12 @@ Microsoft 致力于使其产品和服务更便于每个人使用。 下列主题
 | ------------------------------- | ---------------------------------------------------------------------------------- |
 | **关闭 PowerShell 选项卡**        | <kbd>CTRL</kbd>+<kbd>W</kbd>                                                       |
 | **新建 PowerShell 选项卡**          | <kbd>CTRL</kbd>+<kbd>T</kbd>                                                       |
-| **上一个 PowerShell 选项卡**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd>（仅在任意 PowerShell 选项卡上都未打开任何文件时）                 |
+| **上一个 PowerShell 选项卡**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd>（仅在任意 PowerShell 选项卡上都未打开任何文件时） |
 | **下一个 Windows PowerShell 选项卡** | <kbd>CTRL</kbd>+<kbd>TAB</kbd>（仅在任意 PowerShell 选项卡上都未打开任何文件时） |
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>启动和退出的键盘快捷方式
 
-可以使用以下键盘快捷方式来启动 Windows PowerShell 控制台 (PowerShell.exe) 或退出 Windows PowerShell ISE。
+可以使用以下键盘快捷方式来启动 Windows PowerShell 控制台 (PowerShell.exe) 或退出 Windows PowerShell ISE。 
 
 |                        操作                         |               键盘快捷方式               |
 | ----------------------------------------------------- | --------------------------------------------- |
@@ -157,8 +157,7 @@ Microsoft 致力于使其产品和服务更便于每个人使用。 下列主题
 
 ## <a name="breakpoint-management"></a>断点管理
 
-为方便有视觉障碍的用户，通过用于管理断点的 cmdlet（例如 [Get-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Get-PSBreakpoint.md) 和 [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md)）提供断点信息。
-有关详细信息，请参阅[如何在 Windows PowerShell ISE 中调试脚本](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)中的“如何管理断点”。
+为方便有视觉障碍的用户，通过用于管理断点的 cmdlet（例如 [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint) 和 [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint)）提供断点信息。 有关详细信息，请参阅[如何在 Windows PowerShell ISE 中调试脚本](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)中的“如何管理断点”。
 
 ## <a name="see-also"></a>另请参阅
 
