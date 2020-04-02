@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: DSC 请求服务
-ms.openlocfilehash: cf2420e6889f63ac3b2859e5ee36fa888b728afc
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402434"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500725"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Desired State Configuration 请求服务
 
@@ -70,7 +70,7 @@ Windows Server 中提供的请求服务是 IIS 中的一项 Web 服务，当目�
 | ------- | -------------------- | -------------------- | ---------------------------------------------- |
 | MDB     | ESENT（默认）、MDB | ESENT（默认）、MDB | ESENT（默认）、SQL Server、MDB               |
 
-从 [Windows Server Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewserver) 的版本 17090 开始，SQL Server 成为了请求服务（Windows Feature DSC-Service）的支持选项  。 这为缩放未迁移至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) 的大型 DSC 环境提供了新选项。
+自 Windows Server 版本 17090 起，SQL Server 是拉取服务（Windows 功能 DSC-Service  ）支持的选项。 这为缩放未迁移至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) 的大型 DSC 环境提供了新选项。
 
 > [!NOTE]
 > SQL Server 支持不会添加到 WMF 5.1 的以前版本（或更早版本）中，仅在 17090 版本或更高版本的 Windows Server 上提供。
@@ -82,7 +82,7 @@ Windows Server 中提供的请求服务是 IIS 中的一项 Web 服务，当目�
 
 设置 Web 请求服务器的最简单方法是使用包含在 xPSDesiredStateConfiguration 模块中的 xDscWebService 资源   。 下列步骤说明如何使用 `Configuration` 中设置 Web 服务的资源。
 
-1. 调用 [Install-Module](/reference/6/PowerShellGet/Install-Module.md) 以安装 **xPSDesiredStateConfiguration** 模块。
+1. 调用 [Install-Module](/powershell/module/PowerShellGet/Install-Module) 以安装 **xPSDesiredStateConfiguration** 模块。
 
    > [!NOTE]
    > `Install-Module` 包含在 PowerShellGet  模块中，该模块纳入 PowerShell 5.0 和更高版本中。
@@ -234,7 +234,7 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 
 ### <a name="configuration-mof-format"></a>配置 MOF 格式
 
-配置 MOF 文件需要与校验和文件配对，以使目标节点上的 LCM 可以验证配置。 若要创建校验和，请调用 [New-DscChecksum](/reference/6/PSDesiredStateConfiguration/New-DSCCheckSum.md) cmdlet。 该 cmdlet 将接受 **Path** 参数，该参数指定了配置 MOF 所在的文件夹。 该 cmdlet 将创建名为 `ConfigurationMOFName.mof.checksum` 的校验和文件，其中 `ConfigurationMOFName` 是配置 mof 文件的名称。 如果指定文件夹中存在多个配置 MOF 文件，则将为该文件夹中的每个配置分别创建校验和。 将 MOF 文件及其关联校验和文件置于 ConfigurationPath  文件夹中。
+配置 MOF 文件需要与校验和文件配对，以使目标节点上的 LCM 可以验证配置。 若要创建校验和，请调用 [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet。 该 cmdlet 将接受 **Path** 参数，该参数指定了配置 MOF 所在的文件夹。 该 cmdlet 将创建名为 `ConfigurationMOFName.mof.checksum` 的校验和文件，其中 `ConfigurationMOFName` 是配置 mof 文件的名称。 如果指定文件夹中存在多个配置 MOF 文件，则将为该文件夹中的每个配置分别创建校验和。 将 MOF 文件及其关联校验和文件置于 ConfigurationPath  文件夹中。
 
 > [!NOTE]
 > 如果以任何方式更改配置 MOF 文件，则还必须重新创建校验和文件。

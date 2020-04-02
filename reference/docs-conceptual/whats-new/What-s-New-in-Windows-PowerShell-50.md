@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0 中的新增功能
-ms.openlocfilehash: 08775c1767f1d9d18dafab39d188db152073e69d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8c1858a63adad467e389a683708bccba2a6768c7
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417573"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500472"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0 中的新增功能
 
@@ -17,7 +17,8 @@ Windows PowerShell 5.0 可向后兼容。 为 Windows PowerShell 4.0、Windows P
 
 ## <a name="installing-windows-powershell"></a>安装 Windows PowerShell
 
-默认情况下，Windows PowerShell 5.0 安装在 Windows Server 2016 技术预览和 Windows 10 上。
+Windows PowerShell 5.0 默认安装在 Windows Server 2016 Technical Preview 和 Windows 上
+10.
 
 若要在 Windows Server 2012 R2、Windows 8.1 企业版或 Windows 8.1 专业版上安装 Windows PowerShell 5.0，请下载并安装 [Windows Management Framework 5.0](https://aka.ms/wmf5download)。 请务必先阅读下载详细信息并确保满足所有系统要求，然后再安装 Windows Management Framework 5.0。
 
@@ -32,18 +33,18 @@ Windows PowerShell 5.0 可向后兼容。 为 Windows PowerShell 4.0、Windows P
 
 针对 Windows PowerShell 4.0 中 Windows PowerShell Desired State Configuration (DSC) 的许多更新和改进均在 [2014 年 11 月 Windows RT 8.1、Windows 8.1 和 Windows Server 2012 R2 更新汇总](https://support.microsoft.com/kb/3000850/) (KB 3000850) 中提供。 你可以通过在 Windows PowerShell 中运行 `Get-Hotfix -Id KB3000850` 以确定你的系统上是否已安装 KB 3000850。
 
-- 对 [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx) 模块中现有 cmdlet 的更新。
-  - [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) 更加快速（特别是在 ISE 中）。
-  - [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) 有一个新的 -UseExisting 参数，使用该参数可重新应用上一次应用的配置。
-  - 已修复 [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) -Force。
-  - [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) 显示有关引擎状态的更多有用信息。
-  - [Test-DscConfiguration](https://technet.microsoft.com/library/dn407382.aspx) 现在可返回计算机名称以及 True 或 False。
-  - [New-DscChecksum](https://technet.microsoft.com/library/dn521622.aspx) 现在支持 UNC 路径。
+- 对 [PSDesiredStateConfiguration](/powershell/module/PSDesiredStateConfiguration) 模块中现有 cmdlet 的更新。
+  - [Get-DscResource](/powershell/module/PSDesiredStateConfiguration) 更加快速（特别是在 ISE 中）。
+  - [Start-DscConfiguration](/powershell/module/PSDesiredStateConfiguration) 有一个新的 -UseExisting 参数，使用该参数可重新应用上一次应用的配置。
+  - 已修复 [Start-DscConfiguration](/powershell/module/PSDesiredStateConfiguration) -Force。
+  - [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration) 显示有关引擎状态的更多有用信息。
+  - [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration) 现在可返回计算机名称以及 True 或 False。
+  - [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration) 现在支持 UNC 路径。
 
-- [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx) 模块中新的 cmdlet。
-  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx)：按需执行请求服务器检查。
-  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx)：停止已运行的配置。
-  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx)：使你能够在各个阶段中（挂起、之前或当前）删除配置文档。
+- [PSDesiredStateConfiguration](/powershell/module/PSDesiredStateConfiguration) 模块中新的 cmdlet。
+  - [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration)：按需执行请求服务器检查。
+  - [Stop-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Stop-DscConfiguration)：停止已运行的配置。
+  - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)：使你能够在各个阶段中（挂起、之前或当前）删除配置文档。
 
 - 语言增强功能
   - DependsOn 现在支持复合资源。
@@ -86,8 +87,8 @@ Windows PowerShell 5.0 可向后兼容。 为 Windows PowerShell 4.0、Windows P
   - Package 资源
     - 不再安装错误的包（无论从本地或 Web 资源中安装）。
     - 现在支持 HTTPS。
-  - 现在在 [Package 资源](https://technet.microsoft.com/library/dn282132.aspx)中支持 HTTPS。
-  - [Archive 资源](https://technet.microsoft.com/library/dn249917.aspx)现在支持凭据。
+  - 现在在 [Package 资源](/powershell/scripting/dsc/reference/resources/windows/packageresource)中支持 HTTPS。
+  - [Archive 资源](/powershell/scripting/dsc/reference/resources/windows/archiveresource)现在支持凭据。
 
 ## <a name="new-features-in-windows-powershell-50"></a>Windows PowerShell 5.0 中的新增功能
 
@@ -99,7 +100,8 @@ Windows PowerShell 5.0 可向后兼容。 为 Windows PowerShell 4.0、Windows P
 
 ### <a name="new-features-in-windows-powershell"></a>Windows PowerShell 中的新增功能
 
-- 从 Windows PowerShell 5.0 开始，你可以通过使用类，通过使用正式语法和类似于其他面向对象的编程语言的语义进行开发。 **Class**、**Enum** 和其他关键字已添加到 Windows PowerShell 语言中以支持新增功能。 有关使用类的详细信息，请参阅 about_Classes。
+- 从 Windows PowerShell 5.0 开始，你可以通过使用类，通过使用正式语法和类似于其他面向对象的编程语言的语义进行开发。 **Class**、**Enum** 和其他关键字已添加到 Windows PowerShell 语言中以支持新增功能。
+  有关使用类的详细信息，请参阅 about_Classes。
 
 - Windows PowerShell 5.0 引入了一个新的结构化信息流，可用于在脚本和其调用方（或主机环境）之间传输结构化数据。 现在可使用 Write-Host 将输出发出到信息流。 信息流也适用于 PowerShell.Streams、作业、计划作业和工作流。 以下功能支持信息流。
   - 一个新的 Write-Information cmdlet，使你能够指定 Windows PowerShell 如何处理命令的信息流数据。 Write-Host 是 Write-Information 的包装器。 Write-Information 也是受支持的工作流活动。
@@ -111,27 +113,30 @@ Windows PowerShell 5.0 可向后兼容。 为 Windows PowerShell 4.0、Windows P
 - 与 [Microsoft Research](https://research.microsoft.com/) 协作添加了一个新的 cmdlet，即 ConvertFrom-String。 ConvertFrom-String 使你能够从文本字符串的内容中提取和分析结构化对象。 有关详细信息，请参阅 ConvertFrom-String。
 - 新的 Convert-String cmdlet 基于你在 -Example 参数中提供的示例自动设置文本的格式。
 - 新的模块 Microsoft.PowerShell.Archive 包括了使你能够将文件和文件夹压缩到存档文件（也被称为 ZIP）、从现有 ZIP 文件中提取文件以及使用其中压缩的较新版本文件更新 ZIP 文件的 cmdlet。
-- 新的模块 PackageManagement 使你能够在 Internet 上发现并安装软件包。 PackageManagement（以前被称为 OneGet）模块是一个管理器或现有包管理器（也被称为包提供程序）的多路复用器，使用单个 Windows PowerShell 界面统一管理 Windows 包。
+- 新的模块 PackageManagement 使你能够在 Internet 上发现并安装软件包。
+  PackageManagement（以前被称为 OneGet）模块是一个管理器或现有包管理器（也被称为包提供程序）的多路复用器，使用单个 Windows PowerShell 界面统一管理 Windows 包。
 - 新的模块 PowerShellGet 使你能够在 [PowerShell 库](https://www.powershellgallery.com/)上，或者在可以通过运行 Register-PSRepository cmdlet 来进行设置的内部模块存储库上查找、安装、发布和更新模块和 DSC 资源。
-- 已添加了一个新的语言关键字 **Hidden**，用于指定默认情况下成员（属性或方法）不显示在 Get-Member 结果中（除非添加了 -Force 参数）。 已标记为隐藏的属性或方法也不会出现在 IntelliSense 结果中，除非你位于成员应为可见的上下文中；例如，当在类方法中时自动变量 $This 应显示隐藏成员。
+- 已添加了一个新的语言关键字 **Hidden**，用于指定默认情况下成员（属性或方法）不显示在 Get-Member 结果中（除非添加了 -Force 参数）。
+  已标记为隐藏的属性或方法也不会出现在 IntelliSense 结果中，除非你位于成员应为可见的上下文中；例如，当在类方法中时自动变量 $This 应显示隐藏成员。
 - 已增强了 New-Item、Remove-Item、Get-ChildItem 的功能，用于支持创建和管理[符号链接](https://en.wikipedia.org/wiki/Symbolic_link)。 New-Item 的 **ItemType** 参数接受一个新的值 **SymbolicLink**。 现在可通过运行 New-Item cmdlet 在单行中创建符号链接。
 - Get-ChildItem 也有一个新的 -Depth 参数，可将该参数与 -Recurse 参数一起使用，以限制递归。 例如，Get-ChildItem -Recurse -Depth 2 从当前文件夹、当前文件夹中的所有子文件夹，以及子文件夹中的所有文件夹返回结果。
-- 现在 Copy-Item 使你能够将文件或文件夹从一个 Windows PowerShell 会话复制到另一个会话中，意味着可以将文件复制到已连接至远程计算机（包括运行 [Nano Server](https://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx) 因而没有其他界面的计算机）的会话中。 若要复制文件，请将 PSSession ID 指定为新的 -FromSession 和 -ToSession 参数的值，并添加 -Path 和 -Destination 以分别指定源路径和目标位置。 例如，Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder。
+- 现在，使用 Copy-Item，可以将文件或文件夹从一个 Windows PowerShell 会话复制到另一个会话中；也就是说，可以将文件复制到已连接到远程计算机（包括正在运行 Nano Server 的计算机，因此没有其他接口）的会话中。 若要复制文件，请将 PSSession ID 指定为新的 -FromSession 和 -ToSession 参数的值，并添加 -Path 和 -Destination 以分别指定源路径和目标位置。 例如，Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder。
 - 除了控制台主机 (**powershell.exe**) 外，Windows PowerShell 转录已经得到改进以应用到所有主机应用程序（例如 Windows PowerShell ISE）。 脚本选项（包括启用 system-wide 脚本）可以通过启用“打开 PowerShell 脚本”  组策略设置（位于 Administrative Templates/Windows Components/Windows PowerShell）来进行配置。
 - 新的“详细脚本跟踪”功能让你能够启用系统上使用的 Windows PowerShell 脚本的详细跟踪和分析。 在启用详细脚本跟踪后，Windows PowerShell 会将所有的脚本块记录到 **Microsoft-Windows-PowerShell/Operational** 的 Windows 事件跟踪 (ETW) 事件日志中。
-- 从 Windows PowerShell 5.0 开始，新的加密消息语法 cmdlet 通过使用加密保护消息的 IETF 标准格式对内容的加密和解密提供支持，如 [RFC5652](https://tools.ietf.org/html/rfc5652) 中所述。 已将 Get-CmsMessage、Protect-CmsMessage 和 Unprotect-CmsMessage cmdlet 添加到 [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh849807.aspx) 模块中。
-- [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 中新的 cmdlet 包括 Get-Runspace、Debug-Runspace、Get-RunspaceDebug、Enable-RunspaceDebug 和 Disable-RunspaceDebug，使你能够在运行空间上设置调试选型，以及在运行空间上开始和停止调试。 针对调试任意运行空间（即不是 Windows PowerShell 控制台或 Windows PowerShell ISE 会话默认的运行空间），Windows PowerShell 使你能够在脚本中设置断点，并添加了断点以停止脚本运行，直到你可以附加调试器来调试运行空间脚本。 已将对任意运行空间的嵌套调试支持添加到了运行空间的 Windows PowerShell 脚本调试器中。
-- 已将一个新的 Format-Hex cmdlet 添加到了 [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 模块中。 Format-Hex 使你可以以十六进制格式查看文本或二进制数据。
-- 已将 Get-Clipboard 和 Set-Clipboard cmdlet 添加到了 [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 模块中；它们易于将内容传输到 Windows PowerShell 会话以及从其中传输内容。 剪贴板 cmdlet 支持图像、音频文件、文件列表和文本。
-- 新的 Clear-RecycleBin cmdlet 已添加到 [Microsoft.PowerShell.Management](https://technet.microsoft.com/library/hh849827(v=wps.640).aspx) 模块中；此 cmdlet 清空固定驱动器（包括外部驱动器）的回收站。 默认情况下，你会收到确认 Clear-RecycleBin 命令的提示，因为该 cmdlet 的 ConfirmImpact 属性设置为 ConfirmImpact.High。
+- 从 Windows PowerShell 5.0 开始，新的加密消息语法 cmdlet 通过使用加密保护消息的 IETF 标准格式对内容的加密和解密提供支持，如 [RFC5652](https://tools.ietf.org/html/rfc5652) 中所述。 已将 Get-CmsMessage、Protect-CmsMessage 和 Unprotect-CmsMessage cmdlet 添加到 [Microsoft.PowerShell.Security](/powershell/module/Microsoft.PowerShell.Security) 模块中。
+- [Microsoft.PowerShell.Utility](/powershell/module/Microsoft.PowerShell.Utility) 中新的 cmdlet 包括 Get-Runspace、Debug-Runspace、Get-RunspaceDebug、Enable-RunspaceDebug 和 Disable-RunspaceDebug，使你能够在运行空间上设置调试选型，以及在运行空间上开始和停止调试。 针对调试任意运行空间（即不是 Windows PowerShell 控制台或 Windows PowerShell ISE 会话默认的运行空间），Windows PowerShell 使你能够在脚本中设置断点，并添加了断点以停止脚本运行，直到你可以附加调试器来调试运行空间脚本。 已将对任意运行空间的嵌套调试支持添加到了运行空间的 Windows PowerShell 脚本调试器中。
+- 已将一个新的 Format-Hex cmdlet 添加到了 [Microsoft.PowerShell.Utility](/powershell/module/Microsoft.PowerShell.Utility) 模块中。
+  Format-Hex 使你可以以十六进制格式查看文本或二进制数据。
+- 已将 Get-Clipboard 和 Set-Clipboard cmdlet 添加到了 [Microsoft.PowerShell.Utility](/powershell/module/Microsoft.PowerShell.Utility) 模块中；它们易于将内容传输到 Windows PowerShell 会话以及从其中传输内容。 剪贴板 cmdlet 支持图像、音频文件、文件列表和文本。
+- 新的 Clear-RecycleBin cmdlet 已添加到 [Microsoft.PowerShell.Management](/powershell/module/Microsoft.PowerShell.Management) 模块中；此 cmdlet 清空固定驱动器（包括外部驱动器）的回收站。 默认情况下，你会收到确认 Clear-RecycleBin 命令的提示，因为该 cmdlet 的 ConfirmImpact 属性设置为 ConfirmImpact.High。
 - 新的 New-TemporaryFile cmdlet 使你能够创建临时文件作为脚本的一部分。 默认情况下，新的临时文件创建在 ```C:\Users\<user name>\AppData\Local\Temp``` 中。
 - Out-File、Add-Content 和 Set-Content cmdlet 现在有一个新的 -NoNewline 参数，使用该参数将在输出后省略新的行。
 - New-Guid cmdlet 利用 .NET Framework Guid 类以生成 GUID，这在当你正在编写脚本或 DSC 资源时很有用。
-- 由于文件版本信息可能会产生误导（尤其是在修补文件后），因此新的 FileVersionRaw 和 ProductVersionRaw 脚本属性可用于 FileInfo 对象。 例如，可以运行以下命令以显示 powershell.exe 这些属性的值，其中 $pid 包含 Windows PowerShell 正运行会话的进程 ID：```Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force```
+- 由于文件版本信息可能会产生误导（尤其是在修补文件后），因此新的 FileVersionRaw 和 ProductVersionRaw 脚本属性可用于 FileInfo 对象。 例如，可以运行下面的命令来显示 powershell.exe 的这些属性值，其中 $pid 包含正在运行的 Windows PowerShell 会话的进程 ID：`Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force`
 - 新的 Enter-PSHostProcess 和 Exit-PSHostProcess cmdlet 使你能够在独立于正在 Windows PowerShell 控制台中运行的当前进程的进程中调试 Windows PowerShell 脚本。 运行 Enter-PSHostProcess 以输入或附上一个特定的进程 ID，然后运行 Get-Runspace 以返回进程内活动的运行空间。 当你完成进程内的脚本调试后，运行 Exit-PSHostProcess 从进程中分离出来。
-- 已将一个新的 Wait-Debugger cmdlet 添加到了 [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 模块中。 在脚本中运行下一个语句时，可运行 Wait-Debugger 以停止调试器中的脚本。
+- 已将一个新的 Wait-Debugger cmdlet 添加到了 [Microsoft.PowerShell.Utility](/powershell/module/Microsoft.PowerShell.Utility) 模块中。 在脚本中运行下一个语句时，可运行 Wait-Debugger 以停止调试器中的脚本。
 - Windows PowerShell 工作流调试器现在支持命令或 Tab 自动补全，并且你可以调试嵌套的工作流函数。 现在，可以按 **Ctrl+Break** 进入正在运行的脚本、本地和远程会话以及工作流脚本中的调试器。
-- 已将 Debug-Job cmdlet 添加到 [Microsoft.PowerShell.Core](https://technet.microsoft.com/library/hh849695.aspx) 模块中，用于调试 Windows PowerShell 工作流、后台以及在远程会话中运行的作业的运行作业脚本。
+- 已将 Debug-Job cmdlet 添加到 [Microsoft.PowerShell.Core](/powershell/module/Microsoft.PowerShell.Core) 模块中，用于调试 Windows PowerShell 工作流、后台以及在远程会话中运行的作业的运行作业脚本。
 - 已为 Windows PowerShell 作业添加一个新状态 AtBreakpoint。 AtBreakpoint 状态在作业正在运行包含设置断点的脚本以及脚本命中断点时应用。 当作业在调试断点处停止时，必须运行 Debug-Job cmdlet 来调试该作业。
 - Windows PowerShell 5.0 实现了在 $PSModulePath 中的相同文件夹内对单个 Windows PowerShell 模块的多个版本的支持。 已将 RequiredVersion 属性添加到了 ModuleSpecification 类中，用于帮助获取模块的所需版本；此属性与 ModuleVersion 属性相互排斥。 RequiredVersion 现在作为 Get-Module、Import-Module 和 Remove-Module cmdlet 的 FullyQualifiedName 参数的值的一部分受到支持。
 - 你现在可以通过运行 Test-ModuleManifest cmdlet 执行模块版本验证。
@@ -143,7 +148,7 @@ Windows PowerShell 5.0 可向后兼容。 为 Windows PowerShell 4.0、Windows P
 - 已将 FullyQualifiedName 参数添加到 Import-Module 和 Remove-Module cmdlet 中，用于支持存储单个模块的多个版本。
 - Save-Help、Update-Help、Import-PSSession、Export-PSSession 和 Get-Command 拥有一个新的参数，ModuleSpecification 类型的 FullyQualifiedModule。 添加此参数以按模块的完全限定名称来指定它。
 - **$PSVersionTable.PSVersion** 的值已更新为 5.0。
-- WMF 5.0 (PowerShell 5.0) 包括 Pester  模块。  Pester 是 PowerShell 的单元测试框架。 它提供了几个易于使用的关键字，可用于为脚本创建测试。
+- WMF 5.0 (PowerShell 5.0) 包括 Pester  模块。 Pester 是 PowerShell 的单元测试框架。 它提供了几个易于使用的关键字，可用于为脚本创建测试。
 
 ### <a name="new-features-in-windows-powershell-desired-state-configuration"></a>Windows PowerShell Desired State Configuration 中的新增功能
 
@@ -170,8 +175,9 @@ Windows PowerShell 5.0 可向后兼容。 为 Windows PowerShell 4.0、Windows P
 - Windows PowerShell 现在包括对 DSC 配置的自定义帮助的支持，该帮助是由通过将 \[CmdletBinding()] 添加到生成的配置函数来定义的。
 - 新的 **DscLocalConfigurationManager** 特性将配置块设指定为元配置，用于配置 DSC 本地配置管理器。 此特性将配置限制为仅包含配置 DSC 本地配置管理器的项。 在处理期间，此配置生成 \*.meta.mof 文件，然后通过运行 Set-DscLocalConfigurationManager cmdlet 将其发送到相应的目标节点。
 - Windows PowerShell 5.0 中现允许部分配置。 可以将配置文档以片段的形式传递到节点。 对于要接收配置文档的多个片段的节点，必须将其本地配置管理器首先设置为指定预期片段
-- 跨计算机同步是 Windows PowerShell 5.0 中 DSC 中的新增功能。 通过使用内置 WaitFor\* 资源（**WaitForAll**、**WaitForAny** 和 **WaitForSome**），你现可在配置运行期间指定跨计算机的依赖关系，而无需外部业务流程。 以下资源通过 WS-Man 协议使用 CIM 连接进行节点到节点同步。 配置可以等待另一台计算机特定的资源状态更改。
-- Just Enough Administration (JEA) 是一个新的委派安全性功能，它利用 DSC 和 Windows PowerShell 受限运行空间以帮助保护企业免于数据丢失或员工（有意或无意）造成的泄露。 有关 JEA 的详细信息（包括可下载 xJEA DSC 资源的位置），请参阅 [Just Enough Administration, Step by Step（Just Enough Administration 分步说明）](https://blogs.technet.com/b/privatecloud/archive/2014/05/14/just-enough-administration-step-by-step.aspx)。
+- 跨计算机同步是 Windows PowerShell 5.0 中 DSC 中的新增功能。 通过使用内置 WaitFor\* 资源（**WaitForAll**、**WaitForAny** 和 **WaitForSome**），你现可在配置运行期间指定跨计算机的依赖关系，而无需外部业务流程。 以下资源通过 WS-Man 协议使用 CIM 连接进行节点到节点同步。
+  配置可以等待另一台计算机特定的资源状态更改。
+- Just Enough Administration (JEA) 是一个新的委派安全性功能，它利用 DSC 和 Windows PowerShell 受限运行空间以帮助保护企业免于数据丢失或员工（有意或无意）造成的泄露。 若要详细了解 JEA（包括从哪里可下载 xJEA DSC 资源），请参阅 [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview)。
 - 以下新的 cmdlet 已添加到 PSDesiredStateConfiguration 模块中。
   - 新的 Get-DscConfigurationStatus cmdlet 从目标节点中获取有关配置状态的高级信息。 你可以获取最近的状态或所有配置。
   - 新的 Compare-DscConfiguration cmdlet 将指定的配置与一个或多个目标节点的实际状态进行比较。
@@ -188,7 +194,7 @@ Windows PowerShell 5.0 可向后兼容。 为 Windows PowerShell 4.0、Windows P
 
 ### <a name="new-features-in-windows-powershell-web-services-management-odata-iis-extension"></a>Windows PowerShell Web 服务（Management OData IIS 扩展）中的新增功能
 
-- 从 Windows PowerShell 5.0 开始，你可以通过运行 Export-ODataEndpointProxy cmdlet（位于新的 [Microsoft.PowerShell.OdataUtils](https://technet.microsoft.com/library/dn818507(v=wps.640).aspx) 模块中），基于由给定 OData 终结点暴露的功能来生成一组 Windows PowerShell cmdlet。
+- 从 Windows PowerShell 5.0 开始，你可以通过运行 Export-ODataEndpointProxy cmdlet（位于新的 [Microsoft.PowerShell.OdataUtils](/powershell/module/microsoft.powershell.odatautils) 模块中），基于由给定 OData 终结点暴露的功能来生成一组 Windows PowerShell cmdlet。
 
 ### <a name="notable-bug-fixes-in-windows-powershell-50"></a>Windows PowerShell 5.0 中值得注意的 Bug 修复
 
@@ -210,16 +216,17 @@ Windows PowerShell 4.0 默认安装在 Windows 8.1 和 Windows Server 2012 R2 �
 
 Windows PowerShell 4.0 包括以下新增功能。
 
-### <a name="a-namenew-features-in-windows-powershell-1-new-features-in-windows-powershell"></a><a name="new-features-in-windows-powershell-1" />Windows PowerShell 中的新增功能
+### <a name="new-features-in-windows-powershell"></a><a name="new-features-in-windows-powershell-1" />Windows PowerShell 中的新增功能
 
-- **Windows PowerShell Desired State Configuration** (DSC) 是 Windows PowerShell 4.0 中的新管理系统，可为软件服务和运行这些服务的环境部署和管理配置数据。 有关 DSC 的详细信息，请参阅 [Windows PowerShell Desired State Configuration 入门](https://technet.microsoft.com/library/c134aa32-b085-4656-9a89-955d8ff768d0)。
+- **Windows PowerShell Desired State Configuration** (DSC) 是 Windows PowerShell 4.0 中的新管理系统，可为软件服务和运行这些服务的环境部署和管理配置数据。 有关 DSC 的详细信息，请参阅 [Windows PowerShell Desired State Configuration 入门](/powershell/scripting/dsc/getting-started/wingettingstarted)。
 - **Save-Help** 使你能够为安装在远程计算机上的模块保存帮助。 可以使用 Save-Help 从连接了 Internet 的客户端（不必在其上安装需要帮助的所有模块）下载模块“帮助”，然后将已保存的“帮助”复制到远程共享文件夹或无法访问 Internet 的远程计算机。
 - Windows PowerShell 调试器已经过增强，从而允许对 Windows PowerShell 工作流以及在远程计算机上运行的脚本进行调试。 现在，Windows PowerShell 工作流都可以从 Windows PowerShell 命令行或 Windows PowerShell ISE 在脚本级别进行调试。 现在，可通过远程会话来调试 Windows PowerShell 脚本，包括脚本工作流。 远程调试会话是通过先断开连接再重新连接的 Windows PowerShell 远程会话保留的。
 - **Register-ScheduledJob** 和 **Set-ScheduledJob** 的 **RunNow** 参数无需使用 **Trigger** 参数为作业设置即时启动日期和时间。
 - **Invoke-RestMethod** 和 **Invoke-WebRequest** 现在使你能够使用 Headers 参数来设置所有标头。 虽然此参数一直存在，但它也是会导致异常或错误的 Web cmdlet 的几个参数之一。
 - **Get-Module** 具有一个新参数 **FullyQualifiedName**，其类型为 **ModuleSpecification\[]** 。 Get-Module 的参数 **FullyQualifiedName** 现在使你能够通过使用模块的名称、版本和 GUID（可选）来指定该模块。
 - Windows Server 2012 R2 上的默认执行策略设置为 **RemoteSigned**。 在 Windows 8.1 上，默认设置保持不变。
-- 从 Windows PowerShell 4.0 开始，支持通过使用动态方法名称来调用方法。 你可以使用变量来存储方法名称，然后通过调用该变量动态调用该方法。
+- 从 Windows PowerShell 4.0 开始，支持通过使用动态方法名称来调用方法。
+  你可以使用变量来存储方法名称，然后通过调用该变量动态调用该方法。
 - 超过由 **PSElapsedTimeoutSec** 工作流通用参数指定的超时期限时，不再删除异步工作流作业。
 - 已向 **New-JobTrigger** 和 **Set-JobTrigger** cmdlet 添加新参数：**RepeatIndefinitely**。 可在不指定 **RepetitionDuration** 参数的 **TimeSpan.MaxValue** 值的情况下无限期重复运行计划作业。
 - 已向 **Enable-JobTrigger** 和 **Disable-JobTrigger** cmdlet 添加新参数：**Passthru**。 Passthru 参数显示通过你的命令创建或修改的所有对象。
@@ -230,7 +237,8 @@ Windows PowerShell 4.0 包括以下新增功能。
 - 已添加新 cmdlet **Get-FileHash**，该 cmdlet 可返回采用几种格式之一的指定文件的文件哈希。
 - 在 Windows PowerShell 4.0 中，如果某个模块在其清单中使用了 **DefaultCommandPrefix** 键，或者如果用户导入了一个带有 **Prefix** 参数的模块，则该模块的 **ExportedCommands** 属性将显示该模块中带有前缀的命令。 当你使用模块限定语法 ModuleName\\CommandName 来运行这些命令时，命令名称必须包含前缀。
 - **$PSVersionTable.PSVersion** 的值已更新为 4.0。
-- **Where()** 运算符行为已更改。 不再支持接受采用 `"Property -CompareOperator Value"` 格式的字符串表达式的 `Collection.Where('property -match name')`。 但是，**Where()** 运算符可接受采用脚本块格式的字符串表达式；仍支持此行为。
+- **Where()** 运算符行为已更改。 不再支持接受采用 `"Property -CompareOperator Value"` 格式的字符串表达式的 `Collection.Where('property -match name')`。
+  但是，**Where()** 运算符可接受采用脚本块格式的字符串表达式；仍支持此行为。
 
 ### <a name="new-features-in-windows-powershell-integrated-scripting-environment-ise"></a>Windows PowerShell 集成脚本环境 (ISE) 中的新增功能
 
@@ -249,11 +257,12 @@ Windows PowerShell 4.0 包括以下新增功能。
 
 ### <a name="new-features-in-windows-powershell-web-services"></a>Windows PowerShell Web 服务中的新增功能
 
-- 当 Windows PowerShell Web 服务（PSWS，也称为“管理 OData IIS 扩展”）中发生错误时，则在 cmdlet 运行的同时，会向调用方返回更详细的错误消息。 此外，错误代码遵守 [Windows Azure REST API 错误代码指南](https://msdn.microsoft.com/library/windowsazure/dd179357.aspx)。
+- 当 Windows PowerShell Web 服务（PSWS，也称为“管理 OData IIS 扩展”）中发生错误时，则在 cmdlet 运行的同时，会向调用方返回更详细的错误消息。 此外，错误代码遵守 [Windows Azure REST API 错误代码指南](/rest/api/storageservices/Common-REST-API-Error-Codes)。
 - 现在，终结点可以定义 API 版本，也可以强制使用特定的 API 版本。 每当客户端和服务器之间发生版本不匹配时，都会向客户端和服务器显示错误。
 - 通过为调度架构中任何缺少的字段自动生成值，简化了该架构的管理操作。 即使调度架构不存在，生成也会发生，它是一个很有帮助的起点。
 - 通过效仿 Windows PowerShell 中的 **PSTypeConverter** 的行为，PSWS 中的类型处理得到了改进，可支持使用除默认构造函数以外的其他构造函数的类型。 这使你能够通过 PSWS 使用复杂类型。
-- PSWS 现在允许在运行查询的同时扩展关联的实例。 对于较大的二进制内容（如图像、音频或视频），传输成本相当高，最好在未编码的情况下传输二进制数据。 PSWS 将命名的资源流用于传输，无需编码。 命名的资源流是 **Edm.Stream** 类型的实体的属性。 每个命名的资源流都具有针对 GET 或 UPDATE 操作的单独 URI。
+- PSWS 现在允许在运行查询的同时扩展关联的实例。 对于较大的二进制内容（如图像、音频或视频），传输成本相当高，最好在未编码的情况下传输二进制数据。 PSWS 将命名的资源流用于传输，无需编码。
+  命名的资源流是 **Edm.Stream** 类型的实体的属性。 每个命名的资源流都具有针对 GET 或 UPDATE 操作的单独 URI。
 - OData 操作现在提供一种用于对资源调用非 CRUD（Create、Read、Update 和 Delete）方法的机制。 你可以通过将 HTTP POST 请求发送到为操作定义的 URI 来调用该操作。 操作参数是在 POST 请求的正文中定义的。
 - 为了与 Windows Azure 指南保持一致，所有的 URL 都应简化。 包含在 **Key As Segment** 中的更改允许以分段形式表示单独的键。 请注意，使用多个键值的引用仍旧要求值以逗号分隔并用括号括起来。
 - 在此版本的 PSWS 之前，执行 Create、Update 或 Delete 操作的唯一方式是对顶级资源调用 Post、Put 或 Delete。 此版本的 PSWS 中新增了 Contained Resource 操作，它使用户能够获得相同的结果却不必如此直接地访问相同的资源，如同在这些资源已包含在内的情况下进行访问。
@@ -319,7 +328,8 @@ Windows PowerShell 3.0 包括以下新增功能。
 
 ### <a name="windows-powershell-workflow"></a>Windows PowerShell 工作流程
 
-Windows PowerShell 工作流将 Windows Workflow Foundation 的强大功能引入到 Windows PowerShell 中。 你可以采用 XAML 或 Windows PowerShell 语言编写工作流，然后像运行 cmdlet 一样运行它们。 [Get-command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet 获取工作流命令，[Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) cmdlet 获取工作流帮助。
+Windows PowerShell 工作流将 Windows Workflow Foundation 的强大功能引入到 Windows PowerShell 中。
+你可以采用 XAML 或 Windows PowerShell 语言编写工作流，然后像运行 cmdlet 一样运行它们。 `Get-Command` cmdlet 获取工作流命令，而 `Get-Help` cmdlet 则获取工作流帮助。
 
 工作流是多计算机管理活动序列，其特点是长期运行、可重复、频繁、可并行化、可中断、可挂起并且可重启。 工作流可以从有意或意外中断（例如网络中断、Windows 重新启动或电源故障）中恢复。
 
@@ -329,10 +339,12 @@ Windows PowerShell 工作流将 Windows Workflow Foundation 的强大功能引�
 
 - 自动运行有序的、长期运行的任务。
 - **远程监控长期运行的任务**。 活动的状态和进度随时可见。
-- **多计算机管理。** 同时在数百个托管节点上将任务作为工作流运行。 Windows PowerShell 工作流包含了一个内置的常用管理参数（例如 **PSComputerName**）库，实现了多计算机管理方案。
+- **多计算机管理。** 同时在数百个托管节点上将任务作为工作流运行。
+  Windows PowerShell 工作流包含了一个内置的常用管理参数（例如 **PSComputerName**）库，实现了多计算机管理方案。
 - **复杂进程的单个任务执行。** 你可将实施整个端到端方案的相关脚本集成到单个工作流中。
 - **暂留。** ：工作流保存在由其作者定义的特定点上（或在这些点上对工作流执行检查点），以便你可以从最后暂留的任务（或检查点）恢复该工作流，而不是从开头重启该工作流。
-- **稳定性。** 自动的故障恢复。 工作流支持计划和非计划的重新启动。 你可以挂起工作流执行，然后从最后一个暂留点恢复该工作流。 工作流作者可以指定当在一个或多个托管节点上出现故障时，要重新运行的特定活动。
+- **稳定性。** 自动的故障恢复。 工作流支持计划和非计划的重新启动。 你可以挂起工作流执行，然后从最后一个暂留点恢复该工作流。
+  工作流作者可以指定当在一个或多个托管节点上出现故障时，要重新运行的特定活动。
 - **断开连接、重新连接以及在已断开连接的会话中运行的能力。** 用户可以连接和断开工作流服务器，但工作流依旧继续运行。 你可以注销客户端计算机或重新启动客户端计算机，并通过其他计算机监视工作流执行，而不中断工作流。
 - **计划。** 可以像计划任何 Windows PowerShell cmdlet 或脚本那样计划工作流任务。
 - **工作流和连接限制。** 可以限制工作流执行和到节点的连接，从而实现可扩展性且高可用性的方案。
@@ -341,11 +353,11 @@ Windows PowerShell 工作流将 Windows Workflow Foundation 的强大功能引�
 
 Windows PowerShell Web 访问是一项 Windows Server 2012 功能，它允许用户在基于 Web 的控制台中运行 Windows PowerShell 命令和脚本。 使用基于 Web 的控制台的设备不需要安装 Windows PowerShell、远程管理软件或浏览器插件。 只需要正确配置的 Windows PowerShell Web 访问网关以及支持 JavaScript 和接受 Cookie 的客户端设备浏览器。
 
-有关详细信息，请参阅[部署 Windows PowerShell Web 访问](https://go.microsoft.com/fwlink/p/?LinkID=221050)。
+有关详细信息，请参阅[部署 Windows PowerShell Web 访问](/powershell/scripting/components/web-access/install-and-use-windows-powershell-web-access)。
 
 ### <a name="new-windows-powershell-ise-features"></a>新的 Windows PowerShell ISE 功能
 
-对于 Windows PowerShell 3.0 来说，Windows PowerShell 集成脚本环境 (ISE) 具有许多新增功能，包括 IntelliSense、显示命令窗口、统一的控制台窗格、代码段、大括号匹配、展开/折叠部分、自动保存、最近使用的项列表、批量复制、块复制，以及对编写 Windows PowerShell 脚本工作流的完全支持。 有关详细信息，请参阅 [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/library/dfa54d47-60c6-4fff-8197-c747e8d411bb)。
+对于 Windows PowerShell 3.0 来说，Windows PowerShell 集成脚本环境 (ISE) 具有许多新增功能，包括 IntelliSense、显示命令窗口、统一的控制台窗格、代码段、大括号匹配、展开/折叠部分、自动保存、最近使用的项列表、批量复制、块复制，以及对编写 Windows PowerShell 脚本工作流的完全支持。 有关详细信息，请参阅 [about_Windows_PowerShell_ISE](/powershell/module/microsoft.powershell.core/about/about_windows_powershell_ise)。
 
 ### <a name="support-for-microsoft-net-framework-4"></a>对 Microsoft .NET Framework 4 的支持
 
@@ -353,7 +365,8 @@ Windows PowerShell 是针对公共语言运行时 4.0 而构建的。 Cmdlet、�
 
 ### <a name="support-for-windows-preinstallation-environment"></a>对 Windows 预安装环境的支持
 
-Windows PowerShell 3.0 是 Windows 8 的 Windows 预安装环境 (Windows PE) 4.0 中的可选组件。 Windows PE 是用于启动没有操作系统的计算机并使其为 Windows 安装做好准备的最小操作系统。 Windows PE 可以用于对硬盘驱动器进行分区和格式设置、将磁盘映像复制到计算机，以及从网络共享启动 Windows 安装程序。 可以在 Windows PE 上使用 Windows PowerShell 3.0 来管理部署、诊断和恢复方案。
+Windows PowerShell 3.0 是 Windows 8 的 Windows 预安装环境 (Windows PE) 4.0 中的可选组件。 Windows PE 是用于启动没有操作系统的计算机并使其为 Windows 安装做好准备的最小操作系统。 Windows PE 可用于对硬盘驱动器进行分区和格式设置、将磁盘映像复制到计算机，以及从网络共享启动 Windows 安装程序。
+可以在 Windows PE 上使用 Windows PowerShell 3.0 来管理部署、诊断和恢复方案。
 
 ### <a name="disconnected-sessions"></a>断开连接的会话
 
@@ -361,9 +374,9 @@ Windows PowerShell 3.0 是 Windows 8 的 Windows 预安装环境 (Windows PE) 4.
 
 你现在可以在不中断在会话中运行的命令的情况下断开与该会话的连接。 你可以关闭该会话并关闭计算机。 稍后，你可以从相同或不同计算机上的另一个会话重新连接到该会话。
 
-[Get-PSSession](https://technet.microsoft.com/library/b2b10531-d0df-4746-b877-e75c09955cb6) cmdlet 的 **ComputerName** 参数现在可获取连接到计算机的所有用户会话，即使这些会话是在其他计算机上的其他会话中启动的。 你可以连接到这些会话、获取命令结果、启动新的命令，然后断开与该会话的连接。
+`Get-PSSession` cmdlet 的 ComputerName  参数现在获取用户所有连接到计算机的会话，即使会话是在其他计算机上的不同会话中启动的，也不例外。 你可以连接到这些会话、获取命令结果、启动新的命令，然后断开与该会话的连接。
 
-已添加新的 cmdlet 以支持断开连接的会话功能，其中包括 [Disconnect-PSSession](https://technet.microsoft.com/library/f8f95111-612f-4cba-9098-77904b0473d8)、[Connect-PSSession](https://technet.microsoft.com/library/b803dd29-f208-4079-80d4-db04d778f060)和 Receive-PSSession，并且已向管理 PSSession 的 cmdlet 添加了新的参数，例如 [Invoke-Command](https://technet.microsoft.com/library/906b4b41-7da8-4330-9363-e7164e5e6970) cmdlet 的 **InDisconnectedSession** 参数。
+新增了 cmdlet（包括 `Disconnect-PSSession`、`Connect-PSSession` 和 `Receive-PSSession`），以支持“已断开连接的会话”功能；同时还向管理 PSSession 的 cmdlet 添加了新参数，如 `Invoke-Command` cmdlet 的 InDisconnectedSession  参数。
 
 仅当连接的源端（“客户端”）和终端（“服务器”）上的计算机都运行的是 Windows PowerShell 3.0 时，才支持“断开连接的会话”功能。
 
@@ -377,19 +390,20 @@ Windows PowerShell 3.0 可检测到客户端和服务器之间的意外连接损
 
 ### <a name="updatable-help-system"></a>可更新的帮助系统
 
-现在，你可以为模块中的 cmdlet 下载更新的帮助文件。 [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) cmdlet 可标识最新的帮助文件、从 Internet 下载这些文件、对其进行解压缩和验证，然后将其安装在模块正确的特定于语言的目录中。
+现在，你可以为模块中的 cmdlet 下载更新的帮助文件。 `Update-Help` cmdlet 发现最新的帮助文件，从 Internet 下载这些文件，解压缩并验证它们，然后将它们安装在模块的特定语言正确目录中。
 
 若要使用更新的帮助文件，只需键入 `Get-Help`。 你无需重启 Windows 或 Windows PowerShell。 若要为 $pshome 目录中的模块更新帮助，请使用“以管理员身份运行”选项启动 Windows PowerShell。
 
-为了支持没有 Internet 访问权限的用户和防火墙外的用户，新的 [Save-Help](https://technet.microsoft.com/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa) cmdlet 会将帮助文件下载到文件系统目录中，例如文件共享。 然后，用户可以使用 [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) cmdlet 从文件共享中获取更新的帮助文件。
+为了支持没有连接到 Internet 的用户和防火墙后的用户，新 `Save-Help` cmdlet 将帮助文件下载到文件系统目录（如文件共享）中。 然后，用户可以使用 `Update-Help` cmdlet 从文件共享中获取更新后的帮助文件。
 
-你可以使用 [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) cmdlet 来更新所有受支持 UI 区域性中所有或特定模块的帮助文件。 你甚至可以将 [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) 命令放入到你的 Windows PowerShell 配置文件中。 默认情况下，Windows PowerShell 每天下载模块帮助文件的次数不超过一次。
+使用 `Update-Help` cmdlet，可以更新所有受支持 UI 区域性中全部或特定模块的帮助文件。 甚至可以将 `Update-Help` 命令置于 Windows PowerShell 配置文件中。
+默认情况下，Windows PowerShell 每天下载模块帮助文件的次数不超过一次。
 
-Windows 8 和 Windows Server 2012 模块不包含帮助文件。 若要下载最新的帮助文件，请键入 `Update-Help`。 有关详细信息，请键入 `Get-Help`（不带参数）或请参阅 [about_Updatable_Help](https://technet.microsoft.com/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe)。
+Windows 8 和 Windows Server 2012 模块不包含帮助文件。 若要下载最新的帮助文件，请键入 `Update-Help`。 有关详细信息，请键入 `Get-Help`（不带参数）或请参阅 [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_Updatable_Help)。
 
-当计算机上未安装 cmdlet 的帮助文件时，[Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) cmdlet 现在将显示自动生成的帮助。 自动生成的帮助中包含有关使用 [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) cmdlet 下载帮助文件的命令语法和指令。
+如果计算机上未安装 cmdlet 的帮助文件，`Get-Help` cmdlet 现在会显示自动生成的帮助。 自动生成的帮助中包含命令语法，以及关于如何使用 `Update-Help` cmdlet 下载帮助文件的说明。
 
-任何模块作者都可为其模块提供“可更新的帮助”。 你可以将帮助文件包含在模块中并使用“可更新的帮助”来更新它们，或忽略帮助文件并使用“可更新的帮助”来安装它们。 有关支持可更新的帮助的详细信息，请参阅 MSDN 中的[支持可更新的帮助](https://go.microsoft.com/FWLink/?LinkID=242129)。
+任何模块作者都可为其模块提供“可更新的帮助”。 你可以将帮助文件包含在模块中并使用“可更新的帮助”来更新它们，或忽略帮助文件并使用“可更新的帮助”来安装它们。 若要详细了解如何支持“可更新的帮助”，请参阅[支持“可更新的帮助”](/powershell/scripting/developer/module/supporting-updatable-help)。
 
 ### <a name="enhanced-online-help"></a>增强的联机帮助
 
@@ -422,15 +436,16 @@ Windows PowerShell 3.0 中包括对通用信息模型 (CIM) 的支持，CIM 为�
 
 ### <a name="session-configuration-files"></a>会话配置文件
 
-从 Windows PowerShell 3.0 开始，你可以通过使用文件来设计自定义会话配置。 新的会话配置文件使你能够确定使用会话配置的会话环境，包括向会话中加载哪些模块、脚本和格式文件、用户可以使用哪些 cmdlet 和语言元素、可以运行哪些模块和脚本以及可以看到哪些变量。
+从 Windows PowerShell 3.0 开始，你可以通过使用文件来设计自定义会话配置。
+新的会话配置文件使你能够确定使用会话配置的会话环境，包括向会话中加载哪些模块、脚本和格式文件、用户可以使用哪些 cmdlet 和语言元素、可以运行哪些模块和脚本以及可以看到哪些变量。
 
 你可以设计用户只能在其中运行来自一个特定模块的 cmdlet 的会话，或用户在其中具有完整的语言、对所有模块的访问权限，以及对可执行高级任务的脚本的访问权限的会话。
 
 在以前版本的 Windows PowerShell 中，仅为那些可以编写 C# 程序或复杂启动脚本的用户提供此级别的控制。 现在，计算机上“管理员”组中的任何成员都可以通过使用配置文件来自定义会话配置。
 
-若要创建会话配置文件，请使用 [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866) cmdlet。 若要将该会话配置文件应用到某个会话配置，请使用 [Register-PSSessionConfiguration](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) cmdlet 或 [Set-PSSessionConfiguration](https://technet.microsoft.com/library/b21fbad3-1759-4260-b206-dcb8431cd6ea) cmdlet。
+若要创建会话配置文件，请使用 `New-PSSessionConfigurationFile` cmdlet。 若要将会话配置文件应用于会话配置，请使用 `Register-PSSessionConfiguration` 或 Set-PSSessionConfiguration cmdlet。
 
-有关详细信息，请参阅 [about_Session_Configuration_Files](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configuration_files?view=powershell-5.0) 和 [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866)。
+有关详细信息，请参阅 [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configuration_files) 和 `New-PSSessionConfigurationFile`。
 
 ### <a name="scheduled-jobs-and-task-scheduler-integration"></a>计划作业和任务计划程序集成
 
@@ -438,13 +453,14 @@ Windows PowerShell 3.0 中包括对通用信息模型 (CIM) 的支持，CIM 为�
 
 Windows PowerShell 计划作业是 Windows PowerShell 后台作业和“任务计划程序”任务的有用结合。
 
-与 Windows PowerShell 后台作业一样，计划作业以异步方式在后台运行。 可以通过使用作业 cmdlet（例如 [Start-Job](https://technet.microsoft.com/library/2bc04935-0deb-4ec0-b856-d7290cca6442) 和 [Get-Job](https://technet.microsoft.com/library/1352c534-7193-46ca-9ab1-0c5219a661ad)）来管理的已完成的计划作业实例。
+与 Windows PowerShell 后台作业一样，计划作业以异步方式在后台运行。
+可以使用作业 cmdlet（如 `Start-Job` 和 `Get-Job`），管理已完成的计划作业实例。
 
 与“任务计划程序”任务一样，你可以按一次性或重复计划运行计划作业，或者根据操作或事件运行它们。 你可以在“任务计划程序”中查看和管理计划作业、按需启用和禁用它们、将其作为模板运行或使用，并设置启动作业的条件。
 
 此外，计划作业还附带用于管理它们的一组自定义 cmdlet。 这些 cmdlet 使你能够创建、编辑、管理、禁用和重新启用计划作业，创建计划作业触发器并设置计划作业选项。
 
-有关计划作业的详细信息，请参阅 [about_Scheduled_Jobs](https://technet.microsoft.com/library/3b546629-703c-4939-b44f-52dd567bce92)。
+有关计划作业的详细信息，请参阅 [about_Scheduled_Jobs](/powershell/module/microsoft.powershell.core/about/about_Scheduled_Jobs)。
 
 ### <a name="windows-powershell-language-enhancements"></a>Windows PowerShell 语言增强功能
 
@@ -454,36 +470,36 @@ Windows PowerShell 3.0 包括许多功能，旨在使其语言更简单、更易
 
 已向 Windows PowerShell 核心安装添加新的 cmdlet，包括用于管理计划作业、已断开连接的会话、CIM 集成和“可更新的帮助系统”的 cmdlet。
 
-|||
-|-|-|
-|Add-JobTrigger|New-JobTrigger|
-|Connect-PSSession|New-PSSessionConfigurationFile|
-|ConvertFrom-Json|New-PSTransportOption|
-|ConvertTo-Json|New-PSWorkflowExecutionOption|
-|Disable-JobTrigger|New-PSWorkflowSession|
-|Disable-ScheduledJob|New-ScheduledJobOption|
-|Disconnect-PSSession|New-WinEvent|
-|Enable-JobTrigger|Receive-PSSession|
-|Enable-ScheduledJob|Register-CimIndicationEvent|
-|Get-CimAssociatedInstance|Register-ScheduledJob|
-|Get-CimClass|Remove-CimInstance|
-|Get-CimInstance|Remove-CimSession|
-|Get-CimSession|Remove-TypeData|
-|Get-ControlPanelItem|Rename-Computer|
-|Get-IseSnippet|Resume-Job|
-|Get-JobTrigger|Save-Help|
-|Get-ScheduledJob|Set-CimInstance|
-|Get-ScheduledJobOption|Set-JobTrigger|
-|Get-TypeData|Set-ScheduledJob|
-|Import-IseSnippet|Set-ScheduledJobOption|
-|Invoke-AsWorkflow|Show-Command|
-|Invoke-CimMethod|Show-ControlPanelItem|
-|Invoke-RestMethod|Suspend-Job|
-|Invoke-WebRequest|Test-PSSessionConfigurationFile|
-|New-CimInstance|Unblock-File|
-|New-CimSession|Unregister-ScheduledJob|
-|New-CimSessionOption|Update-Help|
-|New-IseSnippet||
+|                           |                                 |
+| ------------------------- | ------------------------------- |
+| Add-JobTrigger            | New-JobTrigger                  |
+| Connect-PSSession         | New-PSSessionConfigurationFile  |
+| ConvertFrom-Json          | New-PSTransportOption           |
+| ConvertTo-Json            | New-PSWorkflowExecutionOption   |
+| Disable-JobTrigger        | New-PSWorkflowSession           |
+| Disable-ScheduledJob      | New-ScheduledJobOption          |
+| Disconnect-PSSession      | New-WinEvent                    |
+| Enable-JobTrigger         | Receive-PSSession               |
+| Enable-ScheduledJob       | Register-CimIndicationEvent     |
+| Get-CimAssociatedInstance | Register-ScheduledJob           |
+| Get-CimClass              | Remove-CimInstance              |
+| Get-CimInstance           | Remove-CimSession               |
+| Get-CimSession            | Remove-TypeData                 |
+| Get-ControlPanelItem      | Rename-Computer                 |
+| Get-IseSnippet            | Resume-Job                      |
+| Get-JobTrigger            | Save-Help                       |
+| Get-ScheduledJob          | Set-CimInstance                 |
+| Get-ScheduledJobOption    | Set-JobTrigger                  |
+| Get-TypeData              | Set-ScheduledJob                |
+| Import-IseSnippet         | Set-ScheduledJobOption          |
+| Invoke-AsWorkflow         | Show-Command                    |
+| Invoke-CimMethod          | Show-ControlPanelItem           |
+| Invoke-RestMethod         | Suspend-Job                     |
+| Invoke-WebRequest         | Test-PSSessionConfigurationFile |
+| New-CimInstance           | Unblock-File                    |
+| New-CimSession            | Unregister-ScheduledJob         |
+| New-CimSessionOption      | Update-Help                     |
+| New-IseSnippet            |                                 |
 
 ### <a name="improvements-to-existing-core-cmdlets-and-providers"></a>对现有核心 Cmdlet 和提供程序的改进
 
@@ -495,23 +511,25 @@ Windows PowerShell 提供程序也已得到明显改进，包括 Certificate 提
 
 Windows PowerShell 3.0 扩展了远程计算机上的模块发现、导入和隐式远程功能。 Module cmdlet 可通过使用 Windows PowerShell 远程处理获取远程计算机上的模块，并将其导入到远程或本地计算机中。 通过将在远程计算机上隐式运行的命令导入到本地计算机中，新的 CIM 会话支持使你能够使用 CIM 和 WMI 来管理非 Windows 计算机。
 
-有关详细信息，请参阅 [Get-Module](https://technet.microsoft.com/library/2cccd4c4-9a21-4c77-b691-984ee57242e1) cmdlet 和 [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade) cmdlet 的帮助主题。
+有关详细信息，请参阅 `Get-Module` 和 `Import-Module` cmdlet 的帮助主题。
 
 ### <a name="enhanced-tab-completion"></a>增强的 Tab 自动补全
 
-Windows PowerShell 控制台中的 Tab 自动补全现在可以自动补全 cmdlet 的名称、参数、参数值、枚举、.NET Frameworks 类型、COM 对象、隐藏的目录等等。 Tab 自动补全功能是基于新的分析程序和抽象语法树彻底重写的，旨在支持更多方案，包括内存中的分析树和中间部分 Tab 自动补全。
+Windows PowerShell 控制台中的 Tab 自动补全现在可以自动补全 cmdlet 的名称、参数、参数值、枚举、.NET Frameworks 类型、COM 对象、隐藏的目录等等。
+Tab 自动补全功能是基于新的分析程序和抽象语法树彻底重写的，旨在支持更多方案，包括内存中的分析树和中间部分 Tab 自动补全。
 
 ### <a name="module-auto-loading"></a>模块自动加载
 
-[Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet 现在可从安装在计算机上的所有模块中获取所有的 cmdlet 和函数，即使模块未导入到当前会话中。
+`Get-Command` cmdlet 现在从计算机上安装的所有模块中获取全部 cmdlet 和函数，即使模块未导入到当前会话中，也不例外。
 
-当你获得所需的 cmdlet 时，可以在不导入任何模块的情况下立即使用它。 现在，当你使用模块中的任何 cmdlet 时，Windows PowerShell 模块都会自动导入。 不再需要搜索模块并将其导入即可使用其 cmdlet。
+当你获得所需的 cmdlet 时，可以在不导入任何模块的情况下立即使用它。
+现在，当你使用模块中的任何 cmdlet 时，Windows PowerShell 模块都会自动导入。 不再需要搜索模块并将其导入即可使用其 cmdlet。
 
-可使用以下方法触发模块的自动导入：在命令中使用该 cmdlet，对不带通配符的 cmdlet 运行 **Get-Command** 或对不带通配符的 cmdlet 运行 [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a)。
+自动导入模块是通过在命令中使用 cmdlet 触发的，即对没有通配符的 cmdlet 运行 `Get-Command` 或 `Get-Help`。
 
 可以通过使用 **$PSModuleAutoLoadingPreference** 首选项变量来启用、禁用和配置模块的自动导入。
 
-有关详细信息，请参阅 [about_Modules](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-5.0)、[about_Preference_Variables [v4]](https://technet.microsoft.com/library/31344314-be29-4286-b039-afa5460cbe8b) 以及有关 [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) 和 [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade) cmdlet 的帮助主题。
+有关详细信息，请参阅 [about_Modules](/powershell/module/microsoft.powershell.core/about/about_modules)、[about_Preference_Variables](/powershell/module/microsoft.powershell.core/about/about_Preference_Variables)，以及 `Get-Command` 和 `Import-Module` cmdlet 的帮助主题。
 
 ### <a name="module-experience-improvements"></a>模块体验改进
 
@@ -523,15 +541,15 @@ Windows PowerShell 3.0 将高级功能支持引入了模块，包括以下新增
 4. 改进了可用（未导入）模块的发现，包括允许 **Path** 和 **ListAvailable** 参数位于同一命令中
 5. 在模块清单中新增了 **DefaultCommandPrefix** 项，可在不更改模块代码的情况下避免名称冲突。
 6. 改进了模块要求，包括附带版本和 GUID 的完全限定的所需模块和所需模块的自动导入
-7. 更安静、更流畅地操作 [New-ModuleManifest](https://technet.microsoft.com/library/512adced-f42f-4e88-ba7c-834fc9e5d047) cmdlet。
+7. 更安静、更流畅地操作 `New-ModuleManifest` cmdlet。
 8. 为 #Requires 新增了 **Module** 参数
-9. 使用 **MinimumVersion** 和 **RequiredVersion** 参数改进了 [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade) cmdlet。
+9. 改进了包含 MinimumVersion  和 RequiredVersion  参数的 `Import-Module` cmdlet。
 
 ### <a name="simplified-command-discovery"></a>简化的命令发现
 
-你不再需要导入所有模块即可发现可用于会话的命令。 在 Windows PowerShell 3.0 中，[Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet 从所有安装的模块中获取所有的命令。 而且，如果你使用了某个命令，则导出该命令的模块会自动导入到你的会话中。
+你不再需要导入所有模块即可发现可用于会话的命令。 在 Windows PowerShell 3.0 中，`Get-Command` cmdlet 从所有已安装的模块中获取全部命令。 而且，如果你使用了某个命令，则导出该命令的模块会自动导入到你的会话中。
 
-新的 [Show-Command](https://technet.microsoft.com/library/65bba50b-91a8-49d5-80a2-a30fc684ba41) cmdlet 是专门为新手设计的。 你可以在窗口中搜索命令。 你可以查看所有命令或按模块筛选、通过单击按钮导入模块、使用文本框和下拉列表来构造一个有效命令，然后复制或运行该命令，而无需离开窗口。
+新 `Show-Command` cmdlet 是专门为新手设计的。 你可以在窗口中搜索命令。 你可以查看所有命令或按模块筛选、通过单击按钮导入模块、使用文本框和下拉列表来构造一个有效命令，然后复制或运行该命令，而无需离开窗口。
 
 ### <a name="improved-logging-diagnostics-and-group-policy-support"></a>改进的日志记录、诊断和组策略支持
 
@@ -545,15 +563,13 @@ Windows PowerShell 3.0 将高级功能支持引入了模块，包括以下新增
 
 在 Windows PowerShell 3.0 中，Windows PowerShell 控制台主机程序具有一些新增功能，其中默认包括单线程单元。 通过“文件资源管理器”中的新“使用 PowerShell 运行”选项，你只需通过右键单击即可在不受限制的会话中运行脚本。 新的控制台主机启动逻辑可更快地启动 Windows PowerShell，而且你可以使用新的字体个性化旧的控制台窗口体验。
 
-有关详细信息，请参阅 [about_Run_With_PowerShell](https://technet.microsoft.com/library/c9d9ca5f-eff9-4409-be9d-e43b5b4087eb)。
-
 ### <a name="new-cmdlet-and-hosting-apis"></a>新的 Cmdlet 和宿主 API
 
 新的 Cmdlet API 和宿主 API 包括公用高级语法树 (AST) API、管道分页 API、嵌套管道、运行空间池 Tab 自动补全、Windows RT、cmdlet 特性 Obsolete 以及 FunctionInfo 对象的 Verb 和 Noun 属性。
 
 ### <a name="performance-improvements"></a>性能改进
 
-Windows PowerShell 中明显的性能改进体现在新的语言分析程序（构建在 .NET Framework 4 中的动态语言运行时 (DLR) 基础之上），以及运行时脚本编译、引擎可靠性改进和对 [Get-ChildItem](https://technet.microsoft.com/library/75cf79bb-4db6-4a67-8c36-3d20754e2190) 算法的更改（可提高其性能，尤其是在搜索网络共享时）。
+Windows PowerShell 中的显著性能改进来自于新的语言分析程序（它是在 .NET Framework 4 中的动态语言运行时 (DLR) 基础之上构建而成），以及运行时脚本编译、引擎可靠性提升和 `Get-ChildItem` 算法更改（提升了自身性能，尤其是在搜索网络共享时）。
 
 ### <a name="runas-and-shared-host-support"></a>运行身份和共享主机支持
 
@@ -565,9 +581,9 @@ Windows PowerShell 3.0 包括对运行身份和共享主机功能的支持。
 
 ### <a name="special-character-handling-improvements"></a>特殊字符处理改进
 
-为了改进 Windows PowerShell 3.0 解译和正确处理特殊字符的能力，用于处理路径中特殊字符的 **LiteralPath** 参数几乎对具有 **Path** 参数的所有 cmdlet 都有效，包括新增的 [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) 和 [Save-Help](https://technet.microsoft.com/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa) cmdlet。 分析程序中还包括了特殊逻辑，用于改进对文件名和路径中的反撇号字符 (\`) 和方括号的处理。
+为了提高 Windows PowerShell 3.0 解释和正确处理特殊字符的能力，用于处理路径中特殊字符的 LiteralPath  参数几乎对包含 Path  参数的所有 cmdlet 都有效，包括新增的 `Update-Help` 和 `Save-Help` cmdlet。 分析程序中还包括了特殊逻辑，用于改进对文件名和路径中的反撇号字符 (\`) 和方括号的处理。
 
 ## <a name="see-also"></a>另请参阅
 
-- [about_Windows_PowerShell_5.0](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
+- [about_Windows_PowerShell_5.0](/previous-versions/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
 - [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)

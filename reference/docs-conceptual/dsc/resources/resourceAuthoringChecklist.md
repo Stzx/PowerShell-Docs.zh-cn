@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 资源创作清单
-ms.openlocfilehash: e7401071db9cb149fff572d79568d69a0b8ea004
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: 85e0963d46358cd37cb87ea94fe6d1178a4f6a4a
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818135"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500611"
 ---
 # <a name="resource-authoring-checklist"></a>资源创作清单
 
@@ -15,8 +15,8 @@ ms.locfileid: "76818135"
 
 ## <a name="resource-module-contains-psd1-file-and-schemamof-for-every-resource"></a>资源模块包含用于所有资源的 .psd1 文件和 schema.mof
 
-检查资源是否具有正确的结构以及是否包含所有所需文件。 每个资源模块都应包含 .psd1 文件且每个非复合资源都应具有 schema.mof 文件。 未包含架构的资源不会被 `Get-DscResource` 列出且用户在针对 ISE 中的这些模块写入代码时不能使用 IntelliSense。
-xRemoteFile 资源是 [xPSDesiredStateConfiguration 资源模块](https://github.com/PowerShell/xPSDesiredStateConfiguration)的一部分，其目录结构如下所示：
+检查资源是否具有正确的结构以及是否包含所有所需文件。 每个资源模块都应包含 .psd1 文件且每个非复合资源都应具有 schema.mof 文件。
+未包含架构的资源不会被 `Get-DscResource` 列出且用户在针对 ISE 中的这些模块写入代码时不能使用 IntelliSense。 xRemoteFile 资源是 [xPSDesiredStateConfiguration 资源模块](https://github.com/PowerShell/xPSDesiredStateConfiguration)的一部分，其目录结构如下所示：
 
 ```
 xPSDesiredStateConfiguration
@@ -35,8 +35,7 @@ xPSDesiredStateConfiguration
 
 ## <a name="resource-and-schema-are-correct"></a>资源和架构正确
 
-验证资源架构 (*.schema.mof) 文件。 你可以使用 [DSC 资源设计器](https://www.powershellgallery.com/packages/xDSCResourceDesigner/1.12.0.0)来帮助开发和测试架构。
-请确保：
+验证资源架构 (*.schema.mof) 文件。 你可以使用 [DSC 资源设计器](https://www.powershellgallery.com/packages/xDSCResourceDesigner/1.12.0.0)来帮助开发和测试架构。 请确保：
 
 - 属性类型正确（例如，不将字符串用于接受数值的属性，应改为使用 UInt32 或其他数值类型）
 - 按以下格式正确指定属性特性：([key], [required], [write], [read])
@@ -54,7 +53,7 @@ xPSDesiredStateConfiguration
 
   示例： `[ClassVersion("1.0.0.0"), FriendlyName("xRemoteFile")]`
 
-- 每个字段的说明均有意义。 PowerShell GitHub 存储库具有很好的示例，如 [xRemoteFile 的 .schema.mof](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCResources/MSFT_xRemoteFile/MSFT_xRemoteFile.schema.mof)
+- 每个字段的说明均有意义。 PowerShell GitHub 存储库中有典型示例，如 [xRemoteFile 的 .schema.mof](https://github.com/dsccommunity/xPSDesiredStateConfiguration/blob/master/source/DSCResources/DSC_xRemoteFile/DSC_xRemoteFile.schema.mof)
 
 此外，你应使用 [DSC 资源设计器](https://www.powershellgallery.com/packages/xDSCResourceDesigner/1.12.0.0)中的 **Test-xDscResource** 和 **Test-xDscSchema** cmdlet 来自动验证资源和架构：
 
@@ -72,8 +71,7 @@ Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof
 
 ## <a name="resource-loads-without-errors"></a>资源已加载，未出现错误
 
-检查是否可以成功地加载资源模块。
-你可以手动完成检查，方法是运行 `Import-Module <resource_module> -force` 并确认未发生错误，或者可以编写自动化测试用例来进行检查。 如果选用后者，则可以在测试用例中遵循此结构：
+检查是否可以成功地加载资源模块。 你可以手动完成检查，方法是运行 `Import-Module <resource_module> -force` 并确认未发生错误，或者可以编写自动化测试用例来进行检查。 如果选用后者，则可以在测试用例中遵循此结构：
 
 ```powershell
 $error = $null
@@ -94,8 +92,7 @@ File file {
 }
 ```
 
-在第一次应用它之后，test.txt 文件应出现在 `C:\test` 文件夹。 但是，后续运行相同配置时不会更改计算机的状态（例如，不会创建 `test.txt` 文件的任何副本）。
-要确保资源是幂等的，可以在直接测试资源时重复调用 `Set-TargetResource`，或在进行端到端测试时多次调用 `Start-DscConfiguration`。 每次运行后结果都应是相同的。
+在第一次应用它之后，test.txt 文件应出现在 `C:\test` 文件夹。 但是，后续运行相同配置时不会更改计算机的状态（例如，不会创建 `test.txt` 文件的任何副本）。 要确保资源是幂等的，可以在直接测试资源时重复调用 `Set-TargetResource`，或在进行端到端测试时多次调用 `Start-DscConfiguration`。 每次运行后结果都应是相同的。
 
 ## <a name="test-user-modification-scenario"></a>测试用户修改场景
 
@@ -124,10 +121,9 @@ File file {
 
 ## <a name="verify-end-to-end-using-start-dscconfiguration"></a>使用 **Start-DscConfiguration** 进行端到端验证
 
-虽然通过直接调用 **Get/Set/Test-TargetResource** 函数对它们进行测试至关重要，但不是所有问题都能以这种方法发现。 你应将测试的关注重心放在使用 `Start-DscConfiguration` 上或请求服务器上。 事实上，这就是用户使用资源的方式，所以不要低估此类测试的重要性。
-可能的问题类型：
+虽然通过直接调用 **Get/Set/Test-TargetResource** 函数对它们进行测试至关重要，但不是所有问题都能以这种方法发现。 你应将测试的关注重心放在使用 `Start-DscConfiguration` 上或请求服务器上。 事实上，这就是用户使用资源的方式，所以不要低估此类测试的重要性。 可能的问题类型：
 
-- 由于 DSC 代理以服务方式运行，因此凭据/会话的行为可能不同。  请务必端到端地测试此处的任何功能。
+- 由于 DSC 代理以服务方式运行，因此凭据/会话的行为可能不同。 请务必端到端地测试此处的任何功能。
 - 由 `Start-DscConfiguration` 输出的错误可能与在直接调用 `Set-TargetResource` 函数时显示的错误不同。
 
 ## <a name="test-compatibility-on-all-dsc-supported-platforms"></a>在所有 DSC 支持的平台上测试兼容性
@@ -187,8 +183,7 @@ File file {
   }
   ```
 
-- 包括（注释掉）关于如何在示例脚本的末尾使用实际值调用配置的示例，就是一个很好的做法。
-  例如，在上面的配置中，指定 UserAgent 的最佳做法如下所示，但这种最佳做法并非显而易见：
+- 包括（注释掉）关于如何在示例脚本的末尾使用实际值调用配置的示例，就是一个很好的做法。 例如，在上面的配置中，指定 UserAgent 的最佳做法如下所示，但这种最佳做法并非显而易见：
 
   `UserAgent = [Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer`：这样，注释可以阐明配置的执行目的：
 
@@ -220,10 +215,10 @@ File file {
 
 ## <a name="log-messages-are-easy-to-understand-and-informative-including-verbose-debug-and-etw-logs"></a>日志消息要易于理解且信息量大（包括 –verbose、–debug 和 ETW 日志）
 
-确保由资源输出的日志易于理解且向用户提供有价值的信息。 资源应输出所有可能对用户有用的信息，但并不总是日志越多越好。 你应该避免冗余和输出不提供更多价值的数据 - 不要让人为了找到他们要找的内容而浏览成百上千条日志。 当然，针对此问题没有任何日志也是不可接受的解决方案。
+确保由资源输出的日志易于理解且向用户提供有价值的信息。
+资源应输出所有可能对用户有用的信息，但并不总是日志越多越好。 你应该避免冗余和输出不提供更多价值的数据 - 不要让人为了找到他们要找的内容而浏览成百上千条日志。 当然，针对此问题没有任何日志也是不可接受的解决方案。
 
-测试时还应分析 verbose 和 debug 日志（通过合理使用 `–Verbose` 和 `–Debug` 开关运行 `Start-DscConfiguration`）以及 ETW 日志。 若要查看 DSC ETW 日志，请转到事件查看器并打开以下文件夹：Applications and Services- Microsoft - Windows - Desired State Configuration。  默认情况下设置有“操作”通道，但要确保在运行配置之前启用了“分析”通道和“调试”通道。
-若要启用“分析”/“调试”通道，可以执行下面的脚本：
+测试时还应分析 verbose 和 debug 日志（通过合理使用 `–Verbose` 和 `–Debug` 开关运行 `Start-DscConfiguration`）以及 ETW 日志。 若要查看 DSC ETW 日志，请转到事件查看器并打开以下文件夹：Applications and Services- Microsoft - Windows - Desired State Configuration。 默认情况下设置有“操作”通道，但要确保在运行配置之前启用了“分析”通道和“调试”通道。 若要启用“分析”/“调试”通道，可以执行下面的脚本：
 
 ```powershell
 $statusEnabled = $true
@@ -241,8 +236,7 @@ Invoke-Expression $commandToExecute
 
 ## <a name="resource-implementation-does-not-contain-hardcoded-paths"></a>资源实现不包含硬编码路径
 
-确保资源实现中没有硬编码路径，特别是如果它们表示语言时 (en-us)，或者当存在可以使用的系统变量时。
-如果资源需要访问特定路径，请使用环境变量而非硬编码路径，因为后者在其他计算机上可能有所不同。
+确保资源实现中没有硬编码路径，特别是如果它们表示语言时 (en-us)，或者当存在可以使用的系统变量时。 如果资源需要访问特定路径，请使用环境变量而非硬编码路径，因为后者在其他计算机上可能有所不同。
 
 示例：
 
@@ -285,9 +279,7 @@ $programFilesPath = ${env:ProgramFiles(x86)}
 
 ## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>最佳做法：资源模块包含具有 ResourceDesignerTests.ps1 脚本的 Tests 文件夹
 
-对于给定模块中的所有资源，使用 **Test-xDscResource** 和 **Test-xDscSchema** 在资源模块中创建“Tests”文件夹、创建 `ResourceDesignerTests.ps1` 文件并添加测试是很好的做法。
-通过这种方法你可以快速验证给定模块的所有资源的架构，并在发布前执行完整性检查。
-对于 xRemoteFile，`ResourceTests.ps1` 可能和以下情况一样简单：
+对于给定模块中的所有资源，使用 **Test-xDscResource** 和 **Test-xDscSchema** 在资源模块中创建“Tests”文件夹、创建 `ResourceDesignerTests.ps1` 文件并添加测试是很好的做法。 通过这种方法你可以快速验证给定模块的所有资源的架构，并在发布前执行完整性检查。 对于 xRemoteFile，`ResourceTests.ps1` 可能和以下情况一样简单：
 
 ```powershell
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
@@ -312,9 +304,7 @@ New-xDscResource -Name MSFT_xRemoteFile -Property @($DestinationPath, $Uri, $Hea
 
 ## <a name="best-practice-resource-supports--whatif"></a>最佳做法：资源支持 - WhatIf
 
-如果资源正在执行“危险”操作，最佳做法是实现 `-WhatIf` 功能。 完成后，请确保 `-WhatIf` 输出正确地描述了在无 `-WhatIf` 开关情况下执行命令时可能发生的操作。
-此外，验证当 `–WhatIf` 开关存在时操作是否不会执行（未对节点的状态进行更改）。
-例如，假设我们正在测试 File 资源。 下面是创建 `test.txt` 文件及其“test”内容的简单配置：
+如果资源正在执行“危险”操作，最佳做法是实现 `-WhatIf` 功能。 完成后，请确保 `-WhatIf` 输出正确地描述了在无 `-WhatIf` 开关情况下执行命令时可能发生的操作。 此外，验证当 `–WhatIf` 开关存在时操作是否不会执行（未对节点的状态进行更改）。 例如，假设我们正在测试 File 资源。 下面是创建 `test.txt` 文件及其“test”内容的简单配置：
 
 ```powershell
 configuration config
@@ -337,7 +327,7 @@ config
 Start-DscConfiguration -Path .\config -ComputerName localhost -Wait -Verbose -WhatIf
 ```
 
-```output
+```Output
 VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' =
 SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' =
 root/Microsoft/Windows/DesiredStateConfiguration'.

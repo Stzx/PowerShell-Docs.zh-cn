@@ -2,33 +2,31 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 请求服务器最佳做法
-ms.openlocfilehash: 5cb47598b11f7884dddf1440cec21afeab49bebb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b2469984086a827b6b2a0fe84d1f326fc214ec28
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417727"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500681"
 ---
 # <a name="pull-server-best-practices"></a>请求服务器最佳做法
 
 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> 请求服务器（Windows 功能 DSC-Service）是 Windows Server 的一个受支持组件，不过目前没有提供新功能的计划  。 建议开始将托管客户端转换至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)（包括 Windows Server 上的请求服务器以外的功能）或[此处](/powershell/scripting/dsc/pull-server/pullserver#community-solutions-for-pull-service)列出的社区解决方案之一。
+> 请求服务器（Windows 功能 DSC-Service）是 Windows Server 的一个受支持组件，不过目前没有提供新功能的计划  。 建议开始将托管客户端转换至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)（包括 Windows Server 上的请求服务器以外的功能）或[此处](pullserver.md#community-solutions-for-pull-service)列出的社区解决方案之一。
 
 摘要：本文档旨在包括用于帮助为解决方案进行准备的工程师的过程和可扩展性。 详细信息应提供由客户确定，然后由产品团队验证的最佳做法，以确保建议面向未来并且可视为是稳定的。
 
-| |文档信息|
-|:---|:---|
-作者 | Michael Greene
-审阅者 | Ben Gelens、Ravikanth Chaganti、Aleksandar Nikolic
-已发布 | 2015 年 4 月
+|           |                      文档信息                      |
+| :-------- | :------------------------------------------------- |
+| 作者    | Michael Greene                                     |
+| 审阅者 | Ben Gelens、Ravikanth Chaganti、Aleksandar Nikolic |
+| 已发布 | 2015 年 4 月                                        |
 
 ## <a name="abstract"></a>摘要
 
-本文档旨在为规划 Windows PowerShell 所需状态配置请求服务器实现的任何人提供官方指南。 请求服务器是只应花费几分钟进行部署的简单服务。 虽然本文档会提供可以在部署中使用的技术操作方法指南，不过本文档的价值是作为最佳做法以及在部署之前要考虑的事项的参考。
-读者应基本熟悉 DSC 以及用于描述在 DSC 部署中包含的组件的术语。 有关详细信息，请参阅 [Windows PowerShell 所需状态配置概述](/powershell/scripting/dsc/overview)主题。
-因为 DSC 预计会随着云一起发展，所以包括请求服务器在内的基础技术也预计会进行发展并引入新功能。 本文档在附录中包含一个版本表，该表提供了对以前版本的参考以及对展望未来的解决方案的参考，以鼓励进行前瞻性设计。
+本文档旨在为规划 Windows PowerShell 所需状态配置请求服务器实现的任何人提供官方指南。 请求服务器是只应花费几分钟进行部署的简单服务。 虽然本文档会提供可以在部署中使用的技术操作方法指南，不过本文档的价值是作为最佳做法以及在部署之前要考虑的事项的参考。 读者应基本熟悉 DSC 以及用于描述在 DSC 部署中包含的组件的术语。 有关详细信息，请参阅 [Windows PowerShell Desired State Configuration 概述](/powershell/scripting/dsc/overview/overview)主题。 因为 DSC 预计会随着云一起发展，所以包括请求服务器在内的基础技术也预计会进行发展并引入新功能。 本文档在附录中包含一个版本表，该表提供了对以前版本的参考以及对展望未来的解决方案的参考，以鼓励进行前瞻性设计。
 
 本文档的两个主要部分：
 
@@ -49,10 +47,7 @@ Windows PowerShell 为所需状态配置提供了一组语言扩展，可以用�
 
 请求服务器提供了一个集中化服务来存储可供目标节点访问的配置。
 
-请求服务器角色可以作为 Web 服务器实例或 SMB 文件共享进行部署。 Web 服务器功能包含一个 OData 接口，并且可以选择包含供目标节点在应用配置时报告返回成功或失败确认的功能。 此功能在存在大量目标节点的环境中非常有用。
-配置目标节点（也称为客户端）以指向请求服务器之后，最新配置数据和任何所需脚本会进行下载并应用。 这可以作为一次性部署或作为反复出现的作业（这也使得请求服务器成为用于大规模管理更改的重要资产）来进行。 有关详细信息，请参阅 [Windows PowerShell 所需状态配置请求服务器](/powershell/scripting/dsc/pullServer/pullserver)和
-
-[推送和拉取配置模式](/powershell/scripting/dsc/pullServer/pullserver)。
+请求服务器角色可以作为 Web 服务器实例或 SMB 文件共享进行部署。 Web 服务器功能包含一个 OData 接口，并且可以选择包含供目标节点在应用配置时报告返回成功或失败确认的功能。 此功能在存在大量目标节点的环境中非常有用。 配置目标节点（也称为客户端）以指向请求服务器之后，最新配置数据和任何所需脚本会进行下载并应用。 这可以作为一次性部署或作为反复出现的作业（这也使得请求服务器成为用于大规模管理更改的重要资产）来进行。 有关详细信息，请参阅 [Windows PowerShell 所需状态配置请求服务器](pullserver.md)和[推送和请求配置模式](pullserver.md)。
 
 ## <a name="configuration-planning"></a>配置规划
 
@@ -68,10 +63,8 @@ Windows PowerShell 为所需状态配置提供了一组语言扩展，可以用�
 
 ### <a name="wmf"></a>WMF
 
-Windows Server 2012 R2 包括一种名为 DSC 服务的功能。 DSC 服务功能提供请求服务器功能，包括支持 OData 终结点的二进制文件。
-WMF 包含在 Windows Server 中，在各个 Windows Server 版本之间进行敏捷更新。 [新版本的 WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=54616) 可能包含对 DSC 服务功能的更新。 因此，最佳做法是下载最新版本的 WMF 并查看发行说明以确定该版本是否包含对 DSC 服务功能的更新。 还应查看指示更新或方案的设计状态是列为稳定还是试验性的发行说明部分。
-若要允许实现敏捷发行周期，各个功能可以声明为稳定，这指示功能已准备就绪，可以在生产环境中使用（即使 WMF 是以预览版发行）。
-历史上一直通过 WMF 版本进行更新的其他功能（请参阅 WMF 发行说明以了解进一步详细信息）：
+Windows Server 2012 R2 包括一种名为 DSC 服务的功能。 DSC 服务功能提供请求服务器功能，包括支持 OData 终结点的二进制文件。 WMF 包含在 Windows Server 中，在各个 Windows Server 版本之间进行敏捷更新。
+[新版 WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=54616) 可能包含对 DSC 服务功能的更新。 因此，最佳做法是下载最新版本的 WMF 并查看发行说明以确定该版本是否包含对 DSC 服务功能的更新。 还应查看指示更新或方案的设计状态是列为稳定还是试验性的发行说明部分。 若要允许实现敏捷发行周期，各个功能可以声明为稳定，这指示功能已准备就绪，可以在生产环境中使用（即使 WMF 是以预览版发行）。 历史上一直通过 WMF 版本进行更新的其他功能（请参阅 WMF 发行说明以了解进一步详细信息）：
 
 - Windows PowerShell Windows PowerShell 集成脚本
 - 环境 (ISE) Windows PowerShell Web 服务（Management OData
@@ -92,60 +85,55 @@ Install-Module xPSDesiredStateConfiguration
 
 `C:\Program Files\Windows PowerShell\Modules`
 
-规划任务|
----|
-你是否有权访问 Windows Server 2012 R2 的安装文件？|
-部署环境是否可以访问 Internet 以便从联机库下载 WMF 和模块？|
-如何在安装操作系统之后安装最新安全更新？|
-环境是否可以访问 Internet 以获取更新，或是否具有本地 Windows Server 更新服务 (WSUS) 服务器？|
-你是否可以访问已通过脱机注入包含更新的 Windows Server 安装文件？|
+规划任务
+- 你是否有权访问 Windows Server 2012 R2 的安装文件？
+- 部署环境是否可以访问 Internet 以便从联机库下载 WMF 和模块？
+- 如何在安装操作系统之后安装最新安全更新？
+- 环境是否可以访问 Internet 以获取更新，或是否具有本地 Windows Server 更新服务 (WSUS) 服务器？
+- 你是否可以访问已通过脱机注入包含更新的 Windows Server 安装文件？
 
 ### <a name="hardware-requirements"></a>硬件要求
 
 物理和虚拟服务器上都支持请求服务器部署。 请求服务器的大小调整要求与 Windows Server 2012 R2 的要求保持一致。
 
-CPU：1.4 GHz 64 位处理器 内存：512 MB 磁盘空间：32 GB 网络：千兆位以太网适配器
+- CPU：1.4 GHz 64 位处理器
+- 内存: 512 MB
+- 磁盘空间：32 GB
+- 网络：千兆位以太网适配器
 
-规划任务|
----|
-是部署在物理硬件上还是虚拟化平台上？|
-为目标环境请求新服务器的过程是什么？|
-使服务器可用的平均周转时间是多少？|
-请求多大大小的服务器？|
+规划任务
+- 是部署在物理硬件上还是虚拟化平台上？
+- 为目标环境请求新服务器的过程是什么？
+- 使服务器可用的平均周转时间是多少？
+- 请求多大大小的服务器？
 
 ### <a name="accounts"></a>帐户
 
-部署请求服务器实例没有服务帐户要求。
-不过在一些情况下，网站可能会在本地用户帐户的上下文中运行。
-例如，如果需要访问用于网站内容的存储共享并且承载存储共享的 Windows Server 或设备未加入域。
+部署请求服务器实例没有服务帐户要求。 不过在一些情况下，网站可能会在本地用户帐户的上下文中运行。 例如，如果需要访问用于网站内容的存储共享并且承载存储共享的 Windows Server 或设备未加入域。
 
 ### <a name="dns-records"></a>DNS 记录
 
 将客户端配置为使用请求服务器环境时，需要使用某个服务器名称。
-在测试环境中，通常使用服务器主机名，如果 DNS 名称解析不可用，则可以使用服务器的 IP 地址。
-在生产环境中或是在旨在表示生产部署的实验室环境中，最佳做法是创建 DNS CNAME 记录。
+在测试环境中，通常使用服务器主机名，如果 DNS 名称解析不可用，则可以使用服务器的 IP 地址。 在生产环境中或是在旨在表示生产部署的实验室环境中，最佳做法是创建 DNS CNAME 记录。
 
-DNS CNAME 使你可以创建别名以引用主机 (A) 记录。
-附加名称记录的用途是在将来需要更改时提高灵活性。
-CNAME 可以帮助隔离客户端配置，以便对服务器环境进行的更改（如替换请求服务器或添加其他请求服务器）无需对客户端配置进行对应更改。
+DNS CNAME 使你可以创建别名以引用主机 (A) 记录。 附加名称记录的用途是在将来需要更改时提高灵活性。 CNAME 可以帮助隔离客户端配置，以便对服务器环境进行的更改（如替换请求服务器或添加其他请求服务器）无需对客户端配置进行对应更改。
 
 为 DNS 记录选择名称时，请记住解决方案体系结构。
 如果使用负载平衡，则用于在 HTTPS 上保护流量安全的证书需要共享与 DNS 记录相同的名称。
 
-方案 |最佳做法
-:---|:---
-测试环境 |在可能时重现计划生产环境。 服务器主机名适用于简单配置。 如果 DNS 不可用，则可以使用 IP 地址替代主机名。|
-单节点部署 |创建指向服务器主机名的 DNS CNAME 记录。|
+       场景        |                                                                                         最佳做法
+:--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+测试环境       | 在可能时重现计划生产环境。 服务器主机名适用于简单配置。 如果 DNS 不可用，则可以使用 IP 地址替代主机名。
+单节点部署 | 创建指向服务器主机名的 DNS CNAME 记录。
 
 有关详细信息，请参阅[在 Windows Server 中配置 DNS 轮循机制](/previous-versions/windows/it-pro/windows-server-2003/cc787484(v=ws.10))。
 
-规划任务|
----|
-是否知道与谁联系以创建和更改 DNS 记录？|
-针对 DNS 记录的请求的平均周转时间是多少？|
-是否需要为服务器请求静态主机名 (A) 记录？|
-请求什么内容作为 CNAME？|
-如果需要，会使用哪种类型的负载平衡解决方案？ （请参阅标题为“负载平衡”的部分以了解详细信息）|
+规划任务
+- 是否知道与谁联系以创建和更改 DNS 记录？
+- 针对 DNS 记录的请求的平均周转时间是多少？
+- 是否需要为服务器请求静态主机名 (A) 记录？
+- 请求什么内容作为 CNAME？
+- 如果需要，会使用哪种类型的负载平衡解决方案？ （请参阅标题为“负载平衡”的部分以了解详细信息）
 
 ### <a name="public-key-infrastructure"></a>公钥基础结构
 
@@ -154,40 +142,36 @@ CNAME 可以帮助隔离客户端配置，以便对服务器环境进行的更�
 
 保护请求服务器的 HTTPS 流量安全的证书要求与保护任何其他 HTTPS 网站并无不同。 Windows Server 证书服务中的 **Web 服务器**模板满足所需功能。
 
-规划任务|
----|
-如果证书请求未自动执行，你需要与谁联系以请求证书？|
-请求的平均周转时间是多少？|
-证书文件如何传输给你？|
-证书私钥如何传输给你？|
-默认过期时间是多长？|
-是否为请求服务器环境确定了可以用于证书名称的 DNS 名称？|
+规划任务
+- 如果证书请求未自动执行，你需要与谁联系以请求证书？
+- 请求的平均周转时间是多少？
+- 证书文件如何传输给你？
+- 证书私钥如何传输给你？
+- 默认过期时间是多长？
+- 是否为请求服务器环境确定了可以用于证书名称的 DNS 名称？
 
 ### <a name="choosing-an-architecture"></a>选择体系结构
 
-可以使用 IIS 上承载的 Web 服务或 SMB 文件共享部署请求服务器。 在大多数情况下，Web 服务选项会提供更高灵活性。 HTTPS 流量经常会穿越网络边界，而在各个网络之间通常会筛选或阻止 SMB 流量。 Web 服务还提供选项以包含一致性服务器或 Web 报表管理器（在本文档的将来版本将讨论这两个主题），从而为客户端提供一种机制，用于将状态报告返回给服务器以便集中查看。
-SMB 针对策略规定不应利用 Web 服务器的环境，以及使得不需要 Web 服务器角色的其他环境要求提供了一个选项。
-在任一情况下，请记住评估签名和加密流量的要求。 HTTPS、SMB 签名和 IPSEC 策略都是值得考虑的选项。
+可以使用 IIS 上承载的 Web 服务或 SMB 文件共享部署请求服务器。 在大多数情况下，Web 服务选项会提供更高灵活性。 HTTPS 流量经常会穿越网络边界，而在各个网络之间通常会筛选或阻止 SMB 流量。 Web 服务还提供选项以包含一致性服务器或 Web 报表管理器（在本文档的将来版本将讨论这两个主题），从而为客户端提供一种机制，用于将状态报告返回给服务器以便集中查看。 SMB 针对策略规定不应利用 Web 服务器的环境，以及使得不需要 Web 服务器角色的其他环境要求提供了一个选项。 在任一情况下，请记住评估签名和加密流量的要求。 HTTPS、SMB 签名和 IPSEC 策略都是值得考虑的选项。
 
-#### <a name="load-balancing"></a>负载平衡
+#### <a name="load-balancing"></a>负载均衡
 
 与 Web 服务进行交互的客户端会针对在单个响应中返回的信息发出请求。 无需连续请求，因此负载平衡平台无需确保在任何时间点都在单台服务器上维持会话。
 
-规划任务|
----|
-使用哪种解决方案在服务器间对流量进行负载平衡？|
-如果使用硬件负载平衡器，则谁会进行请求以将新配置添加到设备？|
-配置新负载平衡 Web 服务的请求的平均周转时间是多少？|
-该请求需要哪些信息？|
-你是否需要请求附加 IP，或负责进行负载平衡的团队是否会处理该请求？|
-你是否具有所需 DNS 记录，以及负责配置负载平衡解决方案的团队是否需要这样？|
-负载平衡解决方案是否要求 PKI 由设备进行处理，或是否可以对 HTTPS 流量进行负载平衡（只要没有会话要求）？|
+规划任务
+- 使用哪种解决方案在服务器间对流量进行负载平衡？
+- 如果使用硬件负载平衡器，则谁会进行请求以将新配置添加到设备？
+- 配置新负载平衡 Web 服务的请求的平均周转时间是多少？
+- 该请求需要哪些信息？
+- 你是否需要请求附加 IP，或负责进行负载平衡的团队是否会处理该请求？
+- 你是否具有所需 DNS 记录，以及负责配置负载平衡解决方案的团队是否需要这样？
+- 负载平衡解决方案是否要求 PKI 由设备进行处理，或是否可以对 HTTPS 流量进行负载平衡（只要没有会话要求）？
 
 ### <a name="staging-configurations-and-modules-on-the-pull-server"></a>请求服务器上的暂存配置和模块
 
 作为配置规划的一部分，你需要考虑请求服务器会承载的 DSC 托管模块和配置。 为进行配置规划，需要基本了解如何准备内容并将它部署到请求服务器，这十分重要。
 
-将来，此部分会进行扩展并包含在 DSC 请求服务器的操作指南中。  该指南会讨论使用自动化随时间推移管理模块和配置的日常过程。
+将来，此部分会进行扩展并包含在 DSC 请求服务器的操作指南中。 该指南会讨论使用自动化随时间推移管理模块和配置的日常过程。
 
 #### <a name="dsc-modules"></a>DSC 模块
 
@@ -195,51 +179,49 @@ SMB 针对策略规定不应利用 Web 服务器的环境，以及使得不需�
 
 请务必记住，即使是对于受信任的联机源（如 PowerShell 库），从公共存储库下载的任何模块在用于生产之前，都应由具有 PowerShell 经验并了解使用模块的环境的人员进行检查。 完成此任务期间，这是检查模块中是否存在可以删除的任何其他负载（如文档和示例脚本）的好时机。 这会在通过网络将模块从服务器下载到客户端时，减少每个客户端在其第一个请求中的网络带宽。
 
-每个模块都必须打包为特定格式（名为 ModuleName_Version.zip 的 ZIP 文件，其中包含模块负载）。 该文件复制到服务器之后，必须创建校验和文件。 客户端连接到服务器时，校验和用于验证 DSC 模块的内容自发布以来未发生更改。
+每个模块都必须打包为特定格式（名为 ModuleName_Version.zip 的 ZIP 文件，其中包含模块负载）。 该文件复制到服务器之后，必须创建校验和文件。
+客户端连接到服务器时，校验和用于验证 DSC 模块的内容自发布以来未发生更改。
 
 ```powershell
 New-DscChecksum -ConfigurationPath .\ -OutPath .\
 ```
 
-规划任务|
----|
-如果你在规划测试或实验室环境，则哪些方案是进行验证的关键？|
-是否存在包含的资源涵盖你所需的所有内容的公开发布模块，或你是否需要创作自己的资源？|
-你的环境是否可以访问 Internet 以检索公共模块？|
-谁负责检查 DSC 模块？|
-如果你在规划生产环境，则你会使用什么作为本地存储库来用于存储 DSC 模块？|
-中心团队是否接受来自应用程序团队的 DSC 模块？ 过程是怎样的？|
-是否自动从源存储库打包生产准备就绪 DSC 模块、复制到服务器并为它们创建校验和？|
-你的团队是否也负责管理自动化平台？|
+规划任务
+- 如果你在规划测试或实验室环境，则哪些方案是进行验证的关键？
+- 是否存在包含的资源涵盖你所需的所有内容的公开发布模块，或你是否需要创作自己的资源？
+- 你的环境是否可以访问 Internet 以检索公共模块？
+- 谁负责检查 DSC 模块？
+- 如果你在规划生产环境，则你会使用什么作为本地存储库来用于存储 DSC 模块？
+- 中心团队是否接受来自应用程序团队的 DSC 模块？ 过程是怎样的？
+- 是否自动从源存储库打包生产准备就绪 DSC 模块、复制到服务器并为它们创建校验和？
+- 你的团队是否也负责管理自动化平台？
 
 #### <a name="dsc-configurations"></a>DSC 配置
 
-请求服务器的用途是提供一种集中式机制，用于将 DSC 配置分发到客户端节点。 配置作为 MOF 文档存储在服务器上。
-每个文档都使用唯一的 Guid 进行命名  。 客户端配置为与请求服务器连接时，还会向它们提供它们应请求的配置的 Guid  。 这一通过 Guid 引用配置的系统可保证全局唯一性，并且十分灵活，以便配置可按照每个节点的粒度进行应用，或作为跨应具有相同配置的多台服务器的角色配置  。
+请求服务器的用途是提供一种集中式机制，用于将 DSC 配置分发到客户端节点。 配置作为 MOF 文档存储在服务器上。 每个文档都使用唯一的 Guid 进行命名  。 客户端配置为与请求服务器连接时，还会向它们提供它们应请求的配置的 Guid  。 这一通过 Guid 引用配置的系统可保证全局唯一性，并且十分灵活，以便配置可按照每个节点的粒度进行应用，或作为跨应具有相同配置的多台服务器的角色配置  。
 
 #### <a name="guids"></a>Guid
 
 全面考虑请求服务器部署时，规划配置 Guid 值得多加注意  。 对于如何处理 Guid 没有特定要求，该过程可能对于每个环境是唯一的  。 该过程的范围可以从简单到复杂：集中存储的 CSV 文件、简单 SQL 表、CMDB 或需要与其他工具或软件解决方案集成的复杂解决方案。 有两种常规方法：
 
 - **对每台服务器分配 Guid** — 提供一种措施来保证分别控制每台服务器配置。 这提供了更新方面的精度级别，十分适合于包含少量服务器的环境。
-- **对每个服务器角色分配 Guid** — 执行相同功能的所有服务器（如 Web 服务器）都使用相同 GUID 引用所需配置数据。  请注意，如果有许多服务器共享相同 GUID，则它们都会在配置更改时同时更新。
+- **对每个服务器角色分配 Guid** — 执行相同功能的所有服务器（如 Web 服务器）都使用相同 GUID 引用所需配置数据。 请注意，如果有许多服务器共享相同 GUID，则它们都会在配置更改时同时更新。
 
   GUID 是应视为敏感数据的信息，因为它可以由具有恶意企图的人员用于获取有关如何在环境中部署和配置服务器的情报。 有关详细信息，请参阅[在 PowerShell Desired State Configuration 拉取模式下安全地分配 Guid](https://blogs.msdn.microsoft.com/powershell/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/)。
 
-规划任务|
----|
-谁负责在配置准备就绪时将它们复制到请求服务器文件夹中？|
-如果配置由应用程序团队创作，则移交它们的过程是怎样的？|
-你是否会在创作配置时，利用存储库在团队间存储配置？|
-是否会在配置准备就绪时自动执行将它们复制到服务器并创建校验和的过程？|
-如何将 Guid 映射到服务器或角色，以及这会存储在何处？|
-你会使用什么过程来配置客户端计算机，以及如何将它与用于创建和存储配置 Guid 的过程集成？|
+规划任务
+- 谁负责在配置准备就绪时将它们复制到请求服务器文件夹中？
+- 如果配置由应用程序团队创作，则移交它们的过程是怎样的？
+- 你是否会在创作配置时，利用存储库在团队间存储配置？
+- 是否会在配置准备就绪时自动执行将它们复制到服务器并创建校验和的过程？
+- 如何将 Guid 映射到服务器或角色，以及这会存储在何处？
+- 你会使用什么过程来配置客户端计算机，以及如何将它与用于创建和存储配置 Guid 的过程集成？
 
 ## <a name="installation-guide"></a>安装指南
 
 *本文档中提供的脚本是稳定示例。在生产环境中执行脚本之前，请始终仔细检查它们。*
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>先决条件
 
 若要验证服务器上的 PowerShell 版本，请使用以下命令。
 
@@ -247,8 +229,7 @@ New-DscChecksum -ConfigurationPath .\ -OutPath .\
 $PSVersionTable.PSVersion
 ```
 
-如果可能，请升级到 Windows Management Framework 的最新版本。
-接下来，使用以下命令下载 `xPsDesiredStateConfiguration` 模块。
+如果可能，请升级到 Windows Management Framework 的最新版本。 接下来，使用以下命令下载 `xPsDesiredStateConfiguration` 模块。
 
 ```powershell
 Install-Module xPSDesiredStateConfiguration
@@ -298,8 +279,9 @@ Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
 ### <a name="advanced-configuration-for-windows-server-2012-r2"></a>适用于 Windows Server 2012 R2 的高级配置
 
 ```powershell
-# This is an advanced Configuration example for Pull Server production deployments on Windows Server 2012 R2.
-# Many of the features demonstrated are optional and provided to demonstrate how to adapt the Configuration for multiple scenarios
+# This is an advanced Configuration example for Pull Server production deployments
+# on Windows Server 2012 R2. Many of the features demonstrated are optional and
+# provided to demonstrate how to adapt the Configuration for multiple scenarios
 # Select the needed resources based on the requirements for each environment.
 # Optional scenarios include:
 #      * Reduce footprint to Server Core
@@ -404,7 +386,8 @@ Configuration PullServer {
             Name = 'DSC-Service'
         }
 
-        # If using a certificate from a local Active Directory Enterprise Root Certificate Authority, complete a request and install the certificate
+        # If using a certificate from a local Active Directory Enterprise Root Certificate Authority,
+        # complete a request and install the certificate
         xCertReq SSLCert
         {
             CARootName = $Node.CARootName
@@ -414,7 +397,9 @@ Configuration PullServer {
             Credential = $Node.Credential
         }
 
-        # Use the DSC resource to simplify deployment of the web service.  You might also consider modifying the default port, possibly leveraging port 443 in environments where that is enforced as a standard.
+        # Use the DSC resource to simplify deployment of the web service.  You might also consider
+        # modifying the default port, possibly leveraging port 443 in environments where that is
+        # enforced as a standard.
         xDSCWebService PSDSCPullServer
         {
             Ensure = 'Present'
@@ -488,7 +473,8 @@ Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
 ### <a name="verify-pull-server-functionality"></a>验证请求服务器功能
 
 ```powershell
-# This function is meant to simplify a check against a DSC pull server. If you do not use the default service URL, you will need to adjust accordingly.
+# This function is meant to simplify a check against a DSC pull server. If you do not use the
+# default service URL, you will need to adjust accordingly.
 function Verify-DSCPullServer ($fqdn) {
     ([xml](Invoke-WebRequest "https://$($fqdn):8080/psdscpullserver.svc" | % Content)).service.workspace.collection.href
 }
@@ -537,7 +523,7 @@ Set-DscLocalConfigurationManager -ComputerName 'Localhost' -Path 'C:\DSCConfig\'
 Update-DscConfiguration –Wait -Verbose
 ```
 
-[Add-DnsServerResourceRecordName](http://bit.ly/1G1H31L) cmdlet 用于将一种类型的 CNAME 记录添加到 DNS 区域。
+[Add-DnsServerResourceRecordName](/powershell/module/dnsserver/add-dnsserverresourcerecordcname) cmdlet 用于将一种类型的 CNAME 记录添加到 DNS 区域。
 
 用于[创建校验和以及将 DSC MOF 发布到 SMB 请求服务器](https://gallery.technet.microsoft.com/scriptcenter/PowerShell-Function-to-3bc4b7f0)的 PowerShell 函数会自动生成所需校验和，然后将 MOF 配置文件和校验和文件都复制到 SMB 请求服务器。
 

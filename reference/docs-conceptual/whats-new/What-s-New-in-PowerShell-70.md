@@ -2,12 +2,12 @@
 title: PowerShell 7.0 中的新增功能
 description: PowerShell 7.0 中发布的新功能和更改
 ms.date: 03/04/2020
-ms.openlocfilehash: 6915bb70d6e54da86d2b935e3feed8d7f3770ba9
-ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
+ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
+ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78404996"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80263129"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0 中的新增功能
 
@@ -396,6 +396,7 @@ Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration
 - 通过从 AppDomain.CurrentDomain.ProcessExit 中取消注册事件处理程序来修复资源泄漏 (#10626)
 - 添加对 ActionPreference.Break 的支持，以便在生成调试、错误、信息、进度、详细消息或警告消息时中断以进入调试程序 (#8205)（感谢 @KirkMunro！）
 - 允许在 PowerShell Core 内启用控制面板加载项，而无需指定 .CPL 扩展。 (#9828)
+- 在 -split 运算符中支持负数 (#8960)（感谢 @ece-jacob-scott！）
 
 ### <a name="general-cmdlet-updates-and-fixes"></a>常规 Cmdlet 更新和修补程序
 

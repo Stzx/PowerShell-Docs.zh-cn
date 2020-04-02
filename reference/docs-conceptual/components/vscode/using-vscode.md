@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 进行 PowerShell 开发
 description: 使用 Visual Studio Code 进行 PowerShell 开发
 ms.date: 11/07/2019
-ms.openlocfilehash: 86739970b58460bef9686a75bf0604d0605d4888
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: 8644aa7c648d649651ca679238e0b79ff35ac579
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082440"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500910"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>使用 Visual Studio Code 进行 PowerShell 开发
 
@@ -22,9 +22,9 @@ ms.locfileid: "80082440"
 
 开始前，请确保系统上安装有 PowerShell。 有关 Windows、macOS 和 Linux 上的新式工作负荷，请参阅以下链接：
 
-- [在 Linux 上安装 PowerShell Core][install-pscore-linux]
-- [在 macOS 上安装 PowerShell Core][install-pscore-macos]
-- [在 Windows 上安装 PowerShell Core][install-pscore-windows]
+- [在 Linux 上安装 PowerShell][install-pscore-linux]
+- [在 macOS 上安装 PowerShell][install-pscore-macos]
+- [在 Windows 上安装 PowerShell][install-pscore-windows]
 
 有关传统 Windows PowerShell 工作负载，请参阅[安装 Windows PowerShell][install-winps]。
 
@@ -48,18 +48,18 @@ ms.locfileid: "80082440"
 1. 安装 PowerShell 扩展。
 
    1. 通过在控制台中键入 `code` 或键入`code-insiders`（在安装 Visual Studio Code 预览体验成员的情况下）来启动 Visual Studio Code 应用。
-   1. 通过按 <kbd>Ctrl</kbd>+<kbd>P</kbd>，在 Windows 或 Linux 上启动“Quick Open”。 在 macOS 上，按 <kbd>Cmd</kbd>+<kbd>P</kbd>。
-   1. 在“Quick Open”中，键入 `ext install powershell`，然后按 ENTER。
-   1. “扩展”视图随即在侧边栏上打开。 从 Microsoft 中选择 PowerShell 扩展。
+   1. 通过按 <kbd>Ctrl</kbd>+<kbd>P</kbd>，在 Windows 或 Linux 上启动“Quick Open”  。 在 macOS 上，按 <kbd>Cmd</kbd>+<kbd>P</kbd>。
+   1. 在“Quick Open”中，键入 `ext install powershell`，然后按 ENTER  。
+   1. “扩展”视图随即在侧边栏上打开  。 从 Microsoft 中选择 PowerShell 扩展。
       应会看到类似于下图的 Visual Studio Code 屏幕：
 
       ![Visual Studio Code](media/using-vscode/vscode.png)
 
-   1. 在 Microsoft 下单击 PowerShell 扩展上的“安装”按钮。
-   1. 安装后，如果看到“安装”按钮变为“重载”，则单击“重载”。
+   1. 在 Microsoft 下单击 PowerShell 扩展上的“安装”按钮  。
+   1. 安装后，如果看到“安装”按钮变为“重载”   ，则单击“重载”  。
    1. 重载 Visual Studio Code 后即可开始编辑。
 
-例如，若要创建新文件，请单击“文件”>“新建”。 若要保存，请单击“文件”>“保存”，然后提供文件名，例如 `HelloWorld.ps1`。 若要关闭文件，请单击文件名旁的 `X`。 若要退出 Visual Studio Code，请单击“文件”>“退出”。
+例如，若要创建新文件，请单击“文件”>“新建”  。 若要保存，请单击“文件”>“保存”  ，然后提供文件名，例如 `HelloWorld.ps1`。 若要关闭文件，请单击文件名旁的 `X`。 若要退出 Visual Studio Code，请单击“文件”>“退出”  。
 
 ### <a name="installing-the-powershell-extension-on-restricted-systems"></a>在受限制的系统上安装 PowerShell 扩展
 
@@ -75,7 +75,7 @@ Language server startup failed.
 Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellEditorServices\PowerShellEditorServices.psd1
 ```
 
-系统会提示你“是否要运行来自此不可信发布者的软件？”
+系统会提示你“是否要运行来自此不可信发布者的软件？” 
 键入 `A` 以运行该文件。 然后打开 Visual Studio Code，并检查 PowerShell 扩展是否工作正常。 如果在开始使用时仍有问题，请在 [GitHub](https://github.com/PowerShell/vscode-powershell/issues) 上告诉我们。
 
 > [!NOTE]
@@ -88,11 +88,11 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 > [!NOTE]
 > 将不会为此扩展的较旧版本提供其他修补程序。 它“按原样”提供，但如果你仍在使用 Windows PowerShell v3 和 Windows PowerShell v4，则可以使用它。
 
-首先，打开“扩展”窗格并搜索 `PowerShell`。 然后单击齿轮，选择“安装其他版本...”。
+首先，打开“扩展”窗格并搜索 `PowerShell`。 然后单击齿轮，选择“安装其他版本...”  。
 
 ![安装其他版本...](media/using-vscode/install-another-version.png)
 
-然后选择“`2020.1.0`”版本。 此版本的扩展是支持 v3 和 v4 的最新版本。
+然后选择“`2020.1.0`”  版本。 此版本的扩展是支持 v3 和 v4 的最新版本。
 
 另外，添加以下设置，以便不会自动更新扩展版本：
 
@@ -114,10 +114,10 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 
 将 PowerShell Core 与 Windows PowerShell 并行安装后，现在可以将特定版本的 PowerShell 与 PowerShell 扩展一起使用。 使用以下步骤选择版本：
 
-1. 在 Windows 或 Linux 上，使用 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> 打开“命令面板”。 在 macOS 上，使用 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>。
-1. 搜索“会话”。
-1. 单击“PowerShell:显示会话菜单”。
-1. 选择要从列表中使用的 PowerShell 版本，例如：PowerShell Core。
+1. 在 Windows 或 Linux 上，使用 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> 打开“命令面板”  。 在 macOS 上，使用 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>。
+1. 搜索“会话”  。
+1. 单击“PowerShell:  显示会话菜单”。
+1. 选择要从列表中使用的 PowerShell 版本，例如：PowerShell Core  。
 
 > [!IMPORTANT]
 > 此功能通过不同操作系统上的几个已知路径来发现 PowerShell 的安装位置。 如果已将 PowerShell 安装到非典型位置，则最初可能不会显示在会话菜单中。 可以按如下所述[添加你自己的自定义路径](#adding-your-own-powershell-paths-to-the-session-menu)来扩展会话菜单。
@@ -170,7 +170,7 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 }
 ```
 
-配置此设置后，请重启 Visual Studio Code 或从“命令面板”中重载当前 Visual Studio Code 窗口，键入“开发人员:重载窗口”。
+配置此设置后，请重启 Visual Studio Code 或从“命令面板”  中重载当前 Visual Studio Code 窗口，键入“开发人员:  重载窗口”。
 
 如果打开会话菜单，你现在会看到其他 PowerShell 版本！
 
@@ -213,19 +213,19 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 
 ### <a name="no-workspace-debugging"></a>无工作区调试
 
-从 Visual Studio Code 版本 1.9 开始，无需打开包含 PowerShell 脚本的文件夹即可调试 PowerShell 脚本。 单击“文件”>“打开文件...”来打开 PowerShell 脚本文件，在行上设一个断点，按 <kbd>F9</kbd>，然后按 <kbd>F5</kbd> 即可开始调试。 此时应出现“调试”操作窗格，通过该窗格可以中断调试器、执行、继续和停止调试。
+从 Visual Studio Code 版本 1.9 开始，无需打开包含 PowerShell 脚本的文件夹即可调试 PowerShell 脚本。 单击“文件”>“打开文件...”  来打开 PowerShell 脚本文件，在行上设一个断点，按 <kbd>F9</kbd>，然后按 <kbd>F5</kbd> 即可开始调试。 此时应出现“调试”操作窗格，通过该窗格可以中断调试器、执行、继续和停止调试。
 
 ### <a name="workspace-debugging"></a>工作区调试
 
-工作区调试是指文件夹上下文中的调试，该文件夹是在 Visual Studio Code 中从“文件”菜单使用“打开文件夹...”打开的。打开的文件夹通常是 PowerShell 项目文件夹和/或 Git 存储库的根文件夹。
+工作区调试是指文件夹上下文中的调试，该文件夹是在 Visual Studio Code 中从“文件”  菜单使用“打开文件夹...”  打开的。打开的文件夹通常是 PowerShell 项目文件夹和/或 Git 存储库的根文件夹。
 
 即使在此模式下，按 <kbd>F5</kbd> 也可开始调试当前所选的 PowerShell 脚本。 但是，通过工作区调试可以定义多个调试配置，而不是只调试当前打开的文件。 稍后我们将对这些进行介绍。
 
 按照以下步骤创建调试配置文件：
 
-  1. 通过按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>，在 Windows 或 Linux 上打开“调试”视图。 在 macOS 上，按 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>。
+  1. 通过按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>，在 Windows 或 Linux 上打开“调试”  视图。 在 macOS 上，按 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>。
   1. 单击“创建 launch.json 文件”链接。
-  1. Visual Studio Code 将提示“选择环境”。 选择“PowerShell”。
+  1. Visual Studio Code 将提示“选择环境”  。 选择“PowerShell”  。
   1. 最后，选择要使用的调试类型：
 
 - **启动当前文件** - 在当前活动的编辑器窗口中启动和调试文件
@@ -264,11 +264,20 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 }
 ```
 
-此文件表示常见调试方案。 在编辑器中打开此文件时，会显示“添加配置...”按钮。 单击此按钮可添加更多 PowerShell 调试配置。 其中可添加的一个有用配置是“PowerShell:**Launch Script**。 通过此配置，可以使用可选参数指定文件，无论编辑器中哪个文件当前处于活动状态，无论何时按 <kbd>F5</kbd>，此文件都会启动。
+此文件表示常见调试方案。 在编辑器中打开此文件时，会显示“添加配置...”  按钮。 单击此按钮可添加更多 PowerShell 调试配置。 其中可添加的一个有用配置是“PowerShell:**Launch Script**。 通过此配置，可以使用可选参数指定文件，无论编辑器中哪个文件当前处于活动状态，无论何时按 <kbd>F5</kbd>，此文件都会启动。
 
-建立调试配置后，可以选择要在调试会话期间使用的配置。 从“调试”视图工具栏的调试配置下拉菜单中选择配置。
+建立调试配置后，可以选择要在调试会话期间使用的配置。 从“调试”  视图工具栏的调试配置下拉菜单中选择配置。
 
-以下博客提供有关将 PowerShell 扩展用于 Visual Studio Code 的有用入门帮助：
+## <a name="useful-resources"></a>有用的资源
+
+有一些视频和博客文章可能对你开始使用用于 Visual Studio Code 的 PowerShell 扩展很有帮助：
+
+### <a name="videos"></a>视频
+
+- [使用 Visual Studio Code 作为默认 PowerShell 编辑器](https://youtu.be/bGn45vIeAMM)
+- [Visual Studio Code：深入了解如何调试 PowerShell 脚本](https://youtu.be/cSbIXmlkr8o)
+
+### <a name="blog-posts"></a>博客文章
 
 - [PowerShell 扩展][ps-extension]
 - [在 Visual Studio Code 中编写和调试 PowerShell 脚本][debug]
@@ -279,6 +288,16 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 - [面向 PowerShell 开发的 Visual Studio Code 编辑功能 - 第 2 部分][editing-part2]
 - [在 Visual Studio Code 中调试 PowerShell 脚本 - 第 1 部分][debugging-part1]
 - [在 Visual Studio Code 中调试 PowerShell 脚本 - 第 2 部分][debugging-part2]
+
+## <a name="powershell-extension-for-visual-studio-code"></a>适用于 Visual Studio Code 的 PowerShell 扩展
+
+可以在 [GitHub](https://github.com/PowerShell/vscode-powershell) 上找到 PowerShell 扩展的源代码。
+
+如果你有兴趣参与，将极大改进拉取请求。 请遵循 [GitHub 上的开发人员文档](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md)来开始使用。
+
+## <a name="troubleshooting-the-powershell-extension-for-visual-studio-code"></a>适用于 Visual Studio Code 的 PowerShell 扩展故障排除
+
+如果在使用 Visual Studio Code 进行 PowerShell 脚本开发时遇到任何问题，请查看 [GitHub 上的故障排除指南](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md)
 
 [ise]: ../ise/Introducing-the-Windows-PowerShell-ISE.md
 [install-pscore-linux]:  ../../install/Installing-PowerShell-Core-on-Linux.md
@@ -294,13 +313,3 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 [editing-part2]: https://devblogs.microsoft.com/scripting/visual-studio-code-editing-features-for-powershell-development-part-2/
 [debugging-part1]: https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-1/
 [debugging-part2]: https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-2/
-
-## <a name="powershell-extension-for-visual-studio-code"></a>适用于 Visual Studio Code 的 PowerShell 扩展
-
-可以在 [GitHub](https://github.com/PowerShell/vscode-powershell) 上找到 PowerShell 扩展的源代码。
-
-如果你有兴趣参与，将极大改进拉取请求。 请遵循 [GitHub 上的开发人员文档](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md)来开始使用。
-
-## <a name="troubleshooting-the-powershell-extension-for-visual-studio-code"></a>适用于 Visual Studio Code 的 PowerShell 扩展故障排除
-
-如果在使用 Visual Studio Code 进行 PowerShell 脚本开发时遇到任何问题，请查看 [GitHub 上的故障排除指南](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md)

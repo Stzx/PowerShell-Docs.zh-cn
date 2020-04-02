@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,资源,库,安装程序
 title: 向配置添加参数
-ms.openlocfilehash: 72e6c15593d11ed39d7fe8ea79f794089f410cf8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9dd9f2be58c13840be2b24e7e21a0d4af79b67cc
+ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954194"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80263146"
 ---
 # <a name="add-parameters-to-a-configuration"></a>向配置添加参数
 
@@ -36,17 +36,18 @@ Configuration TestConfig
 
 但是，与函数不同，[CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) 属性不会添加任何功能。 除了[通用参数](/powershell/module/microsoft.powershell.core/about/about_commonparameters)之外，配置还可以使用以下内置参数，而无需用户对其进行定义。
 
-|参数  |说明  |
-|---------|---------|
-|`-InstanceName`|用于定义[复合配置](compositeconfigs.md)|
-|`-DependsOn`|用于定义[复合配置](compositeconfigs.md)|
-|`-PSDSCRunAsCredential`|用于定义[复合配置](compositeconfigs.md)|
-|`-ConfigurationData`|用于传入结构化的[配置数据](configData.md)，以便在配置中使用。|
-|`-OutputPath`|用于指定将编译“\<computername\>.mof”文件的位置|
+|        参数        |                                         说明                                          |
+| ----------------------- | -------------------------------------------------------------------------------------------- |
+| `-InstanceName`         | 用于定义[复合配置](compositeconfigs.md)                             |
+| `-DependsOn`            | 用于定义[复合配置](compositeconfigs.md)                             |
+| `-PSDSCRunAsCredential` | 用于定义[复合配置](compositeconfigs.md)                             |
+| `-ConfigurationData`    | 用于传入结构化的[配置数据](configData.md)，以便在配置中使用。 |
+| `-OutputPath`           | 用于指定将编译“\<computername\>.mof”文件的位置                      |
 
 ## <a name="adding-your-own-parameters-to-configurations"></a>将自己的参数添加到配置中
 
-除了内置参数，还可以向配置添加自己的参数。 参数块直接进入配置声明，就像函数一样。 配置参数块应位于任何节点  声明之外，并且位于任何导入  语句之上。 通过添加参数，可以使配置更加可靠和动态。
+除了内置参数，还可以向配置添加自己的参数。
+参数块直接进入配置声明，就像函数一样。 配置参数块应位于任何节点  声明之外，并且位于任何导入  语句之上。 通过添加参数，可以使配置更加可靠和动态。
 
 ```powershell
 Configuration TestConfig
@@ -117,7 +118,8 @@ TestConfig -ComputerName "server01", "server02", "server03"
 
 ## <a name="advanced-parameters-in-configurations"></a>配置中的高级参数
 
-除了 `-ComputerName` 参数之外，还可以为服务名称和状态添加参数。 下面的示例添加一个带有 `-ServiceName` 参数的参数块，并使用它动态定义 Service  资源块。 它还添加一个 `-State` 参数来动态定义 Service  资源块中的状态  。
+除了 `-ComputerName` 参数之外，还可以为服务名称和状态添加参数。
+下面的示例添加一个带有 `-ServiceName` 参数的参数块，并使用它动态定义 Service  资源块。 它还添加一个 `-State` 参数来动态定义 Service  资源块中的状态  。
 
 ```powershell
 Configuration TestConfig
@@ -149,7 +151,7 @@ Configuration TestConfig
 ```
 
 > [!NOTE]
-> 在更高级的场景中，将动态数据移动到结构化的[配置数据](configData.md)中可能更有意义。
+> 在更高级的方案中，将动态数据迁移到结构化[配置数据](configData.md)中可能更有意义。
 
 示例配置现采用动态 `$ServiceName`，但若未指定，编译将导致错误。 可以像本例一样添加一个默认值。
 
@@ -213,7 +215,7 @@ Configuration TestConfig
     # It is best practice to explicitly import any required resources or modules.
     Import-DSCResource -Module PSDesiredStateConfiguration
 
-    Node localhost
+    Node $ComputerName
     {
         Service $ServiceName
         {

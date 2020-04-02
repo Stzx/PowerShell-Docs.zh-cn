@@ -2,18 +2,18 @@
 title: PowerShell Core 支持生命周期
 description: 用于管理 PowerShell Core 支持的策略
 ms.date: 03/09/2020
-ms.openlocfilehash: c1e91aa193dd4a6353098e16ae18301c0753ea85
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: c319371778eb4615559ae12e0cd153a535ed22bf
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082413"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500993"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 支持生命周期
 
 PowerShell 是独特的工具和组件集，该集从 Windows PowerShell 单独传输、安装和配置。 PowerShell 不包含在 Windows 许可协议中。
 
-PowerShell 受传统 Microsoft 支持协议支持，包括[顶级][]、[Microsoft 企业协议][enterprise-agreement]和 [Microsoft 软件保障][assurance]。
+PowerShell 受传统 Microsoft 支持协议的支持，包括[付费支持][]、[Microsoft 企业协议][enterprise-agreement]和 [Microsoft 软件保障][assurance]。
 还可通过针对相应问题填写支持请求，从而付费获取有关 PowerShell 的[辅助支持][]。
 
 ## <a name="community-support"></a>社区支持
@@ -23,7 +23,7 @@ PowerShell 受传统 Microsoft 支持协议支持，包括[顶级][]、[Microsof
 
 ## <a name="lifecycle-of-powershell-7"></a>PowerShell 7 生命周期
 
-发布 PowerShell 7 后，PowerShell 继续受 [Microsoft 新式生命周期策略][modern]支持，但支持日期链接到 [.NET Core 的支持生命周期][Long-Term]。 在此服务方法中，客户可以选择长期支持 (LTS) 版本或当前版本。 PowerShell 7.0 是一个 LTS 版本。 结束对 .NET Core 3.1 的支持。 下一个 LTS 版本遵循下一个 .NET Core LTS 版本。 有关当前结束支持日期的信息，请参阅 [PowerShell 版本生命周期结束表](#powershell-releases-end-of-life)。 LTS 版本更新仅包含关键安全和服务更新，以及旨在避免或最大程度地减小对现有工作负荷的影响的修补程序。
+发布 PowerShell 7 后，PowerShell 继续受 [Microsoft 新式生命周期策略][modern]支持，但支持日期链接到 [.NET Core 的支持生命周期][Long-Term]。 在此服务方法中，客户可以选择长期支持 (LTS) 版本或当前版本。 PowerShell 7.0 是一个 LTS 版本。 结束对 .NET Core 3.1 的支持。 下一版 LTS 遵循下一版 .NET Core LTS。 有关当前结束支持日期的信息，请参阅 [PowerShell 版本生命周期结束表](#powershell-releases-end-of-life)。 LTS 版本更新仅包含关键安全和服务更新，以及旨在避免或最大程度地减小对现有工作负荷的影响的修补程序。
 
 当前版本是在 LTS 版本之间出现的版本。 当前版本可以包含关键修补程序、创新和新功能。 当前版本在后续的当前版本或 LTS 版本发布后的三个月内受支持。
 
@@ -133,7 +133,7 @@ PowerShell 7 改进了与为 Windows PowerShell 编写的现有 PowerShell 模�
 有关详细信息，请参阅 [about_Windows_Compatibility][] 文章和[模块兼容性列表][]。
 
 > [!NOTE]
-> PowerShell 7 中不再需要也不再支持 [WindowsPSModulePath](https://www.powershellgallery.com/packages/WindowsPSModulePath) 模块。
+> PowerShell 7 中不再需要也不再支持 [WindowsPSModulePath](https://www.powershellgallery.com/packages/WindowsPSModulePath) 模块  。
 
 ## <a name="experimental-features"></a>实验性功能
 
@@ -155,7 +155,7 @@ PowerShell 7 改进了与为 Windows PowerShell 编写的现有 PowerShell 模�
 | PowerShell 1.0       |   2006 年 11 月   | 可在 Windows XP SP2、Windows Server 2003 SP1 和 Windows Vista 上安装。 Windows Server 2008 的可选组件。                          |
 
 <!-- hyperlink references -->
-[顶级]: https://www.microsoft.com/microsoftservices/support.aspx
+[付费支持]: https://support.microsoft.com/hub/4343728/support-for-business
 [enterprise-agreement]: https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx
 [社区支持]: /powershell/scripting/community/community-support
