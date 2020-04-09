@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: a64e49894ce5195cc177e97a7049740389b09456
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 32f58d70dc01130f37639960109bf9ef4a8aa7cc
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870704"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978434"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>创建 Windows PowerShell 项提供程序
 
@@ -32,7 +32,7 @@ ms.locfileid: "75870704"
 
 Windows PowerShell 项提供程序必须定义一个从[Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)基类派生的 .net 类的类。 下面是本部分中所述的项提供程序的类定义。
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L34-L36 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="34-36":::
 
 请注意，在此类定义中， [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)属性包括两个参数。 第一个参数指定 Windows PowerShell 使用的提供程序的用户友好名称。 第二个参数指定 Windows PowerShell 特定功能，该功能是在命令处理过程中提供给 Windows PowerShell 运行时的。 对于此提供程序，没有添加 Windows PowerShell 特定功能。
 
@@ -52,7 +52,7 @@ Windows PowerShell 项提供程序必须通过实现[Itemcmdletprovider. Isvalid
 
 下面是此提供程序的[Itemcmdletprovider. Isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath)方法的实现。 请注意，此实现调用 NormalizePath helper 方法将路径中的所有分隔符转换为统一的。
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L274-L298 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="274-298":::
 
 ## <a name="determining-if-an-item-exists"></a>确定项是否存在
 
@@ -60,7 +60,7 @@ Windows PowerShell 项提供程序必须通过实现[Itemcmdletprovider. Isvalid
 
 下面是此提供程序的[Itemcmdletprovider. Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists)方法的实现。 请注意，此方法将调用 PathIsDrive、ChunkPath 和 GetTable helper 方法，并使用提供程序定义的 DatabaseTableInfo 对象。
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L229-L267 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="229-267":::
 
 #### <a name="things-to-remember-about-implementing-itemexists"></a>有关实现 ItemExists 的注意事项
 
@@ -72,7 +72,7 @@ Windows PowerShell 项提供程序必须通过实现[Itemcmdletprovider. Isvalid
 
 ## <a name="attaching-dynamic-parameters-to-the-test-path-cmdlet"></a>将动态参数附加到测试路径 Cmdlet
 
-有时，调用[Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists)的 `Test-Path` cmdlet 会要求在运行时动态指定的附加参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Itemexistsdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有分析特性类似于 cmdlet 类或 [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 对象的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Test-Path` cmdlet 中。
+有时，调用[Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists)的 `Test-Path` cmdlet 会要求在运行时动态指定的附加参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Itemexistsdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有与 cmdlet 类或[Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)对象类似的分析特性的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Test-Path` cmdlet 中。
 
 此 Windows PowerShell 项提供程序未实现此方法。 但是，下面的代码是此方法的默认实现。
 
@@ -84,7 +84,7 @@ Windows PowerShell 项提供程序必须通过实现[Itemcmdletprovider. Isvalid
 
 下面是此提供程序的[Itemcmdletprovider. Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem)方法的实现。 请注意，此方法使用 GetTable 和 GetRow 帮助器方法检索 Access 数据库中的表或数据表中的行的项。
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L132-L163 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="132-163":::
 
 #### <a name="things-to-remember-about-implementing-getitem"></a>有关实现 GetItem 的注意事项
 
@@ -96,7 +96,7 @@ Windows PowerShell 项提供程序必须通过实现[Itemcmdletprovider. Isvalid
 
 ## <a name="attaching-dynamic-parameters-to-the-get-item-cmdlet"></a>将动态参数附加到获取项 Cmdlet
 
-有时 `Get-Item` cmdlet 需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Getitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有分析特性类似于 cmdlet 类或 [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 对象的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Get-Item` cmdlet 中。
+有时 `Get-Item` cmdlet 需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Getitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有与 cmdlet 类或[Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)对象类似的分析特性的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Get-Item` cmdlet 中。
 
 此提供程序未实现此方法。 但是，下面的代码是此方法的默认实现。
 
@@ -120,11 +120,11 @@ Windows PowerShell 项提供程序必须通过实现[Itemcmdletprovider. Isvalid
 
 - 在对数据存储进行任何更改之前，你的[Itemcmdletprovider 和 Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem)方法的实现应调用[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) ，并验证其返回值的返回值。 此方法用于在对数据存储进行更改时（例如，删除文件时）确认操作的执行。 [Cmdletprovider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)方法发送要更改为用户的资源的名称，Windows PowerShell 运行时在确定应显示的内容时考虑了任何命令行设置或首选项变量。
 
-  在对 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 的调用返回 `true` 后，[System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 方法应调用 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 方法。 此方法向用户发送一条消息，以允许反馈验证是否应继续进行操作。 对[Cmdletprovider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)的调用允许对潜在的危险系统修改进行额外检查。
+  在对 Cmdletprovider 的调用返回 `true`后，* 方法应调用[ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)方法，则为，否则返回[Itemcmdletprovider. Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem)方法的调用方，则为。 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 此方法向用户发送一条消息，以允许反馈验证是否应继续进行操作。 对[Cmdletprovider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)的调用允许对潜在的危险系统修改进行额外检查。
 
 ## <a name="retrieving-dynamic-parameters-for-setitem"></a>正在为 SetItem 检索动态参数
 
-有时 `Set-Item` cmdlet 需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Setitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有分析特性类似于 cmdlet 类或 [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 对象的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Set-Item` cmdlet 中。
+有时 `Set-Item` cmdlet 需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Setitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有与 cmdlet 类或[Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)对象类似的分析特性的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Set-Item` cmdlet 中。
 
 此提供程序未实现此方法。 但是，下面的代码是此方法的默认实现。
 
@@ -148,11 +148,11 @@ Windows PowerShell 项提供程序必须通过实现[Itemcmdletprovider. Isvalid
 
 - 在对数据存储进行任何更改之前，你的[Itemcmdletprovider 和 Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem)方法的实现应调用[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) ，并验证其返回值的返回值。 此方法用于在对数据存储进行更改时（例如，删除文件时）确认操作的执行。 [Cmdletprovider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)方法通过 Windows PowerShell 运行时向用户发送要更改的资源的名称，并处理任何命令行设置或首选项变量来确定应显示的内容。
 
-  在对 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 的调用返回 `true` 后，[System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 方法应调用 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 方法。 此方法向用户发送一条消息，以允许反馈验证是否应继续进行操作。 对[Cmdletprovider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)的调用允许对潜在的危险系统修改进行额外检查。
+  在对 Cmdletprovider 的调用返回 `true`后，* 方法应调用[ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)方法，则为，否则返回[Itemcmdletprovider. Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem)方法的调用方，则为。 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 此方法向用户发送一条消息，以允许反馈验证是否应继续进行操作。 对[Cmdletprovider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)的调用允许对潜在的危险系统修改进行额外检查。
 
 ## <a name="retrieve-dynamic-parameters-for-clearitem"></a>检索 ClearItem 的动态参数
 
-有时 `Clear-Item` cmdlet 需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Clearitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有分析特性类似于 cmdlet 类或 [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 对象的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Clear-Item` cmdlet 中。
+有时 `Clear-Item` cmdlet 需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Clearitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有与 cmdlet 类或[Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)对象类似的分析特性的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Clear-Item` cmdlet 中。
 
 此项提供程序不实现此方法。 但是，下面的代码是此方法的默认实现。
 
@@ -176,7 +176,7 @@ Windows PowerShell 项提供程序可以实现[Itemcmdletprovider. Invokedefault
 
 ## <a name="retrieve-dynamic-parameters-for-invokedefaultaction"></a>检索 InvokeDefaultAction 的动态参数
 
-有时 `Invoke-Item` cmdlet 需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有分析特性类似于 cmdlet 类或 [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 对象的属性和字段。 Windows PowerShell 运行时使用返回的对象将动态参数添加到 `Invoke-Item` cmdlet 中。
+有时 `Invoke-Item` cmdlet 需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 项提供程序必须实现[Itemcmdletprovider. Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有与 cmdlet 类或[Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)对象类似的分析特性的属性和字段。 Windows PowerShell 运行时使用返回的对象将动态参数添加到 `Invoke-Item` cmdlet 中。
 
 此项提供程序不实现此方法。 但是，下面的代码是此方法的默认实现。
 
