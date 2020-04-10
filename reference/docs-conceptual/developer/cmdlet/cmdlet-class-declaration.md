@@ -11,16 +11,17 @@ helpviewer_keywords:
 - declaring cmdlets [PowerShell SDK]
 ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
 caps.latest.revision: 14
-ms.openlocfilehash: 979025ad5c34ab73dcc23d0e38ffb9acc431f15a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0de49d979c31b0e8d111323a2e1899d97868ec3f
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363516"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978706"
 ---
 # <a name="cmdlet-class-declaration"></a>Cmdlet 类声明
 
-通过将**cmdlet**特性指定为类的元数据，将 Microsoft .NET 框架类声明为 cmdlet。 （ **Cmdlet**属性是所有 cmdlet 的唯一必需的属性）。 指定**cmdlet**属性时，必须指定用于向用户标识 Cmdlet 的动词和名词对。 并且，你必须描述 cmdlet 支持的 Windows PowerShell 功能。 有关用于指定**cmdlet**特性的声明语法的详细信息，请参阅[cmdlet 特性声明](./cmdlet-attribute-declaration.md)。
+通过将**cmdlet**特性指定为类的元数据，将 Microsoft .NET 框架类声明为 cmdlet。 （ **Cmdlet**属性是所有 cmdlet 的唯一必需的属性）。
+指定**cmdlet**属性时，必须指定用于向用户标识 Cmdlet 的动词和名词对。 并且，你必须描述 cmdlet 支持的 Windows PowerShell 功能。 有关用于指定**cmdlet**特性的声明语法的详细信息，请参阅[cmdlet 特性声明](./cmdlet-attribute-declaration.md)。
 
 > [!NOTE]
 > 该**Cmdlet**特性由[CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute)类定义。） 此类的属性对应于声明特性时使用的声明参数。
@@ -33,7 +34,7 @@ Cmdlet 名称中的名词必须是特定的，如果是泛型名词（如*server
 
 有关不能在 cmdlet 名称中使用的特殊字符列表，请参阅[所需的开发指南](./required-development-guidelines.md)。
 
-## <a name="verbs"></a>谓词
+## <a name="verbs"></a>动词
 
 指定谓词后，开发指南需要使用 Windows PowerShell 提供的一个预定义谓词。 通过使用其中一个预定义的动词，你将确保你编写的 cmdlet 与 Microsoft 和其他用户编写的 cmdlet 之间的一致性。 例如，"Get" 谓词用于检索数据的 cmdlet。
 
@@ -49,7 +50,7 @@ Cmdlet 名称中的名词必须是特定的，如果是泛型名词（如*server
 
 下面的代码是 GetProc cmdlet 类的定义。 请注意，使用了 Pascal 大小写，并且类的名称包含 cmdlet 的动词和名词。
 
-[!code-csharp[GetProcessSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample01/GetProcessSample01.cs#L33-L34 "GetProcessSample01.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample01/GetProcessSample01.cs" range="33-34":::
 
 ## <a name="pascal-casing"></a>Pascal 大小写
 

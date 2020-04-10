@@ -11,12 +11,12 @@ helpviewer_keywords:
 - parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: 9ecb73a4138a5853fa5fb378874da2d81c5dbdba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4966ac274713899e7ea9e0c375dca220a972a1b5
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364596"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978723"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>添加用于处理管道输入的参数
 
@@ -43,13 +43,14 @@ Public Class GetProcCommand
 
 ## <a name="defining-input-from-the-pipeline"></a>定义管道的输入
 
-本部分介绍如何为 cmdlet 定义管道中的输入。 此获取处理器 cmdlet 定义了一个属性，该属性表示 `Name` 参数，如[添加处理命令行输入的参数](./adding-parameters-that-process-command-line-input.md)中所述。 （有关声明参数的常规信息，请参阅该主题。）
+本部分介绍如何为 cmdlet 定义管道中的输入。 此获取处理器 cmdlet 定义了一个属性，该属性表示 `Name` 参数，如[添加处理命令行输入的参数](./adding-parameters-that-process-command-line-input.md)中所述。
+（有关声明参数的常规信息，请参阅该主题。）
 
 但是，当某个 cmdlet 需要处理管道输入时，它必须将其参数与 Windows PowerShell 运行时绑定到输入值。 为此，必须添加 `ValueFromPipeline` 关键字，或将 `ValueFromPipelineByProperty` 关键字添加到[Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)特性声明。 如果 cmdlet 访问完整的输入对象，则指定 `ValueFromPipeline` 关键字。 如果 cmdlet 仅访问对象的属性，请指定 `ValueFromPipelineByProperty`。
 
 下面是接受管道输入的此 Get-help cmdlet 的 `Name` 参数的参数声明。
 
-[!code-csharp[GetProcessSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs#L35-L44 "GetProcessSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs" range="35-44":::
 
 ```vb
 <Parameter(Position:=0, ValueFromPipeline:=True, _
@@ -77,7 +78,7 @@ End Property
 
 如果 cmdlet 要处理管道输入，则需要重写适当的输入处理方法。 基本输入处理方法在[创建第一个 Cmdlet](./creating-a-cmdlet-without-parameters.md)时引入。
 
-此 ProcessRecord cmdlet 将重写 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法，以处理由用户或脚本提供的 `Name` 参数输入。 如果未提供任何名称，则此方法将获取每个请求的进程名称或所有进程的进程。 请注意，在[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)中，对[WriteObject （system.string，system.string）](/dotnet/api/system.management.automation.cmdlet.writeobject?view=pscore-6.2.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_)的调用是用于将输出对象发送到管道的输出机制。 此调用 `enumerateCollection`的第二个参数设置为 `true`，告知 Windows PowerShell 运行时枚举进程对象的数组，并一次将一个进程写入命令行。
+此 ProcessRecord cmdlet 将重写[System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法，以处理由用户或脚本提供的 `Name` 参数输入。 如果未提供任何名称，则此方法将获取每个请求的进程名称或所有进程的进程。 请注意，在[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)中，对[WriteObject （system.string，system.string）](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_)的调用是用于将输出对象发送到管道的输出机制。 此调用 `enumerateCollection`的第二个参数设置为 `true`，告知 Windows PowerShell 运行时枚举进程对象的数组，并一次将一个进程写入命令行。
 
 ```csharp
 protected override void ProcessRecord()
@@ -142,37 +143,37 @@ Windows PowerShell 使用 .Net 对象在 cmdlet 之间传递信息。 因此，c
 
 - 在 Windows PowerShell 提示符下，输入以下命令以通过管道检索进程名称。
 
-    ```powershell
-    PS> type ProcessNames | get-proc
-    ```
+  ```powershell
+  PS> type ProcessNames | get-proc
+  ```
 
-将显示以下输出。
+  将显示以下输出。
 
-    ```
-    Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
-    -------  ------  -----   ----- -----   ------    --  -----------
-        809      21  40856    4448    147    9.50  2288  iexplore
-        737      21  26036   16348    144   22.03  3860  iexplore
-         39       2   1024     388     30    0.08  3396  notepad
-       3927      62  71836   26984    467  195.19  1848  OUTLOOK
-    ```
+  ```
+  Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
+  -------  ------  -----   ----- -----   ------    --  -----------
+      809      21  40856    4448    147    9.50  2288  iexplore
+      737      21  26036   16348    144   22.03  3860  iexplore
+       39       2   1024     388     30    0.08  3396  notepad
+     3927      62  71836   26984    467  195.19  1848  OUTLOOK
+  ```
 
 - 输入以下行，以获取进程对象，这些对象具有名为 "IEXPLORE" 的进程中的 `Name` 属性。 此示例使用 `Get-Process` cmdlet （由 Windows PowerShell 提供）作为上游命令来检索 "IEXPLORE" 进程。
 
-    ```powershell
-    PS> get-process iexplore | get-proc
-    ```
+  ```powershell
+  PS> get-process iexplore | get-proc
+  ```
 
-将显示以下输出。
+  将显示以下输出。
 
-    ```
-    Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
-    -------  ------  -----      ----- -----   ------     -- -----------
-        801      21  40720    6544    142    9.52  2288  iexplore
-        726      21  25872   16652    138   22.09  3860  iexplore
-        801      21  40720    6544    142    9.52  2288  iexplore
-        726      21  25872   16652    138   22.09  3860  iexplore
-    ```
+  ```
+  Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
+  -------  ------  -----   ----- -----   ------    --  -----------
+      801      21  40720    6544    142    9.52  2288  iexplore
+      726      21  25872   16652    138   22.09  3860  iexplore
+      801      21  40720    6544    142    9.52  2288  iexplore
+      726      21  25872   16652    138   22.09  3860  iexplore
+  ```
 
 ## <a name="see-also"></a>另请参阅
 
@@ -184,6 +185,6 @@ Windows PowerShell 使用 .Net 对象在 cmdlet 之间传递信息。 因此，c
 
 [如何注册 Cmdlet、提供程序和主机应用程序](/previous-versions//ms714644(v=vs.85))
 
-[Windows PowerShell 参考](../windows-powershell-reference.md)
+[Windows PowerShell Reference](../windows-powershell-reference.md)（Windows PowerShell 参考）
 
 [Cmdlet 示例](./cmdlet-samples.md)

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5337dc40-c56e-458b-aedc-5f5d401dfd28
 caps.latest.revision: 6
-ms.openlocfilehash: fcc424f83275452e223ef025cc8d95128520bdbc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 25201200eb437c58a38c88feb1e4c17c974d3e24
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417867"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80977567"
 ---
 # <a name="runspace10-code-sample"></a>RunSpace10 代码示例
 
@@ -21,12 +21,11 @@ ms.locfileid: "74417867"
 
 > [!NOTE]
 > 您可以使用适用C#于 windows Vista 的 Windows 软件开发工具包和 Microsoft .NET Framework 3.0 运行时组件下载源文件（runspace10.cs）。 有关下载说明，请参阅[如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
->
 > 下载的源文件在 **\<PowerShell 示例 >** 目录中提供。
 
 ## <a name="code-sample"></a>代码示例
 
-[!code-csharp[Runspace10.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/Runspace10/Runspace10.cs#L11-L118 "Runspace10.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/Runspace10/Runspace10.cs" range="11-118":::
 
 ## <a name="see-also"></a>另请参阅
 

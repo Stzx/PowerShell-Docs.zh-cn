@@ -8,23 +8,21 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af25b560-017a-4d53-a8c3-97c5ab66b9d4
 caps.latest.revision: 5
-ms.openlocfilehash: 26c7bafe708fbbd89aecb002f3591daa03f56b77
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ee4a0cb6032361aecdf21ab7346521b4757f7030
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417532"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978553"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>AccessDbProviderSample03 代码示例
 
-下面的代码演示了在[创建 Windows Powershell 项提供程序](./creating-a-windows-powershell-item-provider.md)中所述的 windows powershell 提供程序的实现。 此提供程序可操作数据存储区中的数据。
+下面的代码演示了在[创建 Windows Powershell 项提供程序](./creating-a-windows-powershell-item-provider.md)中所述的 windows powershell 提供程序的实现。
+此提供程序可操作数据存储区中的数据。
 
 > [!NOTE]
 > 你可以使用适用C#于 windows Vista 的 Microsoft Windows 软件开发工具包和 .NET Framework 3.0 运行时组件下载此提供程序的源文件（AccessDBSampleProvider03.cs）。 有关下载说明，请参阅[如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
->
-> 下载的源文件在 **\<PowerShell 示例 >** 目录中提供。
->
-> 有关其他 Windows PowerShell 提供程序实现的详细信息，请参阅[设计 Windows Powershell 提供程序](./designing-your-windows-powershell-provider.md)。
+> 下载的源文件在 **\<PowerShell 示例 >** 目录中提供。 有关其他 Windows PowerShell 提供程序实现的详细信息，请参阅[设计 Windows Powershell 提供程序](./designing-your-windows-powershell-provider.md)。
 
 ## <a name="code-sample"></a>代码示例
 
@@ -997,7 +995,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 }
 ```
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L11-L976 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="11-976":::
 
 ## <a name="see-also"></a>另请参阅
 

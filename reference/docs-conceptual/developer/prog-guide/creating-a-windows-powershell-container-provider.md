@@ -1,22 +1,13 @@
 ---
-title: 创建 Windows PowerShell 容器提供程序 |Microsoft Docs
-ms.custom: ''
+title: 创建 Windows PowerShell 容器提供程序
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- providers [PowerShell Programmer's Guide], container provider
-- container providers [PowerShell Programmer's Guide]
-ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
-caps.latest.revision: 5
-ms.openlocfilehash: 69e45de4220a234783d35a877116ad5a5e47d182
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: eec92d526ad78d2351eef6679eaa0df19900715b
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870772"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978485"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>创建 Windows PowerShell 容器提供程序
 
@@ -42,7 +33,7 @@ Windows PowerShell 容器提供程序必须定义一个从[Containercmdletprovid
 public class AccessDBProvider : ContainerCmdletProvider
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L34-L35 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="34-35":::
 
 请注意，在此类定义中， [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)属性包括两个参数。 第一个参数指定 Windows PowerShell 使用的提供程序的用户友好名称。 第二个参数指定 Windows PowerShell 特定功能，该功能是在命令处理过程中提供给 Windows PowerShell 运行时的。 对于此提供程序，没有添加的 Windows PowerShell 特定功能。
 
@@ -118,7 +109,7 @@ protected override void GetChildItems(string path, bool recurse)
 } // GetChildItems
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L311-L362 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="311-362":::
 
 #### <a name="things-to-remember-about-implementing-getchilditems"></a>有关实现 GetChildItems 的注意事项
 
@@ -192,7 +183,7 @@ protected override void GetChildNames(string path,
 } // GetChildNames
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L369-L411 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="369-411":::
 
 #### <a name="things-to-remember-about-implementing-getchildnames"></a>有关实现 GetChildNames 的注意事项
 
@@ -201,7 +192,7 @@ protected override void GetChildNames(string path,
 - 定义提供程序类时，Windows PowerShell 容器提供程序可能会声明 ExpandWildcards、Filter、Include 或 Exclude 的提供程序功能， [Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)枚举。 在这些情况下， [Containercmdletprovider. Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems)方法的实现需要确保传递给方法的路径满足指定的功能的要求。）。 若要执行此操作，方法应访问相应的属性，例如， [Cmdletprovider *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude)和[Cmdletprovider *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include)属性中的相应属性，例如 ""。
 
   > [!NOTE]
-  > 当指定 cmdlet 的 `returnAllContainers` 参数时，将发生此规则的例外情况。 在这种情况下，该方法应检索某个容器的任何子名称，即使该名称与[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Filter)* 或[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include)* 或 Cmdletprovider * 属性的值不匹配，也是如此。 [System.Management.Automation.Provider.Cmdletprovider.Exclude](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) * 属性的值的值相同，则为。
+  > 当指定 cmdlet 的 `returnAllContainers` 参数时，将发生此规则的例外情况。 在这种情况下，该方法应检索某个容器的任何子名称，即使该名称与[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Filter)* 或[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include)* 或 Cmdletprovider * 属性的值不匹配，也是如此。 [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) * 属性的值的值相同，则为。
 
 - 默认情况下，除非指定了[Cmdletprovider *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force)属性，否则此方法的重写不应检索用户通常隐藏的对象的名称。 如果指定的路径指示一个容器，则不需要[Cmdletprovider *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force)属性（& e）。
 
@@ -209,7 +200,7 @@ protected override void GetChildNames(string path,
 
 ## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet-name"></a>将动态参数附加到 Get-childitem Cmdlet （Name）
 
-有时 `Get-ChildItem` cmdlet （具有 `Name` 参数）需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 容器提供程序必须实现[Containercmdletprovider. Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有分析特性类似于 cmdlet 类或 [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 对象的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Get-ChildItem` cmdlet 中。
+有时 `Get-ChildItem` cmdlet （具有 `Name` 参数）需要在运行时动态指定的其他参数。 若要提供这些动态参数，Windows PowerShell 容器提供程序必须实现[Containercmdletprovider. Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters)方法。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有与 cmdlet 类或[Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)对象类似的分析特性的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Get-ChildItem` cmdlet 中。
 
 此提供程序未实现此方法。 但是，下面的代码是此方法的默认实现。
 
@@ -237,7 +228,7 @@ protected override void GetChildNames(string path,
 - 在对数据存储进行任何更改之前，你的[Containercmdletprovider 和 Renameitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem)方法的实现应调用[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) ，并检查其返回值，然后再进行更改。 此方法用于在对系统状态进行更改时（例如，重命名文件）确认操作的执行。
   [Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)发送要更改为用户的资源的名称，Windows PowerShell 运行时在确定应显示的内容时考虑了任何命令行设置或首选项变量。
 
-  在对 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 的调用返回 `true` 后，[System.Management.Automation.Provider.Containercmdletprovider.Renameitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 方法应调用 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 方法。 此方法向用户发送一条确认消息，以允许其他反馈显示是否应继续进行操作。 提供程序应调用[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)作为额外检查来检查是否存在潜在的危险系统修改。
+  在对 Cmdletprovider 的调用返回 `true`后，* 方法应调用[ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)方法，则为，否则返回[Containercmdletprovider. Renameitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem)方法的调用方，则为。 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 此方法向用户发送一条确认消息，以允许其他反馈显示是否应继续进行操作。 提供程序应调用[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)作为额外检查来检查是否存在潜在的危险系统修改。
 
 ## <a name="attaching-dynamic-parameters-to-the-rename-item-cmdlet"></a>将动态参数附加到重命名项 Cmdlet
 
@@ -272,7 +263,7 @@ protected override void NewItem( string path, string type, object newItemValue )
 } // NewItem
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L939-L955 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="939-955":::
 
 #### <a name="things-to-remember-about-implementing-newitem"></a>有关实现 NewItem 的注意事项
 
@@ -311,11 +302,11 @@ protected override void NewItem( string path, string type, object newItemValue )
 
 - 当存在循环链接时， [Containercmdletprovider. Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem)的实现会阻止无限递归，如所示。 应该引发适当的终止异常来反映这种情况。
 
-- 在对数据存储进行任何更改之前，你的[Containercmdletprovider 和 Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem)方法的实现应调用[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) ，并检查其返回值，然后再进行更改。 在对 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 的调用返回 `true` 后，[System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 方法应调用 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 方法，作为额外检查是否存在潜在的危险系统修改。
+- 在对数据存储进行任何更改之前，你的[Containercmdletprovider 和 Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem)方法的实现应调用[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) ，并检查其返回值，然后再进行更改。 在对 Cmdletprovider 的调用返回 `true`后，ShouldProcess 方法应调用[方法作为](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)额外检查来检查是否存在潜在的危险系统修改情况，请务必调用[Containercmdletprovider. Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem)方法的调用[System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)方法的方法。
 
 ## <a name="attaching-dynamic-parameters-to-the-remove-item-cmdlet"></a>将动态参数附加到移除项 Cmdlet
 
-有时 `Remove-Item` cmdlet 需要在运行时动态指定的其他参数。 为了提供这些动态参数，容器提供程序必须实现[Containercmdletprovider. Removeitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters)方法来处理这些参数。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有分析特性类似于 cmdlet 类或 [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 对象的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Remove-Item` cmdlet 中。
+有时 `Remove-Item` cmdlet 需要在运行时动态指定的其他参数。 为了提供这些动态参数，容器提供程序必须实现[Containercmdletprovider. Removeitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters)方法来处理这些参数。 此方法检索指定路径处的项的动态参数，并返回一个对象，该对象具有与 cmdlet 类或[Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)对象类似的分析特性的属性和字段。 Windows PowerShell 运行时使用返回的对象将参数添加到 `Remove-Item` cmdlet 中。
 
 此容器提供程序不实现此方法。 但是，下面的代码是[Containercmdletprovider. Removeitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters)的默认实现。
 
@@ -334,7 +325,7 @@ protected override bool HasChildItems( string path )
 } // HasChildItems
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L1094-L1097 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="1094-1097":::
 
 #### <a name="things-to-remember-about-implementing-haschilditems"></a>有关实现 HasChildItems 的注意事项
 

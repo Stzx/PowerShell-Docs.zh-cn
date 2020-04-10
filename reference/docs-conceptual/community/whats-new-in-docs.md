@@ -1,19 +1,58 @@
 ---
 title: PowerShell Docs 的新增内容
 description: PowerShell 文档更改列表
-ms.date: 03/04/2020
-ms.openlocfilehash: b2b196a83eafc87daf9f9eb06a93377058f1ff20
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.date: 03/31/2020
+ms.openlocfilehash: b7fee886b1c5584dc9d75b86ca79980579040db7
+ms.sourcegitcommit: ef1a3079809ec2e3c58e785c84de2df968145658
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060212"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537068"
 ---
 # <a name="whats-new-in-powershell-docs"></a>PowerShell Docs 的新增内容
 
 本文列出了上个月对文档进行的一些主要更改，同时表彰社区的积极参与。
 
 帮助我们改进文档。 若要了解如何开始参与，请参阅[参与者指南][contrib]。
+
+## <a name="2020-march"></a>2020 年 3 月
+
+### <a name="highlights"></a>亮点
+
+- 新文档
+  - PowerShell 文档社区页面
+    - [社区资源](/powershell/scripting/community/community-support)页面
+    - [Powershell 文档新增内容](#2020-march)页面（本页）
+    - [PowerShell 信息图](https://github.com/MicrosoftDocs/PowerShell-Docs/blob/staging/assets/PowerShell_7_Infographic.pdf)已添加到“数字艺术”页面
+    - [PowerShell-Doc 参与者指南](/powershell/scripting/community/contributing/overview?view=powershell-7)
+  - 新增 PowerShell 内容
+    - [从 Windows PowerShell 5.1 迁移到 PowerShell 7](/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7)
+    - [PowerShell 7 模块兼容性列表](/PowerShell/scripting/whats-new/module-compatibility)
+    - [在 Docker 中使用 PowerShell](/powershell/scripting/install/powershell-in-docker)
+  - 新增 Wiki 内容
+    - [对于实现 IDictionary TKey、TValue 的类型，PowerShell 可防止不存在的密钥异常](https://github.com/MicrosoftDocs/PowerShell-Docs/wiki/PowerShell-prevents-exceptions-for-non-existent-keys-for-types-that-implement-IDictionary-TKey,-TValue-)
+    - [PowerShell 对命名空间的处理方法是不区分但保留大小写](https://github.com/MicrosoftDocs/PowerShell-Docs/wiki/PowerShell's-treatment-of-namespaces-is-case-insensitive-but-case-preserving)
+
+- 文档维护
+  - 大规模清理断开的链接
+  - 清理旧问题和重复问题
+
+- GitHub 统计信息
+  - 合并了 100 个 PR（有 14 个来自社区）
+  - 公开了 68 个问题（有 56 个来自社区）
+  - 了结了 109 个问题
+
+### <a name="top-community-contributors"></a>主要社区参与者
+
+以下人员通过提交拉取请求或填写问题参与了 PowerShell 文档编纂。 谢谢！
+
+- k-takai - 7 个 PR
+- mklement0 - 5 个问题
+- juvtib - 4 个问题
+- iSazonov - 3 个问题
+- doctordns - 2 个问题
+- mdorantesm - 2 个问题
+- qt3m45su0najc7 - 2 个问题
 
 ## <a name="2020-february"></a>2020 年 2 月
 
@@ -32,7 +71,7 @@ ms.locfileid: "79060212"
 
 ### <a name="top-community-contributors"></a>主要社区参与者
 
-以下人员通过提交拉取请求或填写问题参与了 PowerShell Docs。 谢谢！
+以下人员通过提交拉取请求或填写问题参与了 PowerShell 文档编纂。 谢谢！
 
 - Maamue - 2 个 PR
 - doctordns - 2 个 PR
@@ -56,7 +95,7 @@ ms.locfileid: "79060212"
 
 ### <a name="top-community-contributors"></a>主要社区参与者
 
-以下人员通过提交拉取请求或填写问题参与了 PowerShell Docs。 谢谢！
+以下人员通过提交拉取请求或填写问题参与了 PowerShell 文档编纂。 谢谢！
 
 - Makovec - 3 个 PR
 - mklement0 - 9 个问题
@@ -77,11 +116,11 @@ PowerShell 社区是一个充满活力的协作团队。 我们非常感谢社�
 
 | 提交的文档 PR 数 | 2016 | 2017 | 2018 | 2019 | 2020 | 总计 |
 | ------------------ | ---: | ---: | ---: | ---: | ---: | ----------: |
-| 社区总计    |  194 |  447 |  467 |  320 |   16 |        1447 |
+| 社区总计    |  198 |  448 |  468 |  322 |   22 |        1469 |
 | matt9ucci          |      |  157 |   80 |   30 |      |         267 |
 | nschonni           |      |      |   14 |  138 |      |         152 |
 | kiazhi             |   25 |   79 |   12 |      |      |         116 |
-| alexandair         |   57 |    7 |   26 |    2 |      |          92 |
+| alexandair         |   59 |    8 |   26 |    2 |      |          95 |
 | doctordns          |    5 |   32 |   20 |    7 |    2 |          66 |
 | sethvs             |      |    1 |   44 |      |      |          45 |
 | Dan1el42           |   20 |      |      |      |      |          20 |
@@ -89,8 +128,10 @@ PowerShell 社区是一个充满活力的协作团队。 我们非常感谢社�
 | it-praktyk         |      |      |   16 |    1 |      |          17 |
 | markekraus         |      |   11 |    5 |      |      |          16 |
 | purdo17            |      |      |   13 |      |      |          13 |
+| k-takai            |      |      |    5 |    1 |    7 |          13 |
 | kvprasoon          |    2 |    1 |    7 |    2 |      |          12 |
 | PlagueHO           |   10 |      |      |    1 |      |          11 |
+| KirkMunro          |    1 |    1 |    2 |    6 |      |          10 |
 | exchange12rocks    |      |    7 |    3 |      |      |          10 |
 
 ### <a name="github-issues-opened"></a>打开的 GitHub 问题
@@ -99,14 +140,14 @@ GitHub 问题可帮助我们发现文档中的错误和缺陷。
 
 | 打开的文档问题数 | 2016 | 2017 | 2018 | 2019 | 2020 | 总计 |
 | ------------------ | ---: | ---: | ---: | ---: | ---: | ----------: |
-| 社区总计    |   34 |   95 |  213 |  575 |   86 |        1003 |
-| mklement0          |      |   19 |   60 |   56 |   13 |         148 |
+| 社区总计    |   34 |   95 |  213 |  575 |  123 |        1081 |
+| mklement0          |      |   19 |   60 |   56 |   17 |         153 |
 | jszabo98           |      |      |    2 |   15 |    2 |          19 |
-| iSazonov           |      |    1 |    4 |   10 |      |          15 |
-| doctordns          |      |    5 |    3 |    5 |    2 |          15 |
+| iSazonov           |      |    1 |    4 |   10 |    2 |          18 |
+| doctordns          |      |    5 |    3 |    5 |    4 |          17 |
+| alexandair         |    9 |    4 |    2 |      |      |          15 |
 | KirkMunro          |      |      |    7 |    7 |      |          14 |
 | vexx32             |      |      |    3 |   11 |      |          14 |
-| alexandair         |    6 |    4 |    2 |      |      |          12 |
 
 <!-- Link references -->
 [contrib]: contributing/overview.md

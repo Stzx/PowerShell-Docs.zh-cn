@@ -11,16 +11,16 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], base provider
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
-ms.openlocfilehash: e825581b96f0f33893b38f9f6499dd46a7bf38eb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360516"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978502"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>创建基础 Windows PowerShell 提供程序
 
-本主题是学习如何创建 Windows PowerShell 提供程序的起点。 此处所述的基本提供程序提供了启动和停止提供程序的方法，但尽管此提供程序不提供访问数据存储或获取或设置数据存储中数据的方法，但它确实提供了所需的基本功能所有提供程序。
+本主题是学习如何创建 Windows PowerShell 提供程序的起点。 此处所述的基本提供程序提供了启动和停止提供程序的方法，但尽管此提供程序不提供访问数据存储或获取或设置数据存储中的数据的方法，但它确实提供了所有提供程序所需的基本功能。
 
 如前所述，此处所述的基本提供程序实现了用于启动和停止提供程序的方法。 Windows PowerShell 运行时调用这些方法来初始化和取消初始化提供程序。
 
@@ -38,7 +38,7 @@ ms.locfileid: "72360516"
 
 下面是该基本提供程序的类定义：
 
-[!code-csharp[AccessDBProviderSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs#L23-L24 "AccessDBProviderSample01.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs" range="23-24":::
 
 在类定义之前，您必须用语法 [CmdletProvider （）] 声明[Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)属性，而不是。
 
@@ -55,7 +55,7 @@ Windows PowerShell 提供程序也可以维护基于连接的状态。 有关维
 
 ## <a name="initializing-the-provider"></a>正在初始化提供程序
 
-若要初始化该访问接口，Windows powershell 运行时将在启动 Windows PowerShell 时调用[Cmdletprovider *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start)方法。 大多数情况下，提供程序可以使用此方法的默认实现，该实现只返回描述提供程序的[Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo)对象。 但是，如果你想要添加其他初始化信息，你应该实现你自己的 [System.Management.Automation.Provider.Cmdletprovider.Start*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 方法，该方法将返回修改后的版本传递给提供程序的 [System.Management.Automation.Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 对象。 通常，此方法应返回传递给它的所提供的[Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo)对象或包含其他初始化信息的修改后的[Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo)对象。
+若要初始化该访问接口，Windows powershell 运行时将在启动 Windows PowerShell 时调用[Cmdletprovider *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start)方法。 大多数情况下，提供程序可以使用此方法的默认实现，该实现只返回描述提供程序的[Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo)对象。 但是，如果你想要添加更多的初始化信息，你应该实现你自己的[Cmdletprovider *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start)方法，该方法将返回传递给你的提供程序的已修改版本的[Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo)对象。 通常，此方法应返回传递给它的所提供的[Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo)对象或包含其他初始化信息的修改后的[Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo)对象。
 
 此基本提供程序不重写此方法。 但是，以下代码显示了此方法的默认实现：
 
@@ -93,7 +93,7 @@ Get-PSProvider
 
 将显示以下输出：
 
-```output
+```Output
 Name                 Capabilities                  Drives
 ----                 ------------                  ------
 AccessDb             None                          {}
