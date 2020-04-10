@@ -158,7 +158,7 @@
           href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
         - name: 使用 Visual Studio Code 进行远程编辑和调试
           href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
-        - name: 了解 VSCode 和 PowerShell 中的文件编码
+        - name: 了解 VS Code 和 PowerShell 中的文件编码
           href: components/vscode/understanding-file-encoding.md
     - name: Web 访问
       items:
@@ -260,7 +260,7 @@
           href: gallery/how-to/getting-support/dispute-resolution.md
         - name: 联系管理员
           href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: 故障排除
+        - name: 疑难解答
           href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
         - name: 启动 NuGet 提供程序和 NuGet.exe
           href: gallery/how-to/getting-support/bootstrapping-nuget.md
@@ -442,7 +442,7 @@
               href: dsc/resources/singleInstance.md
             - name: 资源创作清单
               href: dsc/resources/resourceAuthoringChecklist.md
-        - name: 操作方法指南
+        - name: 操作指南
           items:
             - name: 在 PowerShell 中编写基于 MOF 的资源
               href: dsc/resources/authoringResourceMOF.md
@@ -456,7 +456,7 @@
               href: dsc/resources/authoringResourceMofDesigner.md
     - name: 管理节点
       items:
-        - name: 操作方法指南
+        - name: 操作指南
           items:
             - name: 应用、获取并测试节点上的配置
               href: dsc/managing-nodes/apply-get-test.md
@@ -472,7 +472,7 @@
           items:
             - name: 推送/拉取模型
               href: dsc/pull-server/enactingConfigurations.md
-        - name: 操作方法指南
+        - name: 操作指南
           items:
             - name: 设置拉取服务器
               items:
@@ -516,7 +516,7 @@
           href: dsc/tutorials/bootstrapDsc.md
         - name: 配置 DSCAutomationHostEnabled 注册表项
           href: dsc/tutorials/DSCAutomationHostEnabled.md
-    - name: 故障排除
+    - name: 疑难解答
       items:
         - name: 已知问题
           href: dsc/troubleshooting/troubleshooting.md
