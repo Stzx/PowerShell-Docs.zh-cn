@@ -18,7 +18,7 @@ ms.locfileid: "67030414"
 
 ## <a name="learning-command-names-in-traditional-shells"></a>学习传统 shell 中的命令名称
 
-大多数命令用于管理操作系统或应用程序中的元素，如服务或进程。 命令具有多个名称，这些名称可能或可能不会纳入一个系列。 例如，在 Windows 系统中，你可以使用 `net start` 和 `net stop` 命令来启动和停止服务。 Sc.exe  是另一个适用于 Windows 的服务控制工具。 该名称不会纳入 net.exe  服务命令的命名模式。 对于进程管理，Windows 使用 tasklist.exe  命令列出进程，使用 taskkill.exe  命令终止进程。
+大多数命令用于管理操作系统或应用程序中的元素，如服务或进程。 命令具有多个名称，这些名称中的一些可能属于一个系列。 例如，在 Windows 系统中，你可以使用 `net start` 和 `net stop` 命令来启动和停止服务。 Sc.exe 是另一个适用于 Windows 的服务控制工具。 该名称不归入 net.exe 服务命令的命名模式。 对于进程管理，Windows 使用 tasklist.exe 命令列出进程，使用 taskkill.exe 命令终止进程。
 
 另外，这些命令的参数规范不规则。 不能使用 `net start` 命令来启动远程计算机上的服务。 sc.exe  命令可以启动远程计算机上的服务。 但是，若要指定远程计算机，则必须在其名称前添加双反斜杠作为前缀。 若要在名为 DC01 的远程计算机上启动后台处理程序服务，请键入 `sc.exe \\DC01 start spooler`。
 若要列出在 DC01 上运行的任务，请使用 /S  参数和不带反斜杠的计算机名称。 例如，`tasklist /S DC01`。
