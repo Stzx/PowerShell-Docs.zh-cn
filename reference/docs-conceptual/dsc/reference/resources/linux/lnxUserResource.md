@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux 的 DSC nxUser 资源
 ms.openlocfilehash: 6d7b52809741813af7fa80b1c6372b267aff4777
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954794"
 ---
 # <a name="dsc-for-linux-nxuser-resource"></a>适用于 Linux 的 DSC nxUser 资源
@@ -31,22 +31,22 @@ nxUser <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |指示要确保其特定状态的帐户名。 |
+|properties |指示要确保其特定状态的帐户名。 |
 |---|---|
 |UserName |指定你想确保其中文件或目录状态的位置。 |
 |FullName |包含用于用户帐户的完整名称的字符串。 |
 |说明 |用户帐户的说明。 |
 |密码 |适用于 Linux 计算机的形式的用户密码哈希。 通常情况下，这是加盐的 SHA-256 或 SHA-512 哈希。 在 Debian 和 Ubuntu Linux 上，可以使用 `mkpasswd` 命令生成此值。 对于其他 Linux 发行版本，可以使用 Python 加密库的加密方法生成该哈希。 |
-|禁用 |指示帐户是否已启用。 将此属性设置为 `$true` 可确保已禁用保此帐户，将其设置为 `$false` 可确保已启用此帐户。 |
-|PasswordChangeRequired |指示用户是否可以更改密码。 将此属性设置为 `$true` 可确保用户无法更改密码，将其设置为 `$false` 可允许用户更改密码。 默认值为 `$false`。 仅当创建以前不存在的用户帐户时，才会计算此属性。 |
+|已禁用 |指示帐户是否已启用。 将此属性设置为 `$true` 可确保已禁用保此帐户，将其设置为 `$false` 可确保已启用此帐户。 |
+|PasswordChangeRequired |指示用户是否可以更改密码。 将此属性设置为 `$true` 可确保用户无法更改密码，将其设置为 `$false` 可允许用户更改密码。 默认值是 `$false`。 仅当创建以前不存在的用户帐户时，才会计算此属性。 |
 |HomeDirectory |用户的主目录 |
 |GroupID |用户的主要组 ID |
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |Ensure |指定帐户是否存在。 将此属性设置为 **Present** 可确保帐户存在，将其设置为 **Absent** 可确保帐户不存在。 |

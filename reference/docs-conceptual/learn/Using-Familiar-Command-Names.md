@@ -3,10 +3,10 @@ ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 使用熟悉的命令名称
 ms.openlocfilehash: 30b33bc8739975c1a40e51c04a3ee4e426c199e7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030890"
 ---
 # <a name="using-familiar-command-names"></a>使用熟悉的命令名称
@@ -22,12 +22,12 @@ PowerShell 支持别名以通过备用名称引用命令。 别名允许具有�
 |||||
 |-|-|-|-|
 |cat|dir|mount|rm|
-|cd|echo|move|rmdir|
+|CD|echo|移动|rmdir|
 |chdir|erase|popd|sleep|
 |clear|h|ps|sort|
 |cls|history|pushd|tee|
 |copy|kill|pwd|type|
-|del|lp|r|write|
+|del|lp|r|写入|
 |diff|ls|ren||
 
 `Get-Alias` cmdlet 显示与别名关联的本机 PowerShell 命令的真实名称。
@@ -53,10 +53,10 @@ PowerShell 别名尝试兼顾清晰度和简洁性。 PowerShell 为常见名词
 
 | 名词或谓词 | 缩写 |
 |--------------|--------------|
-| Get          | g            |
+| 获取          | g            |
 | Set          | s            |
 | Item         | i            |
-| Location     | l            |
+| 位置     | l            |
 | Command      | cm           |
 | Alias        | al           |
 

@@ -3,10 +3,10 @@ ms.date: 10/31/2017
 keywords: dsc,powershell,配置,安装程序
 title: 保护 MOF 文件
 ms.openlocfilehash: ab03db8bf4ed7d412691ae87fd12da5131607886
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278455"
 ---
 # <a name="securing-the-mof-file"></a>保护 MOF 文件
@@ -20,7 +20,7 @@ DSC 通过应用存储于 MOF 文件中的信息来管理服务器节点的配�
 > [!NOTE]
 > 本主题讨论用于加密的证书。 对于加密，自签名证书就已足够，因为私钥始终保密，而加密并不表示信任该文档。 自签名证书*不*得用于身份验证目的。 应使用来自受信任的证书颁发机构 (CA) 的证书进行任何身份验证。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 要成功加密所用凭据以保护 DSC 配置，请确保你有以下各项：
 
@@ -40,14 +40,14 @@ DSC 通过应用存储于 MOF 文件中的信息来管理服务器节点的配�
 
 ## <a name="certificate-requirements"></a>证书要求
 
-若要执行凭据加密，公钥证书必须在受用于创作 DSC 配置的计算机**信任**的_目标节点_上可用。 若要将此公钥证书用于 DSC 凭据加密，它需具有以下特定要求：
+若要执行凭据加密，公钥证书必须在受用于创作 DSC 配置的计算机_信任_的**目标节点**上可用。 若要将此公钥证书用于 DSC 凭据加密，它需具有以下特定要求：
 
 1. **密钥用法**：
    - 必须包含：“KeyEncipherment”和“DataEncipherment”。
-   - 不应包含  ：“数字签名”。
+   - _不_应包含：“数字签名”。
 2. **增强型密钥用法**：
    - 必须包含：文档加密 (1.3.6.1.4.1.311.80.1)。
-   - 不应包含  ：客户端身份验证 (1.3.6.1.5.5.7.3.2) 和服务器身份验证 (1.3.6.1.5.5.7.3.1)。
+   - _不_应包含：客户端身份验证 (1.3.6.1.5.5.7.3.2) 和服务器身份验证 (1.3.6.1.5.5.7.3.1)。
 3. 证书的私钥在*目标节点_上可用。
 4. 证书的**提供程序**必须是“Microsoft RSA SChannel Cryptographic Provider”。
 

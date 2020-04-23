@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,安装程序
 title: 对 Just Enough Administration (JEA) 的改进
 ms.openlocfilehash: 847ae92a6225023bcd0ee3dfe7c7058bdc356836
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147597"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>对 Just Enough Administration (JEA) 的改进
@@ -26,7 +26,7 @@ UserDriveMaximumSize = 10485760    # 10 MB
 
 将在 `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\DOMAIN_USER` 处创建支持用户驱动器的文件夹
 
-若要利用用户驱动器，并将文件复制到配置为公开用户驱动器的 JEA 终结点或从中复制文件，请使用 `Copy-Item` 上的 `-ToSession` 和 `-FromSession` 参数。
+若要利用用户驱动器，并将文件复制到配置为公开用户驱动器的 JEA 终结点或从中复制文件，请使用 `-ToSession` 上的 `-FromSession` 和 `Copy-Item` 参数。
 
 ```powershell
 # Connect to the JEA endpoint

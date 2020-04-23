@@ -3,10 +3,10 @@ ms.date: 09/06/2019
 keywords: powershell,cmdlet
 title: PowerShell 5.0 ISE 中的新增功能
 ms.openlocfilehash: 8f15e99c5a6ae33aeae9bd33eb0cf58fb27e3b90
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74416643"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Windows PowerShell 5.0 ISE 中的新增功能
@@ -27,7 +27,7 @@ Windows PowerShell ISE 是一款主机应用程序，让你可以在直观的图
 
 下表列出了 Windows PowerShell 中此版本的 Windows PowerShell ISE 的新增功能和更改功能。
 
-## <a name="intellisense"></a>Intellisense
+## <a name="intellisense"></a>IntelliSense
 
 > 在 ISE 3.0 中添加
 
@@ -36,13 +36,13 @@ Intellisense 会在你键入时显示可单击的菜单，其中包括可能匹�
 
 **更改增添了什么价值？**
 
-新增 Intellisense 功能后，使用 Windows PowerShell ISE 创建脚本时，可以更容易地发现 cmdlet 和语法。 在创建新脚本时，还可以使用 Windows PowerShell ISE 了解 Windows PowerShell。
+新增 Intellisense 功能后，使用 Windows PowerShell ISE 创建脚本时，可以更轻松地发现 cmdlet 和语法。 在创建新脚本时，还可以使用 Windows PowerShell ISE 了解 Windows PowerShell。
 
 **工作原理的不同之处是什么？**
 
 当在 Windows PowerShell ISE 中键入 cmdlet 时，会显示一个可滚动和可点击的菜单，并可在其中浏览和选择适当的命令。
 
-## <a name="snippets"></a>代码段
+## <a name="snippets"></a>代码片段
 
 > 在 ISE 3.0 中添加
 
@@ -76,7 +76,7 @@ Windows PowerShell ISE 3.0 及更高版本附带**命令**附加工具。 借助
 
 > 在 PowerShell 3.0 中添加
 
-Windows PowerShell ISE 每隔两分钟在单独的位置上自动保存你打开的脚本。 当 Windows PowerShell ISE 在意外崩溃或重新启动后重新启动时，它会恢复在上一个会话中打开的脚本，即使脚本未保存也是如此。
+Windows PowerShell ISE 每隔两分钟在单独的位置上自动保存你打开的脚本。 当 Windows PowerShell ISE 在意外崩溃或系统重启后重新启动时，它会恢复在上一个会话中打开的脚本，即使脚本未保存也是如此。
 
 要更改自动保存间隔，可在控制台窗格中运行下面的命令：`$psise.Options.AutoSaveMinuteInterval`。
 
@@ -94,7 +94,7 @@ Windows PowerShell ISE 2.0 不会自动保存脚本。
 
 Windows PowerShell ISE 现在具有最近使用过的文件列表。 在 Windows PowerShell ISE 中打开文件时，文件会添加到“文件”  菜单上的最近使用列表中。
 
-若要更改最近使用列表中的文件默认数量，请在控制台窗格中运行以下命令：`$psise.Options.MruCount`。
+若要更改最近使用列表中的默认文件数量，请在控制台窗格中运行以下命令：`$psise.Options.MruCount`。
 
 **更改增添了什么价值？**
 
@@ -111,7 +111,7 @@ Windows PowerShell ISE 2.0 没有最近使用列表。
 第一版 Windows PowerShell ISE 中可用的单独的命令窗格和输出窗格现在合并成了一个控制台窗格。 该控制台窗格的功能和外观与典型的 Windows PowerShell 控制台类似，但经过了以下改进：
 
 - 用于输入文本（而非输出文本）的语法着色，包括 XML 语法
-- Intellisense
+- IntelliSense
 - 大括号匹配
 - 错误指示
 - 对 Unicode 的完全支持
@@ -119,7 +119,7 @@ Windows PowerShell ISE 2.0 没有最近使用列表。
 - <kbd>Ctrl</kbd>+<kbd>F1</kbd> 上下文相关的 Show-Command
 - 对复杂脚本和从右向左语言的支持
 - 字体支持
-- 缩放
+- Zoom
 - 行选择模式和块选择模式
 - 当你在控制台中按“向上”<kbd></kbd>箭头查看历史记录时，命令行处会保留你所键入的内容
 
@@ -137,9 +137,9 @@ Windows PowerShell ISE 2.0 具有单独的命令和输出窗格。
 
 如果从命令行（通过键入 **powershell_ise.exe**）启动 Windows PowerShell ISE，则可以添加下列新的命令行开关。
 
-- `-NoProfile`：在不运行 `$profile` 的情况下启动 Windows PowerShell ISE
-- `-Help`：显示帮助窗口
-- `-mta`：在多线程的单元模式下启动 Windows PowerShell ISE。 Windows PowerShell ISE 的默认操作模式是单线程的单元模式或 `-sta`。
+- `-NoProfile`设置用户帐户 ：在不运行 `$profile` 的情况下启动 Windows PowerShell ISE
+- `-Help`设置用户帐户 ：显示帮助窗口
+- `-mta`设置用户帐户 ：在多线程的单元模式下启动 Windows PowerShell ISE。 Windows PowerShell ISE 的默认操作模式是单线程的单元模式或 `-sta`。
 
 **更改增添了什么价值？**
 
@@ -176,7 +176,7 @@ Windows PowerShell ISE 2.0 中不具有这些编辑增强功能。
 
 > 在 PowerShell 3.0 中添加
 
-当你将光标置于某个 cmdlet 中，或突出显示某个 cmdlet 的一部分时，按 <kbd>F1</kbd> 会打开新的帮助查看器，其中显示了有关突出显示的 cmdlet 的上下文相关帮助。 要显示 Windows PowerShell 的“关于”帮助，可在控制台窗格中键入 `operators`  ，然后按 <kbd>F1</kbd>。
+当你将光标置于某个 cmdlet 中，或突出显示某个 cmdlet 的一部分时，按 <kbd>F1</kbd> 会打开新的帮助查看器，其中显示了有关突出显示的 cmdlet 的上下文相关帮助。 要显示 Windows PowerShell 的“关于”帮助，可在控制台窗格中键入 `operators` ，然后按 <kbd>F1</kbd>。
 
 使用此功能之前，必须先从 Microsoft 网站下载最新版本的 Windows PowerShell 帮助主题。 当你以管理员身份运行 Windows PowerShell ISE 时，下载“帮助”主题的最简单方法是在控制台窗格中运行 `Update-Help` cmdlet。
 
@@ -199,7 +199,7 @@ Windows PowerShell ISE 2.0 中不具有这些编辑增强功能。
 
 **更改增添了什么价值？**
 
-通过在 Windows PowerShell 脚本中使用 `Show-Command`，可以为用户提供其熟悉的图形环境。 `Show-Command` 还有助于引导用户了解 Windows PowerShell。
+通过在 Windows PowerShell 脚本中使用 `Show-Command`，可以为用户提供其熟悉的图形环境。 `Show-Command` 还有助于新用户了解 Windows PowerShell。
 
 **工作原理的不同之处是什么？**
 

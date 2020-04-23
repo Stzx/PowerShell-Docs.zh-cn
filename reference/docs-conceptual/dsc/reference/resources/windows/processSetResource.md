@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC ProcessSet 资源
 ms.openlocfilehash: 72925d3a9516f5c0040427773a3b1d66034667bb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953124"
 ---
 # <a name="dsc-processset-resource"></a>DSC ProcessSet 资源
@@ -32,9 +32,9 @@ ProcessSet [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |路径 |进程可执行文件的路径。 如果这些是可执行文件的名称（不是完全限定的路径），则 DSC 资源会搜索环境 `$env:Path` 变量以查找文件。 如果此属性的值是完全限定的路径，则 DSC 不使用 `$env:Path` 环境变量查找文件，并且会在不存在任何路径时引发错误。 不允许使用相对路径。 |
 |凭据 |指示启动进程的凭据。 |
@@ -45,7 +45,7 @@ ProcessSet [string] #ResourceName
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |Ensure |指定进程是否存在。 将此属性设置为 **Present** 可确保进程存在。 否则，将其设置为 **Absent**。 默认值为 **Present**。 |

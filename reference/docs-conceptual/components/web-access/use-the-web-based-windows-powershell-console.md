@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: 使用基于 Web 的 Windows PowerShell 控制台
-ms.openlocfilehash: 29aa123049884004dd4e1a8f042783538d80abc6
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 9a5d6d825dc82710466768bc612b012dd80937da
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500866"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978655"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>使用基于 Web 的 Windows PowerShell 控制台
 
@@ -211,9 +211,8 @@ Alt+F7          | 清空命令历史记录列表
 
     你可以使用类似的方式更改控制台的高度。
 
-    如要获取自定义控制台视图的其他示例，请参阅 [Windows PowerShell 团队博客](h https://devblogs.microsoft.com/powershell)。
+    如要获取自定义控制台视图的其他示例，请参阅 [Windows PowerShell 团队博客](https://devblogs.microsoft.com/powershell)。
 
 ## <a name="see-also"></a>另请参阅
 
 - [你好，脚本专家！](https://devblogs.microsoft.com/scripting/)
-- [PowerShell 团队博客](https://devblogs.microsoft.com/powershell/)

@@ -3,10 +3,10 @@ ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 执行网络任务
 ms.openlocfilehash: e0aa3b8ef3d911ab0fe851f6621d70e1265c5bd4
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75737196"
 ---
 # <a name="performing-networking-tasks"></a>执行网络任务
@@ -64,7 +64,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 
 网络适配器配置对象的默认显示为一组非常精简的可用信息。 对于深入检查和疑难解答，请使用 `Select-Object` 或格式设置 cmdlet（例如 `Format-List`）来指定要显示的属性。
 
-在新式 TCP/IP 网络中，你可能对 IPX 或 WINS 属性不感兴趣。 可以使用 `Select-Object` 的 ExcludeProperty  参数隐藏以“WINS”或“IPX”名称开头的属性。
+在新式 TCP/IP 网络中，你可能对 IPX 或 WINS 属性不感兴趣。 可以使用  **的 ExcludeProperty**`Select-Object` 参数隐藏以“WINS”或“IPX”名称开头的属性。
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -81,7 +81,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'"
 ```
 
-摘要信息是更为有用的形式，它显示下面的命令生成的 Address、ResponseTime 以及 StatusCode 属性。 `Format-Table` 的 Autosize  参数调整表列的大小，以使其正确显示在 PowerShell 中。
+摘要信息是更为有用的形式，它显示下面的命令生成的 Address、ResponseTime 以及 StatusCode 属性。 **的 Autosize**`Format-Table` 参数调整表列的大小，以使其正确显示在 PowerShell 中。
 
 ```powershell
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'" |

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,安装程序
 title: 新的和更新的 cmdlet
 ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147587"
 ---
 # <a name="new-and-updated-cmdlets"></a>新的和更新的 cmdlet
@@ -32,7 +32,7 @@ ms.locfileid: "71147587"
 
 通过 `Get-Clipboard` 和 `Set-Clipboard`，你可以更轻松地将内容传入和传出 Windows PowerShell 会话。 剪贴板 cmdlet 支持图像、音频文件、文件列表和文本。
 
-有关更多信息，请参阅：
+有关详细信息，请参阅：
 
 - [Get-Clipboard](/powershell/module/Microsoft.PowerShell.Management/Get-Clipboard)
 - [Set-Clipboard](/powershell/module/Microsoft.PowerShell.Management/Set-Clipboard)
@@ -51,7 +51,7 @@ CMS 加密标准采用公钥加密系统，其中用来加密内容的密钥（�
 - [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage)
 - [Unprotect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/unprotect-CmsMessage)
 
-证书需要唯一的密钥用法标识符 (EKU)（如“代码签名”或“加密邮件”）在 PowerShell 中将它们识别为数据加密证书。 若要在证书提供程序中查看文档加密证书，可以使用 `Get-ChildItem` 的 DocumentEncryptionCert  动态参数：
+证书需要唯一的密钥用法标识符 (EKU)（如“代码签名”或“加密邮件”）在 PowerShell 中将它们识别为数据加密证书。 若要在证书提供程序中查看文档加密证书，可以使用  **的 DocumentEncryptionCert**`Get-ChildItem` 动态参数：
 
 ```powershell
 Get-ChildItem Cert:\CurrentUser -DocumentEncryptionCert -Recurse
@@ -192,7 +192,7 @@ New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkDir -Value $pshome
 
 ### <a name="hard-links"></a>硬链接
 
-允许的路径  和名称  的相同组合如上所述。
+可以继续使用上述路径  和名称  组合。
 
 ```powershell
 New-Item -ItemType HardLink -Path C:\Temp -Name MyHardLinkFile.txt -Value $pshome\profile.ps1

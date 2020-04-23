@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,安装程序
 title: PowerShell 脚本调试中的改进
 ms.openlocfilehash: f1771a451ba671da2371fcfc95374e6131573ddc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147807"
 ---
 # <a name="improvements-in-powershell-script-debugging"></a>PowerShell 脚本调试中的改进
@@ -48,7 +48,7 @@ PowerShell ISE 现在可以通过运行 PSEdit 命令，在远程会话中打开
 
 ### <a name="attach-to-process-hosting-powershell"></a>附加到承载 PowerShell 的进程
 
-你现在可以附加到已加载 PowerShell 的任何计算机进程。 可通过输入与主机进程交互的会话执行此操作。 有关更多信息，请参阅：
+你现在可以附加到已加载 PowerShell 的任何计算机进程。 可通过输入与主机进程交互的会话执行此操作。 有关详细信息，请参阅：
 
 - [Enter-PSHostProcess](/powershell/module/Microsoft.PowerShell.Core/Enter-PSHostProcess)
 - [Exit-PSHostProcess](/powershell/module/Microsoft.PowerShell.Core/Exit-PSHostProcess)

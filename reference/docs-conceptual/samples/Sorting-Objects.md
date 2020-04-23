@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 对对象进行排序
 ms.openlocfilehash: ed78e7e333f3468781c9cd96df2194fbdfebe753
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030784"
 ---
 # <a name="sorting-objects"></a>对对象进行排序
@@ -124,7 +124,7 @@ LastWriteTime          CreationTime
 Sort-Object LastWriteTime, Name
 ```
 
-此外，可以通过其内置别名 `sort` 来引用 `Sort-Object`：
+此外，可以通过其内置别名 `Sort-Object` 来引用 `sort`：
 
 ```powershell
 sort LastWriteTime, Name

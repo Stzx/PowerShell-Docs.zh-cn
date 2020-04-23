@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: 库,powershell,cmdlet,psget
 title: 正在启动 NuGet
 ms.openlocfilehash: 70403006c7a48ac70a6766de3aa52d80cebbd86a
-ms.sourcegitcommit: 1fa89ab20d14a61f139f1394c45aaedd5a7c5438
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78935178"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>启动 NuGet 提供程序和 NuGet.exe
@@ -158,7 +158,7 @@ Import-PackageProvider -Name NuGet
   $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
   ```
 
-第二种方法是从 NuGet.Org 网站下载 NuGet.exe：[https://dist.nuget.org/index.html](https://www.nuget.org/downloads) 选择生产计算机的 NugGet 版本时，请确保版本高于 2.8.5.208，并确认版本已标记为“推荐”。 如果使用浏览器下载，请务必取消阻止文件。 为此，可以使用 `Unblock-File` cmdlet。
+第二个选择是从 NuGet.Org 网站下载 NuGet.exe：[https://dist.nuget.org/index.html](https://www.nuget.org/downloads) 选择生产计算机的 NugGet 版本时，请确保版本高于 2.8.5.208，并确认版本是否已标记为“推荐”。 如果使用浏览器下载，请务必取消阻止文件。 为此，可以使用 `Unblock-File` cmdlet。
 
 无论属于上述哪种情况，都可以将 NuGet.exe 文件复制到 `$env:path` 中的任意位置，但标准位置为：
 

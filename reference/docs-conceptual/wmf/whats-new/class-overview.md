@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,安装程序
 title: 使用 PowerShell 类创建自定义类型
 ms.openlocfilehash: c2c50fb65ce4931fcf6ae529b4146df391c831c4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147837"
 ---
 # <a name="creating-custom-types-using-powershell-classes"></a>使用 PowerShell 类创建自定义类型
@@ -304,7 +304,7 @@ $b.DoSomething(42)
 
 还支持重载方法。
 
-### <a name="properties"></a>“属性”
+### <a name="properties"></a>属性
 
 所有属性都是公开的。 属性要求使用换行符或分号。 如果未指定任何对象类型，则该属性类型是对象。
 

@@ -3,10 +3,10 @@ title: 通过 SSH 进行 PowerShell 远程处理
 description: 在 PowerShell Core 中使用 SSH 进行远程处理
 ms.date: 09/30/2019
 ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73444370"
 ---
 # <a name="powershell-remoting-over-ssh"></a>通过 SSH 进行 PowerShell 远程处理
@@ -53,7 +53,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    > [!NOTE]
    > 如果要将 PowerShell 设置为 OpenSSH 的默认 shell，请参阅[为 OpenSSH 配置 Windows](/windows-server/administration/openssh/openssh_server_configuration)。
 
-1. 编辑位于 `$env:ProgramData\ssh` 的 `sshd_config` 文件。
+1. 编辑位于 `sshd_config` 的 `$env:ProgramData\ssh` 文件。
 
    确保已启用密码身份验证：
 
@@ -97,7 +97,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    Restart-Service sshd
    ```
 
-1. 将 OpenSSH 的安装路径添加到 Path 环境变量。 例如，`C:\Program Files\OpenSSH\`。 通过此条目可找到 `ssh.exe`。
+1. 将 OpenSSH 的安装路径添加到 Path 环境变量。 例如，`C:\Program Files\OpenSSH\` 。 通过此条目可找到 `ssh.exe`。
 
 ## <a name="set-up-on-an-ubuntu-1604-linux-computer"></a>在 Ubuntu 16.04 Linux 计算机上设置
 
@@ -109,7 +109,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    sudo apt install openssh-server
    ```
 
-1. 编辑 `/etc/ssh` 位置中的 `sshd_config` 文件。
+1. 编辑 `sshd_config` 位置中的 `/etc/ssh` 文件。
 
    确保已启用密码身份验证：
 
@@ -146,7 +146,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    1. 选中 `Remote Login` 以设置 `Remote Login: On`。
    1. 允许相应用户访问。
 
-1. 编辑 `/private/etc/ssh/sshd_config` 位置中的 `sshd_config` 文件。
+1. 编辑 `sshd_config` 位置中的 `/private/etc/ssh/sshd_config` 文件。
 
    打开文本编辑器，例如 **nano**：
 
@@ -179,7 +179,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    sudo launchctl start com.openssh.sshd
    ```
 
-## <a name="authentication"></a>身份验证
+## <a name="authentication"></a>Authentication
 
 通过 SSH 进行 PowerShell 远程处理依赖于 SSH 客户端和 SSH 服务之间的身份验证交换，并且本身不实现任何身份验证方案。 这使得任何配置的身份验证方案（包括多重身份验证）都由 SSH 处理，并且独立于 PowerShell。 例如，可以将 SSH 服务配置为需要公钥身份验证以及一次性密码，从而增加安全性。 多重身份验证的配置不在本文档的讨论范围。 若要了解如何正确配置多重身份验证，请参阅相关的 SSH 文档，并在尝试将其用于 PowerShell 远程处理之前先在 PowerShell 之外验证它的运行效果。
 

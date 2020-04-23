@@ -3,10 +3,10 @@ ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 收集有关计算机的信息
 ms.openlocfilehash: 9407ff15b3c3ca6b3adab60d4d01d957c599e79e
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75737230"
 ---
 # <a name="collecting-information-about-computers"></a>收集有关计算机的信息
@@ -26,7 +26,7 @@ Get-CimInstance -ClassName Win32_Desktop
 > [!NOTE]
 > WMI 类返回的某些信息可能非常详细，且通常包括有关 WMI 类的元数据。
 
-因为这些元数据属性大多具有以 Cim 开头的名称，因此可以使用 `Select-Object` 筛选属性  。 指定值为“Cim*”的 -ExcludeProperty 参数  。 例如：
+因为这些元数据属性大多具有以 Cim 开头的名称，因此可以使用  **筛选属性**`Select-Object`。 指定值为“Cim*”的 -ExcludeProperty 参数  。 例如：
 
 ```powershell
 Get-CimInstance -ClassName Win32_Desktop | Select-Object -ExcludeProperty "CIM*"
@@ -117,7 +117,7 @@ CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ...
 ```
 
-返回额外数据是因为 `Get-CimInstance` 中的 Property 参数限制从 WMI 类实例返回的属性，而不限制返回到 PowerShell 的对象。  若要减少输出，请使用 `Select-Object`：
+返回额外数据是因为  **中的 Property 参数限制从 WMI 类实例返回的属性，而不限制返回到 PowerShell 的对象。** `Get-CimInstance` 若要减少输出，请使用 `Select-Object`：
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixId | Select-Object -Property HotFixId
@@ -236,7 +236,7 @@ PSComputerName :
 
 ## <a name="displaying-service-status"></a>显示服务状态
 
-若要查看指定计算机上所有服务的状态，可以本地使用 `Get-Service` cmdlet。 对于远程系统，可以使用 Win32_Service WMI 类  。 如果还使用 `Select-Object` 来筛选 Status、Name 和 DisplayName 的结果，则输出格式将与 `Get-Service` 的输出格式几乎完全相同    ：
+若要查看指定计算机上所有服务的状态，可以本地使用 `Get-Service` cmdlet。 对于远程系统，可以使用 Win32_Service WMI 类  。 如果还使用 `Select-Object` 来筛选 Status、Name 和 DisplayName 的结果，则输出格式将与  **的输出格式几乎完全相同**   `Get-Service`：
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service | Select-Object -Property Status,Name,DisplayName

@@ -4,10 +4,10 @@ ms.topic: conceptual
 keywords: wmf,powershell,安装程序
 title: WMF 5.1 中对包管理的改进
 ms.openlocfilehash: cb19c2d71391b5729ce9d73fc6b033270f8db307
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71325118"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>WMF 5.1 中对包管理的改进

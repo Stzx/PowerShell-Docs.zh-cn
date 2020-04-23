@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux nxFileLine 资源的 DSC
 ms.openlocfilehash: 2e94bab318b5db65df88d268a88585079bab89bf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953214"
 ---
 # <a name="dsc-for-linux-nxfileline-resource"></a>适用于 Linux nxFileLine 资源的 DSC
@@ -25,9 +25,9 @@ nxFileLine <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |文件路径 |要管理其在目标节点上的行的文件的完整路径。 |
 |ContainsLine |要确保存在于文件中的行。 如果此行不存在于文件中，则将其追加到该文件中。 ContainsLine  为必填项，但是如不需要，则可将其设置为空字符串 (`ContainsLine = ""`)。 |
@@ -35,7 +35,7 @@ nxFileLine <string> #ResourceName
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 

@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: DSC 配置
 ms.openlocfilehash: d7749ec88f9cca3e29c6b38d61fb73776af7ceb4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954494"
 ---
 # <a name="dsc-configurations"></a>DSC 配置
@@ -165,7 +165,7 @@ cmdlet - [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-Ds
 **Import-DscResource** 支持两种参数：
 
 - **ModuleName** 是使用 **Import-DscResource** 的推荐方法。 它接受包含要导入资源的模块名称以及模块名称的字符串数组。
-- **Name** 是要导入资源的名称。 这不是由 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) 返回为“Name”的友好名称，而是定义资源架构时使用的类名（由 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) 返回为 **ResourceType**）。
+- **Name** 是要导入资源的名称。 这不是由 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) 返回为“Name”的友好名称，而是定义资源架构时使用的类名（由 **Get-DscResource** 返回为 [ResourceType](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)）。
 
 有关使用 `Import-DSCResource` 的详细信息，请参阅[使用 Import-DSCResource](import-dscresource.md)
 

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,安装程序
 title: 信息流
 ms.openlocfilehash: c54603cf0dd4f0b69f8147620130f9f29bc3e5ec
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147607"
 ---
 # <a name="information-stream"></a>信息流
@@ -60,7 +60,7 @@ $r.Id
 4008
 ```
 
-与 `Write-Host` cmdlet 不同，使用 `Write-Information` 的 InformationVariable  参数可以捕获变量中的输出。 使用标记  可以为发送到信息  流的消息创建单独通道。
+与 `Write-Host` cmdlet 不同，使用  **的 InformationVariable**`Write-Information` 参数可以捕获变量中的输出。 使用标记  可以为发送到信息  流的消息创建单独通道。
 
 ```powershell
 $r = OutputGusher -InformationVariable iv

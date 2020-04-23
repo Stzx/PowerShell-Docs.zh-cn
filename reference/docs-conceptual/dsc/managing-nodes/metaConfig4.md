@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 在 PowerShell 4.0 中配置 LCM
 ms.openlocfilehash: 747b15c483c79a7ecbb62214ef5a59f8dc137bd4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953824"
 ---
 # <a name="configuring-the-lcm-in-powershell-40"></a>在 PowerShell 4.0 中配置 LCM
@@ -26,7 +26,7 @@ ms.locfileid: "71953824"
 - **AllowModuleOverwrite**：控制是否允许从配置服务下载的新配置覆盖目标节点上的旧配置。 可能的值为 True 和 False。
 - **CertificateID**:用于保护在配置中传递的凭据的证书指纹。 更多详细信息，请参阅 [Want to secure credentials in Windows PowerShell Desired State Configuration?（希望在 Windows PowerShell Desired State Configuration 中保护凭据？）](https://blogs.msdn.microsoft.com/powershell/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/)。
 - **ConfigurationID**：指示用于从请求服务获取特定配置文件的 GUID。 GUID 可确保访问正确的配置文件。
-- **ConfigurationMode**：指定本地配置管理器实际如何将配置应用到目标节点。 可以有下列值：
+- **ConfigurationMode**：指定本地配置管理器实际如何将配置应用到目标节点。 该参数采用以下值：
   - **ApplyOnly**：使用此选项，DSC 将应用配置，但在检测到新配置之前不会执行任何进一步操作。检测新配置的方式可以是向目标节点直接发送新配置；也可以是连接请求服务后，DSC 检查请求服务时发现新配置。 如果目标节点的配置偏离，则不执行任何操作。
   - **ApplyAndMonitor**：使用此选项（默认），DSC 会应用任何由你直接发送到目标节点的或者在请求服务上发现的新配置。 此后，如果目标节点的配置偏离配置文件，DSC 将在日志中报告差异。 有关 DSC 日志记录的详细信息，请参阅 [Using Event Logs to Diagnose Errors in Desired State Configuration（在 Desired State Configuration 中使用事件日志诊断错误）](https://blogs.msdn.com/b/powershell/archive/2014/01/03/using-event-logs-to-diagnose-errors-in-desired-state-configuration.aspx)。
   - **ApplyAndAutoCorrect**：使用此选项，DSC 会应用任何由你直接发送到目标节点的或者在请求服务上发现的新配置。 此后，如果目标节点的配置偏离配置文件，DSC 将在日志中报告差异，并尝试调整目标节点配置，使其与配置文件相容。
@@ -34,7 +34,7 @@ ms.locfileid: "71953824"
 - **Credential**：指示访问远程资源（例如联系配置服务）所需的凭据（与 Get-Credential 相同）。
 - **DownloadManagerCustomData**：表示包含特定于下载管理器的自定义数据的数组。
 - **DownloadManagerName**：指示配置和模块下载管理器的名称。
-- **RebootNodeIfNeeded**：将此设置为 `$true` 可使资源使用 `$global:DSCMachineStatus` 标志重新启动节点。 否则，你必须为要求重启的配置手动重启节点。 默认值为 `$false`。 若要在通过 DSC（例如 Windows Installer）以外的其他配置执行重启条件时使用此设置，请将此设置和 [xPendingReboot](https://github.com/powershell/xpendingreboot) 模块组合使用。
+- **RebootNodeIfNeeded**：将此设置为 `$true` 可使资源使用 `$global:DSCMachineStatus` 标志重新启动节点。 否则，你必须为要求重启的配置手动重启节点。 默认值是 `$false`。 若要在通过 DSC（例如 Windows Installer）以外的其他配置执行重启条件时使用此设置，请将此设置和 [xPendingReboot](https://github.com/powershell/xpendingreboot) 模块组合使用。
 - **RefreshFrequencyMins**：设置请求服务后使用。 表示本地配置管理器联系请求服务下载当前配置的频率（以分钟为单位）。 可将此值设置为与 ConfigurationModeFrequencyMins 结合使用。 当 RefreshMode 设置为 PULL 时，目标节点按 RefreshFrequencyMins 所设置的时间间隔与请求服务联系并下载当前配置。 一致性引擎将在由 ConfigurationModeFrequencyMins 设置的时间间隔将下载的最新配置应用到目标节点。 若 RefreshFrequencyMins 未设置为 ConfigurationModeFrequencyMins 的整倍数，系统将会向上进行舍入。 默认值为 30。
 - **RefreshMode**：可能的值为 Push  （默认值）和 Pull  。 在“推送”配置下，必须在每个目标节点上放置配置文件（可使用任何客户端计算机进行此操作）。 在“请求”模式下，必须为本地配置管理器设置请求服务，以便其联系和访问配置文件。
 

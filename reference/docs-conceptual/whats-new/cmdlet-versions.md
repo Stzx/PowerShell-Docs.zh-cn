@@ -3,10 +3,10 @@ ms.date: 02/03/2020
 keywords: powershell, 核心
 title: 模块和 cmdlet 发行历史记录
 ms.openlocfilehash: 824380c7aa732e6a2027d86be33cbde901ab11e1
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80082733"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>模块和 cmdlet 发行历史记录
@@ -103,9 +103,9 @@ ms.locfileid: "80082733"
 | Enable-ExperimentalFeature        |         |   6.2   | &check; | &check; |                            |
 | Enable-PSRemoting                 | &check; | &check; | &check; | &check; | 仅限 Windows               |
 | Enable-PSSessionConfiguration     | &check; | &check; | &check; | &check; | 仅限 Windows               |
-| Enter-PSHostProcess               | &check; | &check; | &check; | &check; | 6.2 中新增 Linux 支持 |
+| Enter-PSHostProcess               | &check; | &check; | &check; | &check; | 6\.2 中新增 Linux 支持 |
 | Enter-PSSession                   | &check; | &check; | &check; | &check; |                            |
-| Exit-PSHostProcess                | &check; | &check; | &check; | &check; | 6.2 中新增 Linux 支持 |
+| Exit-PSHostProcess                | &check; | &check; | &check; | &check; | 6\.2 中新增 Linux 支持 |
 | Exit-PSSession                    | &check; | &check; | &check; | &check; |                            |
 | Export-Console                    | &check; |         |         |         | 仅限 Windows               |
 | Export-ModuleMember               | &check; | &check; | &check; | &check; |                            |
@@ -116,7 +116,7 @@ ms.locfileid: "80082733"
 | Get-History                       | &check; | &check; | &check; | &check; |                            |
 | Get-Job                           | &check; | &check; | &check; | &check; |                            |
 | Get-Module                        | &check; | &check; | &check; | &check; |                            |
-| Get-PSHostProcessInfo             | &check; | &check; | &check; | &check; | 6.2 中新增 Linux 支持 |
+| Get-PSHostProcessInfo             | &check; | &check; | &check; | &check; | 6\.2 中新增 Linux 支持 |
 | Get-PSSession                     | &check; | &check; | &check; | &check; |                            |
 | Get-PSSessionCapability           | &check; | &check; | &check; | &check; |                            |
 | Get-PSSessionConfiguration        | &check; | &check; | &check; | &check; |                            |
@@ -278,7 +278,7 @@ ms.locfileid: "80082733"
 | Start-Process                 | &check; | &check; | &check; | &check; |                                  |
 | Start-Service                 | &check; | &check; | &check; | &check; | 仅限 Windows                     |
 | Start-Transaction             | &check; |         |         |         | 仅限 Windows                     |
-| Stop-Computer                 | &check; | &check; | &check; | &check; | 7.0 中新增 Linux/macOS 支持 |
+| Stop-Computer                 | &check; | &check; | &check; | &check; | 7\.0 中新增 Linux/macOS 支持 |
 | Stop-Process                  | &check; | &check; | &check; | &check; |                                  |
 | Stop-Service                  | &check; | &check; | &check; | &check; | 仅限 Windows                     |
 | Suspend-Service               | &check; | &check; | &check; | &check; | 仅限 Windows                     |
@@ -313,7 +313,7 @@ ms.locfileid: "80082733"
 | Get-AuthenticodeSignature | &check; | &check; | &check; | &check; | 仅限 Windows                            |
 | Get-CmsMessage            | &check; | &check; | &check; | &check; | 在 7.1 中添加了对 Linux/macOS 的支持    |
 | Get-Credential            | &check; | &check; | &check; | &check; |                                         |
-| Get-ExecutionPolicy       | &check; | &check; | &check; | &check; | 在 Linux/macOS 上返回“无限制” |
+| Get-ExecutionPolicy       | &check; | &check; | &check; | &check; | 在 Linux/macOS 上返回“无限制”  |
 | Get-PfxCertificate        | &check; | &check; | &check; | &check; |                                         |
 | New-FileCatalog           | &check; | &check; | &check; | &check; | 仅限 Windows                            |
 | Protect-CmsMessage        | &check; | &check; | &check; | &check; | 在 7.1 中添加了对 Linux/macOS 的支持    |
@@ -429,7 +429,7 @@ ms.locfileid: "80082733"
 | Tee-Object                | &check; | &check; | &check; | &check; |                                           |
 | Test-Json                 |         | &check; | &check; | &check; |                                           |
 | Trace-Command             | &check; | &check; | &check; | &check; |                                           |
-| Unblock-File              | &check; | &check; | &check; | &check; | 7.0 中新增 macOS 支持            |
+| Unblock-File              | &check; | &check; | &check; | &check; | 7\.0 中新增 macOS 支持            |
 | Unregister-Event          | &check; | &check; | &check; | &check; | Linux/macOS 上没有可用的事件源 |
 | Update-FormatData         | &check; | &check; | &check; | &check; |                                           |
 | Update-List               | &check; |         | &check; | &check; |                                           |

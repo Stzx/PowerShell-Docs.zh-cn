@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: Get-Test-Set
 ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278405"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
@@ -121,7 +121,7 @@ ModuleVersion = "1.0";
 };
 ```
 
-应用时，[本地配置管理器](../managing-nodes/metaConfig.md) (LCM) 将从“.mof”文件读取值“Spooler”，并将其传递给 Service  资源“MyService”实例的 Get  、Test  和 Set  方法的 `-Name` 参数。
+应用时，[本地配置管理器](../managing-nodes/metaConfig.md) (LCM) 将从“.mof”文件读取值“Spooler”，并将其传递给 Service`-Name` **资源“MyService”实例的 Get** **、Test** **和 Set** **方法的** 参数。
 
 ## <a name="get"></a>获取
 
@@ -204,7 +204,7 @@ localhost       {[Service]Spooler}                                            Tr
 
 有关详细信息，请参阅 [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
 
-## <a name="set"></a>设置
+## <a name="set"></a>Set
 
 资源的 Set  方法尝试强制节点符合资源的所需状态  。 Set  方法旨在幂等  ，这意味着 Set  可以多次运行，并始终得到相同的结果而没有错误。  当运行 [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration) 时，LCM 在当前应用的配置中循环切换每个资源。 LCM 从“.mof”文件检索当前资源实例的键值，并使用它们作为 Test  方法的参数。 如果 Test  方法返回 `$True`，则节点符合当前资源，并跳过 Set  方法。 如果 Test  返回 `$False`，则节点不符合。  LCM 将资源实例的键值作为参数传递给资源的 Set  方法，使节点恢复符合性。
 

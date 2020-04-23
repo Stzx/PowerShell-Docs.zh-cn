@@ -4,10 +4,10 @@ contributor: manikb
 keywords: 库,powershell,cmdlet,psget
 title: 具有兼容的 PowerShell 版本的脚本
 ms.openlocfilehash: e364879f611429a8583e550fb7704431e456fbb1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328058"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>具有兼容的 PowerShell 版本的脚本
@@ -64,7 +64,7 @@ Find-Script -Tag PSEdition_Desktop
 Find-Script -Tag PSEdition_Core
 ```
 
-## <a name="more-details"></a>详细信息
+## <a name="more-details"></a>更多详细信息
 
 - [PSEditions 模块](module-psedition-support.md)
 - [PowerShell 库的 PSEditions 支持](../how-to/finding-packages/searching-by-compatibility.md)

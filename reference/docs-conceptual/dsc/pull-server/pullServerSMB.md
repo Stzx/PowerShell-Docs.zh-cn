@@ -3,10 +3,10 @@ ms.date: 04/11/2018
 keywords: dsc,powershell,配置,安装程序
 title: 设置 DSC SMB 请求服务器
 ms.openlocfilehash: be41f7a708f1a129919fae8300fc4307441097f7
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500706"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>设置 DSC SMB 请求服务器
@@ -29,7 +29,7 @@ DSC [SMB](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh83
 
 ### <a name="install-the-xsmbshare-resource"></a>安装 xSmbShare 资源
 
-调用 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet 可以安装 **xSmbShare** 模块。
+调用 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet 以安装 **xSmbShare** 模块。
 
 > [!NOTE]
 > `Install-Module` 包含在 PowerShellGet  模块中，后者纳入 PowerShell 5.0。
@@ -76,8 +76,8 @@ Configuration SmbShare
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>向请求客户端授予文件系统访问权限
 
-向客户端节点授予 **ReadAccess** 可允许该节点访问 SMB 共享，但不允许其访问此共享中的文件或文件夹。 必须向客户端节点明确授予对 SMB 共享文件夹和子文件夹的访问权限。 我们可以使用 [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 模块中包含的 **cNtfsPermissionEntry** 资源进行添加，对 DSC 执行此操作。
-下面的配置添加了 **cNtfsPermissionEntry** 块，用于向请求客户端授予 ReadAndExecute 访问权限：
+向某个客户端节点授予 **ReadAccess** 可允许该节点访问 SMB 共享，但不可访问该共享中的文件或文件夹。 必须向客户端节点明确授予对 SMB 共享文件夹和子文件夹的访问权限。 我们可以使用 **CNtfsAccessControl** 模块中包含的 [cNtfsPermissionEntry](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 资源进行添加，对 DSC 执行此操作。
+下面的配置添加一个 **cNtfsPermissionEntry** 块，该块向请求客户端授予 ReadAndExecute 访问权限：
 
 ```powershell
 Configuration DSCSMB
@@ -207,7 +207,7 @@ $ConfigurationData = @{
 
 特别感谢以下人员：
 
-- Mike F. Robbins，其有关将 SMB 用于 DSC 的文章帮助告知本主题中的内容。 他的博客是 [Mike F Robbins](http://mikefrobbins.com/)。
+- Mike F. Robbins，其有关将 SMB 用于 DSC 的文章帮助告知本主题中的内容。 其博客地址是 [Mike F Robbins](http://mikefrobbins.com/)。
 - Serge Nikalaichyk，他是 **cNtfsAccessControl** 模块的作者。 此模块的来源位于 [cNtfsAccessControl](https://github.com/SNikalaichyk/cNtfsAccessControl)。
 
 ## <a name="see-also"></a>另请参阅

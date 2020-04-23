@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用 Nano Server 上的 DSC
 ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953854"
 ---
 # <a name="using-dsc-on-nano-server"></a>使用 Nano Server 上的 DSC
@@ -82,7 +82,7 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 
 - **存档**
 - **环境**
-- **文件**
+- **File**
 - **日志**
 - **ProcessSet**
 - **注册表**
@@ -94,7 +94,7 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 - **WaitForSome**（请参阅[指定跨节点依赖关系](../configurations/crossNodeDependencies.md)）
 
 - 实现部分功能的资源
-- **组**
+- **分组**
 - **GroupSet**
 
   **问题：** 如果调用两次特定实例（运行相同的配置两次），上面的资源失败

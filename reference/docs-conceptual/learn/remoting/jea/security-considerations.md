@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: JEA 安全注意事项
 ms.openlocfilehash: befc24fec368c4f6d60477daf63bf17e9431133e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70017768"
 ---
 # <a name="jea-security-considerations"></a>JEA 安全注意事项
@@ -31,12 +31,12 @@ JEA 通过减少计算机上的永久管理员数量来帮助改善安全状况�
 
 |        计算机类型         | 虚拟帐户组配置 |                   本地用户上下文                    | 网络用户上下文 |
 | ---------------------------- | ----------------------------------- | ------------------------------------------------------- | -------------------- |
-| 域控制器            | 默认值                             | 域用户，“*DOMAIN*\Domain Admins”的成员         | 计算机帐户     |
+| 域控制器            | 默认                             | 域用户，“*DOMAIN*\Domain Admins”的成员         | 计算机帐户     |
 | 域控制器            | 域组 A 和域组 B               | 域用户，“*DOMAIN*\A”、“*DOMAIN*\B”的成员       | 计算机帐户     |
-| 成员服务器或工作站 | 默认值                             | 本地用户、“*BUILTIN*\Administrators”的成员        | 计算机帐户     |
+| 成员服务器或工作站 | 默认                             | 本地用户、“*BUILTIN*\Administrators”的成员        | 计算机帐户     |
 | 成员服务器或工作站 | 本地组 C 和 D                | 本地用户、“*COMPUTER*\C”和“*COMPUTER*\D”的成员 | 计算机帐户     |
 
-查看安全审核事件和应用程序事件日志时，可发现每个 JEA 用户会话都有唯一的虚拟帐户。 此唯一帐户有助于将 JEA 终结点中的用户操作追溯回运行该命令的原始用户。 虚拟帐户名称遵循 `WinRM Virtual Users\WinRM_VA_<ACCOUNTNUMBER>_<DOMAIN>_<sAMAccountName>` 格式。例如，域 Contoso 中的用户 Alice 在 JEA 终结点中重启服务时，与任何服务控制管理器事件关联的用户名将为 `WinRM Virtual Users\WinRM_VA_1_contoso_alice`   。
+查看安全审核事件和应用程序事件日志时，可发现每个 JEA 用户会话都有唯一的虚拟帐户。 此唯一帐户有助于将 JEA 终结点中的用户操作追溯回运行该命令的原始用户。 虚拟帐户名称遵循 `WinRM Virtual Users\WinRM_VA_<ACCOUNTNUMBER>_<DOMAIN>_<sAMAccountName>` 格式。例如，域 Contoso 中的用户 Alice 在 JEA 终结点中重启服务时，与任何服务控制管理器事件关联的用户名将为   `WinRM Virtual Users\WinRM_VA_1_contoso_alice`。
 
 当成员服务器需要对 JEA 会话中的网络资源具有访问权限时，组托管服务帐户 (gMSA) 十分有用  。 例如，JEA 终结点用于控制对其他计算机上托管的 REST API 服务的访问时。 可轻松编写函数来调用 REST API，但需要使用网络标识对 API 进行身份验证。 使用组托管服务帐户可实现第二个跃点，同时持续控制哪些计算机可使用此帐户。 gMSA 帐户所属的安全组（本地或域）定义 gMSA 的有效权限。
 
@@ -44,7 +44,7 @@ JEA 终结点配置为使用 gMSA 时，所有 JEA 用户的操作似乎来自�
 
 未指定运行身份帐户时使用传递凭据   。 PowerShell 使用连接用户的凭据在远程服务器上运行命令。 这需要你向连接用户授予对特权管理组的直接访问权限。 对于 JEA，不推荐此配置  。 如果连接用户已有管理员权限，则无需使用 JEA，并可通过其他不受约束的方式管理系统。 有关详细信息，请参阅下一部分来了解如何使 [JEA 不阻止管理员](#jea-doesnt-protect-against-admins)。
 
-通过标准运行身份帐户，可指定运行整个 PowerShell 会话所采用的用户帐户  。 JEA 不支持使用固定运行身份帐户（具有 `-RunAsCredential` 参数）的’会话配置  。 角色定义不再按预期方式运行。 有权访问该终结点的每位用户都分配到同一角色。
+通过标准运行身份帐户，可指定运行整个 PowerShell 会话所采用的用户帐户  。 JEA 不支持使用固定运行身份帐户（具有  **参数）的’会话配置**`-RunAsCredential`。 角色定义不再按预期方式运行。 有权访问该终结点的每位用户都分配到同一角色。
 
 由于很难将操作追溯回特定用户并且缺少将用户映射到角色的支持，因此不得对 JEA 终结点使用 RunAsCredential  。
 

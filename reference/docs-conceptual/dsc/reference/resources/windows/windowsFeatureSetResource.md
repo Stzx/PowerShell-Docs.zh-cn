@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC WindowsFeatureSet 资源
 ms.openlocfilehash: 1758d248dde4fdee57bd01c157a3f9a8340d6194
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952954"
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>DSC WindowsFeatureSet 资源
@@ -33,9 +33,9 @@ WindowsFeatureSet [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|  属性  |  说明   |
+|  properties  |  说明   |
 |---|---|
 |名称 |要确保添加或删除的角色或功能的名称。 这与 [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature?view=winserver2012r2-ps) cmdlet 的 **Name** 属性相同，并非角色或功能的显示名称。 |
 |源 |指示要用于安装的源文件的位置（如有必要）。 |
@@ -45,7 +45,7 @@ WindowsFeatureSet [string] #ResourceName
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |Ensure |指示是否添加角色或功能。 若要确保添加角色或功能，请将此属性设置为 **Present**。 若要确保删除角色或功能，请将此属性设置为 **Absent**。 默认值为 **Present**。 |

@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: 管理包所有者
 ms.openlocfilehash: 5cf26a7195ac446177cbb7f3a055e8e0a78569cc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328258"
 ---
 # <a name="managing-package-owners"></a>管理包所有者
@@ -34,7 +34,7 @@ ms.locfileid: "71328258"
 5. 随后将向新的共同所有者发送一封电子邮件，作为成为包的所有者的邀请。
 6. 该用户单击此链接后，将成为对包具有完全控制权的完全共同所有者，其控制权包括删除其他用户所有者身份的能力。
 
-注意  ：新的所有者必须先确认所有权，否则不会将其  列为包的所有者。
+ 注意：新的所有者必须先确认所有权，否则不会  列为包的所有者。
 查看“管理所有者”  页面时，你将在当前所有者中看到“等待审批”条目。
 可以删除该邀请；同样也可以删除其他所有者。
 此邀请过程可防止用户错误地将其他用户添加为其包的所有者。

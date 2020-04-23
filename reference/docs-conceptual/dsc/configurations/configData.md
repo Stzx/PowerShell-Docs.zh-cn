@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用配置数据
 ms.openlocfilehash: 7d13b19ba932d1a818194a221f145fd1a3832547
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954184"
 ---
 # <a name="using-configuration-data-in-dsc"></a>使用 DSC 中的配置数据
@@ -29,7 +29,7 @@ ConfigurationData 参数是必须具有至少一个名为 AllNodes 的键的哈�
 它还可以额外包含一个或多个键。
 
 > [!NOTE]
-> 除了名为“AllNodes”的键之外，本主题中的示例还额外使用一个名为 `NonNodeData` 的键。不过，可以额外添加任意数量的键，并能根据需要随意命名这些键  。
+> 除了名为“AllNodes”的键之外，本主题中的示例还额外使用一个名为  **的键。不过，可以额外添加任意数量的键，并能根据需要随意命名这些键**`NonNodeData`。
 
 ```powershell
 $MyData =
@@ -94,7 +94,7 @@ $MyData =
 }
 ```
 
-若要将属性应用到所有节点，可创建 **NodeName** 为 `*` 的 **AllNodes** 数组的成员。
+若要将属性应用到所有节点，可创建 **NodeName** 为 **的**AllNodes`*` 数组的成员。
 例如，若要让每个节点具有 `LogPath` 属性，可以执行如下操作：
 
 ```powershell
@@ -137,7 +137,7 @@ $MyData =
 ## <a name="defining-the-configurationdata-hashtable"></a>定义 ConfigurationData 哈希表
 
 可以将 ConfigurationData  定义为与配置同属一个脚本文件的变量（如上面的示例所示），也可以定义为单独的 `.psd1` 文件中的变量。
-若要在 `.psd1` 文件中定义 ConfigurationData  ，请创建仅包含表示配置数据的哈希表的文件。
+若要在  **文件中定义 ConfigurationData**`.psd1`，请创建仅包含表示配置数据的哈希表的文件。
 
 例如，可创建一个名为 `MyData.psd1` 的文件，此文件包含以下内容：
 

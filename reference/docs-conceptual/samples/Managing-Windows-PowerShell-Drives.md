@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 管理 Windows PowerShell 驱动器
 ms.openlocfilehash: 5d1aba459caeaab2542e17e74534da6713b0faa9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70215507"
 ---
 # <a name="managing-windows-powershell-drives"></a>管理 Windows PowerShell 驱动器
@@ -149,13 +149,13 @@ New-PsDrive cmdlet 仅将新的驱动器添加到当前 Windows PowerShell 会�
 
 你可以通过使用 **Remove-PSDrive** cmdlet 从 Windows PowerShell 中删除驱动器。 **Remove-PSDrive** cmdlet 易于使用；若要删除特定 Windows PowerShell 驱动器，只需提供 Windows PowerShell 驱动器名称。
 
-例如，如果你添加了 Office  ：Windows PowerShell 驱动器（如 New-PSDrive 主题中所示），则可以通过键入以下内容将其删除  ：
+例如，如果已添加 **Office:** Windows PowerShell 驱动器（如 **New-PSDrive** 主题中所示），则可以通过键入以下内容将其删除：
 
 ```powershell
 Remove-PSDrive -Name Office
 ```
 
-若要删除 cvkey:  Windows PowerShell 驱动器（同样，如 New-PSDrive  主题中所示），请使用以下命令：·
+若要删除 **cvkey:** Windows PowerShell 驱动器（同样，如 **New-PSDrive** 主题中所示），请使用以下命令：
 
 ```powershell
 Remove-PSDrive -Name cvkey

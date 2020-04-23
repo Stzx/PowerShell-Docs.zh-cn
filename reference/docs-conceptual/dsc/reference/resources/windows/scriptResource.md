@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC Script 资源
 ms.openlocfilehash: e09e86011fa7dbb2a4d7f28b5032b4328b6f6ec2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953064"
 ---
 # <a name="dsc-script-resource"></a>DSC Script 资源
@@ -32,9 +32,9 @@ Script [string] #ResourceName
 > [!NOTE]
 > **GetScript**、**TestScript** 和 **SetScript** 块作为字符串存储。
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |GetScript |一个返回节点当前状态的脚本块。 |
 |SetScript |DSC 在节点未处于所需状态时用于强制执行符合性的脚本块。 |
@@ -43,7 +43,7 @@ Script [string] #ResourceName
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |PsDscRunAsCredential |设置用于运行整个资源的身份的凭据。 |
@@ -51,7 +51,7 @@ Script [string] #ResourceName
 > [!NOTE]
 > 在 WMF 5.0 中添加了 **PsDscRunAsCredential** 公共属性，用于允许在其他凭据上下文中运行任何 DSC 资源。 有关详细信息，请参阅[将凭据与 DSC 资源配合使用](../../../configurations/runasuser.md)。
 
-### <a name="additional-information"></a>附加信息
+### <a name="additional-information"></a>其他信息
 
 #### <a name="getscript"></a>GetScript
 

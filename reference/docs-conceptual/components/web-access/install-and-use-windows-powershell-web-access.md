@@ -3,10 +3,10 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: 安装和使用 Windows PowerShell Web 访问
 ms.openlocfilehash: a3207c859c4b93b07d4c1b41d7df5269daa39a7d
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402614"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>安装和使用 Windows PowerShell Web 访问
@@ -15,7 +15,7 @@ ms.locfileid: "79402614"
 
 适用于：Windows Server 2012 R2、Windows Server 2012
 
-## <a name="introduction"></a>介绍
+## <a name="introduction"></a>简介
 
 Windows PowerShell Web 访问在 Windows Server 2012 中首次引入，充当 Windows PowerShell 网关，提供以远程计算机为目标的基于 Web 的 Windows PowerShell 控制台。 它可让 IT 专业人士在 Web 浏览器中运行来自 Windows PowerShell 控制台的 Windows PowerShell 命令和脚本，无需在客户端设备上安装 Windows PowerShell、远程管理软件或浏览器插件。 运行基于 Web 的 Windows PowerShell 控制台只需要正确配置的 Windows PowerShell Web 访问网关以及支持 JavaScript 和接受 Cookie 的客户端设备浏览器。
 
@@ -140,7 +140,7 @@ Windows PowerShell Web 访问支持以下 Internet 浏览器。 虽然移动浏�
    - EnabledProtocols: http
    - PhysicalPath: %windir%/Web/PowerShellWebAccess/wwwroot
 
-   示例：`Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate` 
+   示例：`Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate`
 
    在本示例中，Windows PowerShell Web 访问的相关网站是 `https://<server_name>/myWebApp`。
 

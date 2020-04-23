@@ -60,7 +60,7 @@
           items:
             - name: 概述
               href: learn/remoting/jea/overview.md
-            - name: 先决条件
+            - name: 必备条件
               href: learn/remoting/jea/prerequisites.md
             - name: 角色功能
               href: learn/remoting/jea/role-capabilities.md
@@ -260,7 +260,7 @@
           href: gallery/how-to/getting-support/dispute-resolution.md
         - name: 联系管理员
           href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: 疑难解答
+        - name: 故障排除
           href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
         - name: 启动 NuGet 提供程序和 NuGet.exe
           href: gallery/how-to/getting-support/bootstrapping-nuget.md
@@ -442,7 +442,7 @@
               href: dsc/resources/singleInstance.md
             - name: 资源创作清单
               href: dsc/resources/resourceAuthoringChecklist.md
-        - name: 操作指南
+        - name: 操作方法指南
           items:
             - name: 在 PowerShell 中编写基于 MOF 的资源
               href: dsc/resources/authoringResourceMOF.md
@@ -456,7 +456,7 @@
               href: dsc/resources/authoringResourceMofDesigner.md
     - name: 管理节点
       items:
-        - name: 操作指南
+        - name: 操作方法指南
           items:
             - name: 应用、获取并测试节点上的配置
               href: dsc/managing-nodes/apply-get-test.md
@@ -472,7 +472,7 @@
           items:
             - name: 推送/拉取模型
               href: dsc/pull-server/enactingConfigurations.md
-        - name: 操作指南
+        - name: 操作方法指南
           items:
             - name: 设置拉取服务器
               items:
@@ -516,7 +516,7 @@
           href: dsc/tutorials/bootstrapDsc.md
         - name: 配置 DSCAutomationHostEnabled 注册表项
           href: dsc/tutorials/DSCAutomationHostEnabled.md
-    - name: 疑难解答
+    - name: 故障排除
       items:
         - name: 已知问题
           href: dsc/troubleshooting/troubleshooting.md
@@ -734,7 +734,7 @@
       href: community/community-support.md
     - name: 数字艺术
       href: community/digital-art.md
-    - name: PowerShell Docs 的最近更新
+    - name: PowerShell Docs 的新增内容
       href: community/whats-new-in-docs.md
     - name: 参与者指南
       items:
@@ -791,7 +791,7 @@
               items:
                 - name: 可更新帮助概述
                   href: developer/module/updatable-help-overview.md
-                - name: 可更新帮助创作：分步指南
+                - name: 可更新帮助创作：分步
                   href: developer/module/updatable-help-authoring-step-by-step.md
                 - name: 可更新帮助的工作原理
                   href: developer/module/how-updatable-help-works.md

@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC PackageManagement 资源
 ms.openlocfilehash: 28ae8772170bd4559c8a19c3a1df8c9118734857
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "76995965"
 ---
 # <a name="dsc-packagemanagement-resource"></a>DSC PackageManagement 资源
@@ -57,7 +57,7 @@ PackageManagement [string] #ResourceName
 |参数 |说明 |
 |---|---|
 |DestinationPath |供提供程序使用，如内置的 Nuget 提供程序。 指定要在其中安装包的文件位置。 |
-|InstallationPolicy |供提供程序使用，如内置的 Nuget 提供程序。 确定是否信任包的源。 可取值为：**Untrusted** 或 **Trusted**。 |
+|InstallationPolicy |供提供程序使用，如内置的 Nuget 提供程序。 确定是否信任包的源。 即以下函数之一：**Untrusted** 或 **Trusted**。 |
 
 ## <a name="common-properties"></a>公共属性
 

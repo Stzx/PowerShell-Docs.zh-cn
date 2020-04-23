@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: JEA 角色功能
 ms.openlocfilehash: 5b5b5977d4fec1ed850f1146fe7c09463908651b
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402394"
 ---
 # <a name="jea-role-capabilities"></a>JEA 角色功能
@@ -155,7 +155,7 @@ FunctionDefinitions = @{
 
 如果正在编写多个自定义函数，将其放到 PowerShell 脚本模块中可能更方便。 与使用内置模块和第三方模块时一样，可使用 VisibleFunctions 字段使这些函数在 JEA 会话中可见  。
 
-为了使 tab 自动补全在 JEA 会话中正常工作，必须在 VisibleFunctions 列表中包含内置函数 `tabexpansion2`  。
+为了使 tab 自动补全在 JEA 会话中正常工作，必须在 VisibleFunctions 列表中包含内置函数 `tabexpansion2` 。
 
 ## <a name="make-the-role-capabilities-available-to-a-configuration"></a>让角色功能可用于配置
 

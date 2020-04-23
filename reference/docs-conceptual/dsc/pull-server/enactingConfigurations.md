@@ -3,10 +3,10 @@ ms.date: 10/16/2017
 keywords: dsc,powershell,配置,安装程序
 title: 执行配置
 ms.openlocfilehash: 3bbe90c7cf09a7e236f6dd14f731ae306f497a0d
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78277878"
 ---
 # <a name="enacting-configurations"></a>执行配置

@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,配置,服务,设置
 title: 编写、编译和应用配置
 ms.openlocfilehash: eb61e518762b9f13e617ecd4711bfef7a86814ec
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "76818152"
 ---
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0

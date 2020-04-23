@@ -3,10 +3,10 @@ title: 在 Linux 上安装 PowerShell
 description: 介绍如何在各种 Linux 分发版上安装 PowerShell
 ms.date: 03/09/2020
 ms.openlocfilehash: 31da32b81dbbcf4b46fd5f0cd9d921f28f434763
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500554"
 ---
 # <a name="installing-powershell-on-linux"></a>在 Linux 上安装 PowerShell
@@ -15,7 +15,7 @@ ms.locfileid: "80500554"
 
 对于未获得官方支持的 Linux 分发，可尝试使用 [PowerShell Snap 包][snap]安装 PowerShell。 还可尝试直接使用 Linux [`tar.gz`存档][tar] 部署 PowerShell 二进制文件，但是需要在各个步骤中基于 OS 设置必要的依赖项。
 
-GitHub [版本][]页面上提供有所有可用包。 安装包以后，从终端运行 `pwsh`。 若已安装 [预览版](#installing-preview-releases)，请运行 `pwsh-preview`。
+GitHub [页中将 Debian 包 ][]页面上提供有所有可用包。 安装包以后，从终端运行 `pwsh`。 若已安装 `pwsh-preview`预览版[，请运行 ](#installing-preview-releases)。
 
 > [!NOTE]
 > PowerShell 7 是就地升级，升级后会删除 PowerShell Core 6.x。
@@ -84,7 +84,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>通过直接下载进行安装 - Ubuntu 16.04
 
-从[版本][]页中将 Debian 包 `powershell-lts_7.0.0-1.ubuntu.16.04_amd64.deb` 下载到 Ubuntu 计算机。
+从`powershell-lts_7.0.0-1.ubuntu.16.04_amd64.deb`版本[页中将 Debian 包 ][] 下载到 Ubuntu 计算机。
 
 然后在终端中执行以下命令：
 
@@ -134,7 +134,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>通过直接下载安装 - Ubuntu 18.04
 
-从[版本][]页中将 Debian 包 `powershell-lts_7.0.0-1.ubuntu.18.04_amd64.deb` 下载到 Ubuntu 计算机。
+从`powershell-lts_7.0.0-1.ubuntu.18.04_amd64.deb`版本[页中将 Debian 包 ][] 下载到 Ubuntu 计算机。
 
 然后在终端中执行以下命令：
 
@@ -157,14 +157,14 @@ sudo apt-get remove powershell
 安装是通过 `snapd` 受到支持。 有关说明，请参阅 [Snap 包][snap]。
 
 > [!NOTE]
-> Ubuntu 18.10 是[支持社区](../powershell-support-lifecycle.md)的[过渡版本](https://www.ubuntu.com/about/release-cycle)。
+> Ubuntu 18.10 是[支持社区](https://www.ubuntu.com/about/release-cycle)的[过渡版本](../powershell-support-lifecycle.md)。
 
 ## <a name="ubuntu-1904"></a>Ubuntu 19.04
 
 安装是通过 `snapd` 受到支持。 有关说明，请参阅 [Snap 包][snap]。
 
 > [!NOTE]
-> Ubuntu 19.04 是[社区支持](../powershell-support-lifecycle.md)的[过渡版本](https://www.ubuntu.com/about/release-cycle)。
+> Ubuntu 19.04 是[社区支持](https://www.ubuntu.com/about/release-cycle)的[过渡版本](../powershell-support-lifecycle.md)。
 
 ## <a name="debian-8"></a>Debian 8
 
@@ -230,7 +230,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-9"></a>通过直接下载进行安装 - Debian 9
 
-从[版本][]页中将 Debian 包 `powershell-lts_7.0.0-1.debian.9_amd64.deb` 下载到 Debian 计算机。
+从`powershell-lts_7.0.0-1.debian.9_amd64.deb`版本[页中将 Debian 包 ][] 下载到 Debian 计算机。
 
 然后在终端中执行以下命令：
 
@@ -275,7 +275,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-10"></a>通过直接下载进行安装 - Debian 10
 
-从[版本][]页中将 tar.gz 包 `powershell_7.0.0-linux-x64.tar.gz` 下载到 Debian 计算机。
+从`powershell_7.0.0-linux-x64.tar.gz`版本[页中将 Debian 包 ][] 下载到 Debian 计算机。
 
 然后在终端中执行以下命令：
 
@@ -322,7 +322,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>通过直接下载进行安装 - Alpine 3.9 和 3.10
 
-从[版本][]页中将 tar.gz 包 `powershell-7.0.0-linux-alpine-x64.tar.gz` 下载到 Alpine 计算机。
+从`powershell-7.0.0-linux-alpine-x64.tar.gz`版本[页中将 Debian 包 ][] 下载到 Alpine 计算机。
 
 然后在终端中执行以下命令：
 
@@ -389,7 +389,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---centos-7"></a>通过直接下载进行安装 - CentOS 7
 
-使用 [CentOS 7][]时，请从[版本][]页中将 RPM 包 `powershell-lts-7.0.0-1.rhel.7.x86_64.rpm` 下载到 CentOS 计算机。
+使用 [CentOS 7][]时，请从`powershell-lts-7.0.0-1.rhel.7.x86_64.rpm`版本[页中将 Debian 包 ][] 下载到 CentOS 计算机。
 
 然后在终端中执行以下命令：
 
@@ -432,7 +432,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>通过直接下载进行安装 - Red Hat Enterprise Linux (RHEL) 7
 
-从[版本][]页中将 RPM 包 `powershell-lts-7.0.0-1.rhel.7.x86_64.rpm` 下载到 Red Hat Enterprise Linux 计算机。
+从`powershell-lts-7.0.0-1.rhel.7.x86_64.rpm`版本[页中将 Debian 包 ][] 下载到 Red Hat Enterprise Linux 计算机。
 
 然后在终端中执行以下命令：
 
@@ -544,7 +544,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-28-29-and-30"></a>通过直接下载进行安装 - Fedora 28、Fedora 29 和 Fedora 30
 
-从[版本][]页中将 RPM 包 `powershell-7.0.0-1.rhel.7.x86_64.rpm` 下载到 Fedora 计算机。
+从`powershell-7.0.0-1.rhel.7.x86_64.rpm`版本[页中将 Debian 包 ][] 下载到 Fedora 计算机。
 
 然后在终端中执行以下命令：
 
@@ -787,5 +787,5 @@ sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 
 PowerShell 采用 Linux 上的 [XDG 基目录规范][xdg-bds]。
 
-[版本]: https://github.com/PowerShell/PowerShell/releases/latest
+[页中将 Debian 包 ]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html

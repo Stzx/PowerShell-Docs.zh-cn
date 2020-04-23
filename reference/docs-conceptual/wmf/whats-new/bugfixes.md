@@ -4,10 +4,10 @@ ms.topic: conceptual
 keywords: wmf,powershell,安装程序
 title: WMF 5.1 中的 Bug 修复
 ms.openlocfilehash: 8edf295eb6304dc04de2fa5d3792b1c2fc4b01f3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147847"
 ---
 # <a name="bug-fixes-in-wmf-51"></a>WMF 5.1 中的 Bug 修复
@@ -18,7 +18,7 @@ WMF 5.1 中修复了以下值得注意的 bug：
 
 ### <a name="module-auto-discovery-fully-honors-psmodulepath"></a>模块自动发现完全遵循 PSModulePath
 
-WMF 3 中引入了模块自动发现（调用命令时自动加载模块而无需使用显式 Import-Module）。 引入时，PowerShell 会在使用 `$env:PSModulePath` 之前检查 `$PSHome\Modules` 中的命令。
+WMF 3 中引入了模块自动发现（调用命令时自动加载模块而无需使用显式 Import-Module）。 引入时，PowerShell 会在使用 `$PSHome\Modules` 之前检查 `$env:PSModulePath` 中的命令。
 
 WMF 5.1 将此行为更改为完全遵循 `$env:PSModulePath`。 这允许定义 PowerShell 提供的命令（例如 `Get-ChildItem`）的用户创作模块自动加载并正确重写内置命令。
 

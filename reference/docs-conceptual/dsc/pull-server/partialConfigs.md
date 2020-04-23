@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: PowerShell Desired State Configuration 部分配置
 ms.openlocfilehash: 842acad221d468ca5e4c9e660f0205c567bcc220
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500773"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>PowerShell Desired State Configuration 部分配置
 
-适用于：_Windows PowerShell 5.0 及更高版本。_
+适用于：Windows PowerShell 5.0 及更高版本。 
 
 在 PowerShell 5.0 中，Desired State Configuration (DSC) 允许从多个源中以片段形式提交配置。 目标节点上的本地配置管理器 (LCM) 将碎片整理到一起，然后将其作为单个配置进行应用。 此功能允许在团队或个人之间共享配置控制权。 例如，如果两个或更多开发人员团队协作提供一项服务，那么每个团队都可以创建配置来管理该服务中由其负责的部分。 可以从不同请求服务器请求其中每个配置，并可以在各个开发阶段加入这些配置。 部分配置还允许不同的个人或团队控制配置节点的不同方面，而无需协调单个配置文档的编辑。 例如，可能由一个团队负责部署 VM 和操作系统，而由另一个团队负责在该 VM 上部署其它应用程序和服务。 使用部分配置，每个团队都可以创建自己的配置，避免任何不必要的复杂配置。
 
@@ -193,7 +193,7 @@ PartialConfigDemo
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationnames"></a>在请求服务器 (ConfigurationNames) 上命名和放置配置文档
 
-必须将部分配置文档置于请求服务器的 `web.config` 文件中指定为 **ConfigurationPath** 的文件夹中（通常为 `C:\Program
+必须将部分配置文档置于请求服务器的 ** 文件中指定为 **ConfigurationPath`web.config` 的文件夹中（通常为 `C:\Program
 Files\WindowsPowerShell\DscService\Configuration`）。
 
 #### <a name="naming-configuration-documents-on-the-pull-server-in-powershell-51"></a>在 PowerShell 5.1 中的拉取服务器上命名配置文档
@@ -213,7 +213,7 @@ SharePointConfig.mof.checksum
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationid"></a>在请求服务器 (ConfigurationID) 上命名和放置配置文档
 
-必须将部分配置文档置于请求服务器的 `web.config` 文件中指定为 **ConfigurationPath** 的文件夹中（通常为 `C:\Program Files\WindowsPowerShell\DscService\Configuration`）。 配置文档必须按如下所示命名：`<ConfigurationName>.<ConfigurationID>.mof`，其中 ConfigurationName  是部分配置的名称，ConfigurationID  是目标节点上 LCM 中定义的配置 ID。 在本例中，配置文档应按如下所示命名：
+必须将部分配置文档置于请求服务器的 **文件中指定为**ConfigurationPath`web.config` 的文件夹中（通常为 `C:\Program Files\WindowsPowerShell\DscService\Configuration`）。 配置文档必须按如下所示命名：`<ConfigurationName>.<ConfigurationID>.mof`，其中 ConfigurationName  是部分配置的名称，ConfigurationID  是目标节点上 LCM 中定义的配置 ID。 在本例中，配置文档应按如下所示命名：
 
 ```
 ServiceAccountConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
@@ -307,7 +307,7 @@ configuration PartialConfigDemo
 PartialConfigDemo
 ```
 
-请注意，Settings 块中指定的 **RefreshMode** 为“Pull”，而 `SharePointConfig` 部分配置的 **RefreshMode** 为“Push”。
+请注意，Settings 块中指定的 **RefreshMode** 为“Pull”，而 **部分配置的**RefreshMode`SharePointConfig` 为“Push”。
 
 可按照上文所述的相应刷新模式命名和放置配置 MOF 文件。
 可调用 `Publish-DSCConfiguration` 来发布 `SharePointConfig` 部分配置，并等待从请求服务器请求 `ServiceAccountConfig` 配置或通过调用 [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration) 强制进行刷新。

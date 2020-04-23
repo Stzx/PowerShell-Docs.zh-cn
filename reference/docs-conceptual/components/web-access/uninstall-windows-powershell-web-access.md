@@ -3,15 +3,15 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: 卸载 Windows PowerShell Web 访问
 ms.openlocfilehash: 3c2c83525f5a240976eef215b5eac939796c91e8
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78279004"
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>卸载 Windows PowerShell Web 访问
 
-更新时间：2013 年 6 月 24 日
+更新时间： 2013年 6 月 24日
 
 适用于：Windows Server 2012 R2、Windows Server 2012
 
@@ -45,7 +45,7 @@ ms.locfileid: "78279004"
 
       `Uninstall-PswaWebApplication -WebsiteName <web-site-name>`
 
-   1. 如果使用了自定义 Web 应用程序（不是默认应用程序 pswa），请将 `-WebApplicationName` 参数添加到命令中，并指定 Web 应用程序的名称  。
+   1. 如果使用了自定义 Web 应用程序（不是默认应用程序 pswa），请将  **参数添加到命令中，并指定 Web 应用程序的名称**`-WebApplicationName`。
 
       `Uninstall-PswaWebApplication -WebApplicationName <web-application-name>`
 
@@ -70,7 +70,7 @@ ms.locfileid: "78279004"
 
 1. 删除完成后，验证你已删除 Windows PowerShell Web 访问，方法是打开服务管理器中的“所有服务器”  页面，选择要删除其功能的服务器，然后在选定服务器的页面上查看“角色和功能”  磁贴。
 
-    也可针对选定的服务器运行 `Get-WindowsFeature` cmdlet (Get-WindowsFeature -ComputerName &lt;computer_name&gt;)，以查看该服务器上安装的角色和功能的列表  。
+    也可针对选定的服务器运行 `Get-WindowsFeature` cmdlet (Get-WindowsFeature -ComputerName &lt;computer_name *)，以查看该服务器上安装的角色和功能的列表*&gt;。
 
 ## <a name="custom-uninstallation"></a>自定义卸载
 

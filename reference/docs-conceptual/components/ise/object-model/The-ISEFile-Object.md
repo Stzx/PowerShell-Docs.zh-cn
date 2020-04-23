@@ -3,10 +3,10 @@ ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISEFile 对象
 ms.openlocfilehash: 1069e46aa586b8df2050129194a909b90f77b745
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736992"
 ---
 # <a name="the-isefile-object"></a>ISEFile 对象
@@ -25,7 +25,7 @@ ms.locfileid: "75736992"
 
 ### <a name="exceptions"></a>例外
 
-- **System.IO.IOException**：无法保存文件。
+- **System.IO.IOException**：无法保存该文件。
 
 ```powershell
 # Save the file using the default encoding (UTF8)
@@ -51,9 +51,9 @@ $myfile.Encoding
 
 ### <a name="exceptions"></a>例外
 
-- **System.ArgumentNullException**：filename  参数为 Null。
-- **System.ArgumentException**：filename  参数为空。
-- **System.IO.IOException**：无法保存文件。
+- **System.ArgumentNullException**：**filename** 参数为 null。
+- **System.ArgumentException**：**filename** 参数为空。
+- **System.IO.IOException**：无法保存该文件。
 
 ```powershell
 # Save the file with a full path and name.

@@ -3,10 +3,10 @@ ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,配置,安装程序
 title: 快速入门 - 将组策略转换为 DSC
 ms.openlocfilehash: 5e6b86be5127332fe4fd400980c8e147b735247b
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500654"
 ---
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0

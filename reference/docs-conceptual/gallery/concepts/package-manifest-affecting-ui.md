@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: powershell
 title: 影响 PowerShell 库 UI 的包清单值
 ms.openlocfilehash: 9e37fec879f2f5cbe3926c7dbc946389425d856a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417044"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>影响 PowerShell 库 UI 的包清单值
@@ -21,11 +21,11 @@ ms.locfileid: "74417044"
 
 下表显示由发行者控制的 PowerShell 库包页 UI 的元素。 每个项指示它可能由模块清单还是脚本清单进行控制。
 
-| UI 元素 | 说明 | 模块 | 脚本 |
+| UI 元素 | 说明 | 模块 | Script |
 | --- | --- | --- | --- |
 | **标题** | 这是发布到库的包的名称  | 否 | 否 |
 | **版本** | 显示的版本是元数据中的版本字符串以及预发布版本（如果已指定）。 模块清单中版本的主要部分是 ModuleVersion。 对于脚本，它被标识为 .VERSION。 如果指定了预发布版本字符串，则会将其追加到模块的 ModuleVersion，或者指定为脚本的 .VERSION 的一部分。 有一个用于指定[模块](module-prerelease-support.md)和[脚本](script-prerelease-support.md)中的预发布字符串的文档 | 是 | 是 |
-| **描述** | 这是模块清单中的描述，在脚本文件清单中是 .DESCRIPTION | 是 | 是 |
+| **说明** | 这是模块清单中的描述，在脚本文件清单中是 .DESCRIPTION | 是 | 是 |
 | **需要接受许可证** | 模块可以通过以下方式要求用户接受许可证：使用 RequireLicenseAcceptance = $true 修改模块清单，提供 LicenseURI，并提供模块文件夹的根目录中的 license.txt 文件。 [需要接受许可证](../how-to/working-with-packages/packages-that-require-license-acceptance.md)主题提供了其他信息。 | 是 | 否 |
 | **发行说明** | 对于模块，此信息可从 PSData\PrivateData 下的 ReleaseNotes 部分获得。 在脚本清单中，它是 .RELEASENOTES 元素。 | 是 | 是 |
 | **所有者** | 所有者是 PowerShell 库中可以更新包的用户列表。 所有者列表不包含在包清单中。 其他文档描述如何[管理项所有者](../how-to/publishing-packages/managing-package-owners.md)。 | 否 | 否 |
@@ -53,12 +53,12 @@ PowerShell 库编辑包页允许发行者更改为包显示的若干字段，具
 
 - 标题
 - 说明
-- 摘要
+- 总结
 - 图标 URL
 - 项目主页 URL
-- 作者
-- 版权
-- 标记
+- Authors
+- 版权信息
+- Tags
 - 发行说明
 - 需要许可证
 
@@ -89,11 +89,11 @@ PowerShell 库编辑包页允许发行者更改为包显示的若干字段，具
 | ActiveDirectory | 当前不会单独使用 AD  |
 | SQLServer |  |
 | DBA |  |
-| 安全 | Defense 不太精确 |
+| 安全性 | Defense 不太精确 |
 | 数据库 | Databases（复数）不太可取 |
 | DevOps |  |
 | Windows |  |
-| Build |  |
+| 构建 |  |
 | 部署 | Deploy 某种程度上不太常用 |
 | 云 |  |
 | GIT |  |
@@ -110,9 +110,9 @@ PowerShell 库编辑包页允许发行者更改为包显示的若干字段，具
 | GitHub |  |
 | Json |  |
 | Exchange |  |
-| Network (网络) | Networking 非常相似，不经常使用 |
+| 网络 | Networking 非常相似，不经常使用 |
 | SharePoint |  |
-| 报告 | Reporting 是一项操作，Report 是一件东西 |
+| 报表 | Reporting 是一项操作，Report 是一件东西 |
 | 报表 | Report 是一件东西 |
 | WinRM |  |
 | 监视 |  |

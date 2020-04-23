@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: DSCAutomationHostEnabled 注册表项
 ms.openlocfilehash: 2bccd2738b9f61efd656fdf0f98cf71affdbe781
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954264"
 ---
 >适用于：Windows PowerShell 5.0

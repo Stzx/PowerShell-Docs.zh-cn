@@ -3,15 +3,15 @@ ms.date: 10/30/2018
 keywords: dsc,powershell,配置,安装程序
 title: DSC 故障排除
 ms.openlocfilehash: 5cbe6496a6e0b9940f4b69e13d1e19e43b3915f0
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402404"
 ---
 # <a name="troubleshooting-dsc"></a>DSC 故障排除
 
-适用于：_Windows PowerShell 4.0 和 Windows PowerShell 5.0_
+适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0 
 
 本主题介绍出现问题时 DSC 故障排除的方法。
 
@@ -192,9 +192,9 @@ TimeCreated                     Id LevelDisplayName Message
 12/2/2013 3:47:29 PM          4182 Information      Job {1A776B6A-5BAC-11E3-BF41-00155D553612} : ...
 ```
 
-可以用 [Where-object](/powershell/module/microsoft.powershell.core/where-object) 提取变量 `$SeparateDscOperations` 中的数据。 在以下五种情况下，可能需要提取数据以解决 DSC 问题：
+可以用 `$SeparateDscOperations`Where-object[ 提取变量 ](/powershell/module/microsoft.powershell.core/where-object) 中的数据。 在以下五种情况下，可能需要提取数据以解决 DSC 问题：
 
-### <a name="1-operations-failures"></a>1：操作失败
+### <a name="1-operations-failures"></a>1：操作故障
 
 所有事件都具有[严重性级别](/windows/desktop/WES/defining-severity-levels)。 此信息可用于标识错误事件：
 
@@ -206,7 +206,7 @@ Count Name                      Group
    38 {5BCA8BE7-5BB6-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
 ```
 
-### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2:过去半小时内所运行操作的详细信息
+### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2：过去半小时内所运行操作的详细信息
 
 每个 Windows 事件都具有 `TimeCreated` 属性，它表明创建该事件的时间。 可通过将此属性与特定日期/时间对象进行比较来筛选所有事件：
 
@@ -327,7 +327,7 @@ SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Job runs under the following LCM setti
 SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Operation Consistency Check or Pull completed successfully.
 ```
 
-传递分配给特定 DSC 操作（由 `Get-xDscOperation` cmdlet 返回）的 GUID  以获取 DSC 操作的事件详细信息：
+传递分配给特定 DSC 操作（由  **cmdlet 返回）的 GUID**`Get-xDscOperation` 以获取 DSC 操作的事件详细信息：
 
 ```powershell
 PS C:\DiagnosticsTest> Trace-xDscOperation -JobID 9e0bfb6b-3a3a-11e6-9165-00155d390509

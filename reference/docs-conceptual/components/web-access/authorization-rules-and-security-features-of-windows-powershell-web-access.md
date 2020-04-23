@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell Web 访问的授权规则和安全功能
-ms.openlocfilehash: 9bc1be125ebab4e9ba29ba832b442777e9bfc859
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: ee25df052994e47e559daa87b89af813471d896b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500886"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624748"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Windows PowerShell Web 访问的授权规则和安全功能
 
@@ -112,7 +112,7 @@ Windows PowerShell Web 访问 cmdlet 支持一个通配符，即星号 ( \* )。
 
    如果尚未创建这些配置，则使用 [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configuration_files) 中用于创建会话配置的说明。
 
-3. 本授权规则允许特定用户通过他们通常访问的网络访问一台计算机，以及可让特定用户拥有对满足用户常见脚本和 cmdlet 需求的特定会话配置的权限&trade;。 键入以下命令，然后按**Enter**。
+3. 本授权规则允许特定用户通过他们通常访问的网络访问一台计算机，以及可让特定用户拥有对满足用户常见脚本和 cmdlet 需求的特定会话配置的权限。 键入以下命令，然后按**Enter**。
 
    ```
    Add-PswaAuthorizationRule -UserName <domain\user | computer\user> `

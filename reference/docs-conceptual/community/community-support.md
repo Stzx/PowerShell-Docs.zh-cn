@@ -3,10 +3,10 @@ title: PowerShell 社区资源
 description: 为/由 PowerShell 用户创建的资源列表
 ms.date: 03/04/2020
 ms.openlocfilehash: 50f5eaaef9ef30351fa605f74648a8efbce90af3
-ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80395021"
 ---
 # <a name="powershell-community-resources"></a>PowerShell 社区资源

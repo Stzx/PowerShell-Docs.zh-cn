@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 指定跨节点依赖关系
 ms.openlocfilehash: 62e553d894897ae1908745c2788b7b7b9cbe50ff
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954104"
 ---
 # <a name="specifying-cross-node-dependencies"></a>指定跨节点依赖关系
@@ -15,9 +15,9 @@ ms.locfileid: "71954104"
 
 DSC 提供特殊的资源，**WaitForAll**、**WaitForAny** 和 **WaitForSome**，可用于在配置中指定其他节点上配置的依赖关系。 这些资源的行为如下所述：
 
-- **WaitForAll**：如果指定的资源在 NodeName  属性中定义的所有目标节点上处于所需状态，则该资源成功。
-- **WaitForAny**：如果指定的资源在 NodeName  属性中定义的至少一个目标节点上处于所需状态，则该资源成功。
-- **WaitForSome**：指定除 NodeName  属性之外的 NodeCount  属性。 如果资源在 **NodeName** 属性定义的节点（数量下限由 **NodeCount** 指定）上处于所需的状态，则资源成功。
+- **WaitForAll**：如果指定的资源在 **NodeName** 属性中定义的所有目标节点上处于所需状态，则该资源成功。
+- **WaitForAny**：如果指定的资源在**NodeName** 属性中定义的至少一个目标节点上处于所需状态，则该资源成功。
+- **WaitForSome**：指定除 **NodeName** 属性之外的 **NodeCount** 属性。 如果资源在 **NodeName** 属性定义的节点（数量下限由 **NodeCount** 指定）上处于所需的状态，则资源成功。
 
 ## <a name="syntax"></a>语法
 
@@ -55,7 +55,7 @@ WaitForSome [String] #ResourceName
 
 所有 WaitForXXXX  共享以下语法项。
 
-|属性|  说明   |
+|properties|  说明   |
 |---------|---------------------|
 | RetryIntervalSec| 重试前等待的秒数。 最小值为 1。|
 | RetryCount| 重试次数上限。|

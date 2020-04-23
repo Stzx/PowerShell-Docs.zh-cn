@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux 的 DSC nxPackage 资源
 ms.openlocfilehash: 4091cbbd5e34a84b9011870da4bda93281378347
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954814"
 ---
 # <a name="dsc-for-linux-nxpackage-resource"></a>适用于 Linux 的 DSC nxPackage 资源
@@ -29,9 +29,9 @@ nxPackage <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |名称 |要确保其特定状态的程序包的名称。 |
 |PackageManager |支持的值包括 **yum**、**apt** 和 **zypper**。 指定安装程序包时要使用的程序包管理器。 如果指定了 **FilePath**，则将使用提供的路径安装程序包。 否则，将使用程序包管理器从预配置的存储库安装程序包。 如果既不提供 **PackageManager**，也不提供 **FilePath**，则将使用系统默认的程序包管理器。 |
@@ -42,7 +42,7 @@ nxPackage <string> #ResourceName
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |Ensure |确定是否检查程序包是否存在。 将此属性设置为 **Present** 可确保包存在。 将其设置为 **Absent** 可确保包不存在。 默认值为 **Present**。 |

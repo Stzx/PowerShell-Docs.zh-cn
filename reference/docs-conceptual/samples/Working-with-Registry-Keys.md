@@ -3,10 +3,10 @@ ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 使用注册表项
 ms.openlocfilehash: 3feaf6d26db51a507434a6cec1f1095c9013efc8
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736839"
 ---
 # <a name="working-with-registry-keys"></a>使用注册表项
@@ -57,7 +57,7 @@ Get-ChildItem -Path Microsoft.PowerShell.Core\Registry::HKCU
 Get-ChildItem HKCU:
 ```
 
-这些命令将仅列出直接包含的项，类似于使用 Cmd.exe 中的 `DIR`  或 UNIX shell 中的 `ls`。 为了显示包含的项，需要指定 **Recurse** 参数。 若要列出 `HKCU:` 中的所有注册表项，请使用以下命令。
+这些命令将仅列出直接包含的项，类似于使用 Cmd.exe 中的 `DIR` 或 UNIX shell 中的 `ls`。 为了显示包含的项，需要指定 **Recurse** 参数。 若要列出 `HKCU:` 中的所有注册表项，请使用以下命令。
 
 ```powershell
 Get-ChildItem -Path HKCU:\ -Recurse
@@ -72,7 +72,7 @@ Get-ChildItem -Path HKCU:\Software -Recurse |
 
 ## <a name="copying-keys"></a>复制项
 
-复制通过 `Copy-Item` 完成。 下面的示例将 `HKLM:\SOFTWARE\Microsoft\Windows\` 的 `CurrentVersion` 子项及其所有属性复制到 `HKCU:\`。
+复制通过 `Copy-Item` 完成。 下面的示例将 `CurrentVersion` 的 `HKLM:\SOFTWARE\Microsoft\Windows\` 子项及其所有属性复制到 `HKCU:\`。
 
 ```powershell
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination HKCU:

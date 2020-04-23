@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC WaitForAny 资源
 ms.openlocfilehash: 61fee456d2652e08ed9bdbe64457627ff5b2e145
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952994"
 ---
 # <a name="dsc-waitforany-resource"></a>DSC WaitForAny 资源
@@ -35,9 +35,9 @@ WaitForAny [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |ResourceName |要依赖的资源名称。 如果此资源属于其他配置，则将名称格式设置为 `[ResourceType]ResourceName::[ConfigurationName]::[ConfigurationName]`。 |
 |NodeName |要依赖的资源的目标节点。 |
@@ -47,7 +47,7 @@ WaitForAny [string] #ResourceName
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |PsDscRunAsCredential |设置用于运行整个资源的身份的凭据。 |

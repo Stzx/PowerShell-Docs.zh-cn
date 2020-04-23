@@ -4,10 +4,10 @@ keywords: powershell,cmdlet
 title: 从正在运行的进程解码 PowerShell 命令
 author: randomnote1
 ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "66470964"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>从正在运行的进程解码 PowerShell 命令

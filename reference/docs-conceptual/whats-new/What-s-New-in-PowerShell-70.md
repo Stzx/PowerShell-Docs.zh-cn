@@ -3,10 +3,10 @@ title: PowerShell 7.0 中的新增功能
 description: PowerShell 7.0 中发布的新功能和更改
 ms.date: 03/04/2020
 ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
-ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80263129"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0 中的新增功能
@@ -71,7 +71,7 @@ PowerShell 7 安装程序包升级以前版本的 PowerShell Core 6.x：
 
 PowerShell 7.0 标记了转移到 .NET Core 3.1 的过程，从而大大改进了现有 Windows PowerShell 模块向后兼容性。 其中包括 Windows 上需要 GUI 功能（如 `Out-GridView` 和 `Show-Command`）的许多模块以及作为 Windows 的一部分提供的许多角色管理模块。
 
-对于 Windows，新开关参数 UseWindowsPowerShell 将添加到 `Import-Module`  。 此开关会在 PowerShell 7 中创建一个代理模块，该模块使用本地 Windows PowerShell 进程隐式运行该模块中包含的任何 cmdlet。 有关 [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7) 的详细信息。
+对于 Windows，新开关参数 UseWindowsPowerShell 将添加到 `Import-Module` 。 此开关会在 PowerShell 7 中创建一个代理模块，该模块使用本地 Windows PowerShell 进程隐式运行该模块中包含的任何 cmdlet。 有关 [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7) 的详细信息。
 
 有关哪些 Microsoft 模块适用于 PowerShell 7.0 的详细信息，请参阅[模块兼容性表](https://aka.ms/PSModuleCompat)。
 

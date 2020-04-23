@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 在 PowerShell 5.0 及更高版本中使用配置名称设置请求客户端
 ms.openlocfilehash: d591e2a757130ccecaf4eaf9f363f607fca82b93
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953624"
 ---
 # <a name="set-up-a-pull-client-using-configuration-names-in-powershell-50-and-later"></a>在 PowerShell 5.0 及更高版本中使用配置名称设置请求客户端
@@ -55,7 +55,7 @@ Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientC
   > 有关使用 **ConfigurationID** 配置请求服务器的信息，请参阅[使用配置 ID 设置请求客户端](pullClientConfigId.md)
 
 - **ConfigurationNames** 属性是指定用于客户端节点的配置的名称的数组。
-  >**注意：** 如果在 ConfigurationNames 中指定多个值，则必须也在你的配置中指定 PartialConfiguration 块   。
+  >**注意：** 如果你在 **ConfigurationNames** 中指定多个值，则必须也在你的配置中指定 **PartialConfiguration** 块。
   >有关部分配置的信息，请参阅 [PowerShell Desired State Configuration 部分配置](partialConfigs.md)。
 
 ```powershell

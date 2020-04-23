@@ -3,10 +3,10 @@ ms.date: 08/15/2019
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Windows 的 Desired State Configuration (DSC) 入门
 ms.openlocfilehash: 2add2c936e60c0c9446bf4b398fbf7b4bd6407f7
-ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75416161"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>适用于 Windows 的 Desired State Configuration (DSC) 入门

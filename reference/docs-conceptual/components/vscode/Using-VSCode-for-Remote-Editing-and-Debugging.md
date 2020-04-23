@@ -3,10 +3,10 @@ title: 使用 Visual Studio Code 进行远程编辑和调试
 description: 使用 Visual Studio Code 进行远程编辑和调试
 ms.date: 06/13/2019
 ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78279096"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>使用 Visual Studio Code 进行远程编辑和调试
@@ -15,7 +15,7 @@ ms.locfileid: "78279096"
 
 该功能在适用于 VSCode 的 PowerShell 扩展中也可用。 本指南将演示如何操作。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 本指南假定你拥有：
 

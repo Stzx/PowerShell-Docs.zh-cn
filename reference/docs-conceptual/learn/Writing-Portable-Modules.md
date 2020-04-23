@@ -3,10 +3,10 @@ ms.date: 01/10/2020
 keywords: powershell,cmdlet
 title: 编写可移植模块
 ms.openlocfilehash: 124e6efadfd07b8c5214a5c0446b1589f7142388
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "76022245"
 ---
 # <a name="portable-modules"></a>可移植模块
@@ -198,7 +198,7 @@ PowerShell Standard 旨在始终向前兼容。 使用 PowerShell Standard 库 5
 
 首先，验证模块是否适用于 Linux和 macOS。 接下来，在模块清单中指示与这些操作系统的兼容性。 这使得用户在发布到 [PowerShell 库][]时可以更轻松地找到适用于其操作系统的模块。
 
-在模块清单中，`PrivateData` 属性有一个 `PSData` 子属性。 `PSData` 的可选 `Tags` 属性采用一组在 PowerShell 库中显示的值。 PowerShell 库支持以下兼容性值：
+在模块清单中，`PrivateData` 属性有一个 `PSData` 子属性。 `Tags` 的可选 `PSData` 属性采用一组在 PowerShell 库中显示的值。 PowerShell 库支持以下兼容性值：
 
 | 标记               | 说明                                |
 |-------------------|--------------------------------------------|

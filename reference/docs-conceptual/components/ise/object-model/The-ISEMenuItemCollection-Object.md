@@ -3,15 +3,15 @@ ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISEMenuItemCollection 对象
 ms.openlocfilehash: 39e8547c9b19ba323d4b224a46eda416542b2807
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736166"
 ---
 # <a name="the-isemenuitemcollection-object"></a>ISEMenuItemCollection 对象
 
-**ISEMenuItemCollection** 对象是 **ISEMenuItem** 对象的集合。 它是 **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 类的实例。 一个示例是用于在 Windows PowerShell® 集成脚本环境 (ISE) 中自定义“加载项”  菜单的 `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` 对象。
+**ISEMenuItemCollection** 对象是 **ISEMenuItem** 对象的集合。 它是 **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 类的实例。 一个示例是用于在 Windows PowerShell® 集成脚本环境 (ISE) 中自定义“加载项”`$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`**菜单的**  对象。
 
 ## <a name="method"></a>方法
 

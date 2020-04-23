@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: JEA 先决条件
 ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74416726"
 ---
 # <a name="prerequisites"></a>必备条件
@@ -83,7 +83,7 @@ Enable-PSRemoting
 可使用组策略配置 PowerShell 模块日志记录策略。
 
 1. 在工作站上打开“本地组策略编辑器”，或在 Active Directory 域控制器中，打开“组策略管理控制台”中的“组策略对象”
-2. 导航到“计算机配置\\管理模板\\Windows 组件\\Windows PowerShell” 
+2. 导航到“计算机配置**管理模板\\Windows 组件\\Windows PowerShell”\\**
 3. 双击“打开模块日志记录” 
 4. 单击“启用” 
 5. 在“选项”部分中，单击“模块名称”旁的“显示” 

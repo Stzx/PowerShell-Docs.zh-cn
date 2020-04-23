@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux nxEnvironment 资源的 DSC
 ms.openlocfilehash: 55c1b2402e23c1042ed48b40c1084aa63c515b36
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953224"
 ---
 # <a name="dsc-for-linux-nxenvironment-resource"></a>适用于 Linux nxEnvironment 资源的 DSC
@@ -26,17 +26,17 @@ nxEnvironment <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |名称 |指示指示你想要确保其特定状态的环境变量的名称。 |
 |值 |要分配给环境变量的值。 |
-|路径 |定义正在配置的环境变量。 如果变量是 **Path**，则将此属性设置为 `$true`；否则将其设置为 `$false`。 默认值为 `$false`。 如果正在配置的变量是 **Path**，则通过 **Value** 属性提供的值将被附加到现有值。 |
+|路径 |定义正在配置的环境变量。 如果变量是 `$true`Path **，则将此属性设置为** ；否则将其设置为 `$false`。 默认为 `$false`。 如果正在配置的变量是 **Path**，则通过 **Value** 属性提供的值将被附加到现有值。 |
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |Ensure |确定是否要检查变量是否存在。 将此属性设置为 **Present** 可确保变量存在。 将其设置为 **Absent** 可确保变量不存在。 默认值为 **Present**。 |

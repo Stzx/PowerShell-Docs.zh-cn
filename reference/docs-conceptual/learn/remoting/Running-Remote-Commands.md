@@ -3,10 +3,10 @@ ms.date: 08/14/2018
 keywords: powershell,cmdlet
 title: 运行远程命令
 ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030320"
 ---
 # <a name="running-remote-commands"></a>运行远程命令
@@ -132,7 +132,7 @@ Windows PowerShell 包含一个 WSMan 提供程序。 提供程序创建 `WSMAN:
 
 有关 WSMan 提供程序的详细信息，请参阅 [WSMan 提供程序](https://technet.microsoft.com/library/dd819476.aspx)和[关于 WS-Management Cmdlet](/powershell/module/microsoft.powershell.core/about/about_ws-management_cmdlets)，或在 Windows PowerShell 控制台中键入 `Get-Help wsman`。
 
-有关更多信息，请参阅：
+有关详细信息，请参阅：
 
 - [有关远程的常见问题解答](https://technet.microsoft.com/library/dd315359.aspx)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)

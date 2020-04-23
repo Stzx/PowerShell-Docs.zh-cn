@@ -4,10 +4,10 @@ description: 本文说明如何提供有关 PowerShell 文档的反馈。
 ms.date: 03/05/2020
 ms.topic: conceptual
 ms.openlocfilehash: fa2c74d55cdcd779646c50d58f7705f7a4c33542
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79060292"
 ---
 # <a name="how-to-file-a-powershell-docs-issue"></a>如何提交 PowerShell-Docs 问题
@@ -28,7 +28,7 @@ ms.locfileid: "79060292"
 
 ## <a name="filing-issues-on-github"></a>在 GitHub 上提交问题
 
-若要直接提交 GitHub 问题，可以单击 [PowerShell-Docs][docs-issues] 存储库中的[“新建问题”][new-issue]按钮。 单击要创建的问题类型的“开始”按钮。  新的 GitHub 问题使用模板预填充。 此模板帮助你提供所需信息，以提交要报告的问题。
+若要直接提交 GitHub 问题，可以单击 [PowerShell-Docs][new-issue] 存储库中的[“新建问题”][docs-issues]按钮。 单击要创建的问题类型的“开始”按钮。  新的 GitHub 问题使用模板预填充。 此模板帮助你提供所需信息，以提交要报告的问题。
 
 在提交新问题前，请浏览已有的问题，以查看是否已有人报告此问题。 这有助于避免重复，你的问题可能已有答复。 若找到已有的问题，你可以添加评论、相关问题或回复。
 

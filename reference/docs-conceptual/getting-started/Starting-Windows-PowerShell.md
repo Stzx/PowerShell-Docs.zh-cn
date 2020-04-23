@@ -3,10 +3,10 @@ ms.date: 12/05/2019
 keywords: powershell,cmdlet
 title: 启动 Windows PowerShell
 ms.openlocfilehash: 97b15a4cd79c77a391451ba917f985f9d99db3f5
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74953817"
 ---
 # <a name="starting-windows-powershell"></a>启动 Windows PowerShell
@@ -23,7 +23,7 @@ PowerShell Core（称为 PowerShell）为第 6 版及更高版本，采用开源
 
 若要查找 PowerShell 7 的 cmdlet 参考文档和安装文档，请使用以下链接：
 
-| 文档 | 链接 |
+| Document | 链接 |
 | ----- | ----- |
 | Cmdlet 参考 | [PowerShell 模块浏览器](/powershell/module/?view=powershell-7) |
 | Windows 安装 | [在 Windows 上安装 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) |
@@ -94,7 +94,7 @@ ISE
 
 #### <a name="to-enable-windows-powershell-integrated-scripting-environment-ise"></a>启用 Windows PowerShell 集成脚本环境 (ISE)
 
-1. 启动“服务器管理器”。
+1. 启动服务器管理器。
 2. 单击“功能”  ，然后单击“添加功能”  。
 3. 在“选择功能”中，单击“Windows PowerShell 集成脚本环境 (ISE)”
 

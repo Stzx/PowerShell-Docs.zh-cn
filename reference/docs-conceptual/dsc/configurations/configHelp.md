@@ -3,17 +3,17 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 编写 DSC 配置的帮助
 ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954134"
 ---
 # <a name="writing-help-for-dsc-configurations"></a>编写 DSC 配置的帮助
 
 >适用于：Windows PowerShell 5.0
 
-可在 DSC 配置中使用基于注释的帮助。 若要访问帮助内容，用户可以使用 `-?` 调用配置  或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。 将基于注释的帮助直接置于 `Configuration` 关键字上方。
+可在 DSC 配置中使用基于注释的帮助。 若要访问帮助内容，用户可以使用  **调用配置**`-?`或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。 将基于注释的帮助直接置于 `Configuration` 关键字上方。
 可以将参数帮助置于注释块的同一行中，或直接放置在参数声明上方，或同时放置在两个位置，如下面的示例中所示。
 
 若要详细了解基于 PowerShell 注释的帮助内容，请参阅 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)。

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux 的 Desired State Configuration (DSC) 入门
 ms.openlocfilehash: b1bc9b9fafd89a1af0f967de38a817bff1f3ffe3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73933851"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>适用于 Linux 的 Desired State Configuration (DSC) 入门
@@ -29,7 +29,7 @@ ms.locfileid: "73933851"
 |  所需程序包 |  说明 |  最低版本 |
 |---|---|---|
 | glibc| GNU 库| 2…4 – 31.30|
-| python| Python| 2.4 – 3.4|
+| Python| Python| 2.4 – 3.4|
 | omiserver| 开放式管理基础结构| 1.0.8.1|
 | openssl| OpenSSL 库| 0.9.8 或 1.0|
 | ctypes| Python CTypes 库| 必须与 Python 版本匹配|
@@ -41,7 +41,7 @@ ms.locfileid: "73933851"
 
 ### <a name="installing-omi"></a>安装 OMI
 
-适用于 Linux 的 Desired State Configuration 需要开放式管理基础结构 (OMI) CIM 服务器版本 1.0.8.1 或更高版本。 可以从国际开放标准组织下载 OMI：[开放式管理基础结构 (OMI)](https://github.com/Microsoft/omi)。
+适用于 Linux 的 Desired State Configuration 需要开放式管理基础结构 (OMI) CIM 服务器版本 1.0.8.1 或更高版本。 可从 The Open Group：[Open Management Infrastructure (OMI)（开放式管理基础结构）](https://github.com/Microsoft/omi)下载 OMI。
 
 若要安装 OMI，请安装适用于 Linux 系统（.rpm 或.deb）和 OpenSSL 版本（ssl_098 或 ssl_100）以及体系结构 (x64/x86) 的程序包。 RPM 程序包适用于 CentOS、Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Oracle Linux。 DEB 程序包适用于 Debian GNU/Linux 和 Ubuntu Server。 ssl_098 程序包适用于安装了 OpenSSL 0.9.8 的计算机，而 ssl_100 程序包适用于安装了 OpenSSL 1.0 的计算机。
 
@@ -183,7 +183,7 @@ $Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Aut
 
 为适用于 Linux 的.DSC 生成了以下日志文件。
 
-|日志文件|Directory|说明|
+|日志文件|目录|说明|
 |---|---|---|
 |omiserver.log |`/var/opt/omi/log`|与 OMI CIM 服务器操作相关的消息。|
 |dsc.log |`/var/opt/omi/log`|与本地配置管理器 (LCM) 操作和 DSC 资源操作相关的消息。|

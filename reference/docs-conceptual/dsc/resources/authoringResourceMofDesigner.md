@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用资源设计器工具
 ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500629"
 ---
 # <a name="using-the-resource-designer-tool"></a>使用资源设计器工具
@@ -22,7 +22,7 @@ ms.locfileid: "80500629"
 * **UserName**：唯一标识用户的键属性。
 * **Ensure**：指定用户帐户应该为 Present 还是 Absent。 此参数只有两个可能的值。
 * **DomainCredential**：用户的域密码。
-* **密码**：允许必要时配置对用户密码进行更改所需的用户密码。
+* **Password**：允许必要时配置对用户密码进行更改所需的用户密码。
 
 我们使用 **New-xDscResourceProperty** cmdlet 来创建属性。 下面的 PowerShell 命令可以创建上述属性。
 

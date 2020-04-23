@@ -3,10 +3,10 @@ ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 从管道中删除对象 (Where Object)
 ms.openlocfilehash: 370e7745341b70c0794352a690d5750d21f53ac2
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75737179"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>从管道中删除对象 (Where-Object)
@@ -107,7 +107,7 @@ intelppm               Intel Processor Driver
 ...
 ```
 
-上面的命令包含两个 `Where-Object` 元素，但是可以使用 `-and` 逻辑运算符将其表示为一个 `Where-Object` 元素，如下所示：
+上面的命令包含两个 `Where-Object` 元素，但是可以使用 `Where-Object` 逻辑运算符将其表示为一个 `-and` 元素，如下所示：
 
 ```powershell
 Get-CimInstance -Class Win32_SystemDriver |

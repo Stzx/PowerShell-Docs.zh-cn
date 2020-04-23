@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: 库, powershell, psgallery, GDPR
 title: PowerShell 库 GDPR 符合性
 ms.openlocfilehash: fb1191d8a1cd12d5994e41238c384eb504d0c261
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328318"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>PowerShell 库 GDPR 符合性
@@ -15,7 +15,7 @@ ms.locfileid: "71328318"
 ## <a name="overview"></a>概述
 
 2018 年 5 月，名为“一般数据保护条例 (GDPR)”的欧洲隐私法生效。
-GDPR 规定了公司、政府机构、公益组织以及负责以下事务的其他组织需要遵守的新规则：为欧盟民众提供商品和服务，或收集和分析与欧盟民众相关的数据。
+GDPR 针对向欧盟 (EU) 居民提供产品及服务，或收集和分析欧盟居民相关信息的公司、政府机构、非营利组织和其他组织制定了新的规则。
 GDPR 的适用对象不受地理位置限制。
 
 > [!NOTE]

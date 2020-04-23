@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 分离配置和环境数据
 ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954434"
 ---
 # <a name="separating-configuration-and-environment-data"></a>分离配置和环境数据
@@ -82,7 +82,7 @@ Mode                LastWriteTime         Length Name
 -a----        3/31/2017   5:09 PM           1970 VM-2.mof
 ```
 
-`$MyData` 指定两个不同节点，每个都具有其自己的 `NodeName` 和 `Role`。 配置动态创建“节点”块，方法是采用来自 `$MyData`（特别是 `$AllNodes`）的节点的集合，并根据 `Role` 属性筛选该集合  。
+`$MyData` 指定两个不同节点，每个都具有其自己的 `NodeName` 和 `Role`。 配置动态创建“节点”块，方法是采用来自 **（特别是** ）的节点的集合，并根据 `$MyData` 属性筛选该集合`$AllNodes``Role`。
 
 ## <a name="using-configuration-data-to-define-development-and-production-environments"></a>使用配置数据定义开发环境和生产环境
 
@@ -129,7 +129,7 @@ Mode                LastWriteTime         Length Name
 
 ### <a name="configuration-script-file"></a>配置脚本文件
 
-现在，在配置（在 `.ps1` 文件中定义）中，根据其角色（`MSSQL` 和/或 `Dev`）筛选在 `DevProdEnvData.psd1` 中定义的节点并进行相应配置。
+现在，在配置（在 `.ps1` 文件中定义）中，根据其角色（`DevProdEnvData.psd1` 和/或 `MSSQL`）筛选在 `Dev` 中定义的节点并进行相应配置。
 在开发环境中，SQL Server 和 IIS 位于同一个节点上，而在生产环境中，SQL Server 和 IIS 位于两个不同节点上。
 站点内容也是不同的，具体由 `SiteContents` 属性指定。
 

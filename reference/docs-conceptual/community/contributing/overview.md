@@ -1,13 +1,13 @@
 ---
 title: 参与 PowerShell 文档撰写
-description: 本文简要介绍如何开始参与撰写 PowerShell 文档。
+description: 本文简要介绍如何作为参与者开始参与撰写 PowerShell 文档。
 ms.date: 03/05/2020
 ms.topic: conceptual
 ms.openlocfilehash: 5db78ae2805cb26aa79aa698cfb8b5d8ba8911dc
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402624"
 ---
 # <a name="contributing-to-powershell-documentation"></a>参与 PowerShell 文档撰写
@@ -66,7 +66,7 @@ docs.microsoft.com [使用条款][terms-of-use]涵盖了公共存储库中对文
 - [开始编写文档](get-started-writing.md)
 - [提交拉取请求](pull-requests.md)
 - [PowerShell-Docs 风格指南](powershell-style-guide.md)
-- [编辑 cmdlet 引用](editing-cmdlet-ref.md)
+- [编辑 cmdlet 参考](editing-cmdlet-ref.md)
 
 其他资源
 

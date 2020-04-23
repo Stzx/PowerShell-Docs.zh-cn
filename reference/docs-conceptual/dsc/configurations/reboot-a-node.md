@@ -3,10 +3,10 @@ ms.date: 01/17/2019
 keywords: dsc,powershell,配置,安装程序
 title: 重新启动节点
 ms.openlocfilehash: 22c63fab9b6646f522f8531b46a43a94ff883552
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954024"
 ---
 # <a name="reboot-a-node"></a>重新启动节点
@@ -15,7 +15,7 @@ ms.locfileid: "71954024"
 > 本主题讨论如何重新启动节点。 若要使重新启动成功，需要正确配置 ActionAfterReboot  和 RebootNodeIfNeeded  LCM 设置。
 > 若要了解本地配置管理器设置，请参阅[配置本地配置管理器](../managing-nodes/metaConfig.md)或[配置本地配置管理器 (v4)](../managing-nodes/metaConfig4.md)。
 
-可以使用 `$global:DSCMachineStatus` 标志，从资源中重新启动节点。 在 `Set-TargetResource` 函数中将此标志设置为 `1` 会强制 LCM 在当前资源的 Set  方法之后直接重新启动节点。 如果使用此标志，[ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) DSC 资源模块中的 **PendingReboot** 资源会检测 DSC 外部是否有挂起的重启。
+可以使用 `$global:DSCMachineStatus` 标志，从资源中重新启动节点。 在 `1` 函数中将此标志设置为 `Set-TargetResource` 会强制 LCM 在当前资源的 Set  方法之后直接重新启动节点。 如果使用此标志，**ComputerManagementDsc** DSC 资源模块中的 [PendingReboot](https://github.com/PowerShell/ComputerManagementDsc) 资源会检测 DSC 外部是否有挂起的重启。
 
 [配置](configurations.md)可能会执行需要重新启动节点的步骤。 这可能包括诸如以下这类情况：
 
@@ -45,9 +45,9 @@ PendingReboot [String] #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-| 属性 | 说明 |
+| properties | 说明 |
 | --- | --- |
 | 名称| 必需参数，对配置中资源的每个实例必须唯一。|
 | SkipComponentBasedServicing | 跳过由基于组件的服务组件触发的重新启动。 |

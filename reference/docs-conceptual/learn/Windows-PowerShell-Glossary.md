@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 术语表
 ms.openlocfilehash: 0827ec771b1744b87a8c0f0ddf48438f9ba484b2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030353"
 ---
 # <a name="windows-powershell-glossary"></a>Windows PowerShell 术语表
@@ -21,7 +21,7 @@ ms.locfileid: "67030353"
 |动态参数|在某些情况下添加到 Windows PowerShell cmdlet、函数或脚本的一个参数。 Cmdlet、函数、提供程序和脚本可以添加动态参数。|
 |格式设置文件|一个 Windows PowerShell XML 文件，它具有 .format.ps1xml 扩展名且定义 Windows PowerShell 如何基于对象的 .NET Framework 类型来显示对象。|
 |全局会话状态|包含 Windows PowerShell 会话用户可访问的数据的会话状态。|
-|主机|Windows PowerShell 引擎用于与用户进行通信的接口。 例如，主机指定 Windows PowerShell 和用户之间处理提示的方式。|
+|host|Windows PowerShell 引擎用于与用户进行通信的接口。 例如，主机指定 Windows PowerShell 和用户之间处理提示的方式。|
 |主机应用程序|将 Windows PowerShell 引擎加载到其进程中并使用它执行操作的程序。|
 |输入处理方法|Cmdlet 可用于处理其以输入形式所接收的记录的一种方法。 输入处理方法包括 BeginProcessing 方法、ProcessRecord 方法、EndProcessing 方法以及 StopProcessing 方法。|
 |清单模块|一个 Windows PowerShell 模块，它具有一个清单且其 RootModule 项为空。|
@@ -41,9 +41,9 @@ ms.locfileid: "67030353"
 |shell|用于将命令传递到操作系统的命令解释器。|
 |开关参数|一个不带实参的形参。|
 |终止错误|阻止 Windows PowerShell 处理命令的错误。|
-|事务|一个工作的原子单元。 必须将事务中的工作作为一个整体来完成；如果该事务的任何部分失败，那么整个事务都会失败。|
+|transaction|一个工作的原子单元。 必须将事务中的工作作为一个整体来完成；如果该事务的任何部分失败，那么整个事务都会失败。|
 |类型文件|一个 Windows PowerShell XML 文件，它具有 .ps1xml 扩展名且扩展 Windows PowerShell 中 Microsoft.NET Framework 类型的属性。|
-|动作|在 Windows PowerShell cmdlet 名称中连字符前面的单词。 它说明该 cmdlet 将执行的操作。|
+|谓词|在 Windows PowerShell cmdlet 名称中连字符前面的单词。 它说明该 cmdlet 将执行的操作。|
 |Windows PowerShell|为 IT 管理员提供全面控制以及实现系统管理任务自动化的一个命令行 Shell 和基于任务的脚本技术。|
 |Windows PowerShell 命令|导致操作被执行的管道中的元素。Windows PowerShell 命令可以在键盘上输入或以编程方式调用。|
 |Windows PowerShell 数据文件|具有 .psd1 文件扩展名的文本文件。 Windows PowerShell 将数据文件用于多种用途，例如存储模块清单数据和存储用于脚本国际化的已翻译的字符串。|

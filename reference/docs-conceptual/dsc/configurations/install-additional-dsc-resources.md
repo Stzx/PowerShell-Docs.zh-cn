@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,资源,库,安装程序
 title: 安装其他 DSC 资源
 ms.openlocfilehash: 7a6a935349358e11a77d2f00c0bf88e0ad18c097
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417797"
 ---
 # <a name="install-additional-dsc-resources"></a>安装其他 DSC 资源
@@ -20,10 +20,10 @@ PowerShell 包括 Desired State Configuration (DSC) 的多个现成资源。  PS
 
 |资源  |说明  |
 |---------|---------|
-|**文件**|控制文件和目录的状态。 将文件从“源”  复制到“目标”  ，然后在通过比较日期、校验和以及哈希确认“源”  发生更改时更新这些文件。|
+|**File**|控制文件和目录的状态。 将文件从“源”  复制到“目标”  ，然后在通过比较日期、校验和以及哈希确认“源”  发生更改时更新这些文件。|
 |**存档**|在指定位置解压缩存档。 使用指定校验和验证存档  。|
 |**环境**|管理环境变量。|
-|**组**|管理本地组并控制组成员身份。|
+|**分组**|管理本地组并控制组成员身份。|
 |**日志**|将消息写入 `Microsoft-Windows-Desired State Configuration/Analytic` 事件日志。|
 |**包**|使用 Arguments  、LogPath  、ReturnCode  和其他设置安装或卸载包。|
 |**注册表**|管理注册表项和值。|

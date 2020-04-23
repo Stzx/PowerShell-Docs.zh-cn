@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 导入已安装资源的指定版本
 ms.openlocfilehash: 5ed81e11aa67eb6590d958647f48a33b1b5f1c0e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953984"
 ---
 # <a name="import-a-specific-version-of-an-installed-resource"></a>导入已安装资源的指定版本
@@ -17,7 +17,7 @@ ms.locfileid: "71953984"
 
 ## <a name="installing-separate-resource-versions-side-by-side"></a>并行安装不同的资源版本
 
-可以使用 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet 的 **MinimumVersion**、**MaximumVersion** 和 **RequiredVersion** 参数来指定要安装的模块版本。 调用 **Install-Module** 而不指定某个版本安装最新版本。
+可以使用 **Install-Module** cmdlet 的 **MinimumVersion**、**MaximumVersion** 和 [RequiredVersion](/powershell/module/PowershellGet/Install-Module) 参数来指定要安装的模块版本。 调用 **Install-Module** 而不指定某个版本安装最新版本。
 
 例如，存在多个版本的 xFailOverCluster 模块，其中每个都包含 xCluster 资源   。 调用 Install-Module  而不指定版本号安装模块的最新版本。
 

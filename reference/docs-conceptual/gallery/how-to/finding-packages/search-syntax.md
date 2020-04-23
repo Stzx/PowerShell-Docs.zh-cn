@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: 库搜索语法
 ms.openlocfilehash: aabcaa1f1b5b641ab5033c9ba2e358477c84a23b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328448"
 ---
 # <a name="gallery-search-syntax"></a>库搜索语法

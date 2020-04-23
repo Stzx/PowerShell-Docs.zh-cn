@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 在 C# 中创作 DSC 资源
 ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417699"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>在 C 中创作 DSC 资源\#
@@ -37,7 +37,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 ### <a name="setting-up-the-visual-studio-project"></a>设置 Visual Studio 项目
 #### <a name="setting-up-a-cmdlet-project"></a>设置 cmdlet 项目
 
-1. 打开 Visual Studio
+1. 打开 Visual Studio。
 1. 创建 C# 项目并命名。
 1. 从可用的项目模板中选择**类库**。
 1. 单击“确定”  。

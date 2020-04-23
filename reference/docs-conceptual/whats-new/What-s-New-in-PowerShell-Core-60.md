@@ -3,10 +3,10 @@ title: PowerShell Core 6.0 中的最近更新
 description: PowerShell Core 6.0 中发布的新功能和更改
 ms.date: 08/06/2018
 ms.openlocfilehash: 39bcb343c44c32d183c8bb90306a8f4a57397eb6
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500477"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>PowerShell Core 6.0 中的最近更新

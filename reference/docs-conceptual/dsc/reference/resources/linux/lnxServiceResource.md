@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux 的 DSC nxService 资源
 ms.openlocfilehash: 6bb58796c4deff1153f932f61c328d84f8c4d2ca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954834"
 ---
 # <a name="dsc-for-linux-nxservice-resource"></a>适用于 Linux 的 DSC nxService 资源
@@ -26,18 +26,18 @@ nxService <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |名称 |要配置的服务/守护程序的名称。 |
 |控制器 |配置服务时使用的服务控制器类型。 |
-|启用 |指示服务是否开机启动。 |
-|State |指示服务是否正在运行。 将此属性设置为 **Stopped** 可确保服务不在运行。 将其设置为 **Running** 可确保服务正在运行。 |
+|已启用 |指示服务是否开机启动。 |
+|状态 |指示服务是否正在运行。 将此属性设置为 **Stopped** 可确保服务不在运行。 将其设置为 **Running** 可确保服务正在运行。 |
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 

@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 配置中的条件语句和循环
 ms.openlocfilehash: 86f75be4a3d1c1760dd6269335431e8ab9fd8d09
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736890"
 ---
 # <a name="conditional-statements-and-loops-in-a-configuration"></a>配置中的条件语句和循环
@@ -38,7 +38,7 @@ Configuration ServiceState
 }
 ```
 
-此外，可以使用 `foreach` 循环为当前计算机上的每个服务创建一个 Service  资源块。
+此外，可以使用  **循环为当前计算机上的每个服务创建一个 Service**`foreach` 资源块。
 
 ```powershell
 Configuration ServiceState
@@ -60,7 +60,7 @@ Configuration ServiceState
 }
 ```
 
-你还可以通过使用 `if` 语句，仅为联机的计算机创建 `Configuration`。
+你还可以通过使用 `Configuration` 语句，仅为联机的计算机创建 `if`。
 
 ```powershell
 Configuration ServiceState

@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 使用注册表条目
 ms.openlocfilehash: c1fd6f57f13240eb2039f2d5756796678800aee0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030728"
 ---
 # <a name="working-with-registry-entries"></a>使用注册表条目
@@ -85,11 +85,11 @@ ProgramFilesDir     : C:\Program Files
 ...
 ```
 
-路径扩展的工作方式与其在文件系统中的工作方式相同，因此在此位置中，你可以通过使用 `Get-ItemProperty -Path ..\Help` 来获取 `HKLM:\SOFTWARE\Microsoft\Windows\Help` 的 ItemProperty  列表。
+路径扩展的工作方式与其在文件系统中的工作方式相同，因此在此位置中，你可以通过使用 **来获取** 的 ItemProperty`HKLM:\SOFTWARE\Microsoft\Windows\Help``Get-ItemProperty -Path ..\Help` 列表。
 
 ## <a name="getting-a-single-registry-entry"></a>获取单个注册表条目
 
-如果你希望在注册表项中检索特定条目，可以使用几种可能的方法之一。 本示例查找 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion` 中的 DevicePath  的值。
+如果你希望在注册表项中检索特定条目，可以使用几种可能的方法之一。 本示例查找  **中的 DevicePath**`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion` 的值。
 
 通过使用 `Get-ItemProperty`，可使用 Path  参数指定键的名称，使用 Name  参数指定 DevicePath  条目的名称。
 
@@ -138,9 +138,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
 
 ## <a name="setting-a-single-registry-entry"></a>获取单个注册表条目
 
-如果希望在注册表项中更改特定条目，可以使用几种可能的方法之一。 此示例修改 `HKEY_CURRENT_USER\Environment` 下的 Path  条目。 Path  条目指定在哪里可以找到可执行文件。
+如果希望在注册表项中更改特定条目，可以使用几种可能的方法之一。 此示例修改  **下的 Path**`HKEY_CURRENT_USER\Environment` 条目。 Path  条目指定在哪里可以找到可执行文件。
 
-1. 使用 `Get-ItemProperty` 检索 Path  条目的当前值。
+1. 使用  **检索 Path**`Get-ItemProperty` 条目的当前值。
 2. 添加新值，将其与 `;` 分离。
 3. 将 `Set-ItemProperty` 与指定的键、条目名称和值结合使用，以修改注册表条目。
 
@@ -192,11 +192,11 @@ PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 
 |PropertyType 值|含义|
 |----------------------|-----------|
-|Binary|二进制数据|
+|Binary|Binary data|
 |DWord|一个数字，类型为有效的 UInt32|
 |ExpandString|一个字符串，可包含动态扩展的环境变量|
 |MultiString|一个多行字符串|
-|字符串|任意字符串值|
+|String|任意字符串值|
 |QWord|8 字节的二进制数据|
 
 > [!NOTE]

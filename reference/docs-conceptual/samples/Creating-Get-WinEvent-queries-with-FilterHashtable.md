@@ -2,10 +2,10 @@
 ms.date: 09/13/2019
 title: 使用 FilterHashtable 创建 Get-WinEvent 查询
 ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73444391"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>使用 FilterHashtable 创建 Get-WinEvent 查询
@@ -50,14 +50,14 @@ FilterHashtable  参数的文档也包含这些键值对。
 
 下表显示了键名称、数据类型以及数据值是否接受通配符。
 
-|    键名称    | 值数据类型 | 是否接受通配符？ |
+|    项名    | 值数据类型 | 是否接受通配符？ |
 | -------------- | --------------- | ---------------------------- |
 | LogName        | `<String[]>`    | 是                          |
 | ProviderName   | `<String[]>`    | 是                          |
 | 路径           | `<String[]>`    | 否                           |
 | Keywords       | `<Long[]>`      | 否                           |
 | ID             | `<Int32[]>`     | 否                           |
-| 层次          | `<Int32[]>`     | 否                           |
+| 级别          | `<Int32[]>`     | 否                           |
 | StartTime      | `<DateTime>`    | 否                           |
 | EndTime        | `<DateTime>`    | 否                           |
 | UserID         | `<SID>`         | 否                           |
@@ -238,7 +238,7 @@ Level 键的名称和枚举值如下所示：
 
 | 名称           | 值 |
 | -------------- | ----- |
-| Verbose        |   5   |
+| “详细”        |   5   |
 | 信息  |   4   |
 | 警告        |   3   |
 | 错误          |   2   |

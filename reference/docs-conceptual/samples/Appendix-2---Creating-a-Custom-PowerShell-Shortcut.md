@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 附录 2 - 创建自定义 PowerShell 快捷方式
 ms.openlocfilehash: 6f1a6a8187b1797103e3620b2cf9155978807ea5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030301"
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>附录 2 - 创建自定义 PowerShell 快捷方式
@@ -17,7 +17,7 @@ ms.locfileid: "67030301"
 
 2. 右键单击该快捷方式，然后单击“**属性**”。
 
-3. 单击“选项”选项卡。 
+3. 单击“**选项**”选项卡。
 
 4. 在“编辑选项”部分中，选中“QuickEdit”复选框。  
 
@@ -37,4 +37,4 @@ ms.locfileid: "67030301"
 
 11. 如果你想要在控制台打开时将它放置在桌面上的某个特定点上，请清除“窗口位置”部分中的“由系统定位窗口”复选框，然后更改“窗口位置”部分中“左侧”和“顶部”框中的值。     
 
-12. 单击**确定**。
+12. 单击“确定”。 

@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0 中的新增功能
-ms.openlocfilehash: 8c1858a63adad467e389a683708bccba2a6768c7
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: dba016546fe034684f6b7afe43ec2e7a1b793d96
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500472"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978196"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0 中的新增功能
 
@@ -460,7 +460,7 @@ Windows PowerShell 计划作业是 Windows PowerShell 后台作业和“任务�
 
 此外，计划作业还附带用于管理它们的一组自定义 cmdlet。 这些 cmdlet 使你能够创建、编辑、管理、禁用和重新启用计划作业，创建计划作业触发器并设置计划作业选项。
 
-有关计划作业的详细信息，请参阅 [about_Scheduled_Jobs](/powershell/module/microsoft.powershell.core/about/about_Scheduled_Jobs)。
+有关计划作业的详细信息，请参阅 [about_Scheduled_Jobs](/powershell/module/psscheduledjob/about/about_scheduled_jobs?view=powershell-5.1)。
 
 ### <a name="windows-powershell-language-enhancements"></a>Windows PowerShell 语言增强功能
 

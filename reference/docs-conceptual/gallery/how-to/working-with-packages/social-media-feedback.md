@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: 通过社交媒体或发表评论提供反馈
 ms.openlocfilehash: 95e5db22b94151c3974189c30f1d4e580b47eeb5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71327878"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>通过社交媒体或发表评论提供反馈
@@ -28,7 +28,7 @@ PowerShell 库支持以下两种反馈方法，以便用户能够提供有关包
 PowerShell 库将检查每个用于“分享”包的社交媒体网站，并显示相应包在每个社交媒体网站中的分享次数。
 由于只显示分享次数，因此其他用户可以看作是“赞”相应包的次数。
 
-## <a name="comments"></a>说明
+## <a name="comments"></a>注释
 
 > [!IMPORTANT]
 > Livefyre 评论由第三方供应商提供，不再受支持。

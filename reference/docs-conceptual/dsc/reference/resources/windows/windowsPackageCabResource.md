@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC WindowsPackageCab 资源
 ms.openlocfilehash: ec465b2c3b1d180ba46ee24a61f2be1129148962
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954634"
 ---
 # <a name="dsc-windowspackagecab-resource"></a>DSC WindowsPackageCab 资源
@@ -30,9 +30,9 @@ Windows PowerShell Desired State Configuration (DSC) 中的 WindowsPackageCab  �
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |名称 |指明要确保其处于特定状态的程序包的名称。 |
 |SourcePath |指示程序包所在的路径。 |
@@ -40,7 +40,7 @@ Windows PowerShell Desired State Configuration (DSC) 中的 WindowsPackageCab  �
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |Ensure |指示程序包是否已安装。 将此属性设置为 **Absent** 可确保未安装包（如果已安装，则卸载包）。 将其设置为 **Present** 可确保已安装包。 **Ensure** 是 **WindowsPackageCab** 资源上的必需属性。 |

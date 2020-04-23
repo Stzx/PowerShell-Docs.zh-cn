@@ -4,10 +4,10 @@ keywords: dsc,powershell,配置,安装程序
 description: 提供了管理目标节点上的本地组的机制。
 title: DSC GroupSet 资源
 ms.openlocfilehash: d36274741b2c96a0852f384ccf5d187ac8d27131
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953174"
 ---
 # <a name="dsc-groupset-resource"></a>DSC GroupSet 资源
@@ -35,9 +35,9 @@ Group [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |GroupName |要确保其处于特定状态的组的名称。 |
 |成员 |使用此属性将当前的组成员身份替换为指定成员。 此属性的值是一组形式为 `Domain\UserName` 的字符串。 如果你在配置中设置此属性，请勿使用 **MembersToExclude** 或 **MembersToInclude** 属性。 这样做会导致错误生成。 |
@@ -48,7 +48,7 @@ Group [string] #ResourceName
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |Ensure |指示组是否存在。 将此属性设置为 **Absent** 可确保组不存在。 将其设置为 **Present** 可确保组存在。 默认值为 **Present**。 |

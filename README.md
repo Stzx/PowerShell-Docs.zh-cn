@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 034d75a84e39cb0cf88a272ca58b5ccc229c5d9b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74540460"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开放源代码行为准则
 
-此项目采用了 [Microsoft 开放源代码行为准则](https://opensource.microsoft.com/codeofconduct/)。 有关详细信息，请参阅[行为准则常见问题](https://opensource.microsoft.com/codeofconduct/faq/)，或如果有任何其他问题或意见，请与 [opencode@microsoft.com ](mailto:opencode@microsoft.com) 联系。
+此项目采用了 [Microsoft 开放源代码行为准则](https://opensource.microsoft.com/codeofconduct/)。 有关详细信息，请参阅[行为准则常见问题](https://opensource.microsoft.com/codeofconduct/faq/)，或如果有任何其他问题或意见，请与 [opencode@microsoft.com](mailto:opencode@microsoft.com) 联系。
 
 [live-badge]: https://powershell.visualstudio.com/PowerShell-Docs/_apis/build/status/PowerShell-Docs-CI?branchName=live
 [staging-badge]: https://powershell.visualstudio.com/PowerShell-Docs/_apis/build/status/PowerShell-Docs-CI?branchName=staging
@@ -35,7 +35,7 @@ ms.locfileid: "74540460"
     - [jea/](https://docs.microsoft.com/powershell/scripting/jea/) 对应于 Just Enough Administration 功能
     - [wmf/](https://docs.microsoft.com/powershell/scripting/wmf/overview) 包含 Windows Management Framework 的发行说明，该软件包用于将 PowerShell 的新版本分发到之前版本的 Windows。
 
-## <a name="contributing"></a>贡献文档
+## <a name="contributing"></a>供稿
 
 通过[拉取请求](https://help.github.com/articles/using-pull-requests/)到临时  分支，我们正积极将贡献文档并入此存储库。
 请注意在提交拉取请求前，必须签订[文档贡献许可协议](https://cla.microsoft.com/)，以确保社区成员可免费使用你的文档。

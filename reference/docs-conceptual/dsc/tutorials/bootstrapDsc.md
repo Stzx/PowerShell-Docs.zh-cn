@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 初始启动时使用 DSC 配置虚拟机
 ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954604"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>初始启动时使用 DSC 配置虚拟机
@@ -28,7 +28,7 @@ ms.locfileid: "71954604"
 
   通过使用 DSC，可以在初始启动时对计算机实现软件安装和配置的自动化。
   可以通过将配置 MOF 文档或元配置注入可启动媒体（例如 VHD）来执行此操作，以便它们能在初始启动过程中运行。
-  通过 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System` 下的 [DSCAutomationHostEnabled 注册表项](DSCAutomationHostEnabled.md) 注册表项指定此行为。
+  通过 [ 下的 ](DSCAutomationHostEnabled.md)DSCAutomationHostEnabled 注册表项`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System` 注册表项指定此行为。
   默认情况下，此项的值为 2，这允许 DSC 在启动时运行。
 
   如果不希望 DSC 在启动时运行，将 [DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) 注册表项的值设置为 0。
@@ -83,8 +83,8 @@ Configuration SampleIISInstall
    SampleIISInstall
    ```
 
-5. 这将在名为 `SampleIISInstall` 的新文件夹中创建 `localhost.mof` 文件。
-   通过使用 [Move-Item](/powershell/module/microsoft.powershell.management/move-item) cmdlet，重命名该文件并将其移动到 VHD 上的正确位置，作为 `Pending.mof`。 例如：
+5. 这将在名为 `localhost.mof` 的新文件夹中创建 `SampleIISInstall` 文件。
+   通过使用 `Pending.mof`Move-Item[ cmdlet，重命名该文件并将其移动到 VHD 上的正确位置，作为 ](/powershell/module/microsoft.powershell.management/move-item)。 例如：
 
    ```powershell
        Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\System32\Configuration\Pending.mof
@@ -103,7 +103,7 @@ Configuration SampleIISInstall
 
 ## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>将 DSC 元配置注入 VHD
 
-还可通过将元配置注入 VHD 作为其 `MetaConfig.mof` 文件，从而在初始启动时配置计算机以请求配置（请参阅[配置本地配置管理器 (LCM)](../managing-nodes/metaConfig.md)）。
+还可通过将元配置注入 VHD 作为其 [ 文件，从而在初始启动时配置计算机以请求配置（请参阅](../managing-nodes/metaConfig.md)配置本地配置管理器 (LCM)`MetaConfig.mof`）。
 如果将 **DSCAutomationHostEnabled** 注册表项设置为 2（默认值），则在首次启动计算机时，DSC 会将由 `MetaConfig.mof` 定义的元配置应用到 LCM。
 如果元配置指定 LCM 应从请求服务器请求配置，则计算机将尝试在初始启动时从该请求服务器请求配置。
 有关设置 DSC 请求服务器的信息，请参阅[设置 DSC Web 请求服务器](../pull-server/pullServer.md)。
@@ -153,8 +153,8 @@ configuration PullClientBootstrap
    PullClientBootstrap
    ```
 
-6. 这将在名为 `PullClientBootstrap` 的新文件夹中创建 `localhost.meta.mof` 文件。
-   通过使用 [Move-Item](/powershell/module/microsoft.powershell.management/move-item) cmdlet，重命名该文件并将其移动到 VHD 上的正确位置，作为 `MetaConfig.mof`。
+6. 这将在名为 `localhost.meta.mof` 的新文件夹中创建 `PullClientBootstrap` 文件。
+   通过使用 `MetaConfig.mof`Move-Item[ cmdlet，重命名该文件并将其移动到 VHD 上的正确位置，作为 ](/powershell/module/microsoft.powershell.management/move-item)。
 
    ```powershell
    Move-Item -Path C:\DSCTest\PullClientBootstrap\localhost.meta.mof -Destination E:\Windows\System32\Configuration\MetaConfig.mof
@@ -181,7 +181,7 @@ configuration PullClientBootstrap
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
    ```
 
-2. 通过调用 `reg load` 从 VHD 加载注册表 `HKLM\Software` 子项。
+2. 通过调用 `HKLM\Software` 从 VHD 加载注册表 `reg load` 子项。
 
    ```powershell
    reg load HKLM\Vhd E:\Windows\System32\Config\Software`

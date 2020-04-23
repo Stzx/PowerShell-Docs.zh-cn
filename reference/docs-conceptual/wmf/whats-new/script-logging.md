@@ -3,23 +3,23 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,安装程序
 title: 脚本跟踪和日志记录
 ms.openlocfilehash: 6b7e5022cb4c974da5ddb3d670b5808dc9fb7bdc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147797"
 ---
 # <a name="script-tracing-and-logging"></a>脚本跟踪和日志记录
 
 尽管 PowerShell 已经具有 LogPipelineExecutionDetails  组策略设置用以记录 cmdlet 的调用，但 PowerShell 的脚本语言仍有多个你可能想记录和审核的功能。 新的“详细脚本跟踪”功能提供系统上的 PowerShell 脚本活动的详细跟踪和分析。 在启用详细脚本跟踪后，PowerShell 会将所有脚本块记录到 Microsoft-Windows-PowerShell/Operational  的 ETW 事件日志中。 如果脚本块创建另一个脚本块（例如，调用 `Invoke-Expression`），则也会记录调用的脚本块。
 
-可以通过“打开 PowerShell 脚本块日志记录”  组策略设置（位于“管理模板” -> “Windows 组件” -> “Windows PowerShell”中）来启用日志记录。   
+可以通过“打开 PowerShell 脚本块日志记录”  组策略设置（位于“管理模板” **“Windows 组件”** “Windows PowerShell”中）来启用日志记录。 ->    ->  
 
 这些事件是：
 
-| 通道 |                               操作                               |
+| Channel |                               可运行                               |
 | ------- | ----------------------------------------------------------------------- |
-| 层次   | Verbose                                                                 |
+| 级别   | “详细”                                                                 |
 | 操作码  | 创建                                                                  |
 | 任务    | CommandStart                                                            |
 | 关键字 | Runspace                                                                |
@@ -31,9 +31,9 @@ ms.locfileid: "71147797"
 
 当启用 verbose 日志记录时，此功能将写入开始和结束标记：
 
-| 通道 |                                 操作                                |
+| Channel |                                 可运行                                |
 | ------- | -------------------------------------------------------------------------- |
-| 层次   | Verbose                                                                    |
+| 级别   | “详细”                                                                    |
 | 操作码  | 打开/关闭                                                               |
 | 任务    | CommandStart/CommandStop                                                 |
 | 关键字 | Runspace                                                                   |
