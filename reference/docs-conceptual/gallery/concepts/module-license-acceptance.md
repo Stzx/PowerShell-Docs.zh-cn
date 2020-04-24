@@ -28,8 +28,8 @@ ms.locfileid: "80082816"
 ## <a name="impact-on-installsaveupdate-module"></a>对 Install/Save/Update-Module 的影响
 
 - 安装/保存/更新 cmdlet 将支持新参数 AcceptLicense  ，此参数的行为就好像用户看到了许可证。
-- 如果 RequiredLicenseAcceptance **** 为 True 且未指定 AcceptLicense **** ，系统将向用户显示 `license.txt` 并提示：`Do you accept these license terms
-  (Yes/No/YesToAll/NoToAll)`。
+- 如果 RequiredLicenseAcceptance 为 True 且未指定 AcceptLicense，系统将向用户显示 `license.txt` 并提示：`Do you accept these license terms
+  (Yes/No/YesToAll/NoToAll)`。 **** ****
   - 如果接受许可证
     - **Save-Module：** 将把模块复制到用户系统中
     - **Install-Module：** 将把模块复制到用户系统的适当文件夹中（基于作用域）
