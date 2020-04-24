@@ -52,7 +52,7 @@ ms.locfileid: "80082816"
 
 ## <a name="examples"></a>示例
 
-### <a name="example-1-update-module-manifest-to-require-license-acceptance"></a>示例 1：更新模块清单以需要接受许可证
+### <a name="example-1-update-module-manifest-to-require-license-acceptance"></a>示例 1：更新模块清单以要求接受许可证
 
 ```powershell
 Update-ModuleManifest -Path C:\modulemanifest.psd1 -RequireLicenseAcceptance -PrivateData @{
@@ -66,7 +66,7 @@ Update-ModuleManifest -Path C:\modulemanifest.psd1 -RequireLicenseAcceptance -Pr
 
 此命令会更新清单文件，并将 RequireLicenseAcceptance 标记设置为 true。
 
-### <a name="example-2-install-module-requiring-license-acceptance"></a>示例 2：安装需要接受许可证的模块
+### <a name="example-2-install-module-requiring-license-acceptance"></a>示例 2：安装要求接受许可证的模块
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance
@@ -89,7 +89,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 此命令显示了 `license.txt` 文件中的许可证，并提示用户接受许可证。
 
-### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>示例 3：安装需要接受许可证及 -AcceptLicense 的模块
+### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>示例 3：安装要求接受许可证及 -AcceptLicense 的模块
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
@@ -97,7 +97,7 @@ Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
 
 在未提示接受许可证的情况下安装模块。
 
-### <a name="example-4-install-module-requiring-license-acceptance-with--force"></a>示例 4：安装需要接受许可证及 -Force 的模块
+### <a name="example-4-install-module-requiring-license-acceptance-with--force"></a>示例 4：安装要求接受许可证及 -Force 的模块
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance -Force
@@ -114,7 +114,7 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.1.3.3\PSModule.psm
    .InstallPackage
 ```
 
-### <a name="example-5-install-module-with-dependencies-requiring-license-acceptance"></a>示例 5：安装模块及需要接受许可证的依赖项
+### <a name="example-5-install-module-with-dependencies-requiring-license-acceptance"></a>示例 5：安装模块及要求接受许可证的依赖项
 
 模块 ModuleWithDependency  依赖于模块 ModuleRequireLicenseAcceptance  。 系统将提示用户接受许可证。
 
@@ -136,7 +136,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
-### <a name="example-6-install-module-with-dependencies-requiring-license-acceptance-and--acceptlicense"></a>示例 6：安装模块以及需要接受许可证和 -AcceptLicense 的依赖项
+### <a name="example-6-install-module-with-dependencies-requiring-license-acceptance-and--acceptlicense"></a>示例 6：安装模块以及要求接受许可证和 -AcceptLicense 的依赖项
 
 模块 ModuleWithDependency  依赖于模块 ModuleRequireLicenseAcceptance  。 系统不提示用户接受许可证，因为已指定 AcceptLicense  。
 
@@ -156,7 +156,7 @@ WARNING: The specified module 'ModuleRequireLicenseAcceptance' with PowerShellGe
 PowerShellGet module to install this module, 'ModuleRequireLicenseAcceptance'.
 ```
 
-### <a name="example-8-save-module-requiring-license-acceptance"></a>示例 8：保存需要接受许可证的模块
+### <a name="example-8-save-module-requiring-license-acceptance"></a>示例 8：保存要求接受许可证的模块
 
 ```powershell
 Save-Module -Name ModuleRequireLicenseAcceptance -Path C:\Saved
@@ -179,7 +179,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 此命令显示了 `license.txt` 文件中的许可证，并提示用户接受许可证。
 
-### <a name="example-9-save-module-requiring-license-acceptance-with--acceptlicense"></a>示例 9：保存需要接受许可证及 -AcceptLicense 的模块
+### <a name="example-9-save-module-requiring-license-acceptance-with--acceptlicense"></a>示例 9：保存要求接受许可证及 -AcceptLicense 的模块
 
 ```powershell
 Save-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense -Path C:\Saved
@@ -187,7 +187,7 @@ Save-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense -Path C:\Saved
 
 在未提示接受许可证的情况下保存模块。
 
-### <a name="example-10-update-module-requiring-license-acceptance"></a>示例 10：更新需要接受许可证的模块
+### <a name="example-10-update-module-requiring-license-acceptance"></a>示例 10：更新要求接受许可证的模块
 
 ```powershell
 Update-Module -Name ModuleRequireLicenseAcceptance
@@ -210,7 +210,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 此命令显示了 `license.txt` 文件中的许可证，并提示用户接受许可证。
 
-### <a name="example-11-update-module-requiring-license-acceptance-with--acceptlicense"></a>示例 11：更新需要接受许可证及 -AcceptLicense 的模块
+### <a name="example-11-update-module-requiring-license-acceptance-with--acceptlicense"></a>示例 11：更新要求接受许可证及 -AcceptLicense 的模块
 
 ```powershell
 Update-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
