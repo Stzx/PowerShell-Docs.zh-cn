@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC File 资源
 ms.openlocfilehash: 4c6945d4cdcbc64ac6d52db563823efe8fd0247e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954674"
 ---
 # <a name="dsc-file-resource"></a>DSC File 资源
@@ -36,17 +36,17 @@ File [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>“属性”
+## <a name="properties"></a>属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DestinationPath |想要通过 **Ensure** 确保目标节点上的位置 **Present** 或 **Absent**。 |
 |属性 |目标文件或目录的特性的所需状态。 有效值包括 Archive  、Hidden  、ReadOnly  和 System  。 |
 |校验和 |当确定两个文件是否相同时使用的校验和类型。 有效值包括：**SHA-1**、**SHA-256**、**SHA-512**、**createdDate**、**modifiedDate**。 |
-|目录 |仅当与 **Type** **File** 一起使用时才有效。 指示要 **Ensure** 的内容在目标文件中的 **Present** 或 **Absent** 状态。 |
+|目录 |仅当与 Type  File  一起使用时才有效。 指示要 **Ensure** 的内容在目标文件中的 **Present** 或 **Absent** 状态。 |
 |凭据 |访问资源（例如源文件）所需的凭据。 |
 |Force |覆盖将导致错误的访问操作（如覆盖文件或删除不为空的目录）。 默认值为 `$false`。 |
-|Recurse |仅当与 **Type** **Directory** 类型一起使用时才有效。 以递归方式对所有子目录执行状态操作。 默认值为 `$false`。 |
+|Recurse |仅当与 Type Directory   一起使用时才有效。 以递归方式对所有子目录执行状态操作。 默认值为 `$false`。 |
 |SourcePath |要从其中复制文件或文件夹资源的路径。 |
 |类型 |正在配置的资源的类型。 有效值为 **Directory** 和 **File**。 默认值为 **File**。 |
 |MatchSource |确定资源是否应监视初始复制之后添加到源目录的新文件。 `$true` 值表示，在初始复制之后，任何新的源文件都应复制到目标位置。 如果设置为 `$false`，资源将缓存源目录的内容，并忽略初始复制之后添加的任何文件。 默认值为 `$false`。 |
@@ -56,7 +56,7 @@ File [string] #ResourceName
 
 ## <a name="common-properties"></a>公共属性
 
-|属性 |说明 |
+|properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
 |Ensure |确定文件和 **Destination** 中的 **Contents** 是否应该存在。 将此属性设置为 **Present** 可确保文件存在。 将其设置为 **Absent** 可确保内容不存在。 默认值为 **Present**。 |
@@ -65,11 +65,11 @@ File [string] #ResourceName
 > [!NOTE]
 > 在 WMF 5.0 中添加了 **PsDscRunAsCredential** 公共属性，用于允许在其他凭据上下文中运行任何 DSC 资源。 有关详细信息，请参阅[将凭据与 DSC 资源配合使用](../../../configurations/runasuser.md)。
 
-### <a name="additional-information"></a>附加信息
+### <a name="additional-information"></a>其他信息
 
 - 仅指定 **DestinationPath** 时，资源可确保该路径存在 (**Present**) 或不存在 (**Absent**)。
 - 当使用 **Directory** 的 **Type** 值指定 **SourcePath** 和 **DestinationPath** 时，资源会将源目录复制到目标路径。 属性 **Recurse**、**Force** 和 **MatchSource** 更改所执行的复制操作的类型，而 **Credential** 决定使用哪个帐户来访问源目录。
-- 如果为 **Attributes** 属性指定的值为 **ReadOnly** 并指定 **DestinationPath**，则 **Ensure** **Present** 将创建指定的路径，而 **Contents** 将设置文件的内容。 **Ensure** **Absent** 设置将完全忽略 **Attributes** 属性，并删除指定路径下的任何文件。
+- 如果为 Attributes  属性指定的值为 ReadOnly  并指定 DestinationPath  ，则 Ensure   Present 将创建指定的路径，而 Contents  将设置文件的内容。 Ensure Absent   设置将完全忽略 Attributes  属性，并删除指定路径下的任何文件。
 
 ## <a name="example"></a>示例
 

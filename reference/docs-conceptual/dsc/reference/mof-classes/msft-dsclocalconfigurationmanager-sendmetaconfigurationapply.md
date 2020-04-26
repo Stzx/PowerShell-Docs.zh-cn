@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: SendMetaConfigurationApply 方法
 ms.openlocfilehash: b2e420bafb8ea22aea43800f6e429d3ed785d1e8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954874"
 ---
 # <a name="sendmetaconfigurationapply-method"></a>SendMetaConfigurationApply 方法
@@ -26,7 +26,7 @@ uint32 SendMetaConfigurationApply(
 
 ConfigurationData  \[in\]：配置的环境数据。
 
-force  \[in\]：若为 true  ，强制停止配置。
+force  \[in\]：若为 true  ，则强制停止配置。
 
 ## <a name="return-value"></a>返回值
 

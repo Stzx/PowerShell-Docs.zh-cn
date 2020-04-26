@@ -1,82 +1,79 @@
 ---
-title: 了解 VSCode 和 PowerShell 中的文件编码
-description: 在 VSCode 和 PowerShell 中配置文件编码
+title: 了解 VS Code 和 PowerShell 中的文件编码
+description: 在 VS Code 和 PowerShell 中配置文件编码
 ms.date: 02/28/2019
-ms.openlocfilehash: 3283e1262c8eb26906429ecf195cfa0b122b330f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b09c13374c28e88c66d1d84fbe56ca5c66b34c8c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74117407"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978672"
 ---
-# <a name="understanding-file-encoding-in-vscode-and-powershell"></a>了解 VSCode 和 PowerShell 中的文件编码
+# <a name="understanding-file-encoding-in-vs-code-and-powershell"></a>了解 VS Code 和 PowerShell 中的文件编码
 
 使用 VS Code 创建和编辑 PowerShell 脚本时，务必使用正确的字符编码格式保存文件。
 
 ## <a name="what-is-file-encoding-and-why-is-it-important"></a>什么是文件编码以及它为什么很重要？
 
-VSCode 管理人员向缓冲区中输入字符串与对文件系统读取/写入字节块之间的接口。 当 VSCode 保存文件时，它会使用文本编码来确定每个字符变为哪些字节。
+VS Code 管理人员向缓冲区中输入字符串与对文件系统读取/写入字节块之间的接口。 当 VS Code 保存文件时，它会使用文本编码来确定每个字符变为哪些字节。
 
-同样，当 PowerShell 运行脚本时，必须将文件中的字节转换为字符以将文件重新构造为 PowerShell 程序。 由于 VSCode 写入文件，而 PowerShell 读取文件，因此它们需要使用相同的编码系统。 分析 PowerShell 脚本的这一过程是：字节   -> 字符   -> 标记   -> 抽象语法树   -> 执行  。
+同样，当 PowerShell 运行脚本时，必须将文件中的字节转换为字符以将文件重新构造为 PowerShell 程序。 由于 VS Code 写入文件，而 PowerShell 读取文件，因此它们需要使用相同的编码系统。 分析 PowerShell 脚本的这一过程是：字节   -> 字符   -> 标记   -> 抽象语法树   -> 执行  。
 
-VSCode 和 PowerShell 都使用合理的默认编码配置进行安装。 但是，PowerShell 使用的默认编码已随着 PowerShell Core (v6.x) 的发布而更改。 若要确保在 VSCode 中使用 PowerShell 或 PowerShell 扩展时不会出现问题，需要正确配置 VSCode 和 PowerShell 设置。
+VS Code 和 PowerShell 都使用合理的默认编码配置进行安装。 但是，PowerShell 使用的默认编码已随着 PowerShell Core (v6.x) 的发布而更改。 若要确保在 VS Code 中使用 PowerShell 或 PowerShell 扩展时不会出现问题，需要正确配置 VS Code 和 PowerShell 设置。
 
 ## <a name="common-causes-of-encoding-issues"></a>编码问题的常见原因
 
-当 VSCode 或脚本文件的编码与 PowerShell 的期望编码不匹配时，会出现编码问题。 PowerShell 无法自动确定文件编码。
+当 VS Code 或脚本文件的编码与 PowerShell 的期望编码不匹配时，会出现编码问题。 PowerShell 无法自动确定文件编码。
 
 如果使用的字符不在 [7 位 ASCII 字符集](https://ascii.cl/)中，则更可能出现编码问题。 例如：
 
-- 扩展的非字母字符，如长破折号 (`—`)、不间断空格 (` `) 或左双引号 (`“`)
+- 扩展的非字母字符，如长破折号 (`—`)、不间断空格 (` `) 或左双引号 (`"`)
 - 重音拉丁字符（`É`、`ü`）
 - 非拉丁字符，如西里尔文（`Д`、`Ц`）
 - CJK 字符（`本`、`화`、`が`）
 
 编码问题的常见原因有：
 
-- VSCode 和 PowerShell 的编码尚未更改，仍使用默认设置。 对于 PowerShell 5.1 及更低版本，默认编码与 VSCode 不同。
+- VS Code 和 PowerShell 的编码尚未更改，仍使用默认设置。 对于 PowerShell 5.1 及更低版本，默认编码与 VS Code 的编码不同。
 - 另一个编辑器已打开，并采用新编码覆盖了文件。 ISE 通常会发生这种情况。
-- 文件采用与 VSCode 或 PowerShell 期望编码不同的编码签入了源代码管理。 当协作者使用具有不同编码配置的编辑器时，可能会发生这种情况。
+- 文件采用与 VS Code 或 PowerShell 应使用的编码不同的编码签入了源代码管理。 当协作者使用具有不同编码配置的编辑器时，可能会发生这种情况。
 
 ### <a name="how-to-tell-when-you-have-encoding-issues"></a>如何判断出现了编码问题
 
-编码错误通常表现为脚本中的分析错误。 如果在脚本中发现奇怪的字符序列，则这可能是问题所在。 在以下示例中，短划线 (`–`) 显示为字符 `â€“`：
+编码错误通常表现为脚本中的分析错误。 如果在脚本中发现奇怪的字符序列，则这可能是问题所在。 在以下示例中，短划线 (`–`) 显示为字符 `â&euro;"`：
 
 ```Output
 Send-MailMessage : A positional parameter cannot be found that accepts argument 'Testing FuseMail SMTP...'.
 At C:\Users\<User>\<OneDrive>\Development\PowerShell\Scripts\Send-EmailUsingSmtpRelay.ps1:6 char:1
-+ Send-MailMessage â€“From $from â€“To $recipient1 â€“Subject $subject  ...
++ Send-MailMessage â&euro;"From $from â&euro;"To $recipient1 â&euro;"Subject $subject  ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidArgument: (:) [Send-MailMessage], ParameterBindingException
     + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SendMailMessage
 ```
 
-发生此问题的原因是 VSCode 将采用 UTF-8 的字符 `–` 编码为字节 `0xE2 0x80 0x93`。
-当这些字节解码为 Windows-1252 时，它们会被解释为字符 `â€“`。
+发生此问题的原因是 VS Code 将采用 UTF-8 的字符 `–` 编码为字节 `0xE2 0x80 0x93`。 当这些字节解码为 Windows-1252 时，它们会被解释为字符 `â&euro;"`。
 
 可能会看到的一些奇怪字符序列包括：
 
 <!-- markdownlint-disable MD038 -->
-- `â€“`（而不是 `–`）
-- `â€”`（而不是 `—`）
+- `â&euro;"`（而不是 `–`）
+- `â&euro;"`（而不是 `—`）
 - `Ã„2`（而不是 `Ä`）
 - `Â`（而不是 ` `（不间断空格））
-- `Ã©`（而不是 `é`）
+- `Ã&copy;`（而不是 `é`）
 <!-- markdownlint-enable MD038 -->
 
 此便捷[参考](https://www.i18nqa.com/debug/utf8-debug.html)列出了指示 UTF-8/Windows-1252 编码问题的常见模式。
 
-## <a name="how-the-powershell-extension-in-vscode-interacts-with-encodings"></a>VSCode 中的 PowerShell 扩展与编码的交互方式
+## <a name="how-the-powershell-extension-in-vs-code-interacts-with-encodings"></a>VS Code 中的 PowerShell 扩展与编码的交互方式
 
 PowerShell 扩展通过多种方式与脚本进行交互：
 
-1. 当脚本在 VSCode 中进行编辑时，内容由 VSCode 发送到扩展。 [语言服务器协议][]要求此内容采用 UTF-8 进行传输。 因此，扩展不可能获取错误的编码。
-2. 当脚本直接在集成控制台中执行时，它们直接由 PowerShell 从文件读取。 如果 PowerShell 的编码与 VSCode 不同，则可能会出错。
-3. 当在 VSCode 中打开的一个脚本引用未在 VSCode 中打开的另一个脚本时，扩展会回退到从文件系统加载该脚本的内容。 PowerShell 扩展默认为 UTF-8 编码，但使用[字节顺序标记][]（或 BOM）检测来选择正确编码。
+1. 在 VS Code 中编辑脚本时，内容由 VS Code 发送到扩展。 [语言服务器协议][]要求此内容采用 UTF-8 进行传输。 因此，扩展不可能获取错误的编码。
+2. 当脚本直接在集成控制台中执行时，它们直接由 PowerShell 从文件读取。 如果 PowerShell 的编码与 VS Code 的编码不同，则可能会出错。
+3. 当在 VS Code 中打开的一个脚本引用未在 VS Code 中打开的另一个脚本时，扩展会回退到从文件系统加载该脚本的内容。 PowerShell 扩展默认为 UTF-8 编码，但使用[字节顺序标记][]（或 BOM）检测来选择正确编码。
 
-当采用无 BOM 式格式的编码（如没有 BOM 的 [UTF-8][] 和 [Windows-1252][]）时，会出现问题。
-PowerShell 扩展默认为 UTF-8。 扩展无法更改 VSCode 的编码设置。
-有关详细信息，请参阅[问题 #824](https://github.com/Microsoft/vscode/issues/824)。
+当采用无 BOM 式格式的编码（如没有 BOM 的 [UTF-8][] 和 [Windows-1252][]）时，会出现问题。 PowerShell 扩展默认为 UTF-8。 扩展无法更改 VS Code 的编码设置。 有关详细信息，请参阅 [问题 #824](https://github.com/Microsoft/VS Code/issues/824)。
 
 ## <a name="choosing-the-right-encoding"></a>选择正确编码
 
@@ -99,11 +96,11 @@ BOM 是可选的，其采用在 Linux 领域中并不普遍，因为到处都在
   但是，某些较旧的 Windows 应用程序可能依赖于它们。
 - 另外值得注意的是，脚本签名[依赖于编码](https://github.com/PowerShell/PowerShell/issues/3466)，这意味着签名脚本中的编码更改需要重新签名。
 
-## <a name="configuring-vscode"></a>配置 VSCode
+## <a name="configuring-vs-code"></a>配置 VS Code
 
-VSCode 的默认编码是不具有 BOM 的 UTF-8。
+VS Code 的默认编码是不具有 BOM 的 UTF-8。
 
-若要设置 [VSCode 的编码][]，请转到 VSCode 设置（<kbd>Ctrl</kbd>+<kbd>，</kbd>）并设置 `"files.encoding"` 设置：
+若要设置 [VS Code 的编码][]，请转到 VS Code 设置 (<kbd>Ctrl</kbd>+<kbd>,</kbd>) 并设置 `"files.encoding"` 设置：
 
 ```json
 "files.encoding": "utf8bom"
@@ -111,11 +108,11 @@ VSCode 的默认编码是不具有 BOM 的 UTF-8。
 
 一些可能值有：
 
-- `utf8`：不具有 BOM 的 [UTF-8]
-- `utf8bom`：具有 BOM 的 [UTF-8]
-- `utf16le`：Little endian [UTF-16]
-- `utf16be`：Big endian [UTF-16]
-- `windows1252`：[Windows-1252]
+- `utf8`设置用户帐户 ：不具有 BOM 的 [UTF-8]
+- `utf8bom`设置用户帐户 ：具有 BOM 的 [UTF-8]
+- `utf16le`设置用户帐户 ：Little endian [UTF-16]
+- `utf16be`设置用户帐户 ：Big endian [UTF-16]
+- `windows1252`设置用户帐户 ：[Windows-1252]
 
 应在 GUI 视图中看到适用于此内容的下拉列表，或是在 JSON 视图中看到其完成。
 
@@ -125,7 +122,7 @@ VSCode 的默认编码是不具有 BOM 的 UTF-8。
 "files.autoGuessEncoding": true
 ```
 
-如果不希望这些设置影响所有文件类型，则 VSCode 还允许按语言进行配置。 创建在 `[<language-name>]` 字段中放置设置，可以配置特定于语言的设置。 例如：
+如果不希望这些设置影响所有文件类型，则 VS Code 还允许按语言进行配置。 创建在 `[<language-name>]` 字段中放置设置，可以配置特定于语言的设置。 例如：
 
 ```json
 "[powershell]": {
@@ -183,10 +180,11 @@ finally
 }
 ```
 
-可以更普遍地使用配置文件设置将 PowerShell 配置为使用给定编码。 请参阅以下文章：
+可以更普遍地使用配置文件设置将 PowerShell 配置为使用给定编码。
+请参阅以下文章：
 
-- [@mklement0] [有关 StackOverflow 上的 PowerShell 编码的解答](https://stackoverflow.com/a/40098904)。
-- [@rkeithhill] [有关在 PowerShell 中处理无 BOM 式 UTF-8 输入的博客文章](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/)。
+- [@mklement0][有关 StackOverflow 上的 PowerShell 编码的解答](https://stackoverflow.com/a/40098904)。
+- [@rkeithhill][有关在 PowerShell 中处理无 BOM 式 UTF-8 输入的博客文章](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/)。
 
 无法强制 PowerShell 使用特定输入编码。 在没有 BOM 时，PowerShell 5.1 及以下版本默认为 Windows-1252 编码。 出于互操作性原因，最好使用具有 BOM 的 Unicode 格式保存脚本。
 
@@ -195,7 +193,7 @@ finally
 
 ### <a name="existing-scripts"></a>现有脚本
 
-文件系统上已有的脚本可能需要重新编码为新的所选编码。 在 VSCode 底部栏中，会看到 UTF-8 标签。 单击它可打开操作栏并选择“保存时使用编码”  。 现在可以为该文件选取新编码。 有关完整说明，请参阅 [VSCode 的编码][]。
+文件系统上已有的脚本可能需要重新编码为新的所选编码。 在 VS Code 底部栏中，会看到 UTF-8 标签。 单击它可打开操作栏并选择“保存时使用编码”  。 现在可以为该文件选取新编码。 有关完整说明，请参阅 [VS Code 的编码][]。
 
 如果需要重新编码多个文件，则可以使用以下脚本：
 
@@ -215,12 +213,11 @@ ISE 应遵循 BOM，但也可以使用反射来[设置编码](https://bensonxion
 
 ### <a name="source-control-software"></a>源代码管理软件
 
-一些源代码管理工具（如 git）会忽略编码；git 只跟踪字节。
-其他工具（如 Azure DevOps 或 Mercurial）可能不会忽略编码。 甚至一些基于 git 的工具也依赖于文本解码。
+一些源代码管理工具（如 git）会忽略编码；git 只跟踪字节。 其他工具（如 Azure DevOps 或 Mercurial）可能不会忽略编码。 甚至一些基于 git 的工具也依赖于文本解码。
 
 在这种情况下，请确保：
 
-- 在源代码管理中配置文本编码以匹配 VSCode 配置。
+- 在源代码管理中配置文本编码以匹配 VS Code 配置。
 - 确保所有文件都采用相关编码签入到源代码管理中。
 - 应注意通过源代码管理收到的编码更改。 这种情况的一个重要迹象是有差异指示更改，但似乎没有任何内容发生更改（因为字节更改，但字符未更改）。
 
@@ -257,12 +254,12 @@ ISE 应遵循 BOM，但也可以使用反射来[设置编码](https://bensonxion
 有其他几篇有关在 PowerShell 中编码和配置编码的很好的文章值得一读：
 
 - [@mklement0] 的 [StackOverflow 上的 PowerShell 编码摘要](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
-- 以前在 vscode-PowerShell 上建立的针对编码问题的问题：
-  - [#1308](https://github.com/PowerShell/vscode-powershell/issues/1308)
-  - [#1628](https://github.com/PowerShell/vscode-powershell/issues/1628)
-  - [#1680](https://github.com/PowerShell/vscode-powershell/issues/1680)
-  - [#1744](https://github.com/PowerShell/vscode-powershell/issues/1744)
-  - [#1751](https://github.com/PowerShell/vscode-powershell/issues/1751)
+- 以前在 VS Code-PowerShell 上创建的针对编码问题的问题：
+  - [#1308](https://github.com/PowerShell/VS Code-powershell/issues/1308)
+  - [#1628](https://github.com/PowerShell/VS Code-powershell/issues/1628)
+  - [#1680](https://github.com/PowerShell/VS Code-powershell/issues/1680)
+  - [#1744](https://github.com/PowerShell/VS Code-powershell/issues/1744)
+  - [#1751](https://github.com/PowerShell/VS Code-powershell/issues/1751)
 - [经典的“Joel 说软件”  探讨 Unicode](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
 - [.NET Standard 中的编码](https://github.com/dotnet/standard/issues/260#issuecomment-289549508)
 
@@ -275,4 +272,4 @@ ISE 应遵循 BOM，但也可以使用反射来[设置编码](https://bensonxion
 [字节顺序标记]: https://wikipedia.org/wiki/Byte_order_mark
 [UTF-16]: https://wikipedia.org/wiki/UTF-16
 [语言服务器协议]: https://microsoft.github.io/language-server-protocol/
-[VSCode 的编码]: https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support
+[VS Code 的编码]: https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support

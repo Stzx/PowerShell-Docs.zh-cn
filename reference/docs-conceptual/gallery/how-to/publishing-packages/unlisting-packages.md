@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: 取消列出包
-ms.openlocfilehash: fb66fd23dae1d4640056a764c31426f61f56d910
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b7404420db531ac5d97debd46e1b84c6fdd49d9a
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328268"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978264"
 ---
 # <a name="unlisting-packages"></a>取消列出包
 
@@ -18,7 +18,7 @@ PowerShell 库不支持用户永久删除其包。
 这让其他人能够依赖你的包而无需担心将来可能产生的中断。
 例如，如果 Pester 模块依赖 Azure 模块，而 Azure 模块从库中删除，那么用户将不能使用 Pester 模块。
 
-无法删除包，但可将其取消列出。
+可以取消列出包，但不能删除包。
 
 在 PowerShell 库中取消列出包的作用是什么？ 
 
@@ -26,9 +26,9 @@ PowerShell 库不支持用户永久删除其包。
 下载取消列出的包的唯一方法是指定包的确切名称和版本。
 因此，取消列出的包将不会中断依赖它的其他模块或脚本。
 
-若要取消列出包，可访问包详细信息页，选择“删除模块”。 取消选中“列出”复选框，单击“保存”。
+若要取消列出包，可访问包详细信息页，选择“删除模块”。 取消选中“列出”复选框，并选择“保存”。
 
-如何移除包？ 
+**如何移除包？**
 
 如果遇到有必要删除包的情况，请与 PowerShell 库管理员联系。
 正当的删除情况包括：

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用 DSC 生成持续集成和连续部署管道
 ms.openlocfilehash: 2d049cd640f0df9b018a88ad106e59dbeed7bcee
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954234"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>使用 DSC 生成持续集成和连续部署管道
@@ -18,7 +18,7 @@ ms.locfileid: "71954234"
 
 自动 CI/CD 管道有助于更快、更可靠地更新软件，确保所有代码都经过测试，并确保最新版代码始终可用。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要使用此示例，应熟悉以下内容：
 
@@ -31,7 +31,7 @@ ms.locfileid: "71954234"
 
 若要生成并运行此示例，需要一个包含多台计算机和/或虚拟机的环境。
 
-### <a name="client"></a>客户端
+### <a name="client"></a>Client
 
 将在这台计算机上执行生成和运行此示例所需的全部工作。
 
@@ -91,7 +91,7 @@ ms.locfileid: "71954234"
 > 此示例使用 Git 存储库 `ci-cd-example` 分支中的代码。
 > 请务必将此分支指定为 TFS 项目和创建的 CI/CD 触发器的默认分支。
 
-## <a name="understanding-the-code"></a>了解代码
+## <a name="understanding-the-code"></a>了解数据
 
 创建生成和部署管道前，我们先来分析一些代码，以便了解具体情况。
 在客户端计算机上，打开常用文本编辑器，再转到 Demo_CI Git 存储库根。

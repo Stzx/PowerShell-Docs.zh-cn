@@ -3,12 +3,12 @@ title: 编辑清单
 description: 这是用于编辑 PowerShell 文档的规则的汇总列表。
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 511e0c323e1a3256039e819d06f32f6e1ac42767
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.openlocfilehash: b5baf7366239084779d34e23f218e5e6222ed1a3
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060332"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624731"
 ---
 # <a name="editors-checklist"></a>编辑器的清单
 
@@ -36,7 +36,8 @@ ms.locfileid: "79060332"
   - 语法示例 `Verb-Noun -Parameter`
   - 文件路径 `C:\Program Files\PowerShell`、`/usr/bin/pwsh`
   - 不应在文档中单击的 URL
-- 对属性名称、参数值、参数名称、类名称、模块名称、实体名称、对象或类型名称使用粗体
+  - 属性值或参数值
+- 对属性名称、参数名称、类名称、模块名称、实体名称、对象或类型名称使用粗体
   - 粗体用于语义标记，而不用于强调
   - 粗体 - 使用星号 `**`
 - 斜体 - 使用下划线 `_`
@@ -60,7 +61,7 @@ ms.locfileid: "79060332"
 - 前后空行
 - 使用已标记的代码栅栏 - powershell、输出或其他相应的语言 ID  
 - 未标记的栅栏 - 语法块或其他 shell
-- 将输出置于单独的代码块中，除了一些简单的示例，在这些示例中，你不打算让读者使用“复制”按钮  
+- 将输出置于单独的代码块中，除了一些简单的示例，在这些示例中，你不打算让读者使用“复制”按钮 
 - 请参阅[支持的语言](/contribute/code-in-docs#supported-languages)的列表
 
 ### <a name="lists"></a>列表

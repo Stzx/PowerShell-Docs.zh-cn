@@ -4,10 +4,10 @@ ms.topic: conceptual
 keywords: wmf,powershell,安装程序
 title: 产品兼容性状态
 ms.openlocfilehash: c740b2560162ecdab40daac2f9ae36c29811ac13
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147817"
 ---
 # <a name="product-compatibility-status"></a>产品兼容性状态

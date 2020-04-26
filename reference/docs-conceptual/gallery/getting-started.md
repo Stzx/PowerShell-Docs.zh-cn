@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: PowerShell 库入门
-ms.openlocfilehash: fd4185234136dd9f3e628df50954b6ebff637639
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: bae0af144e6f520142e7eaea3dd0e1039976dae4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995892"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81219687"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>PowerShell 库入门
 
@@ -32,7 +32,7 @@ PowerShell 库是一个包存储库，包含脚本、模块以及可供下载和
 - DscResource
 - RoleCapability
 - Command
-- “筛选器”
+- 筛选器
 
 如果只想发现库中的特定 DSC 资源，可运行 [Find-DscResource][] cmdlet。 Find-DscResource 会返回库中 DSC 资源的相关数据。 由于 DSC 资源始终作为模块的部分进行传递，所以仍需运行 [Install-Module][] 来安装这些 DSC 资源。
 
@@ -85,6 +85,16 @@ PowerShell 库是一个包存储库，包含脚本、模块以及可供下载和
 若要确定已安装 PowerShell 库中的哪些模块，请运行 [Get-InstalledModule][] cmdlet。 该命令会列出系统上所有已直接从 PowerShell 库安装的模块。
 
 同样，若要确定已安装 PowerShell 库中的哪些脚本，请运行 [Get-InstalledScript][] cmdlet。 此命令会列出系统上所有已直接从 PowerShell 库安装的脚本。
+
+## <a name="network-access-to-the-powershell-gallery"></a>对 PowerShell 库的网络访问
+
+PowerShell 库使用以下主机名。
+
+- `psg-prod-eastus.azureedge.net` - CDN 主机名
+- `devopsgallerystorage.blob.core.windows.net` - 存储帐户主机名
+- `*.powershellgallery.com` - 网站
+
+应将这些主机名添加到控制网络访问权限的允许列表中。
 
 [Find-DscResource]: /powershell/module/powershellget/Find-DscResource
 [Find-Module]: /powershell/module/powershellget/Find-Module

@@ -2,12 +2,12 @@
 title: 从 Windows PowerShell 5.1 迁移到 PowerShell 7
 description: 为 Windows 平台从 PowerShell 5.1 更新到 PowerShell 7。
 ms.date: 03/25/2020
-ms.openlocfilehash: e3881b1758f50119444969ad39541aec694cebe5
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 8f19297bdb4825f3bbd50544dc5737997e3c83e3
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500504"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81440486"
 ---
 # <a name="migrating-from-windows-powershell-51-to-powershell-7"></a>从 Windows PowerShell 5.1 迁移到 PowerShell 7
 
@@ -176,7 +176,7 @@ Windows PowerShell 5.1 及更低版本使用 WS-Management (WSMAN) 协议进行�
 Enter-PSSession -HostName <Computer> -UserName <Username>
 ```
 
-或者，在使用 HostName  参数时，提供用户名信息，后跟 @ 符号和计算机名。
+或者，在使用 HostName  参数时，提供用户名信息，后跟 at 符号 (`@`) 和计算机名。
 
 ```powershell
 Enter-PSSession -HostName <Username>@<Computer>
