@@ -296,6 +296,8 @@
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
     - name: 从 Windows PowerShell 5.1 迁移到 PowerShell 7
       href: whats-new/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
+    - name: 使用实验性功能
+      href: whats-new/experimental-features.md
     - name: 模块和 cmdlet 发行历史记录
       href: whats-new/cmdlet-versions.md
     - name: 模块兼容性列表
