@@ -2,12 +2,12 @@
 title: 通过 SSH 进行 PowerShell 远程处理
 description: 在 PowerShell Core 中使用 SSH 进行远程处理
 ms.date: 09/30/2019
-ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9fe3e22c54a4695a1027f416acf113f2f7fd2cd7
+ms.sourcegitcommit: 7c7f8bb9afdc592d07bf7ff4179d000a48716f13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "73444370"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82174121"
 ---
 # <a name="powershell-remoting-over-ssh"></a>通过 SSH 进行 PowerShell 远程处理
 
@@ -53,7 +53,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    > [!NOTE]
    > 如果要将 PowerShell 设置为 OpenSSH 的默认 shell，请参阅[为 OpenSSH 配置 Windows](/windows-server/administration/openssh/openssh_server_configuration)。
 
-1. 编辑位于 `sshd_config` 的 `$env:ProgramData\ssh` 文件。
+1. 编辑位于 `$env:ProgramData\ssh` 的 `sshd_config` 文件。
 
    确保已启用密码身份验证：
 
@@ -64,10 +64,12 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    创建托管远程计算机上的 PowerShell 进程的 SSH 子系统：
 
    ```
-   Subsystem powershell c:/progra~1/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo -NoProfile
    ```
 
    > [!NOTE]
+   > PowerShell 可执行文件的默认位置是 `c:/progra~1/powershell/7/pwsh.exe`。 该位置可能因 PowerShell 安装方式而有所不同。
+   >
    > 对于包含空格的任何文件路径，必须使用 8.3 短名称。 OpenSSH for Windows 中存在一个 bug，使空格在子系统可执行路径中无效。 有关详细信息，请参阅此 [GitHub 问题](https://github.com/PowerShell/Win32-OpenSSH/issues/784)。
    >
    > Windows 中的 `Program Files` 文件夹的 8.3 短名称通常为 `Progra~1`。 但是，可以使用以下命令来确保：
@@ -109,7 +111,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    sudo apt install openssh-server
    ```
 
-1. 编辑 `sshd_config` 位置中的 `/etc/ssh` 文件。
+1. 编辑 `/etc/ssh` 位置中的 `sshd_config` 文件。
 
    确保已启用密码身份验证：
 
@@ -122,6 +124,9 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    ```
    Subsystem powershell /usr/bin/pwsh -sshs -NoLogo -NoProfile
    ```
+
+   > [!NOTE]
+   > PowerShell 可执行文件的默认位置是 `/usr/bin/pwsh`。 该位置可能因 PowerShell 安装方式而有所不同。
 
    启用密钥身份验证（可选）：
 
@@ -146,7 +151,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    1. 选中 `Remote Login` 以设置 `Remote Login: On`。
    1. 允许相应用户访问。
 
-1. 编辑 `sshd_config` 位置中的 `/private/etc/ssh/sshd_config` 文件。
+1. 编辑 `/private/etc/ssh/sshd_config` 位置中的 `sshd_config` 文件。
 
    打开文本编辑器，例如 **nano**：
 
@@ -166,6 +171,9 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
    ```
 
+   > [!NOTE]
+   > PowerShell 可执行文件的默认位置是 `/usr/local/bin/pwsh`。 该位置可能因 PowerShell 安装方式而有所不同。
+
    启用密钥身份验证（可选）：
 
    ```
@@ -179,7 +187,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    sudo launchctl start com.openssh.sshd
    ```
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>身份验证
 
 通过 SSH 进行 PowerShell 远程处理依赖于 SSH 客户端和 SSH 服务之间的身份验证交换，并且本身不实现任何身份验证方案。 这使得任何配置的身份验证方案（包括多重身份验证）都由 SSH 处理，并且独立于 PowerShell。 例如，可以将 SSH 服务配置为需要公钥身份验证以及一次性密码，从而增加安全性。 多重身份验证的配置不在本文档的讨论范围。 若要了解如何正确配置多重身份验证，请参阅相关的 SSH 文档，并在尝试将其用于 PowerShell 远程处理之前先在 PowerShell 之外验证它的运行效果。
 

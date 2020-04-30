@@ -2,12 +2,12 @@
 title: 在 Windows 上安装 PowerShell
 description: 介绍如何在 Windows 上安装 PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: ea5432725f4baea8c688fb8e67482910e2c3981e
-ms.sourcegitcommit: b6cf10224eb9f32919a505cdffbe5968241c18a1
+ms.openlocfilehash: a8543a91ad503364c5346a11c9c9d9f910547278
+ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80374897"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141386"
 ---
 # <a name="installing-powershell-on-windows"></a>在 Windows 上安装 PowerShell
 
@@ -82,11 +82,11 @@ Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />安装 ZIP 包
 
-提供有 PowerShell 二进制 ZIP 存档，从而支持高级部署方案。 安装 ZIP 存档不会像 MSI 包一样检查先决条件。 为了让使用 WSMan 的远程处理能够正常运行，请确保已满足[先决条件](#prerequisites)。
+提供有 PowerShell 二进制 ZIP 存档，从而支持高级部署方案。 安装 ZIP 存档不会像 MSI 包一样检查先决条件。 从[发布][releases]页面下载 ZIP 存档。 根据该文件的下载方式，你可能需要使用 `Unblock-File` cmdlet 解锁。 将内容解压到你选择的位置，然后从该位置运行 `pwsh.exe`。 为了让使用 WSMan 的远程处理能够正常运行，请确保已满足[先决条件](#prerequisites)。
 
-## <a name="deploying-on-windows-iot"></a>在 Windows IoT 上部署
+## <a name="deploying-on-windows-10-iot-enterprise"></a>Windows 10 IoT 企业版部署
 
-Windows IoT 随附 Windows PowerShell，可用来部署 PowerShell 7。
+Windows 10 IoT 企业版随附 Windows PowerShell，可用来部署 PowerShell 7。
 
 1. 在目标设备中创建 `PSSession`
 
@@ -128,6 +128,16 @@ Windows IoT 随附 Windows PowerShell，可用来部署 PowerShell 7。
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.<version>
    ```
+## <a name="deploying-on-windows-10-iot-core"></a>Windows 10 IoT 核心版部署
+
+当你添加 IOT_POWERSHELL  功能后，Windows 10 IoT 核心版便会添加 Windows PowerShell，我们可以使用它来部署 PowerShell 7。
+对于 IoT 核心版，还可以遵循为 Windows 10 IoT 企业版定义的步骤。
+
+若要在随附映像中添加最新的 Powershell，请使用 [Import-PSCoreRelease](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/IoTCoreImaging/Docs/Import-PSCoreRelease.md#Import-PSCoreRelease) 命令在工作区域中添加包，然后将 OPENSRC_POWERSHELL  功能添加到映像中。
+
+> [!NOTE]
+> 对于 ARM64 体系结构，在你添加 IOT_POWERSHELL  功能后，它不会添加 Windows Powershell。 因此，基于 zip 的安装将不起作用。
+> 需要使用 Import-PSCoreRelease 命令将其添加到映像中。
 
 ## <a name="deploying-on-nano-server"></a>在 Nano Server 上进行部署
 
