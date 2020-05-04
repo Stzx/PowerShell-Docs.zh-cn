@@ -731,13 +731,20 @@
         - name: 附录 2 - 创建自定义 PowerShell 快捷方式
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
 - name: 社区
+  expanded: true
   items:
-    - name: 社区资源
+    - name: 社区更新
+      href: community/community-update.yml
+    - name: 社区支持
       href: community/community-support.md
-    - name: 数字艺术
-      href: community/digital-art.md
-    - name: PowerShell Docs 的最近更新
-      href: community/whats-new-in-docs.md
+    - name: 参与者名人堂
+      href: community/hall-of-fame.md
+    - name: Docs 中的新增内容
+      items:
+        - name: 2020-Q2
+          href: community/2020-Q2.md
+        - name: 2020-Q1
+          href: community/2020-Q1.md
     - name: 参与者指南
       items:
         - name: 概述
@@ -760,6 +767,8 @@
               href: community/contributing/managing-issues.md
             - name: 如何管理拉取请求
               href: community/contributing/managing-pull-requests.md
+    - name: 数字艺术
+      href: community/digital-art.md
 - name: PowerShell SDK
   items:
     - name: 概述
