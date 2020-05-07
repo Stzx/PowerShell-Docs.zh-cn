@@ -1,19 +1,17 @@
 ---
-title: PowerShell 社区资源
+title: PowerShell 社区支持资源
 description: 为/由 PowerShell 用户创建的资源列表
-ms.date: 03/04/2020
-ms.openlocfilehash: 50f5eaaef9ef30351fa605f74648a8efbce90af3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.date: 04/29/2020
+ms.openlocfilehash: f35524c8a1a457ffd6cccf0d2165cc340f7519ca
+ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80395021"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82630829"
 ---
-# <a name="powershell-community-resources"></a>PowerShell 社区资源
+# <a name="getting-support-from-the-community"></a>从社区获取帮助
 
 PowerShell 社区是一个充满活力的用户组。 本文可帮助你与社区的其他成员取得联系。
-
-## <a name="getting-support-from-the-community"></a>从社区获取帮助
 
 PowerShell 社区可以在 [GitHub](https://github.com/powershell/powershell/issues) 存储库中提出问题、Bug 或功能请求。 如有疑问，可以在以下公共论坛之一中找到来自社区的其他成员的帮助：
 
@@ -27,9 +25,3 @@ PowerShell 社区可以在 [GitHub](https://github.com/powershell/powershell/iss
 - [PowerShell Discord](https://discord.gg/Ju25cw6)
 
 有关支持策略的信息，请参阅 [PowerShell 支持生命周期](/powershell/scripting/powershell-support-lifecycle)。
-
-## <a name="looking-for-logos-and-other-digital-goodies"></a>查找徽标和其他数字超值服务
-
-我们提供了一系列数字作品供你欣赏。
-
-[数字艺术](/powershell/scripting/community/digital-art)
