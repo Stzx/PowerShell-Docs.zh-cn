@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: 社区最新动态
+summary: 资源列表，以及新文章和社区参与情况的摘要。
+metadata:
+  title: 社区最新动态
+  description: 资源列表，以及新文章和社区参与情况的摘要。
+  ms.topic: landing-page
+  author: sdwheeler
+  ms.author: sewhee
+  ms.date: 04/29/2020
+  ms.openlocfilehash: 42d8de8ffedf9ac1b0bd7ee5df1483f8d1316da7
+  ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82630883"
+landingContent:
+- title: 社区资源
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 社区支持
+      url: community-support.md
+    - text: 数字艺术
+      url: digital-art.md
+    - text: 参与者名人堂
+      url: hall-of-fame.md
+- title: PowerShell Docs 的新增内容
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 2020-Q2
+      url: ./2020-Q2.md
+    - text: 2020-Q1
+      url: ./2020-Q1.md
+- title: 参与 - 参与 PowerShell Docs
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: PowerShell 参与者指南
+      url: contributing/overview.md
+    - text: 开始撰稿
+      url: contributing/get-started-writing.md
+  - linkListType: how-to-guide
+    links:
+    - text: 如何提出问题
+      url: contributing/file-an-issue.md
+    - text: 提交拉取请求
+      url: contributing/pull-requests.md
+    - text: PowerShell-Docs 风格指南
+      url: contributing/powershell-style-guide.md
+    - text: 编辑 cmdlet 参考
+      url: contributing/editing-cmdlet-ref.md
+  - linkListType: reference
+    links:
+    - text: 编辑清单
+      url: contributing/editorial-checklist.md
+    - text: 如何管理问题
+      url: contributing/managing-issues.md
+    - text: 如何管理拉取请求
+      url: contributing/managing-pull-requests.md
