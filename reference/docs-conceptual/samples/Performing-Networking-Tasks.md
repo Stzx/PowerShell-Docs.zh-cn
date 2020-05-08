@@ -113,7 +113,7 @@ Address   ResponseTime StatusCode
 
 ```powershell
 1..254| ForEach-Object -Process {
-  Get-CimInstance -Class Win32_PingStatus -Filter ("Address='192.168.1.$_ '") } |
+  Get-CimInstance -Class Win32_PingStatus -Filter ("Address='192.168.1.$_'") } |
     Select-Object -Property Address,ResponseTime,StatusCode
 ```
 
