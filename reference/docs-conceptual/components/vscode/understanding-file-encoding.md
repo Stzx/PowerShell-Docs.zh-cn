@@ -2,12 +2,12 @@
 title: 了解 VS Code 和 PowerShell 中的文件编码
 description: 在 VS Code 和 PowerShell 中配置文件编码
 ms.date: 02/28/2019
-ms.openlocfilehash: b09c13374c28e88c66d1d84fbe56ca5c66b34c8c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 991e3ccc95dd0dd2106cefe6c68371e59c031f35
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80978672"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271859"
 ---
 # <a name="understanding-file-encoding-in-vs-code-and-powershell"></a>了解 VS Code 和 PowerShell 中的文件编码
 
@@ -73,7 +73,7 @@ PowerShell 扩展通过多种方式与脚本进行交互：
 2. 当脚本直接在集成控制台中执行时，它们直接由 PowerShell 从文件读取。 如果 PowerShell 的编码与 VS Code 的编码不同，则可能会出错。
 3. 当在 VS Code 中打开的一个脚本引用未在 VS Code 中打开的另一个脚本时，扩展会回退到从文件系统加载该脚本的内容。 PowerShell 扩展默认为 UTF-8 编码，但使用[字节顺序标记][]（或 BOM）检测来选择正确编码。
 
-当采用无 BOM 式格式的编码（如没有 BOM 的 [UTF-8][] 和 [Windows-1252][]）时，会出现问题。 PowerShell 扩展默认为 UTF-8。 扩展无法更改 VS Code 的编码设置。 有关详细信息，请参阅 [问题 #824](https://github.com/Microsoft/VS Code/issues/824)。
+当采用无 BOM 式格式的编码（如没有 BOM 的 [UTF-8][] 和 [Windows-1252][]）时，会出现问题。 PowerShell 扩展默认为 UTF-8。 扩展无法更改 VS Code 的编码设置。 有关详细信息，请参阅[问题 #824](https://github.com/Microsoft/VSCode/issues/824)。
 
 ## <a name="choosing-the-right-encoding"></a>选择正确编码
 
@@ -108,11 +108,11 @@ VS Code 的默认编码是不具有 BOM 的 UTF-8。
 
 一些可能值有：
 
-- `utf8`设置用户帐户 ：不具有 BOM 的 [UTF-8]
-- `utf8bom`设置用户帐户 ：具有 BOM 的 [UTF-8]
-- `utf16le`设置用户帐户 ：Little endian [UTF-16]
-- `utf16be`设置用户帐户 ：Big endian [UTF-16]
-- `windows1252`设置用户帐户 ：[Windows-1252]
+- `utf8`：不具有 BOM 的 [UTF-8]
+- `utf8bom`：具有 BOM 的 [UTF-8]
+- `utf16le`：Little endian [UTF-16]
+- `utf16be`：Big endian [UTF-16]
+- `windows1252`：[Windows-1252]
 
 应在 GUI 视图中看到适用于此内容的下拉列表，或是在 JSON 视图中看到其完成。
 
@@ -255,11 +255,11 @@ ISE 应遵循 BOM，但也可以使用反射来[设置编码](https://bensonxion
 
 - [@mklement0] 的 [StackOverflow 上的 PowerShell 编码摘要](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
 - 以前在 VS Code-PowerShell 上创建的针对编码问题的问题：
-  - [#1308](https://github.com/PowerShell/VS Code-powershell/issues/1308)
-  - [#1628](https://github.com/PowerShell/VS Code-powershell/issues/1628)
-  - [#1680](https://github.com/PowerShell/VS Code-powershell/issues/1680)
-  - [#1744](https://github.com/PowerShell/VS Code-powershell/issues/1744)
-  - [#1751](https://github.com/PowerShell/VS Code-powershell/issues/1751)
+  - [#1308](https://github.com/PowerShell/VSCode-powershell/issues/1308)
+  - [#1628](https://github.com/PowerShell/VSCode-powershell/issues/1628)
+  - [#1680](https://github.com/PowerShell/VSCode-powershell/issues/1680)
+  - [#1744](https://github.com/PowerShell/VSCode-powershell/issues/1744)
+  - [#1751](https://github.com/PowerShell/VSCode-powershell/issues/1751)
 - [经典的“Joel 说软件”  探讨 Unicode](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
 - [.NET Standard 中的编码](https://github.com/dotnet/standard/issues/260#issuecomment-289549508)
 
