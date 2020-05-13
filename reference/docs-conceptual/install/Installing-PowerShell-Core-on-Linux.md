@@ -2,12 +2,12 @@
 title: 在 Linux 上安装 PowerShell
 description: 介绍如何在各种 Linux 分发版上安装 PowerShell
 ms.date: 03/09/2020
-ms.openlocfilehash: 6ad637bd30e5e40ccc9532bae6f1171ecf79734a
-ms.sourcegitcommit: e0a737961280026832cff9c658ed1468dc904e80
+ms.openlocfilehash: e04d8a91999cd6e9b2d669230c7a1b412f11eeb8
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605843"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271893"
 ---
 # <a name="installing-powershell-on-linux"></a>在 Linux 上安装 PowerShell
 
@@ -54,6 +54,10 @@ GitHub [版本][]页面上提供有所有可用包。 安装包以后，从终�
 - Snap 包
 - 二进制存档
 - .NET 全局工具
+
+目前不支持 
+
+- Ubuntu 20.04
 
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
@@ -165,6 +169,10 @@ sudo apt-get remove powershell
 
 > [!NOTE]
 > Ubuntu 19.04 是[社区支持](../powershell-support-lifecycle.md)的[过渡版本](https://www.ubuntu.com/about/release-cycle)。
+
+## <a name="ubuntu-2004"></a>Ubuntu 20.04
+
+Ubuntu 20.04 是一个 LTS 版本。 PowerShell 当前不支持此版本。 正在考虑在 PowerShell 7.1 中添加对此版本此支持。 如果希望支持 Ubuntu 20.04，请投票支持此[请求](https://github.com/PowerShell/PowerShell/issues/12626)。
 
 ## <a name="debian-8"></a>Debian 8
 
