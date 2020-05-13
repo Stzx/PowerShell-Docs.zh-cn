@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 在 PowerShell 4.0 中配置 LCM
-ms.openlocfilehash: 747b15c483c79a7ecbb62214ef5a59f8dc137bd4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4a9dedf67f9fb18fdd7f5adf70dbf1402fb3f918
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953824"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271825"
 ---
 # <a name="configuring-the-lcm-in-powershell-40"></a>在 PowerShell 4.0 中配置 LCM
 
@@ -24,11 +24,11 @@ ms.locfileid: "71953824"
 以下列出了可以设置或检索的本地配置管理器属性。
 
 - **AllowModuleOverwrite**：控制是否允许从配置服务下载的新配置覆盖目标节点上的旧配置。 可能的值为 True 和 False。
-- **CertificateID**:用于保护在配置中传递的凭据的证书指纹。 更多详细信息，请参阅 [Want to secure credentials in Windows PowerShell Desired State Configuration?（希望在 Windows PowerShell Desired State Configuration 中保护凭据？）](https://blogs.msdn.microsoft.com/powershell/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/)。
+- **CertificateID**:用于保护在配置中传递的凭据的证书指纹。 更多详细信息，请参阅 [Want to secure credentials in Windows PowerShell Desired State Configuration?（希望在 Windows PowerShell Desired State Configuration 中保护凭据？）](https://devblogs.microsoft.com/powershell/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/)。
 - **ConfigurationID**：指示用于从请求服务获取特定配置文件的 GUID。 GUID 可确保访问正确的配置文件。
 - **ConfigurationMode**：指定本地配置管理器实际如何将配置应用到目标节点。 该参数采用以下值：
   - **ApplyOnly**：使用此选项，DSC 将应用配置，但在检测到新配置之前不会执行任何进一步操作。检测新配置的方式可以是向目标节点直接发送新配置；也可以是连接请求服务后，DSC 检查请求服务时发现新配置。 如果目标节点的配置偏离，则不执行任何操作。
-  - **ApplyAndMonitor**：使用此选项（默认），DSC 会应用任何由你直接发送到目标节点的或者在请求服务上发现的新配置。 此后，如果目标节点的配置偏离配置文件，DSC 将在日志中报告差异。 有关 DSC 日志记录的详细信息，请参阅 [Using Event Logs to Diagnose Errors in Desired State Configuration（在 Desired State Configuration 中使用事件日志诊断错误）](https://blogs.msdn.com/b/powershell/archive/2014/01/03/using-event-logs-to-diagnose-errors-in-desired-state-configuration.aspx)。
+  - **ApplyAndMonitor**：使用此选项（默认），DSC 会应用任何由你直接发送到目标节点的或者在请求服务上发现的新配置。 此后，如果目标节点的配置偏离配置文件，DSC 将在日志中报告差异。 有关 DSC 日志记录的详细信息，请参阅 [Using Event Logs to Diagnose Errors in Desired State Configuration（在 Desired State Configuration 中使用事件日志诊断错误）](https://devblogs.microsoft.com/powershell/using-event-logs-to-diagnose-errors-in-desired-state-configuration/)。
   - **ApplyAndAutoCorrect**：使用此选项，DSC 会应用任何由你直接发送到目标节点的或者在请求服务上发现的新配置。 此后，如果目标节点的配置偏离配置文件，DSC 将在日志中报告差异，并尝试调整目标节点配置，使其与配置文件相容。
 - **ConfigurationModeFrequencyMins**：表示 DSC 的后台应用程序尝试在目标节点上执行当前配置的频率（以分钟为单位）。 默认值为 15。 可将此值设置为与 RefreshMode 结合使用。 当 RefreshMode 设置为 PULL 时，目标节点按 RefreshFrequencyMins 所设置的时间间隔与配置服务联系并下载当前配置。 无论 RefreshMode 值如何，一致性引擎都会在由 ConfigurationModeFrequencyMins 设置的时间间隔将下载的最新配置应用到目标节点。 RefreshFrequencyMins 应设置为 ConfigurationModeFrequencyMins 的整倍数。
 - **Credential**：指示访问远程资源（例如联系配置服务）所需的凭据（与 Get-Credential 相同）。
