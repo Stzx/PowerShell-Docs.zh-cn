@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 057a666f-731b-423d-9d80-7be6b1836244
 caps.latest.revision: 5
-ms.openlocfilehash: c97b0dfc12d96f99c53383d3578579f1988efd52
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 964320108d7aff24d59905028fb976e0f75642e7
+ms.sourcegitcommit: 08e9ed4bc9bffc7af82b3130e74ec7763db74e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367676"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83382620"
 ---
 # <a name="creating-remote-runspaces"></a>创建远程运行空间
 
@@ -21,9 +21,9 @@ ms.locfileid: "72367676"
 
 ## <a name="using-a-wsmanconnection-to-create-a-remote-runspace"></a>使用 WSManConnection 创建远程运行空间
 
- 若要创建连接到远程计算机的运行空间，请创建一个[WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)对象。 您可以通过设置对象的[WSManConnectionInfo. ConnectionUri](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri)属性来指定连接的目标终结点。 然后通过调用 [System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) 方法来创建一个运行空间，并将 [System.Management.Automation.Runspaces.WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 对象指定为 `connectionInfo` 参数.
+ 若要创建连接到远程计算机的运行空间，请创建一个[WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)对象。 您可以通过设置对象的[WSManConnectionInfo. ConnectionUri](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri)属性来指定连接的目标终结点。 然后，通过调用 CreateRunspace 方法来创建一个运行空间，并将[WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)对象指定为参数。 [RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) ）将指定为 `connectionInfo` 参数。
 
- 下面的示例演示如何创建连接到远程计算机的运行空间。 在此示例中，`RemoteComputerUri` 用作远程计算机的实际 URI 的占位符。
+ 下面的示例演示如何创建连接到远程计算机的运行空间。 在此示例中，用作 `RemoteComputerUri` 远程计算机的实际 URI 的占位符。
 
 ```csharp
 namespace Samples
@@ -48,7 +48,7 @@ namespace Samples
       // Create a WSManConnectionInfo object using the default constructor
       // to connect to the "localHost". The WSManConnectionInfo object can
       // also be used to specify connections to remote computers.
-      Uri RemoteComputerUri = new uri("http://Server01:5985/WSMAN");
+      Uri RemoteComputerUri = new Uri("http://Server01:5985/WSMAN");
       WSManConnectionInfo connectionInfo = new WSManConnectionInfo(RemoteComputerUri);
 
       // Set the OperationTimeout property and OpenTimeout properties.
