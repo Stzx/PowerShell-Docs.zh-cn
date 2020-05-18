@@ -755,22 +755,20 @@
               href: community/contributing/managing-pull-requests.md
     - name: 数字艺术
       href: community/digital-art.md
-- name: PowerShell 开发人员
+- name: 脚本和开发
   items:
-    - name: 跨平台开发
+    - name: Visual Studio Code
       items:
-        - name: Visual Studio Code
-          items:
-            - name: 使用 Visual Studio Code
-              href: components/vscode/using-vscode.md
-            - name: 如何复制 Visual Studio Code 中的 ISE 体验
-              href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-            - name: 使用 Visual Studio Code 进行远程编辑和调试
-              href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
-            - name: 了解 VS Code 和 PowerShell 中的文件编码
-              href: components/vscode/understanding-file-encoding.md
-        - name: 编写可移植模块
-          href: learn/writing-portable-modules.md
+        - name: 使用 Visual Studio Code
+          href: components/vscode/using-vscode.md
+        - name: 如何复制 Visual Studio Code 中的 ISE 体验
+          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+        - name: 使用 Visual Studio Code 进行远程编辑和调试
+          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+        - name: 了解 VS Code 和 PowerShell 中的文件编码
+          href: components/vscode/understanding-file-encoding.md
+    - name: 编写可移植模块
+      href: learn/writing-portable-modules.md
     - name: 旧版 PowerShell SDK
       items:
         - name: 概述
