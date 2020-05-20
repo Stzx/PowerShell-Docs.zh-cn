@@ -85,7 +85,7 @@ PowerShell 可以使用任何 Windows 进程可用的相同环境变量，其中
 Get-ChildItem env:
 ```
 
-标准 `*-Variable` cmdlet 未设计为使用环境变量。 使用 `env:` 驱动器前缀访问环境变量。 例如，cmd.exe  中的 %SystemRoot%  变量包含操作系统的根目录名称。 在 PowerShell 中，使用 `$env:SystemRoot` 可访问相同的值。
+标准 `*-Variable` cmdlet 未设计为使用环境变量。 使用 `env:` 驱动器前缀访问环境变量。 例如，cmd.exe 中的 %SystemRoot% 变量包含操作系统的根目录名称。 在 PowerShell 中，使用 `$env:SystemRoot` 可访问相同的值。
 
 ```
 PS> $env:SystemRoot

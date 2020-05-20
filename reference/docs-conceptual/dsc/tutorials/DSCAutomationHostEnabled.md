@@ -13,7 +13,7 @@ ms.locfileid: "71954264"
 
 # <a name="dscautomationhostenabled-registry-key"></a>DSCAutomationHostEnabled 注册表项
 
-DSC 使用 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System  下的 DSCAutomationHostEnabled  注册表项，以便在初始启动时配置计算机。
+DSC 使用 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System 下的 DSCAutomationHostEnabled 注册表项，以便在初始启动时配置计算机。
 DSCAutomationHostEnabled  支持三种模式：
 
 |  DSCAutomationHostEnabled 值  |  说明   |

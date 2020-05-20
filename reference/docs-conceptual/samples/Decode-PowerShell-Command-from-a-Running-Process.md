@@ -33,7 +33,7 @@ powershell.exe -Command {
 
 ## <a name="view-the-process"></a>查看进程
 
-PowerShell 正在执行的命令正文存储在 [Win32_Process][] 类的 CommandLine  属性中。 如果命令为编码命令，**CommandLine** 属性将包含字符串“EncodedCommand”。 使用此信息，可以通过以下进程取消对编码命令的模糊处理。
+PowerShell 正在执行的命令正文存储在 [Win32_Process][] 类的 CommandLine 属性中。 如果命令为编码命令，**CommandLine** 属性将包含字符串“EncodedCommand”。 使用此信息，可以通过以下进程取消对编码命令的模糊处理。
 
 以管理员身份启动 PowerShell。 以管理员身份运行 PowerShell 至关重要，否则在查询正在运行的进程时不会返回任何结果。
 

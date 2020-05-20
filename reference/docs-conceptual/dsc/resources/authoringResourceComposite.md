@@ -219,7 +219,7 @@ Configuration MultipleVms
 > [!NOTE]
 > PsDscRunAsCredential  在 PowerShell 5.0 及更高版本中受支持。
 
-可以在 [DSC 配置](../configurations/configurations.md)资源块中使用 PsDscRunAsCredential  属性，以指定应使用指定的一组凭据运行资源。 有关详细信息，请参阅[使用用户凭据运行 DSC](../configurations/runAsUser.md)。
+可以在 [DSC 配置](../configurations/configurations.md)资源块中使用 PsDscRunAsCredential 属性，以指定应使用指定的一组凭据运行资源。 有关详细信息，请参阅[使用用户凭据运行 DSC](../configurations/runAsUser.md)。
 
 若要从自定义资源访问用户上下文，可以使用自动变量 `$PsDscContext`。
 

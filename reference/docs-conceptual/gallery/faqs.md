@@ -61,7 +61,7 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 - 版本
 - 说明
 - 作者
-- 一个该模块许可条款的 URI，或作为该清单的 PrivateData  的一部分，或在 [Publish-Module][] cmdlet 的 LicenseUri  参数中。
+- 一个该模块许可条款的 URI，或作为该清单的 PrivateData 的一部分，或在 [Publish-Module][] cmdlet 的 LicenseUri 参数中。
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>如何创建格式正确的模块清单？
 
@@ -78,7 +78,7 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 - 版本
 - 说明
 - 作者
-- 一个该脚本许可条款的 URI，或作为此脚本的 PSScriptInfo  的一部分，或在 [Publish-Script][] cmdlet 的 LicenseUri  参数中。
+- 一个该脚本许可条款的 URI，或作为此脚本的 PSScriptInfo 的一部分，或在 [Publish-Script][] cmdlet 的 LicenseUri 参数中。
 
 ## <a name="how-do-i-search"></a>如何搜索？
 

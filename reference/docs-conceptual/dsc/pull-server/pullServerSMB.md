@@ -76,7 +76,7 @@ Configuration SmbShare
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>向请求客户端授予文件系统访问权限
 
-向某个客户端节点授予 **ReadAccess** 可允许该节点访问 SMB 共享，但不可访问该共享中的文件或文件夹。 必须向客户端节点明确授予对 SMB 共享文件夹和子文件夹的访问权限。 我们可以使用 **CNtfsAccessControl** 模块中包含的 [cNtfsPermissionEntry](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 资源进行添加，对 DSC 执行此操作。
+向某个客户端节点授予 **ReadAccess** 可允许该节点访问 SMB 共享，但不可访问该共享中的文件或文件夹。 必须向客户端节点明确授予对 SMB 共享文件夹和子文件夹的访问权限。 我们可以使用 [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 模块中包含的 **cNtfsPermissionEntry** 资源进行添加，对 DSC 执行此操作。
 下面的配置添加一个 **cNtfsPermissionEntry** 块，该块向请求客户端授予 ReadAndExecute 访问权限：
 
 ```powershell
@@ -159,7 +159,7 @@ Configuration DSCSMB
 有关配置 LCM 的详细信息，请参阅[使用配置 ID 设置请求客户端](pullClientConfigID.md)。
 
 > [!NOTE]
-> 为简单起见，此示例使用 PSDscAllowPlainTextPassword  ，以允许将明文密码传递到 Credential  参数。 有关更安全传递凭据的信息，请参阅[配置数据中的凭据选项](../configurations/configDataCredentials.md)。 即使仅请求资源，也必须  在 SMB 请求服务器的 metaconfiguration“设置”  块中指定“ConfigurationID”  。
+> 为简单起见，此示例使用 PSDscAllowPlainTextPassword  ，以允许将明文密码传递到 Credential  参数。 有关更安全传递凭据的信息，请参阅[配置数据中的凭据选项](../configurations/configDataCredentials.md)。 即使仅请求资源，也必须在 SMB 请求服务器的 metaconfiguration“设置”块中指定“ConfigurationID”。
 
 ```powershell
 $secpasswd = ConvertTo-SecureString "Pass1Word" -AsPlainText -Force

@@ -24,7 +24,7 @@ ms.locfileid: "78277878"
 创建并编译配置后，可通过调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet，并将 cmdlet 的 -Path 参数设置为配置 MOF 所在的路径，从而在推送模式下执行该配置。 例如，如果配置 MOF 位于 `C:\DSC\Configurations\localhost.mof` 中，则使用以下命令将其应用于本地计算机：`Start-DscConfiguration -Path 'C:\DSC\Configurations'`
 
 > [!NOTE]
-> 默认情况下，DSC 运行配置作为后台作业。 若要以交互方式运行此配置，请使用 Wait  参数调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration)。
+> 默认情况下，DSC 运行配置作为后台作业。 若要以交互方式运行此配置，请使用 Wait 参数调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration)。
 
 ## <a name="pull-mode"></a>请求模式
 

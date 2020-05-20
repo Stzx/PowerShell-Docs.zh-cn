@@ -165,7 +165,7 @@ cmdlet - [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-Ds
 **Import-DscResource** 支持两种参数：
 
 - **ModuleName** 是使用 **Import-DscResource** 的推荐方法。 它接受包含要导入资源的模块名称以及模块名称的字符串数组。
-- **Name** 是要导入资源的名称。 这不是由 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) 返回为“Name”的友好名称，而是定义资源架构时使用的类名（由 **Get-DscResource** 返回为 [ResourceType](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)）。
+- **Name** 是要导入资源的名称。 这不是由 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) 返回为“Name”的友好名称，而是定义资源架构时使用的类名（由 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) 返回为 **ResourceType**）。
 
 有关使用 `Import-DSCResource` 的详细信息，请参阅[使用 Import-DSCResource](import-dscresource.md)
 

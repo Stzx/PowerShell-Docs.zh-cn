@@ -112,7 +112,7 @@ Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
 
 `Start-DSCConfiguration` cmdlet 完成后，便应在指定的位置看到“HelloWorld.txt”文件。 可以使用 [Get-content](/powershell/module/microsoft.powershell.management/get-content) cmdlet 验证内容。
 
-还可以使用 [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) 测试  当前状态。
+还可以使用 [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) 测试当前状态。
 
 如果节点当前符合所应用的配置，则输出应为“True”。
 

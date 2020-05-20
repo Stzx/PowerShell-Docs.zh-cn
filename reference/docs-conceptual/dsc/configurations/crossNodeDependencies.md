@@ -66,7 +66,7 @@ WaitForSome [String] #ResourceName
 ## <a name="using-waitforxxxx-resources"></a>使用 WaitForXXXX 资源
 
 每个 WaitForXXXX  资源都在指定节点上等待指定资源完成。
-然后，相同配置中的其他资源可以使用 DependsOn  项依赖于  WaitForXXXX  资源。
+然后，相同配置中的其他资源可以使用 DependsOn 项依赖于 WaitForXXXX 资源。
 
 例如，在下面的配置中，目标节点正在等待 **xADDomain** 资源通过最多 30 次重试（时间间隔为 15 秒）在 **MyDC** 节点上完成，然后目标节点才能加入域。
 

@@ -120,8 +120,8 @@ Windows PowerShell 是基于控制台的应用程序，不需要图形用户界�
   - [Show-ControlPanelItem](/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
   - [Show-EventLog](/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
 - parameters
-  - **Get-Help** cmdlet 的 [ShowWindow](/powershell/module/Microsoft.PowerShell.Core/Get-Help) 参数。
-  - **Register-PSSessionConfiguration** 和 [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) cmdlet 的 [ShowSecurityDescriptorUI](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration) 参数。
+  - [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet 的 **ShowWindow** 参数。
+  - [Register-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) 和 [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration) cmdlet 的 **ShowSecurityDescriptorUI** 参数。
 
 ## <a name="windows-powershell-engine-requirements"></a>Windows PowerShell 引擎要求
 
