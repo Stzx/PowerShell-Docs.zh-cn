@@ -37,7 +37,7 @@ ms.locfileid: "75416133"
 </body>
 ```
 
-在之前创建的 `index.htm` 文件夹中将它另存为 `test`。
+在之前创建的 `test` 文件夹中将它另存为 `index.htm`。
 
 ## <a name="write-the-configuration"></a>写入配置
 

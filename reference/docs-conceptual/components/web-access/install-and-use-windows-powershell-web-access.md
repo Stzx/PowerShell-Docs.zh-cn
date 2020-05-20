@@ -261,7 +261,7 @@ Windows PowerShell Web 访问支持以下 Internet 浏览器。 虽然移动浏�
    - 在 Windows 桌面上，启动服务器管理器，方法是单击 Windows 任务栏中的“服务器管理器”  。 在“服务器管理器”的**工具**菜单中，单击**Internet Information Services (IIS) Manager**。
    - 在 Windows“开始”  屏幕上，键入“Internet 信息服务 (IIS) 管理器”  名称的任何部分。 当它在“应用程序”  结果中显示时，单击快捷方式。
 
-2. 为 Windows PowerShell Web 访问创建新的应用程序池。 在 IIS 管理器树窗格中展开网关服务器的节点，选择“应用程序池”  ，然后单击“操作”  窗格中的“添加应用程序池”  。
+2. 为 Windows PowerShell Web 访问创建新的应用程序池。 在 IIS 管理器树窗格中展开网关服务器的节点，选择“应用程序池”，然后单击“操作”窗格中的“添加应用程序池”。
 
 3. 为新的应用程序池添加名称 **pswa_pool**，或提供其他名称。 单击“确定”。 
 
@@ -284,7 +284,7 @@ Windows PowerShell Web 访问支持以下 Internet 浏览器。 虽然移动浏�
 
 11. 在客户端设备上打开浏览器会话。 有关受支持的浏览器和设备的详细信息，请参阅本主题中的[浏览器和客户端设备支持](#browser-and-client-device-support)。
 
-12. 打开新的 Windows PowerShell Web 访问网站 https://\<gateway-server-name  \>/pswa  。
+12. 打开新的 Windows PowerShell Web 访问网站 https://\<gateway-server-name\>/pswa。
 
     浏览器应显示 Windows PowerShell Web 访问控制台登录页面。
 
@@ -327,7 +327,7 @@ Windows PowerShell Web 访问支持以下 Internet 浏览器。 虽然移动浏�
 1. 向网站分配一个不再被其他网站或应用程序使用的端口号。
    若要定位打开的端口，你可在“命令提示符”窗口中运行 **netstat** 命令。 默认端口号为 443。
 
-   如果其他网站已经使用 443，或你有其他更改端口号的安全原因，则更改默认端口。 如果在你的网关服务器上运行的其他网站使用你所选的端口，当你在“添加网站”  对话框中单击“确定”  时，将会显示一条警告信息。 必须使用未使用的端口运行 Windows PowerShell Web 访问。
+   如果其他网站已经使用 443，或你有其他更改端口号的安全原因，则更改默认端口。 如果在你的网关服务器上运行的其他网站使用你所选的端口，当你在“添加网站”对话框中单击“确定”时，将会显示一条警告信息。 必须使用未使用的端口运行 Windows PowerShell Web 访问。
 
 1. 此外，如果你的组织有需要，请指定一个对组织和用户都有意义的主机名称，例如 **`www.contoso.com`** 。 单击“确定”。 
 
@@ -349,7 +349,7 @@ Windows PowerShell Web 访问支持以下 Internet 浏览器。 虽然移动浏�
    c:\windows\system32\icacls.exe $authorizationFile
    ```
 
-1. 利用在 IIS 管理器树窗格中选择的新网站，单击“操作”  窗格中的“启动”  ，以启动网站。
+1. 利用在 IIS 管理器树窗格中选择的新网站，单击“操作”窗格中的“启动”，以启动网站。
 
 1. 在客户端设备上打开浏览器会话。 有关受支持的浏览器和设备的详细信息，请参阅本文档中的[浏览器和客户端设备支持](#browser-and-client-device-support)。
 
@@ -406,13 +406,13 @@ Windows PowerShell Web 访问支持以下 Internet 浏览器。 虽然移动浏�
 1. 在“操作”  窗格中，执行以下操作之一。 有关在 IIS 中配置服务器证书的详细信息，请参阅[在 IIS 7 中配置服务器证书](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。
 
    - 单击“导入”  ，以从网络上的位置中导入现有的有效证书。
-   - 单击“创建证书请求”，以请求证书颁发机构颁发的证书，例如 [VeriSign](https://www.verisign.com/)、[Thawte](https://www.thawte.com/) 或 [GeoTrust](https://www.geotrust.com/)  。 证书的公用名必须与申请的主机头相匹配。
+   - 单击“创建证书请求”，以请求证书颁发机构颁发的证书，例如 [VeriSign](https://www.verisign.com/)、[Thawte](https://www.thawte.com/) 或 [GeoTrust](https://www.geotrust.com/)。 证书的公用名必须与申请的主机头相匹配。
 
      例如，如果客户端浏览器申请 `http://www.contoso.com/`，则公用名也必须是 `http://www.contoso.com/`。 这是向 Windows PowerShell Web 访问网关提供证书的最安全的推荐方案。
 
    - 单击“创建自签名的证书”  ，以创建你可立即使用的证书，必要时稍后再由 CA 签名。 为自签名的证书指定一个友好名称，例如 **Windows PowerShell Web 访问**。 此选项被视为不安全的，仅建议在专用测试环境中使用。
 
-1. 创建或获得证书后，在 IIS 管理器树窗格中选择要应用证书的网站（如默认网站  ），然后单击“操作”  窗格中的“绑定”  。
+1. 创建或获得证书后，在 IIS 管理器树窗格中选择要应用证书的网站（如默认网站），然后单击“操作”窗格中的“绑定”。
 
 1. 如果尚未显示，则在“添加网站绑定”  对话框中，向网站添加 **https** 绑定。 如果使用的不是自签名的证书，请从本程序的步骤 3 中指定主机名称。 如果使用的是自签名的证书，则无需执行此步骤。
 

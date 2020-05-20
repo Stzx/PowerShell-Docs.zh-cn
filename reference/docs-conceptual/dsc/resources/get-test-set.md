@@ -37,7 +37,7 @@ Service [String] #ResourceName
 }
 ```
 
-Service  资源的 Get  、Test  和 Set  方法将具有接受这些值的参数块。
+Service 资源的 Get、Test 和 Set 方法将具有接受这些值的参数块。
 
 ```powershell
     param
@@ -121,7 +121,7 @@ ModuleVersion = "1.0";
 };
 ```
 
-应用时，[本地配置管理器](../managing-nodes/metaConfig.md) (LCM) 将从“.mof”文件读取值“Spooler”，并将其传递给 Service`-Name` **资源“MyService”实例的 Get** **、Test** **和 Set** **方法的** 参数。
+应用时，[本地配置管理器](../managing-nodes/metaConfig.md) (LCM) 将从“.mof”文件读取值“Spooler”，并将其传递给 Service 资源“MyService”实例的 Get、Test 和 Set 方法的 `-Name` 参数。
 
 ## <a name="get"></a>获取
 

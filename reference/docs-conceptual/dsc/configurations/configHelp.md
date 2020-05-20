@@ -13,7 +13,7 @@ ms.locfileid: "71954134"
 
 >适用于：Windows PowerShell 5.0
 
-可在 DSC 配置中使用基于注释的帮助。 若要访问帮助内容，用户可以使用  **调用配置**`-?`或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。 将基于注释的帮助直接置于 `Configuration` 关键字上方。
+可在 DSC 配置中使用基于注释的帮助。 若要访问帮助内容，用户可以使用 `-?` 调用配置或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。 将基于注释的帮助直接置于 `Configuration` 关键字上方。
 可以将参数帮助置于注释块的同一行中，或直接放置在参数声明上方，或同时放置在两个位置，如下面的示例中所示。
 
 若要详细了解基于 PowerShell 注释的帮助内容，请参阅 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)。

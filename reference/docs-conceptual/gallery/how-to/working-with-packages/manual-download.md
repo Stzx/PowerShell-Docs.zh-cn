@@ -38,7 +38,7 @@ NuGet 包文件包含以下特定于 NuGet  的元素，这些元素不是原始
 ## <a name="installing-powershell-modules-from-a-nuget-package"></a>从 NuGet 包安装 PowerShell 模块
 
 > [!NOTE]
-> 这些说明并未给出与运行  **相同的结果**`Install-Module`。 这些说明满足最低要求。 它们并非 `Install-Module` 的替代品。
+> 这些说明并未给出与运行 `Install-Module` 相同的结果。 这些说明满足最低要求。 它们并非 `Install-Module` 的替代品。
 > `Install-Module` 执行的某些步骤不包括在内。
 
 最简单的方法是从文件夹中删除特定于 NuGet 的元素。 删除元素将保留由包创建者创建的 PowerShell 代码。
@@ -58,7 +58,7 @@ NuGet 包文件包含以下特定于 NuGet  的元素，这些元素不是原始
 ## <a name="installing-powershell-scripts-from-a-nuget-package"></a>在 NuGet 包安装 PowerShell 脚本
 
 > [!NOTE]
-> 这些说明并未给出与运行  **相同的结果**`Install-Script`。 这些说明满足最低要求。 它们并非 `Install-Script` 的替代品。
+> 这些说明并未给出与运行 `Install-Script` 相同的结果。 这些说明满足最低要求。 它们并非 `Install-Script` 的替代品。
 
 最简单的方法是提取 NuGet 包，然后直接使用脚本。
 

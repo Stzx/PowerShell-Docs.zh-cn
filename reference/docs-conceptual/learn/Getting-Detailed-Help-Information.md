@@ -54,25 +54,25 @@ man Get-ChildItem
 help Get-ChildItem
 ```
 
-若要显示详细信息，请使用  **cmdlet 的 Detailed**`Get-Help` 参数。 例如，若要获取有关 `Get-ChildItem` cmdlet 的详细信息，请键入：
+若要显示详细信息，请使用 `Get-Help` cmdlet 的 Detailed 参数。 例如，若要获取有关 `Get-ChildItem` cmdlet 的详细信息，请键入：
 
 ```powershell
 Get-Help Get-ChildItem -Detailed
 ```
 
-若要显示帮助文章中的所有内容，请使用  **cmdlet 的 Full**`Get-Help` 参数。 例如，若要显示 `Get-ChildItem` cmdlet 的帮助文章中的所有内容，请键入：
+若要显示帮助文章中的所有内容，请使用 `Get-Help` cmdlet 的 Full 参数。 例如，若要显示 `Get-ChildItem` cmdlet 的帮助文章中的所有内容，请键入：
 
 ```powershell
 Get-Help Get-ChildItem -Full
 ```
 
-若要获取有关 cmdlet 的参数的详细帮助，请使用  **cmdlet 的 Parameter**`Get-Help` 参数。 例如，若要获取 `Get-ChildItem` cmdlet 的所有参数的详细帮助，请键入：
+若要获取有关 cmdlet 的参数的详细帮助，请使用 `Get-Help` cmdlet 的 Parameter 参数。 例如，若要获取 `Get-ChildItem` cmdlet 的所有参数的详细帮助，请键入：
 
 ```powershell
 Get-Help Get-ChildItem -Parameter *
 ```
 
-若要仅显示帮助文章中的示例，请使用  **的 Examples**`Get-Help` 参数。
+若要仅显示帮助文章中的示例，请使用 `Get-Help` 的 Examples 参数。
 例如，若要仅显示 `Get-ChildItem` cmdlet 的帮助文章中的示例，请键入：
 
 ```powershell
@@ -145,7 +145,7 @@ Get-Help c:\ps-test\TestScript.ps1
 
 在线查看帮助文章是获得帮助的最佳方式之一。 在线文章更易于更新并提供最新内容。
 
-若要在线获取帮助，请使用  **cmdlet 的 Online**`Get-Help` 参数。 PowerShell 附带的所有帮助文章（包括提供程序帮助和概念(关于)帮助文章），都可以在 [PowerShell](/powershell/scripting/powershell-scripting) 文档中在线获取。
+若要在线获取帮助，请使用 `Get-Help` cmdlet 的 Online 参数。 PowerShell 附带的所有帮助文章（包括提供程序帮助和概念(关于)帮助文章），都可以在 [PowerShell](/powershell/scripting/powershell-scripting) 文档中在线获取。
 
 > [!NOTE]
 > 不能将 Online  参数用于概念 (about_\*) 或提供程序帮助文章。

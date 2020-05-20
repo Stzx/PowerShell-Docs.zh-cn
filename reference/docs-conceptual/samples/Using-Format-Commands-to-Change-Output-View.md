@@ -29,7 +29,7 @@ Cmdlet          Format-Wide        6.1.0.0    Microsoft.PowerShell.Utility
 
 本文介绍 `Format-Wide`、`Format-List` 和 `Format-Table` cmdlet。
 
-PowerShell 中的每个对象类型都具有未指定要显示的属性时使用的默认属性。 各 cmdlet 也使用相同的 Property 参数，来指定要显示的属性  。 因为 `Format-Wide` 只显示单个属性，其 Property 参数仅采用单个值，但 **和** 的属性参数接受一系列属性名称`Format-List``Format-Table`。
+PowerShell 中的每个对象类型都具有未指定要显示的属性时使用的默认属性。 各 cmdlet 也使用相同的 Property 参数，来指定要显示的属性  。 因为 `Format-Wide` 只显示单个属性，其 Property 参数仅采用单个值，但 `Format-List` 和 `Format-Table` 的属性参数接受一系列属性名称。
 
 在此示例中，`Get-Process` cmdlet 的默认输出显示，我们有两个正在运行的 Internet Explorer 实例。
 
@@ -155,7 +155,7 @@ Running  WinRM              Windows Remote Management (WS-Manag...
 
 ### <a name="improving-format-table-output-autosize"></a>改进 Format-Table 输出（自动调整大小）
 
-尽管表格视图对显示大量信息很有用，但如果显示区域对于数据来说太窄，则可能导致数据难以理解。 在上面的示例中，输出被截断。 当你运行  **命令时，如果你指定 AutoSize**`Format-Table` 参数，PowerShell 会根据显示的实际数据来计算列宽。 这使得列可读。
+尽管表格视图对显示大量信息很有用，但如果显示区域对于数据来说太窄，则可能导致数据难以理解。 在上面的示例中，输出被截断。 当你运行 `Format-Table` 命令时，如果你指定 AutoSize 参数，PowerShell 会根据显示的实际数据来计算列宽。 这使得列可读。
 
 ```powershell
 Get-Service -Name win* | Format-Table -AutoSize

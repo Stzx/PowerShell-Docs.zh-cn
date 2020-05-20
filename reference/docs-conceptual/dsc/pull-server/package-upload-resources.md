@@ -41,7 +41,7 @@ ms.locfileid: "78278489"
 
 ### <a name="create-checksums"></a>创建校验和
 
-压缩并重命名资源模块后，需要创建校验和  。  客户端上的 LCM 使用校验和  来确定该资源是否已更改，以及是否需要重新下载。 可以使用 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet 创建校验和  ，如下面的示例中所示。
+压缩并重命名资源模块后，需要创建校验和  。  客户端上的 LCM 使用校验和  来确定该资源是否已更改，以及是否需要重新下载。 可以使用 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet 创建校验和，如下面的示例中所示。
 
 ```powershell
 New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip
@@ -68,7 +68,7 @@ New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip
 
 #### <a name="on-an-smb-share"></a>在 SMB 共享上
 
-如果在设置拉取客户端时指定了 ResourceRepositoryShare  ，则将存档和校验和存储在 ResourceRepositoryShare  块的 SourcePath  目录中。
+如果在设置拉取客户端时指定了 ResourceRepositoryShare，则将存档和校验和存储在 ResourceRepositoryShare 块的 SourcePath 目录中。
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer
@@ -82,7 +82,7 @@ ResourceRepositoryShare SMBResourceServer
 }
 ```
 
-如果在设置拉取客户端时仅指定了 ConfigurationRepositoryShare  ，则将存档和校验和存储在 ConfigurationRepositoryShare  块的 SourcePath  目录中。
+如果在设置拉取客户端时仅指定了 ConfigurationRepositoryShare，则将存档和校验和存储在 ConfigurationRepositoryShare 块的 SourcePath 目录中。
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer

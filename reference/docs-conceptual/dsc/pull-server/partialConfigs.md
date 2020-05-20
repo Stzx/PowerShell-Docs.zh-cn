@@ -213,7 +213,7 @@ SharePointConfig.mof.checksum
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationid"></a>在请求服务器 (ConfigurationID) 上命名和放置配置文档
 
-必须将部分配置文档置于请求服务器的 **文件中指定为**ConfigurationPath`web.config` 的文件夹中（通常为 `C:\Program Files\WindowsPowerShell\DscService\Configuration`）。 配置文档必须按如下所示命名：`<ConfigurationName>.<ConfigurationID>.mof`，其中 ConfigurationName  是部分配置的名称，ConfigurationID  是目标节点上 LCM 中定义的配置 ID。 在本例中，配置文档应按如下所示命名：
+必须将部分配置文档置于请求服务器的 `web.config` 文件中指定为 **ConfigurationPath** 的文件夹中（通常为 `C:\Program Files\WindowsPowerShell\DscService\Configuration`）。 配置文档必须按如下所示命名：`<ConfigurationName>.<ConfigurationID>.mof`，其中 ConfigurationName  是部分配置的名称，ConfigurationID  是目标节点上 LCM 中定义的配置 ID。 在本例中，配置文档应按如下所示命名：
 
 ```
 ServiceAccountConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
@@ -307,7 +307,7 @@ configuration PartialConfigDemo
 PartialConfigDemo
 ```
 
-请注意，Settings 块中指定的 **RefreshMode** 为“Pull”，而 **部分配置的**RefreshMode`SharePointConfig` 为“Push”。
+请注意，Settings 块中指定的 **RefreshMode** 为“Pull”，而 `SharePointConfig` 部分配置的 **RefreshMode** 为“Push”。
 
 可按照上文所述的相应刷新模式命名和放置配置 MOF 文件。
 可调用 `Publish-DSCConfiguration` 来发布 `SharePointConfig` 部分配置，并等待从请求服务器请求 `ServiceAccountConfig` 配置或通过调用 [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration) 强制进行刷新。

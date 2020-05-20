@@ -37,11 +37,11 @@ GenericConfig
 
 ## <a name="renaming-the-mof-file"></a>重命名 MOF 文件
 
-可以按 ConfigurationName  或 ConfigurationID  将配置 `.mof` 文件存储在拉取服务器上。 可以选择下面的部分来正确重命名已编译的 `.mof` 文件，具体视你计划如何设置拉取客户端。
+可以按 ConfigurationName 或 ConfigurationID 将配置 `.mof` 文件存储在拉取服务器上。 可以选择下面的部分来正确重命名已编译的 `.mof` 文件，具体视你计划如何设置拉取客户端。
 
 ### <a name="configuration-ids-guid"></a>配置 ID (GUID)
 
-需要将 `localhost.mof` 文件重命名为 `<GUID>.mof` 文件。 可以使用以下示例，或使用 [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet 创建随机 Guid  。
+需要将 `localhost.mof` 文件重命名为 `<GUID>.mof` 文件。 可以使用以下示例，或使用 [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet 创建随机 Guid。
 
 ```powershell
 [System.Guid]::NewGuid()
@@ -76,7 +76,7 @@ Rename-Item -Path .\localhost.mof -NewName 'GenericConfig.mof'
 拉取服务器上存储的每个 `.mof` 文件或 SMB 共享都需要有关联的 `.checksum` 文件。
 借助此文件，客户端可以了解关联的 `.mof` 文件何时发生了更改，以及应何时重新下载它。
 
-可以使用 [New-DSCCheckSum](/powershell/module/psdesiredstateconfiguration/new-dscchecksum) cmdlet 创建校验和  。 也可以使用 `-Path` 参数对文件的目录运行 `New-DSCCheckSum`。
+可以使用 [New-DSCCheckSum](/powershell/module/psdesiredstateconfiguration/new-dscchecksum) cmdlet 创建校验和。 也可以使用 `-Path` 参数对文件的目录运行 `New-DSCCheckSum`。
 如果校验和已存在，则可以强制使用 `-Force` 参数重新创建校验和。 下面的示例指定了包含上一部分中的 `.mof` 文件的目录，并使用 `-Force` 参数。
 
 ```powershell
@@ -105,7 +105,7 @@ New-DscChecksum -Path '.\' -Force
 ### <a name="on-an-smb-share"></a>在 SMB 共享上
 
 将拉取客户端设置为使用 SMB 共享时，指定 ConfigurationRepositoryShare  。
-所有 `.mof` 文件和 `.checksum` 文件应存储在 ConfigurationRepositoryShare  块的 SourcePath  目录中。
+所有 `.mof` 文件和 `.checksum` 文件应存储在 ConfigurationRepositoryShare 块的 SourcePath 目录中。
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer

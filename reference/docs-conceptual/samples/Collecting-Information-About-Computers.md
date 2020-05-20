@@ -26,7 +26,7 @@ Get-CimInstance -ClassName Win32_Desktop
 > [!NOTE]
 > WMI 类返回的某些信息可能非常详细，且通常包括有关 WMI 类的元数据。
 
-因为这些元数据属性大多具有以 Cim 开头的名称，因此可以使用  **筛选属性**`Select-Object`。 指定值为“Cim*”的 -ExcludeProperty 参数  。 例如：
+因为这些元数据属性大多具有以 Cim 开头的名称，因此可以使用 `Select-Object` 筛选属性。 指定值为“Cim*”的 -ExcludeProperty 参数  。 例如：
 
 ```powershell
 Get-CimInstance -ClassName Win32_Desktop | Select-Object -ExcludeProperty "CIM*"
@@ -117,7 +117,7 @@ CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ...
 ```
 
-返回额外数据是因为  **中的 Property 参数限制从 WMI 类实例返回的属性，而不限制返回到 PowerShell 的对象。** `Get-CimInstance` 若要减少输出，请使用 `Select-Object`：
+返回额外数据是因为 `Get-CimInstance` 中的 Property 参数限制从 WMI 类实例返回的属性，而不限制返回到 PowerShell 的对象。 若要减少输出，请使用 `Select-Object`：
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixId | Select-Object -Property HotFixId
@@ -236,7 +236,7 @@ PSComputerName :
 
 ## <a name="displaying-service-status"></a>显示服务状态
 
-若要查看指定计算机上所有服务的状态，可以本地使用 `Get-Service` cmdlet。 对于远程系统，可以使用 Win32_Service WMI 类  。 如果还使用 `Select-Object` 来筛选 Status、Name 和 DisplayName 的结果，则输出格式将与  **的输出格式几乎完全相同**   `Get-Service`：
+若要查看指定计算机上所有服务的状态，可以本地使用 `Get-Service` cmdlet。 对于远程系统，可以使用 Win32_Service WMI 类  。 如果还使用 `Select-Object` 来筛选 Status、Name 和 DisplayName 的结果，则输出格式将与 `Get-Service` 的输出格式几乎完全相同：
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service | Select-Object -Property Status,Name,DisplayName

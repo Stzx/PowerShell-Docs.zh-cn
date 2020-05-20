@@ -18,7 +18,7 @@ ms.locfileid: "75737077"
 在命令窗格或脚本窗格中，键入命令的几个字符，然后按 <kbd>TAB</kbd> 以选择所需补全文本。 如果有多个项以你最初键入的文本开头，那么继续按 TAB<kbd></kbd>，直到出现所需的项。 Tab 自动补全可以帮助键入 cmdlet 名、参数名、变量名、对象属性名或文件路径。
 
 > [!NOTE]
-> 在脚本窗格中，仅当你编辑 <kbd>、</kbd> 或 `.ps1` 文件时，按 TAB`.psd1``.psm1` 才会自动完成命令。 在命令窗格中键入时，Tab 自动补全随时都起作用。
+> 在脚本窗格中，仅当你编辑 `.ps1`、`.psd1` 或 `.psm1` 文件时，按 TAB<kbd></kbd> 才会自动完成命令。 在命令窗格中键入时，Tab 自动补全随时都起作用。
 
 ## <a name="to-automatically-complete-a-cmdlet-parameter-entry"></a>自动完成 cmdlet 参数输入
 

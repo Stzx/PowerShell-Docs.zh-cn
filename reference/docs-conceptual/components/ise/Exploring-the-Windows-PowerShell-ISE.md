@@ -18,7 +18,7 @@ ms.locfileid: "75737094"
 
 ## <a name="menu-bar"></a>菜单栏
 
-菜单栏包含“**文件**”、“**编辑**”、“**视图**”、“**工具**”、“**调试**”、“**加载项**”和“**帮助**”菜单。 菜单上的按钮允许执行与编写和运行脚本以及在 Windows PowerShell ISE 中运行命令相关的任务。 此外，可以运行使用 [ISE 对象模型层次结构](object-model/The-ISEAddOnTool-Object.md)的脚本，将[加载项工具](object-model/The-ISE-Object-Model-Hierarchy.md)置于菜单栏中。
+菜单栏包含“**文件**”、“**编辑**”、“**视图**”、“**工具**”、“**调试**”、“**加载项**”和“**帮助**”菜单。 菜单上的按钮允许执行与编写和运行脚本以及在 Windows PowerShell ISE 中运行命令相关的任务。 此外，可以运行使用 [ISE 对象模型层次结构](object-model/The-ISE-Object-Model-Hierarchy.md)的脚本，将[加载项工具](object-model/The-ISEAddOnTool-Object.md)置于菜单栏中。
 
 > [!NOTE]
 > 在 Windows PowerShell ISE 2.0 中，不存在“**工具**”和“**加载项**”菜单。
@@ -79,8 +79,8 @@ Windows PowerShell 选项卡是 Windows PowerShell 脚本可在其中运行的�
 
 ## <a name="help"></a>帮助
 
-可在 Web 上的 TechNet 库中找到有关 Windows PowerShell ISE 的帮助。 可以通过单击“帮助”菜单上的“Windows PowerShell ISE 帮助”打开帮助，或通过在任意位置（光标在脚本窗格或控制台窗格中的 cmdlet 名称上时除外）按 **F1** 键打开帮助。  <kbd></kbd>
-从“帮助”菜单还可以运行  **cmdlet 和显示命令窗口，该命令窗口可显示某个 cmdlet 的所有参数并允许你在易于使用的窗体中填写参数，从而帮助你构造命令。** `Update-Help`
+可在 Web 上的 TechNet 库中找到有关 Windows PowerShell ISE 的帮助。 可以通过单击“帮助”菜单上的“Windows PowerShell ISE 帮助”打开帮助，或通过在任意位置（光标在脚本窗格或控制台窗格中的 cmdlet 名称上时除外）按 <kbd>F1</kbd> 键打开帮助。
+从“帮助”菜单还可以运行 `Update-Help` cmdlet 和显示命令窗口，该命令窗口可显示某个 cmdlet 的所有参数并允许你在易于使用的窗体中填写参数，从而帮助你构造命令。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -38,7 +38,7 @@ Configuration ServiceState
 }
 ```
 
-此外，可以使用  **循环为当前计算机上的每个服务创建一个 Service**`foreach` 资源块。
+此外，可以使用 `foreach` 循环为当前计算机上的每个服务创建一个 Service 资源块。
 
 ```powershell
 Configuration ServiceState
@@ -60,7 +60,7 @@ Configuration ServiceState
 }
 ```
 
-你还可以通过使用 `Configuration` 语句，仅为联机的计算机创建 `if`。
+你还可以通过使用 `if` 语句，仅为联机的计算机创建 `Configuration`。
 
 ```powershell
 Configuration ServiceState

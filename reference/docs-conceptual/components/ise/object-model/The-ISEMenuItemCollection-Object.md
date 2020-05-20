@@ -11,7 +11,7 @@ ms.locfileid: "75736166"
 ---
 # <a name="the-isemenuitemcollection-object"></a>ISEMenuItemCollection 对象
 
-**ISEMenuItemCollection** 对象是 **ISEMenuItem** 对象的集合。 它是 **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 类的实例。 一个示例是用于在 Windows PowerShell® 集成脚本环境 (ISE) 中自定义“加载项”`$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`**菜单的**  对象。
+**ISEMenuItemCollection** 对象是 **ISEMenuItem** 对象的集合。 它是 **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 类的实例。 一个示例是用于在 Windows PowerShell® 集成脚本环境 (ISE) 中自定义“加载项”菜单的 `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` 对象。
 
 ## <a name="method"></a>方法
 

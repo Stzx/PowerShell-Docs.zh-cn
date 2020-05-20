@@ -94,7 +94,7 @@ VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; Val
 
 若如此操作，ValidatePattern 会覆盖 ValidateSet   。
 
-有关 ValidatePattern 的详细信息，请参阅[“你好，脚本专家”博文](https://devblogs.microsoft.com/scripting/validate-powershell-parameters-before-running-the-script/)和 [PowerShell 正则表达式](/powershell/module/microsoft.powershell.core/about/about_regular_expressions)参考内容   。
+有关 ValidatePattern 的详细信息，请参阅[“你好，脚本专家”博文](https://devblogs.microsoft.com/scripting/validate-powershell-parameters-before-running-the-script/)和 [PowerShell 正则表达式](/powershell/module/microsoft.powershell.core/about/about_regular_expressions)参考内容。
 
 ### <a name="allowing-external-commands-and-powershell-scripts"></a>允许使用外部命令和 PowerShell 脚本
 
@@ -108,7 +108,7 @@ VisibleExternalCommands = 'C:\Windows\System32\whoami.exe', 'C:\Program Files\Co
 
 通过很多可执行文件，可读取当前状态，随后再通过提供其他参数来更改它。
 
-例如，考虑使用文件服务器管理员的角色，它可管理系统托管的网络共享。 管理共享的一种方法是使用 `net share`。 但是，允许 net.exe 会带来风险，因为用户可使用该命令获取 `net group Administrators unprivilegedjeauser /add` 的管理员权限  。 更安全的选项是允许使用 [Get-SmbShare](/powershell/module/smbshare/get-smbshare)，该命令可实现相同的结果，但范围更受限制。
+例如，考虑使用文件服务器管理员的角色，它可管理系统托管的网络共享。 管理共享的一种方法是使用 `net share`。 但是，允许 net.exe 会带来风险，因为用户可使用该命令获取 `net group Administrators unprivilegedjeauser /add` 的管理员权限。 更安全的选项是允许使用 [Get-SmbShare](/powershell/module/smbshare/get-smbshare)，该命令可实现相同的结果，但范围更受限制。
 
 使外部命令可供用户在 JEA 会话中使用时，始终指定可执行文件的完整路径。 这可防止执行位于系统上其他位置的同名潜在恶意程序。
 
@@ -161,7 +161,7 @@ FunctionDefinitions = @{
 
 在 PowerShell 6 之前的版本中，必须将角色功能文件存储在 PowerShell 模块的“RoleCapabilities”  文件夹中，PowerShell 才能找到它。 此模块可存储在 `$env:PSModulePath` 环境变量内附的任何文件夹中，但不得放在 `$env:SystemRoot\System32` 中，也不得放到允许不受信任的用户修改其中文件的文件夹内。
 
-下面的示例在 `$env:ProgramFiles` 路径中创建名为“ContosoJEA”  的 PowerShell 脚本模块，用于托管角色功能文件。
+下面的示例在 `$env:ProgramFiles` 路径中创建名为“ContosoJEA”的 PowerShell 脚本模块，用于托管角色功能文件。
 
 ```powershell
 # Create a folder for the module

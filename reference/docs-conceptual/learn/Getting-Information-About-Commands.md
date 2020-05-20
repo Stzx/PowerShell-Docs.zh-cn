@@ -28,7 +28,7 @@ Cmdlet          Add-Type                3.1.0.0    Microsoft.PowerShell.Utility
 ...
 ```
 
-该输出与 cmd.exe  的帮助输出非常相似：内部命令的表格式摘要。 在如上所示的 `Get-Command` 命令输出摘录中，显示的每个命令都具有 Cmdlet 的 CommandType。 cmdlet 是 PowerShell 的内部命令类型。 此类型大致对应于 cmd.exe`dir``cd` 中的 **和** 等命令，或者像 bash 这样的 Unix shell 的内置命令。
+该输出与 cmd.exe  的帮助输出非常相似：内部命令的表格式摘要。 在如上所示的 `Get-Command` 命令输出摘录中，显示的每个命令都具有 Cmdlet 的 CommandType。 cmdlet 是 PowerShell 的内部命令类型。 此类型大致对应于 cmd.exe 中的 `dir` 和 `cd` 等命令，或者像 bash 这样的 Unix shell 的内置命令。
 
 `Get-Command` cmdlet 具有可返回每个 cmdlet 语法的 Syntax  参数。 下面的示例演示如何获取 `Get-Help` cmdlet 的语法：
 
@@ -72,7 +72,7 @@ Get-Command *
 > [!NOTE]
 > 星号 (\*) 用于 PowerShell 命令参数中的通配符匹配。 \* 表示“匹配一个或多个任意字符”。 可以键入 `Get-Command a*` 查找所有以字母“a”开头的命令。 与 cmd.exe  中的通配符匹配不同，PowerShell 的通配符还会匹配句点。
 
-使用  **的 CommandType**`Get-Command` 参数可以获取其他类型的本机命令。
+使用 `Get-Command` 的 CommandType 参数可以获取其他类型的本机命令。
 cmdlet。
 
 若要获取命令别名（即命令的已分配昵称），请键入：

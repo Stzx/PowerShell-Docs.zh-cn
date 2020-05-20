@@ -51,7 +51,7 @@ CMS 加密标准采用公钥加密系统，其中用来加密内容的密钥（�
 - [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage)
 - [Unprotect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/unprotect-CmsMessage)
 
-证书需要唯一的密钥用法标识符 (EKU)（如“代码签名”或“加密邮件”）在 PowerShell 中将它们识别为数据加密证书。 若要在证书提供程序中查看文档加密证书，可以使用  **的 DocumentEncryptionCert**`Get-ChildItem` 动态参数：
+证书需要唯一的密钥用法标识符 (EKU)（如“代码签名”或“加密邮件”）在 PowerShell 中将它们识别为数据加密证书。 若要在证书提供程序中查看文档加密证书，可以使用 `Get-ChildItem` 的 DocumentEncryptionCert 动态参数：
 
 ```powershell
 Get-ChildItem Cert:\CurrentUser -DocumentEncryptionCert -Recurse

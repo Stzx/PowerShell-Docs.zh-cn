@@ -64,7 +64,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 
 网络适配器配置对象的默认显示为一组非常精简的可用信息。 对于深入检查和疑难解答，请使用 `Select-Object` 或格式设置 cmdlet（例如 `Format-List`）来指定要显示的属性。
 
-在新式 TCP/IP 网络中，你可能对 IPX 或 WINS 属性不感兴趣。 可以使用  **的 ExcludeProperty**`Select-Object` 参数隐藏以“WINS”或“IPX”名称开头的属性。
+在新式 TCP/IP 网络中，你可能对 IPX 或 WINS 属性不感兴趣。 可以使用 `Select-Object` 的 ExcludeProperty 参数隐藏以“WINS”或“IPX”名称开头的属性。
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -81,7 +81,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'"
 ```
 
-摘要信息是更为有用的形式，它显示下面的命令生成的 Address、ResponseTime 以及 StatusCode 属性。 **的 Autosize**`Format-Table` 参数调整表列的大小，以使其正确显示在 PowerShell 中。
+摘要信息是更为有用的形式，它显示下面的命令生成的 Address、ResponseTime 以及 StatusCode 属性。 `Format-Table` 的 Autosize 参数调整表列的大小，以使其正确显示在 PowerShell 中。
 
 ```powershell
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'" |
@@ -133,7 +133,7 @@ Get-CimInstance -Class Win32_NetworkAdapter -ComputerName .
 
 ## <a name="assigning-the-dns-domain-for-a-network-adapter"></a>为网络适配器分配 DNS 域
 
-若要分配 DNS 域以便进行自动名称解析，请使用 Win32_NetworkAdapterConfiguration  的 SetDNSDomain  方法。 由于你单独为每个网络适配器配置分配 DNS 域，因此需要使用 `ForEach-Object` 语句将域分配给每个适配器：
+若要分配 DNS 域以便进行自动名称解析，请使用 Win32_NetworkAdapterConfiguration 的 SetDNSDomain 方法。 由于你单独为每个网络适配器配置分配 DNS 域，因此需要使用 `ForEach-Object` 语句将域分配给每个适配器：
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |

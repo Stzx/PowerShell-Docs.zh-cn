@@ -31,7 +31,7 @@ Permission    : CONTOSO\JEA_DNS_ADMINS AccessAllowed, CONTOSO\JEA_DNS_OPERATORS 
                 CONTOSO\JEA_DNS_AUDITORS AccessAllowed
 ```
 
-“权限”属性中列出了终结点的有效权限  。 这些用户有权连接到 JEA 终结点。 但他们有权访问的角色和命令却是由用于注册终结点的[会话配置文件](session-configurations.md)中的 RoleDefinitions 属性决定  。 扩展 RoleDefinitions 属性，评估已注册的 JEA 终结点中的角色映射  。
+“权限”属性中列出了终结点的有效权限  。 这些用户有权连接到 JEA 终结点。 但他们有权访问的角色和命令却是由用于注册终结点的[会话配置文件](session-configurations.md)中的 RoleDefinitions 属性决定。 扩展 RoleDefinitions 属性，评估已注册的 JEA 终结点中的角色映射  。
 
 ```powershell
 # Get the desired session configuration
@@ -131,9 +131,9 @@ PS>CommandInvocation(Get-Service): "Get-Service"
 Running  Dns                DNS Server
 ```
 
-CommandInvocation 行是为用户运行的每个命令编写的  。 ParameterBindings 会记录随附该命令提供的每个参数和值  。 在上一示例中，可看到针对 `Get-Service` cmdlet 向 Name 参数提供了值 Dns   。
+CommandInvocation 行是为用户运行的每个命令编写的  。 ParameterBindings 会记录随附该命令提供的每个参数和值  。 在上一示例中，可看到针对 `Get-Service` cmdlet 向 Name 参数提供了值 Dns。
 
-每个命令的输出通常还会对 `Out-Default` 触发 CommandInvocation  。 `Out-Default` 的 InputObject 是从命令返回的 PowerShell 对象  。 该对象的详细信息如下面几行所示，严格模拟用户将看到的内容。
+每个命令的输出通常还会对 `Out-Default` 触发 CommandInvocation。 `Out-Default` 的 InputObject 是从命令返回的 PowerShell 对象。 该对象的详细信息如下面几行所示，严格模拟用户将看到的内容。
 
 ## <a name="see-also"></a>另请参阅
 

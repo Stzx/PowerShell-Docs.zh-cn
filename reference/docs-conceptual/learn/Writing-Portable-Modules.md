@@ -198,7 +198,7 @@ PowerShell Standard 旨在始终向前兼容。 使用 PowerShell Standard 库 5
 
 首先，验证模块是否适用于 Linux和 macOS。 接下来，在模块清单中指示与这些操作系统的兼容性。 这使得用户在发布到 [PowerShell 库][]时可以更轻松地找到适用于其操作系统的模块。
 
-在模块清单中，`PrivateData` 属性有一个 `PSData` 子属性。 `Tags` 的可选 `PSData` 属性采用一组在 PowerShell 库中显示的值。 PowerShell 库支持以下兼容性值：
+在模块清单中，`PrivateData` 属性有一个 `PSData` 子属性。 `PSData` 的可选 `Tags` 属性采用一组在 PowerShell 库中显示的值。 PowerShell 库支持以下兼容性值：
 
 | 标记               | 说明                                |
 |-------------------|--------------------------------------------|

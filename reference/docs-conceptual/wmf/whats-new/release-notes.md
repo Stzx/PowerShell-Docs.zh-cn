@@ -98,7 +98,7 @@ $env:PSDisableModuleAnalysisCacheCleanup = 1
 
   **示例：** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
-- 如果有多个版本的模块，则 PowerShell 会使用与  相同的解析逻辑`Import-Module`，不会返回错误 - - 行为与 `Import-Module` 和 `Import-DscResource` 相同。
+- 如果有多个版本的模块，则 PowerShell 会使用与 `Import-Module`**相同的解析逻辑**，不会返回错误 - - 行为与 `Import-Module` 和 `Import-DscResource` 相同。
 
 ## <a name="improvements-to-pester"></a>针对 Pester 的改进
 

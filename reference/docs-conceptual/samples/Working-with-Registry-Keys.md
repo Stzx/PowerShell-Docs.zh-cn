@@ -72,7 +72,7 @@ Get-ChildItem -Path HKCU:\Software -Recurse |
 
 ## <a name="copying-keys"></a>复制项
 
-复制通过 `Copy-Item` 完成。 下面的示例将 `CurrentVersion` 的 `HKLM:\SOFTWARE\Microsoft\Windows\` 子项及其所有属性复制到 `HKCU:\`。
+复制通过 `Copy-Item` 完成。 下面的示例将 `HKLM:\SOFTWARE\Microsoft\Windows\` 的 `CurrentVersion` 子项及其所有属性复制到 `HKCU:\`。
 
 ```powershell
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination HKCU:

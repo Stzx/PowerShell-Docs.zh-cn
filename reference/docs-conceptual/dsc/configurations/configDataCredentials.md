@@ -32,7 +32,7 @@ ms.locfileid: "75870551"
 > [!NOTE]
 > 由于某种原因，某些资源的设计将使用多个凭据，这些凭据有其自己的凭据属性。
 
-使用 ISE 中的 Intellisense (`Get-DscResource -Name ResourceName -Syntax`) 或 `CTRL+SPACE` 来查找资源的可用凭据属性。
+使用 ISE 中的 Intellisense (`CTRL+SPACE`) 或 `Get-DscResource -Name ResourceName -Syntax` 来查找资源的可用凭据属性。
 
 ```powershell
 Get-DscResource -Name Group -Syntax
@@ -53,7 +53,7 @@ Group [String] #ResourceName
 }
 ```
 
-此示例使用来自 [ 内置 DSC 资源模块中的 ](../resources/resources.md)Group`PSDesiredStateConfiguration` 资源。 它可以创建本地组并添加或删除成员。 它同时接受 `Credential` 属性和自动 `PsDscRunAsCredential` 属性。 但是该资源只使用 `Credential` 属性。
+此示例使用来自 `PSDesiredStateConfiguration` 内置 DSC 资源模块中的 [Group](../resources/resources.md) 资源。 它可以创建本地组并添加或删除成员。 它同时接受 `Credential` 属性和自动 `PsDscRunAsCredential` 属性。 但是该资源只使用 `Credential` 属性。
 
 有关 `PsDscRunAsCredential` 属性的详细信息，请参阅[使用用户凭据运行 DSC](runAsUser.md)。
 
@@ -61,7 +61,7 @@ Group [String] #ResourceName
 
 DSC 在 `Local System` 下运行，因此它已经有权更改本地用户和组。 如果添加的成员是本地帐户，则无需凭据。 如果 `Group` 资源要添加一个域帐户到本地组，则需要凭据。
 
-不允许匿名查询 Active Directory。 `Credential` 资源的 `Group` 属性是用于查询 Active Directory 的域帐户。 大多数情况下这是个一般用户帐户，因为默认情况下用户可以*读取* Active Directory 中的大多数对象。
+不允许匿名查询 Active Directory。 `Group` 资源的 `Credential` 属性是用于查询 Active Directory 的域帐户。 大多数情况下这是个一般用户帐户，因为默认情况下用户可以*读取* Active Directory 中的大多数对象。
 
 ## <a name="example-configuration"></a>示例配置
 
@@ -167,7 +167,7 @@ DomainCredentialExample -ConfigurationData $cd
 
 ### <a name="localhostmof"></a>localhost.mof
 
-PSDSCAllowPlainTextPassword  标记要求用户确认将纯文本密码存储在 MOF 文件中的风险。 在生成的 MOF 文件中，即使使用了包含 SecureString  的 PSCredential  对象，密码仍以纯文本形式出现。 这是唯一一次公开凭据。 获得对此 MOF 文件的访问权限后，任何人都可以访问管理员帐户。
+PSDSCAllowPlainTextPassword  标记要求用户确认将纯文本密码存储在 MOF 文件中的风险。 在生成的 MOF 文件中，即使使用了包含 SecureString 的 PSCredential 对象，密码仍以纯文本形式出现。 这是唯一一次公开凭据。 获得对此 MOF 文件的访问权限后，任何人都可以访问管理员帐户。
 
 ```
 /*
@@ -220,7 +220,7 @@ ModuleVersion = "1.0";
 
 **对 DSC 资源使用凭据时，应尽可能选择本地帐户而非域帐户。**
 
-如果凭据的 \\ 属性中有“\@”或“`Username`”，DSC 会将它视为域帐户。 用户名中域部分的“localhost”、“127.0.0.1”和“::1”除外。
+如果凭据的 `Username` 属性中有“\\”或“\@”，DSC 会将它视为域帐户。 用户名中域部分的“localhost”、“127.0.0.1”和“::1”除外。
 
 ## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser
 

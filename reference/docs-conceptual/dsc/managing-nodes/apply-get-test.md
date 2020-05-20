@@ -51,7 +51,7 @@ Mode                LastWriteTime     Length Name
 Start-DSCConfiguration -Path C:\Temp\ -Verbose
 ```
 
-如果未指定 `-Wait`，你将看到创建了一个作业。 创建的作业将为每个由  **处理的“.mof”文件提供一个 ChildJob**`Start-DSCConfiguration`。
+如果未指定 `-Wait`，你将看到创建了一个作业。 创建的作业将为每个由 `Start-DSCConfiguration` 处理的“.mof”文件提供一个 ChildJob。
 
 ```output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
@@ -79,7 +79,7 @@ Id     Name            PSJobTypeName   State         HasMoreData     Location   
 50     Job50           Configuratio... Completed     True            server02             Start-DSCConfiguration...
 ```
 
-要查看详细  输出，请使用以下命令查看每个 ChildJob  的详细  流。 有关 PowerShell 作业的详细信息，请参阅 [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs)。
+要查看详细输出，请使用以下命令查看每个 ChildJob 的详细流。 有关 PowerShell 作业的详细信息，请参阅 [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs)。
 
 ```powershell
 # View the verbose output of the localhost job using array indexing.

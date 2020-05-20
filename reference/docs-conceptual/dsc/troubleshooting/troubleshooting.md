@@ -192,7 +192,7 @@ TimeCreated                     Id LevelDisplayName Message
 12/2/2013 3:47:29 PM          4182 Information      Job {1A776B6A-5BAC-11E3-BF41-00155D553612} : ...
 ```
 
-可以用 `$SeparateDscOperations`Where-object[ 提取变量 ](/powershell/module/microsoft.powershell.core/where-object) 中的数据。 在以下五种情况下，可能需要提取数据以解决 DSC 问题：
+可以用 [Where-object](/powershell/module/microsoft.powershell.core/where-object) 提取变量 `$SeparateDscOperations` 中的数据。 在以下五种情况下，可能需要提取数据以解决 DSC 问题：
 
 ### <a name="1-operations-failures"></a>1：操作故障
 
@@ -327,7 +327,7 @@ SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Job runs under the following LCM setti
 SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Operation Consistency Check or Pull completed successfully.
 ```
 
-传递分配给特定 DSC 操作（由  **cmdlet 返回）的 GUID**`Get-xDscOperation` 以获取 DSC 操作的事件详细信息：
+传递分配给特定 DSC 操作（由 `Get-xDscOperation` cmdlet 返回）的 GUID 以获取 DSC 操作的事件详细信息：
 
 ```powershell
 PS C:\DiagnosticsTest> Trace-xDscOperation -JobID 9e0bfb6b-3a3a-11e6-9165-00155d390509
