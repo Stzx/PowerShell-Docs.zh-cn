@@ -9,19 +9,19 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954134"
 ---
-# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="f0a22-103">编写 DSC 配置的帮助</span><span class="sxs-lookup"><span data-stu-id="f0a22-103">Writing help for DSC configurations</span></span>
+# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="baf6f-103">编写 DSC 配置的帮助</span><span class="sxs-lookup"><span data-stu-id="baf6f-103">Writing help for DSC configurations</span></span>
 
-><span data-ttu-id="f0a22-104">适用于：Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="f0a22-104">Applies To: Windows PowerShell 5.0</span></span>
+><span data-ttu-id="baf6f-104">适用于：Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="baf6f-104">Applies To: Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="f0a22-105">可在 DSC 配置中使用基于注释的帮助。</span><span class="sxs-lookup"><span data-stu-id="f0a22-105">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="f0a22-106">若要访问帮助内容，用户可以使用  **调用配置**`-?`或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。</span><span class="sxs-lookup"><span data-stu-id="f0a22-106">Users can access the help by calling the **Configuration** with `-?`, or by using the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet.</span></span> <span data-ttu-id="f0a22-107">将基于注释的帮助直接置于 `Configuration` 关键字上方。</span><span class="sxs-lookup"><span data-stu-id="f0a22-107">Place your Comment-based help directly above the `Configuration` keyword.</span></span>
-<span data-ttu-id="f0a22-108">可以将参数帮助置于注释块的同一行中，或直接放置在参数声明上方，或同时放置在两个位置，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="f0a22-108">You can place parameter help in-line with your comment block, directly above the parameter declaration, or both as in the example below.</span></span>
+<span data-ttu-id="baf6f-105">可在 DSC 配置中使用基于注释的帮助。</span><span class="sxs-lookup"><span data-stu-id="baf6f-105">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="baf6f-106">若要访问帮助内容，用户可以使用 `-?` 调用配置或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。</span><span class="sxs-lookup"><span data-stu-id="baf6f-106">Users can access the help by calling the **Configuration** with `-?`, or by using the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet.</span></span> <span data-ttu-id="baf6f-107">将基于注释的帮助直接置于 `Configuration` 关键字上方。</span><span class="sxs-lookup"><span data-stu-id="baf6f-107">Place your Comment-based help directly above the `Configuration` keyword.</span></span>
+<span data-ttu-id="baf6f-108">可以将参数帮助置于注释块的同一行中，或直接放置在参数声明上方，或同时放置在两个位置，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="baf6f-108">You can place parameter help in-line with your comment block, directly above the parameter declaration, or both as in the example below.</span></span>
 
-<span data-ttu-id="f0a22-109">若要详细了解基于 PowerShell 注释的帮助内容，请参阅 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)。</span><span class="sxs-lookup"><span data-stu-id="f0a22-109">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).</span></span>
+<span data-ttu-id="baf6f-109">若要详细了解基于 PowerShell 注释的帮助内容，请参阅 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)。</span><span class="sxs-lookup"><span data-stu-id="baf6f-109">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f0a22-110">PowerShell 开发环境（如 VSCode 和 ISE）也具有可用于自动插入注释块模板的代码片段。</span><span class="sxs-lookup"><span data-stu-id="f0a22-110">PowerShell development environments, like VSCode and the ISE, also have snippets to allow you to automatically insert comment block templates.</span></span>
+> <span data-ttu-id="baf6f-110">PowerShell 开发环境（如 VSCode 和 ISE）也具有可用于自动插入注释块模板的代码片段。</span><span class="sxs-lookup"><span data-stu-id="baf6f-110">PowerShell development environments, like VSCode and the ISE, also have snippets to allow you to automatically insert comment block templates.</span></span>
 
-<span data-ttu-id="f0a22-111">下面的示例演示了一个脚本，它包含一个配置以及有关该配置的基于注释的帮助。</span><span class="sxs-lookup"><span data-stu-id="f0a22-111">The following example shows a script that contains a configuration and comment-based help for it.</span></span> <span data-ttu-id="f0a22-112">此示例显示带有参数的配置。</span><span class="sxs-lookup"><span data-stu-id="f0a22-112">This example shows a Configuration with parameters.</span></span> <span data-ttu-id="f0a22-113">若要了解有关在配置中使用参数的详细信息，请参阅[将参数添加到配置中](add-parameters-to-a-configuration.md)。</span><span class="sxs-lookup"><span data-stu-id="f0a22-113">To learn more about using parameters in your Configurations, see [Add Parameters to your Configurations](add-parameters-to-a-configuration.md).</span></span>
+<span data-ttu-id="baf6f-111">下面的示例演示了一个脚本，它包含一个配置以及有关该配置的基于注释的帮助。</span><span class="sxs-lookup"><span data-stu-id="baf6f-111">The following example shows a script that contains a configuration and comment-based help for it.</span></span> <span data-ttu-id="baf6f-112">此示例显示带有参数的配置。</span><span class="sxs-lookup"><span data-stu-id="baf6f-112">This example shows a Configuration with parameters.</span></span> <span data-ttu-id="baf6f-113">若要了解有关在配置中使用参数的详细信息，请参阅[将参数添加到配置中](add-parameters-to-a-configuration.md)。</span><span class="sxs-lookup"><span data-stu-id="baf6f-113">To learn more about using parameters in your Configurations, see [Add Parameters to your Configurations](add-parameters-to-a-configuration.md).</span></span>
 
 ```powershell
 <#
@@ -75,9 +75,9 @@ configuration HelpSample1
 }
 ```
 
-## <a name="viewing-configuration-help"></a><span data-ttu-id="f0a22-114">查看配置帮助</span><span class="sxs-lookup"><span data-stu-id="f0a22-114">Viewing configuration help</span></span>
+## <a name="viewing-configuration-help"></a><span data-ttu-id="baf6f-114">查看配置帮助</span><span class="sxs-lookup"><span data-stu-id="baf6f-114">Viewing configuration help</span></span>
 
-<span data-ttu-id="f0a22-115">若要查看有关配置的帮助，请使用带有函数名称的 `Get-Help` cmdlet，或键入后跟 `-?` 的函数名称。</span><span class="sxs-lookup"><span data-stu-id="f0a22-115">To view the help for a configuration, use the `Get-Help` cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="f0a22-116">下面展示了在传递给 `Get-Help` 的上一个配置的输出。</span><span class="sxs-lookup"><span data-stu-id="f0a22-116">The following is the output of the previous Configuration passed to `Get-Help`.</span></span>
+<span data-ttu-id="baf6f-115">若要查看有关配置的帮助，请使用带有函数名称的 `Get-Help` cmdlet，或键入后跟 `-?` 的函数名称。</span><span class="sxs-lookup"><span data-stu-id="baf6f-115">To view the help for a configuration, use the `Get-Help` cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="baf6f-116">下面展示了在传递给 `Get-Help` 的上一个配置的输出。</span><span class="sxs-lookup"><span data-stu-id="baf6f-116">The following is the output of the previous Configuration passed to `Get-Help`.</span></span>
 
 ```powershell
 Get-Help HelpSample1 -Detailed
@@ -157,10 +157,10 @@ REMARKS
 ```
 
 > [!NOTE]
-> <span data-ttu-id="f0a22-117">PowerShell 会自动为你生成语法字段和参数属性。</span><span class="sxs-lookup"><span data-stu-id="f0a22-117">Syntax fields and parameter attributes are automatically generated for you by PowerShell.</span></span>
+> <span data-ttu-id="baf6f-117">PowerShell 会自动为你生成语法字段和参数属性。</span><span class="sxs-lookup"><span data-stu-id="baf6f-117">Syntax fields and parameter attributes are automatically generated for you by PowerShell.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f0a22-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f0a22-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="baf6f-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="baf6f-118">See Also</span></span>
 
-- [<span data-ttu-id="f0a22-119">DSC 配置</span><span class="sxs-lookup"><span data-stu-id="f0a22-119">DSC Configurations</span></span>](configurations.md)
-- [<span data-ttu-id="f0a22-120">编写、编译和应用配置</span><span class="sxs-lookup"><span data-stu-id="f0a22-120">Write, Compile, and Apply a Configuration</span></span>](write-compile-apply-configuration.md)
-- [<span data-ttu-id="f0a22-121">向配置添加参数</span><span class="sxs-lookup"><span data-stu-id="f0a22-121">Add Parameters to a Configuration</span></span>](add-parameters-to-a-configuration.md)
+- [<span data-ttu-id="baf6f-119">DSC 配置</span><span class="sxs-lookup"><span data-stu-id="baf6f-119">DSC Configurations</span></span>](configurations.md)
+- [<span data-ttu-id="baf6f-120">编写、编译和应用配置</span><span class="sxs-lookup"><span data-stu-id="baf6f-120">Write, Compile, and Apply a Configuration</span></span>](write-compile-apply-configuration.md)
+- [<span data-ttu-id="baf6f-121">向配置添加参数</span><span class="sxs-lookup"><span data-stu-id="baf6f-121">Add Parameters to a Configuration</span></span>](add-parameters-to-a-configuration.md)
