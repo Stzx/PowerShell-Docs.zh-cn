@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2551ceed-836f-4275-9fc0-ea68446d6a35
 caps.latest.revision: 7
-ms.openlocfilehash: 4f0be193fb5b5c753d040a48e5f49235ece11708
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f8a9938a1685e9abc2f1dbfb18c3b2b9008d9be
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366006"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564920"
 ---
 # <a name="writing-a-windows-powershell-workflow"></a>编写 Windows PowerShell 工作流
 
@@ -36,12 +36,12 @@ ms.locfileid: "72366006"
 
   以下主题介绍如何使用 Windows PowerShell 活动创建工作流。
 
-- [将 Windows PowerShell 活动添加到 Visual Studio 工具箱](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md)
+- [向 Visual Studio 工具箱添加 Windows PowerShell 活动](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md)
 
-- [使用 Windows PowerShell 活动创建工作流](./creating-a-workflow-with-windows-powershell-activities.md)
+- [创建具有 Windows PowerShell 活动的工作流](./creating-a-workflow-with-windows-powershell-activities.md)
 
 - [使用 Windows PowerShell 脚本创建工作流](./creating-a-workflow-by-using-a-windows-powershell-script.md)
 
-- [导入和调用 Windows PowerShell 工作流](./importing-and-invoking-a-windows-powershell-workflow.md)
+- [导入并调用 Windows PowerShell 工作流](./importing-and-invoking-a-windows-powershell-workflow.md)
 
 - [通过 Windows PowerShell Cmdlet 创建工作流活动](./creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md)

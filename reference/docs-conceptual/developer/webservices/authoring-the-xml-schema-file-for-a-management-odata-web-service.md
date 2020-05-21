@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e83c9d9-6d06-4247-94d9-e3bfd4013b11
 caps.latest.revision: 4
-ms.openlocfilehash: b830571418fe75bbfc68df02f20a6012efefd99a
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 7ccdeeb2833b79cabc7c77d1a400e0c9132b2dcd
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996073"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561458"
 ---
 # <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a>创作管理 OData Web 服务的 XML 架构文件
 
@@ -49,9 +49,9 @@ XML 文件的第一部分将 MOF 架构文件中定义的资源映射到用于�
 |创建|创建|
 |读取|查询|
 |更新|更新|
-|“删除”|“删除”|
+|删除|删除|
 
-下面的示例演示 `Service` 资源上的创建、读取和更新操作的映射。
+下面的示例演示对资源的创建、读取和更新操作的映射 `Service` 。
 
 ```xml
 <ClassImplementations>
@@ -159,8 +159,8 @@ XML 文件的第一部分将 MOF 架构文件中定义的资源映射到用于�
 
 ## <a name="see-also"></a>另请参阅
 
-[创作用于管理 OData web 服务的 MOF 架构文件](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[创作管理 OData Web 服务的 MOF 架构文件](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
 [资源映射架构](./resource-mapping-schema.md)
 
-[创建 Management OData Web 服务](./creating-a-management-odata-web-service.md)
+[创建管理 OData Web 服务](./creating-a-management-odata-web-service.md)

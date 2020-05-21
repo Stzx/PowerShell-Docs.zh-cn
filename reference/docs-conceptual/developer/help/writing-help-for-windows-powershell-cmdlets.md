@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55908d67-7cbe-482a-a105-5a6da93c5311
 caps.latest.revision: 4
-ms.openlocfilehash: 8d692cf88d1d356886ef973f0989294d6b51ee6d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fd565e8bf8429d91d785664c8cc69d1843439219
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361066"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560587"
 ---
 # <a name="writing-help-for-powershell-cmdlets"></a>编写 PowerShell Cmdlet 的帮助
 
@@ -34,7 +34,7 @@ PowerShell cmdlet 非常有用，但除非帮助主题清楚地说明了 cmdlet 
 
 ### <a name="write-simply"></a>简单编写
 使用简单的单词和短语。
-避免术语。
+避免行业术语。
 请注意，许多读者只配有外文字典和帮助主题。
 
 ### <a name="write-consistently"></a>一致性写入
@@ -87,22 +87,22 @@ PowerShell 团队开发了此约定，以帮助用户了解 .NET Framework。
 
  [如何创建 Cmdlet 帮助文件](./how-to-create-the-cmdlet-help-file.md)
 
- [如何将 Cmdlet 名称和摘要添加到 Cmdlet 帮助主题](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
+ [如何向 Cmdlet 帮助主题添加 Cmdlet 名称和摘要](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
 
  [如何将详细描述添加到 Cmdlet 帮助主题](./how-to-add-a-cmdlet-description.md)
 
- [如何将语法添加到 Cmdlet 帮助主题](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
+ [如何向 Cmdlet 帮助主题添加语法](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
 
  [如何将参数添加到 Cmdlet 帮助主题](./how-to-add-parameter-information.md)
 
  [如何将输入类型添加到 Cmdlet 帮助主题](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
 
- [如何将返回值添加到 Cmdlet 帮助主题](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
+ [如何向 Cmdlet 帮助主题添加返回值](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
 
- [如何向 Cmdlet 帮助主题添加注释](./how-to-add-notes-to-a-cmdlet-help-topic.md)
+ [如何向 Cmdlet 帮助主题添加备注](./how-to-add-notes-to-a-cmdlet-help-topic.md)
 
- [如何将示例添加到 Cmdlet 帮助主题](./how-to-add-examples-to-a-cmdlet-help-topic.md)
+ [如何向 Cmdlet 帮助主题添加示例](./how-to-add-examples-to-a-cmdlet-help-topic.md)
 
- [如何将相关链接添加到 Cmdlet 帮助主题](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
+ [如何向 Cmdlet 帮助主题添加相关链接](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
 
  [Windows PowerShell SDK](../windows-powershell-reference.md)

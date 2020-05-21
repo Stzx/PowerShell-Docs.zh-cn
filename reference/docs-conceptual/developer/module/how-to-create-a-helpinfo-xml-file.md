@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3971ce1f-271c-4938-a9d3-47ff3aaf7219
 caps.latest.revision: 9
-ms.openlocfilehash: 7df9764fd573b75f285fec592448a550e481bea3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1f09146a9e6456584f67edb52407193d8a9330ce
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367316"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564783"
 ---
 # <a name="how-to-create-a-helpinfo-xml-file"></a>如何创建 HelpInfo XML 文件
 
@@ -27,7 +27,7 @@ HelpInfo XML 文件是有关模块的可更新帮助的主要信息来源。 它
 
 仔细维护 HelpInfo XML 文件非常重要。 如果上传新文件，但忘记增加版本号，则可更新帮助不会将新文件下载到用户的计算机。 如果为新的 UI 区域性添加帮助文件，但不更新 HelpInfo XML 文件或将其放在正确的位置，则可更新的帮助将不会下载新文件。
 
-## <a name="in-this-section"></a>本部分内容
+## <a name="in-this-section"></a>本节内容
 
 本部分包括以下主题。
 

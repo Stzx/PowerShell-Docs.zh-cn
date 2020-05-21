@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4497b64c-7875-4047-bf77-07e04c098ffe
 caps.latest.revision: 4
-ms.openlocfilehash: 376d90394b632e82322b848cb124f002ff91d8b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d29a652b32d07b7825bc5bed5099daa67dd32ff4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366176"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564589"
 ---
 # <a name="deploying-a-management-odata-web-service"></a>部署管理 OData Web 服务
 
@@ -23,7 +23,7 @@ ms.locfileid: "72366176"
 
 完成以下步骤以部署管理 OData web 服务。
 
-1. 在 IIS `WWWRoot` 目录下为你的 web 应用程序创建一个目录。
+1. 在 IIS 目录下为你的 web 应用程序创建一个目录 `WWWRoot` 。
 
 2. 复制 MOF 架构文件、XML 架构文件、将[Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization)和[set-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration)接口导出到 web.config 文件的 dll，以及将 web.config 文件复制到应用程序目录中的 dll。
 
@@ -427,14 +427,14 @@ Start-Sleep 10
 
 ## <a name="see-also"></a>另请参阅
 
-[为管理 OData web 服务实现自定义授权](./implementing-custom-authorization-for-a-management-odata-web-service.md)
+[实现管理 OData Web 服务的自定义授权](./implementing-custom-authorization-for-a-management-odata-web-service.md)
 
-[为 Management OData web 服务实现 SessionConfiguration](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
+[实现管理 OData Web 服务的会话配置](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
 
-[创作用于管理 OData web 服务的 MOF 架构文件](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[创作管理 OData Web 服务的 MOF 架构文件](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
-[创作用于管理 OData web 服务的 XML 架构文件](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
+[创作管理 OData Web 服务的 XML 架构文件](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
 
-[创作用于管理 OData web 服务的 web.config 文件](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
+[创作管理 OData Web 服务的 Web.config 架构文件](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
 
-[创建 Management OData Web 服务](./creating-a-management-odata-web-service.md)
+[创建管理 OData Web 服务](./creating-a-management-odata-web-service.md)

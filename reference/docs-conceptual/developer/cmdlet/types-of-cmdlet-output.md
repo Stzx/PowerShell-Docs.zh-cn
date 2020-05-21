@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], output
 ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
 caps.latest.revision: 12
-ms.openlocfilehash: 3efa98c7aa22fdaee8042bae99282aea0618ef5f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: de21d9ebfec4f23d3819695df225f7a230864a7b
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369286"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561402"
 ---
 # <a name="types-of-cmdlet-output"></a>Cmdlet 输出的类型
 
@@ -54,7 +54,7 @@ Cmdlet 可以提供调试消息，这些消息对 cmdlet 代码进行疑难解�
 
 Cmdlet 可以通过调用[WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning)方法来显示警告消息。
 
-默认情况下，会显示警告消息。 但是，您可以通过使用 `$WarningPreference` 变量或在调用 cmdlet 时使用**Verbose**和**Debug**参数来配置警告消息。
+默认情况下，会显示警告消息。 但是，您可以使用 `$WarningPreference` 变量或在调用 cmdlet 时使用**Verbose**和**Debug**参数来配置警告消息。
 
 ## <a name="displaying-output"></a>显示输出
 

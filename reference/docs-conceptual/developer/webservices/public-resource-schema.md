@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e67298ee-a773-4402-8afb-d97ad0e030e5
 caps.latest.revision: 4
-ms.openlocfilehash: c7e20ff0f36e8cab2d414ff2e5924b3359ad9c60
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 52244ee7496b99e11f0306e93728736fc9c51be5
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366266"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564697"
 ---
 # <a name="public-resource-schema"></a>公共资源架构
 
@@ -38,13 +38,13 @@ class PswsTest_Process
 
 每个属性名称前面都有一个数据类型。 本示例中的数据类型与 .NET Framework 中的基元 CLR 数据类型相对应，但属性也可以引用其他资源或复杂类型，这两种方法在稍后进行介绍。
 
-`Key` 限定符指示属性用于唯一标识资源实例。 一个资源可以有多个键。
+`Key`限定符指示属性用于唯一标识资源实例。 一个资源可以有多个键。
 
-`Required` 限定符指示属性是必需的。 如果使用 `Key` 限定符标记属性，则认为该属性是必需的，并且不需要 `Required` 限定符。
+`Required`限定符指示属性是必需的。 如果用限定符标记属性，则 `Key` 认为该属性是必需的，并且 `Required` 限定符不是必需的。
 
 ### <a name="complex-data-types"></a>复杂数据类型
 
-实体的属性可以具有复杂的数据类型。 复杂数据类型是由其他类型组成的类型，类似于 C 编程语言中的结构。 复杂类型在 MOF 文件中声明为带有 `ComplexType` 限定符的类，如下面的示例中所示。
+实体的属性可以具有复杂的数据类型。 复杂数据类型是由其他类型组成的类型，类似于 C 编程语言中的结构。 复杂类型在 MOF 文件中声明为带有限定符的类 `ComplexType` ，如下面的示例中所示。
 
 ```csharp
 [ComplexType]
@@ -55,7 +55,7 @@ class PswsTest_ProcessModule
 };
 ```
 
-若要将实体属性声明为复杂类型，请使用 `EmbeddedInstance` 限定符将它声明为 `string` 类型，包括复杂类型的名称。 下面的示例演示上一示例中声明的 `PswsTest_ProcessModule` 类型的属性的声明。
+若要将实体属性声明为复杂类型，可将其声明为 `string` 带有限定符的类型 `EmbeddedInstance` ，包括复杂类型的名称。 下面的示例演示 `PswsTest_ProcessModule` 上一示例中声明的类型的属性的声明。
 
 ```csharp
 [Required, EmbeddedInstance("PswsTest_ProcessModule")] String Modules[];

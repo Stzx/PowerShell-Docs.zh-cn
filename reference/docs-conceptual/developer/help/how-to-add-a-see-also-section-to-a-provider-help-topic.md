@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c754ac3-cee3-4c13-9bad-e499c8a68a09
 caps.latest.revision: 4
-ms.openlocfilehash: 1c1b7f4cf56ea2f9e30438a60e7bee29d87b80ba
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: b6561120d1bbe848ab4ebcdec7de92c6cad96314
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995956"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564817"
 ---
 # <a name="how-to-add-a-see-also-section-to-a-provider-help-topic"></a>如何向提供程序帮助主题添加“另请参阅”部分
 
@@ -21,13 +21,13 @@ ms.locfileid: "76995956"
 
 "**另请参阅**" 部分包含与提供程序相关的主题列表，或可帮助用户更好地了解和使用该提供程序。 主题列表可以包含 Windows PowerShell 中的 cmdlet 帮助、提供程序帮助和概念（"关于"）帮助主题。 它还可以包括对书籍、纸张和联机主题的引用，包括当前提供程序帮助主题的联机版本。
 
-请参阅联机主题，以纯文本形式提供 URI 或搜索词。 `Get-Help` cmdlet 不会链接或重定向到列表中的任何主题。 此外，`Get-Help` cmdlet 的 `Online` 参数不与提供程序帮助一起使用。
+请参阅联机主题，以纯文本形式提供 URI 或搜索词。 `Get-Help`Cmdlet 不会链接或重定向到列表中的任何主题。 此外， `Online` cmdlet 的参数不适 `Get-Help` 用于提供程序帮助。
 
-"另请参阅" 部分从 `RelatedLinks` 元素及其包含的标记创建。 下面的 XML 演示如何添加标记。
+"另请参见" 部分从 `RelatedLinks` 元素及其包含的标记创建。 下面的 XML 演示如何添加标记。
 
 ### <a name="to-add-see-also-topics"></a>添加 "另请参阅" 主题
 
-1. 在 dll-help 文件*中的 `providerHelp`* 元素中，添加 `RelatedLinks` 元素。 `RelatedLinks` 元素应为 `providerHelp` 元素中的最后一个元素。 每个提供程序帮助主题中只允许有一个 `RelatedLinks` 元素。
+1. 在元素*中的 dll-help*文件中， `providerHelp` 添加一个 `RelatedLinks` 元素。 `RelatedLinks`元素应为元素中的最后一个元素 `providerHelp` 。 `RelatedLinks`每个提供程序帮助主题中只允许有一个元素。
 
    例如：
 
@@ -38,7 +38,7 @@ ms.locfileid: "76995956"
     </providerHelp>
     ```
 
-2. 对于 "**另请参见**" 部分中的每个主题，在 `RelatedLinks` 元素中添加 `navigationLink` 元素。 然后，在每个 `navigationLink` 元素中，添加一个 `linkText` 元素和一个 `uri` 元素。 如果使用的不是 `uri` 元素，则可以将其添加为空元素（\<uri/>）。
+2. 对于 "**另请参见**" 部分中的每个主题，在 `RelatedLinks` 元素中添加一个 `navigationLink` 元素。 然后，在每个 `navigationLink` 元素中添加一个 `linkText` 元素和一个 `uri` 元素。 如果不使用 `uri` 元素，则可以将其添加为空元素（ \< uri/>）。
 
    例如：
 
@@ -53,7 +53,7 @@ ms.locfileid: "76995956"
     </providerHelp>
     ```
 
-3. 在 `linkText` 标记之间键入主题名称。 如果提供了 URI，请在 `uri` 标记之间键入。 若要指示当前提供程序帮助主题的联机版本，请在 `linkText` 标记之间键入 "Online version："，而不是主题名称。 通常，"Online 版本：" 链接是 "另请参见" 主题列表中的第一个主题。
+3. 键入标记之间的主题名称 `linkText` 。 如果要提供 URI，请在标记之间键入 `uri` 。 若要指示当前提供程序帮助主题的联机版本，请在 `linkText` 标记之间键入 "online 版本："，而不是主题名称。 通常，"Online 版本：" 链接是 "另请参见" 主题列表中的第一个主题。
 
    下面的示例包括三个 "另请参阅" 主题。 第一个引用当前主题的联机版本。 第二个引用 Windows PowerShell cmdlet 帮助主题。 第三个引用其他联机主题。
 

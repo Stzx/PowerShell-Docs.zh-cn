@@ -8,22 +8,22 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7630bb63-ef39-4abd-b795-8000f984c1e5
 caps.latest.revision: 9
-ms.openlocfilehash: 6352169cffbb8a8bf59a42f79979f5003c150fa4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 997b1d6841ff014093ba54bf7a1db7b0b7d746b8
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360976"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564800"
 ---
 # <a name="runspace02-sample"></a>Runspace02 示例
 
-此示例演示如何使用[system.exception 类来](/dotnet/api/system.management.automation.powershell)同步运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object)的 cmdlet。 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 将为在本地计算机上运行的每个[进程返回 System.Diagnostics.Process.Id](/dotnet/api/System.Diagnostics.Process)对象，`Sort-Object` 并根据对象的[*](/dotnet/api/System.Diagnostics.Process.Id)属性对对象进行排序。 这些命令的结果使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件显示。
+此示例演示如何使用[system.exception 类来](/dotnet/api/system.management.automation.powershell)同步运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object)的 cmdlet。 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 将为在本地计算机上运行的每个[进程返回 System.Diagnostics.Process.Id](/dotnet/api/System.Diagnostics.Process) ，并根据对象的 `Sort-Object` [*](/dotnet/api/System.Diagnostics.Process.Id)属性对对象进行排序。 这些命令的结果使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件显示。
 
 ## <a name="requirements"></a>要求
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此示例演示以下各项。
 

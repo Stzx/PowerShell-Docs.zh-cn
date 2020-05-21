@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65fbac8b-07d0-4513-bc8d-79f1f389be0f
 caps.latest.revision: 5
-ms.openlocfilehash: 7aadee07b38d2e9d87c5f0c548d13a5cdad1939f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5c55ec1346e1f2a9a3fd59445ce267c80bdb5ae4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366166"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561699"
 ---
 # <a name="authoring-the-mof-schema-file-for-a-management-odata-web-service"></a>创作管理 OData Web 服务的 MOF 架构文件
 
@@ -23,7 +23,7 @@ ms.locfileid: "72366166"
 
 以下文件定义了服务和进程资源。 其中每个资源都对应于一个可由一组 Windows PowerShell cmdlet 管理的对象。 属性对应于这些 cmdlet 使用的参数。
 
-这两个资源都包含复杂类型的属性。 复杂类型定义为带有 `ComplexType` 限定符修改的类。
+这两个资源都包含复杂类型的属性。 复杂类型定义为带有限定符修改的类 `ComplexType` 。
 
 ```csharp
 
@@ -211,6 +211,6 @@ class PswsTest_Stream
 
 ## <a name="see-also"></a>另请参阅
 
-[创建 Management OData Web 服务](./creating-a-management-odata-web-service.md)
+[创建管理 OData Web 服务](./creating-a-management-odata-web-service.md)
 
 [公共资源架构](./public-resource-schema.md)

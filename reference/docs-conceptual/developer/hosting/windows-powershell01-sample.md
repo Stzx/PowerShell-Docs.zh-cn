@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f607a5ad-5372-4392-b2dc-ef3532fabd0f
 caps.latest.revision: 9
-ms.openlocfilehash: 7fafbc6bc19082abb8f37b68c031e0995bf879f6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c82f0a123c190c778166e3648b46e97e6257a2b6
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367346"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560995"
 ---
 # <a name="windows-powershell01-sample"></a>Windows PowerShell01 示例
 
@@ -23,9 +23,9 @@ ms.locfileid: "72367346"
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
-本示例演示下面几点：
+此示例对下列内容进行了说明：
 
 - 通过设置[Initialsessionstate. Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode)属性来限制该语言。
 

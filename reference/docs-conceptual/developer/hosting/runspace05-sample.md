@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1685cfc4-b32c-4bed-b221-e0c4482db955
 caps.latest.revision: 9
-ms.openlocfilehash: eb227b5fa5e91f59b6fc99981ff5affca1cf63fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b640493bca81a0157bf5abffe3ab43b3a2832b01
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360876"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83565251"
 ---
 # <a name="runspace05-sample"></a>Runspace05 示例
 
@@ -23,7 +23,7 @@ ms.locfileid: "72360876"
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此示例演示以下各项。
 
@@ -31,7 +31,7 @@ ms.locfileid: "72360876"
 
 - 将该管理单元添加到[Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象中。
 
-- 使用[Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象创建一个使用的 system.servicemodel. e i.[管理](/dotnet/api/System.Management.Automation.Runspaces.Runspace)对象。
+- 使用[Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象创建一个使用的 system.servicemodel.. e i..[管理](/dotnet/api/System.Management.Automation.Runspaces.Runspace)对象。
 
 - 创建使用运行空间的[system.web](/dotnet/api/system.management.automation.powershell)对象。
 

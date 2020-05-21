@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a54ce657-e0e0-4b3e-b9dc-aed39876f933
 caps.latest.revision: 11
-ms.openlocfilehash: 58252956184703fdcdb3aa9b1db617c6e91294c1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 74e11e03e8a01568dad7c038de0b3ecebb2117e5
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366186"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83562233"
 ---
 # <a name="writing-a-windows-powershell-provider"></a>编写 Windows PowerShell 提供程序
 
 "编写 Windows PowerShell 提供程序" 适用于正在设计 Windows PowerShell 提供程序的程序管理器和实现提供程序代码的开发人员。 它将帮助你了解 Windows PowerShell 提供程序的工作原理，并提供可用于开始设计或编写你自己的提供程序的示例代码。
 
-## <a name="in-this-section"></a>本部分内容
+## <a name="in-this-section"></a>本节内容
 
 [Windows PowerShell 提供程序快速入门](./windows-powershell-provider-quickstart.md)基本提供程序的示例代码和演练。
 

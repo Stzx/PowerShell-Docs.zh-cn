@@ -31,12 +31,12 @@ helpviewer_keywords:
 - user notifications
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
-ms.openlocfilehash: 9079f40e75dae86c22fd8b4f8a45d501c6125498
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9b9a598b592d0ac60099020e564ec7fffa54e683
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416025"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561063"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>向 Cmdlet 添加用户消息
 
@@ -56,7 +56,7 @@ Cmdlet 可以写入的消息数或 cmdlet 写入的消息类型没有限制。 �
 
 创建 cmdlet 的第一步是始终命名 cmdlet 并声明实现 cmdlet 的 .NET 类。 任何类型的 cmdlet 都可以从其输入处理方法写入用户通知;因此，一般情况下，可以使用指示 cmdlet 执行的系统修改的任何谓词来命名此 cmdlet。 有关批准的 cmdlet 谓词的详细信息，请参阅[Cmdlet 谓词名称](./approved-verbs-for-windows-powershell-commands.md)。
 
-停止过程 cmdlet 用于修改系统;因此，.NET 类的[CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute)声明必须包含 `SupportsShouldProcess` attribute 关键字，并将设置为 `true`。
+停止过程 cmdlet 用于修改系统;因此，.NET 类的[CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute)声明必须包括 `SupportsShouldProcess` attribute 关键字，并将设置为 `true` 。
 
 下面的代码是此 Stop Proc cmdlet 类的定义。 有关此定义的详细信息，请参阅[创建修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)。
 
@@ -68,7 +68,7 @@ public class StopProcCommand : Cmdlet
 
 ## <a name="defining-parameters-for-system-modification"></a>定义系统修改的参数
 
-停止过程 cmdlet 定义三个参数： `Name`、`Force`和 `PassThru`。 有关定义这些参数的详细信息，请参阅[创建修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)。
+停止过程 cmdlet 定义三个参数： `Name` 、 `Force` 和 `PassThru` 。 有关定义这些参数的详细信息，请参阅[创建修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)。
 
 下面是用于停止过程 cmdlet 的参数声明。
 
@@ -115,7 +115,7 @@ private bool passThru;
 
 ## <a name="overriding-an-input-processing-method"></a>重写输入处理方法
 
-Cmdlet 必须重写输入处理方法，最常见的方法是[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)。 此 ProcessRecord cmdlet 将重写 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 输入处理方法。 在此过程中，将调用来编写详细消息、调试消息和警告消息。
+Cmdlet 必须重写输入处理方法，最常见的方法是[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)。 此 ProcessRecord cmdlet 将重写 " [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) " 输入处理方法。 在此过程中，将调用来编写详细消息、调试消息和警告消息。
 
 > [!NOTE]
 > 有关此方法如何调用[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess)和[ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)方法的详细信息，请参阅[创建用于修改系统的 Cmdlet （& a）：创建用于修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)。
@@ -145,7 +145,7 @@ WriteVerbose(message);
 > [!NOTE]
 > Windows PowerShell 还定义了一个 `Debug` 参数，用于提供详细信息和调试信息。 如果你的 cmdlet 支持此参数，则它不需要在调用[WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose)的相同代码中调用[WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) ，而不需要调用。
 
-以下两个示例中的代码部分将从 [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 方法中调用，以从 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法的重写中，显示对方法的调用。
+以下两个示例中的代码部分将从[WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug)方法中调用，以从 ProcessRecord 方法的重写中，显示对[System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法的调用。
 
 此调试消息将在调用[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess)之前立即写入。
 
@@ -168,13 +168,13 @@ WriteObject(process);
 
 Windows PowerShell 会自动将任何[WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug)调用路由到跟踪基础结构和 cmdlet。 这允许对宿主应用程序、文件或调试器跟踪方法调用，而无需在 cmdlet 中进行任何额外的开发工作。 以下命令行项实现跟踪操作。
 
-**PS > trace 表达式停止进程文件过程。日志命令停止-过程记事本**
+**PS> trace 表达式停止进程文件过程。日志命令停止-过程记事本**
 
 ## <a name="writing-a-warning-message"></a>写入警告消息
 
 当 Cmdlet 要执行可能产生意外结果的操作时（例如，覆盖只读文件），将使用[WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning)方法来编写一条警告，并使用该方法。
 
-以下来自 [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) cmdlet 的代码演示了如何从 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法的重写调用中调用了对方法的调用的方法中。
+以下来自 sample WriteWarning cmdlet 的代码演示了如何从[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法的重写调用中调用了对[System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning)方法的调用的方法中。
 
 ```csharp
  if (criticalProcess)
@@ -208,7 +208,7 @@ WriteProgress(pr);
 
 ## <a name="code-sample"></a>代码示例
 
-有关完整C#的示例代码，请参阅[StopProcessSample02 示例](./stopprocesssample02-sample.md)。
+有关完整的 c # 示例代码，请参阅[StopProcessSample02 示例](./stopprocesssample02-sample.md)。
 
 ## <a name="define-object-types-and-formatting"></a>定义对象类型和格式设置
 
@@ -228,7 +228,7 @@ Windows PowerShell 使用 .NET 对象在 cmdlet 之间传递信息。 因此，c
     PS> stop-proc -Name notepad -Verbose -Debug
     ```
 
-将显示以下输出。
+    将显示以下输出。
 
     ```
     VERBOSE: Attempting to stop process " notepad ".

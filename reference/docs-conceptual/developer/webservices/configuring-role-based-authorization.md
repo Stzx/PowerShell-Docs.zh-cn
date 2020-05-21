@@ -8,24 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2933a6ca-fe92-4ba2-97ee-ef0f0d5fdfcf
 caps.latest.revision: 8
-ms.openlocfilehash: b73284adb4bf228510bf8134aa4c6a10561b7ea2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2c9d6040b7a9c17dc5204c8eb835fd69780f62c5
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359766"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564251"
 ---
 # <a name="configuring-role-based-authorization"></a>配置基于角色的授权
 
-本主题演示如何为 实现自定义授权进行管理中所述的 [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 接口的示例实现配置[基于角色的授权策略OData IIS 扩展](./implementing-custom-authorization-for-a-management-odata-web-service.md)。
+本主题演示如何为[实现管理 ODATA IIS 扩展的自定义授权](./implementing-custom-authorization-for-a-management-odata-web-service.md)中所述的[Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization)接口的示例实现配置基于角色的授权策略。
 
 在此示例中，你将配置一个 XML 文件，该文件由示例管理 OData 应用程序用来定义授权策略。 你将创建两个角色，并将包含工作流的不同 Windows PowerShell 模块与这些角色关联。 用于定义 XML 文件的架构在[基于角色的授权配置架构](./role-based-authorization-configuration-schema.md)中列出。
 
 ## <a name="modifying-the-rbacconfigurationxml-file"></a>修改 RBacConfiguration 文件
 
-此文件定义了应用程序的授权策略。 使用 `Group` 节点定义角色。 `Group` 节点定义分配给该组的用户可以运行的 Windows PowerShell 命令。 使用 `User` 节点将用户分配到组。
+此文件定义了应用程序的授权策略。 使用节点定义角色 `Group` 。 `Group`节点定义分配给该组的用户可以运行的 Windows PowerShell 命令。 使用节点将用户分配到组 `User` 。
 
-在这些示例中，会将一个模块添加到管理员 `Group` "节点，并将用户添加到每个组。
+在这些示例中，你将向管理员节点添加一个模块 `Group` ，并向每个组添加一个用户。
 
 #### <a name="adding-a-module-to-a-group-node"></a>向组节点添加模块
 
@@ -85,9 +85,9 @@ ms.locfileid: "72359766"
    </RbacConfiguration>
    ```
 
-2. 此文件包含两个 `Group` 节点。 这表示在此示例中使用的两个角色，即 "`NonAdminGroup`" 和 "`AdminGroup`" 角色。
+2. 此文件包含两个 `Group` 节点。 这些表示在此示例中使用的两个角色： `NonAdminGroup` 和 `AdminGroup` 角色。
 
-   在第一个 `Group` 节点的右 `Cmdlets` 标记后，添加以下 XML：
+   `Cmdlets`在第一个节点中的结束标记后 `Group` ，添加以下 XML：
 
    ```xml
    <Modules>
@@ -97,9 +97,9 @@ ms.locfileid: "72359766"
 
 #### <a name="adding-a-user-to-a-group-node"></a>将用户添加到组节点
 
-1. 在文本编辑器中打开**RBacConfiguration**文件。 如果在安装之前未更改终结点名称，则此文件位于文件夹 C：\\\inetpub\wwwroot\Modata 中。
+1. 在文本编辑器中打开**RBacConfiguration**文件。 \\如果在安装之前未更改终结点名称，则此文件位于文件夹 C： \inetpub\wwwroot\Modata 中。
 
-2. 直接在 `Users` "节点中的结束标记后，添加以下 XML：
+2. 在节点中的结束标记后 `Users` ，添加以下 XML：
 
    ```xml
    <User Name="UserName" GroupName="AdminGroup" AuthenticationType="Basic" DomainName="DomainName"/>

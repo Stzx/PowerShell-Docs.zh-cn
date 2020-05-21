@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
-ms.openlocfilehash: 8f745cc0e5ef6db7a6bbdf39d826103f3b8a98ce
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 772f73793449856651ab6b03e1ccc14faed941fc
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369736"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561441"
 ---
 # <a name="events01-sample"></a>Events01 示例
 
@@ -29,8 +29,8 @@ ms.locfileid: "72369736"
 2. 双击解决方案（.sln）文件的图标。
    这会在 Microsoft Visual Studio 中打开示例项目。
 
-3. 在“生成”菜单中选择“生成解决方案”。
-   示例的库将在默认 `\bin` 或 `\bin\debug` 文件夹中生成。
+3. 在“生成”菜单中选择“生成解决方案”   。
+   示例的库将在默认 `\bin` 或文件夹中生成 `\bin\debug` 。
 
 ### <a name="how-to-run-the-sample"></a>如何运行示例
 
@@ -77,14 +77,14 @@ A file was created in the TEMP directory
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此示例演示以下各项。
 
 ### <a name="how-to-write-a-cmdlet-for-event-registration"></a>如何为事件注册编写 cmdlet
 
-该 cmdlet 派生自[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)类，该类提供对 `Register-*Event` cmdlet 通用的参数的支持。
-派生自[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)的 cmdlet 只需定义其特定参数，并重写 `GetSourceObject` 和 `GetSourceObjectEventName` 抽象方法。
+该 cmdlet 派生自[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)类，该类提供对 cmdlet 的通用参数的支持 `Register-*Event` 。
+派生自[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)的 cmdlet 只需定义其特定参数并重写 `GetSourceObject` 和 `GetSourceObjectEventName` 抽象方法。
 
 ## <a name="example"></a>示例
 

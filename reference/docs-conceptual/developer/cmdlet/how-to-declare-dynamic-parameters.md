@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db04f1df-def5-4456-8869-336024cda723
 caps.latest.revision: 8
-ms.openlocfilehash: a9c530cdc66302eb6b3d9d2b284eeb486c3b2ba9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d3c2c339ba9ac6ec4a1958fadbfe1c6d74e3d736
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364416"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561046"
 ---
 # <a name="how-to-declare-dynamic-parameters"></a>如何声明动态参数
 
-此示例演示如何定义在运行时添加到 cmdlet 的动态参数。 在此示例中，只要用户指定 `Employee` 开关参数，就会将 `Department` 参数添加到 cmdlet。 有关动态参数的详细信息，请参阅[Cmdlet 动态参数](./cmdlet-dynamic-parameters.md)。
+此示例演示如何定义在运行时添加到 cmdlet 的动态参数。 在此示例中， `Department` 只要用户指定开关参数，就会将参数添加到 cmdlet `Employee` 。 有关动态参数的详细信息，请参阅[Cmdlet 动态参数](./cmdlet-dynamic-parameters.md)。
 
 ## <a name="to-define-dynamic-parameters"></a>定义动态参数
 
@@ -27,7 +27,7 @@ ms.locfileid: "72364416"
    public class SendGreetingCommand : Cmdlet, IDynamicParameters
    ```
 
-2. 调用[Idynamicparameters. Getdynamicparameters *](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)方法，该方法返回在其中定义动态参数的对象。 在此示例中，当指定 `Employee` 参数时，将调用方法。
+2. 调用[Idynamicparameters. Getdynamicparameters *](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)方法，该方法返回在其中定义动态参数的对象。 在此示例中，当指定了参数时，将调用方法 `Employee` 。
 
    ```csharp
    public object GetDynamicParameters()
@@ -60,7 +60,7 @@ ms.locfileid: "72364416"
 
 ## <a name="example"></a>示例
 
-在此示例中，只要用户指定 `Employee` 参数，就会添加 `Department` 参数。 `Department` 参数是一个可选参数，ValidateSet 属性用于指定允许的参数。
+在此示例中， `Department` 只要用户指定参数，就会添加参数 `Employee` 。 `Department`参数是一个可选参数，ValidateSet 属性用于指定允许的参数。
 
 ```csharp
 using System;

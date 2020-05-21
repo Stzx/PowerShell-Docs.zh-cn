@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: d210a852a90d94df2ab360dd86f0b83a396330e3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7c4098c6c670f22253fe7d463b33e45208d00790
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415657"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83559992"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>向 Cmdlet 参数添加别名、通配符扩展和帮助
 
@@ -35,7 +35,7 @@ public class StopProcCommand : Cmdlet
 
 ## <a name="defining-parameters-for-system-modification"></a>定义系统修改的参数
 
-Cmdlet 需要定义支持系统修改和用户反馈的参数。 该 cmdlet 应定义 `Name` 参数或等效参数，以便该 cmdlet 能够通过某种标识符修改系统。 此外，该 cmdlet 还应定义 `Force` 和 `PassThru` 参数。 有关这些参数的详细信息，请参阅[创建修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)。
+Cmdlet 需要定义支持系统修改和用户反馈的参数。 该 cmdlet 应定义 `Name` 参数或等效项，以使 cmdlet 能够按某种标识符修改系统。 此外，cmdlet 还应定义 `Force` 和 `PassThru` 参数。 有关这些参数的详细信息，请参阅[创建修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)。
 
 ## <a name="defining-a-parameter-alias"></a>定义参数别名
 
@@ -64,13 +64,13 @@ public string[] Name
 private string[] processNames;
 ```
 
-除了使用[Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute)属性，Windows PowerShell 运行时还执行部分名称匹配，即使未指定别名。 例如，如果你的 cmdlet 具有 `FileName` 参数并且是以 `F`开头的唯一参数，则用户可以输入 `Filename`、`Filenam`、`File`、`Fi`或 `F` 并仍将该条目识别为 `FileName` 参数。
+除了使用[Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute)属性，Windows PowerShell 运行时还执行部分名称匹配，即使未指定别名。 例如，如果你的 cmdlet 具有一个 `FileName` 参数，并且该参数是以开头的唯一参数 `F` ，则用户可以输入 `Filename` 、、 `Filenam` `File` 、或，并且仍可以将 `Fi` `F` 该条目识别为 `FileName` 参数。
 
 ## <a name="creating-help-for-parameters"></a>创建参数的帮助
 
-Windows PowerShell 允许你为 cmdlet 参数创建帮助。 对用于系统修改和用户反馈的任何参数执行此操作。 对于每个支持帮助的参数，可以在[Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)特性声明中设置 `HelpMessage` attribute 关键字。 此关键字定义要向用户显示的文本，以便在使用参数时获得帮助。 还可以设置 `HelpMessageBaseName` 关键字，以确定用于消息的资源的基本名称。 如果设置了此关键字，则还必须设置 `HelpMessageResourceId` 关键字来指定资源标识符。
+Windows PowerShell 允许你为 cmdlet 参数创建帮助。 对用于系统修改和用户反馈的任何参数执行此操作。 对于每个支持帮助的参数，可以 `HelpMessage` 在[Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)特性声明中设置 attribute 关键字。 此关键字定义要向用户显示的文本，以便在使用参数时获得帮助。 还可以设置 `HelpMessageBaseName` 关键字，以标识要用于消息的资源的基名称。 如果设置了此关键字，则还必须设置 `HelpMessageResourceId` 关键字来指定资源标识符。
 
-此 Stop Proc cmdlet 中的以下代码定义 `Name` 参数的 `HelpMessage` attribute 关键字。
+此 Stop Proc cmdlet 中的以下代码 `HelpMessage` 为参数定义了 attribute 关键字 `Name` 。
 
 ```csharp
 /// <summary>
@@ -92,7 +92,7 @@ Cmdlet 必须重写输入处理方法，最常见的情况是[ProcessRecord](/do
 
 ## <a name="supporting-wildcard-expansion"></a>支持通配符扩展
 
-若要允许选择多个对象，你的 cmdlet 可以使用[Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern)和[Wildcardoptions](/dotnet/api/System.Management.Automation.WildcardOptions)类来为参数输入提供通配符扩展支持。 通配符模式的示例包括 lsa *、\*.txt 和 [c]\*。 如果模式包含应按原义使用的字符，则使用后引号字符（'）作为转义符。
+若要允许选择多个对象，你的 cmdlet 可以使用[Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern)和[Wildcardoptions](/dotnet/api/System.Management.Automation.WildcardOptions)类来为参数输入提供通配符扩展支持。 通配符模式的示例包括 lsa *、 \* .txt 和 [c] \* 。 如果模式包含应按原义使用的字符，则使用后引号字符（'）作为转义符。
 
 文件和路径名的通配符扩展是常见方案的示例，其中，cmdlet 可能需要在需要选择多个对象时允许对路径输入提供支持。 常见的情况是在文件系统中，用户想要查看位于当前文件夹中的所有文件。
 
@@ -100,7 +100,7 @@ Cmdlet 必须重写输入处理方法，最常见的情况是[ProcessRecord](/do
 
 - **问号（？）。** 匹配指定位置的任何字符。
 
-- **星号（\*）。** 匹配从指定位置开始的零个或多个字符。
+- **星号（ \* ）。** 匹配从指定位置开始的零个或多个字符。
 
 - **左方括号（[）。** 引入一个可包含字符或一系列字符的模式括号表达式。 如果范围是必需的，则使用连字符（-）指示范围。
 
@@ -111,7 +111,7 @@ Cmdlet 必须重写输入处理方法，最常见的情况是[ProcessRecord](/do
 > [!NOTE]
 > 有关通配符模式的详细信息，请参阅[在 Cmdlet 参数中支持通配符](./supporting-wildcard-characters-in-cmdlet-parameters.md)。
 
-下面的代码演示如何设置通配符选项，并定义用于解析此 cmdlet 的 `Name` 参数的通配符模式。
+下面的代码演示如何设置通配符选项，并定义用于解析此 cmdlet 的参数的通配符模式 `Name` 。
 
 ```csharp
 WildcardOptions options = WildcardOptions.IgnoreCase |
@@ -130,7 +130,7 @@ if (!wildcard.IsMatch(processName))
 
 ## <a name="code-sample"></a>代码示例
 
-有关完整C#的示例代码，请参阅[StopProcessSample03 示例](./stopprocesssample03-sample.md)。
+有关完整的 c # 示例代码，请参阅[StopProcessSample03 示例](./stopprocesssample03-sample.md)。
 
 ## <a name="define-object-types-and-formatting"></a>定义对象类型和格式设置
 
@@ -144,13 +144,13 @@ Windows PowerShell 使用 .Net 对象在 cmdlet 之间传递信息。 因此，c
 
 向 Windows PowerShell 注册 cmdlet 后，可以通过在命令行上运行 cmdlet 来对其进行测试。 接下来，请测试示例的停止过程 cmdlet。 有关从命令行使用 cmdlet 的详细信息，请参阅[使用 Windows PowerShell 的入门](/powershell/scripting/getting-started/getting-started-with-windows-powershell)。
 
-- 启动 Windows PowerShell 并使用 "停止进程" 停止进程，并使用 `Name` 参数的 ProcessName 别名。
+- 启动 Windows PowerShell 并使用 "停止过程" 以使用参数的 ProcessName 别名停止进程 `Name` 。
 
     ```powershell
     PS> stop-proc -ProcessName notepad
     ```
 
-将显示以下输出。
+    将显示以下输出。
 
     ```
     Confirm
@@ -165,7 +165,7 @@ Windows PowerShell 使用 .Net 对象在 cmdlet 之间传递信息。 因此，c
     PS> stop-proc
     ```
 
-将显示以下输出。
+    将显示以下输出。
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -176,13 +176,13 @@ Windows PowerShell 使用 .Net 对象在 cmdlet 之间传递信息。 因此，c
     Name[0]: notepad
     ```
 
-- 现在，请执行以下条目来停止所有匹配通配符模式 "* note\*" 的进程。 在停止每个与模式匹配的进程之前，系统将提示您。
+- 现在，请执行以下条目来停止所有匹配通配符模式 "* note" 的进程 \* 。 在停止每个与模式匹配的进程之前，系统将提示您。
 
     ```powershell
     PS> stop-proc -Name *note*
     ```
 
-将显示以下输出。
+    将显示以下输出。
 
     ```
     Confirm
@@ -191,7 +191,7 @@ Windows PowerShell 使用 .Net 对象在 cmdlet 之间传递信息。 因此，c
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-将显示以下输出。
+    将显示以下输出。
 
     ```
     Confirm
@@ -200,7 +200,7 @@ Windows PowerShell 使用 .Net 对象在 cmdlet 之间传递信息。 因此，c
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-将显示以下输出。
+    将显示以下输出。
 
     ```
     Confirm

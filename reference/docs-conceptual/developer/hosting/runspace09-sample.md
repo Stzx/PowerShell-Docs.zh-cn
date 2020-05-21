@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f19f12c0-82e9-42f6-a7df-76c45b733855
 caps.latest.revision: 8
-ms.openlocfilehash: d78c865b869f802c7ebe2743942b6f21681de4b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 49b03bcf1b049918b200d68cb2c6f7aff878db58
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360856"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83563301"
 ---
 # <a name="runspace09-sample"></a>Runspace09 示例
 
@@ -23,7 +23,7 @@ ms.locfileid: "72360856"
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此示例演示以下各项。
 

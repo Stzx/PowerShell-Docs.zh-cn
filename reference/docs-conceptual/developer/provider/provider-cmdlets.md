@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d2465420-0970-4408-9ee5-260cf444cb67
 caps.latest.revision: 8
-ms.openlocfilehash: e6a0711cff6a550100f584fb64ae7f59f71a3cfb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b266a22e3ab16762b22e9d630b968ee510ff1c49
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359976"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564183"
 ---
 # <a name="provider-cmdlets"></a>提供程序 cmdlet
 
@@ -29,7 +29,7 @@ ms.locfileid: "72359976"
 
 - `New-PSDrive`：此 cmdlet 允许用户创建用于访问数据存储区的 Windows PowerShell 驱动器。 若要支持此 cmdlet，请覆盖[Drivecmdletprovider. Newdrive](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive)和 Drivecmdletprovider. Newdrivedynamicparameters 方法。 | [.](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters)方法。
 
-- `Remove-PSDrive`：此 cmdlet 允许用户删除访问数据存储的 Windows PowerShell 驱动器。 若要支持此 cmdlet，请覆盖[Drivecmdletprovider. Removedrive](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive)方法。
+- `Remove-PSDrive`：此 cmdlet 允许用户删除访问数据存储区的 Windows PowerShell 驱动器。 若要支持此 cmdlet，请覆盖[Drivecmdletprovider. Removedrive](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive)方法。
 
 ### <a name="item-cmdlets"></a>项 cmdlet
 
@@ -55,7 +55,7 @@ ms.locfileid: "72359976"
 
 - `New-ItemProperty`：此 cmdlet 允许用户在数据存储中创建新项。
 
-- `Remove-Item`：此 cmdlet 允许用户从数据存储中删除项。 若要支持此 cmdlet，请覆盖[Containercmdletprovider. Removeitem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem)和 Containercmdletprovider. Removeitemdynamicparameters 方法。 | [.](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters)方法。
+- `Remove-Item`：此 cmdlet 允许用户从数据存储区中删除项。 若要支持此 cmdlet，请覆盖[Containercmdletprovider. Removeitem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem)和 Containercmdletprovider. Removeitemdynamicparameters 方法。 | [.](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters)方法。
 
 - `Rename-Item`：此 cmdlet 允许用户重命名数据存储区中的项。 若要支持此 cmdlet，请覆盖[Containercmdletprovider. Renameitem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem)和 Containercmdletprovider. Renameitemdynamicparameters 方法。 | [.](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters)方法。
 
@@ -69,7 +69,7 @@ ms.locfileid: "72359976"
 
 - `Get-Content`：此 cmdlet 允许用户检索项的内容。 若要支持此 cmdlet，请覆盖[Icontentcmdletprovider. Getcontentreader](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader)和 Icontentcmdletprovider. Getcontentreaderdynamicparameters 方法。 | [.](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters)方法。 [Icontentcmdletprovider. Getcontentreader *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader)方法返回一个[Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader)接口，该接口用于定义用于读取内容的方法的定义方法的方法。
 
-- `Set-Content`：此 cmdlet 允许用户更新项的内容。 若要支持此 cmdlet，请覆盖[Icontentcmdletprovider. Getcontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter)和 Icontentcmdletprovider. Getcontentwriterdynamicparameters 方法。 | [.](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters)方法。 [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentwriter*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) 方法返回一个 [System.Management.Automation.Provider.Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter) 接口，该接口定义了用于写入内容的方法。
+- `Set-Content`：此 cmdlet 允许用户更新项的内容。 若要支持此 cmdlet，请覆盖[Icontentcmdletprovider. Getcontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter)和 Icontentcmdletprovider. Getcontentwriterdynamicparameters 方法。 | [.](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters)方法。 [Icontentcmdletprovider. Getcontentwriter *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter)方法返回一个 Icontentwriter 接口，该接口定义了用于写入内容的方法。）的[System.Management.Automation.Provider.Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter)接口。
 
 ### <a name="item-property-cmdlets"></a>项属性 cmdlet
 

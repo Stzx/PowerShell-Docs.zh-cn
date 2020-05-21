@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c8ef289-0659-42d1-9976-044b144201eb
 caps.latest.revision: 6
-ms.openlocfilehash: 2a8372d937fc3c959f7d829bb52495048423d506
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ecd23d3eb722137bdda0498fc71e0e966c57a589
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359646"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561183"
 ---
 # <a name="adding-windows-powershell-activities-to-the-visual-studio-toolbox"></a>向 Visual Studio 工具箱添加 Windows PowerShell 活动
 
@@ -23,24 +23,24 @@ ms.locfileid: "72359646"
 
 1. 在 Visual Studio 中创建新的工作流控制台应用程序项目。
 
-2. 在“视图”菜单上，单击“工具箱”。
+2. 在“视图”**** 菜单上，单击“工具箱”****。
 
 3. 右键单击 "工具箱"，然后单击 "**添加选项卡**"，并为新选项卡指定一个名称，如 "PowerShell 活动"，从而在 "工具箱" 中添加新选项卡。
 
    通过添加选项卡，可以将 PowerShell 活动与 "工具箱" 中的其他工具进行分组。
 
-4. 在 "新建工具箱" 选项卡上，单击 "**选择项 ...** "。此时将显示 "**选择工具箱项**" 对话框。
+4. 在 "新建工具箱" 选项卡上，单击 "**选择项 ...**"。此时将显示 "**选择工具箱项**" 对话框。
 
 5. 在 "**选择工具箱项**" 对话框中，单击 "**系统**" 选项卡。
 
-6. 单击**浏览**。
+6. 单击“浏览”  。
 
 7. 导航到%WINDIR%\Microsoft.NET\assembly\ GAC_MSIL \Microsoft.PowerShell.Core.Activities\v4.0_3.0.0. 0__31bf3856ad364e 文件夹，然后双击 ""。
 
-8. 单击**确定**。 现在，"工具箱" 中提供了由 "Microsoft. Core" 程序集定义的活动。
+8. 单击“确定” 。 现在，"工具箱" 中提供了由 "Microsoft. Core" 程序集定义的活动。
 
 ## <a name="see-also"></a>另请参阅
 
 [编写 Windows PowerShell 工作流](./writing-a-windows-powershell-workflow.md)
 
-[使用 Windows PowerShell 活动创建工作流](./creating-a-workflow-with-windows-powershell-activities.md)
+[创建具有 Windows PowerShell 活动的工作流](./creating-a-workflow-with-windows-powershell-activities.md)
