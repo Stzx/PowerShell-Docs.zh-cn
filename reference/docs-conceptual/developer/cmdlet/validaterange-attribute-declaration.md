@@ -12,12 +12,12 @@ helpviewer_keywords:
 - attributes, ValidateRange
 ms.assetid: 1f8066e6-e5d3-4f4e-8948-a90af5dace82
 caps.latest.revision: 11
-ms.openlocfilehash: 155a406b9855c435041fe175ac7d983a4b4eb8b7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 560fa105ac3f93ae6334df0112f5290dfa20576c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369126"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692014"
 ---
 # <a name="validaterange-attribute-declaration"></a>ValidateRange 属性声明
 
@@ -31,19 +31,19 @@ ValidateRange 属性指定 cmdlet 参数参数的最小值和最大值（范围�
 
 #### <a name="parameters"></a>参数
 
-需要 `MinRange`[（system.string）。](/dotnet/api/system.object) 指定允许的最小值。
+`MinRange`（[System.string）。](/dotnet/api/system.object) 指定允许的最小值。
 
-需要 `MaxRange`[（system.string）。](/dotnet/api/system.object) 指定允许的最大值。
+`MaxRange`（[System.string）。](/dotnet/api/system.object) 指定允许的最大值。
 
 ## <a name="remarks"></a>备注
 
-- 当 `MinRange` 参数的值大于 `MaxRange` 参数的值时，Windows PowerShell 运行时将引发构造错误。
+- 当参数的值大于参数的值时，Windows PowerShell 运行时将引发构造错误 `MinRange` `MaxRange` 。
 
 - Windows PowerShell 运行时在以下条件下引发验证错误：
 
-    - 当参数的值小于 `MinRange` 限制或大于 `MaxRange` 限制时。
+  - 当参数的值小于 `MinRange` 或大于限制时 `MaxRange` 。
 
-    - 当参数与 `MinRange` 和 `MaxRange` 参数的类型不同时。
+  - 参数的类型与 `MinRange` 和 `MaxRange` 参数不同。
 
 - ValidateRange 特性是由[Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute)类定义的。
 

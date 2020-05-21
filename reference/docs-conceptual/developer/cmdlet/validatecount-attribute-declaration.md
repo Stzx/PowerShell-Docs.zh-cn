@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateCount attribute
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
-ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3cae95fab30a4abe4e544ed5cb7dadc9f4debf02
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369226"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692369"
 ---
 # <a name="validatecount-attribute-declaration"></a>ValidateCount 属性声明
 
@@ -31,9 +31,9 @@ ValidateCount 属性指定 cmdlet 参数允许的最小和最大参数数量。
 
 #### <a name="parameters"></a>参数
 
-需要 `MinLength`[System.Int32][] 指定参数的最小数目。
+`MinLength`必需[System.Int32][]。 指定参数的最小数目。
 
-需要 `MaxLength`[System.Int32][] 指定参数的最大数目。
+`MaxLength`必需[System.Int32][]。 指定参数的最大数目。
 
 ## <a name="remarks"></a>备注
 
@@ -43,11 +43,11 @@ ValidateCount 属性指定 cmdlet 参数允许的最小和最大参数数量。
 
 - Windows PowerShell 运行时在以下条件下引发错误：
 
-    - `MinLength` 和 `MaxLength` 属性参数的类型不是[System.Int32][]。
+  - `MinLength`和 `MaxLength` 特性参数的类型不是[system.object][]。
 
-    - `MaxLength` 属性参数的值小于 `MinLength` attribute 参数的值。
+  - Attribute 参数的值 `MaxLength` 小于 `MinLength` attribute 参数的值。
 
-- ValidateCount 特性是由[System.web. ValidateCountAttribute][]类定义的。
+- ValidateCount 特性是由[ValidateCountAttribute][]类定义的。
 
 ## <a name="see-also"></a>另请参阅
 

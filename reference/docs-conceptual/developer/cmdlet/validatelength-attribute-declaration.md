@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateLength attribute
 ms.assetid: 82fe3a35-a94b-4bc1-ad9e-dfc5f1e788b3
 caps.latest.revision: 13
-ms.openlocfilehash: a25fa2410fcc6803563573596af1bc99052c3ffa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a1a494534169b2da470286020dfacfa8e9084839
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369176"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692327"
 ---
 # <a name="validatelength-attribute-declaration"></a>ValidateLength 属性声明
 
@@ -31,9 +31,9 @@ ValidateLength 属性指定 cmdlet 参数参数的最小和最大字符数。 �
 
 #### <a name="parameters"></a>参数
 
-需要 `MinLength`[（system.string）。](/dotnet/api/System.Int32) 指定允许的最小字符数。
+`MinLength`必需[System.Int32](/dotnet/api/System.Int32)。 指定允许的最小字符数。
 
-需要 `MaxLength`[（system.string）。](/dotnet/api/System.Int32) 指定允许的最大字符数。
+`MaxLength`必需[System.Int32](/dotnet/api/System.Int32)。 指定允许的最大字符数。
 
 ## <a name="remarks"></a>备注
 
@@ -43,11 +43,11 @@ ValidateLength 属性指定 cmdlet 参数参数的最小和最大字符数。 �
 
 - Windows PowerShell 运行时在以下条件下引发错误：
 
-    - 当 `MaxLength` attribute 参数的值小于 `MinLength` attribute 参数的值时。
+  - 当 attribute 参数的值 `MaxLength` 小于 attribute 参数的值时 `MinLength` 。
 
-    - 如果 `MaxLength` 特性参数设置为0，则为。
+  - 如果 `MaxLength` 特性参数设置为0，则为。
 
-    - 如果参数不是字符串，则为。
+  - 如果参数不是字符串，则为。
 
 - ValidateLength 特性是由[Validatelengthattribute](/dotnet/api/System.Management.Automation.ValidateLengthAttribute)类定义的。
 

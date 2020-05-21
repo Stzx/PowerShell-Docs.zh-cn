@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 06b1b050-0bf7-48f5-ba05-43f489d597c0
 caps.latest.revision: 10
-ms.openlocfilehash: 476fce9fc087b870bad93a9204a820c5a84df99e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f903c99300a34c0dfbed598738e96142588d69d9
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359716"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691492"
 ---
 # <a name="creating-a-management-odata-web-service"></a>创建管理 OData Web 服务
 
@@ -24,28 +24,28 @@ ms.locfileid: "72359716"
 > [!IMPORTANT]
 > 在 Windows Server 2008 R2 SP1 上启用管理 ODATA IIS 扩展之前，必须启用以下功能。
 >
-> 1.  IIS-Iis-webserverrole was-windowsactivationservice
-> 2.  IIS-WebServer
-> 3.  IIS-HttpTracing
-> 4.  IIS-ManagementOData
+> 1. IIS-Iis-webserverrole was-windowsactivationservice
+> 2. IIS-WebServer
+> 3. IIS-HttpTracing
+> 4. IIS-ManagementOData
 
 ## <a name="steps-for-creating-a-management-odata-web-service"></a>创建管理 OData web 服务的步骤
 
 以下主题介绍了如何创建和部署管理 OData web 服务。
 
-- [将资源添加到管理 OData Web 服务](./adding-resources-to-a-management-odata-web-service.md)
+- [向管理 OData Web 服务添加资源](./adding-resources-to-a-management-odata-web-service.md)
 
-- [为管理 OData web 服务实现自定义授权](./implementing-custom-authorization-for-a-management-odata-web-service.md)
+- [实现管理 OData Web 服务的自定义授权](./implementing-custom-authorization-for-a-management-odata-web-service.md)
 
-- [为 Management OData web 服务实现 SessionConfiguration](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
+- [实现管理 OData Web 服务的会话配置](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
 
-- [创作用于管理 OData web 服务的 MOF 架构文件](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+- [创作管理 OData Web 服务的 MOF 架构文件](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
-- [创作用于管理 OData web 服务的 XML 架构文件](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
+- [创作管理 OData Web 服务的 XML 架构文件](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
 
-- [创作用于管理 OData web 服务的 web.config 文件](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
+- [创作管理 OData Web 服务的 Web.config 架构文件](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
 
-- [部署管理 OData web 服务](./deploying-a-management-odata-web-service.md)
+- [部署管理 OData Web 服务](./deploying-a-management-odata-web-service.md)
 
 - [关联管理 OData 实体](./associating-management-odata-entities.md)
 

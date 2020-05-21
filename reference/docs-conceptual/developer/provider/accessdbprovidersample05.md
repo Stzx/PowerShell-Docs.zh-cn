@@ -8,37 +8,37 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a26661f2-a63c-4ca7-ad3e-dcb4d32ce5a1
 caps.latest.revision: 8
-ms.openlocfilehash: d7d6d3b377a0089bcf96d0ea46e866321441b537
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8c3974e272fe1032557b492c36504b0f16b3c9c1
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359966"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692472"
 ---
 # <a name="accessdbprovidersample05"></a>AccessDBProviderSample05
 
-此示例演示如何覆盖容器方法以支持对 `Move-Item` 和 `Join-Path` cmdlet 的调用。 当用户需要移动容器中的项时，如果数据存储区包含嵌套的容器，则应实现这些方法。 此示例中的提供程序类派生自[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类。
+此示例演示如何覆盖容器方法以支持调用 `Move-Item` 和 `Join-Path` cmdlet。 当用户需要移动容器中的项时，如果数据存储区包含嵌套的容器，则应实现这些方法。 此示例中的提供程序类派生自[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 > [!IMPORTANT]
 > 提供程序类最有可能派生自以下类之一，并可能实现其他提供程序接口：
 >
-> -   " [Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) " 类。 请参阅[AccessDBProviderSample03](./accessdbprovidersample03.md)。
-> -   " [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) " 类。 请参阅[AccessDBProviderSample04](./accessdbprovidersample04.md)。
-> -   " [Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) " 类。
+> - " [Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) " 类。 请参阅[AccessDBProviderSample03](./accessdbprovidersample03.md)。
+> - " [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) " 类。 请参阅[AccessDBProviderSample04](./accessdbprovidersample04.md)。
+> - " [Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) " 类。
 >
 > 有关根据提供程序功能选择要从哪个提供程序类派生的详细信息，请参阅[设计你的 Windows PowerShell 提供程序](./provider-types.md)。
 
-本示例演示下面几点：
+此示例对下列内容进行了说明：
 
 - 声明 `CmdletProvider` 特性。
 
 - 定义一个派生自[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类的提供程序类。
 
-- 覆盖[Navigationcmdletprovider 的 Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem)方法，以更改 `Move-Item` cmdlet 的行为，允许用户将项从一个位置移到另一个位置。 （此示例不显示如何将动态参数添加到 `Move-Item` cmdlet。）
+- 覆盖[Navigationcmdletprovider. Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem)方法以更改 cmdlet 的行为 `Move-Item` ，允许用户将项从一个位置移到另一个位置。 （此示例不显示如何将动态参数添加到 `Move-Item` cmdlet。）
 
-- 覆盖[Navigationcmdletprovider. Makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath)方法，以更改 `Join-Path` cmdlet 的行为方式。
+- 覆盖[Navigationcmdletprovider. Makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath)方法，以更改 cmdlet 的行为方式 `Join-Path` 。
 
 - 正在重写[Navigationcmdletprovider. Isitemcontainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer)方法。
 
@@ -2082,4 +2082,4 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 ["Navigationcmdletprovider"。](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)
 
-[设计你的 Windows PowerShell 提供程序](./provider-types.md)
+[设计 Windows PowerShell 提供程序](./provider-types.md)

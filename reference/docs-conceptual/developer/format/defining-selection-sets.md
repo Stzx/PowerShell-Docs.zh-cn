@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00dbb5ee-93d4-4914-a082-ef4d8b236b5c
 caps.latest.revision: 16
-ms.openlocfilehash: 596212f2e64401a751cf3dca0ee7d60b80912c00
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 95eeb037b3b9190fec1212a68029624993f3fd9f
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368846"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692295"
 ---
 # <a name="defining-selection-sets"></a>定义选项集
 
-在创建多个视图和控件时，可以定义称为选择集的对象集。 通过选择集，您可以一次性定义对象，而无需为每个视图或控件重复定义对象。 通常，当您有一组相关的 .NET 对象时，将使用选择集。 例如，`FileSystem` 格式设置文件（types.ps1xml）定义了多个视图所使用的一组文件系统类型。
+在创建多个视图和控件时，可以定义称为选择集的对象集。 通过选择集，您可以一次性定义对象，而无需为每个视图或控件重复定义对象。 通常，当您有一组相关的 .NET 对象时，将使用选择集。 例如，格式设置 `FileSystem` 文件（types.ps1xml）定义了多个视图使用的一组文件系统类型。
 
 ## <a name="where-selection-sets-are-defined-and-referenced"></a>定义和引用选择集的位置
 
@@ -35,15 +35,15 @@ ms.locfileid: "72368846"
 
 可以通过以下方式引用选项集：
 
-- 每个视图都有一个 `ViewSelectedBy` 元素，该元素定义使用视图显示的对象。 `ViewSelectedBy` 元素具有一个 `SelectionSetName` 子元素，该元素指定视图的所有定义所使用的选择集。 对于可以从视图引用的选择集的数量没有限制。
+- 每个视图都有一个 `ViewSelectedBy` 元素，该元素定义使用视图显示的对象。 `ViewSelectedBy`元素有一个 `SelectionSetName` 子元素，该元素指定视图的所有定义所使用的选择集。 对于可以从视图引用的选择集的数量没有限制。
 
-- 在视图或控件的每个定义中，`EntrySelectedBy` 元素定义使用该定义显示的对象。 通常，视图或控件只有一个定义，因此这些对象由 `ViewSelectedBy` 元素定义。 定义的 `EntrySelectedBy` 元素具有指定选择集的 `SelectionSetName` 子元素。 如果为定义指定选择集，则不能指定 `EntrySelectedBy` 元素的任何其他子元素。
+- 在视图或控件的每个定义中， `EntrySelectedBy` 元素定义使用该定义显示的对象。 通常，视图或控件只有一个定义，因此这些对象由 `ViewSelectedBy` 元素定义。 `EntrySelectedBy`定义的元素包含一个 `SelectionSetName` 指定选择集的子元素。 如果为定义指定选择集，则不能指定元素的任何其他子元素 `EntrySelectedBy` 。
 
-- 在视图或控件的每个定义中，`SelectionCondition` 元素可用于指定使用定义的条件。 `SelectionCondition` 元素具有一个 `SelectionSetName` 子元素，该元素指定触发条件的选择集。 当显示选择集中定义的任何对象时，将触发该条件。 有关如何设置这些条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+- 在视图或控件的每个定义中， `SelectionCondition` 元素可用于指定使用定义的条件。 `SelectionCondition`元素有一个 `SelectionSetName` 子元素，该元素指定触发条件的选择集。 当显示选择集中定义的任何对象时，将触发该条件。 有关如何设置这些条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="selection-set-example"></a>选择集示例
 
-以下示例显示了直接从 Windows PowerShell 提供的 `FileSystem` 格式化文件中获取的选项集。 有关其他 Windows PowerShell 格式设置文件的详细信息，请参阅[Windows Powershell 格式设置文件](./powershell-formatting-files.md)。
+以下示例显示了直接从 `FileSystem` Windows PowerShell 提供的格式化文件中获取的选项集。 有关其他 Windows PowerShell 格式设置文件的详细信息，请参阅[Windows Powershell 格式设置文件](./powershell-formatting-files.md)。
 
 ```xml
 <SelectionSets>
@@ -59,7 +59,7 @@ ms.locfileid: "72368846"
 </SelectionSets>
 ```
 
-在表视图的 `ViewSelectedBy` 元素中引用了上一选择集。
+在表视图的元素中引用了上一选择集 `ViewSelectedBy` 。
 
 ```xml
 <ViewDefinitions>
@@ -90,47 +90,47 @@ ms.locfileid: "72368846"
 
 - 以下元素指定要在视图的所有定义中使用的选择集：
 
-    - [ViewSelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-viewselectedby-format.md)
+  - [SelectionSetName Element for ViewSelectedBy (Format)](./selectionsetname-element-for-viewselectedby-format.md)
 
-    - [GroupBy 的 EntrySelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-entryselectedby-for-groupby-format.md)
+  - [SelectionSetName Element for EntrySelectedBy for GroupBy (Format)](./selectionsetname-element-for-entryselectedby-for-groupby-format.md)
 
 - 以下元素指定单个视图定义使用的选择集：
 
-    - [ListControl 的 EntrySelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+  - [SelectionSetName Element for EntrySelectedBy for ListControl (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-    - [TableControl 的 EntrySelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-entryselectedby-for-tablecontrol-format.md)
+  - [SelectionSetName Element for EntrySelectedBy for TableControl (Format)](./selectionsetname-element-for-entryselectedby-for-tablecontrol-format.md)
 
-    - [WideControl 的 EntrySelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-entryselectedby-for-widecontrol-format.md)
+  - [SelectionSetName Element for EntrySelectedBy for WideControl (Format)](./selectionsetname-element-for-entryselectedby-for-widecontrol-format.md)
 
-    - [用于 View 的 CustomControl 的 EntrySelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format.md)
+  - [SelectionSetName Element for EntrySelectedBy for CustomControl for View (Format)](./selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format.md)
 
 - 以下元素指定 common 和 view 控件定义所使用的选择集：
 
-    - [用于视图的控件的 EntrySelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-entryselectedby-for-controls-for-view-format.md)
+  - [SelectionSetName Element for EntrySelectedBy for Controls for View (Format)](./selectionsetname-element-for-entryselectedby-for-controls-for-view-format.md)
 
-    - [用于配置的控件的 EntrySelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format.md)
+  - [SelectionSetName Element for EntrySelectedBy for Controls for Configuration (Format)](./selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format.md)
 
 - 以下元素指定在定义要扩展的对象时所使用的选择集：
 
-    - [EnumerableExpansion 的 EntrySelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format.md)
+  - [SelectionSetName Element for EntrySelectedBy for EnumerableExpansion (Format)](./selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format.md)
 
 - 以下元素指定选择条件使用的选择集。
 
-    - [用于配置的控件的 SelectionCondition 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md)
+  - [SelectionSetName Element for SelectionCondition for Controls for Configuration (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
-    - [用于视图的控件的 SelectionCondition 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md)
+  - [SelectionSetName Element for SelectionCondition for Controls for View (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md)
 
-    - [用于 View 的 CustomControl 的 SelectionCondition 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
+  - [SelectionSetName Element for SelectionCondition for CustomControl for View (Format)](./selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
-    - [EnumerableExpansion 的 EntrySelectedBy 的 SelectionCondition 的 SelectionSetName 元素（Format）](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)
+  - [SelectionSetName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)
 
-    - [ListEntry 的 EntrySelectedBy 的 SelectionCondition 的 SelectionSetName 元素（Format）](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)
+  - [SelectionSetName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)
 
-    - [TableControl 的 EntrySelectedBy 的 SelectionCondition 的 SelectionSetName 元素（Format）](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)
+  - [SelectionSetName Element for SelectionCondition for EntrySelectedBy for TableControl (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)
 
-    - [WideEntry 的 EntrySelectedBy 的 SelectionCondition 的 SelectionSetName 元素（Format）](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md)
+  - [SelectionSetName Element for SelectionCondition for EntrySelectedBy for WideEntry (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md)
 
-    - [GroupBy 的 SelectionCondition 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-selectioncondition-for-groupby-format.md)
+  - [SelectionSetName Element for SelectionCondition for GroupBy (Format)](./selectionsetname-element-for-selectioncondition-for-groupby-format.md)
 
 ## <a name="see-also"></a>另请参阅
 
@@ -142,7 +142,7 @@ ms.locfileid: "72368846"
 
 [类型](./types-element-for-selectionset-format.md)
 
-[PowerShell 格式化文件](./powershell-formatting-files.md)
+[PowerShell 格式设置文件](./powershell-formatting-files.md)
 
 [定义显示数据的条件](./defining-conditions-for-displaying-data.md)
 
