@@ -8,22 +8,22 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65fbac8b-07d0-4513-bc8d-79f1f389be0f
 caps.latest.revision: 5
-ms.openlocfilehash: 7aadee07b38d2e9d87c5f0c548d13a5cdad1939f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5c55ec1346e1f2a9a3fd59445ce267c80bdb5ae4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366166"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561699"
 ---
-# <a name="authoring-the-mof-schema-file-for-a-management-odata-web-service"></a><span data-ttu-id="58d4d-102">创作管理 OData Web 服务的 MOF 架构文件</span><span class="sxs-lookup"><span data-stu-id="58d4d-102">Authoring the MOF schema file for a Management OData web service</span></span>
+# <a name="authoring-the-mof-schema-file-for-a-management-odata-web-service"></a><span data-ttu-id="39899-102">创作管理 OData Web 服务的 MOF 架构文件</span><span class="sxs-lookup"><span data-stu-id="39899-102">Authoring the MOF schema file for a Management OData web service</span></span>
 
-<span data-ttu-id="58d4d-103">通过创建使用公共资源架构的 MOF 文件来定义管理 OData web 服务公开的资源。</span><span class="sxs-lookup"><span data-stu-id="58d4d-103">You define the resources that your Management OData web service exposes by creating a MOF file that used the public resource schema.</span></span> <span data-ttu-id="58d4d-104">每个资源都定义为文件中的一个类，属性定义为类成员。</span><span class="sxs-lookup"><span data-stu-id="58d4d-104">Each resource is defined as a class in the file, and properties are defined as class members.</span></span> <span data-ttu-id="58d4d-105">有关 MOF 文件中使用的架构的详细信息，请参阅[公共资源架构](./public-resource-schema.md)。</span><span class="sxs-lookup"><span data-stu-id="58d4d-105">For more information about the schema used in the MOF file, see [Public Resource Schema](./public-resource-schema.md).</span></span>
+<span data-ttu-id="39899-103">通过创建使用公共资源架构的 MOF 文件来定义管理 OData web 服务公开的资源。</span><span class="sxs-lookup"><span data-stu-id="39899-103">You define the resources that your Management OData web service exposes by creating a MOF file that used the public resource schema.</span></span> <span data-ttu-id="39899-104">每个资源都定义为文件中的一个类，属性定义为类成员。</span><span class="sxs-lookup"><span data-stu-id="39899-104">Each resource is defined as a class in the file, and properties are defined as class members.</span></span> <span data-ttu-id="39899-105">有关 MOF 文件中使用的架构的详细信息，请参阅[公共资源架构](./public-resource-schema.md)。</span><span class="sxs-lookup"><span data-stu-id="39899-105">For more information about the schema used in the MOF file, see [Public Resource Schema](./public-resource-schema.md).</span></span>
 
-## <a name="example-mof-file"></a><span data-ttu-id="58d4d-106">示例 MOF 文件</span><span class="sxs-lookup"><span data-stu-id="58d4d-106">Example MOF file</span></span>
+## <a name="example-mof-file"></a><span data-ttu-id="39899-106">示例 MOF 文件</span><span class="sxs-lookup"><span data-stu-id="39899-106">Example MOF file</span></span>
 
-<span data-ttu-id="58d4d-107">以下文件定义了服务和进程资源。</span><span class="sxs-lookup"><span data-stu-id="58d4d-107">The following file defines Service and Process resources.</span></span> <span data-ttu-id="58d4d-108">其中每个资源都对应于一个可由一组 Windows PowerShell cmdlet 管理的对象。</span><span class="sxs-lookup"><span data-stu-id="58d4d-108">Each of these resources corresponds to an object that can be managed by a set of Windows PowerShell cmdlet.</span></span> <span data-ttu-id="58d4d-109">属性对应于这些 cmdlet 使用的参数。</span><span class="sxs-lookup"><span data-stu-id="58d4d-109">The properties correspond to parameters used by those cmdlets.</span></span>
+<span data-ttu-id="39899-107">以下文件定义了服务和进程资源。</span><span class="sxs-lookup"><span data-stu-id="39899-107">The following file defines Service and Process resources.</span></span> <span data-ttu-id="39899-108">其中每个资源都对应于一个可由一组 Windows PowerShell cmdlet 管理的对象。</span><span class="sxs-lookup"><span data-stu-id="39899-108">Each of these resources corresponds to an object that can be managed by a set of Windows PowerShell cmdlet.</span></span> <span data-ttu-id="39899-109">属性对应于这些 cmdlet 使用的参数。</span><span class="sxs-lookup"><span data-stu-id="39899-109">The properties correspond to parameters used by those cmdlets.</span></span>
 
-<span data-ttu-id="58d4d-110">这两个资源都包含复杂类型的属性。</span><span class="sxs-lookup"><span data-stu-id="58d4d-110">Each of the two resources contains properties that are of complex type.</span></span> <span data-ttu-id="58d4d-111">复杂类型定义为带有 `ComplexType` 限定符修改的类。</span><span class="sxs-lookup"><span data-stu-id="58d4d-111">The complex types are defined as classes modified with the `ComplexType` qualifier.</span></span>
+<span data-ttu-id="39899-110">这两个资源都包含复杂类型的属性。</span><span class="sxs-lookup"><span data-stu-id="39899-110">Each of the two resources contains properties that are of complex type.</span></span> <span data-ttu-id="39899-111">复杂类型定义为带有限定符修改的类 `ComplexType` 。</span><span class="sxs-lookup"><span data-stu-id="39899-111">The complex types are defined as classes modified with the `ComplexType` qualifier.</span></span>
 
 ```csharp
 
@@ -209,8 +209,8 @@ class PswsTest_Stream
 
 ```
 
-## <a name="see-also"></a><span data-ttu-id="58d4d-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="58d4d-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39899-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="39899-112">See Also</span></span>
 
-[<span data-ttu-id="58d4d-113">创建 Management OData Web 服务</span><span class="sxs-lookup"><span data-stu-id="58d4d-113">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)
+[<span data-ttu-id="39899-113">创建管理 OData Web 服务</span><span class="sxs-lookup"><span data-stu-id="39899-113">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)
 
-[<span data-ttu-id="58d4d-114">公共资源架构</span><span class="sxs-lookup"><span data-stu-id="58d4d-114">Public Resource Schema</span></span>](./public-resource-schema.md)
+[<span data-ttu-id="39899-114">公共资源架构</span><span class="sxs-lookup"><span data-stu-id="39899-114">Public Resource Schema</span></span>](./public-resource-schema.md)

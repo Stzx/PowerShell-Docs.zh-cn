@@ -8,20 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d569f5d5-9746-40c0-be5e-f218bc4560f7
 caps.latest.revision: 4
-ms.openlocfilehash: eee515252cf03c05d15368ee6e2a1cb62dc82647
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 8e5897c3df38689e80d2135dfb82898bf9a05b86
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500789"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561475"
 ---
-# <a name="authoring-the-webconfig-file-for-a-management-odata-web-service"></a><span data-ttu-id="a015e-102">创作管理 OData Web 服务的 Web.config 架构文件</span><span class="sxs-lookup"><span data-stu-id="a015e-102">Authoring the Web.config file for a Management OData web service</span></span>
+# <a name="authoring-the-webconfig-file-for-a-management-odata-web-service"></a><span data-ttu-id="e1b01-102">创作管理 OData Web 服务的 Web.config 架构文件</span><span class="sxs-lookup"><span data-stu-id="e1b01-102">Authoring the Web.config file for a Management OData web service</span></span>
 
-<span data-ttu-id="a015e-103">在部署你的管理 OData web 服务之前，必须将 web.config 文件配置为指向 XML 架构文件以及实现[Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization)和[Set-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration)接口的 dll。 "的配置文件的配置文件。</span><span class="sxs-lookup"><span data-stu-id="a015e-103">Before you can deploy your Management OData web service, you must configure the web.config file to point to the XML schema files and the DLLs that implement the [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) and [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) interfaces.</span></span>
+<span data-ttu-id="e1b01-103">在部署你的管理 OData web 服务之前，必须将 web.config 文件配置为指向 XML 架构文件以及实现[Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization)和[Set-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration)接口的 dll。 "的配置文件的配置文件。</span><span class="sxs-lookup"><span data-stu-id="e1b01-103">Before you can deploy your Management OData web service, you must configure the web.config file to point to the XML schema files and the DLLs that implement the [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) and [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) interfaces.</span></span>
 
-## <a name="sample-config-file"></a><span data-ttu-id="a015e-104">示例配置文件</span><span class="sxs-lookup"><span data-stu-id="a015e-104">Sample config file</span></span>
+## <a name="sample-config-file"></a><span data-ttu-id="e1b01-104">示例配置文件</span><span class="sxs-lookup"><span data-stu-id="e1b01-104">Sample config file</span></span>
 
-<span data-ttu-id="a015e-105">下面的示例展示了 web 服务的 web.config 文件的外观。</span><span class="sxs-lookup"><span data-stu-id="a015e-105">The following is an example of what the web.config file for your web service looks like.</span></span>
+<span data-ttu-id="e1b01-105">下面的示例展示了 web 服务的 web.config 文件的外观。</span><span class="sxs-lookup"><span data-stu-id="e1b01-105">The following is an example of what the web.config file for your web service looks like.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -61,14 +61,14 @@ ms.locfileid: "80500789"
 
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a015e-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a015e-106">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1b01-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e1b01-106">See Also</span></span>
 
-[<span data-ttu-id="a015e-107">为管理 OData web 服务实现自定义授权</span><span class="sxs-lookup"><span data-stu-id="a015e-107">Implementing Custom Authorization for a Management OData web service</span></span>](./implementing-custom-authorization-for-a-management-odata-web-service.md)
+[<span data-ttu-id="e1b01-107">实现管理 OData Web 服务的自定义授权</span><span class="sxs-lookup"><span data-stu-id="e1b01-107">Implementing Custom Authorization for a Management OData web service</span></span>](./implementing-custom-authorization-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="a015e-108">为 Management OData web 服务实现 SessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="a015e-108">Implementing SessionConfiguration for a Management OData web service</span></span>](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
+[<span data-ttu-id="e1b01-108">实现管理 OData Web 服务的会话配置</span><span class="sxs-lookup"><span data-stu-id="e1b01-108">Implementing SessionConfiguration for a Management OData web service</span></span>](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="a015e-109">创作用于管理 OData web 服务的 MOF 架构文件</span><span class="sxs-lookup"><span data-stu-id="a015e-109">Authoring the MOF schema file for a Management OData web service</span></span>](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[<span data-ttu-id="e1b01-109">创作管理 OData Web 服务的 MOF 架构文件</span><span class="sxs-lookup"><span data-stu-id="e1b01-109">Authoring the MOF schema file for a Management OData web service</span></span>](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="a015e-110">创作用于管理 OData web 服务的 XML 架构文件</span><span class="sxs-lookup"><span data-stu-id="a015e-110">Authoring the XML schema file for a Management OData web service</span></span>](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
+[<span data-ttu-id="e1b01-110">创作管理 OData Web 服务的 XML 架构文件</span><span class="sxs-lookup"><span data-stu-id="e1b01-110">Authoring the XML schema file for a Management OData web service</span></span>](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="a015e-111">创建 Management OData Web 服务</span><span class="sxs-lookup"><span data-stu-id="a015e-111">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)
+[<span data-ttu-id="e1b01-111">创建管理 OData Web 服务</span><span class="sxs-lookup"><span data-stu-id="e1b01-111">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)
