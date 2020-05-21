@@ -148,20 +148,6 @@
               href: components/ise/object-model/the-powershelltabcollection-object.md
             - name: PowerShellTab 对象
               href: components/ise/object-model/the-powershelltab-object.md
-    - name: Web 访问
-      items:
-        - name: 授权规则和安全功能
-          href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
-        - name: 安装
-          href: components/web-access/install-and-use-windows-powershell-web-access.md
-        - name: 解决访问问题
-          href: components/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
-        - name: 卸载 Windows PowerShell Web 访问
-          href: components/web-access/uninstall-windows-powershell-web-access.md
-        - name: 使用基于 Web 的 PowerShell 控制台
-          href: components/web-access/use-the-web-based-windows-powershell-console.md
-    - name: 工作流指南
-      href: components/workflows-guide.md
 - name: PowerShell 库
   items:
     - name: 概述
