@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 05b088de-fac3-4a01-9eea-3d96ab755c4b
 caps.latest.revision: 6
-ms.openlocfilehash: 4802f2806cc90cc1a50b372cfc6027c366e015e0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7fe02616f646bb181462d997940db380b67da3bc
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360256"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557339"
 ---
 # <a name="runspace01-code-samples"></a>Runspace01 代码示例
 
@@ -21,10 +21,10 @@ ms.locfileid: "72360256"
 
 有关完整的示例代码，请参阅以下主题。
 
-|Language|主题|
+|语言|主题|
 |--------------|-----------|
-|C#|[Runspace01 （C#）代码示例](./runspace01-csharp-code-sample.md)|
-|VB.NET|[Runspace01 （VB.NET）代码示例](./runspace01-vb-net-code-sample.md)|
+|C#|[Runspace01 (C#) 代码示例](./runspace01-csharp-code-sample.md)|
+|VB.NET|[Runspace01 (VB.NET) 代码示例](./runspace01-vb-net-code-sample.md)|
 
 ## <a name="see-also"></a>另请参阅
 

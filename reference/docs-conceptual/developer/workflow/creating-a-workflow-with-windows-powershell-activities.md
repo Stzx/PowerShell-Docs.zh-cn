@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 7d399786b9b43ee302493359d9702981045212e9
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 12b0b246b78142f3811f9f566cd94e4dabd40cc9
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78277452"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557459"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>创建具有 Windows PowerShell 活动的工作流
 
@@ -31,21 +31,21 @@ ms.locfileid: "78277452"
 
 1. 向工作流添加**序列**活动。
 
-2. 创建一个名为 `ComputerName` 的参数，参数类型为 `String[]`。 此参数表示要检查和加入的计算机的名称。
+2. 创建一个名为的参数 `ComputerName` ，参数类型为 `String[]` 。 此参数表示要检查和加入的计算机的名称。
 
-3. 创建一个名为的参数，该参数[的类型为 `DomainCred`。](/dotnet/api/System.Management.Automation.PSCredential) 此参数表示有权将计算机加入域的域帐户的域凭据。
+3. 创建一个名为 `DomainCred` 的名[System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)为的参数。 此参数表示有权将计算机加入域的域帐户的域凭据。
 
-4. 创建一个名为的参数，该参数[的类型为 `MachineCred`。](/dotnet/api/System.Management.Automation.PSCredential) 此参数表示要检查和加入计算机上的管理员的凭据。
+4. 创建一个名为 `MachineCred` 的名[System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)为的参数。 此参数表示要检查和加入计算机上的管理员的凭据。
 
-5. 添加 "**序列**" 活动中的**ParallelForEach**活动。 在文本框中输入 `comp` 和 `ComputerName`，以便循环遍历 `ComputerName` 数组的元素。
+5. 添加 "**序列**" 活动中的**ParallelForEach**活动。 `comp` `ComputerName` 在文本框中输入和，以便循环遍历数组中的元素 `ComputerName` 。
 
-6. 将 "**序列**" 活动添加到 " **ParallelForEach** " 活动的正文中。 将序列的**DisplayName**属性设置为 `JoinDomain`。
+6. 将 "**序列**" 活动添加到 " **ParallelForEach** " 活动的正文中。 将序列的**DisplayName**属性设置为 `JoinDomain` 。
 
 7. 将**GetWmiObject**活动添加到**JoinDomain**序列。
 
 8. 按如下所示编辑 " **GetWmiObject** " 活动的属性。
 
-   |属性|值|
+   |properties|Value|
    |--------------|-----------|
    |**类**|"Win32_ComputerSystem"|
    |**PSComputerName**|压缩|
@@ -55,21 +55,21 @@ ms.locfileid: "78277452"
 
 10. 按如下所示编辑 " **AddComputer** " 活动的属性。
 
-    |属性|值|
+    |properties|Value|
     |--------------|-----------|
-    |**计算机名**|压缩|
+    |**ComputerName**|压缩|
     |**DomainCredential**|DomainCred|
 
 11. 在**AddComputer**活动后，将**RestartComputer**活动添加到**JoinDomain**序列。
 
 12. 按如下所示编辑 " **RestartComputer** " 活动的属性。
 
-    |属性|值|
+    |properties|Value|
     |--------------|-----------|
-    |**计算机名**|压缩|
+    |**ComputerName**|压缩|
     |**凭据**|MachineCred|
     |**进行**|WaitForServiceTypes （PowerShell）|
-    |**团队**|True|
+    |**Force**|True|
     |Wait|True|
     |PSComputerName|{""}|
 
@@ -77,5 +77,5 @@ ms.locfileid: "78277452"
 
     完成这些过程后，工作流设计窗口应如下所示。
 
-    ![工作流设计器中的 JoinDomain XAML](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
-    ![工作流设计器中的 JOINDOMAIN xaml](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "JoinDomainWorkflow")
+    ![工作流设计器中的 JoinDomain XAML ](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
+     ![JoinDomain Xaml in workflow designer](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "JoinDomainWorkflow")

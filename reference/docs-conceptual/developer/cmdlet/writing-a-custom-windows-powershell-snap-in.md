@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], specified in snap-ins
 ms.assetid: 55c8b5cb-8ee2-4080-afc4-3f09c9f20128
 caps.latest.revision: 6
-ms.openlocfilehash: aa6e4a4615f2681efa691008c86611f0df4e07d7
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 9cf4499ec2992c6cfea83fc5d0bf51d0bbfaa96a
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870483"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556846"
 ---
 # <a name="writing-a-custom-windows-powershell-snap-in"></a>编写自定义 Windows PowerShell 管理单元
 
@@ -31,7 +31,7 @@ ms.locfileid: "75870483"
 
    在此示例中，类名为 "CustomPSSnapinTest"。
 
-3. 为管理单元的名称添加一个公共属性（必需）。 命名管理单元时，请不要使用以下任何字符： `#`、`.`、`,`、`(`、`)`、`{`、`}`、`[`、`]`、`&`、`-`、`/`、`\`、`$`、`;`、`:`、`"`、`'`、`<`、`>`、`|`
+3. 为管理单元的名称添加一个公共属性（必需）。 命名管理单元时，请不要使用以下任何字符： `#` 、 `.` 、 `,` 、 `(` 、 `)` `{` `}` `[` `]` `&` `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、`*`
 
    在此示例中，管理单元的名称为 "CustomPSSnapInTest"。
 
@@ -45,7 +45,7 @@ ms.locfileid: "75870483"
 
 6. 添加管理单元说明的公共属性（必需）。
 
-   在此示例中，说明为： "这是包含 `Test-HelloWorld` 和 `Test-CustomSnapinTest` cmdlet 的自定义 Windows PowerShell 管理单元"。
+   在此示例中，说明为： "这是一个包含和 cmdlet 的自定义 Windows PowerShell 管理 `Test-HelloWorld` 单元 `Test-CustomSnapinTest` 。
 
 7. 为管理单元的 "说明" 资源添加公共属性（可选）。
 
@@ -53,7 +53,7 @@ ms.locfileid: "75870483"
 
    > CustomPSSnapInTest，这是一个自定义的 Windows PowerShell 管理单元，其中包括 HelloWorld 和 CustomSnapinTest cmdlet。
 
-8. 使用[Cmdletconfigurationentry](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry)类指定属于 "自定义管理单元" （可选）的 cmdlet （可选）。 此处添加的信息包括 cmdlet 的名称、其 .NET 类型和 cmdlet 帮助文件名（应` name.dll-help.xml`cmdlet 帮助文件名的格式）。
+8. 使用[Cmdletconfigurationentry](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry)类指定属于 "自定义管理单元" （可选）的 cmdlet （可选）。 此处添加的信息包括 cmdlet 的名称、其 .NET 类型和 cmdlet 帮助文件名（cmdlet 帮助文件名的格式应该为 `name.dll-help.xml` ）。
 
    此示例将添加 HelloWorld 和 TestCustomSnapinTest cmdlet。
 
@@ -71,7 +71,7 @@ ms.locfileid: "75870483"
 
 ## <a name="example"></a>示例
 
-此示例演示如何编写可用于注册 `Test-HelloWorld` 和 `Test-CustomSnapinTest` cmdlet 的自定义 Windows PowerShell 管理单元。 请注意，在此示例中，完整的程序集可能包含不会由此管理单元注册的其他 cmdlet 和提供程序。
+此示例演示如何编写可用于注册和 cmdlet 的自定义 Windows PowerShell 管理单元 `Test-HelloWorld` `Test-CustomSnapinTest` 。 请注意，在此示例中，完整的程序集可能包含不会由此管理单元注册的其他 cmdlet 和提供程序。
 
 ```csharp
 [RunInstaller(true)]

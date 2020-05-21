@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ae37e3f3-5fd6-4ff6-bf66-a249ff96822b
 caps.latest.revision: 7
-ms.openlocfilehash: 2afa0e79d9de781149f31a45666d13f98ca10a26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4989b0bb8a379011cde1a1d2cc803a081d79d97f
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359676"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557288"
 ---
 # <a name="implementing-custom-authorization-for-a-management-odata-web-service"></a>实现管理 OData Web 服务的自定义授权
 
@@ -21,7 +21,7 @@ ms.locfileid: "72359676"
 
 ## <a name="pass-through-authorization"></a>传递授权
 
-实现[CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization)接口的最简单方法是向所有用户授权的传递实现。 此示例不提供安全性，仅提供了作为如何实现接口的说明。 [Microsoft.Management.Odata.CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 接口的实现必须重写以下两个方法：[Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) 和 [Microsoft.Management.Odata.CustomAuthorization.GetMembershipId](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId) 在此示例中， [CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser)将始终返回与当前用户关联的 AuthorizeUser 对象的**安全**对象的。
+实现[CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization)接口的最简单方法是向所有用户授权的传递实现。 此示例不提供安全性，仅提供了作为如何实现接口的说明。 [CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization)接口的实现必须重写以下两个方法： AuthorizeUser 和[CustomAuthorization。. GetMembershipId.](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId). [Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser)和。 在此示例中， [CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser)将始终返回与当前用户关联的 AuthorizeUser 对象的**安全**对象的。
 
 ```csharp
 namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPERLINK "VBScript:u(%227%22,30)" OData. HYPERLINK "VBScript:u(%227%22,36)" BasicPlugins
@@ -134,7 +134,7 @@ namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPE
 
 ### <a name="role-based-authorization"></a>基于角色的授权
 
-下面的示例实现了基于角色的授权策略。 此策略在一个 XML 文件中定义，该文件位于主应用程序目录中，其中包含 web.config 和 MOF 以及 XML 映射架构文件。 有关如何配置授权架构文件的信息，请参阅[配置基于角色的授权](./configuring-role-based-authorization.md)。 该示例的第一部分实现了[CustomAuthorization. AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser)和[CustomAuthorization. GetMembershipId](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId)方法的实现。 在这种情况下，接口方法调用 `RbacSystem` 类中的方法（定义如下），该方法执行检查用户的权限的实际工作。
+下面的示例实现了基于角色的授权策略。 此策略在一个 XML 文件中定义，该文件位于主应用程序目录中，其中包含 web.config 和 MOF 以及 XML 映射架构文件。 有关如何配置授权架构文件的信息，请参阅[配置基于角色的授权](./configuring-role-based-authorization.md)。 该示例的第一部分实现了[CustomAuthorization. AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser)和[CustomAuthorization。. GetMembershipId](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId)方法的实现。 在这种情况下，接口方法调用类中的方法 `RbacSystem` （定义如下），这些方法执行检查用户的权限的实际工作。
 
 ```csharp
 namespace Microsoft.Samples.Management.OData.RoleBasedPlugins

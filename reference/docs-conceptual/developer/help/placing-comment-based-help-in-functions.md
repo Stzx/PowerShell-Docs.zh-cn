@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5ec7159e-e4e9-4b21-95df-94244432f679
 caps.latest.revision: 5
-ms.openlocfilehash: a663bd69be7825b1685f64ff8d3068bdd8ca3265
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 898225a582c7ed25f746dec7f84012db1ae60b98
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367776"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557052"
 ---
 # <a name="placing-comment-based-help-in-functions"></a>在函数中放置基于注释的帮助
 
-本主题介绍在何处放置函数的基于注释的帮助，以便 `Get-Help` cmdlet 将基于注释的帮助主题与正确的函数相关联。
+本主题介绍在何处放置函数的基于注释的帮助，以便该 `Get-Help` cmdlet 将基于注释的帮助主题与正确的函数相关联。
 
 ## <a name="where-to-place-comment-based-help-for-a-function"></a>在何处放置函数的基于注释的帮助
 
@@ -25,7 +25,7 @@ ms.locfileid: "72367776"
 
 - 函数体的末尾。
 
-- 在 `Function` 关键字之前。 当函数在脚本或脚本模块中时，基于注释的帮助的最后一行与 `Function` 关键字之间不能有多个空行。 否则，`Get-Help` 会将帮助与脚本相关联，而不是与函数相关联。
+- 关键字之前 `Function` 。 当函数在脚本或脚本模块中时，基于注释的帮助的最后一行与关键字之间不能有多个空行 `Function` 。 否则， `Get-Help` 将帮助与脚本相关联，而不是与函数相关联。
 
 ## <a name="examples-of-help-placement-in-a-function"></a>函数中帮助位置的示例
 
