@@ -14,15 +14,15 @@ archive_url: ''
 layout: ApiBrowserPage
 apiPlatform: powershell
 quickFilterColumn1: powershell-7,win10-ps
-quickFilterColumn2: azps-3.8.0,win-mdop2-ps
+quickFilterColumn2: azps-4.1.0,win-mdop2-ps
 quickFilterColumn3: sqlserver-ps,systemcenter-ps-2019
-ms.openlocfilehash: ac16bbc2bc3583e0aa0dd50784be726557e50a07
-ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
+ms.openlocfilehash: 7fc4752083c6a2ef7d0cc1c1b8d2ff5dfd8e3c60
+ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83271808"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83751313"
 ---
-# <a name="powershell-module-browser"></a><span data-ttu-id="df5f3-103">PowerShell 模块浏览器</span><span class="sxs-lookup"><span data-stu-id="df5f3-103">PowerShell Module Browser</span></span>
+# <a name="powershell-module-browser"></a><span data-ttu-id="cd6a3-103">PowerShell 模块浏览器</span><span class="sxs-lookup"><span data-stu-id="cd6a3-103">PowerShell Module Browser</span></span>
 
-<span data-ttu-id="df5f3-104">搜索 Microsoft 的所有 PowerShell 模块和 cmdlet - 只需在下面的框中键入即可。</span><span class="sxs-lookup"><span data-stu-id="df5f3-104">Search all PowerShell modules and cmdlets from Microsoft – just start typing in the box below.</span></span>
+<span data-ttu-id="cd6a3-104">搜索 Microsoft 的所有 PowerShell 模块和 cmdlet - 只需在下面的框中键入即可。</span><span class="sxs-lookup"><span data-stu-id="cd6a3-104">Search all PowerShell modules and cmdlets from Microsoft – just start typing in the box below.</span></span>
