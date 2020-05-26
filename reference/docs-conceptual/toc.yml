@@ -1,57 +1,48 @@
 - name: 如何使用此文档
   href: how-to-use-docs.md
 - name: 概述
-  href: overview.md
+  expanded: true
+  items:
+    - name: 什么是 PowerShell？
+      href: overview.md
+    - name: PowerShell 支持生命周期
+      href: powershell-support-lifecycle.md
 - name: 安装
   items:
-    - name: 安装各种版本的 PowerShell
+    - name: 概述
       href: install/installing-powershell.md
-    - name: 安装 PowerShell
-      items:
-        - name: 在 Windows 上安装 PowerShell
-          href: install/installing-powershell-core-on-windows.md
-        - name: 在 Linux 上安装 PowerShell
-          href: install/installing-powershell-core-on-linux.md
-        - name: 在 macOS 上安装 PowerShell
-          href: install/installing-powershell-core-on-macos.md
-        - name: 在 ARM 上安装 PowerShell
-          href: install/powershell-core-on-arm.md
-    - name: 安装 Windows PowerShell 5.1
-      items:
-        - name: 安装 Windows PowerShell
-          href: install/installing-windows-powershell.md
-        - name: 安装 Windows PowerShell 2.0 引擎
-          href: install/installing-the-windows-powershell-2.0-engine.md
-        - name: Windows PowerShell 系统要求
-          href: install/windows-powershell-system-requirements.md
+    - name: 从 Windows PowerShell 5.1 迁移到 PowerShell 7
+      href: install/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
+    - name: 在 Windows 上安装 PowerShell
+      href: install/installing-powershell-core-on-windows.md
+    - name: 在 Linux 上安装 PowerShell
+      href: install/installing-powershell-core-on-linux.md
+    - name: 在 macOS 上安装 PowerShell
+      href: install/installing-powershell-core-on-macos.md
+    - name: 在 ARM 上安装 PowerShell
+      href: install/powershell-core-on-arm.md
     - name: 在 Docker 中使用 PowerShell
       href: install/PowerShell-in-Docker.md
-- name: 入门
-  items:
-    - name: PowerShell 入门
-      href: getting-started/getting-started-with-windows-powershell.md
-    - name: 启动 Windows PowerShell
-      href: getting-started/starting-windows-powershell.md
-    - name: 启动 Windows PowerShell 2.0 引擎
-      href: getting-started/starting-the-windows-powershell-2.0-engine.md
 - name: 了解 PowerShell
   items:
-    - name: 了解重要的 PowerShell 概念
-      href: learn/understanding-important-powershell-concepts.md
-    - name: 了解 PowerShell 名称
-      href: learn/learning-powershell-names.md
-    - name: 使用熟悉的命令名称
-      href: learn/using-familiar-command-names.md
-    - name: 获取详细的帮助信息
-      href: learn/getting-detailed-help-information.md
-    - name: 获取有关命令的信息
-      href: learn/getting-information-about-commands.md
-    - name: 使用变量存储对象
-      href: learn/using-variables-to-store-objects.md
-    - name: 了解 PowerShell 管道
-      href: learn/understanding-the-powershell-pipeline.md
-    - name: 更多 PowerShell 学习
-      href: learn/more-powershell-learning.md
+    - name: PowerShell 101
+      items:
+        - name: 了解 PowerShell 名称
+          href: learn/ps101/learning-powershell-names.md
+        - name: 使用熟悉的命令名称
+          href: learn/ps101/using-familiar-command-names.md
+        - name: 获取详细的帮助信息
+          href: learn/ps101/getting-detailed-help-information.md
+        - name: 获取有关命令的信息
+          href: learn/ps101/getting-information-about-commands.md
+        - name: 使用变量存储对象
+          href: learn/ps101/using-variables-to-store-objects.md
+        - name: PowerShell 命令行选项
+          href: learn/ps101/powershell.exe-command-line-help.md
+        - name: 使用选项卡扩展
+          href: learn/ps101/using-tab-expansion.md
+    - name: 使用实验性功能
+      href: learn/experimental-features.md
     - name: PowerShell 远程处理
       items:
         - name: Just Enough Administration (JEA)
@@ -82,167 +73,12 @@
           href: learn/remoting/winrmsecurity.md
         - name: 在 PowerShell 远程处理中形成第二个跃点
           href: learn/remoting/ps-remoting-second-hop.md
+    - name: 其他资源
+      href: learn/more-powershell-learning.md
     - name: 术语表
-      href: learn/windows-powershell-glossary.md
-- name: 组件
-  items:
-    - name: 控制台
-      items:
-        - name: PowerShell 命令行选项
-          href: components/console/powershell.exe-command-line-help.md
-        - name: 使用选项卡扩展
-          href: components/console/using-tab-expansion.md
-    - name: ISE
-      items:
-        - name: Windows PowerShell ISE 简介
-          href: components/ise/introducing-the-windows-powershell-ise.md
-        - name: 使用 Windows PowerShell ISE
-          items:
-            - name: 探究 Windows PowerShell ISE
-              href: components/ise/exploring-the-windows-powershell-ise.md
-            - name: 如何在 Windows PowerShell ISE 中创建 PowerShell 选项卡
-              href: components/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
-            - name: 如何在 Windows PowerShell ISE 中调试脚本
-              href: components/ise/how-to-debug-scripts-in-windows-powershell-ise.md
-            - name: 如何在 Windows PowerShell ISE 中使用配置文件
-              href: components/ise/how-to-use-profiles-in-windows-powershell-ise.md
-            - name: 如何在脚本窗格和控制台窗格中使用 Tab 自动补全
-              href: components/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
-            - name: 如何在 Windows PowerShell ISE 中使用控制台窗格
-              href: components/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
-            - name: 如何在 Windows PowerShell ISE 中编写和运行脚本
-              href: components/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
-            - name: Windows PowerShell ISE 的键盘快捷方式
-              href: components/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
-            - name: Windows PowerShell ISE 中的辅助功能
-              href: components/ise/accessibility-in-windows-powershell-ise.md
-        - name: ISE 脚本对象模块
-          items:
-            - name: Windows PowerShell ISE 脚本对象模型的用途
-              href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
-            - name: ISE 对象模型层次结构
-              href: components/ise/object-model/the-ise-object-model-hierarchy.md
-            - name: ObjectModelRoot 对象
-              href: components/ise/object-model/the-objectmodelroot-object.md
-            - name: ISEAddOnToolCollection 对象
-              href: components/ise/object-model/the-iseaddontoolcollection-object.md
-            - name: ISEAddOnTool 对象
-              href: components/ise/object-model/the-iseaddontool-object.md
-            - name: ISEEditor 对象
-              href: components/ise/object-model/the-iseeditor-object.md
-            - name: ISEFileCollection 对象
-              href: components/ise/object-model/the-isefilecollection-object.md
-            - name: ISEFile 对象
-              href: components/ise/object-model/the-isefile-object.md
-            - name: ISEMenuItemCollection 对象
-              href: components/ise/object-model/the-isemenuitemcollection-object.md
-            - name: ISEMenuItem 对象
-              href: components/ise/object-model/the-isemenuitem-object.md
-            - name: ISEOptions 对象
-              href: components/ise/object-model/the-iseoptions-object.md
-            - name: ISESnippetCollection 对象
-              href: components/ise/object-model/the-isesnippetcollection-object.md
-            - name: ISESnippet 对象
-              href: components/ise/object-model/the-isesnippetobject.md
-            - name: PowerShellTabCollection 对象
-              href: components/ise/object-model/the-powershelltabcollection-object.md
-            - name: PowerShellTab 对象
-              href: components/ise/object-model/the-powershelltab-object.md
-- name: PowerShell 库
-  items:
-    - name: 概述
-      href: gallery/overview.md
-    - name: 安装 PowerShellGet
-      href: gallery/installing-psget.md
-    - name: 入门
-      href: gallery/getting-started.md
-    - name: 操作说明
-      items:
-        - name: 在库中查找包
-          items:
-            - name: 搜索包
-              href: gallery/how-to/finding-packages/search-syntax.md
-            - name: 按兼容性搜索
-              href: gallery/how-to/finding-packages/searching-by-compatibility.md
-            - name: 筛选搜索结果
-              href: gallery/how-to/finding-packages/filtering-packages.md
-        - name: 发布到库
-          items:
-            - name: 创建和发布包
-              href: gallery/how-to/publishing-packages/publishing-a-package.md
-            - name: 创建 PowerShellGallery 帐户
-              href: gallery/how-to/publishing-packages/creating-an-account.md
-            - name: 取消列出包
-              href: gallery/how-to/publishing-packages/unlisting-packages.md
-            - name: 删除包
-              href: gallery/how-to/publishing-packages/deleting-packages.md
-            - name: 管理包所有者
-              href: gallery/how-to/publishing-packages/managing-package-owners.md
-        - name: 使用包
-          items:
-            - name: 文件列表视图
-              href: gallery/how-to/working-with-packages/filelist-view.md
-            - name: 部署到 Azure 自动化
-              href: gallery/how-to/working-with-packages/deploy-to-azure-automation.md
-            - name: 手动包下载
-              href: gallery/how-to/working-with-packages/manual-download.md
-            - name: 需要接受许可证的包
-              href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
-            - name: 与包所有者联系
-              href: gallery/how-to/working-with-packages/contacting-package-owners.md
-            - name: 通过社交媒体或发表评论提供反馈
-              href: gallery/how-to/working-with-packages/social-media-feedback.md
-        - name: 管理帐户配置文件
-          items:
-            - name: PowerShell 库帐户设置
-              href: gallery/how-to/managing-profile/managing-account.md
-            - name: 管理 API 密钥
-              href: gallery/how-to/managing-profile/creating-apikeys.md
-        - name: 使用专用 PowerShellGet 存储库
-          href: gallery/how-to/working-with-local-psrepositories.md
-    - name: 概念
-      items:
-        - name: 发布指南和最佳做法
-          href: gallery/concepts/publishing-guidelines.md
-        - name: 程序包清单和库 UI
-          href: gallery/concepts/package-manifest-affecting-ui.md
-        - name: 需要特定 PSEditions
-          items:
-            - name: 编写支持 PSEditions 的脚本
-              href: gallery/concepts/script-psedition-support.md
-            - name: 编写支持 PSEdition 的模块
-              href: gallery/concepts/module-psedition-support.md
-        - name: 需要接受许可证
-          items:
-            - name: 需要为脚本接受许可证
-              href: gallery/concepts/script-license-acceptance.md
-            - name: 需要为模块接受许可证
-              href: gallery/concepts/module-license-acceptance.md
-        - name: 将包定义为预发行版
-          items:
-            - name: 将模块定义为预发行版
-              href: gallery/concepts/module-prerelease-support.md
-            - name: 将脚本定义为预发行版
-              href: gallery/concepts/script-prerelease-support.md
-        - name: PSScriptAnalyzer 规则配置文件
-          href: gallery/concepts/scriptanalyzer-rule-profile.md
-    - name: 获取支持
-      items:
-        - name: 报告滥用行为
-          href: gallery/how-to/getting-support/report-abuse.md
-        - name: 争议解决
-          href: gallery/how-to/getting-support/dispute-resolution.md
-        - name: 联系管理员
-          href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: 疑难解答
-          href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
-        - name: 启动 NuGet 提供程序和 NuGet.exe
-          href: gallery/how-to/getting-support/bootstrapping-nuget.md
-        - name: GDPR 符合性
-          href: gallery/how-to/getting-support/gdpr-dsr-policy.md
-    - name: 有关库的常见问题
-      href: gallery/faqs.md
+      href: learn/glossary.md
 - name: 新增功能
+  expanded: true
   items:
     - name: PowerShell 7.x 中的新增功能
       items:
@@ -260,71 +96,135 @@
           href: whats-new/breaking-changes-ps6.md
         - name: PowerShell Core 6.0 中的已知问题
           href: whats-new/known-issues-ps6.md
-    - name: PowerShell Core 5.x 中的新增功能
-      items:
-        - name: Windows PowerShell 5.x 中的新增功能
-          href: whats-new/what-s-new-in-windows-powershell-50.md
-        - name: PowerShell 5.0 ISE 中的最近更新
-          href: whats-new/what-s-new-in-the-powershell-50-ise.md
-    - name: 从 Windows PowerShell 5.1 迁移到 PowerShell 7
-      href: whats-new/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
-    - name: 使用实验性功能
-      href: whats-new/experimental-features.md
     - name: 模块和 cmdlet 发行历史记录
       href: whats-new/cmdlet-versions.md
     - name: 模块兼容性列表
       href: whats-new/module-compatibility.md
-- name: PowerShell 支持生命周期
-  href: powershell-support-lifecycle.md
-- name: Windows Management Framework (WMF)
+- name: Windows PowerShell
   items:
-    - name: 概述
-      href: wmf/overview.md
-    - name: 安装
+    - name: 安装 Windows PowerShell 5.1
       items:
-        - name: 安装和配置 WMF 5.1
-          href: wmf/setup/install-configure.md
-        - name: 卸载WMF 5.0
-          href: wmf/setup/uninstall.md
-    - name: 新增功能
-      expanded: true
+        - name: 安装 Windows PowerShell
+          href: windows-powershell/install/installing-windows-powershell.md
+        - name: 安装 Windows PowerShell 2.0 引擎
+          href: windows-powershell/install/installing-the-windows-powershell-2.0-engine.md
+        - name: Windows PowerShell 系统要求
+          href: windows-powershell/install/windows-powershell-system-requirements.md
+    - name: PowerShell Core 5.x 中的新增功能
       items:
-        - name: WMF 5.x 发行说明
-          href: wmf/whats-new/release-notes.md
-        - name: WMF 5.1 中的 Bug 修复
-          href: wmf/whats-new/bugfixes.md
-        - name: 新的和更新的 cmdlet
-          href: wmf/whats-new/new-updated-cmdlets.md
-        - name: 使用 PowerShell 类创建自定义类型
-          href: wmf/whats-new/class-overview.md
-        - name: WMF 5.1 中的控制台改进
-          href: wmf/whats-new/console-improvements.md
-        - name: PowerShell 脚本调试中的改进
-          href: wmf/whats-new/debug-overview.md
-        - name: 脚本跟踪和日志记录
-          href: wmf/whats-new/script-logging.md
-        - name: WMF 5.1 中的 DSC 改进
-          href: wmf/whats-new/DSC-improvements.md
-        - name: WMF 5.1 中的 PowerShell 引擎改进
-          href: wmf/whats-new/engine-improvements.md
-        - name: 信息流
-          href: wmf/whats-new/informationstream-overview.md
-        - name: 对 Just Enough Administration (JEA) 的改进
-          href: wmf/whats-new/jea-improvements.md
-        - name: WMF 5.1 中对包管理的改进
-          href: wmf/whats-new/package-management-improvements.md
-        - name: 软件清单日志记录 (SIL)
-          href: wmf/whats-new/sil-overview.md
-        - name: 产品兼容性状态
-          href: wmf/whats-new/compatibility.md
-    - name: 已知问题
+        - name: Windows PowerShell 5.x 中的新增功能
+          href: windows-powershell/whats-new/what-s-new-in-windows-powershell-50.md
+        - name: PowerShell 5.0 ISE 中的最近更新
+          href: windows-powershell/whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: ISE
       items:
-        - name: WMF 5.0 中的已知问题
-          href: wmf/known-issues/known-issues-50.md
-        - name: WMF 5.1 中的已知问题
-          href: wmf/known-issues/known-issues-51.md
-        - name: DSC 中的已知问题和限制
-          href: wmf/known-issues/known-issues-dsc.md
+        - name: Windows PowerShell ISE 简介
+          href: windows-powershell/ise/introducing-the-windows-powershell-ise.md
+        - name: 使用 Windows PowerShell ISE
+          items:
+            - name: 探究 Windows PowerShell ISE
+              href: windows-powershell/ise/exploring-the-windows-powershell-ise.md
+            - name: 如何在 Windows PowerShell ISE 中创建 PowerShell 选项卡
+              href: windows-powershell/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
+            - name: 如何在 Windows PowerShell ISE 中调试脚本
+              href: windows-powershell/ise/how-to-debug-scripts-in-windows-powershell-ise.md
+            - name: 如何在 Windows PowerShell ISE 中使用配置文件
+              href: windows-powershell/ise/how-to-use-profiles-in-windows-powershell-ise.md
+            - name: 如何在脚本窗格和控制台窗格中使用 Tab 自动补全
+              href: windows-powershell/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
+            - name: 如何在 Windows PowerShell ISE 中使用控制台窗格
+              href: windows-powershell/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
+            - name: 如何在 Windows PowerShell ISE 中编写和运行脚本
+              href: windows-powershell/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
+            - name: Windows PowerShell ISE 的键盘快捷方式
+              href: windows-powershell/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
+            - name: Windows PowerShell ISE 中的辅助功能
+              href: windows-powershell/ise/accessibility-in-windows-powershell-ise.md
+        - name: ISE 脚本对象模块
+          items:
+            - name: Windows PowerShell ISE 脚本对象模型的用途
+              href: windows-powershell/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
+            - name: ISE 对象模型层次结构
+              href: windows-powershell/ise/object-model/the-ise-object-model-hierarchy.md
+            - name: ObjectModelRoot 对象
+              href: windows-powershell/ise/object-model/the-objectmodelroot-object.md
+            - name: ISEAddOnToolCollection 对象
+              href: windows-powershell/ise/object-model/the-iseaddontoolcollection-object.md
+            - name: ISEAddOnTool 对象
+              href: windows-powershell/ise/object-model/the-iseaddontool-object.md
+            - name: ISEEditor 对象
+              href: windows-powershell/ise/object-model/the-iseeditor-object.md
+            - name: ISEFileCollection 对象
+              href: windows-powershell/ise/object-model/the-isefilecollection-object.md
+            - name: ISEFile 对象
+              href: windows-powershell/ise/object-model/the-isefile-object.md
+            - name: ISEMenuItemCollection 对象
+              href: windows-powershell/ise/object-model/the-isemenuitemcollection-object.md
+            - name: ISEMenuItem 对象
+              href: windows-powershell/ise/object-model/the-isemenuitem-object.md
+            - name: ISEOptions 对象
+              href: windows-powershell/ise/object-model/the-iseoptions-object.md
+            - name: ISESnippetCollection 对象
+              href: windows-powershell/ise/object-model/the-isesnippetcollection-object.md
+            - name: ISESnippet 对象
+              href: windows-powershell/ise/object-model/the-isesnippetobject.md
+            - name: PowerShellTabCollection 对象
+              href: windows-powershell/ise/object-model/the-powershelltabcollection-object.md
+            - name: PowerShellTab 对象
+              href: windows-powershell/ise/object-model/the-powershelltab-object.md
+    - name: Windows Management Framework (WMF)
+      items:
+        - name: 概述
+          href: windows-powershell/wmf/overview.md
+        - name: 安装
+          items:
+            - name: 安装和配置 WMF 5.1
+              href: windows-powershell/wmf/setup/install-configure.md
+            - name: 卸载WMF 5.0
+              href: windows-powershell/wmf/setup/uninstall.md
+        - name: 新增功能
+          expanded: true
+          items:
+            - name: WMF 5.x 发行说明
+              href: windows-powershell/wmf/whats-new/release-notes.md
+            - name: WMF 5.1 中的 Bug 修复
+              href: windows-powershell/wmf/whats-new/bugfixes.md
+            - name: 新的和更新的 cmdlet
+              href: windows-powershell/wmf/whats-new/new-updated-cmdlets.md
+            - name: 使用 PowerShell 类创建自定义类型
+              href: windows-powershell/wmf/whats-new/class-overview.md
+            - name: WMF 5.1 中的控制台改进
+              href: windows-powershell/wmf/whats-new/console-improvements.md
+            - name: PowerShell 脚本调试中的改进
+              href: windows-powershell/wmf/whats-new/debug-overview.md
+            - name: 脚本跟踪和日志记录
+              href: windows-powershell/wmf/whats-new/script-logging.md
+            - name: WMF 5.1 中的 DSC 改进
+              href: windows-powershell/wmf/whats-new/DSC-improvements.md
+            - name: WMF 5.1 中的 PowerShell 引擎改进
+              href: windows-powershell/wmf/whats-new/engine-improvements.md
+            - name: 信息流
+              href: windows-powershell/wmf/whats-new/informationstream-overview.md
+            - name: 对 Just Enough Administration (JEA) 的改进
+              href: windows-powershell/wmf/whats-new/jea-improvements.md
+            - name: WMF 5.1 中对包管理的改进
+              href: windows-powershell/wmf/whats-new/package-management-improvements.md
+            - name: 软件清单日志记录 (SIL)
+              href: windows-powershell/wmf/whats-new/sil-overview.md
+            - name: 产品兼容性状态
+              href: windows-powershell/wmf/whats-new/compatibility.md
+            - name: 已知问题
+              items:
+                - name: WMF 5.0 中的已知问题
+                  href: windows-powershell/wmf/known-issues/known-issues-50.md
+                - name: WMF 5.1 中的已知问题
+                  href: windows-powershell/wmf/known-issues/known-issues-51.md
+                - name: DSC 中的已知问题和限制
+                  href: windows-powershell/wmf/known-issues/known-issues-dsc.md
+    - name: 启动 Windows PowerShell
+      href: windows-powershell/starting-windows-powershell.md
+    - name: 启动 Windows PowerShell 2.0 引擎
+      href: windows-powershell/starting-the-windows-powershell-2.0-engine.md
 - name: Desired State Configuration (DSC)
   items:
     - name: 概述
@@ -618,6 +518,44 @@
       items:
         - name: 白皮书
           href: dsc/further-reading/whitepapers.md
+- name: 社区
+  items:
+    - name: 社区更新
+      href: community/community-update.yml
+    - name: 社区支持
+      href: community/community-support.md
+    - name: 参与者名人堂
+      href: community/hall-of-fame.md
+    - name: Docs 中的新增内容
+      items:
+        - name: 2020-Q2
+          href: community/2020-Q2.md
+        - name: 2020-Q1
+          href: community/2020-Q1.md
+    - name: 参与者指南
+      items:
+        - name: 概述
+          href: community/contributing/overview.md
+        - name: 如何提交 Docs 问题
+          href: community/contributing/file-an-issue.md
+        - name: 开始编写代码
+          href: community/contributing/get-started-writing.md
+        - name: 提交拉取请求
+          href: community/contributing/pull-requests.md
+        - name: PowerShell-Docs 风格指南
+          href: community/contributing/powershell-style-guide.md
+        - name: 编辑 cmdlet 参考
+          href: community/contributing/editing-cmdlet-ref.md
+        - name: 其他资源
+          items:
+            - name: 编辑清单
+              href: community/contributing/editorial-checklist.md
+            - name: 如何管理问题
+              href: community/contributing/managing-issues.md
+            - name: 如何管理拉取请求
+              href: community/contributing/managing-pull-requests.md
+    - name: 数字艺术
+      href: community/digital-art.md
 - name: 示例脚本
   items:
     - name: 管理示例脚本
@@ -702,124 +640,125 @@
           href: samples/appendix-1---compatibility-aliases.md
         - name: 附录 2 - 创建自定义 PowerShell 快捷方式
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
-- name: 社区
-  expanded: true
+- name: PowerShell 库
   items:
-    - name: 社区更新
-      href: community/community-update.yml
-    - name: 社区支持
-      href: community/community-support.md
-    - name: 参与者名人堂
-      href: community/hall-of-fame.md
-    - name: Docs 中的新增内容
+    - name: 概述
+      href: gallery/overview.md
+    - name: 安装 PowerShellGet
+      href: gallery/installing-psget.md
+    - name: 入门
+      href: gallery/getting-started.md
+    - name: 操作说明
       items:
-        - name: 2020-Q2
-          href: community/2020-Q2.md
-        - name: 2020-Q1
-          href: community/2020-Q1.md
-    - name: 参与者指南
-      items:
-        - name: 概述
-          href: community/contributing/overview.md
-        - name: 如何提交 Docs 问题
-          href: community/contributing/file-an-issue.md
-        - name: 开始编写代码
-          href: community/contributing/get-started-writing.md
-        - name: 提交拉取请求
-          href: community/contributing/pull-requests.md
-        - name: PowerShell-Docs 风格指南
-          href: community/contributing/powershell-style-guide.md
-        - name: 编辑 cmdlet 参考
-          href: community/contributing/editing-cmdlet-ref.md
-        - name: 其他资源
+        - name: 在库中查找包
           items:
-            - name: 编辑清单
-              href: community/contributing/editorial-checklist.md
-            - name: 如何管理问题
-              href: community/contributing/managing-issues.md
-            - name: 如何管理拉取请求
-              href: community/contributing/managing-pull-requests.md
-    - name: 数字艺术
-      href: community/digital-art.md
+            - name: 搜索包
+              href: gallery/how-to/finding-packages/search-syntax.md
+            - name: 按兼容性搜索
+              href: gallery/how-to/finding-packages/searching-by-compatibility.md
+            - name: 筛选搜索结果
+              href: gallery/how-to/finding-packages/filtering-packages.md
+        - name: 发布到库
+          items:
+            - name: 创建和发布包
+              href: gallery/how-to/publishing-packages/publishing-a-package.md
+            - name: 创建 PowerShellGallery 帐户
+              href: gallery/how-to/publishing-packages/creating-an-account.md
+            - name: 取消列出包
+              href: gallery/how-to/publishing-packages/unlisting-packages.md
+            - name: 删除包
+              href: gallery/how-to/publishing-packages/deleting-packages.md
+            - name: 管理包所有者
+              href: gallery/how-to/publishing-packages/managing-package-owners.md
+        - name: 使用包
+          items:
+            - name: 文件列表视图
+              href: gallery/how-to/working-with-packages/filelist-view.md
+            - name: 部署到 Azure 自动化
+              href: gallery/how-to/working-with-packages/deploy-to-azure-automation.md
+            - name: 手动包下载
+              href: gallery/how-to/working-with-packages/manual-download.md
+            - name: 需要接受许可证的包
+              href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
+            - name: 与包所有者联系
+              href: gallery/how-to/working-with-packages/contacting-package-owners.md
+            - name: 通过社交媒体或发表评论提供反馈
+              href: gallery/how-to/working-with-packages/social-media-feedback.md
+        - name: 管理帐户配置文件
+          items:
+            - name: PowerShell 库帐户设置
+              href: gallery/how-to/managing-profile/managing-account.md
+            - name: 管理 API 密钥
+              href: gallery/how-to/managing-profile/creating-apikeys.md
+        - name: 使用专用 PowerShellGet 存储库
+          href: gallery/how-to/working-with-local-psrepositories.md
+    - name: 概念
+      items:
+        - name: 发布指南和最佳做法
+          href: gallery/concepts/publishing-guidelines.md
+        - name: 程序包清单和库 UI
+          href: gallery/concepts/package-manifest-affecting-ui.md
+        - name: 需要特定 PSEditions
+          items:
+            - name: 编写支持 PSEditions 的脚本
+              href: gallery/concepts/script-psedition-support.md
+            - name: 编写支持 PSEdition 的模块
+              href: gallery/concepts/module-psedition-support.md
+        - name: 需要接受许可证
+          items:
+            - name: 需要为脚本接受许可证
+              href: gallery/concepts/script-license-acceptance.md
+            - name: 需要为模块接受许可证
+              href: gallery/concepts/module-license-acceptance.md
+        - name: 将包定义为预发行版
+          items:
+            - name: 将模块定义为预发行版
+              href: gallery/concepts/module-prerelease-support.md
+            - name: 将脚本定义为预发行版
+              href: gallery/concepts/script-prerelease-support.md
+        - name: PSScriptAnalyzer 规则配置文件
+          href: gallery/concepts/scriptanalyzer-rule-profile.md
+    - name: 获取支持
+      items:
+        - name: 报告滥用行为
+          href: gallery/how-to/getting-support/report-abuse.md
+        - name: 争议解决
+          href: gallery/how-to/getting-support/dispute-resolution.md
+        - name: 联系管理员
+          href: gallery/how-to/getting-support/contacting-administrators.md
+        - name: 疑难解答
+          href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
+        - name: 启动 NuGet 提供程序和 NuGet.exe
+          href: gallery/how-to/getting-support/bootstrapping-nuget.md
+        - name: GDPR 符合性
+          href: gallery/how-to/getting-support/gdpr-dsr-policy.md
+    - name: 有关库的常见问题
+      href: gallery/faqs.md
 - name: 脚本和开发
   items:
     - name: Visual Studio Code
       items:
         - name: 使用 Visual Studio Code
-          href: components/vscode/using-vscode.md
+          href: dev-cross-plat/vscode/using-vscode.md
         - name: 如何复制 Visual Studio Code 中的 ISE 体验
-          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+          href: dev-cross-plat/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
         - name: 使用 Visual Studio Code 进行远程编辑和调试
-          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+          href: dev-cross-plat/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
         - name: 了解 VS Code 和 PowerShell 中的文件编码
-          href: components/vscode/understanding-file-encoding.md
+          href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: 编写可移植模块
-      href: learn/writing-portable-modules.md
+      href: dev-cross-plat/writing-portable-modules.md
     - name: 旧版 PowerShell SDK
       items:
         - name: 概述
           href: developer/windows-powershell.md
         - name: 安装 Windows PowerShell SDK
           href: developer/installing-the-windows-powershell-sdk.md
-        - name: 编写 Windows PowerShell 模块
-          href: developer/module/writing-a-windows-powershell-module.md
-          items:
-            - name: 了解 Windows PowerShell 模块
-              href: developer/module/understanding-a-windows-powershell-module.md
-            - name: 如何编写 PowerShell 脚本模块
-              href: developer/module/how-to-write-a-powershell-script-module.md
-            - name: 如何编写 PowerShell 二进制模块
-              href: developer/module/how-to-write-a-powershell-binary-module.md
-            - name: 如何编写 PowerShell 模块清单
-              href: developer/module/how-to-write-a-powershell-module-manifest.md
-            - name: 安装 PowerShell 模块
-              href: developer/module/installing-a-powershell-module.md
-            - name: 修改 PSModulePath 安装路径
-              href: developer/module/modifying-the-psmodulepath-installation-path.md
-            - name: 导入 PowerShell 模块
-              href: developer/module/importing-a-powershell-module.md
-            - name: 编写针对 Windows PowerShell 模块的帮助
-              href: developer/module/writing-help-for-windows-powershell-modules.md
-              items:
-                - name: 命名帮助文件
-                  href: developer/module/naming-help-files.md
-                - name: 支持可更新帮助
-                  href: developer/module/supporting-updatable-help.md
-                  items:
-                    - name: 可更新帮助概述
-                      href: developer/module/updatable-help-overview.md
-                    - name: 可更新帮助创作：分步指南
-                      href: developer/module/updatable-help-authoring-step-by-step.md
-                    - name: 可更新帮助的工作原理
-                      href: developer/module/how-updatable-help-works.md
-                    - name: 如何创建 HelpInfo XML 文件
-                      href: developer/module/how-to-create-a-helpinfo-xml-file.md
-                      items:
-                        - name: HelpInfo XML 架构
-                          href: developer/module/helpinfo-xml-schema.md
-                        - name: HelpInfo XML 示例文件
-                          href: developer/module/helpinfo-xml-sample-file.md
-                        - name: 如何命名 HelpInfo XML 文件
-                          href: developer/module/how-to-name-a-helpinfo-xml-file.md
-                        - name: 如何设置 HelpInfo XML 版本号
-                          href: developer/module/how-to-set-helpinfo-xml-version-numbers.md
-                    - name: 如何准备可更新帮助 CAB 文件
-                      href: developer/module/how-to-prepare-updatable-help-cab-files.md
-                      items:
-                        - name: 如何创建和上传 CAB 文件
-                          href: developer/module/how-to-create-and-upload-cab-files.md
-                        - name: 如何命名可更新帮助 CAB 文件
-                          href: developer/module/how-to-name-an-updatable-help-cab-file.md
-                        - name: 可更新帮助 CAB 文件中允许的文件类型
-                          href: developer/module/file-types-permitted-in-an-updatable-help-cab-file.md
-                    - name: 如何更新帮助文件
-                      href: developer/module/how-to-update-help-files.md
-                    - name: 如何测试可更新帮助
-                      href: developer/module/how-to-test-updatable-help.md
-                - name: 支持联机帮助
-                  href: developer/module/supporting-online-help.md
+        - name: Windows PowerShell 参考
+          href: developer/windows-powershell-reference.md
+        - name: 新增功能
+          href: developer/windows-powershell-reference-whats-new.md
         - name: 编写 Windows PowerShell Cmdlet
-          href: developer/cmdlet/writing-a-windows-powershell-cmdlet.md
           items:
             - name: Cmdlet 概述
               href: developer/cmdlet/cmdlet-overview.md
@@ -926,20 +865,6 @@
                           href: developer/cmdlet/defining-default-member-sets-for-objects.md
                     - name: 自定义格式设置文件
                       href: developer/cmdlet/custom-formatting-files.md
-                - name: 注册 Cmdlet
-                  href: developer/cmdlet/registering-cmdlets.md
-                  items:
-                    - name: 模块和管理单元
-                      href: developer/cmdlet/modules-and-snap-ins.md
-                    - name: 如何使用模块导入 Cmdlet
-                      href: developer/cmdlet/how-to-import-cmdlets-using-modules.md
-                    - name: 如何创建 Windows PowerShell 管理单元
-                      href: developer/cmdlet/how-to-create-a-windows-powershell-snap-in.md
-                      items:
-                        - name: 编写 Windows PowerShell 管理单元
-                          href: developer/cmdlet/writing-a-windows-powershell-snap-in.md
-                        - name: 编写自定义 Windows PowerShell 管理单元
-                          href: developer/cmdlet/writing-a-custom-windows-powershell-snap-in.md
                 - name: 请求确认
                   href: developer/cmdlet/requesting-confirmation.md
                   items:
@@ -1061,8 +986,41 @@
                   href: developer/cmdlet/stopprocesssample04-sample.md
                 - name: Events01 示例
                   href: developer/cmdlet/events01-sample.md
+        - name: 编写 Windows PowerShell 模块
+          items:
+            - name: 概述
+              href: developer/module/writing-a-windows-powershell-module.md
+            - name: 了解 Windows PowerShell 模块
+              href: developer/module/understanding-a-windows-powershell-module.md
+            - name: 如何编写 PowerShell 脚本模块
+              href: developer/module/how-to-write-a-powershell-script-module.md
+            - name: 如何编写 PowerShell 二进制模块
+              href: developer/module/how-to-write-a-powershell-binary-module.md
+            - name: 如何编写 PowerShell 模块清单
+              href: developer/module/how-to-write-a-powershell-module-manifest.md
+            - name: 安装 PowerShell 模块
+              href: developer/module/installing-a-powershell-module.md
+            - name: 修改 PSModulePath 安装路径
+              href: developer/module/modifying-the-psmodulepath-installation-path.md
+            - name: 注册 Cmdlet
+              items:
+                - name: 概述
+                  href: developer/module/registering-cmdlets.md
+                - name: 模块和管理单元
+                  href: developer/module/modules-and-snap-ins.md
+                - name: 如何使用模块导入 Cmdlet
+                  href: developer/module/how-to-import-cmdlets-using-modules.md
+                - name: 如何创建 Windows PowerShell 管理单元
+                  items:
+                    - name: 概述
+                      href: developer/module/how-to-create-a-windows-powershell-snap-in.md
+                    - name: 编写 Windows PowerShell 管理单元
+                      href: developer/module/writing-a-windows-powershell-snap-in.md
+                    - name: 编写自定义 Windows PowerShell 管理单元
+                      href: developer/module/writing-a-custom-windows-powershell-snap-in.md
+            - name: 导入 PowerShell 模块
+              href: developer/module/importing-a-powershell-module.md
         - name: 编写 Windows PowerShell 提供程序
-          href: developer/provider/writing-a-windows-powershell-provider.md
           items:
             - name: Windows PowerShell 提供程序快速入门
               href: developer/provider/windows-powershell-provider-quickstart.md
@@ -1099,7 +1057,6 @@
                 - name: AccessDBProviderSample06
                   href: developer/provider/accessdbprovidersample06.md
         - name: 编写 Windows PowerShell 主机应用程序
-          href: developer/hosting/writing-a-windows-powershell-host-application.md
           items:
             - name: Windows PowerShell 主机快速入门
               href: developer/hosting/windows-powershell-host-quickstart.md
@@ -1176,13 +1133,13 @@
                     - name: RemoteRunspacePool01 示例
                       href: developer/hosting/remoterunspacepool01-sample.md
         - name: 编写 PowerShell 格式设置文件
-          href: developer/format/writing-a-powershell-formatting-file.md
           items:
             - name: 格式设置文件概述
               href: developer/format/formatting-file-overview.md
             - name: 格式设置文件概念
-              href: developer/format/formatting-file-concepts.md
               items:
+                - name: 概述
+                  href: developer/format/formatting-file-concepts.md
                 - name: 创建表视图
                   href: developer/format/creating-a-table-view.md
                 - name: 创建列表视图
@@ -1201,13 +1158,14 @@
                   href: developer/format/defining-conditions-for-displaying-data.md
                 - name: 设置显示数据的格式
                   href: developer/format/formatting-displayed-data.md
-                - name: PowerShell 格式设置文件
-                  href: developer/format/powershell-formatting-files.md
-            - name: 格式设置文件示例
-              href: developer/format/examples-of-formatting-files.md
+            - name: PowerShell 格式设置文件
               items:
+                - name: 概述
+                  href: developer/format/powershell-formatting-files.md
                 - name: 如何创建格式设置文件 (.format.ps1xml)
                   href: developer/format/how-to-create-a-formatting-file-format-ps1xml.md
+            - name: 格式设置文件示例
+              items:
                 - name: 宽视图 (Basic)
                   href: developer/format/wide-view-basic.md
                 - name: 宽视图 (GroupBy)
@@ -1639,22 +1597,14 @@
                   href: developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
                 - name: WrapTables Element (Format)
                   href: developer/format/wraptables-element-format.md
-        - name: 编写基于注释的帮助主题
-          href: developer/help/writing-comment-based-help-topics.md
+        - name: 编写针对 Windows PowerShell 的帮助
           items:
-            - name: 编写针对 Windows PowerShell Cmdlet 的帮助
-              href: developer/help/writing-help-for-windows-powershell-cmdlets.md
-            - name: 编写针对 Windows PowerShell 提供程序的帮助
-              items:
-                - name: 如何向提供程序帮助主题添加动态参数
-                  href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
-                - name: 如何向提供程序帮助主题添加“另请参阅”部分
-                  href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
-            - name: 编写针对 Windows PowerShell 脚本和函数的帮助
+            - name: 概述
               href: developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
             - name: 编写基于注释的帮助主题
-              href: developer/help/writing-comment-based-help-topics.md
               items:
+                - name: 概述
+                  href: developer/help/writing-comment-based-help-topics.md
                 - name: 基于注释的帮助的语法
                   href: developer/help/syntax-of-comment-based-help.md
                 - name: 基于注释的帮助关键字
@@ -1669,39 +1619,92 @@
                   href: developer/help/examples-of-comment-based-help.md
             - name: 编写针对命令的基于 XML 的帮助主题
               items:
-                - name: 如何创建 Cmdlet 帮助文件
-                  href: developer/help/how-to-create-the-cmdlet-help-file.md
-                - name: 如何向 Cmdlet 帮助主题添加 Cmdlet 名称和摘要
-                  href: developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
-                - name: 如何添加 Cmdlet 说明
-                  href: developer/help/how-to-add-a-cmdlet-description.md
-                - name: 如何向 Cmdlet 帮助主题添加语法
-                  href: developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
-                - name: 如何添加参数信息
-                  href: developer/help/how-to-add-parameter-information.md
-                - name: 如何向 Cmdlet 帮助主题添加输入类型
-                  href: developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
-                - name: 如何向 Cmdlet 帮助主题添加返回值
-                  href: developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
-                - name: 如何向 Cmdlet 帮助主题添加备注
-                  href: developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
-                - name: 如何向 Cmdlet 帮助主题添加示例
-                  href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
-                - name: 如何向 Cmdlet 帮助主题添加相关链接
-                  href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+                - name: 编写针对 Windows PowerShell Cmdlet 的帮助
+                  items:
+                    - name: 概述
+                      href: developer/help/writing-help-for-windows-powershell-cmdlets.md
+                    - name: 如何创建 Cmdlet 帮助文件
+                      href: developer/help/how-to-create-the-cmdlet-help-file.md
+                    - name: 如何向 Cmdlet 帮助主题添加 Cmdlet 名称和摘要
+                      href: developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
+                    - name: 如何添加 Cmdlet 说明
+                      href: developer/help/how-to-add-a-cmdlet-description.md
+                    - name: 如何向 Cmdlet 帮助主题添加语法
+                      href: developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
+                    - name: 如何添加参数信息
+                      href: developer/help/how-to-add-parameter-information.md
+                    - name: 如何向 Cmdlet 帮助主题添加输入类型
+                      href: developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
+                    - name: 如何向 Cmdlet 帮助主题添加返回值
+                      href: developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
+                    - name: 如何向 Cmdlet 帮助主题添加备注
+                      href: developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
+                    - name: 如何向 Cmdlet 帮助主题添加示例
+                      href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
+                    - name: 如何向 Cmdlet 帮助主题添加相关链接
+                      href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+                - name: 编写针对 Windows PowerShell 模块的帮助
+                  href: developer/module/writing-help-for-windows-powershell-modules.md
+                  items:
+                    - name: 命名帮助文件
+                      href: developer/help/naming-help-files.md
+                    - name: 支持可更新帮助
+                      href: developer/help/supporting-updatable-help.md
+                      items:
+                        - name: 可更新帮助概述
+                          href: developer/help/updatable-help-overview.md
+                        - name: 可更新帮助创作：分步指南
+                          href: developer/help/updatable-help-authoring-step-by-step.md
+                        - name: 可更新帮助的工作原理
+                          href: developer/help/how-updatable-help-works.md
+                        - name: 如何创建 HelpInfo XML 文件
+                          href: developer/help/how-to-create-a-helpinfo-xml-file.md
+                          items:
+                            - name: HelpInfo XML 架构
+                              href: developer/help/helpinfo-xml-schema.md
+                            - name: HelpInfo XML 示例文件
+                              href: developer/help/helpinfo-xml-sample-file.md
+                            - name: 如何命名 HelpInfo XML 文件
+                              href: developer/help/how-to-name-a-helpinfo-xml-file.md
+                            - name: 如何设置 HelpInfo XML 版本号
+                              href: developer/help/how-to-set-helpinfo-xml-version-numbers.md
+                        - name: 如何准备可更新帮助 CAB 文件
+                          href: developer/help/how-to-prepare-updatable-help-cab-files.md
+                          items:
+                            - name: 如何创建和上传 CAB 文件
+                              href: developer/help/how-to-create-and-upload-cab-files.md
+                            - name: 如何命名可更新帮助 CAB 文件
+                              href: developer/help/how-to-name-an-updatable-help-cab-file.md
+                            - name: 可更新帮助 CAB 文件中允许的文件类型
+                              href: developer/help/file-types-permitted-in-an-updatable-help-cab-file.md
+                            - name: 如何更新帮助文件
+                              href: developer/help/how-to-update-help-files.md
+                            - name: 如何测试可更新帮助
+                              href: developer/help/how-to-test-updatable-help.md
+                        - name: 支持联机帮助
+                          href: developer/help/supporting-online-help.md
+                - name: 编写针对 Windows PowerShell 提供程序的帮助
+                  items:
+                    - name: 如何向提供程序帮助主题添加动态参数
+                      href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
+                    - name: 如何向提供程序帮助主题添加“另请参阅”部分
+                      href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
         - name: 创建管理 OData Web 服务
-          href: developer/webservices/creating-a-management-odata-web-service.md
           items:
+            - name: 概述
+              href: developer/webservices/creating-a-management-odata-web-service.md
             - name: 向管理 OData Web 服务添加资源
               href: developer/webservices/adding-resources-to-a-management-odata-web-service.md
             - name: 实现管理 OData Web 服务的自定义授权
-              href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
               items:
+                - name: 概述
+                  href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
                 - name: 配置基于角色的授权
                   href: developer/webservices/configuring-role-based-authorization.md
-                  items:
-                    - name: 基于角色的授权配置架构
-                      href: developer/webservices/role-based-authorization-configuration-schema.md
+                - name: 基于角色的授权配置架构
+                  href: developer/webservices/role-based-authorization-configuration-schema.md
+                - name: 通过管理 OData Web 服务调用 Windows PowerShell cmdlet
+                  href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
             - name: 实现管理 OData Web 服务的会话配置
               href: developer/webservices/implementing-sessionconfiguration-for-a-management-odata-web-service.md
             - name: 创作管理 OData Web 服务的 MOF 架构文件
@@ -1714,32 +1717,32 @@
               href: developer/webservices/deploying-a-management-odata-web-service.md
             - name: 关联管理 OData 实体
               href: developer/webservices/associating-management-odata-entities.md
-            - name: 通过管理 OData Web 服务调用 Windows PowerShell cmdlet
-              href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
             - name: 管理 OData IIS 扩展架构文件
-              href: developer/webservices/management-odata-iis-extension-schema-files.md
               items:
+                - name: 概述
+                  href: developer/webservices/management-odata-iis-extension-schema-files.md
                 - name: 资源映射架构
                   href: developer/webservices/resource-mapping-schema.md
                 - name: 公共资源架构
                   href: developer/webservices/public-resource-schema.md
         - name: 编写 Windows PowerShell 工作流
-          href: developer/workflow/writing-a-windows-powershell-workflow.md
           items:
+            - name: 概述
+              href: developer/workflow/writing-a-windows-powershell-workflow.md
             - name: 向 Visual Studio 工具箱添加 Windows PowerShell 活动
               href: developer/workflow/adding-windows-powershell-activities-to-the-visual-studio-toolbox.md
-            - name: 常见工作流参数
-              href: developer/workflow/common-workflow-parameters.md
-            - name: 通过 Windows PowerShell Cmdlet 创建工作流活动
-              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
-            - name: 使用 Windows PowerShell 脚本创建工作流
-              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
             - name: 创建具有 Windows PowerShell 活动的工作流
               href: developer/workflow/creating-a-workflow-with-windows-powershell-activities.md
+            - name: 使用 Windows PowerShell 脚本创建工作流
+              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
             - name: 导入并调用 Windows PowerShell 工作流
               href: developer/workflow/importing-and-invoking-a-windows-powershell-workflow.md
+            - name: 通过 Windows PowerShell Cmdlet 创建工作流活动
+              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
             - name: 使用 Windows PowerShell API 安排作业
               href: developer/workflow/scheduling-jobs-with-the-windows-powershell-api.md
+            - name: 常见工作流参数
+              href: developer/workflow/common-workflow-parameters.md
         - name: Windows PowerShell 程序员指南
           href: developer/prog-guide/windows-powershell-programmer-s-guide.md
           items:
@@ -1866,8 +1869,3 @@
                   href: developer/prog-guide/runspace09-code-sample.md
                 - name: RunSpace10 代码示例
                   href: developer/prog-guide/runspace10-code-sample.md
-        - name: Windows PowerShell 参考
-          href: developer/windows-powershell-reference.md
-          items:
-            - name: 新增功能
-              href: developer/windows-powershell-reference-whats-new.md
