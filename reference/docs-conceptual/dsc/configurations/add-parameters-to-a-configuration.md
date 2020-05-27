@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,资源,库,安装程序
 title: 向配置添加参数
-ms.openlocfilehash: 9aa4c746042e89d7767e1b326233dcca1e5c4c24
-ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
+ms.openlocfilehash: 9dd9f2be58c13840be2b24e7e21a0d4af79b67cc
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141407"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80263146"
 ---
 # <a name="add-parameters-to-a-configuration"></a>向配置添加参数
 
@@ -96,7 +96,7 @@ Configuration TestConfig
 {
     param
     (
-        [String[]]
+        [String]
         $ComputerName="localhost"
     )
 
@@ -119,7 +119,7 @@ TestConfig -ComputerName "server01", "server02", "server03"
 ## <a name="advanced-parameters-in-configurations"></a>配置中的高级参数
 
 除了 `-ComputerName` 参数之外，还可以为服务名称和状态添加参数。
-下面的示例添加一个带有 `-ServiceName` 参数的参数块，并使用它动态定义 Service  资源块。 它还添加一个 `-State` 参数来动态定义 Service  资源块中的状态  。
+下面的示例添加一个带有 `-ServiceName` 参数的参数块，并使用它动态定义 Service  资源块。 它还添加一个 `-State` 参数来动态定义 Service 资源块中的状态。
 
 ```powershell
 Configuration TestConfig
@@ -187,9 +187,9 @@ $State="Running"
 ```
 
 > [!NOTE]
-> 在使用 `parameter` 属性时，不需要指定 `validation` 属性。
+> 在使用 `validation` 属性时，不需要指定 `parameter` 属性。
 
-可以在 `parameter`about_Functions_Advanced_Parameters[ 中了解更多有关 ](/powershell/module/microsoft.powershell.core/about/about_Functions_Advanced_Parameters) 和验证属性的信息。
+可以在 [about_Functions_Advanced_Parameters](/powershell/module/microsoft.powershell.core/about/about_Functions_Advanced_Parameters) 中了解更多有关 `parameter` 和验证属性的信息。
 
 ## <a name="fully-parameterized-configuration"></a>完全参数化的配置
 

@@ -2,16 +2,16 @@
 ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,配置,安装程序
 title: 快速入门 - 将组策略转换为 DSC
-ms.openlocfilehash: 5e6b86be5127332fe4fd400980c8e147b735247b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: a9ce9cecd71fe00d2908024a3ee474ec836af3ba
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500654"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808242"
 ---
-> 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
-
 # <a name="quickstart-convert-group-policy-into-dsc"></a>快速入门：将组策略转换为 DSC
+
+> 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
 可从组策略或 Azure 安全中心基线生成 DSC 配置。 [BaselineManagement](https://www.powershellgallery.com/packages/BaselineManagement) 模块包含以下用于完成此任务的命令。
 
@@ -52,10 +52,10 @@ Mode                LastWriteTime     Length Name
 - [AuditPolicyDSC](https://www.powershellgallery.com/packages/AuditPolicyDsc)
 
 > [!NOTE]
-> BaselineManagement 是社区开发的一种解决方案，可使 DSC 更易被发现，用于支持来自项目维护人员的社区解决方案，而不是来自 Microsoft 的解决方案  。 可在 [GitHub](https://github.com/microsoft/BaselineManagement) 上提出有关 BaselineManagement 的新问题  。
+> BaselineManagement 是社区开发的一种解决方案，可使 DSC 更易被发现，用于支持来自项目维护人员的社区解决方案，而不是来自 Microsoft 的解决方案。 可在 [GitHub](https://github.com/microsoft/BaselineManagement) 上提出有关 BaselineManagement 的新问题。
 
 ## <a name="next-steps"></a>后续步骤
 
 - 要将配置脚本上传到 Azure 自动化状态配置，请参阅[入门](/azure/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation)。
-- 将 SecurityPolicyDSC 和 AuditPolicyDSC 模块添加到[自动化帐户](/azure/automation/shared-resources/modules)   。
+- 将 SecurityPolicyDSC 和 AuditPolicyDSC 模块添加到[自动化帐户](/azure/automation/shared-resources/modules)。
 - 在 [PowerShell 库](https://www.powershellgallery.com/)中查找 DSC 配置和资源。

@@ -2,17 +2,16 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: JEA 先决条件
-ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 5083a9ad4aa87c753799d36f55540342225ecddd
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74416726"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556863"
 ---
-# <a name="prerequisites"></a>必备条件
+# <a name="prerequisites"></a>先决条件
 
 Just Enough Administration 是 PowerShell 5.0 及更高版本随附的功能。 本文介绍使用 JEA 前必须满足的先决条件。
-
 
 ## <a name="check-which-version-of-powershell-is-installed"></a>查看安装的 PowerShell 版本类型
 
@@ -83,15 +82,15 @@ Enable-PSRemoting
 可使用组策略配置 PowerShell 模块日志记录策略。
 
 1. 在工作站上打开“本地组策略编辑器”，或在 Active Directory 域控制器中，打开“组策略管理控制台”中的“组策略对象”
-2. 导航到“计算机配置**管理模板\\Windows 组件\\Windows PowerShell”\\**
-3. 双击“打开模块日志记录” 
-4. 单击“启用” 
-5. 在“选项”部分中，单击“模块名称”旁的“显示” 
+2. 导航到“计算机配置\\管理模板\\Windows 组件\\Windows PowerShell”
+3. 双击“打开模块日志记录”
+4. 单击“启用”
+5. 在“选项”部分中，单击“模块名称”旁的“显示”
 6. 在弹出窗口中键入 `*`，记录所有模块的命令。
-7. 单击“确定”  设置策略
-8. 双击“打开 PowerShell 脚本块日志记录” 
-9. 单击“启用” 
-10. 单击“确定”  设置策略
+7. 单击“确定”设置策略
+8. 双击“打开 PowerShell 脚本块日志记录”
+9. 单击“启用”
+10. 单击“确定”设置策略
 11. （仅在已加入域的计算机上）运行 `gpupdate` 或等待组策略处理更新后的策略，然后应用相应设置
 
 也可通过“组策略”启用系统范围的 PowerShell 脚本。

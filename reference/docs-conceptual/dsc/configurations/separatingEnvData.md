@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 分离配置和环境数据
-ms.openlocfilehash: 076e17054cfa20fad5ca925df126e239a77268db
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692418"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954434"
 ---
 # <a name="separating-configuration-and-environment-data"></a>分离配置和环境数据
 
@@ -32,14 +32,14 @@ ms.locfileid: "83692418"
 ```powershell
 Configuration MyDscConfiguration {
 
-  Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
+    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
     {
-  WindowsFeature IISInstall {
-    Ensure = 'Present'
-    Name   = 'Web-Server'
-  }
+        WindowsFeature IISInstall {
+            Ensure = 'Present'
+            Name   = 'Web-Server'
+        }
 
- }
+    }
     Node $AllNodes.Where{$_.Role -eq "VMHost"}.NodeName
     {
         WindowsFeature HyperVInstall {
@@ -82,7 +82,7 @@ Mode                LastWriteTime         Length Name
 -a----        3/31/2017   5:09 PM           1970 VM-2.mof
 ```
 
-`$MyData` 指定两个不同节点，每个都具有其自己的 `NodeName` 和 `Role`。 配置动态创建“节点”块，方法是采用来自 **（特别是** ）的节点的集合，并根据 `$MyData` 属性筛选该集合`$AllNodes``Role`。
+`$MyData` 指定两个不同节点，每个都具有其自己的 `NodeName` 和 `Role`。 配置动态创建“节点”块，方法是采用来自 `$MyData`（特别是 `$AllNodes`）的节点的集合，并根据 `Role` 属性筛选该集合。
 
 ## <a name="using-configuration-data-to-define-development-and-production-environments"></a>使用配置数据定义开发环境和生产环境
 
@@ -102,7 +102,7 @@ Mode                LastWriteTime         Length Name
             SQLServerName   = "MySQLServer"
             SqlSource       = "C:\Software\Sql"
             DotNetSrc       = "C:\Software\sxs"
-            WebSiteName     = "New website"
+        WebSiteName     = "New website"
         },
 
         @{
@@ -129,7 +129,7 @@ Mode                LastWriteTime         Length Name
 
 ### <a name="configuration-script-file"></a>配置脚本文件
 
-现在，在配置（在 `.ps1` 文件中定义）中，根据其角色（`DevProdEnvData.psd1` 和/或 `MSSQL`）筛选在 `Dev` 中定义的节点并进行相应配置。
+现在，在配置（在 `.ps1` 文件中定义）中，根据其角色（`MSSQL` 和/或 `Dev`）筛选在 `DevProdEnvData.psd1` 中定义的节点并进行相应配置。
 在开发环境中，SQL Server 和 IIS 位于同一个节点上，而在生产环境中，SQL Server 和 IIS 位于两个不同节点上。
 站点内容也是不同的，具体由 `SiteContents` 属性指定。
 
@@ -253,12 +253,11 @@ Mode                LastWriteTime         Length Name
 
 你可以使用特殊变量 **$ConfigurationData** 访问其他键。
 在此示例中，通过以下代码行访问 `ConfigFileContents`：
-
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
  ```
-
  在 `File` 资源块中。
+
 
 ```powershell
 $MyData =
@@ -312,8 +311,8 @@ configuration WebsiteConfig
 }
 ```
 
-## <a name="see-also"></a>另请参阅
 
+## <a name="see-also"></a>另请参阅
 - [使用配置数据](configData.md)
 - [配置数据中的凭据选项](configDataCredentials.md)
 - [DSC 配置](configurations.md)

@@ -2,16 +2,16 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,服务,设置
 title: 编写、编译和应用配置
-ms.openlocfilehash: eb61e518762b9f13e617ecd4711bfef7a86814ec
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 11de1d4552bc9c438adf9e3dea2059834e11e10c
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76818152"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808293"
 ---
-> 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
-
 # <a name="write-compile-and-apply-a-configuration"></a>编写、编译和应用配置
+
+> 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
 本练习演示创建和应用 Desired State Configuration (DSC) 配置的完整过程。
 在以下示例中，你将学习如何编写和应用一个非常简单的配置。 该配置会确保本地计算机上存在“HelloWorld.txt”文件。 如果删除该文件，则 DSC 会在下次更新时重新创建它。
@@ -69,11 +69,11 @@ Configuration HelloWorld {
 
 对于要应用于节点的 DSC 配置，必须首先将其编译为 MOF 文件。
 与函数类似，运行配置会为 `Node` 块定义的每个节点编译一个“.mof”文件。
-若要运行配置，需要使用点  将“HelloWorld.ps1”脚本的来源获取到当前范围中。
+若要运行配置，需要使用点将“HelloWorld.ps1”脚本的来源获取到当前范围中。
 有关详细信息，请参阅 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)。
 
 <!-- markdownlint-disable MD038 -->
- 通过在 `. `（点，空格）后键入用于存储“HelloWorld.ps1”脚本的路径，来使用点获取其来源。 随后可以通过调用配置（类似于函数）来运行它。
+通过在 `. `（点，空格）后键入用于存储“HelloWorld.ps1”脚本的路径，来使用点获取其来源。 随后可以通过调用配置（类似于函数）来运行它。
 <!-- markdownlint-enable MD038 -->
 
 ```powershell
@@ -102,7 +102,7 @@ LCM 的工作是调用 DSC 资源以应用配置。
 使用下面的代码执行 `Start-DSCConfiguration` cmdlet。 向 `-Path` 参数指定用于存储“localhost.mof”的目录路径。 `Start-DSCConfiguration` Cmdlet 在指定的目录中查找任何“\<computername\>.mof”文件。 `Start-DSCConfiguration` Cmdlet 尝试将找到的每个“.mof”文件应用于通过文件名指定的计算机名（“localhost”、“server01”、“dc-02”等）。
 
 > [!NOTE]
-> 如果未指定 `-Wait` 参数，则 `Start-DSCConfiguration` 会创建后台作业来执行操作。 通过指定 `-Verbose` 参数可以观察操作的详细  输出。 `-Wait` 和 `-Verbose` 是可选参数。
+> 如果未指定 `-Wait` 参数，则 `Start-DSCConfiguration` 会创建后台作业来执行操作。 通过指定 `-Verbose` 参数可以观察操作的详细输出。 `-Wait` 和 `-Verbose` 是可选参数。
 
 ```powershell
 Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait

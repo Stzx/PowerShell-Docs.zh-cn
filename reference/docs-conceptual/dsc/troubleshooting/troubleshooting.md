@@ -2,16 +2,16 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,配置,安装程序
 title: DSC 故障排除
-ms.openlocfilehash: 5cbe6496a6e0b9940f4b69e13d1e19e43b3915f0
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 83e59b9f7148b52071d4782522ca7642027d795a
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79402404"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692306"
 ---
 # <a name="troubleshooting-dsc"></a>DSC 故障排除
 
-适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0 
+适用于：_Windows PowerShell 4.0 和 Windows PowerShell 5.0_
 
 本主题介绍出现问题时 DSC 故障排除的方法。
 
@@ -36,6 +36,7 @@ Get-DscConfigurationStatus [-CimSession <CimSession[]>]
                            [-AsJob]
                            [<CommonParameters>]
 ```
+
 下面的参数集将返回之前所有配置运行的状态信息：
 
 ```
@@ -100,8 +101,8 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-如上所示，DSC 的主日志名称为 Microsoft->Windows->DSC  （为简洁起见，此处未显示 Windows 下的其他日志名称）。 将主名称追加到通道名称，以创建完整的日志名称。 DSC 引擎主要写入三种类型的日志：[运行、分析和调试日志](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11))。 分析和调试日志默认处于关闭状态，因此你应该在事件查看器中启用它们。 若要进行此操作，请在 Windows PowerShell 中输入 Show-EventLog 以打开事件查看器，或依次单击“开始”、“控制面板”、“管理工具”以及“事件查看器”。    
-在事件查看器中的“查看”菜单上，单击“显示分析和调试日志”。   分析通道的日志名称为 **Microsoft-Windows-Dsc/Analytic**，而调试通道为 **Microsoft-Windows-Dsc/Debug**。 你还可以通过 [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) 实用程序启用日志，如下面的示例中所示。
+如上所示，DSC 的主日志名称为 Microsoft->Windows->DSC（为简洁起见，此处未显示 Windows 下的其他日志名称）。 将主名称追加到通道名称，以创建完整的日志名称。 DSC 引擎主要写入三种类型的日志：[运行、分析和调试日志](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11))。 分析和调试日志默认处于关闭状态，因此你应该在事件查看器中启用它们。 若要进行此操作，请在 Windows PowerShell 中输入 Show-EventLog 以打开事件查看器，或依次单击“开始”、“控制面板”、“管理工具”以及“事件查看器”。   
+在事件查看器中的“查看”菜单上，单击“显示分析和调试日志”。  分析通道的日志名称为 **Microsoft-Windows-Dsc/Analytic**，而调试通道为 **Microsoft-Windows-Dsc/Debug**。 你还可以通过 [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) 实用程序启用日志，如下面的示例中所示。
 
 ```powershell
 wevtutil.exe set-log "Microsoft-Windows-Dsc/Analytic" /q:true /e:true
@@ -194,7 +195,7 @@ TimeCreated                     Id LevelDisplayName Message
 
 可以用 [Where-object](/powershell/module/microsoft.powershell.core/where-object) 提取变量 `$SeparateDscOperations` 中的数据。 在以下五种情况下，可能需要提取数据以解决 DSC 问题：
 
-### <a name="1-operations-failures"></a>1：操作故障
+### <a name="1-operations-failures"></a>1：操作失败
 
 所有事件都具有[严重性级别](/windows/desktop/WES/defining-severity-levels)。 此信息可用于标识错误事件：
 
@@ -206,7 +207,7 @@ Count Name                      Group
    38 {5BCA8BE7-5BB6-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
 ```
 
-### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2：过去半小时内所运行操作的详细信息
+### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2:过去半小时内所运行操作的详细信息
 
 每个 Windows 事件都具有 `TimeCreated` 属性，它表明创建该事件的时间。 可通过将此属性与特定日期/时间对象进行比较来筛选所有事件：
 
@@ -513,7 +514,7 @@ RefreshMode                    : PUSH
 PSComputerName                 :
 ```
 
-可以看到 `DebugMode` 设置为“无”  。
+可以看到 `DebugMode` 设置为“无”。
 
 若要设置 `DebugMode` 演示，请使用以下 PowerShell 资源：
 
@@ -564,7 +565,7 @@ Configuration ConfigTestDebugMode
 ConfigTestDebugMode
 ```
 
-你将看到文件的内容：`$env:SystemDrive\OutputFromTestProviderDebugMode.txt` 为 1  。
+你将看到文件的内容：`$env:SystemDrive\OutputFromTestProviderDebugMode.txt` 为 1。
 
 现在，使用以下脚本更新提供程序代码：
 
@@ -601,9 +602,9 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-此脚本将生成一个随机数，并相应地更新提供程序代码。 将 `DebugMode` 设置为 false 后，文件“$env:SystemDrive\OutputFromTestProviderDebugMode.txt”  的内容未发生更改。
+此脚本将生成一个随机数，并相应地更新提供程序代码。 将 `DebugMode` 设置为 false 后，文件“$env:SystemDrive\OutputFromTestProviderDebugMode.txt”的内容未发生更改。
 
-现在，在配置脚本中将 `DebugMode` 设置为“ForceModuleImport”  ：
+现在，在配置脚本中将 `DebugMode` 设置为“ForceModuleImport”：
 
 ```powershell
 LocalConfigurationManager

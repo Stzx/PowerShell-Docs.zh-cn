@@ -2,18 +2,18 @@
 title: PowerShell Core 中的 WS-Management (WSMan) 远程处理
 description: 在 PowerShell Core 中使用 WSMan 进行远程处理
 ms.date: 08/06/2018
-ms.openlocfilehash: 7b090e1463808ab10758bbd417d52fcc16c31366
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: e5f00128bc8ebc1b432cc77a5896a9e09d684109
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564507"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "62058873"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>PowerShell Core 中的 WS-Management (WSMan) 远程处理
 
 ## <a name="instructions-to-create-a-remoting-endpoint"></a>有关创建远程处理终结点的说明
 
-适用于 Windows 的 PowerShell Core 包包括 WinRM 插件 (`pwrshplugin.dll`) 和 `Install-PowerShellRemoting.ps1` 中的安装脚本 (`$PSHome`)。
+适用于 Windows 的 PowerShell Core 包包括 WinRM 插件 (`pwrshplugin.dll`) 和 `$PSHome` 中的安装脚本 (`Install-PowerShellRemoting.ps1`)。
 指定终结点时，这些文件可使 PowerShell 接受传入的 PowerShell 远程连接。
 
 ### <a name="motivation"></a>动机
@@ -67,4 +67,4 @@ New-PSSession ... -ConfigurationName "powershell.6.0.0"
 Enter-PSSession ... -ConfigurationName "powershell.6.0.0"
 ```
 
-请注意，未指定 `New-PSSession` 的 `Enter-PSSession` 和 `-ConfigurationName` 调用将以默认 PowerShell 终结点 `microsoft.powershell` 为目标。
+请注意，未指定 `-ConfigurationName` 的 `New-PSSession` 和 `Enter-PSSession` 调用将以默认 PowerShell 终结点 `microsoft.powershell` 为目标。

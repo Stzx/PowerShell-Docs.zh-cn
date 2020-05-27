@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC Environment 资源
-ms.openlocfilehash: 5670646b6e94019f436d85296deff4de8da920f6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d6d3b4a2086be28fbfa2bf200acef9b13b7b7825
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560349"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954714"
 ---
 # <a name="dsc-environment-resource"></a>DSC Environment 资源
 
@@ -34,7 +34,7 @@ Environment [string] #ResourceName
 |properties |说明 |
 |---|---|
 |名称 |指示指示你想要确保其特定状态的环境变量的名称。 |
-|路径 |定义正在配置的环境变量。 如果变量是 `$true`Path **，则将此属性设置为** ；否则将其设置为 `$false`。 默认为 `$false`。 如果正在配置的变量是 **Path**，则通过 **Value** 属性提供的值将被附加到现有值。 |
+|路径 |定义正在配置的环境变量。 如果变量是 **Path**，则将此属性设置为 `$true`；否则将其设置为 `$false`。 默认为 `$false`。 如果正在配置的变量是 **Path**，则通过 **Value** 属性提供的值将被附加到现有值。 |
 |值 |要分配给环境变量的值。 |
 
 ## <a name="common-properties"></a>公共属性

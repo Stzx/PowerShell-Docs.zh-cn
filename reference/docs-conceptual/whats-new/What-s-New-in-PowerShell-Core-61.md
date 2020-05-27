@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1 中的新增内容
 description: PowerShell Core 6.1 中发布的新功能和更改
 ms.date: 09/13/2018
-ms.openlocfilehash: 070ecb871003487e2f1ff7b0d56c44c562acaaf8
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565074"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "78277709"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1 中的新增内容
 
@@ -92,7 +92,8 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 
 在 Windows 10 1809 更新和 Windows Server 2019 中，我们更新了许多内置 PowerShell 模块，将其标记为与 PowerShell Core 兼容。
 
-当 PowerShell Core 6.1 启动时，它会自动将 `$windir\System32` 包含为 `PSModulePath` 环境变量的一部分。 但是，如果模块 `Get-Module` 被标记为与 `Import-Module` 兼容，则它仅将模块公开给 `CompatiblePSEdition` 和 `Core`。
+当 PowerShell Core 6.1 启动时，它会自动将 `$windir\System32` 包含为 `PSModulePath` 环境变量的一部分。 但是，如果模块 `CompatiblePSEdition` 被标记为与 `Core` 兼容，则它仅将模块公开给 `Get-Module` 和 `Import-Module`。
+
 
 ```powershell
 Get-Module -ListAvailable
@@ -197,7 +198,7 @@ Markdown 是创建可读明文文档的标准，其基本格式可以呈现为 H
 
 [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) 是 PowerShell 和 Hyper-V 的一项功能，允许在没有网络连接或其他远程管理服务的情况下连接到 Hyper-V VM 或容器。
 
-在过去，PowerShell Direct 使用容器上的收件箱 Windows PowerShell 实例进行连接。 现在，PowerShell Direct 先尝试使用 `pwsh.exe` 环境变量上任何可用的 `PATH` 进行连接。 如果 `pwsh.exe` 不可用，PowerShell Direct 则会回退为使用 `powershell.exe`。
+在过去，PowerShell Direct 使用容器上的收件箱 Windows PowerShell 实例进行连接。 现在，PowerShell Direct 先尝试使用 `PATH` 环境变量上任何可用的 `pwsh.exe` 进行连接。 如果 `pwsh.exe` 不可用，PowerShell Direct 则会回退为使用 `powershell.exe`。
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting` 现在为预览版本创建单独的远程处理终结点
 
@@ -379,7 +380,7 @@ class M {
 
 ### <a name="standard-deviation-in-measure-object"></a>`Measure-Object` 中的标准偏差
 
-感谢 [@CloudyDino](https://github.com/CloudyDino) 的帮助，我们已向 `StandardDeviation` 添加了 `Measure-Object` 属性：
+感谢 [@CloudyDino](https://github.com/CloudyDino) 的帮助，我们已向 `Measure-Object` 添加了 `StandardDeviation` 属性：
 
 ```powershell
 Get-Process | Measure-Object -Property CPU -AllStats
@@ -397,7 +398,7 @@ Property          : CPU
 
 ### `GetPfxCertificate -Password`
 
-感谢 [@maybe-hello-world](https://github.com/maybe-hello-world) 的帮助，`Get-PfxCertificate` 现已具备采用 `Password` 的 `SecureString` 参数。 这允许以非交互方式使用它：
+感谢 [@maybe-hello-world](https://github.com/maybe-hello-world) 的帮助，`Get-PfxCertificate` 现已具备采用 `SecureString` 的 `Password` 参数。 这允许以非交互方式使用它：
 
 ```powershell
 $certFile = '\\server\share\pwd-protected.pfx'
@@ -467,9 +468,9 @@ Name                                Methods              Properties
 Win32_OperatingSystem               {Reboot, Shutdown... {BootDevice, BuildNumber, BuildType, Caption...}
 ```
 
-### <a name="-lp-alias-for-all--literalpath-parameters"></a>所有 `-lp` 参数的 `-LiteralPath` 别名
+### <a name="-lp-alias-for-all--literalpath-parameters"></a>所有 `-LiteralPath` 参数的 `-lp` 别名
 
-感谢 [@kvprasoon](https://github.com/kvprasoon) 的帮助，我们现在为所有具有 `-lp` 参数的内置 PowerShell cmdlet 提供了参数别名 `-LiteralPath`。
+感谢 [@kvprasoon](https://github.com/kvprasoon) 的帮助，我们现在为所有具有 `-LiteralPath` 参数的内置 PowerShell cmdlet 提供了参数别名 `-lp`。
 
 ## <a name="breaking-changes"></a>重大更改
 

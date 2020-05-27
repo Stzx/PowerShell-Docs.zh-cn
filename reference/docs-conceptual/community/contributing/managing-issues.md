@@ -3,12 +3,12 @@ title: 如何管理问题
 description: 本文介绍 PowerShell-Docs 团队如何管理拉取请求。
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: cd7aba83d42a6a2eba1ce73910fdd34096342c21
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 018200f1a9384f1ea956c9b27a7605db21f2da9e
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060272"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692527"
 ---
 # <a name="how-we-manage-issues"></a>如何管理问题
 
@@ -41,7 +41,7 @@ ms.locfileid: "79060272"
 
 #### <a name="milestones"></a>里程碑
 
-应使用相应的里程碑标记的问题和 PR。 如果问题并未针对特定版本，则不使用里程碑。 应将尚未合并到 PowerShell 代码库中的更改的 Docs PR 的问题分配给“未来”  里程碑。 合并代码更改后，将里程碑更改为相应的版本。
+应使用相应的里程碑标记的问题和 PR。 如果问题并未针对特定版本，则不使用里程碑。 应将尚未合并到 PowerShell 代码库中的更改的 Docs PR 的问题分配给“未来”里程碑。 合并代码更改后，将里程碑更改为相应的版本。
 
 |    里程碑     |                    说明                     |
 | ---------------- | -------------------------------------------------- |
@@ -60,21 +60,25 @@ PowerShell Docs 团队每周都要开会讨论自上次会议以来新增的任�
 - 输入客户注释，指明它是产品反馈，并提供指向相应反馈渠道的链接。
 - 可选：将问题复制到相应的产品反馈位置，将链接添加到复制的项，并关闭问题。 请勿将问题复制到 UserVoice。
 
-  | DocSet    | 产品反馈 URL                                         |
-  | --------- | ------------------------------------------------------------ |
-  | 开发人员 | https://github.com/PowerShell/PowerShell/issues/new/choose   |
-  | dsc       | https://windowsserver.uservoice.com/forums/301869-powershell |
-  | 库   | https://github.com/powershell/powershellgallery/issues/new   |
-  | jea       | https://github.com/powershell/jea/issues/new                 |
-  | reference | https://github.com/PowerShell/PowerShell/issues/new/choose   |
-  | wmf       | https://windowsserver.uservoice.com/forums/301869-powershell |
+  | DocSet    | 产品反馈 URL                                           |
+  | --------- | -------------------------------------------------------------- |
+  | 开发人员 | `https://github.com/PowerShell/PowerShell/issues/new/choose`   |
+  | dsc       | `https://windowsserver.uservoice.com/forums/301869-powershell` |
+  | 库   | `https://github.com/powershell/powershellgallery/issues/new`   |
+  | jea       | `https://github.com/powershell/jea/issues/new`                 |
+  | reference | `https://github.com/PowerShell/PowerShell/issues/new/choose`   |
+  | wmf       | `https://windowsserver.uservoice.com/forums/301869-powershell` |
 
 ### <a name="support-requests"></a>支持请求
 
 - 如果支持问题很简单，请礼貌答复并关闭问题。
 - 如果问题较为复杂，或者提交者回复了更多问题，请将这些问题重定向到论坛和支持渠道。 用于重定向到论坛的建议文本：
 
-    > 这并不是这些问题的正确论坛。 尝试在社区支持论坛中发布你的问题。 有关社区论坛的列表，请参阅： https://docs.microsoft.com/powershell/scripting/community/community-support
+  ```Markdown
+  > This is not the right forum for these kinds of questions. Try posting your question in a
+  > community support forum. For a list of community forums see:
+  > https://docs.microsoft.com/powershell/scripting/community/community-support
+  ```
 
 ### <a name="code-of-conduct-violations"></a>行为准则冲突
 

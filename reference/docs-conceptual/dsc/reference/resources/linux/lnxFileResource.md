@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux nxFile 资源的 DSC
-ms.openlocfilehash: 71096b2d269340b3568c95071089e114ef5c5db9
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: be5f098d2fe1c8b354c07e6a8f882b8fdf00e1db
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560859"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954824"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>适用于 Linux nxFile 资源的 DSC
 
@@ -39,7 +39,7 @@ nxFile <string> #ResourceName
 |properties |说明 |
 |---|---|
 |DestinationPath |指定你想确保其中文件或目录状态的位置。 |
-|SourcePath |指定要从其中复制文件或文件夹资源的路径。 此路径可以是本地路径，或者 `http/https/ftp` URL。 只有在 `http/https/ftp`Type**属性的值为**file**时，才支持远程** URL。 |
+|SourcePath |指定要从其中复制文件或文件夹资源的路径。 此路径可以是本地路径，或者 `http/https/ftp` URL。 只有在 **Type** 属性的值为 **file** 时，才支持远程 `http/https/ftp` URL。 |
 |类型 |指定正在配置的资源是目录还是文件。 将此属性设置为 **directory** 可指示该资源是一个目录。 将其设置为 **file** 可指示该资源是一个文件。 默认值为 **file**。 |
 |目录 |指定文件的内容，例如特定字符串。 |
 |校验和 |定义当确定两个文件是否相同时使用的类型。 如果未指定**校验和**，则只是文件或目录名用于比较。 值为：**ctime**、**mtime** 或 **md5**。 |
@@ -80,7 +80,7 @@ Linux 和 Windows 在文本文件中默认使用不同的换行符，这可能�
    }
    ```
 
-1. 设置 [$OFS](https://technet.microsoft.com/library/hh849787.aspx) 属性以使用 Linux 换行符后，通过 **Get-Content** 来读取 PowerShell 脚本的内容。
+1. 设置 **$OFS** 属性以使用 Linux 换行符后，通过 [Get-Content](https://technet.microsoft.com/library/hh849787.aspx) 来读取 PowerShell 脚本的内容。
 
    ```powershell
    Import-DSCResource -Module nx

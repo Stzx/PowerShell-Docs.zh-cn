@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC WindowsFeature 资源。
-ms.openlocfilehash: 7f9b200b4d10aef6c8a3f76c497f4d60e8062cb5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d3384b1f45324df6b6b209f25b64d9d77615ad7f
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557391"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954624"
 ---
 # <a name="dsc-windowsfeature-resource"></a>DSC WindowsFeature 资源。
 
@@ -35,7 +35,7 @@ WindowsFeature [string] #ResourceName
 
 |properties |说明 |
 |---|---|
-|名称 |指示想确保添加或删除的角色或功能的名称。 此参数与来自 **Get-WindowsFeature** cmdlet 的 [Name](/powershell/module/servermanager/Get-WindowsFeature) 属性一样，并非该角色或功能的显示名称。 |
+|名称 |指示想确保添加或删除的角色或功能的名称。 此参数与来自 [Get-WindowsFeature](/powershell/module/servermanager/Get-WindowsFeature) cmdlet 的 **Name** 属性一样，并非该角色或功能的显示名称。 |
 |凭据 |指示要用于添加或删除角色或功能的凭据。 |
 |IncludeAllSubFeature |将此属性设置为 `$true` 以确保所有必需的子功能的状态为通过 **Name** 属性指定的功能的状态。 |
 |LogPath |指示你希望资源提供程序在其中记录操作的日志文件的路径。 |
