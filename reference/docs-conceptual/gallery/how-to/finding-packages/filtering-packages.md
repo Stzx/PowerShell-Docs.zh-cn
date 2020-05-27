@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: 筛选搜索结果
-ms.openlocfilehash: 13270a310613a974e1588a9f56d443a936cfebb8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 51f8d243cb9b1f4ff7413eec8839697299e8dd52
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328038"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691466"
 ---
 # <a name="filtering-search-results"></a>筛选搜索结果
 
@@ -20,12 +20,14 @@ ms.locfileid: "71328038"
 ## <a name="filter-by"></a>筛选依据
 
 使用“筛选依据”下拉列表，用户可以按下列依据筛选结果：
+
 - 包括预发行版
 - 仅稳定版
 
 若要了解“预发行版”和“稳定版”，请参阅 PowerShell 团队博客中的[在 PowerShellGet 和 PowerShell 库中添加的预发行版版本控制](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/)。
 
 使用下拉列表下的复选框，用户可以按下列依据筛选结果：
+
 - 包类型
   - 模块
   - Script
@@ -49,6 +51,7 @@ ms.locfileid: "71328038"
 ## <a name="sort-by"></a>排序依据
 
 使用“排序依据”下拉列表，用户可以按下列依据排序结果：
+
 - 热门程度 - 热门程度取决于下载次数
 - A-Z - 按包名称的字母顺序排序
 - 最新 - 按发布日期顺序显示各包

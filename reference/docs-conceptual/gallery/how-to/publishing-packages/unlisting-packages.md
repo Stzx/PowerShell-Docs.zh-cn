@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: 取消列出包
-ms.openlocfilehash: b7404420db531ac5d97debd46e1b84c6fdd49d9a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4291b910dcea65b2ca241e55838ea00d4ec53ee4
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80978264"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692365"
 ---
 # <a name="unlisting-packages"></a>取消列出包
 
@@ -32,6 +32,7 @@ PowerShell 库不支持用户永久删除其包。
 
 如果遇到有必要删除包的情况，请与 PowerShell 库管理员联系。
 正当的删除情况包括：
+
 - 侵犯版权问题。
 - 包包含可能有害的内容。
 - 包包含敏感数据。

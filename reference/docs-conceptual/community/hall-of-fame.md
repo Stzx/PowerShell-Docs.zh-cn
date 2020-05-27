@@ -2,12 +2,12 @@
 title: PowerShell Docs 的新增内容
 description: PowerShell 文档更改列表
 ms.date: 04/29/2020
-ms.openlocfilehash: a3b99c4d98362f2509ca9974d32c1a4d4780b664
-ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
+ms.openlocfilehash: 6f1e6bbc04efa13287154be45eceaab204fbdd7c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82630903"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692507"
 ---
 # <a name="community-contributor-hall-of-fame"></a>社区参与者名人堂
 
@@ -15,7 +15,7 @@ PowerShell 社区是一个充满活力的协作团队。 我们非常感谢社�
 
 截至 2020 年 4 月，这些 GitHub 用户一直是参与度最高的社区参与者。
 
-### <a name="pull-requests-opened"></a>打开的拉取请求数
+## <a name="pull-requests-opened"></a>打开的拉取请求数
 
 拉取请求可帮助我们解决这些问题，改进文档。
 
@@ -40,7 +40,7 @@ PowerShell 社区是一个充满活力的协作团队。 我们非常感谢社�
 | exchange12rocks    |      |    7 |    3 |      |      |          10 |
 | KirkMunro          |    1 |    1 |    2 |    6 |      |          10 |
 
-### <a name="github-issues-opened"></a>打开的 GitHub 问题
+## <a name="github-issues-opened"></a>打开的 GitHub 问题
 
 GitHub 问题可帮助我们发现文档中的错误和缺陷。
 

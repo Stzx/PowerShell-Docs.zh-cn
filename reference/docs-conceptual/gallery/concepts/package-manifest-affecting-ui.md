@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: 影响 PowerShell 库 UI 的包清单值
-ms.openlocfilehash: 9e37fec879f2f5cbe3926c7dbc946389425d856a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 460b1c67af0af81dd993a45c4f988b825dc2f3eb
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417044"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560417"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>影响 PowerShell 库 UI 的包清单值
 
@@ -45,7 +45,6 @@ ms.locfileid: "74417044"
 | **项目网站** | 通过指定 ProjectURI，为模块清单的 Privatedata\PSData 部分中的模块提供项目网站。 在脚本清单中，通过指定 .PROJECTURI 对其进行控制。 | 是 | 是 |
 | **许可证** | 通过指定 LicenseURI，为模块清单的 Privatedata\PSData 部分中的模块提供许可证链接。 在脚本清单中，通过指定 .LICENSEURI 对其进行控制。 请务必注意，如果许可证未通过 LicenseURI 或未在模块内提供，则 PowerShell 库的使用条款将指定该包的使用条款。 有关详细信息，请参阅使用条款。 | 是 | 是 |
 | **图标** | 通过在脚本清单或模块清单的 Privatedata-PSData 部分中提供 IconURI 标记，可以为 PowerShell 库中的任何包指定一个图标。 IconURI 应指向具有透明背景的 32x32 图像。 URI 必须是直接图像 URL，不得转到包含图像的网页或 PowerShell 库包中的文件   。 | 是 | 是 |
-
 
 ## <a name="editing-package-details"></a>编辑包详细信息
 

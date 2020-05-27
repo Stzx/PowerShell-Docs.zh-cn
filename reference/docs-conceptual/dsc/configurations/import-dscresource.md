@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 使用 Import-DSCResource
-ms.openlocfilehash: a041169ad557becf7ca87641d9ce5222ee8f6beb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1b066e231d158fb5b6333e42c91d24690e9b0223
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79402444"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692454"
 ---
 # <a name="using-import-dscresource"></a>使用 Import-DSCResource
 
@@ -123,10 +123,12 @@ Intellisense 和架构验证允许在解析和编译期间捕获更多错误，�
 
 > [!NOTE]
 > 每个 DSC 资源都可以有一个名称，以及一个由资源架构定义的 FriendlyName  。 下面是“MSFT_ServiceResource.shema.mof”的前两行。
+>
 > ```syntax
 > [ClassVersion("1.0.0"),FriendlyName("Service")]
 > class MSFT_ServiceResource : OMI_BaseResource
 > ```
+>
 > 在配置中使用此资源时，可以指定 MSFT_ServiceResource  或 Service  。
 
 ## <a name="powershell-v4-and-v5-differences"></a>PowerShell v4 和 v5 差异

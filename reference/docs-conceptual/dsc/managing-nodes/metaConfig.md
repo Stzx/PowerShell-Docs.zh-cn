@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 配置本地配置管理器
-ms.openlocfilehash: 5847a29efd165724ffe9f1f0e89cfaf358ade31c
-ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
+ms.openlocfilehash: c736f1c6a7cd6740f9d777dd68559f29909bc5b6
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83271842"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691997"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>配置本地配置管理器
 
@@ -125,6 +125,7 @@ LCM 配置支持定义以下类型的请求服务终结点：
 |ProxyCredential*|pscredential|用于 http 代理的凭据。|
 
 > [!NOTE]
+>
 > * 在 Windows 版本 1809 及更高版本中受支持。
 
 提供简化本地节点的 ConfigurationRepositoryWeb 值配置的示例脚本 - 请参阅[生成 DSC 元配置](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
@@ -152,6 +153,7 @@ LCM 配置支持定义以下类型的请求服务终结点：
 |ProxyCredential*|pscredential|用于 http 代理的凭据。|
 
 > [!NOTE]
+>
 > * 在 Windows 版本 1809 及更高版本中受支持。
 
 提供简化本地节点的 ResourceRepositoryWeb 值配置的示例脚本 - 请参阅[生成 DSC 元配置](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
@@ -180,6 +182,7 @@ LCM 配置支持定义以下类型的请求服务终结点：
 |ProxyCredential*|pscredential|用于 http 代理的凭据。|
 
 > [!NOTE]
+>
 > * 在 Windows 版本 1809 及更高版本中受支持。
 
 提供简化本地节点的 ReportServerWeb 值配置的示例脚本 - 请参阅[生成 DSC 元配置](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)

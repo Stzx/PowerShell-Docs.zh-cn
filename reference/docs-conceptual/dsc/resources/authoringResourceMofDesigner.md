@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用资源设计器工具
-ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9e7488e922bdca70bb152e7e976077e43cfad7af
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500629"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692184"
 ---
 # <a name="using-the-resource-designer-tool"></a>使用资源设计器工具
 
@@ -19,6 +19,7 @@ ms.locfileid: "80500629"
 我们首先要确定资源将公开的属性。 在此示例中，我们将通过以下属性来定义 Active Directory 用户。
 
 参数名称  说明
+
 * **UserName**：唯一标识用户的键属性。
 * **Ensure**：指定用户帐户应该为 Present 还是 Absent。 此参数只有两个可能的值。
 * **DomainCredential**：用户的域密码。

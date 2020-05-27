@@ -3,12 +3,12 @@ ms.date: 12/11/2018
 contributor: JKeithB, SydneyhSmith
 keywords: 库,powershell,cmdlet,psgallery
 title: 具有兼容 PowerShell 版本或操作系统的包
-ms.openlocfilehash: b414ce2c2b189e9da150cbe612e0bb2572d39e76
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: fce1383fa604a555a40b050ce92c5cc45ca7054c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278339"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691447"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>具有兼容 PowerShell 版本或操作系统的包
 
@@ -17,6 +17,7 @@ ms.locfileid: "78278339"
 ## <a name="searching-by-powershell-edition"></a>按 PowerShell 版本搜索
 
 两个 PowerShell 版本是：
+
 - **桌面版：** 以 .NET Framework 为基础构建，提供与面向在完整功能 Windows 版本（如服务器核心和 Windows 桌面）上运行的 PowerShell 版本的脚本和模块的兼容性。
 - **核心版：** 以 .NET Core 为基础构建，提供与面向在缩减功能 Windows 版本（如 Nano Server 和 Windows IoT）上运行的 PowerShell 版本的脚本和模块的兼容性。
 

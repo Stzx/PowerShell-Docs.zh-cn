@@ -1,13 +1,13 @@
 ---
 title: 在 Windows 上安装 PowerShell
 description: 介绍如何在 Windows 上安装 PowerShell
-ms.date: 08/06/2018
-ms.openlocfilehash: a8543a91ad503364c5346a11c9c9d9f910547278
-ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
+ms.date: 05/21/2020
+ms.openlocfilehash: 864f297e4f569030439bd6b581ef593d36f8b910
+ms.sourcegitcommit: fd6a33b9fac973b3554fecfea7f51475e650a606
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141386"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791488"
 ---
 # <a name="installing-powershell-on-windows"></a>在 Windows 上安装 PowerShell
 
@@ -30,8 +30,8 @@ Windows 7 SP1、Server 2008 R2 及更高版本支持最新版 PowerShell。
 
 MSI 文件如下所示：`PowerShell-<version>-win-<os-arch>.msi`。 例如：
 
-- `PowerShell-7.0.0-win-x64.msi`
-- `PowerShell-7.0.0-win-x86.msi`
+- `PowerShell-7.0.1-win-x64.msi`
+- `PowerShell-7.0.1-win-x86.msi`
 
 下载后，双击安装程序并按照提示进行操作。
 
@@ -60,7 +60,7 @@ MSI 文件如下所示：`PowerShell-<version>-win-<os-arch>.msi`。 例如：
 下面的示例展示了如何在启用所有安装选项的情况下无提示安装 PowerShell。
 
 ```powershell
-msiexec.exe /package PowerShell-7.0.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.0.1-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 ```
 
 有关 `Msiexec.exe` 命令行选项的完整列表，请参阅[命令行选项](/windows/desktop/Msi/command-line-options)。
@@ -128,6 +128,7 @@ Windows 10 IoT 企业版随附 Windows PowerShell，可用来部署 PowerShell 7
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.<version>
    ```
+
 ## <a name="deploying-on-windows-10-iot-core"></a>Windows 10 IoT 核心版部署
 
 当你添加 IOT_POWERSHELL  功能后，Windows 10 IoT 核心版便会添加 Windows PowerShell，我们可以使用它来部署 PowerShell 7。

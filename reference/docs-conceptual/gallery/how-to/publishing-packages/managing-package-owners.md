@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: 管理包所有者
-ms.openlocfilehash: 5cf26a7195ac446177cbb7f3a055e8e0a78569cc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 72a3ff72818c5461c74d46de5689e2d6c59b19bf
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328258"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564663"
 ---
 # <a name="managing-package-owners"></a>管理包所有者
 
@@ -41,7 +41,6 @@ ms.locfileid: "71328258"
 
 注意：“Authors”元数据是完全自由文本；仅“Owners”受控。
 
-
 ## <a name="removing-owners"></a>删除所有者
 
 如果包具有多个所有者而需删除其中之一，过程很简单：
@@ -50,8 +49,6 @@ ms.locfileid: "71328258"
 2. 通过使用“包”选项卡、搜索或单击你的用户名，然后单击[ **“管理我的包”** ](https://www.powershellgallery.com/account/Packages)，导航到包页面。
 3. 以包的所有者身份登录时，左侧有“管理所有者”链接可以单击；
 4. 单击要删除的所有者旁边的“删除”链接。
-
-
 
 ## <a name="transferring-package-ownership"></a>转移包所有权
 
@@ -65,7 +62,6 @@ ms.locfileid: "71328258"
 
 - 包所有权从一个开发人员更改为另一个开发人员
 - 使用错误帐户意外发布了包
-
 
 ## <a name="orphaned-packages"></a>孤立的包
 

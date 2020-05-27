@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 调试 DSC 资源
-ms.openlocfilehash: c088e13a25ba31ceebaf52b2d24b5d32b96ae2fc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 53ee9ea5652ffb577f0c7fba2f240f63816281db
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954254"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691954"
 ---
 # <a name="debugging-dsc-resources"></a>调试 DSC 资源
 
@@ -22,7 +22,6 @@ ms.locfileid: "71954254"
 你可通过查看调用 [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) 的结果以验证是否已启用调试。
 
 以下 PowerShell 输出显式了启用调试的结果：
-
 
 ```powershell
 PS C:\DebugTest> $LCM = Get-DscLocalConfigurationManager
@@ -40,7 +39,6 @@ ResourceScriptBreakAll
 
 PS C:\DebugTest>
 ```
-
 
 ## <a name="starting-a-configuration-with-debug-enabled"></a>启用调试时启动配置
 若要调试 DSC 资源，首先需启动调用该资源的配置。
@@ -61,6 +59,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
+
 编译配置后，通过调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) 启用该配置。
 当本地配置管理器 (LCM) 调用配置中的首个资源时，配置会停止运行。
 如果你使用 `-Verbose` 和 `-Wait` 参数，输出会显示你需要输入才能启动调试的各行内容。
@@ -85,6 +84,7 @@ Enter-PSSession -ComputerName TEST-SRV -Credential <credentials>
 Enter-PSHostProcess -Id 9000 -AppDomainName DscPsPluginWkr_AppDomain
 Debug-Runspace -Id 9
 ```
+
 此时，LCM 已调用该资源，并到达第一个断点。
 输出中的最后三行表明了如何附加到进程并启动调试资源脚本。
 

@@ -1,12 +1,12 @@
 ---
 title: PowerShell 7 模块兼容性
 ms.date: 02/03/2020
-ms.openlocfilehash: 02095b8233b6fc7b6d2a30bcb841bfd831a50031
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 273e25e3b7cd48e09b63e50c34ed0b98a4e766f0
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78935192"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83565057"
 ---
 # <a name="powershell-7-module-compatibility"></a>PowerShell 7 模块兼容性
 
@@ -25,7 +25,6 @@ Install-WindowsFeature -Name ActiveDirectory
 ```
 
 在 Windows 10 上，Windows 管理模块作为 Windows 可选功能或 Windows 功能提供   。 必须使用“以管理员身份运行”从提升的会话运行以下命令  。
-
 
 - 对于 Windows 可选功能
 

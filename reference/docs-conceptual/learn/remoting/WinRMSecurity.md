@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: WinRMSecurity
-ms.openlocfilehash: 59717e4806857e6760de523335bbee6028da8e84
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ec194a4cc5abba5061e43152e0cb851c22611445
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "62086352"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564423"
 ---
 # <a name="powershell-remoting-security-considerations"></a>PowerShell 远程处理安全注意事项
 
@@ -69,11 +69,9 @@ Kerberos 保证用户标识和服务器标识，而不发送任何种类的可�
 如果无法将 SSL 证书部署到服务器以进行 NTLM 连接，你可以将此服务器添加到 WinRM **TrustedHosts** 列表中，从而取消生成的标识错误。 请注意，将服务器名称添加到 TrustedHosts 列表不得被视为任何形式的主机本身可信度声明，因为 NTLM 身份验证协议无法确保你实际要连接到的主机就是你想要连接到的主机。
 相反，应将 TrustedHosts 设置视为你想为其取消因无法验证服务器标识而生成的错误的主机列表。
 
-
 ### <a name="ongoing-communication"></a>正在进行的通信
 
 初始身份验证完成后，[PowerShell 远程处理协议](https://msdn.microsoft.com/library/dd357801.aspx)会使用每会话 AES-256 对称密钥对所有正在进行的通信进行加密。
-
 
 ## <a name="making-the-second-hop"></a>形成第二个跃点
 

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 分离配置和环境数据
-ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 076e17054cfa20fad5ca925df126e239a77268db
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954434"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692418"
 ---
 # <a name="separating-configuration-and-environment-data"></a>分离配置和环境数据
 
@@ -32,14 +32,14 @@ ms.locfileid: "71954434"
 ```powershell
 Configuration MyDscConfiguration {
 
-    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
+  Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
     {
-        WindowsFeature IISInstall {
-            Ensure = 'Present'
-            Name   = 'Web-Server'
-        }
+  WindowsFeature IISInstall {
+    Ensure = 'Present'
+    Name   = 'Web-Server'
+  }
 
-    }
+ }
     Node $AllNodes.Where{$_.Role -eq "VMHost"}.NodeName
     {
         WindowsFeature HyperVInstall {
@@ -102,7 +102,7 @@ Mode                LastWriteTime         Length Name
             SQLServerName   = "MySQLServer"
             SqlSource       = "C:\Software\Sql"
             DotNetSrc       = "C:\Software\sxs"
-        WebSiteName     = "New website"
+            WebSiteName     = "New website"
         },
 
         @{
@@ -253,11 +253,12 @@ Mode                LastWriteTime         Length Name
 
 你可以使用特殊变量 **$ConfigurationData** 访问其他键。
 在此示例中，通过以下代码行访问 `ConfigFileContents`：
+
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
  ```
- 在 `File` 资源块中。
 
+ 在 `File` 资源块中。
 
 ```powershell
 $MyData =
@@ -311,8 +312,8 @@ configuration WebsiteConfig
 }
 ```
 
-
 ## <a name="see-also"></a>另请参阅
+
 - [使用配置数据](configData.md)
 - [配置数据中的凭据选项](configDataCredentials.md)
 - [DSC 配置](configurations.md)
