@@ -2,12 +2,12 @@
 title: PowerShell 7.0 中的新增功能
 description: PowerShell 7.0 中发布的新功能和更改
 ms.date: 03/04/2020
-ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 313ed2b663262b57abd52bfc7378e1f4661dc03a
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80263129"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808395"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0 中的新增功能
 
@@ -53,31 +53,32 @@ PowerShell 7 当前支持 x64 上的以下操作系统，包括：
 
 ## <a name="running-powershell-7"></a>运行 PowerShell 7
 
-PowerShell 7 安装到新目录，并与 Windows PowerShell 5.1 并行运行。 对于 PowerShell Core 6.x，PowerShell 7 是删除 PowerShell Core 6.x 的就地升级。
+PowerShell 7 和 Windows PowerShell 分别安装在不同的目录中。
+这样，你可并行使用 PowerShell 7 与 Windows PowerShell 5.1。 对于 PowerShell Core 6.x，PowerShell 7 是删除 PowerShell Core 6.x 的就地升级。
 
 - PowerShell 7 安装到 `%programfiles%\PowerShell\7`
 - `%programfiles%\PowerShell\7` 文件夹已添加到 `$env:PATH`
 
-PowerShell 7 安装程序包升级以前版本的 PowerShell Core 6.x：
+PowerShell 7 安装程序包会升级之前版本的 PowerShell Core 6.x：
 
 - Windows 上的 PowerShell Core 6.x：`%programfiles%\PowerShell\6` 已替换为 `%programfiles%\PowerShell\7`
 - Linux：`/opt/microsoft/powershell/6` 已替换为 `/opt/microsoft/powershell/7`
 - macOS：`/usr/local/microsoft/powershell/6` 已替换为 `/usr/local/microsoft/powershell/7`
 
 > [!NOTE]
-> 在 Windows PowerShell 中，用于启动 PowerShell 的可执行文件名为 `powershell.exe`。 在版本 6 及更高版本中，可执行文件将更改为支持并行执行。 用于启动 PowerShell 7 的新可执行文件为 `pwsh.exe`。 预览版本将就地保留为 `pwsh-preview`，而不是 7 预览目录下的 `pwsh`。
+> 在 Windows PowerShell 中，用于启动 PowerShell 的可执行文件名为 `powershell.exe`。 在版本 6 及更高版本中，可执行文件的名称将改为支持并行执行。 用于启动 PowerShell 7 的可执行文件新名称为 `pwsh.exe`。 预览版本就地保留为 `pwsh-preview`，而不是 7 预览目录下的 `pwsh`。
 
 ## <a name="improved-backwards-compatibility-with-windows-powershell"></a>改进了 Windows PowerShell 的向后兼容性
 
 PowerShell 7.0 标记了转移到 .NET Core 3.1 的过程，从而大大改进了现有 Windows PowerShell 模块向后兼容性。 其中包括 Windows 上需要 GUI 功能（如 `Out-GridView` 和 `Show-Command`）的许多模块以及作为 Windows 的一部分提供的许多角色管理模块。
 
-对于 Windows，新开关参数 UseWindowsPowerShell 将添加到 `Import-Module` 。 此开关会在 PowerShell 7 中创建一个代理模块，该模块使用本地 Windows PowerShell 进程隐式运行该模块中包含的任何 cmdlet。 有关 [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7) 的详细信息。
+对于 Windows，新开关参数 UseWindowsPowerShell 将添加到 `Import-Module`。 此开关会在 PowerShell 7 中创建一个代理模块，该模块使用本地 Windows PowerShell 进程隐式运行该模块中包含的任何 cmdlet。 有关 [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7) 的详细信息。
 
 有关哪些 Microsoft 模块适用于 PowerShell 7.0 的详细信息，请参阅[模块兼容性表](https://aka.ms/PSModuleCompat)。
 
 ## <a name="parallel-execution-added-to-foreach-object"></a>添加到 ForEach-Object 的并行执行
 
-循环访问集合中的项的 `ForEach-Object` cmdlet 现在使用新的 Parallel 参数实现内置并行  。
+循环访问集合中的项的 `ForEach-Object` cmdlet 现在使用新的 Parallel 参数实现内置并行。
 
 默认情况下，并行脚本块使用启动并行任务的调用方的当前工作目录。
 
@@ -95,9 +96,9 @@ $logEntries.Count
 50000
 ```
 
-Parallel 参数指定为每个输入日志名称并行运行的脚本块  。
+Parallel 参数指定为每个输入日志名称并行运行的脚本块。
 
-新的 ThrottleLimit 参数限制在给定时间内并行运行的脚本块数量  。 默认值为 5。
+新的 ThrottleLimit 参数限制在给定时间内并行运行的脚本块数量。 默认值为 5。
 
 使用 `$_` 变量来表示脚本块中的当前输入对象。 使用 `$using:` 范围将变量引用传递给正在运行的脚本块。
 
@@ -112,7 +113,7 @@ PowerShell 的三元运算符是严格按照 C# 三元运算符语法建模而�
 <condition> ? <if-true> : <if-false>
 ```
 
-始终计算条件表达式，并将其结果转换为布尔以确定下一次计算的分支  ：
+始终计算条件表达式，并将其结果转换为布尔以确定下一次计算的分支：
 
 - 如果 `<condition>` 表达式为 true，则执行 `<if-true>` 表达式
 - 如果 `<condition>` 表达式为 false，则执行 `<if-false>` 表达式
@@ -123,13 +124,13 @@ PowerShell 的三元运算符是严格按照 C# 三元运算符语法建模而�
 $message = (Test-Path $path) ? "Path exists" : "Path not found"
 ```
 
-在此示例中，如果路径存在，则显示“路径存在”  。 如果路径不存在，则显示“找不到路径”  。
+在此示例中，如果路径存在，则显示“路径存在”。 如果路径不存在，则显示“找不到路径”。
 
 有关[关于假设情况](/powershell/module/microsoft.powershell.core/about/about_if?view=powershell-7)的详细信息。
 
 ## <a name="pipeline-chain-operators"></a>管道链运算符
 
-PowerShell 7 实施 `&&` 和 `||` 运算符，以有条件地链接管道。 这些运算符在 PowerShell 中称为“管道链运算符”，与 shell（如 Bash 和 Zsh）中的 AND 和 OR 列表以及 Windows 命令 Shell (cmd.exe) 中的条件处理符号类似    。
+PowerShell 7 实施 `&&` 和 `||` 运算符，以有条件地链接管道。 这些运算符在 PowerShell 中称为“管道链运算符”，与 shell（如 Bash 和 Zsh）中的 AND 和 OR 列表以及 Windows 命令 Shell (cmd.exe) 中的条件处理符号类似  。
 
 如果左侧管道成功，则 `&&` 运算符将执行右侧管道。 相反，如果左侧管道失败，则 `||` 运算符将执行右侧管道。
 
@@ -214,7 +215,7 @@ $x
 100
 ```
 
-在下面的示例中，不会计算右操作数：
+在下例中，不计算右操作数：
 
 ```powershell
 [string] $todaysDate = '1/10/2020'
@@ -225,14 +226,14 @@ $todaysDate ??= (Get-Date).ToShortDateString()
 ### <a name="null-conditional-member-access-operators--and--experimental"></a>Null 条件成员访问运算符 ?. 和 ?[]（实验性）
 
 > [!NOTE]
-> 这是名为 PSNullConditionalOperators 的实验性功能  。 了解[关于实验性功能](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7)的详细信息。
+> 这是名为 PSNullConditionalOperators 的实验性功能。 了解[关于实验性功能](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7)的详细信息。
 
 仅当操作数的计算结果为非 null，null 条件运算符才允许对其操作数进程成员访问 `?.` 或元素访问 `?[]`；否则，将返回 null。
 
 > [!NOTE]
 > 由于 PowerShell 允许 `?` 作为变量名称的一部分，因此使用这些运算符需要变量名称的形式规范。 因此，使用 `{}` 将变量名称括起来（如 `${a}`）或 `?` 是变量名称 `${a?}` 的一部分时需要形式规范。
 
-在下面的示例中，将返回成员属性 Status 的值  ：
+在下面的示例中，将返回成员属性 Status 的值：
 
 ```powershell
 $Service = Get-Service -Name 'bits'
@@ -240,14 +241,14 @@ ${Service}?.status
 Stopped
 ```
 
-以下示例将返回 null，而不尝试访问成员名称 Status  ：
+以下示例将返回 null，而不尝试访问成员名称 Status：
 
 ```powershell
 $service = $Null
 ${Service}?.status
 ```
 
-同样，使用 `?[]`，将返回元素的值：
+同样，使用 `?[]` 时，将返回元素的值：
 
 ```powershell
 $a = 1..10
@@ -266,9 +267,9 @@ ${a}?[0]
 
 ## <a name="new-view-conciseview-and-cmdlet-get-error"></a>新视图 ConciseView 和 cmdlet Get-Error
 
-通过新的默认视图 ConciseView，改进了错误消息的显示，从而提高交互式错误和脚本错误的可读性  。 视图通过首选项变量 `$ErrorView` 可供用户选择。
+PowerShell 7.0 具有新的默认视图 ConciseView，它增强了错误消息的显示，进而提高了交互式错误和脚本错误的可读性。 视图通过首选项变量 `$ErrorView` 可供用户选择。
 
-使用 ConciseView  ，如果错误不是源自脚本或分析器错误，则它是单行错误消息：
+使用 ConciseView，如果错误不是源自脚本或分析器错误，则它是单行错误消息：
 
 ```powershell
 Get-Childitem -Path c:\NotReal
@@ -282,17 +283,17 @@ Get-ChildItem: Cannot find path 'C:\NotReal' because it does not exist
 
 ![脚本中的错误显示](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
-PowerShell 7 中的默认视图是 ConciseView  。 上一个默认视图是 NormalView  ，通过设置首选项变量 `$ErrorView` 可供用户选择。
-
+PowerShell 7 中的默认视图是 ConciseView。 之前的默认视图是 NormalView，你可通过设置首选项变量 `$ErrorView` 来选择它。
+ 
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
 $ErrorView = 'ConciseView' # Sets the error view to ConciseView
 ```
 
 > [!NOTE]
-> 向 `$Host.PrivateData` 添加新属性 ErrorAccentColor，以支持更改错误消息的主题色  。
+> 向 `$Host.PrivateData` 添加新属性 ErrorAccentColor，以支持更改错误消息的主题色。
 
-新 cmdlet `Get-Error` 在需要时提供完全限定的错误的完整详细视图。
+一个新的 cmdlet `Get-Error` 在需要时可提供完全符合条件的错误的完整详细视图。
 默认情况下，该 cmdlet 将显示所发生的最后一个错误的完整详细信息（包括内部异常）。
 
 ![Get-Error 中的显示](./media/What-s-New-in-PowerShell-70/myscript-geterror.png)
@@ -304,7 +305,7 @@ $ErrorView = 'ConciseView' # Sets the error view to ConciseView
 $Error | Get-Error
 ```
 
-`Get-Error` cmdlet 支持最新参数，允许你指定当前会话中要显示的错误数  。
+`Get-Error` cmdlet 支持最新参数，允许你指定当前会话中要显示的错误数。
 
 ```powershell
 Get-Error -Newest 3 # Displays the lst three errors that occurred in the session
@@ -324,11 +325,11 @@ PowerShell 每天查询一次联机服务，以确定是否提供较新版本。
 
 可以使用 `$Env:POWERSHELL_UPDATECHECK` 环境变量更改更新通知行为。 支持以下值：
 
-- “默认”即与不定义 `$Env:POWERSHELL_UPDATECHECK` 相同 
+- “默认”即与不定义 `$Env:POWERSHELL_UPDATECHECK` 相同
   - GA 版本通知 GA 版本的更新
   - 预览版/RC 版本通知 GA 版本和预览版的更新
--  “关闭”即关闭更新通知功能
--  “LTS”仅通知长期服务 (LTS) GA 版本的更新
+- “关闭”即关闭更新通知功能
+- “LTS”仅通知长期服务 (LTS) GA 版本的更新
 
 > [!NOTE]
 > 环境变量 `$Env:POWERSHELL_UPDATECHECK` 在首次设置之前不存在。
@@ -350,13 +351,13 @@ $Env:POWERSHELL_UPDATECHECK = 'Default'
 ## <a name="new-dsc-resource-support-with-invoke-dscresource-experimental"></a>使用 Invoke-DSCResource 的新 DSC 资源支持（实验性）
 
 > [!NOTE]
-> 这是名为 PSDesiredStateConfiguration.InvokeDscResource 的实验性功能  。 了解[关于实验性功能](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7)的详细信息。
+> 这是名为 PSDesiredStateConfiguration.InvokeDscResource 的实验性功能。 了解[关于实验性功能](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7)的详细信息。
 
 `Invoke-DscResource` cmdlet 运行指定的 PowerShell 所需状态配置 (DSC) 资源的方法。
 
 此 cmdlet 直接调用 DSC 资源，而无需创建配置文档。 使用此 cmdlet，配置管理产品可以使用 DSC 资源来管理 Windows 或 Linux。 在启用调试的情况下运行 DSC 引擎时，此 cmdlet 还可用于调试资源。
 
-此命令调用名为“Log”的资源的 Set 方法，并指定 Message 属性   。
+此命令调用名为“Log”的资源的 Set 方法，并指定 Message 属性 。
 
 ```powershell
 Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
@@ -517,7 +518,7 @@ Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration
 - 清除上个月提交的 CodeFactor 样式问题 (#10591)（感谢 @iSazonov！）
 - 修复 PSTernaryOperator 实验性功能描述中的拼写错误 (#10586)（感谢 @bergmeister！）
 - 将 ActionPreference.Suspend 枚举值转换为不受支持的保留状态，并删除对在首选项变量中使用 ActionPreference.Ignore 的限制 (#10317)（感谢 @KirkMunro！）
-- 将 ArrayList 替换为 List<T>，以获取更具可读性且更可靠的代码，而无需更改功能 (#10333)（感谢 @iSazonov！）
+- 将 ArrayList 替换为 List\<T> 来获取可读性更强且更可靠的代码，而不更改功能 (#10333)（感谢 @iSazonov！）
 - 对 TestConnectionCommand 进行代码样式修复 (#10439)（感谢 @vexx32！）
 - 清除 AutomationEngine 并删除额外的 SetSessionStateDrive 方法调用 (#10416)（感谢 @iSazonov！）
 - 将默认的 ParameterSetName 重命名回 ConvertTo-Csv 和 ConvertFrom-Csv 的分隔符 (#10425)

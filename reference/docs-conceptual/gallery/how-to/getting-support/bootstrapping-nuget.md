@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: 库,powershell,cmdlet,psget
 title: 正在启动 NuGet
-ms.openlocfilehash: 70403006c7a48ac70a6766de3aa52d80cebbd86a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 139b2c5a9e742eca8f5ac36c9acd721216584335
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78935178"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690863"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>启动 NuGet 提供程序和 NuGet.exe
 
-最新的 NuGet 提供程序不包含 NuGet.exe。 若要对模块或脚本执行发布操作，PowerShellGet 需要使用二进制可执行文件 NuGet.exe  。 对于其他所有操作（包括查找  、安装  、保存  和卸载  ），只需要使用 NuGet 提供程序。
+最新的 NuGet 提供程序不包含 NuGet.exe。 若要对模块或脚本执行发布操作，PowerShellGet 需要使用二进制可执行文件 NuGet.exe。 对于其他所有操作（包括查找、安装、保存和卸载），只需要使用 NuGet 提供程序。
 PowerShellGet 中的逻辑可以同时启动 NuGet 提供程序和 NuGet.exe，也可以只启动 NuGet 提供程序。 无论属于上述哪种情况，都应该仅显示一条提示消息。 如果计算机未连接 Internet，用户或管理员必须将 NuGet 提供程序和/或 NuGet.exe 文件的受信任实例复制到已断开连接的计算机。
 
 > [!NOTE]
@@ -146,7 +146,7 @@ Import-PackageProvider -Name NuGet
 
 一种方法是启动已连接 Internet 的计算机，并使用受信任进程将文件复制到脱机计算机。 启动已连接 Internet 的计算机后，NuGet.exe 二进制文件位于以下两个文件夹之一：
 
- - 如果使用提升的权限（以管理员身份）执行 `Publish-Module` 或 `Publish-Script` cmdlet：
+- 如果使用提升的权限（以管理员身份）执行 `Publish-Module` 或 `Publish-Script` cmdlet：
 
    ```powershell
    $env:ProgramData\Microsoft\Windows\PowerShell\PowerShellGet
@@ -158,7 +158,7 @@ Import-PackageProvider -Name NuGet
   $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
   ```
 
-第二个选择是从 NuGet.Org 网站下载 NuGet.exe：[https://dist.nuget.org/index.html](https://www.nuget.org/downloads) 选择生产计算机的 NugGet 版本时，请确保版本高于 2.8.5.208，并确认版本是否已标记为“推荐”。 如果使用浏览器下载，请务必取消阻止文件。 为此，可以使用 `Unblock-File` cmdlet。
+第二种方法是从 NuGet.Org 网站下载 NuGet.exe：[https://dist.nuget.org/index.html](https://www.nuget.org/downloads) 选择生产计算机的 NugGet 版本时，请确保版本高于 2.8.5.208，并确认版本已标记为“推荐”。 如果使用浏览器下载，请务必取消阻止文件。 为此，可以使用 `Unblock-File` cmdlet。
 
 无论属于上述哪种情况，都可以将 NuGet.exe 文件复制到 `$env:path` 中的任意位置，但标准位置为：
 

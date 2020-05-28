@@ -2,12 +2,12 @@
 ms.date: 10/31/2017
 keywords: dsc,powershell,配置,安装程序
 title: 保护 MOF 文件
-ms.openlocfilehash: ab03db8bf4ed7d412691ae87fd12da5131607886
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 30b7ff276781b398aeae94e710c810f5fccafdfb
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278455"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556381"
 ---
 # <a name="securing-the-mof-file"></a>保护 MOF 文件
 
@@ -20,7 +20,7 @@ DSC 通过应用存储于 MOF 文件中的信息来管理服务器节点的配�
 > [!NOTE]
 > 本主题讨论用于加密的证书。 对于加密，自签名证书就已足够，因为私钥始终保密，而加密并不表示信任该文档。 自签名证书*不*得用于身份验证目的。 应使用来自受信任的证书颁发机构 (CA) 的证书进行任何身份验证。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 要成功加密所用凭据以保护 DSC 配置，请确保你有以下各项：
 
@@ -40,14 +40,14 @@ DSC 通过应用存储于 MOF 文件中的信息来管理服务器节点的配�
 
 ## <a name="certificate-requirements"></a>证书要求
 
-若要执行凭据加密，公钥证书必须在受用于创作 DSC 配置的计算机_信任_的**目标节点**上可用。 若要将此公钥证书用于 DSC 凭据加密，它需具有以下特定要求：
+若要执行凭据加密，公钥证书必须在受用于创作 DSC 配置的计算机**信任**的_目标节点_上可用。 若要将此公钥证书用于 DSC 凭据加密，它需具有以下特定要求：
 
 1. **密钥用法**：
    - 必须包含：“KeyEncipherment”和“DataEncipherment”。
-   - _不_应包含：“数字签名”。
+   - 不应包含：“数字签名”。
 2. **增强型密钥用法**：
    - 必须包含：文档加密 (1.3.6.1.4.1.311.80.1)。
-   - _不_应包含：客户端身份验证 (1.3.6.1.5.5.7.3.2) 和服务器身份验证 (1.3.6.1.5.5.7.3.1)。
+   - 不应包含：客户端身份验证 (1.3.6.1.5.5.7.3.2) 和服务器身份验证 (1.3.6.1.5.5.7.3.1)。
 3. 证书的私钥在*目标节点_上可用。
 4. 证书的**提供程序**必须是“Microsoft RSA SChannel Cryptographic Provider”。
 
@@ -88,7 +88,7 @@ $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 
 > 目标节点：Windows Server 2012 R2/Windows 8.1 及更早版本
 > [!WARNING]
-> 因为 Windows 10 和 Windows Server 2016 之前版本的 Windows 操作系统上的 `New-SelfSignedCertificate` cmdlet 不支持 Type  参数，因此，在这些操作系统上创建此证书需要其他方法。 在这种情况下，可以使用 `makecert.exe` 或者 `certutil.exe` 来创建证书。 一种替代方法是[从 Microsoft 脚本中心下载 New-SelfSignedCertificateEx.ps1 脚本](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 并改为使用它来创建证书：
+> 因为 Windows 10 和 Windows Server 2016 之前版本的 Windows 操作系统上的 `New-SelfSignedCertificate` cmdlet 不支持 Type 参数，因此，在这些操作系统上创建此证书需要其他方法。 在这种情况下，可以使用 `makecert.exe` 或者 `certutil.exe` 来创建证书。 一种替代方法是[从 Microsoft 脚本中心下载 New-SelfSignedCertificateEx.ps1 脚本](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 并改为使用它来创建证书：
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session
@@ -130,7 +130,7 @@ Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cer
 1. 在**创作节点**上创建证书
 2. 在**创作节点**上导出证书（包括私钥）。
 3. 从**创作节点**中删除私钥，但将公钥证书保留在**我的**存储。
-4. 将私钥证书导入到目标节点上的 My(Personal) 证书存储  。
+4. 将私钥证书导入到目标节点上的 My(Personal) 证书存储。
    - 必须将其添加到根存储，以便受到**目标节点**的信任。
 
 #### <a name="on-the-authoring-node-create-and-export-the-certificate"></a>在创作节点上：创建并导出证书
@@ -153,7 +153,7 @@ Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cer
 
 > 目标节点：Windows Server 2012 R2/Windows 8.1 及更早版本
 > [!WARNING]
-> 因为 Windows 10 和 Windows Server 2016 之前版本的 Windows 操作系统上的 `New-SelfSignedCertificate` cmdlet 不支持 Type  参数，因此，在这些操作系统上创建此证书需要其他方法。 在这种情况下，可以使用 `makecert.exe` 或者 `certutil.exe` 来创建证书。 一种替代方法是[从 Microsoft 脚本中心下载 New-SelfSignedCertificateEx.ps1 脚本](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 并改为使用它来创建证书：
+> 因为 Windows 10 和 Windows Server 2016 之前版本的 Windows 操作系统上的 `New-SelfSignedCertificate` cmdlet 不支持 Type 参数，因此，在这些操作系统上创建此证书需要其他方法。 在这种情况下，可以使用 `makecert.exe` 或者 `certutil.exe` 来创建证书。 一种替代方法是[从 Microsoft 脚本中心下载 New-SelfSignedCertificateEx.ps1 脚本](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 并改为使用它来创建证书：
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session
@@ -303,8 +303,8 @@ configuration CredentialEncryptionExample
 
 此时，你可以运行配置，此操作将输出两个文件：
 
-- *.meta.mof 文件，它将本地配置管理器配置为使用存储在本地计算机存储区上、并由其指纹标识的证书来解密凭据。
-  [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/library/dn521621.aspx) 应用 *.meta.mof 文件。
+- \*.meta.mof 文件，它对本地配置管理器进行配置，使其使用存储在本地计算机存储区上并由其指纹标识的证书来解密凭据。
+  [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/library/dn521621.aspx) 会应用 \*.meta.mof 文件。
 - 实际应用配置的 MOF 文件。 Start-DscConfiguration 应用配置。
 
 这些命令将完成这些步骤：

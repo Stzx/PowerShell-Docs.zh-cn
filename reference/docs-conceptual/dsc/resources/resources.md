@@ -2,12 +2,12 @@
 ms.date: 02/28/2020
 keywords: dsc,powershell,配置,安装程序
 title: DSC 资源
-ms.openlocfilehash: 863898d910cc3c75c3e5977a5b6b0657ba7ed512
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: bae08447763a3bdb6ee8fcdd4f8d49209a5de805
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278234"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692200"
 ---
 # <a name="dsc-resources"></a>DSC 资源
 
@@ -22,9 +22,9 @@ Desired State Configuration (DSC) 资源为 DSC 配置提供构建基块。 资�
 每个资源都具有用于确定使用[配置](../configurations/configurations.md)中的资源所需的语法的 *架构。
 可以按以下方式定义资源的架构：
 
--  “Schema.Mof”文件：大多数资源使用[托管对象格式](/windows/desktop/wmisdk/managed-object-format--mof-)定义它们在“schema.mof”文件中的架构  。
--  “\<Resource Name\>.schema.psm1”文件：[复合资源](../configurations/compositeConfigs.md)使用[参数块](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters)定义它们在“<ResourceName>.schema.psm1”文件中的架构  。
--  “\<Resource Name\>.psm1”文件：基于类的 DSC 资源定义它们在类定义中的架构  。 语法项表示为类属性。 有关详细信息，请参阅 [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc)。
+- `Schema.Mof` 文件：大多数资源使用[托管对象格式](/windows/desktop/wmisdk/managed-object-format--mof-)定义它们在“schema.mof”文件中的架构。
+- `<Resource Name>.schema.psm1` 文件：[复合资源](../configurations/compositeConfigs.md)使用[参数块](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters)定义其在 `<ResourceName>.schema.psm1` 文件中的架构。
+- `<Resource Name>.psm1` 文件：基于类的 DSC 资源定义它们在类定义中的架构。 语法项表示为类属性。 有关详细信息，请参阅 [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc)。
 
 若要检索 DSC 资源的语法，请将 [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet 与 `-Syntax` 参数一起使用。 此用法类似于将 [Get-Command](/powershell/module/microsoft.powershell.core/get-command) 与 `-Syntax` 参数一起使用以获取 cmdlet 语法。 所看到的输出将显示用于指定资源的资源块的模板。
 
@@ -32,10 +32,10 @@ Desired State Configuration (DSC) 资源为 DSC 配置提供构建基块。 资�
 Get-DscResource -Syntax Service
 ```
 
-所看到的输出应类似于以下输出，尽管此资源的语法在将来可能会发生改变也是如此。 类似于 cmdlet 语法，方括号中所示的键  是可选的。 类型指定每个键所需的数据类型。
+所看到的输出应类似于以下输出，尽管此资源的语法在将来可能会发生改变也是如此。 类似于 cmdlet 语法，方括号中所示的键是可选的。 类型指定每个键所需的数据类型。
 
 > [!NOTE]
->  确保键是可选的，因为它默认为“Present”。
+> 确保键是可选的，因为它默认为“Present”。
 
 ```output
 Service [String] #ResourceName
@@ -55,7 +55,7 @@ Service [String] #ResourceName
 }
 ```
 
-在配置内，Service  资源块可能如下所示以  确保 Spooler 服务正在运行。
+在配置内，Service 资源块可能如下所示以确保 Spooler 服务正在运行。
 
 > [!NOTE]
 > 在使用配置中的资源之前，必须使用 [Import-DSCResource](../configurations/import-dscresource.md) 导入该资源。
@@ -77,7 +77,7 @@ Configuration TestConfig
 }
 ```
 
-配置可以包含同一资源类型的多个实例。 每个实例必须具有唯一名称。 在以下示例中，添加了第二个 Service  资源块以配置“DHCP”服务。
+配置可以包含同一资源类型的多个实例。 每个实例必须具有唯一名称。 在以下示例中，添加了第二个 Service 资源块以配置“DHCP”服务。
 
 ```powershell
 Configuration TestConfig
@@ -110,7 +110,7 @@ Configuration TestConfig
 
 ## <a name="types-of-resources"></a>资源类型
 
-Windows 附带内置资源，Linux 具有特定于 OS 的资源。 提供[跨节点依赖项](../configurations/crossNodeDependencies.md)的资源、包管理资源以及[由社区拥有和维护的资源](https://github.com/dsccommunity)。 可以使用上述步骤确定这些资源的语法以及如何使用这些资源。 已在“参考”  下存档提供这些资源的页面。
+Windows 附带内置资源，Linux 具有特定于 OS 的资源。 提供[跨节点依赖项](../configurations/crossNodeDependencies.md)的资源、包管理资源以及[由社区拥有和维护的资源](https://github.com/dsccommunity)。 可以使用上述步骤确定这些资源的语法以及如何使用这些资源。 已在“参考”下存档提供这些资源的页面。
 
 ### <a name="windows-built-in-resources"></a>Windows 内置资源
 

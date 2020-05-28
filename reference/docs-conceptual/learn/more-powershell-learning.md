@@ -1,25 +1,25 @@
 ---
 ms.date: 06/18/2019
 keywords: powershell,cmdlet
-title: 更多 PowerShell 学习
-ms.openlocfilehash: 9d756d24e46215bea5cb9530c2628b996327cb87
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+title: PowerShell 学习资源
+ms.openlocfilehash: 5681fd903b323ab3cf87dc212ba64dbfdf2d78e7
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74416747"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808429"
 ---
-# <a name="more-powershell-learning"></a>更多 PowerShell 学习
+# <a name="powershell-learning-resources"></a>PowerShell 学习资源
 
-学习 PowerShell 的其他资源
+关于 PowerShell 的其他学习资源。
 
-## <a name="resources-for-powershell-users"></a>面向 PowerShell 用户的资源
+## <a name="blogs-and-community"></a>博客和社区
 
 除了命令行中提供的帮助之外，以下资源还为想运行 PowerShell 的用户提供了详细信息。
 
 - [PowerShell 团队博客](https://devblogs.microsoft.com/powershell/)。 直接来自 PowerShell 产品团队的最佳学习资源。
 - [你好，脚本专家！博客](https://devblogs.microsoft.com/scripting/)文章以方案为核心，并且采用精彩且生动的方式编写。
-- 有关于使用 PowerShell 的问题？ 与对 [PowerShell Community](/powershell/#pivot=main&panel=community) 页面上列出的多个社区论坛之一具有相似兴趣的数百人联系。
+- 有关于使用 PowerShell 的问题？ 与对 [PowerShell Community](/powershell/scripting/community/community-support) 页面上列出的多个社区论坛之一具有相似兴趣的数百人联系。
 
 ## <a name="channel-9-videos"></a>Channel 9 视频
 

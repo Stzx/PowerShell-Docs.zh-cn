@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC Script 资源
-ms.openlocfilehash: e09e86011fa7dbb2a4d7f28b5032b4328b6f6ec2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 50d4667396c8c619079288ec51599152ed2d6cd5
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953064"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557016"
 ---
 # <a name="dsc-script-resource"></a>DSC Script 资源
 
@@ -100,8 +100,8 @@ Configuration ScriptTest
 
 ### <a name="example-2-compare-version-information-using-a-script-resource"></a>示例 2：使用脚本资源比较版本信息
 
-此示例从创作计算机上的文本文件中检索符合的  版本信息，并将其存储在 `$version` 变量中。 在生成节点的 MOF 文件时，DSC 将每个脚本块中的 `$using:version` 变量替换为 `$version` 变量的值。
-在执行期间，符合的  版本存储在每个节点上的文本文件中，并在后续执行时进行比较和更新。
+此示例从创作计算机上的文本文件中检索符合的版本信息，并将其存储在 `$version` 变量中。 在生成节点的 MOF 文件时，DSC 将每个脚本块中的 `$using:version` 变量替换为 `$version` 变量的值。
+在执行期间，符合的版本存储在每个节点上的文本文件中，并在后续执行时进行比较和更新。
 
 ```powershell
 $version = Get-Content 'version.txt'
@@ -136,4 +136,63 @@ Configuration ScriptTest
         }
     }
 }
+```
+
+### <a name="example-3-utilizing-parameters-in-a-script-resource"></a>示例 3：使用脚本资源中的参数
+
+此示例通过使用 `using` 范围，从脚本资源中访问参数。 请注意，ConfigurationData 可通过类似的方式进行访问。 如示例 2 所示，版本应存储在目标节点上的本地文件中。 但本地文件路径和版本都是可配置的，这会将代码与配置数据分开。
+
+```powershell
+Configuration ScriptTest
+{
+    param
+    (
+        [Version]
+        $Version,
+
+        [string]
+        $FilePath
+    )
+
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+
+    Node localhost
+    {
+        Script UpdateConfigurationVersion
+        {
+            GetScript = {
+                $currentVersion = Get-Content -Path $using:FilePath
+                return @{ 'Result' = "$currentVersion" }
+            }
+            TestScript = {
+                # Create and invoke a scriptblock using the $GetScript automatic variable, which contains a string representation of the GetScript.
+                $state = [scriptblock]::Create($GetScript).Invoke()
+
+                if( $state['Result'] -eq $using:Version )
+                {
+                    Write-Verbose -Message ('{0} -eq {1}' -f $state['Result'],$using:version)
+                    return $true
+                }
+
+                Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
+                return $false
+            }
+            SetScript = {
+                Set-Content -Path $using:FilePath -Value $using:Version
+            }
+        }
+    }
+}
+```
+
+生成的 MOF 文件包含通过 `using` 范围访问的变量及其值。
+它们被注入每个使用变量的脚本块中。 为简洁起见，删除了测试和设置脚本：
+
+```Output
+instance of MSFT_ScriptResource as $MSFT_ScriptResource1ref
+{
+ GetScript = "$FilePath ='C:\\Config.ini'\n\n $currentVersion = Get-Content -Path $FilePath\n return @{ 'Result' = \"$currentVersion\" }\n";
+ TestScript = ...;
+ SetScript = ...;
+};
 ```

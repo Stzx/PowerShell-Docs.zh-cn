@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell, 核心
 title: 模块和 cmdlet 发行历史记录
-ms.openlocfilehash: 824380c7aa732e6a2027d86be33cbde901ab11e1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4cb69e9d53151a0a221654f76ad7eb5eeb8fa218
+ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80082733"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83751327"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>模块和 cmdlet 发行历史记录
 
@@ -77,7 +77,6 @@ ms.locfileid: "80082733"
 | Get-IseSnippet    | &check; |      |       |       | 仅限 Windows |
 | Import-IseSnippet | &check; |      |       |       | 仅限 Windows |
 | New-IseSnippet    | &check; |      |       |       | 仅限 Windows |
-
 
 ### <a name="microsoftpowershellarchive"></a>Microsoft.PowerShell.Archive
 
@@ -260,7 +259,7 @@ ms.locfileid: "80082733"
 | Rename-ItemProperty           | &check; | &check; | &check; | &check; |                                  |
 | Reset-ComputerMachinePassword | &check; |         |         |         | 仅限 Windows                     |
 | Resolve-Path                  | &check; | &check; | &check; | &check; |                                  |
-| Restart-Computer              | &check; | &check; | &check; | &check; |                                  |
+| Restart-Computer              | &check; | &check; | &check; | &check; | 7\.1 中新增 Linux/macOS 支持 |
 | Restart-Service               | &check; | &check; | &check; | &check; | 仅限 Windows                     |
 | Restore-Computer              | &check; |         |         |         | 仅限 Windows                     |
 | Resume-Service                | &check; | &check; | &check; | &check; | 仅限 Windows                     |
@@ -278,7 +277,7 @@ ms.locfileid: "80082733"
 | Start-Process                 | &check; | &check; | &check; | &check; |                                  |
 | Start-Service                 | &check; | &check; | &check; | &check; | 仅限 Windows                     |
 | Start-Transaction             | &check; |         |         |         | 仅限 Windows                     |
-| Stop-Computer                 | &check; | &check; | &check; | &check; | 7\.0 中新增 Linux/macOS 支持 |
+| Stop-Computer                 | &check; | &check; | &check; | &check; | 7\.1 中新增 Linux/macOS 支持 |
 | Stop-Process                  | &check; | &check; | &check; | &check; |                                  |
 | Stop-Service                  | &check; | &check; | &check; | &check; | 仅限 Windows                     |
 | Suspend-Service               | &check; | &check; | &check; | &check; | 仅限 Windows                     |
@@ -313,7 +312,7 @@ ms.locfileid: "80082733"
 | Get-AuthenticodeSignature | &check; | &check; | &check; | &check; | 仅限 Windows                            |
 | Get-CmsMessage            | &check; | &check; | &check; | &check; | 在 7.1 中添加了对 Linux/macOS 的支持    |
 | Get-Credential            | &check; | &check; | &check; | &check; |                                         |
-| Get-ExecutionPolicy       | &check; | &check; | &check; | &check; | 在 Linux/macOS 上返回“无限制”  |
+| Get-ExecutionPolicy       | &check; | &check; | &check; | &check; | 在 Linux/macOS 上返回“无限制” |
 | Get-PfxCertificate        | &check; | &check; | &check; | &check; |                                         |
 | New-FileCatalog           | &check; | &check; | &check; | &check; | 仅限 Windows                            |
 | Protect-CmsMessage        | &check; | &check; | &check; | &check; | 在 7.1 中添加了对 Linux/macOS 的支持    |

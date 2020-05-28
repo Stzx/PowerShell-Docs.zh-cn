@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用 MOF 编写自定义 DSC 资源
-ms.openlocfilehash: 24e9d15bcbe1eddd297daeb04e0713c443e52c38
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7dd107431e756e5cbfc2d6babec41331b89743cc
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952894"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692239"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>使用 MOF 编写自定义 DSC 资源
 
@@ -67,7 +67,7 @@ class Demo_IISWebsite : OMI_BaseResource
 
 ### <a name="writing-the-resource-script"></a>编写资源脚本
 
-资源脚本实现资源的逻辑。 在此模块中必须包含三个分别名为 **Get-TargetResource**、**Set-TargetResource** 和 **Test-TargetResource** 的函数。 三个函数采用的参数集都必须与你为资源创建的 MOF 架构中定义的属性集一致。 在本文档中，这组属性被称为“资源属性”。 将这三个函数保存在名为 <ResourceName>.psm1 的文件中。 在以下示例中，函数被保存在名为 Demo_IISWebsite.psm1 的文件中。
+资源脚本实现资源的逻辑。 在此模块中必须包含三个分别名为 **Get-TargetResource**、**Set-TargetResource** 和 **Test-TargetResource** 的函数。 三个函数采用的参数集都必须与你为资源创建的 MOF 架构中定义的属性集一致。 在本文档中，这组属性被称为“资源属性”。 将这三个函数保存在名为 `<ResourceName>.psm1` 的文件中。 在以下示例中，函数被保存在名为 Demo_IISWebsite.psm1 的文件中。
 
 > [!NOTE]
 > 在资源上多次运行相同的配置脚本时，你应该不会收到错误报告，并且资源的状态应该与运行一次脚本的状态相同。 要达到此目的，请确保 **Get-TargetResource** 和 **Test-TargetResource** 函数没有改变资源，并且确保在具有相同参数值的序列中多次调用 **Set-TargetResource** 函数始终等效于调用其一次。
@@ -221,7 +221,7 @@ $result
 
 ### <a name="creating-the-module-manifest"></a>创建模块清单
 
-最后，使用 **New-ModuleManifest** cmdlet 来为自定义资源模块定义一个 <ResourceName>.psd1 文件。 调用此 cmdlet 时，引用上一节中所介绍的脚本模块 (.psm1) 文件。 将 **Get-TargetResource**、**Set-TargetResource** 和 **Test-TargetResource** 包括在要导出的函数列表中。 以下是一个示例清单文件。
+最后，使用 New-ModuleManifest cmdlet 为自定义资源模块定义一个 `<ResourceName>.psd1` 文件。 调用此 cmdlet 时，引用上一节中所介绍的脚本模块 (.psm1) 文件。 将 **Get-TargetResource**、**Set-TargetResource** 和 **Test-TargetResource** 包括在要导出的函数列表中。 以下是一个示例清单文件。
 
 ```powershell
 # Module manifest for module 'Demo.IIS.Website'
@@ -277,9 +277,9 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 
 ## <a name="supporting-psdscrunascredential"></a>支持 PsDscRunAsCredential
 
->**注意：** PsDscRunAsCredential  在 PowerShell 5.0 及更高版本中受支持。
+>**注意：** PsDscRunAsCredential 在 PowerShell 5.0 及更高版本中受支持。
 
-可以在 [DSC 配置](../configurations/configurations.md)资源块中使用 PsDscRunAsCredential  属性，以指定应使用指定的一组凭据运行资源。
+可以在 [DSC 配置](../configurations/configurations.md)资源块中使用 PsDscRunAsCredential 属性，以指定应使用指定的一组凭据运行资源。
 有关详细信息，请参阅[使用用户凭据运行 DSC](../configurations/runAsUser.md)。
 
 若要从自定义资源访问用户上下文，可以使用自动变量 `$PsDscContext`。
@@ -303,4 +303,4 @@ if (PsDscContext.RunAsUser) {
 $global:DSCMachineStatus = 1
 ```
 
-若要使 LCM 可重新启动节点，RebootNodeIfNeeded  标志需要设置为 `$true`。 ActionAfterReboot  设置也应设置为 ContinueConfiguration  （这是默认值）。 有关配置 LCM 的详细信息，请参阅[配置本地配置管理器](../managing-nodes/metaConfig.md)或[配置本地配置管理器 (v4)](../managing-nodes/metaConfig4.md)。
+若要使 LCM 可重新启动节点，RebootNodeIfNeeded 标志需要设置为 `$true`。 ActionAfterReboot 设置也应设置为 ContinueConfiguration（这是默认值）。 有关配置 LCM 的详细信息，请参阅[配置本地配置管理器](../managing-nodes/metaConfig.md)或[配置本地配置管理器 (v4)](../managing-nodes/metaConfig4.md)。

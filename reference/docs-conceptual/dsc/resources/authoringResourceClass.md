@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用 PowerShell 类编写自定义 DSC 资源
-ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: f96a567253ab4808381c004df243c96886948407
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952824"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692227"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>使用 PowerShell 类编写自定义 DSC 资源
 
@@ -473,22 +473,22 @@ Start-DscConfiguration -Wait -Force Test
 
 ## <a name="supporting-psdscrunascredential"></a>支持 PsDscRunAsCredential
 
->**注意：** PsDscRunAsCredential  在 PowerShell 5.0 及更高版本中受支持。
+>**注意：** PsDscRunAsCredential 在 PowerShell 5.0 及更高版本中受支持。
 
-可以在 [DSC 配置](../configurations/configurations.md)资源块中使用 PsDscRunAsCredential  属性，以指定应使用指定的一组凭据运行资源。
+可以在 [DSC 配置](../configurations/configurations.md)资源块中使用 PsDscRunAsCredential 属性，以指定应使用指定的一组凭据运行资源。
 有关详细信息，请参阅[使用用户凭据运行 DSC](../configurations/runAsUser.md)。
 
 ### <a name="require-or-disallow-psdscrunascredential-for-your-resource"></a>需要或禁止对资源使用 PsDscRunAsCredential
 
-DscResource()  属性需要使用可选的参数 RunAsCredential  。
+DscResource() 属性需要使用可选的参数 RunAsCredential。
 此参数可取以下三个值之一：
 
-- `Optional` PsDscRunAsCredential  ：对于调用此资源的配置，此为可选值。 这是默认值。
-- `Mandatory` PsDscRunAsCredential  ：必须用它来调用此资源的所有配置。
-- `NotSupported`：调用此资源的配置无法使用 PsDscRunAsCredential  。
+- `Optional` PsDscRunAsCredential：对于调用此资源的配置，此为可选值。 这是默认值。
+- `Mandatory` PsDscRunAsCredential：必须用它来调用此资源的所有配置。
+- `NotSupported`：调用此资源的配置无法使用 PsDscRunAsCredential。
 - `Default` 与 `Optional` 相同。
 
-例如，使用以下属性指定自定义资源不支持使用 PsDscRunAsCredential  ：
+例如，使用以下属性指定自定义资源不支持使用 PsDscRunAsCredential：
 
 ```powershell
 [DscResource(RunAsCredential=NotSupported)]
@@ -500,7 +500,7 @@ class FileResource {
 
 模块可以定义多个基于类的 DSC 资源。 可以按以下方式创建文件夹结构：
 
-1. 定义“<ModuleName>.psm1”文件中的第一个资源以及“DSCResources”  文件夹下的后续资源。
+1. 定义 `<ModuleName>.psm1` 文件中的第一个资源以及 DSCResources 文件夹下的后续资源。
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -511,7 +511,7 @@ class FileResource {
            |- SecondResource.psm1
    ```
 
-2. 定义“DSCResources”  文件夹下的所有资源。
+2. 定义“DSCResources”文件夹下的所有资源。
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -524,7 +524,7 @@ class FileResource {
    ```
 
 > [!NOTE]
-> 在上面的示例中，将“DSCResources”  下的任何 PSM1 文件添加到 PSD1 文件中的“NestedModules”  键。
+> 在上面的示例中，将“DSCResources”下的任何 PSM1 文件添加到 PSD1 文件中的“NestedModules”键。
 
 ### <a name="access-the-user-context"></a>访问用户上下文
 

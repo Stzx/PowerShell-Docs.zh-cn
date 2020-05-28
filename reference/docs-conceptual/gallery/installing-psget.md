@@ -3,12 +3,12 @@ ms.date: 09/19/2019
 contributor: manikb
 keywords: 库,powershell,cmdlet,psget
 title: 安装 PowerShellGet
-ms.openlocfilehash: 69dc851c54089b47fb19e5b32990d579d26effb9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: f42eb0df101eb63a5dc267196fa9f666747b8e35
+ms.sourcegitcommit: 23ea4a36ee85f923684657de5313a5adf0b6b094
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328198"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83727789"
 ---
 # <a name="installing-powershellget"></a>安装 PowerShellGet
 
@@ -21,7 +21,7 @@ ms.locfileid: "71328198"
 
 ## <a name="get-the-latest-version-from-powershell-gallery"></a>从 PowerShell 库获取最新版本
 
-更新 PowerShellGet  前，应始终安装最新的 NuGet  提供程序。 在提升的 PowerShell 会话中运行以下命令。
+更新 PowerShellGet 前，应始终安装最新的 NuGet 提供程序。 在提升的 PowerShell 会话中运行以下命令。
 
 ```powershell
 Install-PackageProvider -Name NuGet -Force
@@ -48,7 +48,12 @@ Exit
 
 这些说明适用于已安装 **PackageManagement 预览版**或未安装任何版本的 **PowerShellGet** 的计算机。
 
-两组指令都使用 `Save-Module` cmdlet。 `Save-Module` 从已注册的存储库下载并保存模块和所有依赖项。 模块的最新版本已保存到本地计算机上的指定路径，但尚未安装。 有关详细信息，请参阅 [Save-Module](/powershell/module/PowershellGet/Save-Module)。
+两组指令都使用 `Save-Module` cmdlet。 `Save-Module` 从已注册的存储库下载并保存模块和所有依赖项。 模块的最新版本已保存到本地计算机上的指定路径，但尚未安装。 要在 PowerShell 3.0 或 4.0 中安装模块，请将已保存模块的文件夹复制到 `$env:ProgramFiles\WindowsPowerShell\Modules`。
+
+有关详细信息，请参阅 [Save-Module](/powershell/module/PowershellGet/Save-Module)。
+
+> [!NOTE]
+> PowerShell 3.0 和 PowerShell 4.0 仅支持一种模块版本。 从 PowerShell 5.0 开始，模块安装在 `<modulename>\<version>` 中。 这使你能够并行安装多个版本。 使用 `Save-Module` 下载模块后，必须将 `<modulename>\<version>` 中的文件复制到目标计算机上的 `<modulename>` 文件夹中。
 
 #### <a name="computers-with-the-packagemanagement-preview-installed"></a>安装了 PackageManagement 预览版的计算机
 
@@ -58,13 +63,13 @@ Exit
    Save-Module -Name PowerShellGet -Path C:\LocalFolder -Repository PSGallery
    ```
 
-1. 确保未在其他任何进程中加载 PowerShellGet 和 PackageManagement 模块   。
+1. 确保未在其他任何进程中加载 PowerShellGet 和 PackageManagement 模块 。
 1. 删除文件夹的内容：`$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` 和 `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\`。
 1. 使用提升的权限重新打开 PowerShell 控制台，并运行以下命令。
 
    ```powershell
-   Copy-Item "C:\LocalFolder\PowerShellGet\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
-   Copy-Item "C:\LocalFolder\PackageManagement\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
+   Copy-Item "C:\LocalFolder\PowerShellGet\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
+   Copy-Item "C:\LocalFolder\PackageManagement\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
    ```
 
 #### <a name="computers-without-powershellget"></a>没有 PowerShellGet 的计算机

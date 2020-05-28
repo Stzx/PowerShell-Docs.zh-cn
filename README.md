@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 034d75a84e39cb0cf88a272ca58b5ccc229c5d9b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 0d91230aa063e58106b35a4ada1d577f316f8f27
+ms.sourcegitcommit: c752ae8d0fa47eaaf3c5eae2a5a770f06c63921c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74540460"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840988"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开放源代码行为准则
 
@@ -15,9 +15,9 @@ ms.locfileid: "74540460"
 
 ## <a name="build-status"></a>生成状态
 
-| 活动分支 | 临时分支 |
-|:------------|:---------------|
-| [![live-badge][]][live-badge] | [![staging-badge][]][staging-badge]
+|          活动分支          |           临时分支            |
+| :---------------------------- | :---------------------------------- |
+| [![live-badge][]][live-badge] | [![staging-badge][]][staging-badge] |
 
 ## <a name="powershell-documentation"></a>PowerShell 文档
 
@@ -32,15 +32,16 @@ ms.locfileid: "74540460"
     - [developer/](https://docs.microsoft.com/powershell/scripting/developer/) 是 PowerShell SDK 文档（从 MSDN 迁移）
     - [dsc/](https://docs.microsoft.com/powershell/scripting/dsc/) 对应于 Desired State Configuration 功能
     - [gallery/](https://docs.microsoft.com/powershell/scripting/gallery) 对应于 [PowerShell 库](https://www.powershellgallery.com/)
-    - [jea/](https://docs.microsoft.com/powershell/scripting/jea/) 对应于 Just Enough Administration 功能
-    - [wmf/](https://docs.microsoft.com/powershell/scripting/wmf/overview) 包含 Windows Management Framework 的发行说明，该软件包用于将 PowerShell 的新版本分发到之前版本的 Windows。
+    - [jea/](https://docs.microsoft.com/powershell/scripting/learn/remoting/jea/overview) 对应于 Just Enough Administration 功能
+    - [wmf/](https://docs.microsoft.com/powershell/scripting/windows-powershell/wmf/overview) 包含 Windows Management Framework 的发行说明，该软件包用于将 PowerShell 的新版本分发到之前版本的 Windows。
 
 ## <a name="contributing"></a>供稿
 
-通过[拉取请求](https://help.github.com/articles/using-pull-requests/)到临时  分支，我们正积极将贡献文档并入此存储库。
-请注意在提交拉取请求前，必须签订[文档贡献许可协议](https://cla.microsoft.com/)，以确保社区成员可免费使用你的文档。
+通过[拉取请求](https://help.github.com/articles/using-pull-requests/)到临时分支，我们正积极将贡献的文档并入此存储库。
+请注意在提交拉取请求前，必须签订[贡献许可协议](https://cla.microsoft.com/)，以确保社区成员可免费使用你提交的内容。
 
-若要详细了解如何参与，请阅读[参与者指南](https://docs.microsoft.com/contribute/powershell/powershell-contribute)。 参与者指南详细介绍了如何参与撰写文档、推荐的工具以及样式和格式设置要求。 请使用“问题和提取请求”模板来帮助文档在各版本之间保持一致性。
+若要详细了解如何参与，请阅读[参与者指南](https://docs.microsoft.com/powershell/scripting/community/contributing/overview)。
+参与者指南详细介绍了如何参与撰写文档、推荐的工具以及样式和格式设置要求。 请使用“问题和提取请求”模板来帮助文档在各版本之间保持一致性。
 
 ## <a name="licenses"></a>许可证
 
