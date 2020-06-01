@@ -2,12 +2,12 @@
 title: 在 Linux 上安装 PowerShell
 description: 介绍如何在各种 Linux 分发版上安装 PowerShell
 ms.date: 05/21/2020
-ms.openlocfilehash: b87827635cc66de3714100dfac6de56860495d79
-ms.sourcegitcommit: fd6a33b9fac973b3554fecfea7f51475e650a606
+ms.openlocfilehash: 1f3526507f84c43fbe44235e9a44e43d7f3d3e37
+ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791505"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84148457"
 ---
 # <a name="installing-powershell-on-linux"></a>在 Linux 上安装 PowerShell
 
@@ -84,7 +84,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-以超级用户身份注册 Microsoft 存储库一次。 注册后，可以通过 `sudo apt-get upgrade powershell` 更新 PowerShell。
+以超级用户身份注册 Microsoft 存储库一次。 注册后，可以通过 `sudo apt-get install powershell` 更新 PowerShell。
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>通过直接下载进行安装 - Ubuntu 16.04
 
@@ -134,7 +134,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-以超级用户身份注册 Microsoft 存储库一次。 注册后，可以通过 `sudo apt-get upgrade powershell` 更新 PowerShell。
+以超级用户身份注册 Microsoft 存储库一次。 注册后，可以通过 `sudo apt-get install powershell` 更新 PowerShell。
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>通过直接下载安装 - Ubuntu 18.04
 
@@ -203,7 +203,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-以超级用户身份注册 Microsoft 存储库一次。 注册后，可以通过 `sudo apt-get upgrade powershell` 更新 PowerShell。
+以超级用户身份注册 Microsoft 存储库一次。 注册后，可以通过 `sudo apt-get install powershell` 更新 PowerShell。
 
 ## <a name="debian-9"></a>Debian 9
 
@@ -234,7 +234,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-以超级用户身份注册 Microsoft 存储库一次。 注册后，可以通过 `sudo apt-get upgrade powershell` 更新 PowerShell。
+以超级用户身份注册 Microsoft 存储库一次。 注册后，可以通过 `sudo apt-get install powershell` 更新 PowerShell。
 
 ### <a name="installation-via-direct-download---debian-9"></a>通过直接下载进行安装 - Debian 9
 
