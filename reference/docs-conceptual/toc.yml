@@ -41,8 +41,28 @@
           href: learn/ps101/powershell.exe-command-line-help.md
         - name: 使用选项卡扩展
           href: learn/ps101/using-tab-expansion.md
-    - name: 使用实验性功能
-      href: learn/experimental-features.md
+    - name: 深入探讨
+      items:
+        - name: 概述
+          href: learn/deep-dives/overview.md
+        - name: 关于数组的各项须知内容
+          href: learn/deep-dives/everything-about-arrays.md
+        - name: 关于哈希表的各项须知内容
+          href: learn/deep-dives/everything-about-hashtable.md
+        - name: 关于 PSCustomObject 的各项须知内容
+          href: learn/deep-dives/everything-about-pscustomobject.md
+        - name: 关于字符串替换的各项须知内容
+          href: learn/deep-dives/everything-about-string-substitutions.md
+        - name: 关于 if/then/else 的各项须知内容
+          href: learn/deep-dives/everything-about-if.md
+        - name: 关于 switch 的各项须知内容
+          href: learn/deep-dives/everything-about-switch.md
+        - name: 关于异常的各项须知内容
+          href: learn/deep-dives/everything-about-exceptions.md
+        - name: 关于 $null 的各项须知内容
+          href: learn/deep-dives/everything-about-null.md
+        - name: 关于 ShouldProcess 的各项须知内容
+          href: learn/deep-dives/everything-about-shouldprocess.md
     - name: PowerShell 远程处理
       items:
         - name: Just Enough Administration (JEA)
@@ -73,6 +93,8 @@
           href: learn/remoting/winrmsecurity.md
         - name: 在 PowerShell 远程处理中形成第二个跃点
           href: learn/remoting/ps-remoting-second-hop.md
+    - name: 使用实验性功能
+      href: learn/experimental-features.md
     - name: 其他资源
       href: learn/more-powershell-learning.md
     - name: 术语表
@@ -748,6 +770,8 @@
           href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: 编写可移植模块
       href: dev-cross-plat/writing-portable-modules.md
+    - name: 如何创建标准库二进制模块
+      href: dev-cross-plat/create-standard-library-binary-module.md
     - name: 旧版 PowerShell SDK
       items:
         - name: 概述
