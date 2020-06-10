@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 title: DSC Registry 资源
-ms.openlocfilehash: 9f65815cbe6a94831b88cb3425bf688e1a99a9c0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 3acd79fa81bc731f344d810371b961dc3af3a11d
+ms.sourcegitcommit: 1ab59991c18e1b9692333d5e58ce649eaa75594f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83559896"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203641"
 ---
 # <a name="dsc-registry-resource"></a>DSC Registry 资源
 
@@ -54,9 +54,11 @@ Registry [string] #ResourceName
 > [!NOTE]
 > 在 WMF 5.0 中添加了 **PsDscRunAsCredential** 公共属性，用于允许在其他凭据上下文中运行任何 DSC 资源。 有关详细信息，请参阅[将凭据与 DSC 资源配合使用](../../../configurations/runasuser.md)。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
-此示例确保名为“ExampleKey”的键存在于 **HKEY\_LOCAL\_MACHINE** 配置单元中。
+### <a name="example-1-ensure-specified-value-and-data-under-specified-registry-key"></a>示例 1：确保指定注册表项下具有指定值和数据
+
+此示例确保 `HKEY\_LOCAL\_MACHINE` 配置单元中存在名为“ExampleKey1”的键下的注册表值“TestValue”，并具有数据“TestData”。
 
 ```powershell
 Configuration RegistryTest
@@ -64,9 +66,25 @@ Configuration RegistryTest
     Registry RegistryExample
     {
         Ensure      = "Present"  # You can also set Ensure to "Absent"
-        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey"
+        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey1"
         ValueName   = "TestValue"
         ValueData   = "TestData"
+    }
+}
+```
+
+### <a name="example-2-ensure-specified-registry-key-exists"></a>示例 2：确保指定的注册表项存在
+
+此示例确保 HKEY\_LOCAL\_MACHINE 配置单元中存在名为“ExampleKey2”的键。
+
+```powershell
+Configuration RegistryTest
+{
+    Registry RegistryExample
+    {
+        Ensure      = "Present"  # You can also set Ensure to "Absent"
+        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey2"
+        ValueName   = ""
     }
 }
 ```

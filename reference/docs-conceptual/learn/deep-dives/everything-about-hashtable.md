@@ -1,0 +1,912 @@
+---
+title: 关于哈希表的各项须知内容
+description: 哈希表在 PowerShell 中非常重要，因此最好对它们进行全面的了解。
+ms.date: 05/23/2020
+ms.custom: contributor-KevinMarquette
+ms.openlocfilehash: 60a5172485b9caf6343f54194563cd048648206e
+ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84149510"
+---
+# <a name="everything-you-wanted-to-know-about-hashtables"></a>关于哈希表的各项须知内容
+
+我想退后一步来讲讲[哈希表][]。 我现在一直在用它们。 在昨晚的用户组会议后，我给一个人教了哈希表的知识，我发现他现在对哈希表的困惑正是我以前经历过的。 哈希表在 PowerShell 中非常重要，因此最好对它们进行全面的了解。
+
+> [!NOTE]
+> 本文的[原始版本][]发布在 [@KevinMarquette][] 撰写的博客上。 PowerShell 团队感谢 Kevin 与我们分享这篇文章。 请前往 [PowerShellExplained.com][] 访问他的博客。
+
+## <a name="hashtable-as-a-collection-of-things"></a>哈希表是一个项的集合
+
+首先，从哈希表的传统定义来说，我希望你将哈希表视为一个集合。 此定义使你在以后将它们用于更高级的内容时对其工作原理有一个基本了解。 缺乏这种了解通常是产生困惑的根源。
+
+## <a name="what-is-an-array"></a>什么是数组？
+
+在开始介绍哈希表之前，我需要首先介绍一下[数组][]。 在本讨论中，数组是值或对象的列表或集合。
+
+```powershell
+$array = @(1,2,3,5,7,11)
+```
+
+将项放入数组后，可以使用 `foreach` 来循环访问该列表，或者使用索引访问数组中的各个元素。
+
+```powershell
+foreach($item in $array)
+{
+    Write-Output $item
+}
+
+Write-Output $array[3]
+```
+
+还可以使用索引以相同方式更新值。
+
+```powershell
+$array[2] = 13
+```
+
+刚刚只是介绍了数组的一点皮毛，但在继续介绍哈希表之前，这是必备的背景知识。
+
+## <a name="what-is-a-hashtable"></a>什么是哈希表？
+
+在介绍 PowerShell 使用哈希表的其他方式之前，我将首先介绍一般意义上哈希表的基本技术描述。
+
+哈希表是一种数据结构，与数组非常相似，只不过是使用键存储每个值（对象）。 它是一个基本的键/值存储。 首先，我们创建一个空哈希表。
+
+```powershell
+$ageList = @{}
+```
+
+请注意，使用大括号（而不是括号）定义哈希表。 然后，使用如下所示的键添加项：
+
+```powershell
+$key = 'Kevin'
+$value = 36
+$ageList.add( $key, $value )
+
+$ageList.add( 'Alex', 9 )
+```
+
+人员的名称为键，其年龄是我想要保存的值。
+
+## <a name="using-the-brackets-for-access"></a>使用括号进行访问
+
+将值添加到哈希表后，可以使用相同的键（而不是使用数字索引，就像对数组使用的一样）取回这些值。
+
+```powershell
+$ageList['Kevin']
+$ageList['Alex']
+```
+
+如果需要 Kevin 的年龄，我会使用其名称进行访问。 我们也可以使用此方法将值添加或更新到哈希表中。 这与使用上述 `add()` 函数相同。
+
+```powershell
+$ageList = @{}
+
+$key = 'Kevin'
+$value = 36
+$ageList[$key] = $value
+
+$ageList['Alex'] = 9
+```
+
+你可以使用另一个语法来访问和更新将在后面部分中介绍的值。 如果从另一种语言转到 PowerShell，这些示例应与你之前使用哈希表的方式相符。
+
+### <a name="creating-hashtables-with-values"></a>用值创建哈希表
+
+到目前为止，我已经为这些示例创建了一个空哈希表。 你可以在创建键和值时预先填充它们。
+
+```powershell
+$ageList = @{
+    Kevin = 36
+    Alex  = 9
+}
+```
+
+### <a name="as-a-lookup-table"></a>作为查找表
+
+此类型的哈希表的实际值可用作查找表。 下面是一个简单的示例。
+
+```powershell
+$environments = @{
+    Prod = 'SrvProd05'
+    QA   = 'SrvQA02'
+    Dev  = 'SrvDev12'
+}
+
+$server = $environments[$env]
+```
+
+在此示例中，将为 `$env` 变量指定环境，它会选择正确的服务器。 你可以使用 `switch($env){...}` 来实现这样的选择，但哈希表是一个不错的选择。
+
+当你动态构建查找表以供以后使用时，这样会更好。 因此，当你需要交叉引用内容时，请考虑使用这种方法。 我发现，如果 PowerShell 使用 `Where-Object` 在管道上进行筛选时表现不太好，就会出现更多这种情况。 如果遇到性能问题，则需要考虑使用此方法。
+
+我不会说它速度更快，但它符合一条原则：[如果性能很重要，请对其进行测试][]。
+
+#### <a name="multiselection"></a>多选
+
+通常，可以将哈希表视为键/值对，其中提供一个键并获得一个值。 PowerShell 允许提供一组键来获取多个值。
+
+```powershell
+$environments[@('QA','DEV')]
+$environments[('QA','DEV')]
+$environments['QA','DEV']
+```
+
+在此示例中，我使用与上述相同的查找哈希表，并提供三个不同的数组样式来获取匹配项。 这是 PowerShell 中的隐藏 gem，大多数人都不知道。
+
+## <a name="iterating-hashtables"></a>循环访问哈希表
+
+由于哈希表是键/值对的集合，因此，对其进行循环访问的方式与对数组或普通项列表的方式有所不同。
+
+首先要注意的是，如果你使用管道传输哈希表，管道会将其视为一个对象，
+
+```powershell
+PS> $ageList | Measure-Object
+count : 1
+```
+
+不管 `.count` 属性告诉你它包含多少个值。
+
+```powershell
+PS> $ageList.count
+2
+```
+
+如果只是需要值，可以使用 `.values` 属性来解决此问题。
+
+```powershell
+PS> $ageList.values | Measure-Object -Average
+Count   : 2
+Average : 22.5
+```
+
+枚举键并使用它们来访问值通常更有用。
+
+```powershell
+PS> $ageList.keys | ForEach-Object{
+    $message = '{0} is {1} years old!' -f $_, $ageList[$_]
+    Write-Output $message
+}
+Kevin is 36 years old
+Alex is 9 years old
+```
+
+下面是同一个含有 `foreach(){...}` 循环的示例。
+
+```powershell
+foreach($key in $ageList.keys)
+{
+    $message = '{0} is {1} years old' -f $key, $ageList[$key]
+    Write-Output $message
+}
+```
+
+我们正在遍历哈希表中的每个键，然后使用它来访问值。 当使用哈希表作为集合时，这是一种常见模式。
+
+### <a name="getenumerator"></a>GetEnumerator()
+
+接下来，我们将使用 `GetEnumerator()` 来循环访问哈希表。
+
+```powershell
+$ageList.GetEnumerator() | ForEach-Object{
+    $message = '{0} is {1} years old!' -f $_.key, $_.value
+    Write-Output $message
+}
+```
+
+枚举器依次为你提供每个键/值对。 它专为此用例而设计。 感谢 [Mark Kraus](https://get-PowerShellblog.blogspot.com) 提醒我这一点。
+
+### <a name="badenumeration"></a>BadEnumeration
+
+一个重要的细节是，在枚举哈希表时，无法进行修改。 如果我们从基本的 `$environments` 示例开始：
+
+```powershell
+$environments = @{
+    Prod = 'SrvProd05'
+    QA   = 'SrvQA02'
+    Dev  = 'SrvDev12'
+}
+```
+
+尝试将每个键设置为相同的服务器值失败。
+
+```powershell
+$environments.Keys | ForEach-Object {
+    $environments[$_] = 'SrvDev03'
+}
+
+An error occurred while enumerating through a collection: Collection was modified; enumeration operation may not execute.
++ CategoryInfo          : InvalidOperation: tableEnumerator:HashtableEnumerator) [], RuntimeException
++ FullyQualifiedErrorId : BadEnumeration
+```
+
+这样也会失败，即使它看起来也应该很正常：
+
+```powershell
+foreach($key in $environments.keys) {
+    $environments[$key] = 'SrvDev03'
+}
+
+Collection was modified; enumeration operation may not execute.
+    + CategoryInfo          : OperationStopped: (:) [], InvalidOperationException
+    + FullyQualifiedErrorId : System.InvalidOperationException
+```
+
+应对这种情况的技巧是在执行枚举之前克隆键。
+
+```powershell
+$environments.Keys.Clone() | ForEach-Object {
+    $environments[$_] = 'SrvDev03'
+}
+```
+
+## <a name="hashtable-as-a-collection-of-properties"></a>作为属性集合的哈希表
+
+到目前为止，我们在哈希表中放置的对象类型都属于相同的对象类型。 我在所有这些示例中使用的是年龄，键是人员的姓名。 如果每个对象集合都有一个名称，这是一个查看它的好方法。 在 PowerShell 中使用哈希表的另一种常见方法是保存属性集合，其中键是属性名称。 在下一个示例中，我将深入探讨这一方法。
+
+### <a name="property-based-access"></a>基于属性的访问
+
+使用基于属性的访问会更改哈希表的动态，以及其在 PowerShell 中的使用方式。 这是我们在上面常见的例子，在其中键被视为属性。
+
+```powershell
+$ageList = @{}
+$ageList.Kevin = 35
+$ageList.Alex = 9
+```
+
+正如上面的例子所示，如果哈希表中不存在这些键，则此示例将添加这些键。 根据你定义键的方式以及你的值，这可能有点奇怪，也可能完全合适。 在此之前，年龄列表示例运行良好。 为此，我们需要一个新的示例，以供今后使用。
+
+```powershell
+$person = @{
+    name = 'Kevin'
+    age  = 36
+}
+```
+
+我们可以像这样在 `$person` 上添加和访问属性。
+
+```powershell
+$person.city = 'Austin'
+$person.state = 'TX'
+```
+
+此哈希表的外观和行为突然变得与对象一样。 它仍是项的集合，因此以上所有示例仍适用。 我们只是从不同的角度来看。
+
+### <a name="checking-for-keys-and-values"></a>检查键和值
+
+在大多数情况下，只需按如下所示测试值：
+
+```powershell
+if( $person.age ){...}
+```
+
+这很简单，但由于我在逻辑中忽视了一个重要的细节，所以我曾遇到过很多 bug。 我开始使用它来测试键是否存在。 如果值为 `$false` 或零，则该语句将意外返回 `$false`。
+
+```powershell
+if( $person.age -ne $null ){...}
+```
+
+这会解决此零值问题，但不能解决 $null 与键不存在的问题。 大多数情况不需要进行这种区分，但当你这么做时会提供一些函数。
+
+```powershell
+if( $person.ContainsKey('age') ){...}
+```
+
+对于需要在不知道键或循环访问整个集合的情况下测试值的情况，还有一个 `ContainsValue()`。
+
+### <a name="removing-and-clearing-keys"></a>删除和清除键
+
+可以使用 `.Remove()` 函数删除键。
+
+```powershell
+$person.remove('age')
+```
+
+向它们分配 `$null` 值后，你将拥有一个具有 `$null` 值的键。
+
+清除哈希表的常用方法是将其初始化为空哈希表。
+
+```powershell
+$person = @{}
+```
+
+虽然这样做确实有用，但请尝试改用 `clear()` 函数。
+
+```powershell
+$person.clear()
+```
+
+这是使用该函数创建自文档化代码的实例之一，它使代码的意图非常清晰。
+
+## <a name="all-the-fun-stuff"></a>所有趣味内容
+
+### <a name="ordered-hashtables"></a>排序哈希表
+
+默认情况下，哈希表不进行排序（或排列）。 在传统的上下文中，当你始终使用键来访问值时，顺序并不重要。 你可能会发现，你希望属性按你定义的顺序保持不变。 令人欣慰的是，有一种方法可以使用 `ordered` 关键字实现此目的。
+
+```powershell
+$person = [ordered]@{
+    name = 'Kevin'
+    age  = 36
+}
+```
+
+现在，当你枚举键和值时，它们会保持该顺序。
+
+### <a name="inline-hashtables"></a>内联哈希表
+
+在一行上定义哈希表时，可以用分号分隔键/值对。
+
+```powershell
+$person = @{ name = 'kevin'; age = 36; }
+```
+
+如果要在管道上创建它们，这会很方便。
+
+### <a name="custom-expressions-in-common-pipeline-commands"></a>常见管道命令中的自定义表达式
+
+有一些 cmdlet 支持使用哈希表创建自定义属性或计算属性。 通常为 `Select-Object` 和 `Format-Table`。 当哈希表完全展开时，将具有一种特殊的语法。
+
+```powershell
+$property = @{
+    name = 'totalSpaceGB'
+    expression = { ($_.used + $_.free) / 1GB }
+}
+```
+
+该 cmdlet 会将此列标记为 `name`。 `expression` 是一个脚本块，它在当 `$_` 是管道上对象的值时执行。 下面是运行的脚本：
+
+```powershell
+$drives = Get-PSDrive | Where Used
+$drives | Select-Object -Properties name, $property
+
+Name     totalSpaceGB
+----     ------------
+C    238.472652435303
+```
+
+我将它放在一个变量中，但可以轻松地将其定义为内联，并且你可以将 `name` 缩写为 `n`，将 `expression` 缩写为 `e`。
+
+```powershell
+$drives | Select-Object -properties name, @{n='totalSpaceGB';e={($_.used + $_.free) / 1GB}}
+```
+
+就我个人而言，我不喜欢命令执行的时间太长，而且它经常会引发一些我不会涉及的不良行为。 我更有可能使用所需的所有字段和属性创建新的哈希表或 `pscustomobject`，而不是在脚本中使用这种方法。 但有很多代码可以做到这一点，因此我希望你能了解。 稍后我会讨论如何创建 `pscustomobject`。
+
+### <a name="custom-sort-expression"></a>自定义排序表达式
+
+如果对象具有要排序的数据，则可以很容易地对集合进行排序。 可以在给对象排序之前将数据添加到对象，也可以为 `Sort-Object` 创建自定义表达式。
+
+```powershell
+Get-ADUser | Sort-Object -Parameter @{ e={ Get-TotalSales $_.Name } }
+```
+
+在此示例中，我将使用一个用户列表，并使用一些自定义 cmdlet 获取更多有关排序的信息。
+
+#### <a name="sort-a-list-of-hashtables"></a>对哈希表列表排序
+
+如果你有想要排序的哈希表列表，你会发现 `Sort-Object` 不会将你的键视为属性。 我们可以通过使用自定义排序表达式来实现舍入。
+
+```powershell
+$data = @(
+    @{name='a'}
+    @{name='c'}
+    @{name='e'}
+    @{name='f'}
+    @{name='d'}
+    @{name='b'}
+)
+
+$data | Sort-Object -Property @{e={$_.name}}
+```
+
+## <a name="splatting-hashtables-at-cmdlets"></a>在执行 cmdlet 时展开哈希表
+
+关于哈希表这是我最喜欢的一点，很多人以前都没有发现。
+其思路是，无需在一行上向 cmdlet 提供所有属性，而是先将它们打包为一个哈希表。 然后，你可以通过一种特殊方式向该函数分配哈希表。
+下面是以常规方式创建 DHCP 作用域的示例。
+
+```powershell
+Add-DhcpServerv4Scope -Name 'TestNetwork' -StartRange'10.0.0.2' -EndRange '10.0.0.254' -SubnetMask '255.255.255.0' -Description 'Network for testlab A' -LeaseDuration (New-TimeSpan -Days 8) -Type "Both"
+```
+
+如果不使用[展开][]，则需要在一行上定义所有这些内容。 它会在屏幕上滚动或进行换行。 现在将其与使用展开的命令进行比较。
+
+```powershell
+$DHCPScope = @{
+    Name        = 'TestNetwork'
+    StartRange  = '10.0.0.2'
+    EndRange    = '10.0.0.254'
+    SubnetMask  = '255.255.255.0'
+    Description = 'Network for testlab A'
+    LeaseDuration = (New-TimeSpan -Days 8)
+    Type = "Both"
+}
+Add-DhcpServerv4Scope @DHCPScope
+```
+
+使用 `@` 符号而非 `$` 会调用展开操作。
+
+请花点时间来了解一下该示例有多容易读取。 它们是具有所有相同值的完全相同的命令。 第二个更易于理解和维护。
+
+我会在命令太长时使用展开。 我定义得太长，导致窗口向右滚动。 如果我遇到了某个函数的三个属性，则有可能会使用展开哈希表来重写它。
+
+### <a name="splatting-for-optional-parameters"></a>可选参数的展开
+
+我使用展开的最常见方式之一是处理来自我的脚本中某个位置的可选参数。 假设有一个函数，该函数包装了具有可选 `$Credential` 参数的 `Get-CIMInstance` 调用。
+
+```powershell
+$CIMParams = @{
+    ClassName = 'Win32_Bios'
+    ComputerName = $ComputerName
+}
+
+if($Credential)
+{
+    $CIMParams.Credential = $Credential
+}
+
+Get-CIMInstance @CIMParams
+```
+
+首先，使用常见参数创建我的哈希表。 然后添加 `$Credential`（如果存在）。
+因为我使用的是展开，所以我只需调用一次代码中的 `Get-CIMInstance`。 此设计模式非常整洁，可以轻松地处理许多可选参数。
+
+一般情况下，可以编写命令来允许参数的值为 `$null`。 只是你不会始终控制你要调用的其他命令。
+
+### <a name="multiple-splats"></a>多次展开
+
+可以将多个哈希表展开到同一个 cmdlet。 如果我们重新访问原始的展开示例：
+
+```powershell
+$Common = @{
+    SubnetMask  = '255.255.255.0'
+    LeaseDuration = (New-TimeSpan -Days 8)
+    Type = "Both"
+}
+
+$DHCPScope = @{
+    Name        = 'TestNetwork'
+    StartRange  = '10.0.0.2'
+    EndRange    = '10.0.0.254'
+    Description = 'Network for testlab A'
+}
+
+Add-DhcpServerv4Scope @DHCPScope @Common
+```
+
+当我有一组要传递给许多命令的通用参数时，我会使用这个方法。
+
+### <a name="splatting-for-clean-code"></a>展开以获得干净代码
+
+如果可以使代码更简洁，那么展开单个参数没有什么问题。
+
+```powershell
+$log = @{Path = '.\logfile.log'}
+Add-Content "logging this command" @log
+```
+
+### <a name="splatting-executables"></a>展开可执行文件
+
+展开也适用于使用 `/param:value` 语法的某些可执行文件。 例如，`Robocopy.exe` 具有一些如下所示的参数。
+
+```powershell
+$robo = @{R=1;W=1;MT=8}
+robocopy source destination @robo
+```
+
+我不知道这是不是有用，但我发现它很有趣。
+
+## <a name="adding-hashtables"></a>添加哈希表
+
+哈希表支持加法运算符以组合两个哈希表。
+
+```powershell
+$person += @{Zip = '78701'}
+```
+
+这仅适用于两个哈希表不共享某个键的情况。
+
+## <a name="nested-hashtables"></a>嵌套哈希表
+
+我们可以将哈希表用作哈希表中的值。
+
+```powershell
+$person = @{
+    name = 'Kevin'
+    age  = 36
+}
+$person.location = @{}
+$person.location.city = 'Austin'
+$person.location.state = 'TX'
+```
+
+我首先使用一个包含两个键的基本哈希表。 我添加了一个包含空哈希表、名为 `location` 的键。 然后，将最后两项添加到 `location` 哈希表中。 我们也可以用内联的方式完成此操作。
+
+```powershell
+$person = @{
+    name = 'Kevin'
+    age  = 36
+    location = @{
+        city  = 'Austin'
+        state = 'TX'
+    }
+}
+```
+
+这会创建上面看到的相同哈希表，并以相同的方式访问属性。
+
+```powershell
+$person.location.city
+Austin
+```powershell
+
+There are many ways to approach the structure of your objects. Here is a second way to look at a
+nested hashtable.
+
+```powershell
+$people = @{
+    Kevin = @{
+        age  = 36
+        city = 'Austin'
+    }
+    Alex = @{
+        age  = 9
+        city = 'Austin'
+    }
+}
+```
+
+这混合了使用哈希表作为对象集合和属性集合的概念。 即使这些值是使用你喜欢的任何方法进行嵌套的，它们仍可以轻松访问。
+
+```powershell
+PS> $people.kevin.age
+36
+PS> $people.kevin['city']
+Austin
+PS> $people['Alex'].age
+9
+PS> $people['Alex']['City']
+Austin
+```
+
+当我把它当作属性时，我倾向于使用点属性。 这些通常是我在代码中静态定义的内容，而且我对它们非常了解。 如果我需要遍历列表或以编程方式访问键，我会使用括号提供键名。
+
+```powershell
+foreach($name in $people.keys)
+{
+    $person = $people[$name]
+    '{0}, age {1}, is in {2}' -f $name, $person.age, $person.city
+}
+```
+
+能够嵌套哈希表提供了很多灵活性和选项。
+
+### <a name="looking-at-nested-hashtables"></a>查看嵌套的哈希表
+
+开始嵌套哈希表后，你将需要一种简单的方法来从控制台中查看它们。 如果我采用最后一个哈希表，则会得到如下所示的输出，它将会深入：
+
+```powershell
+PS> $people
+Name                           Value
+----                           -----
+Kevin                          {age, city}
+Alex                           {age, city}
+```
+
+用于查看这些内容的 go to 命令是 `ConvertTo-JSON`，因为它非常干净，我经常对其他内容使用 JSON。
+
+```powershell
+PS> $people | ConvertTo-Json
+{
+    "Kevin":  {
+                "age":  36,
+                "city":  "Austin"
+            },
+    "Alex":  {
+                "age":  9,
+                "city":  "Austin"
+            }
+}
+```
+
+即使你不知道 JSON，也应该能够看到你要查找的内容。 对于类似于这样的结构化数据，还有一个 `Format-Custom` 命令，但我还是更喜欢 JSON 视图。
+
+## <a name="creating-objects"></a>创建对象
+
+有时，只需有一个对象，而使用哈希表保存属性无法完成工作。 最常见的情况是，你想要将键视为列名称。 `pscustomobject` 使其变得简单。
+
+```powershell
+$person = [pscustomobject]@{
+    name = 'Kevin'
+    age  = 36
+}
+
+$person
+
+name  age
+----  ---
+Kevin  36
+```
+
+即使最初并未将其创建为 `pscustomobject`，也可以在以后需要时对其进行强制转换。
+
+```powershell
+$person = @{
+    name = 'Kevin'
+    age  = 36
+}
+
+[pscustomobject]$person
+
+name  age
+----  ---
+Kevin  36
+```
+
+我已经为 [pscustomobject][] 编写了详细的内容，你可以在读完本文后阅读。 它基于此处所述的许多内容构建。
+
+## <a name="reading-and-writing-hashtables-to-file"></a>在文件中读取和写入哈希表
+
+### <a name="saving-to-csv"></a>保存到 CSV
+
+将哈希表保存到 CSV 是我上面提到的困难之一。 将哈希表转换为 `pscustomobject`，它将正确保存到 CSV。 这有助于你开始使用 `pscustomobject` 以便保留列顺序。 但如果需要，可以将其强制转换为 `pscustomobject` 内联。
+
+```powershell
+$person | ForEach-Object{ [pscustomobject]$_ } | Export-CSV -Path $path
+```
+
+同样，请查看我使用 [pscustomobject][] 撰写的内容。
+
+### <a name="saving-a-nested-hashtable-to-file"></a>将嵌套哈希表保存到文件
+
+如果需要将嵌套哈希表保存到文件，然后再次将其读入，我会使用 JSON cmdlet 来执行此操作。
+
+```powershell
+$people | ConvertTo-JSON | Set-Content -Path $path
+$people = Get-Content -Path $path -Raw | ConvertFrom-JSON
+```
+
+此方法有两个重要方面。 首先，JSON 写成了多行，因此我需要使用 `-Raw` 选项将其读回到单个字符串中。 第二个情况是导入的对象不再是 `[hashtable]`。 它现在是 `[pscustomobject]`，如果你不希望是这样，可能会导致问题。
+
+如果需要在导入时为 `[hashtable]`，则需要使用 `Export-CliXml` 和 `Import-CliXml` 命令。
+
+### <a name="converting-json-to-hashtable"></a>将 JSON 转换为哈希表
+
+如果需要将 JSON 转换为 `[hashtable]`，我知道有一种方法可以使用 .NET 中的 [JavaScriptSerializer][] 实现此目的。
+
+```powershell
+[Reflection.Assembly]::LoadWithPartialName("System.Web.Script.Serialization")
+$JSSerializer = [System.Web.Script.Serialization.JavaScriptSerializer]::new()
+$JSSerializer.Deserialize($json,'Hashtable')
+```
+
+### <a name="reading-directly-from-a-file"></a>直接从文件读取
+
+如果你有一个使用 PowerShell 语法包含哈希表的文件，那么可以直接导入它。
+
+```powershell
+$content = Get-Content -Path $Path -Raw -ErrorAction Stop
+$scriptBlock = [scriptblock]::Create( $content )
+$scriptBlock.CheckRestrictedLanguage( $allowedCommands, $allowedVariables, $true )
+$hashtable = ( & $scriptBlock )
+```
+
+它将文件的内容导入到 `scriptblock` 中，然后在执行之前进行检查以确保它没有任何其他 PowerShell 命令。
+
+在这种情况下，你是否知道模块清单（psd1 文件）只是一个哈希表？
+
+## <a name="keys-are-just-strings"></a>键只是字符串
+
+我不想再赘述这个之前的话题，但键只是字符串。 这样，我们就可以给任何内容加上引号，并使其成为一个键。
+
+```powershell
+$person = @{
+    'full name' = 'Kevin Marquette'
+    '#' = 3978
+}
+$person['full name']
+```
+
+可以执行一些你可能想不到的奇怪操作。
+
+```powershell
+$person.'full name'
+
+$key = 'full name'
+$person.$key
+```
+
+仅仅因为你能做某事，并不意味着你应该做。 最后一个看起来就像是一个等待发生的 bug，读取代码的任何人都很容易对其产生误解。
+
+从技术上说，你的键不一定是字符串，但如果你只使用字符串，就更容易考虑。
+
+## <a name="use-in-automatic-variables"></a>在自动变量中使用
+
+### <a name="psboundparameters"></a>$PSBoundParameters
+
+[$PSBoundParameters][] 是只存在于函数上下文中的自动变量。 它包含调用函数时所用的所有参数。 这并不是确切的哈希表，但足够接近，可以将其视为一个哈希表。
+
+这包括删除键并将其展开到其他函数。 如果你发现自己正在编写代理函数，请仔细查看这个函数。
+
+有关更多详细信息，请参阅 [about_Automatic_Variables][]。
+
+### <a name="psboundparameters-gotcha"></a>PSBoundParameters 难点
+
+需要注意的一个重要事项是，这只包括作为参数传入的值。 如果你还具有使用默认值但不是由调用方传入的参数，则 `$PSBoundParameters` 不包含这些值。 这通常会被忽略。
+
+### <a name="psdefaultparametervalues"></a>$PSDefaultParameterValues
+
+此自动变量使你可以将默认值分配给任何 cmdlet，而无需更改 cmdlet。
+请查看此示例。
+
+```powershell
+$PSDefaultParameterValues["Out-File:Encoding"] = "UTF8"
+```
+
+这会将一个条目添加到 `$PSDefaultParameterValues` 哈希表中，该哈希表将 `UTF8` 设置为 `Out-File -Encoding` 参数的默认值。 这是特定于会话的，因此应将其放在 `$profile` 中。
+
+我经常使用此值来预分配我经常键入的值。
+
+```powershell
+$PSDefaultParameterValues[ "Connect-VIServer:Server" ] = 'VCENTER01.contoso.local'
+```
+
+此值也接受通配符，以便你可以批量设置值。 下面是一些可以使用的方法：
+
+```powershell
+$PSDefaultParameterValues[ "Get-*:Verbose" ] = $true
+$PSDefaultParameterValues[ "*:Credential" ] = Get-Credential
+```
+
+有关更深入的详细信息，请参阅 [Michael Sorens][] 撰写的关于[自动默认值][]的这篇精彩文章。
+
+## <a name="regex-matches"></a>正则表达式 $Matches
+
+使用 `-match` 运算符时，将创建一个名为 `$matches` 的自动变量，其中包含匹配项的结果。 如果正则表达式中包含任何子表达式，还会列出这些子匹配项。
+
+```powershell
+$message = 'My SSN is 123-45-6789.'
+
+$message -match 'My SSN is (.+)\.'
+$Matches[0]
+$Matches[1]
+```
+
+### <a name="named-matches"></a>命名匹配项
+
+这是我最喜欢的功能之一，但大多数人却不知道。 如果使用命名正则表达式匹配项，则可以按名称对匹配项进行访问。
+
+```powershell
+$message = 'My Name is Kevin and my SSN is 123-45-6789.'
+
+if($message -match 'My Name is (?<Name>.+) and my SSN is (?<SSN>.+)\.')
+{
+    $Matches.Name
+    $Matches.SSN
+}
+```
+
+在上面的示例中，`(?<Name>.*)` 是一个命名的子表达式。 然后，此值将被置于 `$Matches.Name` 属性中。
+
+## <a name="group-object--ashashtable"></a>Group-Object -AsHashtable
+
+`Group-Object` 的一个鲜为人知的功能是，它可以将一些数据集转换为哈希表。
+
+```powershell
+Import-CSV $Path | Group-Object -AsHashtable -Property email
+```
+
+这会将每一行都添加到哈希表中，并使用指定的属性作为访问它的键。
+
+## <a name="copying-hashtables"></a>复制哈希表
+
+需要注意的一个重要事项是哈希表是对象。 每个变量只是对对象的引用。 这意味着，生成哈希表的有效副本需要执行更多的工作。
+
+### <a name="assigning-reference-types"></a>分配引用类型
+
+如果有一个哈希表并将其分配给第二个变量，则这两个变量都指向同一哈希表。
+
+```powershell
+PS> $orig = @{name='orig'}
+PS> $copy = $orig
+PS> $copy.name = 'copy'
+PS> 'Copy: [{0}]' -f $copy.name
+PS> 'Orig: [{0}]' -f $orig.name
+
+Copy: [copy]
+Orig: [copy]
+```
+
+这强调了它们是相同的，因为更改一个哈希表中的值也会更改另一个中的值。 这也适用于将哈希表传递到其他函数的情况。 如果这些函数对该哈希表进行了更改，则原始值也会更改。
+
+### <a name="shallow-copies-single-level"></a>卷影副本，单一级别
+
+如果我们有一个上例所示的简单哈希表，则可以使用 `.Clone()` 进行卷影复制。
+
+```powershell
+PS> $orig = @{name='orig'}
+PS> $copy = $orig.Clone()
+PS> $copy.name = 'copy'
+PS> 'Copy: [{0}]' -f $copy.name
+PS> 'Orig: [{0}]' -f $orig.name
+
+Copy: [copy]
+Orig: [orig]
+```
+
+这样，我们就可以在不影响其他项的情况下进行一些基本更改。
+
+### <a name="shallow-copies-nested"></a>卷影副本，嵌套
+
+之所以称为卷影副本是因为它只复制基本级别的属性。 如果其中一个属性是引用类型（如其他哈希表），则这些嵌套对象仍将指向彼此。
+
+```powershell
+PS> $orig = @{
+        person=@{
+            name='orig'
+        }
+    }
+PS> $copy = $orig.Clone()
+PS> $copy.person.name = 'copy'
+PS> 'Copy: [{0}]' -f $copy.person.name
+PS> 'Orig: [{0}]' -f $orig.person.name
+
+Copy: [copy]
+Orig: [copy]
+```
+
+你可以看到，即使克隆了哈希表，也不会克隆对 `person` 的引用。 我们需要进行深层复制，确保第二个哈希表未链接到第一个哈希表。
+
+### <a name="deep-copies"></a>深层副本
+
+撰写本文时，我还不知道有什么快捷方法可以仅创建哈希表的深层副本（并将其保存为哈希表）。 这只是需要编写的其中一项内容。
+下面是执行此操作的快速方法。
+
+```powershell
+function Get-DeepClone
+{
+    [CmdletBinding()]
+    param(
+        $InputObject
+    )
+    process
+    {
+        if($InputObject -is [hashtable]) {
+            $clone = @{}
+            foreach($key in $InputObject.keys)
+            {
+                $clone[$key] = Get-DeepClone $InputObject[$key]
+            }
+            return $clone
+        } else {
+            return $InputObject
+        }
+    }
+}
+```
+
+它不处理任何其他引用类型或数组，但它是一个很好的起点。
+
+## <a name="anything-else"></a>任何其他内容？
+
+我已经快速介绍了很多内容。 希望你每次阅读本文时都能学到新知识或有新的理解。 因为我介绍的是此功能的全部内容，所以有些方面现在可能不适用于你。 这完全正常并且是意料之中，具体况取决于你对 PowerShell 的使用程度。
+
+下面是我们所介绍的所有内容列表，以便你跳转查看。 通常情况下，这会放在开头，但这是从上到下编写的，其中包含根据之前的所有内容构建的示例。
+
+<!-- link references -->
+[原始版本]: https://powershellexplained.com/2016-11-06-powershell-hashtable-everything-you-wanted-to-know-about/
+[powershellexplained.com]: https://powershellexplained.com/
+[@KevinMarquette]: https://twitter.com/KevinMarquette
+[哈希表]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
+[数组]: /powershell/module/microsoft.powershell.core/about/about_arrays
+[如果性能很重要，请对其进行测试]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best%20Practices/Performance.md
+[展开]: /powershell/module/microsoft.powershell.core/about/about_splatting
+[pscustomobject]: everything-about-pscustomobject.md
+[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8
+[PSBoundParameters]: https://tommymaynard.com/the-psboundparameters-automatic-variable-2016/
+[about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
+[自动默认值]: https://www.simple-talk.com/sysadmin/PowerShell/PowerShell-time-saver-automatic-defaults/
+[Michael Sorens]: http://cleancode.sourceforge.net/wwwdoc/about.html
