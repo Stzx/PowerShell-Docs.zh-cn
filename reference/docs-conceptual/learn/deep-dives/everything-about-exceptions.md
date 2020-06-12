@@ -3,12 +3,12 @@ title: 关于异常的各项须知内容
 description: 错误处理只是编写代码时的一部分工作。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: fd3ddacbf14d1faeee98682697161f86c6ff0c72
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 3ecb1669fa8d58bc742d4e8e77051b3ace4452a0
+ms.sourcegitcommit: 4a40e3ea3601c02366be3495a5dcc7f4cac9f1ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149540"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84337176"
 ---
 # <a name="everything-you-wanted-to-know-about-exceptions"></a>关于异常的各项须知内容
 
@@ -55,7 +55,7 @@ ms.locfileid: "84149540"
 若要创建自己的异常事件，请使用 `throw` 关键字引发异常。
 
 ```powershell
-function Do-Something
+function Start-Something
 {
     throw "Bad thing happened"
 }
@@ -64,7 +64,7 @@ function Do-Something
 这会创建一个作为终止错误的运行时异常。 它通过调用函数中的 `catch` 进行处理，或者退出脚本，并显示类似于下面的消息。
 
 ```powershell
-PS> Do-Something
+PS> Start-Something
 
 Bad thing happened
 At line:1 char:1
@@ -89,7 +89,7 @@ Write-Error -Message "Houston, we have a problem." -ErrorAction Stop
 如果在任何高级函数或 cmdlet 上指定 `-ErrorAction Stop`，它会使所有 `Write-Error` 语句转为停止执行或可由 `catch` 处理的终止错误。
 
 ```powershell
-Do-Something -ErrorAction Stop
+Start-Something -ErrorAction Stop
 ```
 
 ### <a name="trycatch"></a>Try/Catch
@@ -99,7 +99,7 @@ PowerShell（以及许多其他语言）中的异常处理方式是先对一部�
 ```powershell
 try
 {
-    Do-Something
+    Start-Something
 }
 catch
 {
@@ -108,7 +108,7 @@ catch
 
 try
 {
-    Do-Something -ErrorAction Stop
+    Start-Something -ErrorAction Stop
 }
 catch
 {
@@ -213,7 +213,7 @@ InvocationName        : Get-Resource
 ```powershell
 PS> $PSItem.ScriptStackTrace
 at Get-Resource, C:\blog\throwerror.ps1: line 13
-at Do-Something, C:\blog\throwerror.ps1: line 5
+at Start-Something, C:\blog\throwerror.ps1: line 5
 at <ScriptBlock>, C:\blog\throwerror.ps1: line 18
 ```
 
@@ -276,7 +276,7 @@ at CallSite.Target(Closure , CallSite , Type , String )
 ```powershell
 try
 {
-    Do-Something -Path $path
+    Start-Something -Path $path
 }
 catch [System.IO.FileNotFoundException]
 {
@@ -300,7 +300,7 @@ catch [System.IO.IOException]
 ```powershell
 try
 {
-    Do-Something -Path $path -ErrorAction Stop
+    Start-Something -Path $path -ErrorAction Stop
 }
 catch [System.IO.DirectoryNotFoundException],[System.IO.FileNotFoundException]
 {
@@ -449,7 +449,6 @@ At line:31 char:9
     + FullyQualifiedErrorId : Unable to find the specified file.
 ```
 
-
 让错误消息指出我的脚本已中断，因为我在第 31 行调用了 `throw`，这对于你的脚本用户来说是一个坏消息。 它没有告诉他们任何有用的内容。
 
 Dexter Dhami 指出，我可以使用 `ThrowTerminatingError()` 来更正此问题。
@@ -495,13 +494,13 @@ catch
 Kirk Munro 指出，在 `try/catch` 块内执行时，某些异常仅为终止错误。 下面是他为我提供的一个示例，其中生成了一个除以零的运行时异常。
 
 ```powershell
-function Do-Something { 1/(1-1) }
+function Start-Something { 1/(1-1) }
 ```
 
 然后像这样调用它，以查看它是否生成错误并仍然输出消息。
 
 ```powershell
-&{ Do-Something; Write-Output "We did it. Send Email" }
+&{ Start-Something; Write-Output "We did it. Send Email" }
 ```
 
 但通过在 `try/catch` 中放置相同代码，我们可以看到一些别的结果。
@@ -509,14 +508,13 @@ function Do-Something { 1/(1-1) }
 ```powershell
 try
 {
-    &{ Do-Something; Write-Output "We did it. Send Email" }
+    &{ Start-Something; Write-Output "We did it. Send Email" }
 }
 catch
 {
     Write-Output "Notify Admin to fix error and send email"
 }
 ```
-
 
 我们看到错误变成终止错误，且未输出第一条消息。 我不喜欢此结果的原因是，你可以在函数中使用此代码，如果用户使用 `try/catch`，则其行为方式会不同。
 
@@ -528,12 +526,12 @@ catch
 
 ### <a name="public-function-templates"></a>公共函数模板
 
-我与 Kirk Munro 谈论的最后一个要点是，他在所有高级函数的每个 `begin`、`process` 和 `end` 块周围放置了 `try{...}catch{...}`。 在这些泛型 catch 块中，他使用 `$PSCmdlet.ThrowTerminatingError($PSitem)` 作为单行处理所有离开函数的异常。
+我与 Kirk Munro 谈论的最后一个要点是，他在所有高级函数的每个 `begin`、`process` 和 `end` 块周围放置了 `try{...}catch{...}`。 在这些泛型 catch 块中，他使用 `$PSCmdlet.ThrowTerminatingError($PSItem)` 作为单个行来处理所有离开函数的异常。
 
 ```powershell
-function Do-Something
+function Start-Something
 {
-    [cmdletbinding()]
+    [CmdletBinding()]
     param()
 
     process
@@ -544,7 +542,7 @@ function Do-Something
         }
         catch
         {
-            $PSCmdlet.ThrowTerminatingError($PSitem)
+            $PSCmdlet.ThrowTerminatingError($PSItem)
         }
     }
 }
