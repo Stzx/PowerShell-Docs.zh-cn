@@ -1,5 +1,5 @@
 ---
-title: 关于字符串中的变量替换的各项须知内容
+title: 关于字符串中变量替换的各项须知内容
 description: 使用字符串中的变量创建格式化文本的方法有很多。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
@@ -10,9 +10,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/28/2020
 ms.locfileid: "84149460"
 ---
-# <a name="everything-you-wanted-to-know-about-variable-substitution-in-strings"></a>关于字符串中的变量替换的各项须知内容
+# <a name="everything-you-wanted-to-know-about-variable-substitution-in-strings"></a>关于字符串中变量替换的各项须知内容
 
-可以通过很多方法使用字符串中的变量。 我称之为变量替换，但我指的是任何时候你想格式化一个字符串来包含变量的值的情形。 这是我经常向新脚本编写人员解释的内容。
+可以通过很多方法使用字符串中的变量。 我称之为变量替换，但我指的是任何时候你想格式化一个字符串来包含变量的值的情形。 这是我经常向脚本编写新手解释的内容。
 
 > [!NOTE]
 > 本文的[原始版本][]发布在 [@KevinMarquette][] 撰写的博客上。 PowerShell 团队感谢 Kevin 与我们分享这篇文章。 请前往 [PowerShellExplained.com][] 访问他的博客。
@@ -26,7 +26,7 @@ $name = 'Kevin Marquette'
 $message = 'Hello, ' + $name
 ```
 
-当只有几个值要添加时，串联可以正常运行。 但这可能很快就会变得复杂。
+当只要添加几个值时，串联效果不错。 但这可能很快就会变得复杂。
 
 ```powershell
 $first = 'Kevin'
@@ -37,7 +37,7 @@ $last = 'Marquette'
 $message = 'Hello, ' + $first + ' ' + $last + '.'
 ```
 
-这个简单的示例已变得越来越难读了。
+这个简单的示例已经变得越来越难读了。
 
 ## <a name="variable-substitution"></a>变量替换
 
@@ -47,21 +47,21 @@ PowerShell 提供了另一个更简单的选项。 你可以直接在字符串�
 $message = "Hello, $first $last."
 ```
 
-在字符串两边使用的引号类型会产生差别。 带双引号的字符串允许替换，带单引号的字符串则不允许替换。 有时候你想要其中一种，所以你可以选择。
+在字符串两边使用的引号类型会产生差别。 带双引号的字符串允许替换，带单引号的字符串则不允许替换。 有时候需要其中一种效果，所以你有选择的空间。
 
 ## <a name="command-substitution"></a>命令替换
 
-开始尝试将属性的值获取到字符串中时，有一些麻烦。 很多新人都会在这里出错。 首先，我会向你展示他们的想法应该能行得通（从表面上看几乎与预期一样）。
+开始尝试将属性的值获取到字符串中时，有一些麻烦。 很多新手都会在这里出错。 首先，我会向你展示他们觉得应该行得通的想法（从表面上看，值几乎与预期效果一样）。
 
 ```powershell
 $directory = Get-Item 'c:\windows'
 $message = "Time: $directory.CreationTime"
 ```
 
-你希望从 `$directory` 获得 `CreationTime`，但结果得到的值是 `Time: c:\windows.CreationTime`。 原因在于，这种类型的替换仅看基变量。 它将句点视为字符串的一部分，使其停止更深入地解析值。
+你希望从 `$directory` 获得 `CreationTime`，但结果得到的值是 `Time: c:\windows.CreationTime`。 原因在于，这种类型的替换仅看基变量。 它将句点视为字符串的一部分，因而停止更深入地解析值。
 
-发生的情况是，在将此对象置于字符串中时，此对象会提供一个字符串作为默认值。
-某些对象会为你提供类型名称，而不是 `System.Collections.Hashtable`。 只需注意一些事项。
+巧的是，在将此对象置于字符串中时，此对象会提供一个字符串作为默认值。
+某些对象会为你提供类型名称，例如 `System.Collections.Hashtable`。 这里只是列举一些需要注意的事项。
 
 PowerShell 允许使用特殊语法在字符串内执行命令。 这样，我们就可以获取这些对象的属性，并运行任何其他命令来获取值。
 
@@ -69,7 +69,7 @@ PowerShell 允许使用特殊语法在字符串内执行命令。 这样，我�
 $message = "Time: $($directory.CreationTime)"
 ```
 
-这在某些情况下非常有用，但如果你只有几个变量，它可能会变得相当古怪。
+这在某些情况下非常有用，但如果你只有几个变量，它可能会像串联一样变得相当古怪。
 
 ### <a name="command-execution"></a>命令执行
 
@@ -81,7 +81,7 @@ $message = "Date: $(Get-Date)"
 
 ## <a name="format-string"></a>格式字符串
 
-.NET 提供了一种格式化字符串的方法，我发现这种方法非常易于使用。 首先，我会向你展示它的静态方法，然后再介绍执行相同操作的 PowerShell 快捷方式。
+.NET 提供了一种格式化字符串的方法，我发现这种方法非常易于使用。 首先，我会向你展示它的静态方法，然后再介绍达到同样目的的 PowerShell 快捷方式。
 
 ```powershell
 # .NET string format string
@@ -122,7 +122,7 @@ $values = @(
 
 ## <a name="joining-strings"></a>联接字符串
 
-有时，确实要将值列表连接在一起。 `-join` 运算符可为你执行此操作。 它甚至可以让你指定要在字符串之间联接的字符。
+有时，确实要将一些值串联在一起。 `-join` 运算符可为你执行此操作。 它甚至可以让你指定要在字符串之间联接的字符。
 
 ```powershell
 $servers = @(
@@ -153,13 +153,13 @@ $folder = 'Temp'
 Join-Path -Path 'c:\windows' -ChildPath $folder
 ```
 
-这方面的好处是，在将值放在一起时，它会正确地处理反斜杠。 如果从用户或配置文件获取值，则这一点尤其重要。
+它的好处是，在将值放在一起时，它会正确地处理反斜杠。 如果从用户或配置文件获取值，则这一点尤其重要。
 
 这也适用于 `Split-Path` 和 `Test-Path`。 我还在关于[读取和保存到文件][]的文章中介绍了这些内容。
 
 ## <a name="strings-are-arrays"></a>字符串是数组
 
-在继续之前，我需要提一下在此处添加字符串。 请记住，字符串只是一个字符数组。 如果一起添加多个字符串，则每次都会创建一个新数组。
+在继续之前，我需要提一下添加字符串。 请记住，字符串只是一个字符数组。 如果一起添加多个字符串，则每次都会创建一个新数组。
 
 请看下面的示例：
 
@@ -172,11 +172,11 @@ foreach($number in 1..10000)
 ```
 
 它看起来非常简单，但你没有看到的是，每次将一个字符串添加到 `$message` 时，都会创建一个全新的字符串。 将会分配内存，复制数据并丢弃旧数据。
-如果只是执行几次，不是大问题，但这样的循环确实会出现问题。
+如果只是执行几次，不是什么大问题，但类似这样的循环就会暴露出问题。
 
 ### <a name="stringbuilder"></a>StringBuilder
 
-对于使用许多较小的字符串生成大型字符串，StringBuilder 也非常受欢迎。 原因是，它只收集你添加到它的所有字符串，并且只在你检索值时将所有字符串连接到末尾。
+对于使用许多较小的字符串生成大型字符串，StringBuilder 也非常受欢迎。 原因是，它只收集你向它添加的所有字符串，并且只在你检索值时在末尾串联所有字符串。
 
 ```powershell
 $stringBuilder = New-Object -TypeName "System.Text.StringBuilder"
@@ -214,22 +214,22 @@ Write-Host "{0} {1} {0}ter" -f $test, $tester
 
 ## <a name="find-and-replace-tokens"></a>查找和替换标记
 
-虽然这些功能中大多数限制了您使用自己的解决方案的需求，但有时您可能需要替换大型模板文件中的字符串。
+虽然这些功能中大多数限制了你使用自己的解决方案的需求，但有时你可能需要替换大型模板文件中的字符串。
 
-假设你从一个包含大量文本的文件中拉取模板。
+假设你从一个包含大量文本的文件中拉取了模板。
 
 ```powershell
 $letter = Get-Content -Path TemplateLetter.txt -RAW
 $letter = $letter -replace '#FULL_NAME#', 'Kevin Marquette'
 ```
 
-可能有大量要替换的标记。 诀窍是使用易于查找和替换的独特标记。 我倾向于在两端使用一个特殊字符来帮助区分。
+可能有大量要替换的标记。 这里的诀窍是使用易于查找和替换的独特标记。 我倾向于在两端使用一个特殊字符来帮助区分。
 
-我最近发现了一种新方法来解决这一问题。 我决定将此部分留在这里，因为这是一种常用的模式。
+我最近发现了一种新方法来解决这一问题。 我决定把这部分留在这里，因为这是一种常用的模式。
 
 ### <a name="replace-multiple-tokens"></a>替换多个标记
 
-如果我有一个需要替换的标记列表，我会采用更通用的方法。 我会将其放在哈希表中，然后循环访问它们来进行替换。
+如果我有一系列需要替换的标记，我会采用更通用的方法。 我会将其放在哈希表中，然后循环访问它们来进行替换。
 
 ```powershell
 $tokenList = @{
@@ -250,7 +250,7 @@ foreach( $token in $tokenList.GetEnumerator() )
 
 ### <a name="executioncontext-expandstring"></a>ExecutionContext ExpandString
 
-有一种巧妙的方法可以使用单引号定义替换字符串，以后再展开变量。 请看下面的示例：
+有一种巧妙的方法可以使用单引号定义替换字符串，之后再展开变量。 请看下面的示例：
 
 ```powershell
 $message = 'Hello, $Name!'
@@ -258,7 +258,7 @@ $name = 'Kevin Marquette'
 $string = $ExecutionContext.InvokeCommand.ExpandString($message)
 ```
 
-对当前执行上下文 `.InvokeCommand.ExpandString` 的调用使用当前作用域内的变量进行替换。 此处的关键在于，可以在变量存在之前尽早定义 `$message`。
+对当前执行上下文的 `.InvokeCommand.ExpandString` 调用使用了当前作用域内的变量进行替换。 此处的关键在于，可以在变量存在之前尽早定义 `$message`。
 
 如果我们再展开一点点，就可以使用不同的值反复执行此替换。
 
@@ -274,11 +274,11 @@ foreach($name in $nameList){
 
 ## <a name="whatever-works-the-best-for-you"></a>只要适合你就好
 
-我是格式字符串方法的爱好者。 对于更复杂的字符串，或者如果有多个变量，我肯定会这样做。 对于非常短的内容，我可以使用其中任何一个。
+我是格式字符串方法的爱好者。 对于更复杂的字符串，或者如果有多个变量，我肯定会这样做。 对于非常短的内容，我可以使用上述方法中的任何一个。
 
 ## <a name="anything-else"></a>任何其他内容？
 
-我就这个主题已经介绍了很多内容。 希望你能学习到一些新知识。
+就这个主题我已经介绍了很多内容。 希望你能学习到一些新知识。
 
 <!-- link references -->
 [原始版本]: https://powershellexplained.com/2017-01-13-powershell-variable-substitution-in-strings/

@@ -58,7 +58,7 @@ Registry [string] #ResourceName
 
 ### <a name="example-1-ensure-specified-value-and-data-under-specified-registry-key"></a>示例 1：确保指定注册表项下具有指定值和数据
 
-此示例确保 `HKEY\_LOCAL\_MACHINE` 配置单元中存在名为“ExampleKey1”的键下的注册表值“TestValue”，并具有数据“TestData”。
+此示例确保 `HKEY\_LOCAL\_MACHINE` 配置单元中存在注册表值“TestValue”（位于“ExampleKey1”键下），并具有数据“TestData”。
 
 ```powershell
 Configuration RegistryTest

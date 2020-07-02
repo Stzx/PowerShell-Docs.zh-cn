@@ -19,7 +19,7 @@ ms.locfileid: "84149420"
 
 ## <a name="if-statement"></a>If 语句
 
-首先要学习的语句之一是 `if` 语句。 如果语句为 `$true`，则允许执行脚本块。
+你最先学习的语句之一是 `if` 语句。 如果语句为 `$true`，则允许执行脚本块。
 
 ``` powershell
 if ( Test-Path $Path )
@@ -28,7 +28,7 @@ if ( Test-Path $Path )
 }
 ```
 
-可以通过使用 `elseif` 和 `else` 语句来获得更复杂的逻辑。 下面是一个示例：一周中的某一天用数值表示，并且我想要获取字符串形式的名称。
+可以通过使用 `elseif` 和 `else` 语句来获得更复杂的逻辑。 下面是一个示例：我有一个星期的数字值，想要获取字符串形式的名称。
 
 ``` powershell
 $day = 3
@@ -52,7 +52,7 @@ Wednesday
 
 ## <a name="switch-statement"></a>Switch 语句
 
-使用 `switch` 语句可以提供变量和可能值的列表。 如果该值与变量匹配，则将执行其脚本块。
+`switch` 语句允许你提供一个变量和一列可能值。 如果值与变量匹配，则将执行其脚本块。
 
 ``` powershell
 $day = 3
@@ -75,7 +75,7 @@ $result
 'Wednesday'
 ```
 
-在本示例中，`$day` 的值与其中一个数值匹配，然后正确的名称即会分配给 `$result`。 我们在本示例中只执行变量赋值，但可以在这些脚本块中执行任何 PowerShell。
+在本例中，`$day` 的值与其中一个数值匹配，然后正确的名称即会分配给 `$result`。 我们在本例中只进行了变量赋值，但任何 PowerShell 都可以在这些脚本块中执行。
 
 ### <a name="assign-to-a-variable"></a>给变量赋值
 
@@ -94,11 +94,11 @@ $result = switch ( $day )
 }
 ```
 
-我们将该值置于 PowerShell 管道上，并将其赋予 `$result`。 可以使用 `if` 和 `foreach` 语句执行相同的操作。
+我们将该值置于 PowerShell 管道上，并将其赋给 `$result`。 可以使用 `if` 和 `foreach` 语句执行相同的操作。
 
 ### <a name="default"></a>默认
 
-如果没有匹配项，我们可以使用 `default` 关键字来确定应当出现的情况。
+我们可以使用 `default` 关键字来确定没有匹配项时应发生的情况。
 
 ``` powershell
 $result = switch ( $day )
@@ -110,11 +110,11 @@ $result = switch ( $day )
 }
 ```
 
-默认情况下，我们返回值 `Unknown`。
+默认情况下，返回值 `Unknown`。
 
 ### <a name="strings"></a>字符串
 
-我在上述几个示例中匹配的是数字，但你也可以匹配字符串。
+我在上述几个示例中匹配的都是数字，但你也可以匹配字符串。
 
 ``` powershell
 $item = 'Role'
@@ -140,11 +140,11 @@ switch ( $item )
 is a role
 ```
 
-我决定在此处不将 `Component`、`Role` 和 `Location` 匹配项括在引号中，以突出显示它们是可选的。 在大多数情况下，`switch` 会将它们视为字符串。
+我决定在这里不把 `Component`、`Role` 和 `Location` 匹配项括在引号中，以突出它们是可选的。 在大多数情况下，`switch` 会将它们视为字符串。
 
 ## <a name="arrays"></a>数组
 
-PowerShell `switch` 的一项优异功能体现在处理数组的方式上。 如果向数组提供 `switch`，则会处理该集合中的每个元素。
+PowerShell `switch` 的一项优异功能体现在处理数组的方式上。 如果向数组提供一个 `switch`，它会处理集合中的每个元素。
 
 ``` powershell
 $roles = @('WEB','Database')
@@ -161,15 +161,15 @@ Configure IIS
 Configure SQL
 ```
 
-如果数组中有重复项，则相应的部分会多次匹配它们。
+如果数组中有重复项，则相应的部分会对它们进行多次匹配。
 
 ### <a name="psitem"></a>PSItem
 
-可以使用 `$PSItem` 或 `$_` 来引用已处理的当前项。 当我们执行简单匹配时，`$PSItem` 是我们要匹配的值。 在下一部分中，将使用此变量来执行一些高级匹配。
+可以使用 `$PSItem` 或 `$_` 来引用已处理的当前项。 当我们执行简单匹配时，`$PSItem` 是我们要匹配的值。 在下一部分中使用这个变量时，我将执行一些高级匹配。
 
 ## <a name="parameters"></a>参数
 
-PowerShell `switch` 的一项独特功能是它有许多可更改执行方式的[开关参数][]。
+PowerShell `switch` 的一项独特特性是它有许多可更改其执行方式的[开关参数][]。
 
 ### <a name="-casesensitive"></a>-CaseSensitive
 
@@ -203,7 +203,7 @@ switch -Wildcard ( $message )
 WARNING: Warning, out of disk space
 ```
 
-此时我们将处理一条消息，然后根据内容将其输出到不同的流中。
+在这里我们正处理一条消息，然后根据内容将其输出到不同的流中。
 
 ### <a name="-regex"></a>-Regex
 
@@ -251,15 +251,15 @@ switch -Wildcard -File $path
 }
 ```
 
-它的工作方式就像处理数组一样。 在本示例中，我将它与通配符匹配结合使用，并使用 `$PSItem`。 这会处理日志文件，并根据正则表达式匹配将其转换为警告消息和错误消息。
+它的工作方式就像处理数组一样。 在本例中，我将它与通配符匹配结合使用，并使用了 `$PSItem`。 这会处理日志文件，并根据正则表达式匹配情况将其转换为警告消息和错误消息。
 
 ## <a name="advanced-details"></a>高级详细信息
 
-现在，你已经了解了所有这些文档中记录的功能，我们可以在更高级处理的上下文中使用它们。
+现在，你已经了解了所有这些记录在案的功能，我们可以在更高级处理的上下文中使用它们。
 
 ### <a name="expressions"></a>表达式
 
-`switch` 可以在表达式中，而不是在变量中。
+`switch` 可以在表达式上，而不是变量上。
 
 ``` powershell
 switch ( ( Get-Service | Where status -eq 'running' ).name ) {...}
@@ -269,7 +269,7 @@ switch ( ( Get-Service | Where status -eq 'running' ).name ) {...}
 
 ### <a name="multiple-matches"></a>多个匹配
 
-你可能已选择了此项，但 `switch` 可以匹配多个条件。 当使用 `-wildcard` 或 `-regex` 匹配时，尤其如此。 可以多次添加同一条件，并同时触发所有条件。
+你可能已经了解了这一点，但 `switch` 可以匹配多个条件。 当使用 `-wildcard` 或 `-regex` 匹配时，尤其如此。 可以多次添加同一条件，且所有条件都会被触发。
 
 ``` powershell
 switch ( 'Word' )
@@ -290,7 +290,7 @@ upper case word match
 
 ### <a name="continue"></a>继续
 
-通常，我会在此介绍 `break` 语句，但最好先了解如何使用 `continue`。 正如 `foreach` 循环一样，`continue` 会继续进行到集合中的下一项，如果没有更多项，则会退出 `switch`。 我们可以使用 continue 语句重写上一个示例，以便仅执行一个语句。
+通常，我会在这里介绍 `break` 语句，但最好先了解如何使用 `continue`。 正如 `foreach` 循环一样，`continue` 会继续进行到集合中的下一项，如果没有其他项，则会退出 `switch`。 我们可以使用 continue 语句重写上一个示例，以便仅执行一个语句。
 
 ``` powershell
 switch ( 'Word' )
@@ -317,7 +317,7 @@ switch ( 'Word' )
 lower case word match
 ```
 
-匹配第一个项，并且开关继续切换到下一个值，而不是匹配所有三个项。 由于没有要处理的值了，因此开关将退出。 下一个示例演示通配符如何与多个项匹配。
+匹配第一个项，然后 switch 继续处理下一个值，而不是匹配所有三个项。 由于没有要处理的值了，因此 switch 将退出。 下一个示例演示通配符如何与多个项匹配。
 
 ``` powershell
 switch -Wildcard -File $path
@@ -339,11 +339,11 @@ switch -Wildcard -File $path
 }
 ```
 
-由于输入文件中的一行可能同时包含单词 `Error` 和 `Warning`，因此我们只希望执行第一个，然后继续处理该文件。
+因为输入文件中的一行可能同时包含单词 `Error` 和 `Warning`，所以我们只希望执行第一个，然后继续处理文件。
 
 ### <a name="break"></a>中断
 
-`break` 语句退出开关。 这与 `continue` 为单个值提供的行为相同。 差异会在处理数组时显示出来。 `break` 会停止开关中的所有处理，而 `continue` 会继续进行到下一项。
+`break` 语句可退出 switch。 这与 `continue` 对单个值的行为表现相同。 差异会在处理数组时显示出来。 `break` 会停止 switch 中的所有处理，而 `continue` 会继续进行到下一项。
 
 ``` powershell
 $Messages = @(
@@ -386,8 +386,8 @@ write-error -message $PSItem : Error: out of disk space
 + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException
 ```
 
-在这种情况下，如果点击以 `Error` 开头的任何行，则会出现错误，并且开关将停止。
-这就是 `break` 语句的作用。 如果在字符串内（而不只是在开头）查找 `Error`，则将其编写为警告。 我们将为 `Warning` 执行相同的操作。 一行中可能同时包含单词 `Error` 和 `Warning`，但我们只需处理一个。 这就是 `continue` 语句的作用。
+在这种情况下，如果点击以 `Error` 开头的任何行，则会出现错误，并且 switch 将停止。
+这就是 `break` 语句的作用。 如果在字符串内（而不只是在开头）找到 `Error`，则将其编写为警告。 对于 `Warning` 也是如此。 一行中可能同时包含单词 `Error` 和 `Warning`，但我们只需处理一个。 这就是 `continue` 语句的作用。
 
 ### <a name="break-labels"></a>中断标签
 
@@ -416,11 +416,11 @@ write-error -message $PSItem : Error: out of disk space
 }
 ```
 
-我个人不喜欢使用中断标签，但我想要提一下它们，因为如果你之前从未见过它们，可能会感到困惑。 如果有多个嵌套的 `switch` 或 `foreach` 语句，则可能需要中断的不只是最内部的项。 可以在可作为 `break` 目标的 `switch` 上放置一个标签。
+我个人不喜欢使用中断标签，之所以提及的原因是，如果你之前从未见过它们，可能会感到困惑。 如果有多个嵌套的 `switch` 或 `foreach` 语句，则可能需要中断的不只是最内层的项。 可以在 `switch` 上放置一个标签，作为 `break` 的目标。
 
 ### <a name="enum"></a>枚举
 
-PowerShell 5.0 为我们提供了枚举，我们可以在开关中使用它们。
+PowerShell 5.0 为我们提供了可以在 switch 中使用的枚举。
 
 ``` powershell
 enum Context {
@@ -452,7 +452,7 @@ switch ( $item )
 is a role
 ```
 
-如果要将所有内容保持为强类型枚举，则可以将其置于括号中。
+如果要将所有内容保持为强类型枚举，则可以将其放在圆括号中。
 
 ``` powershell
 switch ($item )
@@ -472,7 +472,7 @@ switch ($item )
 }
 ```
 
-此处需要括号，以便开关不将值 `[Context]::Location` 视为文本字符串。
+此处需要圆括号，以便 switch 不会将值 `[Context]::Location` 视为文本字符串。
 
 ### <a name="scriptblock"></a>脚本块
 
@@ -498,9 +498,9 @@ switch ( $age )
 'adult'
 ```
 
-这会增加复杂性，并且会使 `switch` 难以读取。 在大多数情况下，最好使用 `if` 和 `elseif` 语句。 如果已经有一个较大的开关，并且需要两个项来点击相同的计算块，我会考虑使用这种方法。
+这会增加复杂性，并且会使 `switch` 很难读。 在大多数情况下，使用类似语句时，最好使用 `if` 和 `elseif` 语句。 如果已经有一个较大的 switch，并且需要两个项来命中同一计算块，我会考虑使用这个。
 
-我认为有助于增强可读性的一点是将脚本块置于括号中。
+我认为有助于增强可读性的一点是，将脚本块放在圆括号内。
 
 ``` powershell
 switch ( $age )
@@ -549,7 +549,7 @@ WARNING: message may contain a credit card number: 1234-5678-1234-5678
 
 ### <a name="null"></a>$null
 
-可以匹配不一定为默认值的 `$null` 值。
+你可以匹配一个不一定是默认值的 `$null` 值。
 
 ``` powershell
 $value = $null
@@ -589,10 +589,10 @@ switch ( '' )
 Value is empty
 ```
 
-### <a name="constant-expression"></a>常量表达式
+### <a name="constant-expression"></a>常数表达式
 
-Lee Dailey 指出，我们可以使用常量 `$true` 表达式来计算 `[bool]` 项。
-假设我们需要进行几个布尔检查。
+Lee Dailey 指出，我们可以使用恒定的 `$true` 表达式来计算 `[bool]` 项。
+假设我们需要进行几个布尔值检查。
 
 ``` powershell
 $isVisible = $false
@@ -621,7 +621,7 @@ Do-Action
 Enabled-AdminMenu
 ```
 
-这是对若干个布尔字段的状态进行计算和执行操作的简便方法。 这样做的好处是，可以让一个匹配项来切换尚未计算的值的状态。
+这是对若干个布尔字段的状态进行计算和执行操作的简便方法。 这样做的好处是，可以让一个匹配翻转尚未计算的值的状态。
 
 ``` powershell
 $isVisible = $false
@@ -651,15 +651,15 @@ Do-Action
 Show-Animation
 ```
 
-在本示例中，将 `$isEnabled` 设置为 `$true` 可确保 `$isVisible` 也设置为 `$true`。 然后，在计算 `$isVisible` 时，将调用其脚本块。 这有点违反直觉，但却是对机制的巧妙使用。
+在本例中，将 `$isEnabled` 设置为 `$true` 可确保 `$isVisible` 也设置为 `$true`。 然后，在计算 `$isVisible` 时，将调用其脚本块。 这有点违反直觉，但却是对机制的巧妙使用。
 
 ### <a name="switch-automatic-variable"></a>$switch 自动变量
 
 当 `switch` 处理其值时，将创建枚举器并称其为 `$switch`。 这是由 PowerShell 创建的自动变量，你可以直接对其进行操作。
 
-这是 [/u/frmadsen](https://www.reddit.com/user/frmadsen) 向我指出的
+这一点是 [/u/frmadsen](https://www.reddit.com/user/frmadsen) 向我指出的
 
-<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="8f6edbf1-abc6-4513-971e-ccd1d202889d" data-embed-created="2018-12-25T22:05:33.986Z"><a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">我（IT 学生）应该学习什么来掌握 PowerShell？</a> 讨论中的<a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">评论</a>。</div><script async src="https://www.redditstatic.com/comment-embed.js"></script>
+<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="8f6edbf1-abc6-4513-971e-ccd1d202889d" data-embed-created="2018-12-25T22:05:33.986Z"><a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">要掌握 PowerShell 我（IT 学生）应该学些什么？</a>讨论中的<a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">评论</a>。</div><script async src="https://www.redditstatic.com/comment-embed.js"></script>
 
 这会为你提供以下结果：
 
@@ -668,13 +668,13 @@ Show-Animation
 4
 ```
 
-通过向前移动枚举器，`switch` 不会处理下一项，但你可以直接访问该值。 我称之为发疯。
+向前移动枚举器，`switch` 不会处理下一项，但你可以直接访问该值。 我称之为发疯。
 
 ## <a name="other-patterns"></a>其他模式
 
 ### <a name="hashtables"></a>哈希表
 
-我最受欢迎的一篇文章是关于[哈希表][]的。 `hashtable` 的用例之一是查找表。 这是一种常见模式的替代方法，`switch` 语句通常对该模式进行寻址。
+我最受欢迎的文章之一是关于[哈希表][]的。 `hashtable` 的用例之一是作为查找表使用。 这是 `switch` 语句通常处理的常见模式的一种替代方法。
 
 ``` powershell
 $day = 3
@@ -722,11 +722,11 @@ enum DayOfTheWeek {
 Wednesday
 ```
 
-我们会一直寻找不同的方法来解决此问题。 我只是想要确保你知道你拥有选择。
+我们会一直寻找不同的方法来解决此问题。 我只是想确定你知道你拥有选择。
 
 ## <a name="final-words"></a>结束语
 
-switch 语句表面上看起来很简单，但它提供了大多数人都不知道的一些高级功能。 这些功能结合在一起使其非常强大。 我希望你学到了一些之前不知道的内容。
+switch 语句表面上看起来很简单，但它提供了一些大多数人都不知道的高级功能。 这些功能结合在一起使它非常强大。 我希望你学到了一些之前不知道的内容。
 
 <!-- link references -->
 [原始版本]: https://powershellexplained.com/2018-01-12-Powershell-switch-statement/

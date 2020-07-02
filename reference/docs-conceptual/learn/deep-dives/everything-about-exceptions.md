@@ -3,28 +3,28 @@ title: 关于异常的各项须知内容
 description: 错误处理只是编写代码时的一部分工作。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 3ecb1669fa8d58bc742d4e8e77051b3ace4452a0
-ms.sourcegitcommit: 4a40e3ea3601c02366be3495a5dcc7f4cac9f1ea
+ms.openlocfilehash: fd3ddacbf14d1faeee98682697161f86c6ff0c72
+ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84337176"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84149540"
 ---
 # <a name="everything-you-wanted-to-know-about-exceptions"></a>关于异常的各项须知内容
 
-错误处理只是编写代码时的一部分工作。 我们通常可以检查并验证预期行为的条件。 发生意外情况时，我们会转向异常处理。 你可以轻松处理他人的代码生成的异常，也可以生成你自己的异常让他人处理。
+错误处理只是编写代码时的一部分工作。 我们通常可以检查并验证预期行为的条件。 发生意外情况时，我们会转向异常处理。 你可以轻松处理他人的代码生成的异常，也可以自己生成一些异常让他人去处理。
 
 > [!NOTE]
 > 本文的[原始版本][]发布在 [@KevinMarquette][] 撰写的博客上。 PowerShell 团队感谢 Kevin 与我们分享这篇文章。 请前往 [PowerShellExplained.com][] 访问他的博客。
 
 ## <a name="basic-terminology"></a>基本术语
 
-在讨论此内容之前，我们需要介绍一些基本术语。
+在进入正题之前，我们需要介绍一些基本术语。
 
 ### <a name="exception"></a>异常
 
-异常类似于常规错误处理程序无法处理问题时创建的事件。
-造成异常的示例包括尝试将数字除以零或内存不足。 有时你使用的代码的作者会在发生某些问题时为其创建异常。
+异常就是常规错误处理程序无法处理问题时创建的事件。
+尝试将数字除以零或内存不足等都会造成异常。 有时，你使用的代码的作者会在某些问题发生时为它们创建异常。
 
 ### <a name="throw-and-catch"></a>Throw 和 Catch
 
@@ -32,7 +32,7 @@ ms.locfileid: "84337176"
 
 ### <a name="the-call-stack"></a>调用堆栈
 
-调用堆栈是相互调用的函数的列表。 调用函数时，它将添加到堆栈或列表的顶部。 当函数退出或返回时，它将从堆栈中移除。
+调用堆栈是相互调用的函数的列表。 当调用一个函数时，它将被添加到堆栈或列表的顶部。 当函数退出或返回时，它将从堆栈中移除。
 
 当引发异常时，将检查该调用堆栈，以便异常处理程序捕获异常。
 
@@ -44,7 +44,7 @@ ms.locfileid: "84337176"
 
 ### <a name="swallowing-an-exception"></a>忽略异常
 
-当你捕获错误只是为了抑制它时，会执行此操作。 请慎用此操作，因为这样做可能会导致故障排除非常困难。
+在这种情况下，捕获错误只是为了抑制它。 这样做时要谨慎，因为它会使故障排除变得非常困难。
 
 ## <a name="basic-command-syntax"></a>基本命令语法
 
@@ -55,16 +55,16 @@ ms.locfileid: "84337176"
 若要创建自己的异常事件，请使用 `throw` 关键字引发异常。
 
 ```powershell
-function Start-Something
+function Do-Something
 {
     throw "Bad thing happened"
 }
 ```
 
-这会创建一个作为终止错误的运行时异常。 它通过调用函数中的 `catch` 进行处理，或者退出脚本，并显示类似于下面的消息。
+这会创建一个属于终止错误的运行时异常。 它由调用函数中的 `catch` 进行处理，或者退出脚本，并显示如下消息：
 
 ```powershell
-PS> Start-Something
+PS> Do-Something
 
 Bad thing happened
 At line:1 char:1
@@ -76,7 +76,7 @@ At line:1 char:1
 
 #### <a name="write-error--erroraction-stop"></a>Write-Error -ErrorAction Stop
 
-我提到过，默认情况下 `Write-Error` 不会引发终止错误。 如果指定 `-ErrorAction Stop`，`Write-Error` 会生成可以使用 `catch` 处理的终止错误。
+我提到过，默认情况下 `Write-Error` 不会引发终止错误。 如果指定 `-ErrorAction Stop`，`Write-Error` 会生成一个可以使用 `catch` 处理的终止错误。
 
 ```powershell
 Write-Error -Message "Houston, we have a problem." -ErrorAction Stop
@@ -86,20 +86,20 @@ Write-Error -Message "Houston, we have a problem." -ErrorAction Stop
 
 #### <a name="cmdlet--erroraction-stop"></a>Cmdlet -ErrorAction Stop
 
-如果在任何高级函数或 cmdlet 上指定 `-ErrorAction Stop`，它会使所有 `Write-Error` 语句转为停止执行或可由 `catch` 处理的终止错误。
+如果在任何高级函数或 cmdlet 上指定 `-ErrorAction Stop`，它会把所有 `Write-Error` 语句转为终止错误，这些错误会使执行停止或可由 `catch` 处理。
 
 ```powershell
-Start-Something -ErrorAction Stop
+Do-Something -ErrorAction Stop
 ```
 
 ### <a name="trycatch"></a>Try/Catch
 
-PowerShell（以及许多其他语言）中的异常处理方式是先对一部分代码执行 `try`，如果引发错误，则对其执行 `catch`。 下面是一个简短的示例。
+PowerShell（以及许多其他语言）中的异常处理方式是，先对一部分代码执行 `try`，如果引发错误，则对其执行 `catch`。 下面是一个简单的例子。
 
 ```powershell
 try
 {
-    Start-Something
+    Do-Something
 }
 catch
 {
@@ -108,7 +108,7 @@ catch
 
 try
 {
-    Start-Something -ErrorAction Stop
+    Do-Something -ErrorAction Stop
 }
 catch
 {
@@ -116,11 +116,11 @@ catch
 }
 ```
 
-只有存在终止错误时 `catch` 脚本才会运行。 如果 `try` 正确执行，则会跳过 `catch`。
+`catch` 脚本仅在出现终止错误时才会运行。 如果 `try` 正确执行，则会跳过 `catch`。
 
 ### <a name="tryfinally"></a>Try/Finally
 
-有时，你不需要处理错误，但如果发生异常，仍需要执行一些代码。 `finally` 脚本的行为与此完全相同。
+有时，你不需要处理错误，但无论异常是否发生，仍需要执行一些代码。 `finally` 脚本正是做的这一点。
 
 请看下面的示例：
 
@@ -146,21 +146,21 @@ finally
 }
 ```
 
-在此示例中，如果出现错误，则连接关闭。 如果没有错误，也会将其关闭。 每次都会运行 `finally` 脚本。
+在本例中，如果出现错误，则连接关闭。 如果没有错误，也会将其关闭。 每次都会运行 `finally` 脚本。
 
 由于未捕获异常，它仍会在调用堆栈中向上传播。
 
 ### <a name="trycatchfinally"></a>Try/Catch/Finally
 
-同时使用 `catch` 和 `finally` 是非常有效的。 大多数情况下，你将使用其中一个，但您也可能会发现两种都使用的情况。
+同时使用 `catch` 和 `finally` 是非常有效的。 大多数情况下，你将使用其中一个，但也可能会有两种都使用的情况。
 
 ## <a name="psitem"></a>$PSItem
 
 现在我们已经了解了基本知识，下面可以更深入地了解。
 
-在 `catch` 块中，有一个类型为 `ErrorRecord` 的自动变量（`$PSItem` 或 `$_`），其中包含有关异常的详细信息。 下面是一些关键属性的简要概述。
+在 `catch` 块内，有一个类型为 `ErrorRecord` 的自动变量（`$PSItem` 或 `$_`），其中包含有关异常的详细信息。 下面是一些关键属性的简要概述。
 
-对于这些示例，我使用 `ReadAllText` 中的无效路径来生成此异常。
+对于这些示例，我在 `ReadAllText` 中使用了一个无效路径来生成此异常。
 
 ```powershell
 [System.IO.File]::ReadAllText( '\\test\no\filefound.log')
@@ -168,7 +168,7 @@ finally
 
 ### <a name="psitemtostring"></a>PSItem.ToString()
 
-这为你提供了最简洁的消息来用于日志记录和常规输出。 如果将 `$PSItem` 放置在字符串中，将自动调用 `ToString()`。
+这为你提供了最简洁的消息来用于日志记录和常规输出。 如果将 `$PSItem` 放在字符串中，将自动调用 `ToString()`。
 
 ```powershell
 catch
@@ -204,16 +204,16 @@ PSCommandPath         : C:\blog\throwerror.ps1
 InvocationName        : Get-Resource
 ```
 
-此处的重要详细信息显示 `ScriptName`、代码 `Line` 和调用开始的 `ScriptLineNumber`。
+此处的重要详细信息显示了 `ScriptName`、代码 `Line` 和调用开始时的 `ScriptLineNumber`。
 
 ### <a name="psitemscriptstacktrace"></a>$PSItem.ScriptStackTrace
 
-此属性显示函数调用顺序，这些函数调查会将你带到生成异常的代码。
+此属性显示函数调用顺序，这些函数调用会将你带到生成异常的代码。
 
 ```powershell
 PS> $PSItem.ScriptStackTrace
 at Get-Resource, C:\blog\throwerror.ps1: line 13
-at Start-Something, C:\blog\throwerror.ps1: line 5
+at Do-Something, C:\blog\throwerror.ps1: line 5
 at <ScriptBlock>, C:\blog\throwerror.ps1: line 18
 ```
 
@@ -225,7 +225,7 @@ at <ScriptBlock>, C:\blog\throwerror.ps1: line 18
 
 #### <a name="psitemexceptionmessage"></a>$PSItem.Exception.Message
 
-这是描述异常的一般消息，在进行故障排除时，这是一个很好的起点。 大多数异常都有默认消息，但也可以在引发异常时设置为自定义消息。
+这是描述异常的一般消息，在进行故障排除时，这是一个很好的起点。 大多数异常都有默认消息，但也可以在引发异常时设置自定义消息。
 
 ```powershell
 PS> $PSItem.Exception.Message
@@ -244,11 +244,11 @@ PS> $PSItem.Exception.InnerExceptionMessage
 The network path was not found.
 ```
 
-稍后在讨论重新引发异常时我会回顾此内容。
+稍后讨论重新引发异常时我会回顾此内容。
 
 #### <a name="psitemexceptionstacktrace"></a>$PSItem.Exception.StackTrace
 
-这是异常的 `StackTrace`。 我在上面介绍了 `ScriptStackTrace`，但这适用于对托管代码的调用。
+这是面向异常的 `StackTrace`。 我在上文展示了 `ScriptStackTrace`，但这个属性适用于对托管代码的调用。
 
 ```Output
 at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean
@@ -263,7 +263,7 @@ at System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean ch
 at CallSite.Target(Closure , CallSite , Type , String )
 ```
 
-仅当从托管代码引发事件时，才会获取此堆栈跟踪。 我将直接调用 .NET Framework 函数，这样就可以在此示例中看到所有内容。 通常，当你查看堆栈跟踪时，你是在寻找代码停止以及系统调用开始的位置。
+仅当从托管代码引发事件时，才会获取此堆栈跟踪。 我直接调用了 .NET Framework 函数，因此这就是我们在本例中可以看到的所有内容。 通常，当你查看堆栈跟踪时，你是在寻找代码停止以及系统调用开始的位置。
 
 ## <a name="working-with-exceptions"></a>处理异常
 
@@ -271,12 +271,12 @@ at CallSite.Target(Closure , CallSite , Type , String )
 
 ### <a name="catching-typed-exceptions"></a>捕获类型化异常
 
-你可以选择性地处理捕获的异常。 异常具有类型，你可以指定要捕获的异常类型。
+你可以有选择地处理捕获的异常。 异常具有类型，你可以指定要捕获的异常类型。
 
 ```powershell
 try
 {
-    Start-Something -Path $path
+    Do-Something -Path $path
 }
 catch [System.IO.FileNotFoundException]
 {
@@ -288,10 +288,10 @@ catch [System.IO.IOException]
 }
 ```
 
-检查每个 `catch` 块的异常类型，直到找到与你的异常匹配的块。
-必须认识到，异常可继承自其他异常。 在上面的示例中，`FileNotFoundException` 继承自 `IOException`。 如果 `IOException` 是第一个，则会改为调用它。 即使有多个匹配项，也只调用一个 catch 块。
+针对每个 `catch` 块检查异常类型，直到找到与你的异常匹配的块。
+必须认识到，异常可继承自其他异常。 在上面的示例中，`FileNotFoundException` 继承自 `IOException`。 因此，如果 `IOException` 在前，则会改为调用它。 即使有多个匹配项，也只调用一个 catch 块。
 
-如果有 `System.IO.PathTooLongException`，则 `IOException` 会匹配，但如果有 `InsufficientMemoryException`，则不会捕获它，它会向上传播堆栈。
+如果有 `System.IO.PathTooLongException`，则 `IOException` 会匹配，但如果有 `InsufficientMemoryException`，则不会捕获到它，它会向上传播堆栈。
 
 ### <a name="catch-multiple-types-at-once"></a>一次捕获多种类型
 
@@ -300,7 +300,7 @@ catch [System.IO.IOException]
 ```powershell
 try
 {
-    Start-Something -Path $path -ErrorAction Stop
+    Do-Something -Path $path -ErrorAction Stop
 }
 catch [System.IO.DirectoryNotFoundException],[System.IO.FileNotFoundException]
 {
@@ -328,9 +328,9 @@ throw "Could not find: $path"
 throw [System.IO.FileNotFoundException] "Could not find: $path"
 ```
 
-但在执行此操作时，必须指定一条消息。
+但在这样做时必须指定一条消息。
 
-你还可以创建要引发的异常的新实例。 当你执行此操作时，该消息是可选的，因为系统对所有内置异常都有默认消息。
+你还可以创建要引发的异常的新实例。 这样做时，消息是可选的，因为系统对所有内置异常都有默认消息。
 
 ```powershell
 throw [System.IO.FileNotFoundException]::new()
@@ -344,11 +344,11 @@ throw (New-Object -TypeName System.IO.FileNotFoundException )
 throw (New-Object -TypeName System.IO.FileNotFoundException -ArgumentList "Could not find path: $path")
 ```
 
-通过使用类型化异常，你（或其他人）可以按上一部分所述的类型捕获异常。
+通过使用类型化异常，你（或其他人）可以按上一部分提到的类型捕获异常。
 
 #### <a name="write-error--exception"></a>Write-Error -Exception
 
-我们可以将这些类型化异常添加到 `Write-Error` 中，我们仍然可以按异常类型对错误执行 `catch`。 使用 `Write-Error`，如以下示例所示：
+我们可以将这些类型化异常添加到 `Write-Error` 中，我们仍然可以按异常类型来 `catch` 错误。 使用 `Write-Error`，如以下示例所示：
 
 ```powershell
 # with normal message
@@ -363,7 +363,7 @@ Write-Error -Exception ([System.IO.FileNotFoundException]"Could not find path: $
 Write-Error -Message "Could not find path: $path" -Exception ( New-Object -TypeName System.IO.FileNotFoundException ) -ErrorAction Stop
 ```
 
-接下来，我们可以捕获它，如下所示：
+接下来，我们可以像这样捕获它：
 
 ```powershell
 catch [System.IO.FileNotFoundException]
@@ -372,17 +372,17 @@ catch [System.IO.FileNotFoundException]
 }
 ```
 
-#### <a name="the-big-list-of-net-exceptions"></a>.NET 异常的大列表
+#### <a name="the-big-list-of-net-exceptions"></a>.NET 异常大列表
 
-借助 [Reddit/r/PowerShell 社区][]提供的数百个 .NET 异常，我编译了一个主列表，作为对本文的补充。
+在 [Reddit/r/PowerShell 社区][]的帮助下，我编译了一个包含数百个 .NET 异常的总览表，作为对本文的补充。
 
-- [.NET 异常的大列表][]
+- [.NET 异常大列表][]
 
-首先，在列表中搜索是否有适合我的情况的异常。 应尝试在基本 `System` 命名空间中使用异常。
+我首先在列表中搜索那些感觉适合我当前情况的异常。 你应尝试在基本 `System` 命名空间中使用异常。
 
 ### <a name="exceptions-are-objects"></a>异常为对象
 
-如果你开始大量使用类型化异常，请记住它们是对象。 不同的异常具有不同的构造函数和属性。 如果我们在 [FileNotFoundException][] 文档中查找 `System.IO.FileNotFoundException`，可以知道我们可以传入消息和文件路径。
+当你开始大量使用类型化异常时，请记住它们是对象。 不同的异常具有不同的构造函数和属性。 如果查看 [FileNotFoundException][] 文档中的 `System.IO.FileNotFoundException`，我们就会知道可以传入消息和文件路径。
 
 ```powershell
 [System.IO.FileNotFoundException]::new("Could not find file", $path)
@@ -401,9 +401,9 @@ catch [System.IO.FileNotFoundException]
 
 ### <a name="re-throwing-an-exception"></a>重新引发异常
 
-如果要在 `catch` 块中执行的操作是对相同的异常执行 `throw`，则不会对其执行 `catch`。 在发生异常时，仅应对计划处理的异常执行 `catch` 或某些操作。
+如果在 `catch` 块中要做的只是 `throw` 同一个异常，那么就不要 `catch` 它。 在发生异常时，应仅对计划处理的异常执行 `catch` 或某些操作。
 
-有时，你需要对异常执行操作，但会重新引发异常，以便下游能够处理该异常。 我们可以在发现问题的位置附近编写消息或记录问题，但在堆栈的更上层处理问题。
+有时，你需要对异常执行操作，但要重新引发异常，以便下游能够处理该异常。 我们可以在发现问题的位置附近编写消息或记录问题，但在堆栈的更上层处理问题。
 
 ```powershell
 catch
@@ -413,7 +413,7 @@ catch
 }
 ```
 
-有趣的是，我们可以从 `catch` 中调用 `throw`，并重新引发当前异常。
+有趣的是，我们可以从 `catch` 内调用 `throw`，它会重新引发当前异常。
 
 ```powershell
 catch
@@ -427,7 +427,7 @@ catch
 
 #### <a name="re-throwing-a-new-exception"></a>重新引发新异常
 
-如果捕获到一个异常，但想要引发另一个异常，则应将原始异常嵌套在新异常中。 这样一来，堆栈下游的人就可以将其作为 `$PSItem.Exception.InnerException` 进行访问。
+如果捕获到一个异常，但想要引发另一个异常，则应将原始异常嵌套在新异常内。 这样一来，堆栈下游的人就可以将其作为 `$PSItem.Exception.InnerException` 进行访问。
 
 ```powershell
 catch
@@ -449,9 +449,10 @@ At line:31 char:9
     + FullyQualifiedErrorId : Unable to find the specified file.
 ```
 
-让错误消息指出我的脚本已中断，因为我在第 31 行调用了 `throw`，这对于你的脚本用户来说是一个坏消息。 它没有告诉他们任何有用的内容。
 
-Dexter Dhami 指出，我可以使用 `ThrowTerminatingError()` 来更正此问题。
+让错误消息告诉我脚本已损坏，因为我在第 31 行调用了 `throw`，这对于你的脚本用户来说是一个坏消息。 它没有提供任何有用的内容。
+
+Dexter Dhami 指出，我可以使用 `ThrowTerminatingError()` 来纠正此问题。
 
 ```powershell
 $PSCmdlet.ThrowTerminatingError(
@@ -464,7 +465,7 @@ $PSCmdlet.ThrowTerminatingError(
 )
 ```
 
-如果假定在名为 `Get-Resource` 的函数中调用了 `ThrowTerminatingError()`，则以下将是我们看到的错误。
+如果假定在名为 `Get-Resource` 的函数中调用了 `ThrowTerminatingError()`，那么以下就是我们将会看到的错误。
 
 ```Output
 Get-Resource : Could not find C:\Program Files (x86)\Reference
@@ -476,9 +477,9 @@ At line:6 char:5
     + FullyQualifiedErrorId : My.ID,Get-Resource
 ```
 
-你是否明白了它如何指向作为问题来源的 `Get-Resource` 函数？ 这会告诉用户一些有用的内容。
+你是否明白它如何指向 `Get-Resource` 函数作为问题来源？ 这会告诉用户一些有用的信息。
 
-由于 `$PSItem` 是 `ErrorRecord`，因此还可以使用 `ThrowTerminatingError` 这种方式重新引发。
+由于 `$PSItem` 是 `ErrorRecord`，因此还可以使用 `ThrowTerminatingError` 以这种方式重新引发。
 
 ```powershell
 catch
@@ -491,24 +492,24 @@ catch
 
 ## <a name="try-can-create-terminating-errors"></a>Try 可能会创建终止错误
 
-Kirk Munro 指出，在 `try/catch` 块内执行时，某些异常仅为终止错误。 下面是他为我提供的一个示例，其中生成了一个除以零的运行时异常。
+Kirk Munro 指出，某些异常仅在 `try/catch` 块内执行时为终止错误。 下面是他为我提供的一个示例，其中生成了一个除以零的运行时异常。
 
 ```powershell
-function Start-Something { 1/(1-1) }
+function Do-Something { 1/(1-1) }
 ```
 
-然后像这样调用它，以查看它是否生成错误并仍然输出消息。
+然后像这样调用它，可以看到它生成错误并仍然输出消息。
 
 ```powershell
-&{ Start-Something; Write-Output "We did it. Send Email" }
+&{ Do-Something; Write-Output "We did it. Send Email" }
 ```
 
-但通过在 `try/catch` 中放置相同代码，我们可以看到一些别的结果。
+但通过在 `try/catch` 中放置相同代码，我们可以看到发生了一些别的情况。
 
 ```powershell
 try
 {
-    &{ Start-Something; Write-Output "We did it. Send Email" }
+    &{ Do-Something; Write-Output "We did it. Send Email" }
 }
 catch
 {
@@ -516,22 +517,23 @@ catch
 }
 ```
 
-我们看到错误变成终止错误，且未输出第一条消息。 我不喜欢此结果的原因是，你可以在函数中使用此代码，如果用户使用 `try/catch`，则其行为方式会不同。
 
-我自己尚未遇到这方面的问题，但这些是应注意的极端情况。
+我们看到错误变成终止错误，且没有输出第一条消息。 我不喜欢这个的原因是，你可以在函数中使用此代码，如果用户使用 `try/catch`，则其行为方式会不同。
+
+我自己尚未遇到这方面的问题，但这是需要注意的极端情况。
 
 ### <a name="pscmdletthrowterminatingerror-inside-trycatch"></a>$PSCmdlet.ThrowTerminatingError() inside try/catch
 
-`$PSCmdlet.ThrowTerminatingError()` 的一项细微差别在于它在 Cmdlet 中创建了一个终止错误，但它会在离开 Cmdlet 后变成非终止错误。 这就把决定如何处理错误的负担留给了函数调用者。 它们可以通过使用 `-ErrorAction Stop` 或从 `try{...}catch{...}` 中进行调用来将其转换回终止错误。
+`$PSCmdlet.ThrowTerminatingError()` 的一项细微差别在于，它在 Cmdlet 中创建了一个终止错误，但会在离开 Cmdlet 后变成非终止错误。 这就把决定如何处理错误的负担留给了函数调用者。 它们可以通过使用 `-ErrorAction Stop` 或从 `try{...}catch{...}` 中进行调用来将其转换回终止错误。
 
 ### <a name="public-function-templates"></a>公共函数模板
 
-我与 Kirk Munro 谈论的最后一个要点是，他在所有高级函数的每个 `begin`、`process` 和 `end` 块周围放置了 `try{...}catch{...}`。 在这些泛型 catch 块中，他使用 `$PSCmdlet.ThrowTerminatingError($PSItem)` 作为单个行来处理所有离开函数的异常。
+我与 Kirk Munro 谈论的最后一个要点是，他在所有高级函数的每个 `begin`、`process` 和 `end` 块周围放置了 `try{...}catch{...}`。 在这些通用 catch 块中，他使用 `$PSCmdlet.ThrowTerminatingError($PSitem)` 通过单行代码处理所有离开函数的异常。
 
 ```powershell
-function Start-Something
+function Do-Something
 {
-    [CmdletBinding()]
+    [cmdletbinding()]
     param()
 
     process
@@ -542,7 +544,7 @@ function Start-Something
         }
         catch
         {
-            $PSCmdlet.ThrowTerminatingError($PSItem)
+            $PSCmdlet.ThrowTerminatingError($PSitem)
         }
     }
 }
@@ -554,7 +556,7 @@ function Start-Something
 
 我将重点放在了异常的 `try/catch` 方面。 但在结束之前，我需要提到一项旧功能。
 
-将 `trap` 放置在脚本或函数中，以捕获在该作用域内发生的所有异常。 发生异常时，将执行 `trap` 中的代码，然后继续执行正常代码。 如果发生多个异常，则会反复调用 trap。
+将 `trap` 放置在脚本或函数中，可捕获在该作用域内发生的所有异常。 发生异常时，将执行 `trap` 中的代码，然后继续执行正常代码。 如果发生多个异常，则会反复调用 trap。
 
 ```powershell
 trap
@@ -567,21 +569,21 @@ throw [System.Exception]::new('second')
 throw [System.Exception]::new('third')
 ```
 
-我个人从未采用这种方法，但我会在管理或控制器脚本中看到用于记录任何和所有异常的值，然后仍继续执行。
+我个人从未用过这种方法，但我可以在记录任何和所有异常的管理员或控制器脚本中看到该值，然后仍继续执行。
 
-## <a name="closing-remarks"></a>关闭注释
+## <a name="closing-remarks"></a>结束语
 
-向脚本添加适当的异常处理不仅使其更稳定，还可以更轻松地对异常进行故障排除。
+向脚本添加适当的异常处理不仅使其更稳定，还可以让你更轻松地对异常进行故障排除。
 
-我花了很多时间来谈论 `throw`，因为这是讨论异常处理时的一个核心概念。 PowerShell 还向我们提供了 `Write-Error`，可处理要使用 `throw` 的所有情况。 请注意，在阅读本文后，不要认为你需要使用 `throw`。
+我花了很多时间来谈论 `throw`，因为这是异常处理的一个核心概念。 PowerShell 还向我们提供了 `Write-Error`，它可处理要使用 `throw` 的所有情况。 所以，在阅读本文后，不要认为你需要使用 `throw`。
 
-现在，我已经花了一些时间详述了异常处理，接下来将转换话题，探讨使用 `Write-Error -Stop` 在我的代码中生成错误。 我还将采纳 Kirk 的建议，将 `ThrowTerminatingError` 设为每个函数的 goto 异常处理程序。
+现在，我已经花了一些时间详述了异常处理，接下来将转换话题，探讨使用 `Write-Error -Stop` 在代码中生成错误。 我还将采纳 Kirk 的建议，将 `ThrowTerminatingError` 设为针对每个函数的必备异常处理程序。
 
 <!-- link references -->
 [powershellexplained.com]: https://powershellexplained.com/
 [原始版本]: https://powershellexplained.com/2017-04-10-Powershell-exceptions-everything-you-ever-wanted-to-know/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [Reddit/r/PowerShell 社区]: https://www.reddit.com/r/PowerShell/comments/64866o/kevmar_all_net_46_exceptions_list_for_use_with/
-[.NET 异常的大列表]: https://powershellexplained.com/2017-04-07-all-dotnet-exception-list
+[.NET 异常大列表]: https://powershellexplained.com/2017-04-07-all-dotnet-exception-list
 [FileNotFoundException]: https://docs.microsoft.com/dotnet/api/System.IO.FileNotFoundException
 [.NET 文档]: https://docs.microsoft.com/dotnet/api
