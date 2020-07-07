@@ -8,12 +8,11 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
 caps.latest.revision: 4
-ms.openlocfilehash: fbaea91c12eede70d30e29dce3fd2d36d7f55994
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
-ms.translationtype: MT
+ms.openlocfilehash: 30f7a52adaebac9373279b6edc4480277ba183e4
+ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564834"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86035427"
 ---
 # <a name="examples-of-comment-based-help"></a>基于注释的帮助的示例
 
@@ -185,7 +184,7 @@ param ([string]$InputPath, [string]$OutPutPath)
 function Get-Data { }
 ```
 
-以下命令获取脚本帮助。 由于脚本不是 Path 环境变量中列出的目录，因此获取脚本帮助的 Get-help 命令必须指定脚本路径。
+以下命令获取脚本帮助。 由于脚本不在 Path 环境变量中列出的目录中，因此获取脚本帮助的 Get-help 命令必须指定脚本路径。
 
 ```powershell
 C:\PS> get-help c:\ps-test\update-month.ps1 -full
@@ -257,7 +256,7 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
 
 ## <a name="example-3-parameter-descriptions-in-a-param-statement"></a>示例3： Param 语句中的参数说明
 
-此示例演示如何在 `Param` 函数或脚本的语句中插入 parameterdescriptions。 当参数说明简短时，此格式最为有用。
+此示例演示如何在函数或脚本的语句中插入参数说明 `Param` 。 当参数说明简短时，此格式最为有用。
 
 ```powershell
 function Add-Extension
@@ -286,7 +285,7 @@ function Add-Extension
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>示例4：重定向到 XML 文件
 
-您可以为函数和脚本编写基于 XML 的帮助主题。 尽管基于注释的帮助更容易实现，但如果您希望更精确地控制帮助内容或者将帮助主题转换为多种语言，则需要基于 XML 的帮助。下面的示例演示 Update-Month 脚本的前几行。 脚本使用关键字为 `.ExternalHelp` 脚本指定基于 XML 的帮助主题的路径。
+您可以为函数和脚本编写基于 XML 的帮助主题。 尽管基于注释的帮助更容易实现，但如果您希望更精确地控制帮助内容或者将帮助主题转换为多种语言，则需要基于 XML 的帮助。下面的示例演示 Update-Month.ps1 脚本的前几行。 脚本使用关键字为 `.ExternalHelp` 脚本指定基于 XML 的帮助主题的路径。
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
