@@ -1,23 +1,16 @@
 ---
-title: 编写 Windows PowerShell 帮助 |Microsoft Docs
-ms.custom: ''
+title: 编写 Windows PowerShell 帮助
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 20cbf009-9633-476e-b0b3-5604117ef2dd
-caps.latest.revision: 4
-ms.openlocfilehash: adde7c205f26c9bb87307f7eaa56988cefccdeaf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8807fe48c6354022900738de0b912c55dec9febb
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367666"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86892891"
 ---
 # <a name="writing-windows-powershell-help"></a>编写 Windows PowerShell 帮助
 
-此文档是为编写 Windows PowerShell cmdlet、提供程序的帮助内容的任何人员编写的，以及有关可以使用 `Get-Help` cmdlet 在命令行上查看的主题的概念。
+本文档是为编写 PowerShell cmdlet、提供程序的帮助内容的任何人员编写的，以及有关可以使用 cmdlet 在命令行上查看的主题的概念 `Get-Help` 。
 
 ## <a name="cmdlet-help"></a>Cmdlet 帮助
 

@@ -1,33 +1,28 @@
 ---
-title: 如何向 Cmdlet 帮助主题添加返回值 |Microsoft Docs
-ms.custom: ''
+title: 如何向 Cmdlet 帮助主题添加返回值
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a52ab737-753c-4d04-8af7-758d5c805e18
-caps.latest.revision: 7
-ms.openlocfilehash: a5618b72827d8ef70201437c4a99ea8bf68cdfd3
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: c164556cd06b332d04857987360c98f740a150b5
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565537"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893350"
 ---
 # <a name="how-to-add-return-values-to-a-cmdlet-help-topic"></a>如何向 Cmdlet 帮助主题添加返回值
 
-本部分介绍如何将输出部分添加到 Windows PowerShell® cmdlet 帮助主题。 "输出" 部分列出了 cmdlet 返回或沿管道向下传递的对象的 .NET 类。
+本部分介绍如何将输出部分添加到 PowerShell cmdlet 帮助主题。 "**输出**" 部分列出了 cmdlet 返回或沿管道向下传递的对象的 .net 类。
 
-可以添加到 "输出" 部分的类的数量没有限制。 Cmdlet 的返回类型包含在 \< 命令中： returnValues> node，其中每个类都包含在命令中 \< ： returnValue> 元素。
+可以添加到 "**输出**" 部分的类的数量没有限制。 Cmdlet 的返回类型包含在一个 `<command:returnValues>` 节点中，其中每个类都包含在一个 `<command:returnValue>` 元素中。
 
-如果 cmdlet 未生成任何输出，请使用此部分来指示没有输出。 例如，若要替代类名称，请编写 "None" 并提供简短说明。 如果 cmdlet 按条件生成输出，请使用此节点解释条件并描述条件输出。
+如果 cmdlet 未生成任何输出，请使用此部分来指示没有输出。 例如，若要替代类名称，请写入 "**无**" 并提供简短说明。 如果 cmdlet 按条件生成输出，请使用此节点解释条件并描述条件输出。
 
-此架构包括两个 \< maml： description> 每个命令中的元素 \< ： returnValue> 元素。 但是，该 `Get-Help` cmdlet 只显示命令的内容 \< ： returnValue>/ \< maml： description> 元素。
+架构包括 `<maml:description>` 每个元素中的两个元素 `<command:returnValue>` 。
+但是，该 `Get-Help` cmdlet 只显示元素的内容 `<command:returnValue>/<maml:description>` 。
 
-从 Windows PowerShell 3.0 开始， `Get-Help` cmdlet 将显示 \< maml： uri> 元素的内容。 此元素使用户能够将用户定向到描述 .NET 类的主题。
+从 PowerShell 3.0 开始， `Get-Help` cmdlet 显示元素的内容 `<maml:uri>` 。
+此元素使用户能够将用户定向到描述 .NET 类的主题。
 
-以下 XML 显示了 \< maml： returnValues> 节点。
+下面的 XML 显示了 `<maml:returnValues>` 节点。
 
 ```xml
 <command:returnValues>
@@ -45,7 +40,7 @@ ms.locfileid: "83565537"
 </command: returnValues>
 ```
 
-下面的 XML 演示使用 \< maml： returnValues> 节点记录输出类型的示例。
+下面的 XML 演示使用 `<maml:returnValues>` 节点记录输出类型的示例。
 
 ```xml
 <command:returnValues>

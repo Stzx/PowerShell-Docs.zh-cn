@@ -1,14 +1,12 @@
 ---
 title: 基于注释的帮助关键字
-ms.custom: ''
 ms.date: 06/09/2020
-ms.topic: article
-ms.openlocfilehash: 674d0f99800595cbbd64a80d0e0c5aed22f3b45c
-ms.sourcegitcommit: 4a283fe5419f47102e6c1de7060880a934842ee9
+ms.openlocfilehash: fb737c19d7b7f4d003af3ba36bb396bac52d94e7
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84671370"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893146"
 ---
 # <a name="comment-based-help-keywords"></a>基于注释的帮助关键字
 
@@ -82,7 +80,7 @@ Cmdlet 返回的对象的 .NET Framework 类型。 还可以包括返回对象�
 
 有效值是：
 
-- 别名
+- Alias
 - Cmdlet
 - HelpFile
 - 函数

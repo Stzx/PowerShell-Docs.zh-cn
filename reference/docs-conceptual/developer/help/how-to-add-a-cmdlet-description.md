@@ -1,26 +1,19 @@
 ---
-title: 如何添加 Cmdlet 说明 |Microsoft Docs
-ms.custom: ''
+title: 如何添加 Cmdlet 说明
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 47af9d57-bd63-4596-816a-0b717418476b
-caps.latest.revision: 10
-ms.openlocfilehash: a2e4c4d42566d5a52006924eab02295c37cf3159
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2b98c4cefc3a55eccfeb7eba5a290e7d93a6088b
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361276"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893231"
 ---
 # <a name="how-to-add-a-cmdlet-description"></a>如何添加 Cmdlet 说明
 
-本部分介绍如何添加在 cmdlet 帮助的 "描述" 部分中显示的内容。 在帮助文件中，此内容将添加到每个 cmdlet 的命令节点。
+本部分介绍如何添加在 cmdlet 帮助的 "**描述**" 部分中显示的内容。 在帮助文件中，此内容将添加到每个 cmdlet 的**命令**节点。
 
 > [!NOTE]
-> 若要获取帮助文件的完整视图，请打开位于 Windows PowerShell 安装目录中的 dll-Help 文件之一。 例如，dll-Help 文件包含多个 Windows PowerShell cmdlet 的内容，则不会。
+> 若要获取帮助文件的完整视图，请打开 `dll-Help.xml` 位于 PowerShell 安装目录中的文件之一。 例如，该 `Microsoft.PowerShell.Commands.Management.dll-Help.xml` 文件包含多个 PowerShell cmdlet 的内容。
 
 ### <a name="to-add-a-description"></a>添加说明
 
@@ -28,9 +21,9 @@ ms.locfileid: "72361276"
 
 - 若要查找 cmdlet 的所有功能，请查看参数列表。 描述 cmdlet 的主要功能，然后包含其他函数和功能。 例如，如果该 cmdlet 的主要功能是更改一个属性，但该 cmdlet 可以更改所有属性，例如，在详细说明中。 如果 cmdlet 参数允许用户以不同的方式请求信息，请对其进行说明。
 
-- 除了明显的使用之外，还包括有关用户可以使用 cmdlet 的方式的信息。 例如，可以使用 `Get-Host` cmdlet 检索的对象来更改 Windows PowerShell 命令窗口中的文本颜色。
+- 除了明显的使用之外，还包括有关用户可以使用 cmdlet 的方式的信息。 例如，你可以使用 `Get-Host` cmdlet 检索的对象来更改 Windows PowerShell 命令窗口中的文本颜色。
 
-  示例： "`Get-Acl` cmdlet 可获取表示文件或资源的安全描述符的对象。 安全描述符包含资源的访问控制列表 (ACL)。 ACL 指定用户和用户组访问资源所需的权限。
+  示例： "此 `Get-Acl` cmdlet 可获取表示文件或资源的安全描述符的对象。 安全描述符包含资源的访问控制列表 (ACL)。 ACL 指定用户和用户组访问资源所需的权限。
 
 - 详细描述应描述 cmdlet，但它不应描述 cmdlet 使用的概念。 在其他说明中放置概念定义。
 

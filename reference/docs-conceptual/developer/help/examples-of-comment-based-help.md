@@ -1,18 +1,12 @@
 ---
-title: 基于注释的帮助的示例 |Microsoft Docs
-ms.custom: ''
+title: 基于注释的帮助的示例
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
-caps.latest.revision: 4
-ms.openlocfilehash: 30f7a52adaebac9373279b6edc4480277ba183e4
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 3858fa7f15d71c505dacaf9679910d45ef4640e5
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86035427"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893486"
 ---
 # <a name="examples-of-comment-based-help"></a>基于注释的帮助的示例
 
@@ -70,13 +64,13 @@ function Add-Extension
 }
 ```
 
-以下输出显示了 Get-help 命令的结果，该命令显示添加扩展函数的帮助。
+以下输出显示了 `Get-Help` 用于显示函数帮助的命令的结果 `Add-Extension` 。
 
 ```powershell
 C:\PS> get-help add-extension -full
 ```
 
-```output
+```Output
         NAME
             Add-Extension
 
@@ -144,7 +138,7 @@ C:\PS> get-help add-extension -full
 
 以下示例函数包含基于注释的帮助。
 
-请注意结束 **#>** 语句和语句之间的空行 `Param` 。 在不包含语句的脚本中 `Param` ，"帮助" 主题中的最后一个注释和第一个函数声明之间必须至少有两个空行。 如果没有这些空白行，Get-help 会将帮助主题与函数（而不是脚本）相关联。
+请注意结束 **#>** 语句和语句之间的空行 `Param` 。 在不包含语句的脚本中 `Param` ，"帮助" 主题中的最后一个注释和第一个函数声明之间必须至少有两个空行。 如果没有这些空白行，请 `Get-Help` 将帮助主题与函数（而不是脚本）相关联。
 
 ```powershell
 <#
@@ -184,13 +178,13 @@ param ([string]$InputPath, [string]$OutPutPath)
 function Get-Data { }
 ```
 
-以下命令获取脚本帮助。 由于脚本不在 Path 环境变量中列出的目录中，因此获取脚本帮助的 Get-help 命令必须指定脚本路径。
+以下命令获取脚本帮助。 由于脚本不在 Path 环境变量中列出的目录中，因此 `Get-Help` 获取脚本帮助的命令必须指定脚本路径。
 
 ```powershell
 C:\PS> get-help c:\ps-test\update-month.ps1 -full
 ```
 
-```output
+```Output
             NAME
                 C:\ps-test\Update-Month.ps1
 
@@ -281,11 +275,11 @@ function Add-Extension
     #>
 ```
 
-结果与示例1的结果相同。 Get-help 解释参数说明，就好像它们带有 `.Parameter` 关键字一样。
+结果与示例1的结果相同。 `Get-Help`解释参数说明，就好像它们带有 `.Parameter` 关键字一样。
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>示例4：重定向到 XML 文件
 
-您可以为函数和脚本编写基于 XML 的帮助主题。 尽管基于注释的帮助更容易实现，但如果您希望更精确地控制帮助内容或者将帮助主题转换为多种语言，则需要基于 XML 的帮助。下面的示例演示 Update-Month.ps1 脚本的前几行。 脚本使用关键字为 `.ExternalHelp` 脚本指定基于 XML 的帮助主题的路径。
+您可以为函数和脚本编写基于 XML 的帮助主题。 尽管基于注释的帮助更容易实现，但如果您希望更精确地控制帮助内容或者将帮助主题转换为多种语言，则需要基于 XML 的帮助。下面的示例演示脚本的前几行 `Update-Month.ps1` 。 脚本使用关键字为 `.ExternalHelp` 脚本指定基于 XML 的帮助主题的路径。
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
@@ -310,7 +304,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>示例5：重定向到其他帮助主题
 
-下面的代码摘自 `Help` Windows PowerShell 中内置函数的开头部分，该函数一次显示一个屏幕帮助文本。 由于 Get-help cmdlet 的帮助主题描述了 Help 函数，因此 Help 函数使用 `.ForwardHelpTargetName` 和 `.ForwardHelpCategory` 关键字将用户重定向到 get-help Cmdlet 的帮助主题。
+下面的代码摘自 `Help` PowerShell 中内置函数的开头，该函数一次显示一个屏幕帮助文本。 由于 Get-help cmdlet 的帮助主题描述了 Help 函数，因此 Help 函数使用 `.ForwardHelpTargetName` 和 `.ForwardHelpCategory` 关键字将用户重定向到 get-help Cmdlet 的帮助主题。
 
 ```powershell
 function help
@@ -328,13 +322,13 @@ function help
     ...
 ```
 
-以下命令使用此功能。 当用户为 Help 函数键入 Get-help 命令时，Get-help 将显示 Get-help cmdlet 的帮助主题。
+以下命令使用此功能。 当用户键入该 `Get-Help` 函数的命令时 `Help` ，将 `Get-Help` 显示该 cmdlet 的帮助主题 `Get-Help` 。
 
 ```powershell
 C:\PS> get-help help
 ```
 
-```output
+```Output
             NAME
                 Get-Help
 

@@ -1,19 +1,12 @@
 ---
-title: 如何更新帮助文件 |Microsoft Docs
-ms.custom: ''
+title: 如何更新帮助文件
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 495869a6-080e-4401-9ddc-16edd2f86857
-caps.latest.revision: 6
-ms.openlocfilehash: 35b3fd696419d0135fd6f662223e6c8586df443a
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 80f7c8865729515de98648765fa36ce540e00162
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811646"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86892942"
 ---
 # <a name="how-to-update-help-files"></a>如何更新帮助文件
 
@@ -26,17 +19,10 @@ ms.locfileid: "83811646"
 更新帮助文件：
 
 1. 更改文件。
-
-2. 将文件转换为其他 UI 区域性。
-
-3. 收集每个 UI 区域性中的模块的所有帮助文件（新增、更改和未更改）。
-
-4. 对照 XML 架构验证文件。
-
-5. 重新生成每个 UI 区域性的 CAB 文件。
-
-6. 在 HelpInfo XML 文件中，为每个 UI 区域性递增 CAB 文件的版本号。
-
-7. 将新的 CAB 文件上传到 HelpInfo XML 文件中的**HelpContentUri**元素的值指定的位置。 将较旧的 CAB 文件替换为新的 CAB 文件。
-
-8. 将更新后的 HelpInfo XML 文件上传到模块清单中的**HelpInfoUri**键指定的位置。 用新文件替换旧的 HelpInfo XML 文件。
+1. 将文件转换为其他 UI 区域性。
+1. 收集每个 UI 区域性中的模块的所有帮助文件（新增、更改和未更改）。
+1. 对照 XML 架构验证文件。
+1. 重新生成每个 UI 区域性的 CAB 文件。
+1. 在 HelpInfo XML 文件中，为每个 UI 区域性递增 CAB 文件的版本号。
+1. 将新的 CAB 文件上传到 HelpInfo XML 文件中的**HelpContentUri**元素的值指定的位置。 将较旧的 CAB 文件替换为新的 CAB 文件。
+1. 将更新后的 HelpInfo XML 文件上传到模块清单中的**HelpInfoUri**键指定的位置。 用新文件替换旧的 HelpInfo XML 文件。

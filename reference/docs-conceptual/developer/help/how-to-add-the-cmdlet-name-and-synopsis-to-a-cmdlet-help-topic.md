@@ -1,32 +1,26 @@
 ---
-title: 如何将 Cmdlet 名称和摘要添加到 Cmdlet 帮助主题 |Microsoft Docs
-ms.custom: ''
+title: 如何向 Cmdlet 帮助主题添加 Cmdlet 名称和摘要
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1d0e1eb1-a962-4406-9625-175cfa3364ad
-caps.latest.revision: 10
-ms.openlocfilehash: 5b4c04a14c3d86c7a3b94b768e8fb59116d8c6f5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 399defcb596ff9e9a596f4cd25ebcb6bcb7c34d2
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560621"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86892874"
 ---
 # <a name="how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic"></a>如何向 Cmdlet 帮助主题添加 Cmdlet 名称和摘要
 
-本部分介绍如何添加在 cmdlet 帮助的 "名称" 和 "概要" 部分中显示的内容。 在帮助文件中，此内容将添加到每个 cmdlet 的命令节点。
+本部分介绍如何添加在 cmdlet 帮助的 "**名称**" 和 "**概要**" 部分中显示的内容。 在帮助文件中，此内容将添加到每个 cmdlet 的命令节点。
 
 > [!NOTE]
-> 若要获取帮助文件的完整视图，请打开位于 Windows PowerShell 安装目录中的 dll-Help 文件之一。 例如，dll-Help 文件包含多个 Windows PowerShell cmdlet 的内容，则不会。
+> 若要获取帮助文件的完整视图，请打开 `dll-Help.xml` 位于 PowerShell 安装目录中的文件之一。 例如，该 `Microsoft.PowerShell.Commands.Management.dll-Help.xml` 文件包含多个 PowerShell cmdlet 的内容。
 
-### <a name="to-add-the-cmdlet-name-and-a-synopsis"></a>添加 Cmdlet 名称和摘要
+## <a name="to-add-the-cmdlet-name-and-a-synopsis"></a>添加 Cmdlet 名称和摘要
 
-- Cmdlet 帮助可以为 cmdlet 显示两个描述。 第一个说明是称为 "摘要" 的简短说明。 第二个说明是在[将详细描述添加到 Cmdlet 帮助主题](./how-to-add-a-cmdlet-description.md)中所述的更详细说明。 这两个说明应作为一个段落来编写。
+- Cmdlet 帮助可以为 cmdlet 显示两个描述。 第一个说明是称为 "摘要" 的简短说明。 第二个说明是在[将详细描述添加到 Cmdlet 帮助主题](./how-to-add-a-cmdlet-description.md)中所述的更详细说明。
+  这两个说明应作为一个段落来编写。
 
-- 在 "摘要" 中，不重复 cmdlet 名称。 向用户通知获取服务器 cmdlet 获取服务器非常简短，但没有提示信息。 请改用同义词并向说明添加详细信息。
+- 在 "摘要" 中，不重复 cmdlet 名称。 通知用户 `Get-Server` cmdlet 获取服务器非常简短，但没有提示信息。 请改用同义词并向说明添加详细信息。
 
   示例： "获取表示本地或远程计算机的对象。"
 
@@ -40,4 +34,4 @@ ms.locfileid: "83560621"
 
 ## <a name="see-also"></a>另请参阅
 
- [Windows PowerShell SDK](../windows-powershell-reference.md)
+[Windows PowerShell SDK](../windows-powershell-reference.md)

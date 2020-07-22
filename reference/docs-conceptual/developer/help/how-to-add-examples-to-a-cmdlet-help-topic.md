@@ -1,19 +1,12 @@
 ---
-title: 如何向 Cmdlet 帮助主题添加示例 |Microsoft Docs
-ms.custom: ''
+title: 如何向 Cmdlet 帮助主题添加示例
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8f723b21-8f95-4981-8b6e-4f07c22d601a
-caps.latest.revision: 5
-ms.openlocfilehash: 82bee7b7bb0ef49203636f2a293075f3db924ce4
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 33a1726f9d52b5a368d5df7962cc17ba9c45246a
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557084"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893435"
 ---
 # <a name="how-to-add-examples-to-a-cmdlet-help-topic"></a>如何向 Cmdlet 帮助主题添加示例
 
@@ -21,7 +14,7 @@ ms.locfileid: "83557084"
 
 - 列出命令中的所有参数名称，即使参数名称是可选的。 这可帮助用户轻松解释命令。
 
-- 避免使用别名和部分参数名称，即使它们适用于 Windows PowerShell®。
+- 避免使用别名和部分参数名称，即使它们在 PowerShell 中使用也是如此。
 
 - 在示例说明中，说明了该命令的构造的有理数。 说明选择特定参数和值的原因，以及如何使用变量。
 
@@ -35,7 +28,7 @@ ms.locfileid: "83557084"
 
 ## <a name="adding-an-examples-node"></a>添加示例节点
 
-下面的 XML 演示如何添加一个示例节点，其中包含一个示例节点。 为要包含在主题中的每个示例添加其他示例节点。
+下面的 XML 演示如何**添加一个示例节点，** 其中包含一个**示例**节点。 为要包含在主题中的每个示例添加其他示例节点。
 
 ```xml
 <command:examples>
@@ -46,7 +39,7 @@ ms.locfileid: "83557084"
 
 ## <a name="adding-an-example-title"></a>添加示例标题
 
-下面的 XML 演示如何添加示例的标题。 标题用于设置除其他示例之外的示例。 Windows PowerShell®使用包含连续示例编号的标准标头。
+下面的 XML 演示如何添加示例的**标题**。 **标题**用于设置除其他示例之外的示例。 PowerShell 使用包含连续示例编号的标准标头。
 
 ```xml
 <command:examples>
@@ -58,7 +51,7 @@ ms.locfileid: "83557084"
 
 ## <a name="adding-preceding-characters"></a>添加前面的字符
 
-下面的 XML 演示如何添加字符，如 Windows PowerShell prompt，它们紧靠在示例命令之前（无需任何插入空格）。 Windows PowerShell®使用 Windows PowerShell 提示符： C:\PS>。
+下面的 XML 演示如何添加字符，如 Windows PowerShell prompt，它们紧靠在示例命令之前（无需任何插入空格）。 PowerShell 使用 Windows PowerShell 提示符： `C:\PS>` 。
 
 ```xml
 <command:examples>
@@ -89,7 +82,7 @@ ms.locfileid: "83557084"
 
 ## <a name="adding-a-description"></a>添加说明
 
-下面的 XML 演示如何添加示例的说明。 Windows PowerShell®使用一组 \< maml：> 标记作为说明，即使 \< 可以使用多个 maml：段落> 标记。
+下面的 XML 演示如何添加示例的说明。 PowerShell 使用一组 `<maml:para>` 标记作为说明，即使 `<maml:para>` 可以使用多个标记。
 
 ```xml
 <command:examples>
@@ -108,7 +101,8 @@ ms.locfileid: "83557084"
 
 ## <a name="adding-example-output"></a>添加示例输出
 
-下面的 XML 演示如何添加命令的输出。 命令结果信息是可选的，但在某些情况下，演示使用特定参数的效果会很有帮助。 Windows PowerShell®使用两组空白 \< maml：段落> 标记将命令输出与命令分离。
+下面的 XML 演示如何添加命令的输出。 命令结果信息是可选的，但在某些情况下，演示使用特定参数的效果会很有帮助。
+PowerShell 使用两组空白 `<maml:para>` 标记将命令输出与命令分离。
 
 ```xml
 <command:examples>
