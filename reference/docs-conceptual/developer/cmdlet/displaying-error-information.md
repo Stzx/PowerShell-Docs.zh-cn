@@ -1,19 +1,12 @@
 ---
 title: 显示错误信息 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 76fcc0c1-9795-45d3-a564-40f822b657b5
-caps.latest.revision: 8
-ms.openlocfilehash: 4bc8666ee9053eb368402c8644558f4fe2dcc9ee
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e542110e9c35a74c5d4c112b0a831f7f8ad9242e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369966"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774569"
 ---
 # <a name="displaying-error-information"></a>显示错误信息
 
@@ -26,7 +19,7 @@ $ stop-service lanmanworkstation
 You do not have sufficient permissions to stop the service Workstation.
 ```
 
-但是，用户可以通过将 `$ErrorView` 变量设置为 `"CategoryView"`来按类别查看错误。 类别视图显示来自错误记录的特定信息，而不是错误的自由文本说明。 如果要扫描的错误的列表很长，此视图会很有用。 在类别视图中，以前的错误消息显示如下。
+但是，用户可以通过将变量设置为来按类别查看错误 `$ErrorView` `"CategoryView"` 。 类别视图显示来自错误记录的特定信息，而不是错误的自由文本说明。 如果要扫描的错误的列表很长，此视图会很有用。 在类别视图中，以前的错误消息显示如下。
 
 ```powershell
 $ $ErrorView = "CategoryView"

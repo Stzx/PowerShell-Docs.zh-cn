@@ -1,19 +1,12 @@
 ---
 title: 后台作业 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
-caps.latest.revision: 13
-ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2a1297b8dfe087474564078cca2a5a0526ed0f36
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363556"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774841"
 ---
 # <a name="background-jobs"></a>后台作业
 
@@ -21,7 +14,7 @@ Cmdlet 可以在内部执行其操作，也可以用作 Windows PowerShell*后�
 
 ## <a name="background-jobs-child-jobs-and-the-job-repository"></a>后台作业、子作业和作业存储库
 
-支持后台作业的 cmdlet 返回的作业对象定义作业。 （ [Start-Job](/powershell/module/Microsoft.PowerShell.Core/Start-Job) cmdlet 还会返回一个作业对象。）此定义中包含作业的名称、用于指定作业的标识符、状态信息和子作业。 作业不执行任何工作。 每个后台作业至少有一个子作业，因为子作业执行实际工作。 当你运行 cmdlet 以便以后台作业的形式执行工作时，该 cmdlet 必须将作业和子作业添加到公共存储库（称为*作业存储库*）。
+支持后台作业的 cmdlet 返回的作业对象定义作业。  ([启动作业](/powershell/module/Microsoft.PowerShell.Core/Start-Job)cmdlet 还会返回一个作业对象。 ) 作业的名称、用于指定作业的标识符、状态信息以及子作业包含在此定义中。 作业不执行任何工作。 每个后台作业至少有一个子作业，因为子作业执行实际工作。 当你运行 cmdlet 以便以后台作业的形式执行工作时，该 cmdlet 必须将作业和子作业添加到公共存储库（称为*作业存储库*）。
 
 有关如何在命令行中处理后台作业的详细信息，请参阅以下内容：
 
@@ -35,11 +28,11 @@ Cmdlet 可以在内部执行其操作，也可以用作 Windows PowerShell*后�
 
 若要编写可作为后台作业运行的 cmdlet，必须完成以下任务：
 
-- 定义 `asJob` 开关参数，以便用户可以决定是否将 cmdlet 作为后台作业运行。
+- 定义 `asJob` 开关参数，使用户可以决定是否将该 cmdlet 作为后台作业运行。
 
 - 创建一个派生自[system.object](/dotnet/api/System.Management.Automation.Job)类的对象。 此对象可以是自定义作业对象，也可以是 Windows PowerShell 提供的作业对象，例如[Pseventjob](/dotnet/api/System.Management.Automation.PSEventJob)对象。
 
-- 在记录处理方法中，添加一个 `if` 语句来检测 cmdlet 是否应作为后台作业运行。
+- 在记录处理方法中，添加一个 `if` 语句来检测该 cmdlet 是否应作为后台作业运行。
 
 - 对于自定义作业对象，请实现 job 类。
 
@@ -51,7 +44,7 @@ Cmdlet 可以在内部执行其操作，也可以用作 Windows PowerShell*后�
 
 Windows PowerShell 提供以下 Api 来管理后台作业。
 
-[System.web](/dotnet/api/System.Management.Automation.Job)派生自定义作业对象。 这是一个 abstract 类。
+[System.web](/dotnet/api/System.Management.Automation.Job)派生自定义作业对象。 这是一个抽象类。
 
 [Jobrepository](/dotnet/api/System.Management.Automation.JobRepository)管理并提供有关当前活动的后台作业的信息。
 

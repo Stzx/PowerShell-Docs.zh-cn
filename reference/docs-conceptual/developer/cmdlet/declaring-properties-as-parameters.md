@@ -1,25 +1,18 @@
 ---
 title: 将属性声明为参数 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f71ea35d-cff5-4e44-a5c6-3a747ed4c4d9
-caps.latest.revision: 9
-ms.openlocfilehash: 6f6640afb15b3608669538f9b5f53d7a8a5c380d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 63113f541df534b1f720ceb06e14b5031f2311b2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365746"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774637"
 ---
 # <a name="declaring-properties-as-parameters"></a>将属性声明为参数
 
 本主题提供在声明 cmdlet 参数之前必须了解的基本信息。
 
-若要声明 cmdlet 类中 cmdlet 的参数，请定义表示每个参数的公共属性，然后将一个或多个参数特性添加到每个属性。 Windows PowerShell 运行时使用参数属性将属性标识为 cmdlet 参数。 声明参数属性的基本语法是 `[Parameter()]`。
+若要声明 cmdlet 类中 cmdlet 的参数，请定义表示每个参数的公共属性，然后将一个或多个参数特性添加到每个属性。 Windows PowerShell 运行时使用参数属性将属性标识为 cmdlet 参数。 用于声明参数特性的基本语法是 `[Parameter()]` 。
 
 下面是一个定义为所需参数的属性示例。
 
@@ -37,7 +30,7 @@ private string userName;
 
 - 参数必须显式标记为公共。 未标记为 "公共" 的参数默认为内部参数，将不会被 Windows PowerShell 运行时发现。
 
-- 应将参数定义为 Microsoft .NET 框架类型，以提供更好的参数验证。 例如，限制为一组值中的一个值的参数应定义为枚举类型。 采用统一资源标识符（URI）值的参数[的类型应为 system.string。](/dotnet/api/System.Uri)
+- 应将参数定义为 Microsoft .NET 框架类型，以提供更好的参数验证。 例如，限制为一组值中的一个值的参数应定义为枚举类型。 采用统一资源标识符 (URI) 值的参数应为[system.string 类型。](/dotnet/api/System.Uri)
 
 - 避免为所有自由格式的文本属性提供基本的字符串参数。
 

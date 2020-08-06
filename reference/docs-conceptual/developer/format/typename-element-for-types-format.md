@@ -1,25 +1,18 @@
 ---
-title: 类型的 TypeName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: " (Format) 类型的类型名称元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
-caps.latest.revision: 15
-ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 40fad73c66124d6c3b0d969b4268713a492c963a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368026"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772529"
 ---
 # <a name="typename-element-for-types-format"></a>TypeName Element for Types (Format)
 
 指定属于选择集的对象的 .NET 类型。
 
-配置元素（格式） SelectionSets 元素（格式） SelectionSet 元素（格式）类型元素（格式）类型的类型名称元素（格式）
+配置元素 (格式) SelectionSets 元素 (格式) SelectionSet 元素 (格式) 格式 (格式) 类型 () 格式的 TypeName 元素
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72368026"
 <TypeName>Nameof.NetType</Name>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `TypeName` 元素的属性、子元素和父元素。 选择集中必须包含至少一个 `TypeName` 元素。
+以下各节描述了元素的属性、子元素和父元素 `TypeName` 。 `TypeName`选择集中必须至少包含一个元素。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,7 +36,7 @@ ms.locfileid: "72368026"
 
 |元素|描述|
 |-------------|-----------------|
-|[Types 元素（格式）](./types-element-for-selectionset-format.md)|定义选择集中的 .NET 对象。|
+|[类型元素 (格式) ](./types-element-for-selectionset-format.md)|定义选择集中的 .NET 对象。|
 
 ## <a name="text-value"></a>文本值
 
@@ -53,11 +46,11 @@ ms.locfileid: "72368026"
 
 如果你有一组要通过使用单个名称引用的相关对象（例如通过继承相关的一组对象），则可以使用选择集。 定义视图时，可以使用选择集的名称（而不是列出每个视图中的所有对象）来指定对象集。
 
-常用选择集在定义格式设置文件的视图时由其名称指定。 在这些情况下，视图的 `ViewSelectedBy` 元素的 `SelectionSetName` 子元素将指定集。 但是，视图的不同项还可以指定仅适用于该视图项的选择集。 有关选择集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
+常用选择集在定义格式设置文件的视图时由其名称指定。 在这些情况下， `SelectionSetName` 视图的元素的子元素 `ViewSelectedBy` 指定了集。 但是，视图的不同项还可以指定仅适用于该视图项的选择集。 有关选择集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示一个定义四个 .NET 类型的 `SelectionSet` 元素。
+下面的示例演示 `SelectionSet` 定义四个 .net 类型的元素。
 
 ```
 <SelectionSets>
@@ -75,12 +68,12 @@ ms.locfileid: "72368026"
 
 ## <a name="see-also"></a>另请参阅
 
-[定义选择集](./defining-selection-sets.md)
+[定义选项集](./defining-selection-sets.md)
 
-[SelectionSet 元素（格式）](./selectionset-element-format.md)
+[SelectionSet Element (Format)](./selectionset-element-format.md)
 
-[SelectionSets 元素（格式）](./selectionsets-element-format.md)
+[SelectionSets Element (Format)](./selectionsets-element-format.md)
 
-[Types 元素（格式）](./types-element-for-selectionset-format.md)
+[类型元素 (格式) ](./types-element-for-selectionset-format.md)
 
 [编写 Windows PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

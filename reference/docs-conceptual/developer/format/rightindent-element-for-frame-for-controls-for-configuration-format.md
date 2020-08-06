@@ -1,25 +1,18 @@
 ---
-title: 用于配置的控件的框架的 RightIndent 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: " (格式) 的控件的框架的 RightIndent 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3a6cedcc-0437-4312-961e-0845cc249532
-caps.latest.revision: 8
-ms.openlocfilehash: 9d8779c90421145b40d7b6b537686caf1ccd2a09
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: edd299f4a39a8f2f55385b750b530de50ffff203
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362226"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772988"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-configuration-format"></a>RightIndent Element for Frame for Controls for Configuration (Format)
 
 指定数据从右边缘向外移动的字符数。 此元素在定义可供格式设置文件中的所有视图使用的公共控件时使用。
 
-Configuration 元素（格式）控制配置（format） CustomControl 元素的控件的配置（Format）控件元素的元素，以控制 CustomControl for configuration （Format） CustomEntries 元素的配置（Format） CustomEntry 元素 for CustomControl for CustomItem 元素 for CustomEntry 的控件的配置（Format）元素 for 的控件的配置框架元素的控件用于配置的控件（格式）
+配置元素 (格式) 控制配置 (格式的控件) 控件元素，用于控件的配置 (格式) CustomEntries 元素，用于 CustomControl 的 for configuration (格式) CustomEntry 元素对于 CustomControl for control for control (Format) CustomItem 元素 For CustomEntry For CustomItem For control for For control for For control for For control for For control for control (format 的控件，用于配置的控件 () 
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 <RightIndent>CharactersToShift</RightIndent>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍 `RightIndent` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `RightIndent` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于配置的控件的 CustomItem 的框架元素（格式）](./frame-element-for-customitem-for-controls-for-configuration-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
+|[Frame Element for CustomItem for Controls for Configuration (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 
 ## <a name="text-value"></a>文本值
 
@@ -53,6 +46,6 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 
 ## <a name="see-also"></a>另请参阅
 
-[用于配置的控件的 CustomItem 的框架元素（格式）](./frame-element-for-customitem-for-controls-for-configuration-format.md)
+[Frame Element for CustomItem for Controls for Configuration (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

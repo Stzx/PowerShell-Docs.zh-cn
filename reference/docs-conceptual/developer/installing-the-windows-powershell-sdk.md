@@ -1,13 +1,12 @@
 ---
 title: 安装 Windows PowerShell SDK
 ms.date: 03/30/2020
-ms.topic: article
-ms.openlocfilehash: b47dddaf167024d30a7a31596f96569f976109d7
-ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
+ms.openlocfilehash: 91cf57510bb7f44799cfdaf7cadcc7bcd505c977
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80394989"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771968"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>安装 Windows PowerShell SDK
 
@@ -26,7 +25,7 @@ Windows 7 和 Windows Server 2008 R2 将自动安装 PowerShell 2.0。 此外，
 
 ## <a name="installing-windows-powershell-20-sdk-for-windows-7-vista-xp-server-2003-and-server-2008"></a>安装用于 Windows 7、Vista、XP、Server 2003 和 Server 2008 的 Windows PowerShell 2.0 SDK
 
-Windows PowerShell 2.0 SDK 提供了用于编写 cmdlet、提供程序和托管应用程序所需的引用程序集，还提供了 C# 示例代码，开始编写代码时你可以使用此示例代码作为起点。 可以从[https://www.microsoft.com/download/details.aspx?id=2560](https://www.microsoft.com/download/details.aspx?id=2560)下载代码示例。
+Windows PowerShell 2.0 SDK 提供了用于编写 cmdlet、提供程序和托管应用程序所需的引用程序集，还提供了 C# 示例代码，开始编写代码时你可以使用此示例代码作为起点。 你可以从下载代码示例 [https://www.microsoft.com/download/details.aspx?id=2560](https://www.microsoft.com/download/details.aspx?id=2560) 。
 
 ### <a name="reference-assemblies"></a>引用程序集
 
@@ -50,7 +49,7 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`。 以下部分提供对�
 - GetProcessSample05-演示如何显示指定进程的列表。
 - SelectObject-演示如何编写筛选器以仅选择特定的对象。
 - SelectString-演示如何在文件中搜索指定的模式。
-- StopProcessSample01-演示如何实现 PassThru 参数，以及如何通过调用 ShouldProcess 和 ShouldContinue 方法请求用户反馈。 用户希望强制 cmdlet 返回对象时指定 PassThru 参数。
+- StopProcessSample01-演示如何实现 PassThru 参数，以及如何通过调用 ShouldProcess 和 ShouldContinue 方法请求用户反馈。 当用户要强制 cmdlet 返回对象时，应指定 PassThru 参数，
 - StopProcessSample02-演示如何停止特定进程。
 - StopProcessSample03-演示如何声明参数的别名以及如何支持通配符。
 - StopProcessSample04-演示如何声明参数集、cmdlet 作为输入的对象，以及如何指定要使用的默认参数集。
@@ -61,22 +60,22 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`。 以下部分提供对�
 - RemoteRunspacePool01-演示如何构建远程运行空间池，以及如何使用此池并发运行多个命令。
 - Serialization01-演示如何查看现有 .NET 类，并确保在序列化/反序列化时保留此类的选定公共属性中的信息。
 - Serialization02-演示如何查看现有 .NET 类，并确保在类的公共属性中不提供此类的实例中的信息时，在序列化/反序列化时保留该信息。
-- Serialization03-演示如何查看现有 .NET 类，并确保此类和派生类的实例反序列化（解除冻结）到实时 .NET 对象。
+- Serialization03-演示如何查看现有 .NET 类，并确保将此类和派生类的实例反序列化 (解除冻结) 到实时 .NET 对象。
 
 #### <a name="event-samples"></a>事件示例
 
 - Event01-演示如何通过从 ObjectEventRegistrationBase 派生来创建用于事件注册的 cmdlet。
-- Event02-演示如何接收在远程计算机上生成的 Windows PowerShell 事件的通知。 它使用通过运行空间类公开的 PSEventReceived 事件。
+- Event02-演示如何接收在远程计算机上生成的 Windows PowerShell 事件的通知。 它使用通过 Runspace 类公开的 PSEventReceived 事件。
 
 #### <a name="hosting-application-samples"></a>托管应用程序示例
 
-- Runspace01-演示如何使用 PowerShell 类同步运行 `Get-Process` cmdlet。
-  `Get-Process` cmdlet 返回在本地计算机上运行的每个进程的进程对象。
-- Runspace02-演示如何使用 PowerShell 类同步运行 `Get-Process` 和 `Sort-Object` cmdlet。 `Get-Process` cmdlet 返回在本地计算机上运行的每个进程的进程对象，而 `Sort-Object` 基于其 Id 属性对对象进行排序。 使用 DataGridView 控件显示这些命令的结果。
+- Runspace01-演示如何使用 PowerShell 类以同步方式运行 `Get-Process` cmdlet。
+  `Get-Process`Cmdlet 将返回在本地计算机上运行的每个进程的进程对象。
+- Runspace02-演示如何使用 PowerShell 类 `Get-Process` 同步运行和 `Sort-Object` cmdlet。 该 `Get-Process` cmdlet 将返回在本地计算机上运行的每个进程的进程对象，并根据 `Sort-Object` 对象的 Id 属性对对象进行排序。 使用 DataGridView 控件显示这些命令的结果。
 - Runspace03-演示如何使用 PowerShell 类同步运行脚本，以及如何处理非终止错误。 该脚本可接收一系列进程名称，然后检索这些进程。 脚本的结果（包括运行脚本时生成的非终止错误）显示在控制台窗口中。
 - Runspace04-演示如何使用 PowerShell 类来运行命令，以及如何捕获运行命令时引发的终止错误。 运行了两个命令，最后一个命令传递给了一个无效的参数。 因此，未返回对象并引发了终止错误。
-- Runspace05-演示如何将管理单元添加到 InitialSessionState 对象，以便打开运行空间时可以使用管理单元的 cmdlet。 管理单元提供了一个使用 PowerShell 对象同步运行的 GetProcessSample01 cmdlet （由 "" 示例定义）。
-- Runspace06-演示如何将模块添加到 InitialSessionState 对象，以便在打开运行空间时加载模块。 该模块提供了一个使用 PowerShell 对象同步运行的 GetProcessSample02 cmdlet （由 "" 示例定义）。
+- Runspace05-演示如何将管理单元添加到 InitialSessionState 对象，以便打开运行空间时可以使用管理单元的 cmdlet。 此管理单元提供了一个 (，它是由使用 PowerShell 对象同步运行的 GetProcessSample01 示例) 定义的。
+- Runspace06-演示如何将模块添加到 InitialSessionState 对象，以便在打开运行空间时加载模块。 该模块提供了 (使用 PowerShell 对象同步运行的 GetProcessSample02 示例) 定义的处理器 cmdlet。
 - Runspace07-演示如何创建运行空间，并使用该运行空间以同步使用 PowerShell 对象运行两个 cmdlet。
 - Runspace08-演示如何将命令和参数添加到 PowerShell 对象的管道，以及如何同步运行命令。
 - Runspace09-演示如何将脚本添加到 PowerShell 对象的管道，以及如何以异步方式运行脚本。 使用事件处理脚本的输出。
@@ -87,23 +86,23 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`。 以下部分提供对�
 
 #### <a name="host-samples"></a>主机示例
 
-- Host01-演示如何实现使用自定义主机的主机应用程序。 在此示例中，创建了一个使用自定义主机的运行空间，然后使用 PowerShell API 来运行调用 `exit`的脚本。 主机应用程序随后查看脚本输出并打印出结果。
-- Host02-演示如何编写使用 Windows PowerShell 运行时以及自定义主机实现的主机应用程序。 主机应用程序将主机区域性设置为德语，运行 `Get-Process` cmdlet，并显示使用 pwrsh 时显示的结果，然后输出德语的当前数据和时间。
+- Host01-演示如何实现使用自定义主机的主机应用程序。 在此示例中，创建了一个使用自定义主机的运行空间，然后使用 PowerShell API 来运行调用的脚本 `exit` 。 主机应用程序随后查看脚本输出并打印出结果。
+- Host02-演示如何编写使用 Windows PowerShell 运行时以及自定义主机实现的主机应用程序。 主机应用程序将主机区域性设置为德语，运行 `Get-Process` cmdlet，并按使用 pwrsh.exe 显示结果，然后输出德语中的当前数据和时间。
 - Host03-演示如何生成基于控制台的交互式主机应用程序，该应用程序可从命令行读取命令，执行命令，然后将结果显示到控制台。
 - Host04-演示如何生成基于控制台的交互式主机应用程序，该应用程序可从命令行读取命令，执行命令，然后将结果显示到控制台。 此主机应用程序还支持显示允许用户指定多个选项的提示。
-- Host05-演示如何生成基于控制台的交互式主机应用程序，该应用程序可从命令行读取命令，执行命令，然后将结果显示到控制台。 此主机应用程序还支持通过使用 `Enter-PsSession` 和 `Exit-PsSession` cmdlet 来调用远程计算机。
+- Host05-演示如何生成基于控制台的交互式主机应用程序，该应用程序可从命令行读取命令，执行命令，然后将结果显示到控制台。 此主机应用程序还支持通过使用和 cmdlet 调用远程 `Enter-PsSession` 计算机 `Exit-PsSession` 。
 - Host06-演示如何生成基于控制台的交互式主机应用程序，该应用程序可从命令行读取命令，执行命令，然后将结果显示到控制台。 此外，此示例还使用了 Tokenizer API 来指定用户输入的文本颜色。
 
 #### <a name="provider-samples"></a>提供程序示例
 
 - AccessDBProviderSample01-演示如何声明直接从 CmdletProvider 类派生的提供程序类。 仅出于完整性考虑而在此处包含此项。
 
-- AccessDBProviderSample02-演示如何覆盖 NewDrive 和 RemoveDrive 方法，以支持对 `New-PSDrive` 和 `Remove-PSDrive` cmdlet 的调用。 此示例中的提供程序类派生自 DriveCmdletProvider 类。
+- AccessDBProviderSample02-演示如何覆盖 NewDrive 和 RemoveDrive 方法，以支持调用 `New-PSDrive` 和 `Remove-PSDrive` cmdlet。 此示例中的提供程序类派生自 DriveCmdletProvider 类。
 
-- AccessDBProviderSample03-演示如何覆盖 GetItem 和 SetItem 方法，以支持对 `Get-Item` 和 `Set-Item` cmdlet 的调用。 此示例中的提供程序类派生自 ItemCmdletProvider 类。
+- AccessDBProviderSample03-演示如何覆盖 GetItem 和 SetItem 方法，以支持调用 `Get-Item` 和 `Set-Item` cmdlet。 此示例中的提供程序类派生自 ItemCmdletProvider 类。
 
-- AccessDBProviderSample04-演示如何覆盖容器方法以支持对 `Copy-Item`、`Get-ChildItem`、`New-Item`和 `Remove-Item` cmdlet 的调用。 当数据存储区包含属于容器的项时，应实现这些方法。 容器是包含公用父项下的子项的组。 此示例中的提供程序类派生自 ItemCmdletProvider 类。
+- AccessDBProviderSample04-演示如何覆盖容器方法以支持对 `Copy-Item` 、 `Get-ChildItem` 、 `New-Item` 和 cmdlet 的调用 `Remove-Item` 。 当数据存储区包含属于容器的项时，应实现这些方法。 容器是包含公用父项下的子项的组。 此示例中的提供程序类派生自 ItemCmdletProvider 类。
 
-- AccessDBProviderSample05-演示如何覆盖容器方法以支持对 `Move-Item` 和 `Join-Path` cmdlet 的调用。 当用户需要移动容器中的项时，如果数据存储区包含嵌套的容器，则应实现这些方法。 此示例中的提供程序类派生自 NavigationCmdletProvider 类。
+- AccessDBProviderSample05-演示如何覆盖容器方法以支持调用 `Move-Item` 和 `Join-Path` cmdlet。 当用户需要移动容器中的项时，如果数据存储区包含嵌套的容器，则应实现这些方法。 此示例中的提供程序类派生自 NavigationCmdletProvider。
 
-- AccessDBProviderSample06-演示如何覆盖内容方法以支持对 `Clear-Content`、`Get-Content`和 `Set-Content` cmdlet 的调用。 当用户需要管理数据存储区中的项的内容时，应实现这些方法。 此示例中的提供程序类派生自 NavigationCmdletProvider 类，并实现 IContentCmdletProvider 接口。
+- AccessDBProviderSample06-演示如何覆盖内容方法以支持对 `Clear-Content` 、 `Get-Content` 和 cmdlet 的调用 `Set-Content` 。 当用户需要管理数据存储区中的项的内容时，应实现这些方法。 此示例中的提供程序派生自 NavigationCmdletProvider 类，并实现 IContentCmdletProvider 接口。

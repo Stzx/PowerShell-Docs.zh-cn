@@ -1,25 +1,18 @@
 ---
-title: 用于视图（格式）的 CustomItem 的 ExpressionBinding 元素 |Microsoft Docs
-ms.custom: ''
+title: View (Format) 的控件的 CustomItem 的 ExpressionBinding 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2b9da6c5-548b-480f-86ae-6de6fecabaca
-caps.latest.revision: 8
-ms.openlocfilehash: 06089730008839f18c471711a4b4411722f99c38
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6760bf17be58411948ecb3437bf18bce40073954
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363776"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773804"
 ---
 # <a name="expressionbinding-element-for-customitem-for-controls-for-view-format"></a>ExpressionBinding Element for CustomItem for Controls for View (Format)
 
 定义控件显示的数据。 定义可由视图使用的控件时，将使用此元素。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） Controls 元素（format） Control 元素 for View （format） CustomControl 元素的控件元素，用于控件的 View （format） CustomEntries 元素CustomControl for view （Format） CustomEntry 元素 for CustomEntries for view （format） CustomItem 元素 for CustomEntry for view （format）元素 for ExpressionBinding for view （format）的控件
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) 控件元素 (格式) 用于控件的控件 (控件元素) CustomEntries 元素对于视图 (格式的 CustomControl for view (format) CustomEntry 元素 For CustomEntries For view format 的控件的 CustomItem 元素 (CustomEntry for view) 格式的控件 (ExpressionBinding 元素) ) 
 
 ## <a name="syntax"></a>语法
 
@@ -34,45 +27,45 @@ ms.locfileid: "72363776"
 </ExpressionBinding>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `ExpressionBinding` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `ExpressionBinding` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |`CustomControl Element`|可选元素。<br /><br /> 定义此控件使用的控件。|
-|[用于视图的控件的 ExpressionBinding 的 CustomControlName 元素（格式）](./customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定公共控件或视图控件的名称。|
-|[用于视图的控件的 ExpressionBinding 的 EnumerateCollection 元素（格式）](./enumeratecollection-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定显示集合的元素。|
-|[用于视图的控件的 ExpressionBinding 的 ItemSelectionCondition 元素（格式）](./itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 定义要使用此控件必须存在的条件。|
-|[View 的 ExpressionBinding for Controls 的 PropertyName 元素（Format）](./propertyname-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定其值由控件显示的 .NET 属性。|
-|[用于视图的控件的 ExpressionBinding 的 ScriptBlock 元素（格式）](./scriptblock-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定其值由控件显示的脚本。|
+|[CustomControlName Element for ExpressionBinding for Controls for View (Format)](./customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定公共控件或视图控件的名称。|
+|[EnumerateCollection Element for ExpressionBinding for Controls for View (Format)](./enumeratecollection-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定显示集合的元素。|
+|[View (格式的控件的 ExpressionBinding 的 ItemSelectionCondition 元素) ](./itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 定义要使用此控件必须存在的条件。|
+|[PropertyName Element for ExpressionBinding for Controls for View (Format)](./propertyname-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定其值由控件显示的 .NET 属性。|
+|[ScriptBlock Element for ExpressionBinding for Controls for View (Format)](./scriptblock-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定其值由控件显示的脚本。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于视图的控件的 CustomEntry 的 CustomItem 元素（格式）](./customitem-element-for-customentry-for-controls-for-view-format.md)|定义控件显示的数据及其显示方式。|
+|[CustomItem Element for CustomEntry for Controls for View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)|定义控件显示的数据及其显示方式。|
 
 ## <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>另请参阅
 
-[用于视图的控件的 CustomEntry 的 CustomItem 元素（格式）](./customitem-element-for-customentry-for-controls-for-view-format.md)
+[CustomItem Element for CustomEntry for Controls for View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)
 
-[用于视图的控件的 ExpressionBinding 的 CustomControlName 元素（格式）](./customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md)
+[CustomControlName Element for ExpressionBinding for Controls for View (Format)](./customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md)
 
-[用于视图的控件的 ExpressionBinding 的 EnumerateCollection 元素（格式）](./enumeratecollection-element-for-expressionbinding-for-controls-for-view-format.md)
+[EnumerateCollection Element for ExpressionBinding for Controls for View (Format)](./enumeratecollection-element-for-expressionbinding-for-controls-for-view-format.md)
 
-[用于视图的控件的 ExpressionBinding 的 ItemSelectionCondition 元素（格式）](./itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format.md)
+[View (格式的控件的 ExpressionBinding 的 ItemSelectionCondition 元素) ](./itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format.md)
 
-[View 的 ExpressionBinding for Controls 的 PropertyName 元素（Format）](./propertyname-element-for-expressionbinding-for-controls-for-view-format.md)
+[PropertyName Element for ExpressionBinding for Controls for View (Format)](./propertyname-element-for-expressionbinding-for-controls-for-view-format.md)
 
-[用于视图的控件的 ExpressionBinding 的 ScriptBlock 元素（格式）](./scriptblock-element-for-expressionbinding-for-controls-for-view-format.md)
+[ScriptBlock Element for ExpressionBinding for Controls for View (Format)](./scriptblock-element-for-expressionbinding-for-controls-for-view-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

@@ -1,25 +1,18 @@
 ---
-title: 用于配置（格式）的控件的 SelectionCondition 的 PropertyName 元素 |Microsoft Docs
-ms.custom: ''
+title: 配置 (格式的控件的 SelectionCondition 的 PropertyName 元素) |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ec048408-e1c6-41ef-b39b-72f4c2dcf2ac
-caps.latest.revision: 6
-ms.openlocfilehash: b4b2440fdb7171d09fdc16ac7cc4f25ed1a4bb78
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7730951a840fcfcd8bf819fff5182049bd6b6c23
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362396"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773124"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-controls-for-configuration-format"></a>PropertyName Element for SelectionCondition for Controls for Configuration (Format)
 
-指定触发条件的 .NET 属性。 如果该属性存在或其计算结果为 `true`，则满足条件，并使用该条目。 此元素在定义可供格式设置文件中的所有视图使用的公共控件时使用。
+指定触发条件的 .NET 属性。 如果该属性存在或其计算结果为 `true` ，则满足条件，并使用该条目。 此元素在定义可供格式设置文件中的所有视图使用的公共控件时使用。
 
-Configuration 元素（格式）控制配置（format） CustomControl 元素的控件的配置（Format）控件元素的元素，以控制 CustomControl for configuration （Format） CustomEntries 元素的配置（Format） CustomEntry 的 CustomControl 的元素，用于配置（Format） EntrySelectedBy 元素 for CustomEntry 的控件（format）元素 for for SelectionCondition for EntrySelectedBy 的控件（Format）用于 ListEntry 的 SelectionCondition for EntrySelectedBy 的 PropertyName 元素（Format）
+配置元素 (格式) 控制配置的元素 (格式) 控件的控件元素对于配置 (格式) 用于控件的 CustomControl 控件元素 (CustomEntries 元素的的 CustomEntry 元素 CustomControl For Control for control (format) EntrySelectedBy 元素 For CustomEntry for EntrySelectedBy for CustomEntry 的 SelectionCondition 元素 For SelectionCondition for EntrySelectedBy for ListEntry for (format) )  (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `PropertyName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `PropertyName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于配置的控件的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)|定义要使用的公共控件定义必须存在的条件。|
+|[SelectionCondition Element for EntrySelectedBy for Controls for Configuration (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)|定义要使用的公共控件定义必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -55,6 +48,6 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 
 ## <a name="see-also"></a>另请参阅
 
-[用于配置的控件的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)
+[SelectionCondition Element for EntrySelectedBy for Controls for Configuration (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

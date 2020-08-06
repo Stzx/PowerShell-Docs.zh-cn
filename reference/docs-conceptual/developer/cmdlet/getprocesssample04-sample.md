@@ -1,31 +1,24 @@
 ---
 title: GetProcessSample04 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: aa2aa4c4-3457-4601-806a-801afe3dcc80
-caps.latest.revision: 6
-ms.openlocfilehash: 095bebf868efd00f8eeaec979a5606f140714cb1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4858c44302f7315625be02dd0dc1d335b9c3f158
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365706"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774416"
 ---
 # <a name="getprocesssample04-sample"></a>GetProcessSample04 示例
 
-此示例演示如何实现一个用于检索本地计算机上的进程的 cmdlet。 如果在检索过程中发生错误，则会生成非终止错误。 此 cmdlet 是 Windows PowerShell 2.0 提供的 `Get-Process` cmdlet 的简化版本。
+此示例演示如何实现一个用于检索本地计算机上的进程的 cmdlet。 如果在检索过程中发生错误，则会生成非终止错误。 此 cmdlet 是 `Get-Process` Windows PowerShell 2.0 提供的简化版本的 cmdlet。
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>如何使用 Visual Studio 生成示例。
 
-1. 安装 Windows PowerShell 2.0 SDK 后，导航到 GetProcessSample04 文件夹。 默认位置为 C:\Program Files （x86） \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample04。
+1. 安装 Windows PowerShell 2.0 SDK 后，导航到 GetProcessSample04 文件夹。 默认位置为 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample04。
 
-2. 双击解决方案（.sln）文件的图标。 这会在 Visual Studio 中打开示例项目。
+2. 双击解决方案的图标 ( .sln) 文件。 这会在 Visual Studio 中打开示例项目。
 
-3. 在“生成”菜单中选择“生成解决方案”。
+3. 在“生成”菜单中选择“生成解决方案” 。
 
     示例库将在默认的 \bin 或 \bin\debug 文件夹中生成。
 
@@ -51,7 +44,7 @@ ms.locfileid: "72365706"
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此示例演示以下各项。
 

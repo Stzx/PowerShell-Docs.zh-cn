@@ -1,25 +1,18 @@
 ---
-title: EnumerableExpansion 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: " (格式) 的 EnumerableExpansion 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 93d27173-9ae4-46e5-bb78-90525915cd70
-caps.latest.revision: 9
-ms.openlocfilehash: bc1e58c00ca8419f9204076f0a46050281e704db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 81a8959c19502a2e56f4cfa48a1e480509d84b6e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368746"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774042"
 ---
 # <a name="enumerableexpansion-element-format"></a>EnumerableExpansion Element (Format)
 
 定义特定 .NET 集合对象在视图中显示的方式。
 
-配置元素（格式） DefaultSettings 元素（格式） EnumerableExpansions 元素（格式） EnumerableExpansion 元素（格式）
+配置元素 (格式) DefaultSettings 元素 (格式) EnumerableExpansions 元素 (格式) EnumerableExpansion 元素 (格式) 
 
 ## <a name="syntax"></a>语法
 
@@ -30,26 +23,26 @@ ms.locfileid: "72368746"
 </EnumerableExpansion>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `EnumerableExpansion` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `EnumerableExpansion` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[EnumerableExpansion 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-enumerableexpansion-format.md)|可选元素。<br /><br /> 定义通过此定义扩展哪些 .NET 集合对象。|
-|[Expand 元素（格式）](./expand-element-format.md)|指定为此定义扩展集合对象的方式。|
+|[EntrySelectedBy Element for EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)|可选元素。<br /><br /> 定义通过此定义扩展哪些 .NET 集合对象。|
+|[Expand Element (Format)](./expand-element-format.md)|指定为此定义扩展集合对象的方式。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[EnumerableExpansions 元素（格式）](./enumerableexpansions-element-format.md)|定义 .NET 集合对象在视图中显示时的扩展方式。|
+|[EnumerableExpansions Element (Format)](./enumerableexpansions-element-format.md)|定义 .NET 集合对象在视图中显示时的扩展方式。|
 
 ## <a name="remarks"></a>备注
 
@@ -59,4 +52,4 @@ ms.locfileid: "72368746"
 
 ## <a name="see-also"></a>另请参阅
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

@@ -1,25 +1,18 @@
 ---
-title: ViewSelectedBy 的 SelectionSetName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: ViewSelectedBy (Format) 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8ab0f033-df09-4435-a8bd-76ec2d01f13b
-caps.latest.revision: 13
-ms.openlocfilehash: d1de2b30860bac80bf17508f40eec33c2794c4b2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f6410b463bcb00d2758849c2f7e13cd839277e50
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368256"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772597"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>SelectionSetName Element for ViewSelectedBy (Format)
 
 指定视图显示的一组 .NET 对象。
 
-ViewSelectedBy 的 Configuration 元素（格式） ViewDefinitions 元素（格式） ViewSelectedBy 元素（format） SelectionSetName 元素（format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ViewSelectedBy 元素 (格式) SelectionSetName 元素 (格式) 
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ViewSelectedBy 的 Configuration 元素（格式） ViewDefinitions 元素（格
 <SelectionSetName>Name of selection set<SelectionSetName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `SelectionSetName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `SelectionSetName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,11 +36,11 @@ ViewSelectedBy 的 Configuration 元素（格式） ViewDefinitions 元素（格
 
 |元素|描述|
 |-------------|-----------------|
-|[ViewSelectedBy 元素（格式）](./viewselectedby-element-format.md)|定义视图显示的 .NET 对象。|
+|[ViewSelectedBy Element (Format)](./viewselectedby-element-format.md)|定义视图显示的 .NET 对象。|
 
 ## <a name="text-value"></a>文本值
 
-指定选择集的名称，该选择集由 `Name` 元素为选择集定义。
+为选择集指定由元素定义的选择集的名称 `Name` 。
 
 ## <a name="remarks"></a>备注
 
@@ -69,8 +62,8 @@ ViewSelectedBy 的 Configuration 元素（格式） ViewDefinitions 元素（格
 
 ## <a name="see-also"></a>另请参阅
 
-[定义选择集](./defining-selection-sets.md)
+[定义选项集](./defining-selection-sets.md)
 
-[ViewSelectedBy 元素（格式）](./viewselectedby-element-format.md)
+[ViewSelectedBy Element (Format)](./viewselectedby-element-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

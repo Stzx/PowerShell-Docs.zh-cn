@@ -1,25 +1,18 @@
 ---
-title: ViewDefinitions 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: " (格式) 的 ViewDefinitions 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 29840c10-2b30-4bb1-a8a0-ddf84d19c2d0
-caps.latest.revision: 18
-ms.openlocfilehash: c5ec80350c7707ccd41112ab5e1952e5dc198cca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a108c4f8b03e3dec3905181b390aee2c82ab0028
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361416"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772478"
 ---
 # <a name="viewdefinitions-element-format"></a>ViewDefinitions Element (Format)
 
 定义用于显示 .NET 对象的视图。 这些视图可以采用表格格式、列表格式、宽格式和自定义控件格式显示对象的属性和脚本值。
 
-Configuration 元素（Format） ViewDefinitions （Format XML）元素
+配置元素 (格式) ViewDefinitions (格式 XML) 元素
 
 ## <a name="syntax"></a>语法
 
@@ -30,25 +23,25 @@ Configuration 元素（Format） ViewDefinitions （Format XML）元素
 </ViewDefinitions>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍 `ViewDefinitions` 元素的属性、子元素和父元素。 对于可以在格式设置文件中定义的视图数量没有限制，可以按任意顺序添加它们。
+以下各节描述了元素的属性、子元素和父元素 `ViewDefinitions` 。 对于可以在格式设置文件中定义的视图数量没有限制，可以按任意顺序添加它们。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[View 元素（格式）](./view-element-format.md)|定义用于显示一个或多个 .NET 对象的视图。|
+|[View Element (Format)](./view-element-format.md)|定义用于显示一个或多个 .NET 对象的视图。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[配置元素（格式）](./configuration-element-format.md)|表示格式设置文件的顶级元素。|
+|[Configuration Element (Format)](./configuration-element-format.md)|表示格式设置文件的顶级元素。|
 
 ## <a name="remarks"></a>备注
 
@@ -81,9 +74,9 @@ Configuration 元素（Format） ViewDefinitions （Format XML）元素
 
 ## <a name="see-also"></a>另请参阅
 
-[配置元素（格式）](./configuration-element-format.md)
+[Configuration Element (Format)](./configuration-element-format.md)
 
-[View 元素（格式）](./view-element-format.md)
+[View Element (Format)](./view-element-format.md)
 
 [创建表视图](./creating-a-table-view.md)
 
@@ -93,4 +86,4 @@ Configuration 元素（Format） ViewDefinitions （Format XML）元素
 
 [自定义控件](./creating-custom-controls.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

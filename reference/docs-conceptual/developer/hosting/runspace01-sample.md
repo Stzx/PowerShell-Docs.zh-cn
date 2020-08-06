@@ -1,19 +1,12 @@
 ---
 title: Runspace01 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 42c1c59c-6da5-4cda-9562-e8059177fee1
-caps.latest.revision: 11
-ms.openlocfilehash: eec9c616fc6d5240db185f764a3ea2c8f9575d03
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1ac286512f3cb3b97a6b3179c9dd45f1fefe1ecf
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367416"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772189"
 ---
 # <a name="runspace01-sample"></a>Runspace01 示例
 
@@ -23,7 +16,7 @@ ms.locfileid: "72367416"
 
  此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 - 创建要运行命令的[system.web](/dotnet/api/system.management.automation.powershell)对象。
 

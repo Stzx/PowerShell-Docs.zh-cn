@@ -1,36 +1,29 @@
 ---
-title: 宽视图（基本） |Microsoft Docs
-ms.custom: ''
+title: 宽视图 (基本) |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9abb63b8-6d02-4e24-9c0e-2d15a04e9051
-caps.latest.revision: 8
-ms.openlocfilehash: 7a36f548a3eccdf2c9cad04a8bfe28bf4e8d6dfd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d92c29c33c5104b6186ae53ccf544be197d657b1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367936"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772393"
 ---
 # <a name="wide-view-basic"></a>宽视图 (Basic)
 
-此示例演示如何实现显示[system.serviceprocess. Servicecontroller 的基本视图？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) `Get-Service` cmdlet 返回的 Fullname 对象。 有关宽视图组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+此示例演示如何实现显示[system.serviceprocess. Servicecontroller 的基本视图？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)该 cmdlet 返回的 Fullname 对象 `Get-Service` 。 有关宽视图组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
 
 ### <a name="to-load-this-formatting-file"></a>加载此格式设置文件
 
 1. 将本主题的 "示例" 部分中的 XML 复制到一个文本文件中。
 
-2. 保存文本文件。 请确保将 `format.ps1xml` 扩展添加到文件中，以将其标识为格式文件。
+2. 保存文本文件。 请确保将扩展名添加 `format.ps1xml` 到文件，以将其标识为格式化文件。
 
-3. 打开 Windows PowerShell 并运行以下命令，将格式化文件加载到当前会话中： `Update-formatdata -prependpath PathToFormattingFile`。
+3. 打开 Windows PowerShell 并运行以下命令，将格式化文件加载到当前会话中： `Update-formatdata -prependpath PathToFormattingFile` 。
 
    > [!WARNING]
-   > 此格式化文件定义已由 Windows PowerShell 格式设置文件定义的对象的显示。 在运行 cmdlet 时，必须使用 `prependPath` 参数，并且不能将此格式化文件作为模块加载。
+   > 此格式化文件定义已由 Windows PowerShell 格式设置文件定义的对象的显示。 在 `prependPath` 运行 cmdlet 时，必须使用参数，并且不能将此格式化文件作为模块加载。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此格式化文件演示了以下 XML 元素：
 
@@ -83,6 +76,6 @@ FSysAgent                FwcAgent
 
 ## <a name="see-also"></a>另请参阅
 
-[格式化文件的示例](./examples-of-formatting-files.md)
+[格式设置文件示例](./examples-of-formatting-files.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

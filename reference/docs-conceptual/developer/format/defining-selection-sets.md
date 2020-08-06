@@ -1,23 +1,16 @@
 ---
 title: 定义选择集 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 00dbb5ee-93d4-4914-a082-ef4d8b236b5c
-caps.latest.revision: 16
-ms.openlocfilehash: 95eeb037b3b9190fec1212a68029624993f3fd9f
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 58c812b69f92c33304bf7fc7b2891cc2a0227918
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692295"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774297"
 ---
 # <a name="defining-selection-sets"></a>定义选项集
 
-在创建多个视图和控件时，可以定义称为选择集的对象集。 通过选择集，您可以一次性定义对象，而无需为每个视图或控件重复定义对象。 通常，当您有一组相关的 .NET 对象时，将使用选择集。 例如，格式设置 `FileSystem` 文件（types.ps1xml）定义了多个视图使用的一组文件系统类型。
+在创建多个视图和控件时，可以定义称为选择集的对象集。 通过选择集，您可以一次性定义对象，而无需为每个视图或控件重复定义对象。 通常，当您有一组相关的 .NET 对象时，将使用选择集。 例如， `FileSystem` 格式化文件 ( # B0 xml) 定义多个视图使用的一组文件系统类型。
 
 ## <a name="where-selection-sets-are-defined-and-referenced"></a>定义和引用选择集的位置
 
@@ -84,7 +77,7 @@ ms.locfileid: "83692295"
 
 - [Name](./name-element-for-selectionset-format.md)元素指定用于引用选项集的名称。
 
-- [类型](./types-element-for-selectionset-format.md)元素指定选择集的对象的 .net 类型。 （在格式设置文件中，对象由其 .NET 类型指定。）
+- [类型](./types-element-for-selectionset-format.md)元素指定选择集的对象的 .net 类型。  (在格式设置文件中，对象由其 .NET 类型指定。 ) 
 
  以下 XML 元素用于指定选择集。
 
@@ -138,7 +131,7 @@ ms.locfileid: "83692295"
 
 [SelectionSet](./selectionset-element-format.md)
 
-[Name](./name-element-for-selectionset-format.md)
+名称
 
 [类型](./types-element-for-selectionset-format.md)
 

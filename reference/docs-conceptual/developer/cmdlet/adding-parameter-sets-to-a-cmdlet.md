@@ -1,21 +1,14 @@
 ---
 title: 向 Cmdlet 添加参数集 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - parameter sets [PowerShell Programmer's Guide]
-ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
-caps.latest.revision: 8
-ms.openlocfilehash: 6e17ff3d8ad3f7b2c511b879c913633f320bf511
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: b1e808694b02676d81101a2678cbea341c7bd52c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978621"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774977"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>向 Cmdlet 添加参数集
 
@@ -23,11 +16,11 @@ ms.locfileid: "80978621"
 
 Windows PowerShell 将参数集定义为一组一起操作的参数。 通过对 cmdlet 的参数进行分组，可以创建单个 cmdlet，该 cmdlet 可以根据用户指定的参数组来更改其功能。
 
-使用两个参数集来定义不同功能的 cmdlet 示例是 Windows PowerShell 提供的 `Get-EventLog` cmdlet。 当用户指定 `List` 或 `LogName` 参数时，此 cmdlet 将返回不同的信息。 如果指定了 `LogName` 参数，则该 cmdlet 将返回有关给定事件日志中的事件的信息。 如果指定了 `List` 参数，则该 cmdlet 将返回有关日志文件本身的信息（而不是它们所包含的事件信息）。 在这种情况下，`List` 和 `LogName` 参数标识两个单独的参数集。
+Windows PowerShell 提供的 cmdlet 是使用两个参数集定义不同功能的 cmdlet 示例 `Get-EventLog` 。 当用户指定或参数时，此 cmdlet 将返回不同的信息 `List` `LogName` 。 如果 `LogName` 指定了参数，则该 cmdlet 将返回有关给定事件日志中的事件的信息。 如果 `List` 指定了参数，则该 cmdlet 将返回有关日志文件本身的信息， (它们所包含的事件信息) 。 在这种情况下， `List` 和 `LogName` 参数标识两个单独的参数集。
 
 有关参数集的两个重要事项是： Windows PowerShell 运行时仅对特定输入使用一个参数集，并且每个参数集必须至少有一个参数集唯一的参数。
 
-为了说明最后一点，此 Stop 过程 cmdlet 使用三个参数集： `ProcessName`、`ProcessId`和 `InputObject`。 其中每个参数集都具有一个不在其他参数集中的参数。 参数集可以共享其他参数，但 cmdlet 使用唯一参数 `ProcessName`、`ProcessId`和 `InputObject` 来确定 Windows PowerShell 运行时应使用的参数集。
+为了说明最后一点，此 Stop 过程 cmdlet 使用三个参数集： `ProcessName` 、 `ProcessId` 和 `InputObject` 。 其中每个参数集都具有一个不在其他参数集中的参数。 参数集可能会共享其他参数，但该 cmdlet 使用唯一参数 `ProcessName` 、 `ProcessId` 和 `InputObject` 来确定 Windows PowerShell 运行时应使用的参数集。
 
 ## <a name="declaring-the-cmdlet-class"></a>声明 Cmdlet 类
 
@@ -54,11 +47,11 @@ Public Class StopProcCommand
 
 ## <a name="declaring-the-parameters-of-the-cmdlet"></a>声明 Cmdlet 的参数
 
-此 cmdlet 将定义所需的三个参数作为 cmdlet 的输入（这些参数也定义参数集），并定义一个 `Force` 参数，该参数用于管理 cmdlet 的作用，以及一个确定 cmdlet 是否通过管道发送输出对象的 `PassThru` 参数。 默认情况下，此 cmdlet 不通过管道传递对象。 有关最后两个参数的详细信息，请参阅[创建修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)。
+此 cmdlet 将三个参数定义为 cmdlet 的输入 (这些参数也定义了参数集) ，以及用于管理 cmdlet 执行的操作的参数 `Force` 和 `PassThru` 用于确定 cmdlet 是否通过管道发送输出对象的参数。 默认情况下，此 cmdlet 不通过管道传递对象。 有关最后两个参数的详细信息，请参阅[创建修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)。
 
 ### <a name="declaring-the-name-parameter"></a>声明 Name 参数
 
-此输入参数允许用户指定要停止的进程的名称。 请注意， [Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)属性的 `ParameterSetName` attribute 关键字指定为此参数设置的 `ProcessName` 参数。
+此输入参数允许用户指定要停止的进程的名称。 请注意， `ParameterSetName` [Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)属性的 attribute 关键字指定 `ProcessName` 为此参数设置的参数。
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs" range="44-58":::
 
@@ -84,7 +77,7 @@ Private processNames() As String
 
 ### <a name="declaring-the-id-parameter"></a>声明 Id 参数
 
-此输入参数允许用户指定要停止的进程的标识符。 请注意， [Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)属性的 `ParameterSetName` attribute 关键字指定 `ProcessId` 参数集。
+此输入参数允许用户指定要停止的进程的标识符。 请注意， `ParameterSetName` [Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)属性的 attribute 关键字指定了 `ProcessId` 参数集。
 
 ```csharp
 [Parameter(
@@ -122,7 +115,7 @@ Private processIds() As Integer
 
 ### <a name="declaring-the-inputobject-parameter"></a>声明 InputObject 参数
 
-此输入参数允许用户指定输入对象，该对象包含要停止的进程的相关信息。 请注意， [Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)属性的 `ParameterSetName` attribute 关键字指定为此参数设置的 `InputObject` 参数。
+此输入参数允许用户指定输入对象，该对象包含要停止的进程的相关信息。 请注意， `ParameterSetName` [Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)属性的 attribute 关键字指定 `InputObject` 为此参数设置的参数。
 
 ```csharp
 [Parameter(
@@ -213,7 +206,7 @@ End Sub 'ProcessRecord ' ProcessRecord
 
 ## <a name="code-sample"></a>代码示例
 
-有关完整C#的示例代码，请参阅[StopProcessSample04 示例](./stopprocesssample04-sample.md)。
+有关完整的 c # 示例代码，请参阅[StopProcessSample04 示例](./stopprocesssample04-sample.md)。
 
 ## <a name="defining-object-types-and-formatting"></a>定义对象类型和格式设置
 
@@ -225,9 +218,9 @@ Windows PowerShell 使用 .NET 对象在 cmdlet 之间传递信息。 因此，c
 
 ## <a name="testing-the-cmdlet"></a>测试 Cmdlet
 
-向 Windows PowerShell 注册 cmdlet 后，通过在命令行上运行它来对其进行测试。 下面是一些测试，演示如何使用 `ProcessId` 和 `InputObject` 参数来测试它们的参数集以停止进程。
+向 Windows PowerShell 注册 cmdlet 后，通过在命令行上运行它来对其进行测试。 下面是一些测试，演示如何 `ProcessId` 使用和 `InputObject` 参数来测试它们的参数集以停止进程。
 
-- 启动 Windows PowerShell 后，运行带有 `ProcessId` 参数设置的停止过程 cmdlet，以根据其标识符停止进程。 在这种情况下，该 cmdlet 使用 `ProcessId` 参数集来停止该进程。
+- 在 Windows PowerShell 已启动的情况下，使用参数设置运行 Stop-Proc cmdlet， `ProcessId` 基于其标识符停止进程。 在这种情况下，该 cmdlet 使用 `ProcessId` 参数集来停止进程。
 
   ```
   PS> stop-proc -Id 444
@@ -237,7 +230,7 @@ Windows PowerShell 使用 .NET 对象在 cmdlet 之间传递信息。 因此，c
   [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
   ```
 
-- 启动 Windows PowerShell 后，运行带有 `InputObject` 参数设置的停止过程 cmdlet，以停止 `Get-Process` 命令检索到的 Notepad 对象上的进程。
+- 在 Windows PowerShell 已启动的情况下，使用 `InputObject` 设置为的参数设置为 "停止" 命令所检索的 Notepad 对象上的进程 `Get-Process` 。
 
   ```
   PS> get-process notepad | stop-proc
@@ -249,7 +242,7 @@ Windows PowerShell 使用 .NET 对象在 cmdlet 之间传递信息。 因此，c
 
 ## <a name="see-also"></a>另请参阅
 
-[创建修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)
+[创建用于修改系统的 Cmdlet](./creating-a-cmdlet-that-modifies-the-system.md)
 
 [如何创建 Windows PowerShell Cmdlet](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 

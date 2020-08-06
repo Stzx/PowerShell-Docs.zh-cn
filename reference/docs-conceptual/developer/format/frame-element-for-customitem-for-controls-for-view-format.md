@@ -1,25 +1,18 @@
 ---
-title: 用于视图（格式）的控件的 CustomItem 的框架元素 |Microsoft Docs
-ms.custom: ''
+title: View (Format) 的控件的 CustomItem 的框架元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a5729091-78a9-4bc1-abac-210bc20c6dbe
-caps.latest.revision: 7
-ms.openlocfilehash: f93dc20a9c5f87c14605578062b1e60f5a3d25cf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5ade36c183a026cb9001a2abbe91d31638a87108
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363646"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773447"
 ---
 # <a name="frame-element-for-customitem-for-controls-for-view-format"></a>Frame Element for CustomItem for Controls for View (Format)
 
 定义数据的显示方式，例如，将数据向左或向右移动。 定义可由视图使用的控件时，将使用此元素。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） Controls 元素（format） Control 元素 for View （format） CustomControl 元素的控件元素，用于控件的 View （format） CustomEntries 元素CustomControl for View （Format） CustomEntry 元素 for CustomEntries for view （format） CustomItem 元素 for for view （format）元素 for view （format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) 控件元素 (格式) 用于控件的控件 (控件元素) CustomEntries 元素对于 view (格式的 CustomControl For view (format) CustomEntry 元素 For CustomEntries For view format 的 CustomItem 元素 (CustomEntry 的控件) 的控件 (格式) ) 
 
 ## <a name="syntax"></a>语法
 
@@ -33,44 +26,44 @@ ms.locfileid: "72363646"
 </Frame>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `Frame` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `Frame` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |`CustomItem Element`|必需的元素|
-|[视图控件的框架的 FirstLineHanging 元素（Format）](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定第一行向左移动的字符数。|
-|[视图控件的框架的 FirstLineIndent 元素（Format）](./firstlineindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定第一行向右移动的字符数。|
-|[视图控件的框架的 LeftIndent 元素（Format）](./leftindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定数据从左边距向外移动的字符数。|
-|[视图控件的框架的 RightIndent 元素（Format）](./rightindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定数据从右边缘向外移动的字符数。|
+|[View (Format) 的控件的框架的 FirstLineHanging 元素](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定第一行向左移动的字符数。|
+|[View (Format) 的控件的框架的 FirstLineIndent 元素](./firstlineindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定第一行向右移动的字符数。|
+|[View (Format) 的控件的框架的 LeftIndent 元素](./leftindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定数据从左边距向外移动的字符数。|
+|[View (Format) 的控件的框架的 RightIndent 元素](./rightindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定数据从右边缘向外移动的字符数。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于视图的控件的 CustomEntry 的 CustomItem 元素（格式）](./customitem-element-for-customentry-for-controls-for-view-format.md)|定义控件显示的数据及其显示方式。|
+|[CustomItem Element for CustomEntry for Controls for View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)|定义控件显示的数据及其显示方式。|
 
 ## <a name="remarks"></a>备注
 
-不能在同一个 `Frame` 元素中指定[FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)和[FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-view-format.md)元素。
+不能在同一元素中指定[FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)和[FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-view-format.md)元素 `Frame` 。
 
 ## <a name="see-also"></a>另请参阅
 
-[视图控件的框架的 FirstLineHanging 元素（Format）](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)
+[View (Format) 的控件的框架的 FirstLineHanging 元素](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)
 
-[视图控件的框架的 FirstLineIndent 元素（Format）](./firstlineindent-element-for-frame-for-controls-for-view-format.md)
+[View (Format) 的控件的框架的 FirstLineIndent 元素](./firstlineindent-element-for-frame-for-controls-for-view-format.md)
 
-[视图控件的框架的 LeftIndent 元素（Format）](./leftindent-element-for-frame-for-controls-for-view-format.md)
+[View (Format) 的控件的框架的 LeftIndent 元素](./leftindent-element-for-frame-for-controls-for-view-format.md)
 
-[视图控件的框架的 RightIndent 元素（Format）](./rightindent-element-for-frame-for-controls-for-view-format.md)
+[View (Format) 的控件的框架的 RightIndent 元素](./rightindent-element-for-frame-for-controls-for-view-format.md)
 
-[用于视图的控件的 CustomEntry 的 CustomItem 元素（格式）](./customitem-element-for-customentry-for-controls-for-view-format.md)
+[CustomItem Element for CustomEntry for Controls for View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

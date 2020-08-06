@@ -1,25 +1,18 @@
 ---
-title: View 的 Name 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: View (Format) 的 Name 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3a31010d-1db9-44ae-a7f3-6ed32cb641cb
-caps.latest.revision: 16
-ms.openlocfilehash: 097d20cb6a04635124d1f96823248df6095ca1af
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 670b089f850fa4b39b7b100ca1e1ce45b05ea72d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362636"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773226"
 ---
 # <a name="name-element-for-view-format"></a>Name Element for View (Format)
 
 指定用于标识视图的名称。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） Name 元素（Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) Name 元素 (格式) 
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72362636"
 <Name>ViewName</Name>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `Name` 元素的属性、子元素和父元素。 每个视图只允许一个 `Name` 元素。
+以下各节描述了元素的属性、子元素和父元素 `Name` 。 `Name`每个视图只允许有一个元素。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,13 +34,13 @@ ms.locfileid: "72362636"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[View 元素（格式）](./view-element-format.md)|定义一个视图，该视图用于显示一个或多个 .NET 对象的成员。|
+|[View Element (Format)](./view-element-format.md)|定义一个视图，该视图用于显示一个或多个 .NET 对象的成员。|
 
 ## <a name="text-value"></a>文本值
 
-为视图指定唯一的友好名称。 此名称可以包含对视图类型（如表视图或列表视图）的引用、使用视图的对象或对象集、返回对象的命令或这些对象的组合。
+为视图指定唯一的友好名称。 此名称可以包含对视图类型的引用 (例如表视图或列表视图) 、使用视图的对象或对象集、返回对象的命令或这些对象的组合。
 
 ## <a name="remarks"></a>备注
 
@@ -55,7 +48,7 @@ ms.locfileid: "72362636"
 
 ## <a name="example"></a>示例
 
-下面的示例演示一个 `View` 元素，该元素定义[system.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController)对象的表视图。 视图的名称为 "service"。
+下面的示例演示一个 `View` 元素，该元素定义[System.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController)对象的表视图。 视图的名称为 "service"。
 
 ```xml
 <View>
@@ -78,6 +71,6 @@ ms.locfileid: "72362636"
 
 [创建自定义控件](./creating-custom-controls.md)
 
-[View 元素（格式）](./view-element-format.md)
+[View Element (Format)](./view-element-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

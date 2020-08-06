@@ -1,19 +1,12 @@
 ---
 title: 如何声明 Cmdlet 参数 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0c0509cc-5a50-49ad-a74f-5527023d0270
-caps.latest.revision: 10
-ms.openlocfilehash: 80e3e27bcf72b078c192525a843a3b3afb306529
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 97e86a1eb715f149a8383a1a4529c00da4f0eba8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365676"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774382"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>如何声明 Cmdlet 参数
 
@@ -21,7 +14,7 @@ ms.locfileid: "72365676"
 
 ## <a name="how-to-declare-a-named-parameter"></a>如何声明命名参数
 
-- 定义公共属性，如下面的代码所示。 添加参数特性时，请从特性中省略 `Position` 关键字。
+- 定义公共属性，如下面的代码所示。 添加参数特性时，请 `Position` 从特性中省略关键字。
 
     ```csharp
     [Parameter()]
@@ -37,7 +30,7 @@ ms.locfileid: "72365676"
 
 ## <a name="how-to-declare-a-positional-parameter"></a>如何声明位置参数
 
-- 定义公共属性，如下面的代码所示。 添加参数特性时，请将 `Position` 关键字设置为参数位置。 值0指示第一个位置。
+- 定义公共属性，如下面的代码所示。 添加参数特性时，请将关键字设置 `Position` 为参数位置。 值0指示第一个位置。
 
     ```csharp
     [Parameter(Position = 0)]
@@ -53,7 +46,7 @@ ms.locfileid: "72365676"
 
 ## <a name="how-to-declare-a-mandatory-parameter"></a>如何声明必需参数
 
-- 定义公共属性，如下面的代码所示。 添加参数属性时，请将 `Mandatory` 关键字设置为 `true`。
+- 定义公共属性，如下面的代码所示。 添加参数特性时，请将关键字设置 `Mandatory` 为 `true` 。
 
     ```csharp
     [Parameter(Position = 0, Mandatory = true)]
@@ -116,10 +109,10 @@ ms.locfileid: "72365676"
 
 ## <a name="see-also"></a>另请参阅
 
-[System.web. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)
+[System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)
 
 [参数属性声明](./parameter-attribute-declaration.md)
 
-[Alias 特性声明](./alias-attribute-declaration.md)
+[别名属性声明](./alias-attribute-declaration.md)
 
 [编写 Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)

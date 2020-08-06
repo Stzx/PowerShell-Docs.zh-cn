@@ -1,25 +1,18 @@
 ---
 title: Cmdlet 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b99d53fc-0af9-426b-82ce-09955e031d4b
-caps.latest.revision: 13
-ms.openlocfilehash: 0fa4a5f804586c51ae6a36121f9aab041b0989cc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 633e4a5108673b09a92679c7992421b6b3405b72
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365876"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774739"
 ---
 # <a name="cmdlet-samples"></a>Cmdlet 示例
 
-本部分介绍 Windows PowerShell 2.0 SDK 中提供的示例代码。 您可以从本部分中的主题复制代码，或打开随 SDK 一起安装的源文件。 [Windows PowerShell 2.0 软件开发工具包（SDK）](https://www.microsoft.com/en-us/download/details.aspx?id=2560)提供每个示例的自述文件、源文件和 Visual Studio 项目文件。 安装 SDK 后，可以在 "`<Drive>:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`" 文件夹下找到相应的示例。
+本部分介绍 Windows PowerShell 2.0 SDK 中提供的示例代码。 您可以从本部分中的主题复制代码，或打开随 SDK 一起安装的源文件。 [Windows PowerShell 2.0 软件开发工具包 (SDK) ](https://www.microsoft.com/en-us/download/details.aspx?id=2560)提供每个示例的自述文件、源文件和 Visual Studio 项目文件。 安装 SDK 后，可在文件夹中找到示例 `<Drive>:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` 。
 
-## <a name="in-this-section"></a>本部分内容
+## <a name="in-this-section"></a>本节内容
 
 [GetProcessSample01 示例](./getprocesssample01-sample.md)此示例演示如何编写一个用于检索本地计算机上的进程的 cmdlet。
 

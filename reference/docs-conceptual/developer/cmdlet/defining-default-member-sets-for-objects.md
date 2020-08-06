@@ -1,19 +1,12 @@
 ---
 title: 定义对象的默认成员集 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 77f94326-8ffe-4d40-bd2a-b79fb0b4a4e5
-caps.latest.revision: 8
-ms.openlocfilehash: 2d634e7638ec0e0117d65ca0b2d08e68f0068a03
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 80e1f54890d3aac1702414699ead16fcf38271e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369776"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774620"
 ---
 # <a name="defining-default-member-sets-for-objects"></a>定义对象的默认成员集
 
@@ -43,7 +36,7 @@ Windows PowerShell 使用 PSStandardMembers 成员集来定义对象的默认属
   </MemberSet>
 ```
 
-以下输出显示了由[格式列表](/powershell/module/Microsoft.PowerShell.Utility/Format-List)cmdlet 返回的默认属性。 只为每个进程对象返回 `Id`、`Handles`、`CPU`和 `Name` 属性。
+以下输出显示了由[格式列表](/powershell/module/Microsoft.PowerShell.Utility/Format-List)cmdlet 返回的默认属性。 只 `Id` `Handles` `CPU` `Name` 为每个进程对象返回、、和属性。
 
 ```powershell
 Get-Process | format-list
