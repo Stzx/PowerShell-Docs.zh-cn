@@ -1,27 +1,20 @@
 ---
 title: Windows PowerShell 提供程序概述 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
-caps.latest.revision: 13
-ms.openlocfilehash: 9f1b94e722e59e707a26547949c661b5098d29e0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: c248f1c337e96a1b83cbeb5fb486147504777eb1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560944"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778236"
 ---
 # <a name="windows-powershell-provider-overview"></a>Windows PowerShell 提供程序概述
 
-Windows PowerShell 提供程序允许像文件系统一样公开任何数据存储，就像它是装入的驱动器一样。 例如，内置的注册表提供程序允许你在注册表中导航，就像浏览 `c` 计算机驱动器一样。 提供程序还可以重写 `Item` cmdlet （如、等 `Get-Item` `Set-Item` ），以便可以处理数据存储区中的数据，如在导航文件系统时处理文件和目录。 有关提供程序和驱动器以及 Windows PowerShell 中的内置提供程序的详细信息，请参阅[about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)。
+Windows PowerShell 提供程序允许像文件系统一样公开任何数据存储，就像它是装入的驱动器一样。 例如，内置的注册表提供程序允许你在注册表中导航，就像浏览 `c` 计算机驱动器一样。 提供程序还可以重写 `Item` cmdlet (例如，、等） `Get-Item` `Set-Item` ) 这样可以处理数据存储区中的数据，如在导航文件系统时处理文件和目录。 有关提供程序和驱动器以及 Windows PowerShell 中的内置提供程序的详细信息，请参阅[about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)。
 
 ## <a name="providers-and-drives"></a>提供商和驱动器
 
-提供程序定义用于访问、导航和编辑数据存储区的逻辑，而驱动器指定的数据存储区（或数据存储区的某个部分）的特定入口点为提供程序定义的类型。 例如，注册表提供程序允许访问注册表中的配置单元和密钥，并且 HKLM 和 HKCU 驱动器指定注册表中的相应配置单元。 HKLM 和 HKCU 驱动器都使用注册表提供程序。
+提供程序定义用于访问、导航和编辑数据存储区的逻辑，而驱动器则指定数据存储的特定入口点 (或数据存储区的某个部分) 此访问接口定义的类型。 例如，注册表提供程序允许访问注册表中的配置单元和密钥，并且 HKLM 和 HKCU 驱动器指定注册表中的相应配置单元。 HKLM 和 HKCU 驱动器都使用注册表提供程序。
 
 当你编写提供程序时，可以指定默认驱动器-在提供程序可用时自动创建的驱动器。 还定义了一个方法来创建使用该提供程序的新驱动器。
 
@@ -39,7 +32,7 @@ Windows PowerShell 提供程序允许像文件系统一样公开任何数据存�
 
 ### <a name="drive-qualified-paths"></a>驱动器限定路径
 
-驱动器限定路径是项名称、项所在的容器和子容器的组合，以及通过其访问该项的 Windows PowerShell 驱动器。 （驱动器由用于访问数据存储的提供程序定义。 此路径以驱动器名称开头，后面跟一个冒号（:)。 例如： `get-childitem C:`
+驱动器限定路径是项名称、项所在的容器和子容器的组合，以及通过其访问该项的 Windows PowerShell 驱动器。  (驱动器由用于访问数据存储的提供程序定义。 此路径以驱动器名称开头，后面跟一个冒号 (： ) 。 例如： `get-childitem C:`
 
 ### <a name="provider-qualified-paths"></a>提供程序限定路径
 
@@ -51,7 +44,7 @@ Windows PowerShell 提供程序允许像文件系统一样公开任何数据存�
 
 ### <a name="provider-internal-paths"></a>提供程序-内部路径
 
-若要允许提供程序 cmdlet 使用非 Windows PowerShell 应用程序编程接口（Api）访问数据，Windows PowerShell 提供程序应支持提供程序内部路径。 此路径在提供程序限定的路径中的 "：：" 后指示。 例如，filesystem Windows PowerShell 提供程序的提供程序内部路径为 `\\uncshare\abc\bar` 。
+若要允许提供程序 cmdlet 使用非 Windows PowerShell 应用程序编程接口访问数据 (Api) ，你的 Windows PowerShell 提供程序应支持提供程序内部路径。 此路径在提供程序限定的路径中的 "：：" 后指示。 例如，filesystem Windows PowerShell 提供程序的提供程序内部路径为 `\\uncshare\abc\bar` 。
 
 ## <a name="overriding-cmdlet-parameters"></a>重写 cmdlet 参数
 
@@ -63,7 +56,7 @@ Windows PowerShell 提供程序允许像文件系统一样公开任何数据存�
 
 ## <a name="provider-capabilities"></a>提供程序功能
 
-[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)枚举定义了提供程序可支持的多个功能。 其中包括使用通配符、筛选项和支持事务的功能。 若要为提供程序指定功能，请为提供程序类添加[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)枚举值的列表，并将其与逻辑操作组合在一起 `OR` ，以作为[Cmdletproviderattribute. Providercapabilities *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities)属性（特性的第二个参数）的. * 属性（特性的第二[System.Management.Automation.Provider.Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)个参数）。 例如，下面的特性指定提供程序支持[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess**和[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **事务**功能的访问器的支持程序管理器。
+[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)枚举定义了提供程序可支持的多个功能。 其中包括使用通配符、筛选项和支持事务的功能。 若要为提供程序指定功能，请添加[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)枚举值的列表，并将其与逻辑操作组合在一起，并将其与 `OR` [Cmdletproviderattribute. Providercapabilities *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities)属性组合在一起， (提供程序类的特性的) 属性的第二个参数。） [System.Management.Automation.Provider.Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 。 例如，下面的特性指定提供程序支持[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess**和[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **事务**功能的访问器的支持程序管理器。
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]

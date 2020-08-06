@@ -1,23 +1,16 @@
 ---
-title: Runspace01 （VB.NET）代码示例 |Microsoft Docs
-ms.custom: ''
+title: Runspace01 (VB.NET) 代码示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 12ee5382-95ba-41c7-8291-7f69a6f63514
-caps.latest.revision: 7
-ms.openlocfilehash: ce6bdec379a7ba9bf9b088c79a08ad5cef5da80b
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d40424283057b389d8a4aafeb8ddfa44284f3ba1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560298"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778658"
 ---
 # <a name="runspace01-vbnet-code-sample"></a>Runspace01 (VB.NET) 代码示例
 
-下面是[创建运行指定命令的控制台应用程序](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program)中所述的运行空间的代码示例。 为此，应用程序将调用运行空间，然后调用命令。 （请注意，此应用程序不会指定运行空间配置信息，也不会显式创建管道。）调用的命令是 `Get-Process` cmdlet。
+下面是[创建运行指定命令的控制台应用程序](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program)中所述的运行空间的代码示例。 为此，应用程序将调用运行空间，然后调用命令。  (请注意，此应用程序不指定运行空间的配置信息，也不会显式创建管道。 ) 调用的命令是 `Get-Process` cmdlet。
 
 ## <a name="code-sample"></a>代码示例
 

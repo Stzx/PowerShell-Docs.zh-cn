@@ -1,35 +1,28 @@
 ---
 title: GetProc02 代码示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a2fd91af-758b-49b9-b57f-106ee01fc8c1
-caps.latest.revision: 5
-ms.openlocfilehash: 381011ffd9bd4a46dcfcdbebaa0164d03378abe6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 463786cfa679b89f29a3acb6b40a31409634d256
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416176"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778748"
 ---
 # <a name="getproc02-code-samples"></a>GetProc02 代码示例
 
-下面是 GetProc02 cmdlet 的代码示例。 这是[添加处理命令行输入的参数](../cmdlet/adding-parameters-that-process-command-line-input.md)中所述的 `Get-Process` cmdlet 示例。 此 `Get-Process` cmdlet 根据其名称检索进程，然后在命令行中显示有关进程的信息。
+下面是 GetProc02 cmdlet 的代码示例。 这是 `Get-Process` [添加处理命令行输入的参数](../cmdlet/adding-parameters-that-process-command-line-input.md)中所述的 cmdlet 示例。 此 `Get-Process` cmdlet 根据其名称检索进程，然后在命令行中显示有关进程的信息。
 
 > [!NOTE]
-> 你可以使用适用C#于 windows Vista 的 Microsoft Windows 软件开发工具包和 .NET Framework 3.0 运行时组件下载此 getproc02.cs cmdlet 的源文件（）。 有关下载说明，请参阅[如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
+> 你可以使用适用于 Windows Vista 的 Microsoft Windows 软件开发工具包和 .NET Framework 3.0 运行时组件 (getproc02.cs cmdlet 下载 c # 源文件) 。 有关下载说明，请参阅[如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
 >
-> 下载的源文件在 **\<PowerShell 示例 >** 目录中提供。
+> 下载的源文件在目录中提供 **\<PowerShell Samples>** 。
 
 有关完整的示例代码，请参阅以下主题。
 
-|Language|主题|
+|语言|主题|
 |--------------|-----------|
-|C#|[GetProc02 （C#）示例代码](./getproc02-csharp-sample-code.md)|
-|VB.NET|[GetProc02 （VB.NET）示例代码](./getproc02-vb-net-sample-code.md)|
+|C#|[GetProc02 (C#) 示例代码](./getproc02-csharp-sample-code.md)|
+|VB.NET|[GetProc02 (VB.NET) 示例代码](./getproc02-vb-net-sample-code.md)|
 
 ## <a name="see-also"></a>另请参阅
 
