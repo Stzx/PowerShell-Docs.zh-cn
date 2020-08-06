@@ -1,43 +1,36 @@
 ---
 title: Runspace02 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7630bb63-ef39-4abd-b795-8000f984c1e5
-caps.latest.revision: 9
-ms.openlocfilehash: 997b1d6841ff014093ba54bf7a1db7b0b7d746b8
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 7a2dce436aceb1d8744377c37671a66398614851
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564800"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784956"
 ---
-# <a name="runspace02-sample"></a><span data-ttu-id="42c82-102">Runspace02 示例</span><span class="sxs-lookup"><span data-stu-id="42c82-102">Runspace02 Sample</span></span>
+# <a name="runspace02-sample"></a><span data-ttu-id="aae47-102">Runspace02 示例</span><span class="sxs-lookup"><span data-stu-id="aae47-102">Runspace02 Sample</span></span>
 
-<span data-ttu-id="42c82-103">此示例演示如何使用[system.exception 类来](/dotnet/api/system.management.automation.powershell)同步运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object)的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="42c82-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets synchronously.</span></span> <span data-ttu-id="42c82-104">[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 将为在本地计算机上运行的每个[进程返回 System.Diagnostics.Process.Id](/dotnet/api/System.Diagnostics.Process) ，并根据对象的 `Sort-Object` [\*](/dotnet/api/System.Diagnostics.Process.Id)属性对对象进行排序。</span><span class="sxs-lookup"><span data-stu-id="42c82-104">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer, and the `Sort-Object` sorts the objects based on their [System.Diagnostics.Process.Id\*](/dotnet/api/System.Diagnostics.Process.Id) property.</span></span> <span data-ttu-id="42c82-105">这些命令的结果使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件显示。</span><span class="sxs-lookup"><span data-stu-id="42c82-105">The results of these commands is displayed by using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control.</span></span>
+<span data-ttu-id="aae47-103">此示例演示如何使用[system.exception 类来](/dotnet/api/system.management.automation.powershell)同步运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object)的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="aae47-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets synchronously.</span></span> <span data-ttu-id="aae47-104">[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 将为在本地计算机上运行的每个[进程返回 System.Diagnostics.Process.Id](/dotnet/api/System.Diagnostics.Process) ，并根据对象的 `Sort-Object` [\*](/dotnet/api/System.Diagnostics.Process.Id)属性对对象进行排序。</span><span class="sxs-lookup"><span data-stu-id="aae47-104">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer, and the `Sort-Object` sorts the objects based on their [System.Diagnostics.Process.Id\*](/dotnet/api/System.Diagnostics.Process.Id) property.</span></span> <span data-ttu-id="aae47-105">这些命令的结果使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件显示。</span><span class="sxs-lookup"><span data-stu-id="aae47-105">The results of these commands is displayed by using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="42c82-106">要求</span><span class="sxs-lookup"><span data-stu-id="42c82-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="aae47-106">要求</span><span class="sxs-lookup"><span data-stu-id="aae47-106">Requirements</span></span>
 
-<span data-ttu-id="42c82-107">此示例需要 Windows PowerShell 2.0。</span><span class="sxs-lookup"><span data-stu-id="42c82-107">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="aae47-107">此示例需要 Windows PowerShell 2.0。</span><span class="sxs-lookup"><span data-stu-id="aae47-107">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="42c82-108">演示</span><span class="sxs-lookup"><span data-stu-id="42c82-108">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="aae47-108">演示</span><span class="sxs-lookup"><span data-stu-id="aae47-108">Demonstrates</span></span>
 
-<span data-ttu-id="42c82-109">此示例演示以下各项。</span><span class="sxs-lookup"><span data-stu-id="42c82-109">This sample demonstrates the following.</span></span>
+<span data-ttu-id="aae47-109">此示例演示以下各项。</span><span class="sxs-lookup"><span data-stu-id="aae47-109">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="42c82-110">创建要运行命令的[system.web](/dotnet/api/system.management.automation.powershell)对象。</span><span class="sxs-lookup"><span data-stu-id="42c82-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run commands.</span></span>
+- <span data-ttu-id="aae47-110">创建要运行命令的[system.web](/dotnet/api/system.management.automation.powershell)对象。</span><span class="sxs-lookup"><span data-stu-id="aae47-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run commands.</span></span>
 
-- <span data-ttu-id="42c82-111">将命令添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道。</span><span class="sxs-lookup"><span data-stu-id="42c82-111">Adding commands to the pipeline of [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="aae47-111">将命令添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道。</span><span class="sxs-lookup"><span data-stu-id="aae47-111">Adding commands to the pipeline of [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="42c82-112">同步运行命令。</span><span class="sxs-lookup"><span data-stu-id="42c82-112">Running the commands synchronously.</span></span>
+- <span data-ttu-id="aae47-112">同步运行命令。</span><span class="sxs-lookup"><span data-stu-id="aae47-112">Running the commands synchronously.</span></span>
 
-- <span data-ttu-id="42c82-113">使用[system.web](/dotnet/api/System.Windows.Forms.DataGridView)控件在 Windows 窗体应用程序中显示命令的输出。</span><span class="sxs-lookup"><span data-stu-id="42c82-113">Using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control to display the output of the commands in a Windows Forms application.</span></span>
+- <span data-ttu-id="aae47-113">使用[system.web](/dotnet/api/System.Windows.Forms.DataGridView)控件在 Windows 窗体应用程序中显示命令的输出。</span><span class="sxs-lookup"><span data-stu-id="aae47-113">Using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control to display the output of the commands in a Windows Forms application.</span></span>
 
-## <a name="example"></a><span data-ttu-id="42c82-114">示例</span><span class="sxs-lookup"><span data-stu-id="42c82-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="aae47-114">示例</span><span class="sxs-lookup"><span data-stu-id="aae47-114">Example</span></span>
 
-<span data-ttu-id="42c82-115">此示例在 Windows PowerShell 提供的默认运行空间中同步运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object)cmdlet。</span><span class="sxs-lookup"><span data-stu-id="42c82-115">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets synchronously in the default runspace provided by Windows PowerShell.</span></span> <span data-ttu-id="42c82-116">使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件以窗体显示输出。</span><span class="sxs-lookup"><span data-stu-id="42c82-116">The output is displayed in a form using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control.</span></span>
+<span data-ttu-id="aae47-115">此示例在 Windows PowerShell 提供的默认运行空间中同步运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object)cmdlet。</span><span class="sxs-lookup"><span data-stu-id="aae47-115">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets synchronously in the default runspace provided by Windows PowerShell.</span></span> <span data-ttu-id="aae47-116">使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件以窗体显示输出。</span><span class="sxs-lookup"><span data-stu-id="aae47-116">The output is displayed in a form using a [System.Windows.Forms.Datagridview](/dotnet/api/System.Windows.Forms.DataGridView) control.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -114,6 +107,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="42c82-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="42c82-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aae47-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="aae47-117">See Also</span></span>
 
-[<span data-ttu-id="42c82-118">编写 Windows PowerShell 主机应用程序</span><span class="sxs-lookup"><span data-stu-id="42c82-118">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="aae47-118">编写 Windows PowerShell 主机应用程序</span><span class="sxs-lookup"><span data-stu-id="aae47-118">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
