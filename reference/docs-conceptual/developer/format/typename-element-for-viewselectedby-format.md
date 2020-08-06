@@ -1,25 +1,18 @@
 ---
-title: ViewSelectedBy 的 TypeName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: ViewSelectedBy (Format) 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0ad807a9-d7d8-4e96-b799-9c6a7677cc2d
-caps.latest.revision: 12
-ms.openlocfilehash: e2028c479103cc414295dc24a0f9bb69190bfc66
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e9a391565c3e66041dd9a340455dccfce9ce929b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361436"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780026"
 ---
 # <a name="typename-element-for-viewselectedby-format"></a>TypeName Element for ViewSelectedBy (Format)
 
 指定视图显示的 .NET 对象。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） ViewSelectedBy 元素（format） ViewSelectedBy 的 TypeName 元素（format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ViewSelectedBy 元素 (格式) ViewSelectedBy (格式) TypeName 元素
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72361436"
 <TypeName>FullyQualifiedTypeName</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `TypeName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `TypeName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,11 +36,11 @@ ms.locfileid: "72361436"
 
 |元素|描述|
 |-------------|-----------------|
-|[ViewSelectedBy 元素（格式）](./viewselectedby-element-format.md)|定义视图显示的 .NET 对象。|
+|[ViewSelectedBy Element (Format)](./viewselectedby-element-format.md)|定义视图显示的 .NET 对象。|
 
 ## <a name="text-value"></a>文本值
 
-指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo`。
+指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo` 。
 
 ## <a name="remarks"></a>备注
 
@@ -77,6 +70,6 @@ ms.locfileid: "72361436"
 
 [创建自定义控件](./creating-custom-controls.md)
 
-[ViewSelectedBy 元素（格式）](./viewselectedby-element-format.md)
+[ViewSelectedBy Element (Format)](./viewselectedby-element-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

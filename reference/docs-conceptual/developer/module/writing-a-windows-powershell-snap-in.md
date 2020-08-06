@@ -1,21 +1,14 @@
 ---
 title: 编写 Windows PowerShell 管理单元 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - snap-ins [PowerShell SDK], PSSnapin example
-ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
-caps.latest.revision: 7
-ms.openlocfilehash: d12a66e354a23041fffb0f8fa286c849849ec2b0
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 02603c54fb9852a8b78ecf68e3ee387d1fd418fc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811616"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779104"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>编写 Windows PowerShell 管理单元
 
@@ -31,23 +24,23 @@ ms.locfileid: "83811616"
 
     在此示例中，类名为 "GetProcPSSnapIn01"。
 
-3. 为管理单元的名称添加一个公共属性（必需）。 命名管理单元时，请不要使用以下任何字符： `#` 、 `.` 、 `,` 、 `(` 、 `)` `{` `}` `[` `]` `&` `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、`*`
+3. 为管理单元的名称添加一个公共属性， (所需的) 。 命名管理单元时，请不要使用以下任何字符： `#` 、 `.` 、 `,` 、 `(` 、 `)` `{` `}` `[` `]` `&` `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、`*`
 
     在此示例中，管理单元的名称为 "GetProcPSSnapIn01"。
 
-4. 添加管理单元供应商的公共属性（必需）。
+4. 为管理单元供应商添加 (所需) 的公共属性。
 
     在此示例中，供应商为 "Microsoft"。
 
-5. 添加管理单元的供应商资源的公共属性（可选）。
+5. 添加管理单元供应商资源的公共属性， (可选) 。
 
     在此示例中，供应商资源为 "GetProcPSSnapIn01，Microsoft"。
 
-6. 添加管理单元说明的公共属性（必需）。
+6. 添加管理单元说明的公共属性， (所需的) 。
 
     在此示例中，说明为 "这是一个用于注册 get-help cmdlet 的 Windows PowerShell 管理单元"。
 
-7. 为管理单元的 "说明" 资源添加公共属性（可选）。
+7. 添加管理单元的描述资源的公共属性， (可选) 。
 
     在此示例中，供应商资源为 "GetProcPSSnapIn01，这是一个用于注册 get-help cmdlet 的 Windows PowerShell 管理单元"。
 

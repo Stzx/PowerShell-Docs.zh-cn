@@ -1,24 +1,17 @@
 ---
 title: 创建修改系统的 Cmdlet |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - should process [PowerShell Programmer's Guide]
 - should continue [PowerShell Programmer's Guide]
 - user feedback [PowerShell Programmer's Guide]
 - confirm impact [PowerShell Programmer's Guide]
-ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
-caps.latest.revision: 8
-ms.openlocfilehash: f0ce30c3fa76141908680934bcac41a989622c42
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 03ffe0c9c02dcdeb2dd24f81014b2013ae169aa4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560060"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782168"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>创建用于修改系统的 Cmdlet
 
@@ -28,9 +21,9 @@ ms.locfileid: "83560060"
 
 - 通过将 SupportsShouldProcess 关键字设置为，声明 cmdlet 在指定[CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute)属性时支持 `true` 确认。
 
-- 在执行 Cmdlet 的过程中，请调用[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) （如以下示例中所示）。
+- 如以下示例中所示，在执行 Cmdlet (调用[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) ：) 。
 
-通过支持确认，cmdlet 将公开 `Confirm` `WhatIf` Windows PowerShell 提供的和参数，同时满足 cmdlet 的开发准则（有关 cmdlet 开发指南的详细信息，请参阅[cmdlet 开发指南](./cmdlet-development-guidelines.md)）。
+通过支持确认，cmdlet 将公开 `Confirm` `WhatIf` Windows PowerShell 提供的和参数，同时满足 cmdlet 的开发准则 (有关 cmdlet 开发指南的详细信息，请参阅[cmdlet 开发指南](./cmdlet-development-guidelines.md)。 ) 。
 
 ## <a name="changing-the-system"></a>更改系统
 
@@ -41,7 +34,7 @@ ms.locfileid: "83560060"
 
 ## <a name="the-stopproc-cmdlet"></a>StopProc Cmdlet
 
-本主题介绍了一种停止过程 cmdlet，该 cmdlet 尝试使用 Get-help cmdlet （在[创建第一个 cmdlet](./creating-a-cmdlet-without-parameters.md)时介绍）来停止检索的进程。
+本主题介绍了一种停止过程 cmdlet，该 cmdlet 尝试使用 ([创建第一个 cmdlet](./creating-a-cmdlet-without-parameters.md)) 中所述的过程 cmdlet 来停止检索的进程。
 
 ## <a name="defining-the-cmdlet"></a>定义 Cmdlet
 
@@ -224,7 +217,7 @@ protected override void ProcessRecord()
 
 ## <a name="calling-the-shouldprocess-method"></a>调用 ShouldProcess 方法
 
-Cmdlet 的输入处理方法应调用[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess)方法，以确认在更改之前（例如，删除文件）对系统运行状态进行的操作的执行操作是否正常。 这允许 Windows PowerShell 运行时在 shell 内提供正确的 "WhatIf" 和 "Confirm" 行为。
+Cmdlet 的输入处理方法应调用[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess)方法，以确认在更改 (之前执行操作（例如，删除) 系统的运行状态的文件）的执行。 这允许 Windows PowerShell 运行时在 shell 内提供正确的 "WhatIf" 和 "Confirm" 行为。
 
 > [!NOTE]
 > 如果某个 cmdlet 指出它支持的操作应该处理并无法进行[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess)调用，则用户可能会意外地修改系统。

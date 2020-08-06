@@ -1,25 +1,18 @@
 ---
-title: View 的 SelectionCondition for CustomControl 的 PropertyName 元素 |Microsoft Docs
-ms.custom: ''
+title: 用于 CustomControl 的 SelectionCondition 的 PropertyName 元素) 的 View (格式 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fc48a417-2083-46d4-ac38-16c12e65b6b9
-caps.latest.revision: 7
-ms.openlocfilehash: e08037d5d051d3be51e90193c7e87cc2e738f78a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: aa3955b84b8de9901f394e8108f31440fcb6c942
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362346"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780791"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>PropertyName Element for SelectionCondition for CustomControl for View (Format)
 
-指定触发条件的 .NET 属性。 如果该属性存在或其计算结果为 `true`，则满足条件，并使用定义。 定义自定义控件视图时，将使用此元素。
+指定触发条件的 .NET 属性。 如果该属性存在或其计算结果为 `true` ，则满足条件，并使用定义。 定义自定义控件视图时，将使用此元素。
 
-Configuration Element （Format） ViewDefinitions 元素（格式） View 元素（format） CustomControl 元素 for View （format） CustomEntries 元素 for CustomControl for CustomEntry for CustomEntries for View （Format） CustomControl 元素 for view （Format） CustomItem 元素 for CustomEntry for CustomControl for CustomEntry for CustomControl for SelectionCondition for EntrySelectedBy for view （format） PropertyName 的 CustomControl 元素View 的 SelectionCondition for CustomControl 的元素（格式）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) 用于视图 (格式的 CustomControl CustomEntries 元素) CustomEntry 的的元素 (CustomEntries 的 CustomControl 元素对于 CustomEntry for CustomControl for View (Format) EntrySelectedBy 元素 for CustomEntry for CustomControl for SelectionCondition for view (Format) EntrySelectedBy for CustomControl 的 SelectionCondition 元素 CustomControl for View (Format) 
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ Configuration Element （Format） ViewDefinitions 元素（格式） View 元�
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `PropertyName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `PropertyName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ Configuration Element （Format） ViewDefinitions 元素（格式） View 元�
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于 View 的 CustomControl 的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|定义要使用的控件定义必须存在的条件。|
+|[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|定义要使用的控件定义必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -55,6 +48,6 @@ Configuration Element （Format） ViewDefinitions 元素（格式） View 元�
 
 ## <a name="see-also"></a>另请参阅
 
-[用于 View 的 CustomControl 的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
+[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

@@ -1,25 +1,18 @@
 ---
-title: 对于 GroupBy，为 EntrySelectedBy 的 TypeName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: 对于 GroupBy (Format) ，为 EntrySelectedBy 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b8b6739b-770c-432a-95ab-551c7507c51f
-caps.latest.revision: 6
-ms.openlocfilehash: 3b5ce60d3a0d76988af48f49445a5478a415d498
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e62762cf142bd2d20b21ad8f4249285bd3679280
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361666"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780257"
 ---
 # <a name="typename-element-for-entryselectedby-for-groupby-format"></a>TypeName Element for EntrySelectedBy for GroupBy (Format)
 
 指定使用自定义控件的此定义的 .NET 类型。 此元素在定义如何显示新的对象组时使用。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format）对于 GroupBy （format） CustomEntries 元素，用于元素的 CustomControl 元素（format）用于 CustomEntry for groupby （format） TypeName 元素的 CustomControl for groupby （format） EntrySelectedBy 元素（Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) GroupBy 元素，适用于 CustomControl for groupby (格式) CustomControl 元素 for CustomEntries 元素 for for groupby (format) CustomEntry 元素 for CustomControl for groupby (format) EntrySelectedBy 元素 for CustomEntry for groupby (format) 
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72361666"
 <TypeName>Nameof.NetType</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `TypeName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `TypeName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,11 +36,11 @@ ms.locfileid: "72361666"
 
 |元素|描述|
 |-------------|-----------------|
-|[GroupBy 的 CustomEntry 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-customentry-for-groupby-format.md)|定义使用此控件定义的 .NET 类型或要使用此定义时必须存在的条件。|
+|[EntrySelectedBy Element for CustomEntry for GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)|定义使用此控件定义的 .NET 类型或要使用此定义时必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
-指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo`。
+指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo` 。
 
 ## <a name="remarks"></a>备注
 
@@ -59,6 +52,6 @@ ms.locfileid: "72361666"
 
 [创建自定义控件](./creating-custom-controls.md)
 
-[GroupBy 的 CustomEntry 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-customentry-for-groupby-format.md)
+[EntrySelectedBy Element for CustomEntry for GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

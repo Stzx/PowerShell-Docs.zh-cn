@@ -1,19 +1,12 @@
 ---
 title: 如何创建 Cmdlet 帮助文件 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4a88dd89-6beb-494f-9e2a-6b10baed1a8d
-caps.latest.revision: 17
-ms.openlocfilehash: 652e095bcce606e47cb97658f79eaca34033b239
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 7ab0404e5d0122a64483883e6e2d4760dfa5038d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86953295"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779822"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>如何创建 Cmdlet 帮助文件
 
@@ -28,7 +21,7 @@ ms.locfileid: "86953295"
 
    `<PSSnapInAssemblyName>.dll-Help.xml`
 
-1. 将以下 XML 标头添加到文本文件。 请注意，将根据 Microsoft 协助标记语言（MAML）架构对文件进行验证。 目前，PowerShell 不提供任何用于验证文件的工具。
+1. 将以下 XML 标头添加到文本文件。 请注意，将根据 Microsoft 协助标记语言 (MAML) 架构来验证该文件。 目前，PowerShell 不提供任何用于验证文件的工具。
 
    `<?xml version="1.0" encoding="utf-8" ?> <helpItems xmlns="http://msh" schema="maml">`
 

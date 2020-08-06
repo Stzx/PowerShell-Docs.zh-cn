@@ -1,23 +1,16 @@
 ---
 title: 加载和导出格式设置数据 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
-caps.latest.revision: 6
-ms.openlocfilehash: 5c5168ffd74c15066b914ad1b39d9ead947c5e7f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b449b280ccee561679d58f2f2a8b467c83150766
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365116"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781114"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>加载和导出格式设置数据
 
-创建格式化文件后，需要通过将文件加载到当前会话中来更新会话的格式数据。 （Windows PowerShell 提供的格式化文件由在打开当前会话时注册的管理单元加载。）当前会话的格式数据更新后，Windows PowerShell 将使用该数据显示与已加载的格式设置文件中定义的视图关联的 .NET 对象。 可以加载到当前会话中的格式化文件数没有限制。 除了更新格式设置数据以外，还可以将当前会话中的格式数据导出回格式设置文件。
+创建格式化文件后，需要通过将文件加载到当前会话中来更新会话的格式数据。  (在打开当前会话时注册的管理单元加载 Windows PowerShell 提供的格式设置文件。 ) 更新当前会话的格式数据后，Windows PowerShell 将使用该数据显示与已加载的格式设置文件中定义的视图关联的 .NET 对象。 可以加载到当前会话中的格式化文件数没有限制。 除了更新格式设置数据以外，还可以将当前会话中的格式数据导出回格式设置文件。
 
 ## <a name="loading-format-data"></a>正在加载格式数据
 
@@ -31,11 +24,11 @@ ms.locfileid: "72365116"
 
 - 如果以编程方式调用命令，则可以将格式设置文件条目添加到运行命令的运行空间的初始会话状态。 有关用于添加格式化文件的 .NET 类型的详细信息，请参阅[Sessionstateformatentry？Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateFormatEntry)类。
 
-加载格式设置文件时，会将其添加到 Windows PowerShell 用来确定在命令行显示对象时使用的视图的内部列表。 您可以在列表开头添加格式文件，也可以将其追加到列表的末尾。 如果正在加载为定义了现有视图的对象定义视图（例如，当你想要更改 Windows PowerShell core cmdlet 返回的对象的方式）时，了解将格式设置文件添加到此列表中的位置非常重要。 会. 如果正在加载的格式设置文件定义对象的唯一视图，则可以使用前面所述的任何方法。  如果要加载的格式设置文件定义了对象的其他视图，则必须使用[update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet，并将文件预置到列表的开头。
+加载格式设置文件时，会将其添加到 Windows PowerShell 用来确定在命令行显示对象时使用的视图的内部列表。 您可以在列表开头添加格式文件，也可以将其追加到列表的末尾。 如果正在加载定义了定义了现有视图的对象的视图的格式设置文件（例如，当你想要更改由 Windows PowerShell core cmdlet 返回的对象的显示方式），则了解将格式设置文件添加到此列表中的位置非常重要。 如果正在加载的格式设置文件定义对象的唯一视图，则可以使用前面所述的任何方法。  如果要加载的格式设置文件定义了对象的其他视图，则必须使用[update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet，并将文件预置到列表的开头。
 
 ## <a name="storing-your-formatting-file"></a>存储格式设置文件
 
-不要求在磁盘上存储格式设置文件。 不过，强烈建议将它们存储在以下文件夹中： `user\documents\windowspowershell\`
+不要求在磁盘上存储格式设置文件。 但是，强烈建议将它们存储在以下文件夹中：`user\documents\windowspowershell\`
 
 #### <a name="loading-a-format-file-using-import-formatdata"></a>使用 Update-formatdata 加载格式化文件
 
@@ -59,4 +52,4 @@ ms.locfileid: "72365116"
 
 ## <a name="exporting-format-data"></a>导出格式数据
 
-在此处插入分区正文。
+在此处插入节正文。

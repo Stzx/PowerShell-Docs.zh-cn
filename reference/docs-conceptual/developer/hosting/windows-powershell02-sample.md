@@ -1,19 +1,12 @@
 ---
 title: Windows PowerShell02 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 92492a7e-257d-47d3-b119-89df3c5545e8
-caps.latest.revision: 9
-ms.openlocfilehash: 4d697e73ff4ab4cc4b88593f814d589f89005663
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: a82366a88addb08e186eede79e621d90d915c50f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978638"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779380"
 ---
 # <a name="windows-powershell02-sample"></a>Windows PowerShell02 示例
 
@@ -25,7 +18,7 @@ ms.locfileid: "80978638"
 
 ## <a name="demonstrates"></a>演示
 
-本示例演示下面几点：
+此示例对下列内容进行了说明：
 
 - 创建一个 RunspacePool 对象，该对象具有允许同时打开的最小和最大运行空间。
 - 创建命令列表。

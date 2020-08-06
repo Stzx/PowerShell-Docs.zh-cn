@@ -1,25 +1,18 @@
 ---
-title: ListControl 的 ItemSelectionCondition 的 PropertyName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: 用于 ListControl (Format) 的 ItemSelectionCondition 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d5e707ae-3c84-4ceb-ba31-56b3ffde6d6c
-caps.latest.revision: 7
-ms.openlocfilehash: b15e26e18126f69eee7c3a857f9a461d4bdf5848
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8bdbb05326f7ff5ccffa46215631a5c954080dc1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362386"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780859"
 ---
 # <a name="propertyname-element-for-itemselectioncondition-for-listcontrol-format"></a>PropertyName Element for ItemSelectionCondition for ListControl (Format)
 
-指定触发条件的 .NET 属性。 如果该属性存在或其计算结果为 `true`，则满足条件，并使用视图。 定义列表视图时，将使用此元素。
+指定触发条件的 .NET 属性。 如果该属性存在或其计算结果为 `true` ，则满足条件，并使用视图。 定义列表视图时，将使用此元素。
 
-Configuration 元素（格式） ViewDefinitions 元素（格式） View 元素（format） ListControl 元素（format） ListEntries 元素（format） ListEntry 元素 for ListControl （format）ListControls 的 ListItems for ListControl （Format） ItemSelectionCondition 元素的元素 for ItemSelectionCondition for ListControl 的 PropertyName 元素（Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ListControl 元素 (格式) ListEntries 元素 (格式) ListControl (格式) ListEntry 元素 (ListItems 的 ListEntry 的元素) ListControl 的 ListItems PropertyName 元素 ListControl (格式) ItemSelectionCondition 元素
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ Configuration 元素（格式） ViewDefinitions 元素（格式） View 元素�
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `PropertyName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `PropertyName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ Configuration 元素（格式） ViewDefinitions 元素（格式） View 元素�
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[ListControl 的 ItemSelectionCondition 元素（格式）](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)||
+|[ItemSelectionCondition Element for ListItem for ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)||
 
 ## <a name="text-value"></a>文本值
 
@@ -55,8 +48,8 @@ Configuration 元素（格式） ViewDefinitions 元素（格式） View 元素�
 
 ## <a name="see-also"></a>另请参阅
 
-[ListIControl 的 ItemSelectionCondition 的 ScriptBlock 元素（格式）](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)
+[ListIControl (格式的 ItemSelectionCondition 的 ScriptBlock 元素) ](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)
 
-[ListControl 的 ItemSelectionCondition 元素（格式）](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)
+[ItemSelectionCondition Element for ListItem for ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

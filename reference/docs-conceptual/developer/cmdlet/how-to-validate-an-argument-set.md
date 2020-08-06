@@ -1,21 +1,14 @@
 ---
 title: 如何验证参数集 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateSet attribute, example
-ms.assetid: 55f0f664-d2ad-4501-a3dc-9f7a27c8ab11
-caps.latest.revision: 8
-ms.openlocfilehash: 6d8b189ed6311efd5a7348ab1e58934e9bff12a3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6173f1380583f5b27e2b188990a5ea041f447c57
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365506"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781998"
 ---
 # <a name="how-to-validate-an-argument-set"></a>如何验证参数集
 
@@ -26,7 +19,7 @@ ms.locfileid: "72365506"
 
 ## <a name="to-validate-an-argument-set"></a>验证参数集
 
-- 添加 ValidateSet 特性，如下面的代码所示。 此示例为 `UserName` 参数指定了一组三个可能的值。
+- 添加 ValidateSet 特性，如下面的代码所示。 此示例为参数指定了三个可能的值集 `UserName` 。
 
     ```csharp
     [ValidateSet("Steve", "Mary", "Carl", IgnoreCase = true)]
@@ -46,6 +39,6 @@ ms.locfileid: "72365506"
 
 [System.web. Validatesetattribute](/dotnet/api/System.Management.Automation.ValidateSetAttribute)
 
-[ValidateSet 特性声明](./validateset-attribute-declaration.md)
+[ValidateSet 属性声明](./validateset-attribute-declaration.md)
 
 [编写 Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)

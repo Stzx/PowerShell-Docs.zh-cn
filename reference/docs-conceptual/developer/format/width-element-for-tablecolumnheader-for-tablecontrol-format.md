@@ -1,25 +1,18 @@
 ---
-title: TableControl 的 TableColumnHeader 的 Width 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: TableControl (Format) 的 Width 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 94eb0535-8002-4f17-9a2b-4be75ec20e5c
-caps.latest.revision: 18
-ms.openlocfilehash: 4a25c9d81df670dc10955065bfb66766cdb1bd33
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e9540d3d351041ad7cb98a21bb360ebea7eca117
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367866"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779907"
 ---
 # <a name="width-element-for-tablecolumnheader-for-tablecontrol-format"></a>Width Element for TableColumnHeader for TableControl (Format)
 
-定义列的宽度（以字符为字符）。
+定义列的字符)  (的宽度。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） TableControl 元素（format） TableHeaders 元素 for TableControl （format） TableColumnHeader 元素 TableHeaders for TableControl （Format） Width 元素TableColumnHeader for TableControl （Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) TableControl 元素 (格式) TableHeaders 元素 (TableColumnHeader) 格式 (TableHeaders) 格式 (Width 元素 TableControl) 格式
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72367866"
 <Width>NumberOfCharacters</Width>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节描述定义列标题时使用的 `Width` 元素的特性、子元素和父元素。
+以下各节描述 `Width` 定义列标题时使用的元素的属性、子元素和父元素。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,13 +34,13 @@ ms.locfileid: "72367866"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[TableControl 的 TableHeaders 的 TableColumnHeader 元素（格式）](./tablecolumnheader-element-format.md)|定义表的列的数据的标签、宽度和对齐方式。|
+|[TableControl (格式的 TableHeaders 的 TableColumnHeader 元素) ](./tablecolumnheader-element-format.md)|定义表的列的数据的标签、宽度和对齐方式。|
 
 ## <a name="text-value"></a>文本值
 
-如果可能，请指定大于所显示属性值长度的宽度（字符数）。
+如果出现这种情况，请指定一个大于所显示属性值长度的 (字符) 宽度。
 
 ## <a name="remarks"></a>备注
 
@@ -55,7 +48,7 @@ ms.locfileid: "72367866"
 
 ## <a name="example"></a>示例
 
-下面的示例演示一个宽度为16个字符的 `TableColumnHeader` 元素。
+下面的示例演示一个 `TableColumnHeader` 宽度为16个字符的元素。
 
 ```xml
 <TableColumnHeader>
@@ -69,6 +62,6 @@ ms.locfileid: "72367866"
 
 [创建表视图](./creating-a-table-view.md)
 
-[TableControl 的 TableHeader 的 TableColumnHeader 元素（格式）](./tablecolumnheader-element-format.md)
+[TableControl (格式的 TableHeader 的 TableColumnHeader 元素) ](./tablecolumnheader-element-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

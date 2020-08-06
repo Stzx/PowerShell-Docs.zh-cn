@@ -1,31 +1,24 @@
 ---
 title: 创建 InitialSessionState |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5ae707db-52e0-408c-87fa-b35c42eaaab1
-caps.latest.revision: 5
-ms.openlocfilehash: 9140d03e046def2fbbcc2a842b9ea1b9e1fa2985
-ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
+ms.openlocfilehash: 946adf1006d1afcad2810c85e39f14514e837327
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83271876"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779720"
 ---
 # <a name="creating-an-initialsessionstate"></a>创建 InitialSessionState
 
 PowerShell 命令在运行空间中运行。
 若要在你的应用程序中托管 PowerShell，你必须[创建一个](/dotnet/api/System.Management.Automation.Runspaces.Runspace)
-每个运行空间都有一个与其关联的[InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
+每个运行空间都有一个与其关联的[System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
 InitialSessionState 指定运行空间的特征，例如，哪些命令、变量和模块可用于该运行空间。
 
 ## <a name="create-a-default-initialsessionstate"></a>创建默认 InitialSessionState
 
 **InitialSessionState**类的[CreateDefault](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault)和[CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2)方法可用于创建**InitialSessionState**对象。
-**CreateDefault**方法将创建一个**InitialSessionState** ，其中加载了所有内置命令，而**CreateDefault2**方法只加载承载 PowerShell 所需的命令（来自模块的命令）。
+**CreateDefault**方法将创建一个**InitialSessionState** ，其中加载了所有内置命令，而**CreateDefault2**方法只加载承载 PowerShell (命令从模块) 的命令。
 
 若要进一步限制主机应用程序中可用的命令，需要创建受约束的运行空间。
 有关信息，请参阅[创建受限的运行空间](creating-a-constrained-runspace.md)。

@@ -1,19 +1,12 @@
 ---
 title: 添加和调用命令 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 62be8432-28c1-4ca2-bcdb-d0350163fa8c
-caps.latest.revision: 5
-ms.openlocfilehash: f776f13fe743a3f5f67de0d94883e3f754040ffc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b51c4ae3fa5c5239e3c5c5e65bf7aa63c58c4da9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367636"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779788"
 ---
 # <a name="adding-and-invoking-commands"></a>添加和调用命令
 
@@ -47,7 +40,7 @@ ms.locfileid: "72367636"
 
 ### <a name="addparameter"></a>AddParameter
 
- 前面的示例执行一个不带任何参数的命令。 你可以使用[Pscommand. Addparameter *](/dotnet/api/System.Management.Automation.PSCommand.AddParameter)方法将参数添加到命令。例如，以下代码将获取在计算机上运行的名为 `PowerShell` 的所有进程的列表。
+ 前面的示例执行一个不带任何参数的命令。 你可以使用[Pscommand. Addparameter *](/dotnet/api/System.Management.Automation.PSCommand.AddParameter)方法将参数添加到命令。例如，以下代码获取在 `PowerShell` 计算机上运行的所有名为的进程的列表。
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -79,7 +72,7 @@ PowerShell.Create().AddCommand("Get-Process")
 
 ### <a name="addstatement"></a>AddStatement
 
- 您可以使用[Addstatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement)方法模拟批处理，该方法将其他语句添加到管道的末尾，以下代码获取名称为 `PowerShell`的运行中进程的列表，然后获取正在运行的服务的列表。
+ 你可以通过使用[Addstatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement)方法模拟批处理，该方法将其他语句添加到管道的末尾下面的代码将获取名为的正在运行的进程的列表 `PowerShell` ，然后获取正在运行的服务的列表。
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -90,14 +83,14 @@ ps.Invoke();
 
 ### <a name="addscript"></a>AddScript
 
- 您可以通过调用[Addscript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript)方法来运行现有的脚本。 下面的示例向管道添加一个脚本并运行该脚本。 此示例假设名为 `D:\PSScripts`的文件夹中已有一个名为 `MyScript.ps1` 的脚本。
+ 您可以通过调用[Addscript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript)方法来运行现有的脚本。 下面的示例向管道添加一个脚本并运行该脚本。 此示例假定在名为的文件夹中已有一个名为的脚本 `MyScript.ps1` `D:\PSScripts` 。
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
- 还有一个版本的[Addscript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript)方法，该方法采用名为 `useLocalScope`的布尔参数。 如果将此参数设置为 `true`，则脚本将在本地作用域中运行。 以下代码将在本地作用域中运行该脚本。
+ 还有一个版本的[Addscript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript)方法，它采用名为的布尔参数 `useLocalScope` 。 如果将此参数设置为 `true` ，则脚本将在本地作用域中运行。 以下代码将在本地作用域中运行该脚本。
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -186,4 +179,4 @@ namespace HostPS3
 
  [创建 InitialSessionState](./creating-an-initialsessionstate.md)
 
- [创建受限的运行空间](./creating-a-constrained-runspace.md)
+ [创建受限运行空间](./creating-a-constrained-runspace.md)

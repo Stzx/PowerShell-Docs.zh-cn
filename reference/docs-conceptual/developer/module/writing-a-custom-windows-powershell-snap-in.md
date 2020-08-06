@@ -1,22 +1,15 @@
 ---
 title: 编写自定义 Windows PowerShell 管理单元 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - snap-ins [PowerShell SDK], custom PSSnapin example
 - cmdlets [PowerShell SDK], specified in snap-ins
-ms.assetid: 55c8b5cb-8ee2-4080-afc4-3f09c9f20128
-caps.latest.revision: 6
-ms.openlocfilehash: 9cf4499ec2992c6cfea83fc5d0bf51d0bbfaa96a
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 3672dcc2e962b6795888ab5be3d461380e379315
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811626"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779210"
 ---
 # <a name="writing-a-custom-windows-powershell-snap-in"></a>编写自定义 Windows PowerShell 管理单元
 
@@ -31,41 +24,41 @@ ms.locfileid: "83811626"
 
    在此示例中，类名为 "CustomPSSnapinTest"。
 
-3. 为管理单元的名称添加一个公共属性（必需）。 命名管理单元时，请不要使用以下任何字符： `#` 、 `.` 、 `,` 、 `(` 、 `)` `{` `}` `[` `]` `&` `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、`*`
+3. 为管理单元的名称添加一个公共属性， (所需的) 。 命名管理单元时，请不要使用以下任何字符： `#` 、 `.` 、 `,` 、 `(` 、 `)` `{` `}` `[` `]` `&` `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、`*`
 
    在此示例中，管理单元的名称为 "CustomPSSnapInTest"。
 
-4. 添加管理单元供应商的公共属性（必需）。
+4. 为管理单元供应商添加 (所需) 的公共属性。
 
    在此示例中，供应商为 "Microsoft"。
 
-5. 添加管理单元的供应商资源的公共属性（可选）。
+5. 添加管理单元供应商资源的公共属性， (可选) 。
 
    在此示例中，供应商资源为 "CustomPSSnapInTest，Microsoft"。
 
-6. 添加管理单元说明的公共属性（必需）。
+6. 添加管理单元说明的公共属性， (所需的) 。
 
    在此示例中，说明为： "这是一个包含和 cmdlet 的自定义 Windows PowerShell 管理 `Test-HelloWorld` 单元 `Test-CustomSnapinTest` 。
 
-7. 为管理单元的 "说明" 资源添加公共属性（可选）。
+7. 添加管理单元的描述资源的公共属性， (可选) 。
 
    在此示例中，供应商资源为：
 
    > CustomPSSnapInTest，这是一个自定义的 Windows PowerShell 管理单元，其中包括 HelloWorld 和 CustomSnapinTest cmdlet。
 
-8. 使用[Cmdletconfigurationentry](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry)类指定属于 "自定义管理单元" （可选）的 cmdlet （可选）。 此处添加的信息包括 cmdlet 的名称、其 .NET 类型和 cmdlet 帮助文件名（cmdlet 帮助文件名的格式应该为 `name.dll-help.xml` ）。
+8. 使用[Cmdletconfigurationentry](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry)类指定属于自定义管理单元的 cmdlet， (可选) 中使用。 此处添加的信息包括 cmdlet 的名称、其 .NET 类型和 cmdlet 帮助文件名 (应) cmdlet 帮助文件名格式 `name.dll-help.xml` 。
 
    此示例将添加 HelloWorld 和 TestCustomSnapinTest cmdlet。
 
-9. 指定属于自定义管理单元的提供程序（可选）。
+9. 指定属于自定义管理单元的提供程序 (可选) 。
 
    此示例未指定任何提供程序。
 
-10. 指定属于自定义管理单元的类型（可选）。
+10. 指定属于自定义管理单元 (可选) 的类型。
 
     此示例未指定任何类型。
 
-11. 指定属于自定义管理单元的格式（可选）。
+11. 指定属于自定义管理单元 (可选) 的格式。
 
     此示例未指定任何格式。
 

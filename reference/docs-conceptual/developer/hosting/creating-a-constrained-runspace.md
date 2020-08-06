@@ -1,23 +1,16 @@
 ---
 title: 创建受限的运行空间 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 59125e65-7030-40bb-9926-756120b2d952
-caps.latest.revision: 5
-ms.openlocfilehash: 20ac1e2af8e047b8b572d86a55439676aa8df25c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367646"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779805"
 ---
 # <a name="creating-a-constrained-runspace"></a>创建受限运行空间
 
-出于性能或安全方面的考虑，可能需要限制可用于主机应用程序的 Windows PowerShell 命令。 要执行此操作，请通过调用[Initialsessionstate *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create)方法来创建一个空的[Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) ，然后仅添加所需的命令，然后再添加一个。
+出于性能或安全方面的考虑，可能需要限制可用于主机应用程序的 Windows PowerShell 命令。 为此，可以通过调用System.Management.Automation.Runspaces.Initialsessionstate 创建一个空的[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) [。Create *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) method，然后仅添加所需的命令。
 
  使用仅加载您指定的命令的运行空间可显著提高性能。
 

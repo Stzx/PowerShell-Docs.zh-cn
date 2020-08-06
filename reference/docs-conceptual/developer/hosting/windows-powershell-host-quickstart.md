@@ -1,19 +1,12 @@
 ---
 title: Windows PowerShell 主机快速入门 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
-caps.latest.revision: 9
-ms.openlocfilehash: 390eb2d0153c65967d8c0711c852aa6e13fe4660
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fea6bd5ae49ecf552c583271ee9d869b1ccebae8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360816"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779397"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Windows PowerShell 主机快速入门
 
@@ -58,7 +51,7 @@ ms.locfileid: "72360816"
 
 前面的示例执行一个不带任何参数的命令。
 可以使用[PSCommand. AddParameter](/dotnet/api/System.Management.Automation.PSCommand.AddParameter)方法将参数添加到命令中。
-例如，下面的代码获取在计算机上运行的名为 `PowerShell` 的所有进程的列表。
+例如，下面的代码获取在计算机上运行的所有名为的进程的列表 `PowerShell` 。
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -91,7 +84,7 @@ PowerShell.Create().AddCommand("Get-Process")
 ### <a name="addstatement"></a>AddStatement
 
 您可以使用[AddStatement](/dotnet/api/System.Management.Automation.PowerShell.AddStatement)方法来模拟批处理，该方法将附加语句添加到管道的末尾。
-下面的代码获取名称 `PowerShell`正在运行的进程的列表，然后获取正在运行的服务的列表。
+下面的代码获取名为的正在运行的进程的列表 `PowerShell` ，然后获取正在运行的服务的列表。
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -104,15 +97,15 @@ ps.Invoke();
 
 您可以通过调用[AddScript](/dotnet/api/System.Management.Automation.PowerShell.AddScript)方法来运行现有的脚本。
 下面的示例向管道添加一个脚本并运行该脚本。
-此示例假设名为 `D:\PSScripts`的文件夹中已有一个名为 `MyScript.ps1` 的脚本。
+此示例假定在名为的文件夹中已有一个名为的脚本 `MyScript.ps1` `D:\PSScripts` 。
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
-还有一个 AddScript 方法版本，该方法采用名为 `useLocalScope`的布尔参数。
-如果将此参数设置为 `true`，则脚本将在本地作用域中运行。
+还有一个 AddScript 方法版本，该方法采用名为的布尔参数 `useLocalScope` 。
+如果将此参数设置为 `true` ，则脚本将在本地作用域中运行。
 以下代码将在本地作用域中运行该脚本。
 
 ```csharp
@@ -123,13 +116,13 @@ ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 ## <a name="creating-a-custom-runspace"></a>创建自定义运行空间
 
 虽然前面的示例中使用的默认运行空间加载了所有核心 Windows PowerShell 命令，但你可以创建一个自定义的运行空间，该运行空间仅加载指定的所有命令子集。
-你可能希望执行此操作以提高性能（加载更多的命令是性能下降），或限制用户执行操作的能力。
+你可能想要执行此操作来提高性能 (加载更多命令) 性能下降或限制用户执行操作的能力。
 仅公开有限数量的命令的运行空间称为受限制的运行空间。
-若要创建受限制的运行空间，请使用[InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) [类和 ". 管理类](/dotnet/api/System.Management.Automation.Runspaces.Runspace)"。
+若要创建受限制的[运行空间，](/dotnet/api/System.Management.Automation.Runspaces.Runspace)请使用[tialSessionState 和System.Management.Automation.Runspaces.Ini](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)的类。
 
 ### <a name="creating-an-initialsessionstate-object"></a>创建 InitialSessionState 对象
 
-若要创建自定义运行空间，必须首先创建[InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
+若要创建自定义运行空间，必须首先创建一个[System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
 在下面的示例中，我们将使用[RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory)来创建默认的 InitialSessionState 对象之后的运行空间。
 
 ```csharp
@@ -144,14 +137,14 @@ ps.Invoke();
 
 ### <a name="constraining-the-runspace"></a>约束运行空间
 
-在上面的示例中，我们创建了一个默认的[InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象，该对象加载所有内置核心 Windows PowerShell。
-我们还可以调用[CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2)方法来创建一个 InitialSessionState 对象，该对象只会加载 InitialSessionState 管理单元中的命令，而不是。
-若要创建更受限制的运行空间，必须通过调用[InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create)方法来创建一个空的 InitialSessionState 对象，然后将命令添加到 InitialSessionState。
+在上面的示例中，我们创建了一个默认[System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象，该对象加载所有内置核心 Windows PowerShell。
+我们还可以调用[System.Management.Automation.Runspaces.IniCreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2)方法来创建一个 InitialSessionState 对象，该对象只加载 tialSessionState 管理单元中的命令。
+若要创建更受限制的运行空间，必须通过调用[System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create)方法创建一个空的 InitialSessionState 对象，然后将命令添加到 InitialSessionState。
 
 使用仅加载您指定的命令的运行空间可显著提高性能。
 
 你可以使用[SessionStateCmdletEntry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry)类的方法来定义初始会话状态的 cmdlet）。
-下面的示例创建一个空的初始会话状态，然后定义 `Get-Command`，并将 `Import-Module` 命令添加到初始会话状态。
+下面的示例创建一个空的初始会话状态，然后将和命令定义并添加 `Get-Command` `Import-Module` 到初始会话状态。
 然后创建一个受该初始会话状态约束的运行空间，并执行该运行空间中的命令。
 
 创建初始会话状态。

@@ -1,21 +1,14 @@
 ---
 title: 设计你的 Windows PowerShell 提供程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], designing
-ms.assetid: 11d20319-cc40-4227-b810-4af33372b182
-caps.latest.revision: 10
-ms.openlocfilehash: 6112e64a4a15d9dc8ac28ba51259b6647db4c064
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: dec6c71a2d7bbe5636f96dc140e701213d6f6487
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560043"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778929"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>设计 Windows PowerShell 提供程序
 
@@ -29,7 +22,7 @@ Windows PowerShell 运行时使用 Windows PowerShell 路径访问相应的 Wind
 
 ### <a name="defining-a-drive-qualified-path"></a>定义驱动器限定路径
 
-若要允许用户访问物理驱动器上的数据，Windows PowerShell 提供程序必须支持驱动器限定路径。 此路径以驱动器名称开头，后面跟一个冒号（:)，例如 mydrive： \ abc\bar。
+若要允许用户访问物理驱动器上的数据，Windows PowerShell 提供程序必须支持驱动器限定路径。 此路径以驱动器名称开头，后面跟一个冒号 (： ) ，例如 mydrive： \ abc\bar。
 
 ### <a name="defining-a-provider-qualified-path"></a>定义提供程序限定的路径
 
@@ -41,11 +34,11 @@ Windows PowerShell 运行时使用 Windows PowerShell 路径访问相应的 Wind
 
 ### <a name="defining-a-provider-internal-path"></a>定义提供程序内部路径
 
-若要允许提供程序 cmdlet 使用非 Windows PowerShell 应用程序编程接口（Api）访问数据，Windows PowerShell 提供程序应支持提供程序内部路径。 此路径在提供程序限定的路径中的 "：：" 后指示。 例如，filesystem Windows PowerShell 提供程序的提供程序内部路径为 \\ \uncshare\abc\bar。
+若要允许提供程序 cmdlet 使用非 Windows PowerShell 应用程序编程接口访问数据 (Api) ，你的 Windows PowerShell 提供程序应支持提供程序内部路径。 此路径在提供程序限定的路径中的 "：：" 后指示。 例如，filesystem Windows PowerShell 提供程序的提供程序内部路径为 \\ \uncshare\abc\bar。
 
 ## <a name="changing-stored-data"></a>更改存储的数据
 
-当重写修改基础数据存储区的方法时，请始终使用该方法更改的项的最新版本调用[Cmdletprovider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)方法。 提供程序基础结构确定是否需要将项对象传递到管道，例如当用户指定-PassThru 参数时。 如果检索最新项是一项成本高昂的操作（性能方面），则可测试上下文 PassThru 属性以确定是否确实需要写入结果项。
+当重写修改基础数据存储区的方法时，请始终使用该方法更改的项的最新版本调用[Cmdletprovider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)方法。 提供程序基础结构确定是否需要将项对象传递到管道，例如当用户指定-PassThru 参数时。 如果检索最新的项是一项成本高昂的操作 () ，则可以测试上下文 PassThru 属性以确定是否确实需要写入结果项。
 
 ## <a name="choose-a-base-class-for-your-provider"></a>为提供程序选择基类
 
@@ -68,7 +61,7 @@ Windows PowerShell 提供了许多可用于实现自己的 Windows PowerShell �
 
 [Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)类定义 Windows PowerShell 驱动器提供程序，该提供程序支持用于添加新驱动器、删除现有驱动器和初始化默认驱动器的操作。 例如，Windows PowerShell 提供的 FileSystem 提供程序为装入的所有卷（如硬盘驱动器和 CD/DVD 设备驱动器）初始化驱动器。
 
-此类是从[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider)基类派生的。 下表列出了由此类公开的 cmdlet。 除了列出的 cmdlet 外， `Get-PSDrive` cmdlet （由会话状态公开）是用于检索可用驱动器的相关 cmdlet。
+此类是从[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider)基类派生的。 下表列出了由此类公开的 cmdlet。 除了所列的， `Get-PSDrive` cmdlet (按会话状态公开) 是用于检索可用驱动器的相关 cmdlet。
 
 |      Cmdlet      |                             定义                              |
 | ---------------- | ------------------------------------------------------------------- |
@@ -90,7 +83,7 @@ Windows PowerShell 提供了许多可用于实现自己的 Windows PowerShell �
 
 ### <a name="containercmdletprovider-base-class"></a>ContainerCmdletProvider 基类
 
-[Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider)类定义 Windows PowerShell 容器提供程序，该提供程序向用户公开数据存储项的容器。 请注意，只有当一个容器（无嵌套容器）包含项时，才能使用 Windows PowerShell 容器提供程序。 如果有嵌套容器，则必须实现 Windows PowerShell 导航提供程序。
+[Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider)类定义 Windows PowerShell 容器提供程序，该提供程序向用户公开数据存储项的容器。 请注意，只有当一个容器 (没有与其中的项) 任何嵌套容器时，才能使用 Windows PowerShell 容器提供程序。 如果有嵌套容器，则必须实现 Windows PowerShell 导航提供程序。
 
 此类是从[Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)基类派生的。 下表定义了此类实现的 cmdlet。
 
@@ -160,8 +153,8 @@ Windows PowerShell 提供了许多可用于实现自己的 Windows PowerShell �
 
 |  Cmdlet   |                                                                                                                                                                                                          定义                                                                                                                                                                                                          |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Get-Acl` | 检索访问控制列表（ACL）中包含的信息，该列表是用于保护操作系统资源（例如文件或对象）的安全描述符的一部分。                                                                                                                                                                                                                                      |
-| `Set-Acl` | 设置 ACL 的信息。 它以 Accesscontrol-namespace 的形式出现在为指定路径指定的项上的[Objectsecurity](/dotnet/api/System.Security.AccessControl.ObjectSecurity)实例。 如果 Windows PowerShell 提供程序支持安全信息的设置，则此 cmdlet 可以设置有关注册表中的文件、密钥和子项的信息或任何其他提供程序项。 |
+| `Get-Acl` | 检索访问控制列表中包含的信息 (ACL) ，该列表是用于保护操作系统资源的安全描述符（例如，文件或对象）的一部分。                                                                                                                                                                                                                                      |
+| `Set-Acl` | 设置 ACL 的信息。 它采用) 为指定的路径指定 (的项的实例的[Objectsecurity](/dotnet/api/System.Security.AccessControl.ObjectSecurity)的形式。 如果 Windows PowerShell 提供程序支持安全信息的设置，则此 cmdlet 可以设置有关注册表中的文件、密钥和子项的信息或任何其他提供程序项。 |
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,25 +1,18 @@
 ---
-title: ListControl 的的格式字符串元素（格式） |Microsoft Docs
-ms.custom: ''
+title: ListControl (Format) 的输入的格式字符串元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fd2cac66-88bb-449f-9d47-bd2cd4fe1801
-caps.latest.revision: 13
-ms.openlocfilehash: e6024ec4f7fc490c92408047c8c15c775e45bf9d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9ec73aa1c2e8180258722627e30344de4e67bda5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363016"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781573"
 ---
 # <a name="formatstring-element-for-listitem-for-listcontrol--format"></a>FormatString Element for ListItem for ListControl (Format)
 
 指定一个定义如何显示属性或脚本值的格式模式。
 
-ListEntry 的 ListControl （format） ListControl 元素的配置元素（格式） ViewDefinitions 元素（格式） ListControl 元素（format） ListEntries 元素（format）用于 ListControl 的 ListControl （格式）格式字符串元素的元素（格式）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ListControl 元素 (格式) ListEntries 元素 (ListEntry) 格式 (ListControl 元素 for ListControl) format (ListItems 元素 for ListControl) 格式 (元素 for ListControl) 格式 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ListEntry 的 ListControl （format） ListControl 元素的配置元素（格�
 <FormatString>PropertyPattern</FormatString>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `FormatString` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `FormatString` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,7 +36,7 @@ ListEntry 的 ListControl （format） ListControl 元素的配置元素（格�
 
 |元素|描述|
 |-------------|-----------------|
-|[元素（格式）](./listitem-element-for-listitems-for-listcontrol-format.md)|定义其值显示在列表视图的行中的属性或脚本。|
+|[ (格式的) 元素元素](./listitem-element-for-listitems-for-listcontrol-format.md)|定义其值显示在列表视图的行中的属性或脚本。|
 
 ## <a name="text-value"></a>文本值
 
@@ -57,7 +50,7 @@ ListEntry 的 ListControl （format） ListControl 元素的配置元素（格�
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何为 `StartTime` 属性的值定义格式字符串。
+下面的示例演示如何为属性的值定义格式字符串 `StartTime` 。
 
 ```xml
 <ListItem>
@@ -70,6 +63,6 @@ ListEntry 的 ListControl （format） ListControl 元素的配置元素（格�
 
 [创建列表视图](./creating-a-list-view.md)
 
-[元素（格式）](./listitem-element-for-listitems-for-listcontrol-format.md)
+[ (格式的) 元素元素](./listitem-element-for-listitems-for-listcontrol-format.md)
 
 [编写 Windows PowerShell 格式设置和类型文件](./writing-a-powershell-formatting-file.md)

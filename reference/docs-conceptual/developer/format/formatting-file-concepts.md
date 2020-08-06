@@ -1,25 +1,18 @@
 ---
 title: 格式化文件概念 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1804dbe4-69eb-4b0b-bc40-cbb2f00bb083
-caps.latest.revision: 10
-ms.openlocfilehash: 81b035f3cb44dcb672f5951511d03542e694cc42
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6849a61ab1796ae49c73550b48e78de6f787274e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362976"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781488"
 ---
 # <a name="formatting-file-concepts"></a>格式设置文件概念
 
 本节中的主题提供了您在创建自己的格式化文件时可能需要了解的信息，如您可以定义的不同类型的视图，以及这些视图的特殊组件。
 
-## <a name="in-this-section"></a>本部分内容
+## <a name="in-this-section"></a>本节内容
 
 [创建表视图](./creating-a-table-view.md)提供显示的表视图和用于定义视图的 XML 元素的示例。
 
@@ -29,7 +22,7 @@ ms.locfileid: "72362976"
 
 [创建自定义控件](./creating-custom-controls.md)提供自定义控件的示例。
 
-[定义公共配置功能](./defining-common-configuration-features.md)
+[定义常见的配置功能](./defining-common-configuration-features.md)
 
 [定义选择集](./defining-selection-sets.md)提供信息和示例，并介绍用于创建选择集的 XML 元素。
 

@@ -1,23 +1,16 @@
 ---
 title: 参数别名 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7c9096a1-46fa-48ea-9b8a-a583484b9d68
-caps.latest.revision: 13
-ms.openlocfilehash: 6545e71ea18d10621ee9c203e70f64dece460ef5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e320eeb4d2ab91acf2116fdc817a50e93c82aead
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369586"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781981"
 ---
 # <a name="parameter-aliases"></a>参数别名
 
-Cmdlet 参数也可以有别名。 在命令中键入或指定参数时，可以使用别名，而不是参数名称。
+Cmdlet 参数还可以有别名。 在命令中键入或指定参数时，可以使用别名，而不是参数名称。
 
 ## <a name="benefits-of-using-aliases"></a>使用别名的好处
 
@@ -35,7 +28,7 @@ Cmdlet 参数也可以有别名。 在命令中键入或指定参数时，可以
 
 ## <a name="defining-parameter-aliases"></a>定义参数别名
 
-若要为参数定义别名，请声明 Alias 特性，如下面的参数声明中所示。 在此示例中，为同一参数定义了多个别名。 （有关详细信息，请参阅[如何声明 Cmdlet 参数](./how-to-declare-cmdlet-parameters.md)。）
+若要为参数定义别名，请声明 Alias 特性，如下面的参数声明中所示。 在此示例中，为同一参数定义了多个别名。  (有关详细信息，请参阅[如何声明 Cmdlet 参数](./how-to-declare-cmdlet-parameters.md)。 ) 
 
 ```csharp
 [Alias("UN","Writer","Editor")]

@@ -1,25 +1,18 @@
 ---
-title: WideEntry 的 EntrySelectedBy 的 TypeName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: EntrySelectedBy for WideEntry (Format) 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 81a91c74-6229-4b64-aa2b-9123e8b7e9e5
-caps.latest.revision: 11
-ms.openlocfilehash: be35f6e9e2ad0b2d9a21a91c053aa0f70cafaf9c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9af443067467f590df824b28636f57b807a4fc94
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361616"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780179"
 ---
 # <a name="typename-element-for-entryselectedby-for-wideentry-format"></a>TypeName Element for EntrySelectedBy for WideEntry (Format)
 
 为定义指定 .NET 类型。 只要显示此对象，就会使用定义。
 
-EntrySelectedBy 的 ViewDefinitions 元素（格式） WideControl 元素（格式） WideEntries 元素（格式） WideEntry 元素（format） WideEntry 元素 for WideEntry （Format） TypeName 元素 for （形式
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) WideControl 元素 (格式) WideEntries 元素 (格式) WideEntry 元素 (格式) EntrySelectedBy (格式) WideEntry 元素 (WideEntry) 格式
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ EntrySelectedBy 的 ViewDefinitions 元素（格式） WideControl 元素（格�
 <TypeName>Nameof.NetType</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `TypeName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `TypeName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,11 +36,11 @@ EntrySelectedBy 的 ViewDefinitions 元素（格式） WideControl 元素（格�
 
 |元素|描述|
 |-------------|-----------------|
-|[WideEntry 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-wideentry-format.md)|定义使用此宽项的 .NET 类型或此项要使用的条件。|
+|[EntrySelectedBy Element for WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)|定义使用此宽项的 .NET 类型或此项要使用的条件。|
 
 ## <a name="text-value"></a>文本值
 
-指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo`。
+指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo` 。
 
 ## <a name="remarks"></a>备注
 
@@ -59,6 +52,6 @@ EntrySelectedBy 的 ViewDefinitions 元素（格式） WideControl 元素（格�
 
 [创建宽视图](./creating-a-wide-view.md)
 
-[WideEntry 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-wideentry-format.md)
+[EntrySelectedBy Element for WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)
