@@ -1,25 +1,18 @@
 ---
-title: CustomControl 的 ExpressionBinding 的 ScriptBlock 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: ExpressionBinding for CustomControl 的 ScriptBlock 元素 for View (Format) |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d52d020c-3271-40d5-b4bb-7a5ef0caec8f
-caps.latest.revision: 6
-ms.openlocfilehash: 9f5f188b006c5dfac1d04ef4d5aa5606935db9be
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: de8dc60ac92d92b85c88f222db0d8e237cd5c858
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364906"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785466"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format"></a>ScriptBlock Element for ExpressionBinding for CustomControl for View (Format)
 
 指定其值由控件显示的脚本。 定义自定义控件视图时，将使用此元素。
 
-Configuration Element （Format） ViewDefinitions 元素（格式） View 元素（format） CustomControl 元素 for View （format） CustomEntries 元素 for CustomControl for CustomEntry for CustomEntries for View （Format） CustomControl 元素 for view （Format） CustomItem 元素 for CustomEntry for CustomControl for CustomItem for CustomControl for ExpressionBinding for CustomCustomControl for view （format） ScriptBlock 元素 for for view （Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (Format) CustomControl 元素 for view (Format) CustomEntries 元素 for CustomControl for CustomEntry for CustomEntries for for CustomControl for CustomItem for CustomEntry for CustomControl for ExpressionBinding for CustomItem for CustomControl ExpressionBinding for view (format) CustomCustomControl 元素（for 的元素 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ Configuration Element （Format） ViewDefinitions 元素（格式） View 元�
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `ScriptBlock` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `ScriptBlock` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ Configuration Element （Format） ViewDefinitions 元素（格式） View 元�
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于 View 的 CustomControl 的 CustomItem 的 ExpressionBinding 元素（格式）](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)|定义控件显示的数据。|
+|[ExpressionBinding Element for CustomItem for CustomControl for View (Format)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)|定义控件显示的数据。|
 
 ## <a name="text-value"></a>文本值
 
@@ -53,6 +46,6 @@ Configuration Element （Format） ViewDefinitions 元素（格式） View 元�
 
 ## <a name="see-also"></a>另请参阅
 
-[用于 View 的 CustomControl 的 CustomItem 的 ExpressionBinding 元素（格式）](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)
+[ExpressionBinding Element for CustomItem for CustomControl for View (Format)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

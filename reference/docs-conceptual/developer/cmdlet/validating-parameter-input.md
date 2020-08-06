@@ -1,29 +1,22 @@
 ---
 title: 正在验证参数输入 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - parameters, validation rules
 - validation, examples
 - validation
-ms.assetid: 3f15bf20-a068-4a7d-a170-bc43f755d1fe
-caps.latest.revision: 14
-ms.openlocfilehash: 171e3e974619e197a0bcc9dfc759297005e34568
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e12c715cfa24edfff958b12be1f3517b2f545256
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363506"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783987"
 ---
 # <a name="validating-parameter-input"></a>验证参数输入
 
 PowerShell 可以通过多种方式验证传递到 cmdlet 参数的参数。
 PowerShell 可以验证参数的字符的长度、范围和模式。
-它可以验证可用参数的数目（计数）。
+它可以验证计数)  (可用参数的数目。
 这些验证规则由使用 cmdlet 类的公共属性上的 Parameter 特性声明的验证特性定义。
 
 若要验证参数参数，PowerShell 运行时使用验证特性提供的信息来确认在运行 cmdlet 之前参数的值。

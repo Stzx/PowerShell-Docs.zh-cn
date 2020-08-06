@@ -1,19 +1,12 @@
 ---
 title: Cmdlet 代码示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6fed2f68-ce6d-4a8f-bf21-f94f27a155c2
-caps.latest.revision: 9
-ms.openlocfilehash: 936728d64f30a08fb9e2fa9ccef103683594aa3e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2d2597d3d3f64cae1c1494eb2f05873f6feae5e0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364496"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784327"
 ---
 # <a name="examples-of-cmdlet-code"></a>Cmdlet 代码示例
 
@@ -22,7 +15,7 @@ ms.locfileid: "72364496"
 > [!IMPORTANT]
 > 如需编写 cmdlet 的分步说明，请参阅[编写 Cmdlet 教程](./tutorials-for-writing-cmdlets.md)。
 
-## <a name="in-this-section"></a>本部分内容
+## <a name="in-this-section"></a>本节内容
 
 [如何编写简单的 Cmdlet](./how-to-write-a-simple-cmdlet.md)此示例显示了 cmdlet 代码的基本结构。
 

@@ -1,33 +1,26 @@
 ---
 title: 向 Cmdlet 添加非终止错误报告 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
-caps.latest.revision: 8
-ms.openlocfilehash: ec29d1cffa083e4cce667d3e1efbd4eeecbffb51
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 6421d510f3701c12807568ad8786459123e80223
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870109"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784582"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>向 Cmdlet 添加非终止错误报告
 
-Cmdlet 可以通过调用["WriteError"。][]方法来报告非终止错误，并继续对当前输入对象或更多传入管道对象执行操作。 本部分介绍如何创建一个 cmdlet，该 cmdlet 报告来自其输入处理方法的非终止错误。
+Cmdlet 可以通过调用[WriteError][]方法来报告非终止错误，并继续对当前输入对象或更多传入管道对象执行操作。 本部分介绍如何创建一个 cmdlet，该 cmdlet 报告来自其输入处理方法的非终止错误。
 
-对于非终止错误（以及终止错误），该 cmdlet 必须通过标识错误的[System.web. ErrorRecord][]对象。 每个错误记录均由名为 "错误标识符" 的唯一字符串标识。 除了标识符以外，每个错误的类别都由[System.web. ErrorCategory][]枚举定义的常量指定。 用户可以通过将 `$ErrorView` 变量设置为 "CategoryView" 来基于其类别查看错误。
+对于非终止错误 (和) 终止错误，该 cmdlet 必须通过标识错误的[ErrorRecord][]对象。 每个错误记录均由名为 "错误标识符" 的唯一字符串标识。 除了标识符以外，每个错误的类别都由[ErrorCategory][]枚举定义的常量指定。 用户可以通过将 `$ErrorView` 变量设置为 "CategoryView" 来基于其类别查看错误。
 
 有关错误记录的详细信息，请参阅[Windows PowerShell 错误记录](./windows-powershell-error-records.md)。
 
 ## <a name="defining-the-cmdlet"></a>定义 Cmdlet
 
-创建 cmdlet 的第一步是始终命名 cmdlet 并声明实现 cmdlet 的 .NET 类。 此 cmdlet 检索进程信息，因此此处选择的谓词名称为 "Get"。 （几乎任何能够检索信息的 cmdlet 都可以处理命令行输入。）有关批准的 cmdlet 谓词的详细信息，请参阅[Cmdlet 谓词名称](approved-verbs-for-windows-powershell-commands.md)。
+创建 cmdlet 的第一步是始终命名 cmdlet 并声明实现 cmdlet 的 .NET 类。 此 cmdlet 检索进程信息，因此此处选择的谓词名称为 "Get"。  (几乎任何支持检索信息的 cmdlet，都可以处理命令行输入。 ) 有关已批准的 cmdlet 动词的详细信息，请参阅[Cmdlet 谓词名称](approved-verbs-for-windows-powershell-commands.md)。
 
-下面是此 `Get-Proc` cmdlet 的定义。 [创建第一个 Cmdlet](creating-a-cmdlet-without-parameters.md)中提供了此定义的详细信息。
+下面是此 cmdlet 的定义 `Get-Proc` 。 [创建第一个 Cmdlet](creating-a-cmdlet-without-parameters.md)中提供了此定义的详细信息。
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -78,19 +71,19 @@ End Property
 
 ## <a name="overriding-input-processing-methods"></a>重写输入处理方法
 
-所有 cmdlet 必须重写由[System.object。][]类提供的输入处理方法中的至少一个。 这些方法在[创建第一个 Cmdlet](creating-a-cmdlet-without-parameters.md)中进行了介绍。
+所有 cmdlet 必须重写由[system.web][]类提供的输入处理方法中的至少一个。 这些方法在[创建第一个 Cmdlet](creating-a-cmdlet-without-parameters.md)中进行了介绍。
 
 > [!NOTE]
 > 你的 cmdlet 应尽可能独立地处理每条记录。
 
-此 Get-Proc cmdlet 将重写["ProcessRecord"。][]方法，以处理用户或脚本提供的输入的 **Name** 参数的名称。 如果未提供任何名称，则此方法将获取每个请求的进程名称或所有进程的进程。 [创建第一个 Cmdlet](creating-a-cmdlet-without-parameters.md)时提供了此替代的详细信息。
+此 ProcessRecord cmdlet 将重写[System.Management.Automation.Cmdlet.ProcessRecord][]方法，以处理用户或脚本提供的输入的 Name 参数的**名称**。 如果未提供任何名称，则此方法将获取每个请求的进程名称或所有进程的进程。 [创建第一个 Cmdlet](creating-a-cmdlet-without-parameters.md)时提供了此替代的详细信息。
 
 ### <a name="things-to-remember-when-reporting-errors"></a>报告错误时要记住的问题
 
-在写入错误时 cmdlet 传递的[System.web. ErrorRecord][]对象在其核心处需要异常。 确定要使用的异常时，请遵循 .NET 指导原则。
-基本上，如果错误与现有异常在语义上相同，则该 cmdlet 应使用或派生自该异常。 否则，它应直接从[System.Exception][]新的异常或异常层次结构。
+在写入错误时 cmdlet 传递的[ErrorRecord][]对象在其核心处需要异常。 确定要使用的异常时，请遵循 .NET 指导原则。
+基本上，如果错误与现有异常在语义上相同，则该 cmdlet 应使用或派生自该异常。 否则，它应直接从[system.exception 类派生][]新的异常或异常层次结构。
 
-创建错误标识符（通过 ErrorRecord 类的 FullyQualifiedErrorId 属性访问）时，请记住以下事项。
+创建错误标识符 (通过 ErrorRecord 类的 FullyQualifiedErrorId 属性访问时) 请注意以下事项。
 
 - 使用针对诊断目的的字符串，以便在检查完全限定的标识符时，可以确定错误是什么，以及错误来自何处。
 
@@ -98,7 +91,7 @@ End Property
 
   `CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCommand`
 
-请注意，在前面的示例中，错误标识符（第一个标记）指定了错误的含义，剩余部分指示错误来自何处。
+请注意，在前面的示例中，错误标识符 (第一个标记) 指定错误是什么，剩余部分指示错误来自何处。
 
 - 对于更复杂的方案，错误标识符可以是可以在检查时进行分析的以句点分隔的标记。 这允许你过于按错误标识符的部分以及错误标识符和错误类别进行分支。
 
@@ -115,9 +108,9 @@ End Property
 
 ## <a name="reporting-nonterminating-errors"></a>报告非终止错误
 
-输入处理方法中的任何一种都可以使用["WriteError"。][]方法将非终止错误报告给输出流。
+输入处理方法中的任何一种都可以使用[WriteError][]方法将非终止错误报告给输出流。
 
-下面是来自此 WriteError cmdlet 的代码示例，该代码示例演示了如何从["ProcessRecord"。][]方法的重写中调用对["WriteError"。][] 的调用。 在这种情况下，如果 cmdlet 找不到指定进程标识符的进程，则调用。
+下面是来自此 WriteError cmdlet 的代码示例，该代码示例演示了如何从[ProcessRecord][]方法的重写中调用对[System.Management.Automation.Cmdlet.WriteError][]的调用。。 在这种情况下，如果 cmdlet 找不到指定进程标识符的进程，则调用。
 
 ```csharp
 protected override void ProcessRecord()
@@ -161,13 +154,13 @@ protected override void ProcessRecord()
 
 对于非终止错误，cmdlet 必须为每个特定输入对象生成特定的错误标识符。
 
-Cmdlet 经常需要修改非终止错误产生的 PowerShell 操作。 它可以通过定义 `ErrorAction` 和 `ErrorVariable` 参数来实现此目的。 如果定义 `ErrorAction` 参数，该 cmdlet 将提供用户选项[System.web. ActionPreference][]，还可以通过设置 `$ErrorActionPreference` 变量直接影响该操作。
+Cmdlet 经常需要修改非终止错误产生的 PowerShell 操作。 它可以通过定义和参数来实现此目的 `ErrorAction` `ErrorVariable` 。 如果定义 `ErrorAction` 参数，则该 cmdlet 将显示用户选项[ActionPreference][]，还可以通过设置变量直接影响该操作 `$ErrorActionPreference` 。
 
-该 cmdlet 可以使用 `ErrorVariable` 参数将非终止错误保存到变量，此参数不受 `ErrorAction`的设置影响。 可以通过将加号（+）添加到变量名前面来向现有错误变量追加失败。
+Cmdlet 可以使用参数将非终止错误保存到变量 `ErrorVariable` ，这不受的设置影响 `ErrorAction` 。 可以通过在变量名称前面添加一个加号 (+) ，将失败追加到现有错误变量。
 
 ## <a name="code-sample"></a>代码示例
 
-有关完整C#的示例代码，请参阅[GetProcessSample04 示例](./getprocesssample04-sample.md)。
+有关完整的 c # 示例代码，请参阅[GetProcessSample04 示例](./getprocesssample04-sample.md)。
 
 ## <a name="define-object-types-and-formatting"></a>定义对象类型和格式设置
 
@@ -197,7 +190,7 @@ PowerShell 使用 .NET 对象在 cmdlet 之间传递信息。 因此，cmdlet �
 
 ## <a name="see-also"></a>另请参阅
 
-[添加处理管道输入的参数](./adding-parameters-that-process-pipeline-input.md)
+[添加用于处理管道输入的参数](./adding-parameters-that-process-pipeline-input.md)
 
 [添加用于处理命令行输入的参数](./adding-parameters-that-process-command-line-input.md)
 
@@ -207,7 +200,7 @@ PowerShell 使用 .NET 对象在 cmdlet 之间传递信息。 因此，cmdlet �
 
 [如何注册 Cmdlet、提供程序和主机应用程序](/previous-versions/ms714644(v=vs.85))
 
-[Windows PowerShell Reference](../windows-powershell-reference.md)（Windows PowerShell 参考）
+[Windows PowerShell 参考](../windows-powershell-reference.md)
 
 [Cmdlet 示例](./cmdlet-samples.md)
 

@@ -1,31 +1,24 @@
 ---
 title: GetProcessSample03 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fc9d80ee-6ebd-48cd-a7ea-53cb2b442a22
-caps.latest.revision: 6
-ms.openlocfilehash: ec5a8c284dd3fa772261099281aba1fb68c49118
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 09df93792ab611e167279bc35755d8d6c28e7cf3
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369706"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784208"
 ---
 # <a name="getprocesssample03-sample"></a>GetProcessSample03 示例
 
-此示例演示如何实现一个用于检索本地计算机上的进程的 cmdlet。 它提供一个 `Name` 参数，该参数可接受来自管道的对象，或从对象的属性中接受值，该对象的属性名称与参数名称相同。 此 cmdlet 是 Windows PowerShell 2.0 提供的 `Get-Process` cmdlet 的简化版本。
+此示例演示如何实现一个用于检索本地计算机上的进程的 cmdlet。 它提供一个 `Name` 参数，该参数可接受管道中的对象或来自对象属性的值，该对象的属性名称与参数名称相同。 此 cmdlet 是 `Get-Process` Windows PowerShell 2.0 提供的简化版本的 cmdlet。
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>如何使用 Visual Studio 生成示例。
 
-1. 安装 Windows PowerShell 2.0 SDK 后，导航到 GetProcessSample03 文件夹。 默认位置为 C:\Program Files （x86） \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample03。
+1. 安装 Windows PowerShell 2.0 SDK 后，导航到 GetProcessSample03 文件夹。 默认位置为 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample03。
 
-2. 双击解决方案（.sln）文件的图标。 这会在 Visual Studio 中打开示例项目。
+2. 双击解决方案的图标 ( .sln) 文件。 这会在 Visual Studio 中打开示例项目。
 
-3. 在“生成”菜单中选择“生成解决方案”。
+3. 在“生成”菜单中选择“生成解决方案” 。
 
     示例库将在默认的 \bin 或 \bin\debug 文件夹中生成。
 
@@ -51,7 +44,7 @@ ms.locfileid: "72369706"
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此示例演示以下各项。
 
@@ -67,7 +60,7 @@ ms.locfileid: "72369706"
 
 ## <a name="example"></a>示例
 
-此示例演示了获取处理器 cmdlet 的实现，该 cmdlet 包含接受来自管道的输入的 `Name` 参数。
+此示例演示了获取处理器 cmdlet 的实现，该 cmdlet 包含 `Name` 接受来自管道的输入的参数。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands

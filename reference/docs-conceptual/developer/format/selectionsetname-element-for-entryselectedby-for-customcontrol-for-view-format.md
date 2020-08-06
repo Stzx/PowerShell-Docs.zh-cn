@@ -1,25 +1,18 @@
 ---
-title: 用于 CustomControl for View （Format）的 EntrySelectedBy 的 SelectionSetName 元素 |Microsoft Docs
-ms.custom: ''
+title: 用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 859d2335-7fcd-4efd-b1cc-3d171e334c6b
-caps.latest.revision: 7
-ms.openlocfilehash: f4bf820be88919af43eeaf043b3ed8b9c06e1bf2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3728a1886d5406b8fa4888125d1c031d0f9b1b03
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364746"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785296"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format"></a>SelectionSetName Element for EntrySelectedBy for CustomControl for View (Format)
 
 为列表条目指定一组 .NET 对象。 对于可为条目指定的选项集数没有限制。
 
-用于 CustomEntry 的 CustomControl for view （format） CustomEntries 元素的配置元素（格式） ViewDefinitions 元素（格式） CustomControl 元素（format） CustomEntries 元素 EntrySelectedByCustomEntry 的 EntrySelectedBy 的 CustomEntry for View （Format） SelectionSetName 元素的元素
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) CustomControl 元素 (格式) CustomEntries 元素 (CustomEntry 的 CustomControl 的元素) CustomEntries 的 EntrySelectedBy 元素 (CustomEntry 的 SelectionSetName 元素 EntrySelectedBy) 格式 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72364746"
 <SelectionSetName>NameofSelectionSet</SelectionSetName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `SelectionSetName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `SelectionSetName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,7 +36,7 @@ ms.locfileid: "72364746"
 
 |元素|描述|
 |-------------|-----------------|
-|[用于视图的 CustomEntry 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|定义使用此自定义项的 .NET 类型或此项要使用的条件。|
+|[View (格式的 CustomEntry 的 EntrySelectedBy 元素) ](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|定义使用此自定义项的 .NET 类型或此项要使用的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -59,8 +52,8 @@ ms.locfileid: "72364746"
 
 ## <a name="see-also"></a>另请参阅
 
-[用于视图的 CustomEntry 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)
+[View (格式的 CustomEntry 的 EntrySelectedBy 元素) ](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)
 
 [自定义控件视图](./creating-custom-controls.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

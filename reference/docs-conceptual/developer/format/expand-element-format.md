@@ -1,25 +1,18 @@
 ---
-title: Expand 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: " (格式) 展开元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: faa0314b-f6f1-44fd-ad2b-b00cbe38923f
-caps.latest.revision: 9
-ms.openlocfilehash: 8b924c989133b47e4d95d8429778003c76595d58
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: deee832254bb8a774ee2c1f5bd451d3ced1bd47a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368736"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783647"
 ---
 # <a name="expand-element-format"></a>Expand Element (Format)
 
 指定为此定义扩展集合对象的方式。
 
-配置元素（格式） DefaultSettings 元素（格式） EnumerableExpansions 元素（格式） EnumerableExpansion 元素（格式） Expand 元素（格式）
+配置元素 (格式) DefaultSettings 元素 (格式) EnumerableExpansions 元素 (格式) EnumerableExpansion 元素 (格式) Expand 元素 (格式) 
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72368736"
 <Expand>EnumOnly, CoreOnly, Both</Expand>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `Expand` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `Expand` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,7 +36,7 @@ ms.locfileid: "72368736"
 
 |元素|描述|
 |-------------|-----------------|
-|[EnumerableExpansion 元素（格式）](./enumerableexpansion-element-format.md)|定义特定 .NET 集合对象在视图中显示的方式。|
+|[EnumerableExpansion Element (Format)](./enumerableexpansion-element-format.md)|定义特定 .NET 集合对象在视图中显示的方式。|
 
 ## <a name="text-value"></a>文本值
 
@@ -63,4 +56,4 @@ ms.locfileid: "72368736"
 
 ## <a name="see-also"></a>另请参阅
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

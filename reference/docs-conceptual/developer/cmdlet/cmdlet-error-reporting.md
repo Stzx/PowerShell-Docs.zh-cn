@@ -1,25 +1,18 @@
 ---
 title: Cmdlet 错误报告 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - error records [PowerShell], terminating
 - non-terminating errors [PowerShell]
 - error records [PowerShell]
 - terminating errors [PowerShell]
 - error records [PowerShell], non-terminating
-ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
-caps.latest.revision: 8
-ms.openlocfilehash: 5dfec318438ca139518c596011ac5e56445738ea
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30b19914253db5f517f5ab76623b54aced0c0598
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365916"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784463"
 ---
 # <a name="cmdlet-error-reporting"></a>Cmdlet 错误报告
 
@@ -43,7 +36,7 @@ ms.locfileid: "72365916"
 
 ## <a name="reporting-nonterminating-errors"></a>报告非终止错误
 
-非终止错误的报告应始终在 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)  方法、[System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法或 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 方法的cmdlet 实现内完成，否则应始终在该 cmdlet 的实现中完成此操作的报告。 方法。 这些类型的错误通过调用[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)方法进行报告，后者会将错误记录发送到错误流。
+非终止错误的报告应始终在 BeginProcessing 方法、ProcessRecord 方法或[System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) [方法的](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)cmdlet 实现内完成，否则应始终在该 cmdlet 的实现中完成此操作的报告。 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法。 这些类型的错误通过调用[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)方法进行报告，后者会将错误记录发送到错误流。
 
 ## <a name="reporting-terminating-errors"></a>报告终止错误
 
@@ -64,7 +57,7 @@ PowerShell 将此标识符与 cmdlet 标识符组合在一起，创建完全限�
 
 - 将不同的、高度特定的错误标识符分配给不同的代码路径。 调用[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)或[ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)的每个代码路径都应具有其自己的错误标识符的错误标识符。
 
-- 错误标识符对于终止和非终止错误应是公共语言运行时（CLR）异常类型所特有的。
+- 错误标识符对于公共语言运行时应是唯一的 (CLR) 异常类型，用于终止和非终止错误。
 
 - 请勿更改 cmdlet 或 PowerShell 提供程序版本之间的错误标识符的语义。 建立错误标识符的语义后，它应在 cmdlet 的整个生命周期中保持不变。
 
@@ -82,9 +75,9 @@ PowerShell 将此标识符与 cmdlet 标识符组合在一起，创建完全限�
 
 有关可用的错误类别的说明，请参阅[ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory)枚举。 通常，应尽可能避免使用**NoError**、 **UndefinedError**和**GenericError** 。
 
-用户在将 `$ErrorView` 设置为**CategoryView**时，可以根据类别查看错误。
+用户可以根据类别设置为 "CategoryView" 查看 `$ErrorView` 错误**CategoryView**。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Cmdlet 概述](./cmdlet-overview.md)
 

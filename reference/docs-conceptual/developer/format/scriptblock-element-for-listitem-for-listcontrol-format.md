@@ -1,25 +1,18 @@
 ---
-title: ListControl 的的 ScriptBlock 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: ListControl 的 ScriptBlock 元素) 的 (格式 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 74e30938-00ef-46fd-84e5-f0a83706a50e
-caps.latest.revision: 11
-ms.openlocfilehash: 76b600256af3f957f7fe0578f9fef810262aa5d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 249d3e36b4246b7baa410815122f8e30340f1862
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364806"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785449"
 ---
 # <a name="scriptblock-element-for-listitem-for-listcontrol-format"></a>ScriptBlock Element for ListItem for ListControl (Format)
 
 指定其值在行中显示的脚本。
 
-用于 ListEntry 的 ListEntries for ListControl （Format） ListItems 元素的 ListControl （Format） ListEntry 元素的 Configuration Element （Format） ViewDefinitions 元素（格式） ListControl 元素（format） ListEntries 元素对于 ListControl （Format）的 ListControl （格式） ListItems 的 ListControl （格式） ScriptBlock 元素
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ListControl 元素 (格式) ListEntries 元素 (ListEntry 的 ListControl) 格式 (ListEntries for ListControl 的 ListItems 元素) ListEntry (的 ScriptBlock 元素) ListControl (格式) 的 ScriptBlock 元素 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72364806"
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `ScriptBlock` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `ScriptBlock` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ ms.locfileid: "72364806"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[元素（格式）](./listitem-element-for-listitems-for-listcontrol-format.md)|定义其值显示在列表视图的行中的属性或脚本。|
+|[ (格式的) 元素元素](./listitem-element-for-listitems-for-listcontrol-format.md)|定义其值显示在列表视图的行中的属性或脚本。|
 
 ## <a name="text-value"></a>文本值
 
@@ -68,10 +61,10 @@ ms.locfileid: "72364806"
 
 ## <a name="see-also"></a>另请参阅
 
-[ListControl 的名称名称元素（格式）](./propertyname-element-for-listitem-for-listcontrol-format.md)
+[PropertyName Element for ListItem for ListControl (Format)](./propertyname-element-for-listitem-for-listcontrol-format.md)
 
 [创建列表视图](./creating-a-list-view.md)
 
-[ListControl 的 ListItems 元素（格式）](./listitem-element-for-listitems-for-listcontrol-format.md)
+[ListItem Element for ListItems for ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

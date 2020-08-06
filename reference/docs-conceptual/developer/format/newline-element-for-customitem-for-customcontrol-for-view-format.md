@@ -1,25 +1,18 @@
 ---
-title: CustomControl 的 CustomItem for 的换行符元素 |Microsoft Docs
-ms.custom: ''
+title: 用于 CustomControl 的 CustomItem for 的行元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1ca84152-c2b7-492c-8a2e-d0587ab9d7b9
-caps.latest.revision: 9
-ms.openlocfilehash: 48ef14b2a70eecb6ae885739dd3c58ef6e9adb1f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 89fdcfaf8fdea44921ec6967e8e152d81fd63cc9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365066"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785636"
 ---
 # <a name="newline-element-for-customitem-for-customcontrol-for-view-format"></a>NewLine Element for CustomItem for CustomControl for View (Format)
 
 向控件的显示添加一个空白行。 定义自定义控件视图时，将使用此元素。
 
-用于 CustomEntry 的 CustomControl for view （format） CustomEntries 元素的 ViewDefinitions 元素（format） View 元素（format） CustomControl 元素（format） CustomEntries 元素CustomItem 的 CustomEntry （格式）换行符元素
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) CustomControl 元素 (格式) CustomEntries 元素 (CustomEntry 的 CustomControl 的元素) CustomEntries 的 CustomItem 元素 (CustomEntry) 格式 (CustomItem
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72365066"
 <NewLine/>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `NewLine` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `NewLine` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,14 +34,14 @@ ms.locfileid: "72365066"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于视图的 CustomEntry 的 CustomItem 元素（格式）](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|定义自定义控件视图的控件。|
+|[View (格式的 CustomEntry 的 CustomItem 元素) ](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|定义自定义控件视图的控件。|
 
 ## <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>另请参阅
 
-[用于视图的 CustomEntry 的 CustomItem 元素（格式）](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)
+[View (格式的 CustomEntry 的 CustomItem 元素) ](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

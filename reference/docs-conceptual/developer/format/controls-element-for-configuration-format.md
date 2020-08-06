@@ -1,25 +1,18 @@
 ---
-title: 用于配置的 Controls 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: 配置 (格式) 的控件元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4d4ef63d-5866-4319-ba00-7ed96de26821
-caps.latest.revision: 18
-ms.openlocfilehash: ac9f7ff08f6e87ef83b5a2fe23fc58ee2651566d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 44b9db0d3523e5e9086da9911882b258a2a54ca6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368996"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783783"
 ---
 # <a name="controls-element-for-configuration-format"></a>Controls Element for Configuration (Format)
 
 定义可供格式设置文件的所有视图使用的公共控件。
 
-配置元素（格式）控件配置的元素（格式）
+配置元素 (格式) 配置 (格式的元素) 
 
 ## <a name="syntax"></a>语法
 
@@ -29,11 +22,11 @@ ms.locfileid: "72368996"
 </Controls>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `Controls` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `Controls` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,13 +34,13 @@ ms.locfileid: "72368996"
 
 |元素|描述|
 |-------------|-----------------|
-|[用于配置控件的控件元素（格式）](./control-element-for-controls-for-configuration-format.md)|必需的元素。<br /><br /> 定义可供格式设置文件的所有视图使用的公共控件。|
+|[Control Element for Controls for Configuration (Format)](./control-element-for-controls-for-configuration-format.md)|必需的元素。<br /><br /> 定义可供格式设置文件的所有视图使用的公共控件。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[配置元素（格式）](./configuration-element-format.md)|表示格式设置文件的顶级元素。|
+|[Configuration Element (Format)](./configuration-element-format.md)|表示格式设置文件的顶级元素。|
 
 ## <a name="remarks"></a>备注
 
@@ -55,8 +48,8 @@ ms.locfileid: "72368996"
 
 ## <a name="see-also"></a>另请参阅
 
-[配置元素（格式）](./configuration-element-format.md)
+[Configuration Element (Format)](./configuration-element-format.md)
 
-[用于配置控件的控件元素（格式）](./control-element-for-controls-for-configuration-format.md)
+[Control Element for Controls for Configuration (Format)](./control-element-for-controls-for-configuration-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

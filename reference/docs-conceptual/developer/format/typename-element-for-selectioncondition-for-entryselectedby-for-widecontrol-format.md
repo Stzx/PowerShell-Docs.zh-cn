@@ -1,25 +1,18 @@
 ---
-title: WideControl 的 SelectionCondition for EntrySelectedBy 的 TypeName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: WideControl (Format) 的 SelectionCondition for EntrySelectedBy 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6d6d43fa-c900-4e2f-952d-deccd584236f
-caps.latest.revision: 11
-ms.openlocfilehash: 6142350e3843a5feddcb5cee8901bbfa607d8d4c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5021f665b994581f9ff982e13af922d7940ebf2b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368056"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783307"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a>TypeName Element for SelectionCondition for EntrySelectedBy for WideControl (Format)
 
 指定触发条件的 .NET 类型。 如果存在此类型，则使用定义。
 
-配置元素（格式） ViewDefinitions 元素（格式）查看元素（格式） WideControl 元素（格式） WideEntries 元素（格式） WideEntry 元素（format） EntrySelectedBy 元素 for WideEntry （Format） SelectionCondition 元素 forEntrySelectedBy for WideEntry （Format） SelectionCondition for EntrySelectedBy for WideEntry 的 TypeName 元素（Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) WideControl 元素 (格式) WideEntries 元素 (格式) WideEntry 元素 (格式) EntrySelectedBy 的 WideEntry 元素 (SelectionCondition) 格式 (EntrySelectedBy 的 WideEntry 元素) 格式 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72368056"
 <TypeName>Nameof.NetType</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `TypeName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `TypeName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,13 +34,13 @@ ms.locfileid: "72368056"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[WideEntry 的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|定义要使用此宽项时必须存在的条件。|
+|[WideEntry (格式的 EntrySelectedBy 的 SelectionCondition 元素) ](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|定义要使用此宽项时必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
-指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo`。
+指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo` 。
 
 ## <a name="remarks"></a>备注
 
@@ -61,8 +54,8 @@ ms.locfileid: "72368056"
 
 [定义显示数据的条件](./defining-conditions-for-displaying-data.md)
 
-[WideEntry 的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)
+[WideEntry (格式的 EntrySelectedBy 的 SelectionCondition 元素) ](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)
 
-[WideEntry 的 EntrySelectedBy 的 SelectionCondition 的 SelectionSetName 元素（Format）](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md)
+[SelectionSetName Element for SelectionCondition for EntrySelectedBy for WideEntry (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

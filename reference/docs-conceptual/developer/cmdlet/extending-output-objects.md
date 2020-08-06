@@ -1,27 +1,20 @@
 ---
 title: 扩展输出对象 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a252e0ec-d456-42d7-bd49-d6b8bc57f388
-caps.latest.revision: 11
-ms.openlocfilehash: 12a826363221b8a7ce06245c787a7bd0529e42f8
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 48f4f2996159d84257ad72d499e3a796aeaa9116
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690897"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784310"
 ---
 # <a name="extending-output-objects"></a>扩展输出对象
 
-你可以使用类型文件（. types.ps1xml）扩展由 cmdlet、函数和脚本返回的 .NET Framework 对象。 类型文件是基于 XML 的文件，可用于向现有对象添加属性和方法。 例如，Windows PowerShell 提供 types.ps1xml 文件，该文件将元素添加到多个现有的 .NET Framework 对象。 Types.ps1xml 文件位于 Windows PowerShell 安装目录（ `$pshome` ）中。 您可以创建自己的类型文件，以便进一步扩展这些对象或扩展其他对象。 使用类型文件扩展对象时，会使用新元素扩展对象的任何实例。
+您可以通过使用类型文件 ( types.ps1xml) 扩展由 cmdlet、函数和脚本返回的 .NET Framework 对象。 类型文件是基于 XML 的文件，可用于向现有对象添加属性和方法。 例如，Windows PowerShell 提供 Types.ps1xml 文件，该文件将元素添加到多个现有 .NET Framework 对象中。 Types.ps1xml 文件位于 Windows PowerShell 安装目录中 (`$pshome`) 。 您可以创建自己的类型文件，以便进一步扩展这些对象或扩展其他对象。 使用类型文件扩展对象时，会使用新元素扩展对象的任何实例。
 
 ## <a name="extending-the-systemarray-object"></a>扩展 System.object 对象
 
-下面的示例演示 Windows PowerShell 如何在 types.ps1xml 文件中扩展[system.object](/dotnet/api/System.Array)对象。 默认情况下， [system.object](/dotnet/api/System.Array)对象具有 `Length` 属性，该属性列出数组中对象的数量。 但是，由于名称 "length" 未清楚地描述属性，因此 Windows PowerShell 将添加 `Count` alias 属性，该属性显示与属性相同的值 `Length` 。 下面的 XML 将 `Count` 属性添加到[系统数组](/dotnet/api/System.Array)类型。
+下面的示例演示 Windows PowerShell 如何在 Types.ps1xml 文件中扩展[system.object](/dotnet/api/System.Array)对象。 默认情况下， [system.object](/dotnet/api/System.Array)对象具有 `Length` 属性，该属性列出数组中对象的数量。 但是，由于名称 "length" 未清楚地描述属性，因此 Windows PowerShell 将添加 `Count` alias 属性，该属性显示与属性相同的值 `Length` 。 下面的 XML 将 `Count` 属性添加到[系统数组](/dotnet/api/System.Array)类型。
 
 ```xml
 <Type>
@@ -77,7 +70,7 @@ PS> (1, 2, 3, 4).Length
 
 ## <a name="custom-types-files"></a>自定义类型文件
 
-若要创建自定义类型文件，请首先复制现有的类型文件。 新文件可以具有任何名称，但它必须具有 types.ps1xml 文件扩展名。 复制文件时，您可以将新文件放置在可供 Windows PowerShell 访问的任何目录中，但将这些文件放在 Windows PowerShell 安装目录（ `$pshome` ）或安装目录的子目录中会很有用。
+若要创建自定义类型文件，请首先复制现有的类型文件。 新文件可以具有任何名称，但它必须具有 types.ps1xml 文件扩展名。 复制文件时，您可以将新文件放置在可供 Windows PowerShell 访问的任何目录中，但将文件放在 Windows PowerShell 安装目录中 (`$pshome`) 或安装目录的子目录中都很有用。
 
 若要将自己的扩展类型添加到文件中，请为要扩展的每个对象添加类型元素。 以下主题提供了示例。
 
@@ -89,7 +82,7 @@ PS> (1, 2, 3, 4).Length
 
 定义自己的扩展类型后，请使用以下方法之一来使扩展对象可用：
 
-- 若要使扩展类型文件可用于当前会话，请使用[update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet 添加新的文件。 如果你希望你的类型优先于其他类型文件（包括 types.ps1xml 文件）中定义的类型，请使用 `PrependData` [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet 的参数。
+- 若要使扩展类型文件可用于当前会话，请使用[update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet 添加新的文件。 如果你希望你的类型优先于其他类型文件中定义的类型 (包括 Types.ps1xml 文件) ，请使用 `PrependData` [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet 的参数。
 - 若要使扩展类型文件可供所有未来会话使用，请将类型文件添加到模块，导出当前会话，或将[update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData)命令添加到 Windows PowerShell 配置文件。
 
 ## <a name="signing-types-files"></a>签名类型文件

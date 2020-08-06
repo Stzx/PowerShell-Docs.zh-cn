@@ -1,25 +1,18 @@
 ---
-title: TableControl （Format）的 TableColumnItems 的 TableColumnItem 元素 |Microsoft Docs
-ms.custom: ''
+title: TableControl (Format) 的 TableColumnItems 的 TableColumnItem 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ef8395aa-4b31-48c0-a0b8-b481fd0b3738
-caps.latest.revision: 15
-ms.openlocfilehash: 9e6cffc7476ef01124d95ecbf287d9788b0324c9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: beadf771f02519394d799a03db374050e3302321
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368226"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785160"
 ---
 # <a name="tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format"></a>TableColumnItem Element for TableColumnItems for TableControl (Format)
 
 定义其值显示在行的列中的属性或脚本。
 
-TableRowEntry for TableRowEntries 的 TableControl （Format） TableControl 元素的配置元素（格式） ViewDefinitions 元素（格式） TableControl 元素（format） TableRowEntries 元素（format）TableColumnItems 的 TableControlEntry for TableControl （Format） TableColumnItem 元素的 TableColumnItems 元素（Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) TableControl 元素 (格式) TableRowEntries 元素 (TableRowEntry 的 TableControl) 格式 (TableRowEntries TableControl 的 TableColumnItems 元素) TableControlEntry 的 TableControl TableColumnItem (格式) TableColumnItems 元素 (
 
 ## <a name="syntax"></a>语法
 
@@ -32,11 +25,11 @@ TableRowEntry for TableRowEntries 的 TableControl （Format） TableControl 元
 </TableColumnItem>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍 `TableColumnItem` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `TableColumnItem` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -44,16 +37,16 @@ TableRowEntry for TableRowEntries 的 TableControl （Format） TableControl 元
 
 |元素|描述|
 |-------------|-----------------|
-|[TableControl 的 TableColumnItem 的对齐元素（格式）](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)|可选元素。<br /><br /> 定义行的列中数据的显示方式。|
-|[TableControl 的 TableColumnItem 的格式字符串元素（格式）](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)|指定用于设置行的列中数据的格式的格式模式。|
-|[TableControl 的 TableColumnItem 的 PropertyName 元素（Format）](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)|可选元素。<br /><br /> 指定显示其值的属性的名称。|
-|[TableControl 的 TableColumnItem 的 ScriptBlock 元素（格式）](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)|可选元素。<br /><br /> 指定其值显示在行的列中的脚本。|
+|[Alignment Element for TableColumnItem for TableControl (Format)](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)|可选元素。<br /><br /> 定义行的列中数据的显示方式。|
+|[FormatString Element for TableColumnItem for TableControl (Format)](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)|指定用于设置行的列中数据的格式的格式模式。|
+|[PropertyName Element for TableColumnItem for TableControl (Format)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)|可选元素。<br /><br /> 指定显示其值的属性的名称。|
+|[ScriptBlock Element for TableColumnItem for TableControl (Format)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)|可选元素。<br /><br /> 指定其值显示在行的列中的脚本。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[TableControl 的 TableControlEntry 的 TableColumnItems 元素（格式）](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|定义其值显示在行中的属性或脚本。|
+|[TableControl (格式的 TableControlEntry 的 TableColumnItems 元素) ](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|定义其值显示在行中的属性或脚本。|
 
 ## <a name="remarks"></a>备注
 
@@ -63,7 +56,7 @@ TableRowEntry for TableRowEntries 的 TableControl （Format） TableControl 元
 
 ## <a name="example"></a>示例
 
-此示例演示一个 `TableColumnItem` 元素，该元素显示[system.object](/dotnet/api/System.Diagnostics.Process)对象的 `Status` 属性的值。
+此示例演示一个 `TableColumnItem` 元素，该元素显示 `Status` [system.object](/dotnet/api/System.Diagnostics.Process)对象的属性的值。
 
 ```xml
 <TableColumnItem>
@@ -77,14 +70,14 @@ TableRowEntry for TableRowEntries 的 TableControl （Format） TableControl 元
 
 [创建表视图](./creating-a-table-view.md)
 
-[TableControl 的 TableColumnItem 的对齐元素（格式）](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[Alignment Element for TableColumnItem for TableControl (Format)](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[TableColumnItems 元素（格式）](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
+[TableColumnItems 元素 (格式) ](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
 
-[TableControl 的 TableColumnItem 的格式字符串元素（格式）](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[FormatString Element for TableColumnItem for TableControl (Format)](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[TableControl 的 TableColumnItem 的 PropertyName 元素（Format）](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[PropertyName Element for TableColumnItem for TableControl (Format)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[TableControl 的 TableColumnItem 的 ScriptBlock 元素（格式）](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[ScriptBlock Element for TableColumnItem for TableControl (Format)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

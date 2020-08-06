@@ -1,25 +1,18 @@
 ---
-title: TableColumnHeader 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: " (格式) 的 TableColumnHeader 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 49ff3062-6396-4aa8-919b-3fd3ac60899a
-caps.latest.revision: 19
-ms.openlocfilehash: d3ad7fa563def17d43ce4dc64d155b65b650521f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6296aea5c567663b1c3c0a2cf0a57b21aa5394de
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361846"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785177"
 ---
 # <a name="tablecolumnheader-element-format"></a>TableColumnHeader Element (Format)
 
 定义标签、列的宽度和表中某一列的标签对齐方式。
 
-TableColumnHeader for TableHeaders 的 TableControl （Format） TableControl 元素的配置元素（格式） ViewDefinitions 元素（格式） TableControl 元素（format） TableHeaders 元素（format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) TableControl 元素 (格式) TableHeaders 元素 (TableColumnHeader) 格式 (TableHeaders 元素) 
 
 ## <a name="syntax"></a>语法
 
@@ -31,11 +24,11 @@ TableColumnHeader for TableHeaders 的 TableControl （Format） TableControl �
 </TableColumnHeader>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `TableColumnHeader` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `TableColumnHeader` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,21 +36,21 @@ TableColumnHeader for TableHeaders 的 TableControl （Format） TableControl �
 
 |元素|描述|
 |-------------|-----------------|
-|[TableControl 的 TableColumnHeader 的 Label 元素（Format）](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)|可选元素。<br /><br /> 定义在列顶部显示的标签。 如果未指定标签，则使用在行中显示其值的属性的名称。|
-|[TableControl 的 TableColumnHeader 的 Width 元素（Format）](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|必需的元素。<br /><br /> 指定列的宽度（以字符为字符）。|
-|[TableControl 的 TableColumnHeader 的对齐元素（格式）](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|可选元素。<br /><br /> 指定列的标签的显示方式。 如果未指定对齐方式，则在左侧对齐标签。|
+|[TableControl 的 TableColumnHeader 的 Label 元素 (格式) ](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)|可选元素。<br /><br /> 定义在列顶部显示的标签。 如果未指定标签，则使用在行中显示其值的属性的名称。|
+|[Width Element for TableColumnHeader for TableControl (Format)](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|必需的元素。<br /><br /> 指定列的字符)  (宽度。|
+|[Alignment Element for TableColumnHeader for TableControl (Format)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|可选元素。<br /><br /> 指定列的标签的显示方式。 如果未指定对齐方式，则在左侧对齐标签。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[TableHeaders 元素（格式）](./tableheaders-element-format.md)|定义表视图的列。|
+|[TableHeaders Element (Format)](./tableheaders-element-format.md)|定义表视图的列。|
 
 ## <a name="remarks"></a>备注
 
-为表的每个列指定标题。 列按定义 `TableColumnHeader` 元素的顺序显示。
+为表的每个列指定标题。 列按定义元素的顺序显示 `TableColumnHeader` 。
 
-表必须与 `TableRowEntry` 元素具有相同数量的 `TableColumnHeader` 元素。 列标题定义表顶部的文本的显示方式。 行条目定义在表的行中显示的数据。
+表必须与元素具有相同数量的 `TableColumnHeader` 元素 `TableRowEntry` 。 列标题定义表顶部的文本的显示方式。 行条目定义在表的行中显示的数据。
 
 有关表视图的组件的详细信息，请参阅[表视图](./creating-a-table-view.md)。
 
@@ -82,14 +75,14 @@ TableColumnHeader for TableHeaders 的 TableControl （Format） TableControl �
 
 ## <a name="see-also"></a>另请参阅
 
-[TableControl 的 TableColumnHeader 的对齐元素（格式）](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[Alignment Element for TableColumnHeader for TableControl (Format)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
 [创建表视图](./creating-a-table-view.md)
 
-[TableControl 的 TableColumnHeader 的 Label 元素（Format）](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[Label Element for TableColumnHeader for TableControl (Format)](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
-[TableControl 的 TableHeaders 元素（格式）](./tableheaders-element-format.md)
+[TableControl 的 TableHeaders 元素 (格式) ](./tableheaders-element-format.md)
 
-[TableControl 元素的 TableColumnHeader 宽度（格式）](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[TableControl 元素的 TableColumnHeader 宽度 (格式) ](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

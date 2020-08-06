@@ -1,25 +1,18 @@
 ---
-title: 用于视图的 CustomControl 的帧的 FirstLineIndent 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: CustomControl 的 FirstLineIndent 的框架元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: bb4e1564-3fd3-4be3-b93e-ac90480e05c0
-caps.latest.revision: 6
-ms.openlocfilehash: 3130ecc69f7d1568bcbd392dd24e8cdcc3382905
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0d51be5b5fc04bc0ea8442ca96767b1d9d8473a4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363056"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785806"
 ---
 # <a name="firstlineindent-element-for-frame-for-customcontrol-for-view-format"></a>FirstLineIndent Element for Frame for CustomControl for View (Format)
 
 指定第一行数据向右移动的字符数。 定义自定义控件视图时，将使用此元素。
 
-用于 CustomEntry 的 CustomControl for view （format） CustomEntries 元素的 ViewDefinitions 元素（format） View 元素（format） CustomControl 元素（format） CustomEntries 元素用于 CustomItem for CustomControl for View （Format） FirstLineIndent 元素的 CustomControlView （Format） Frame 元素的 CustomEntry
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) CustomControl 元素 (格式) CustomEntries 元素 (CustomEntry 的 CustomControl 的元素) CustomEntries for CustomItem 的 CustomEntry 元素 (CustomControlView 的 CustomItem 元素) CustomControl 的 FirstLineIndent 元素
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72363056"
 <FirstLineIndent>NumberOfCharactersToShift</FirstLineIndent>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍 `FirstLineIndent` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `FirstLineIndent` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,7 +36,7 @@ ms.locfileid: "72363056"
 
 |元素|描述|
 |-------------|-----------------|
-|[View 的 CustomItem for CustomControl 的 Frame 元素（Format）](./frame-element-for-customitem-for-customcontrol-for-view-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
+|[Frame Element for CustomItem for CustomControl for View (Format)](./frame-element-for-customitem-for-customcontrol-for-view-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 
 ## <a name="text-value"></a>文本值
 
@@ -55,8 +48,8 @@ ms.locfileid: "72363056"
 
 ## <a name="see-also"></a>另请参阅
 
-[用于视图的 CustomControl 的帧的 FirstLineHanging 元素（格式）](./firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md)
+[FirstLineHanging Element for Frame for CustomControl for View (Format)](./firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md)
 
-[View 的 CustomItem for CustomControl 的 Frame 元素（Format）](./frame-element-for-customitem-for-customcontrol-for-view-format.md)
+[Frame Element for CustomItem for CustomControl for View (Format)](./frame-element-for-customitem-for-customcontrol-for-view-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

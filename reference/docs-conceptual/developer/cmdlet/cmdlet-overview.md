@@ -1,13 +1,12 @@
 ---
 title: Cmdlet 概述
 ms.date: 06/11/2020
-ms.topic: article
-ms.openlocfilehash: e179bf371c26781cf1c8db641c46c0329036c8ea
-ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
+ms.openlocfilehash: 576df03f35dff80479d1fce18cf4306c9219d42f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84722824"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784395"
 ---
 # <a name="cmdlet-overview"></a>Cmdlet 概述
 
@@ -16,7 +15,7 @@ Cmdlet 是在 PowerShell 环境中使用的轻量命令。 PowerShell 运行时�
 ## <a name="cmdlets"></a>Cmdlet
 
 Cmdlet 执行操作，通常会将 Microsoft .NET 对象返回到管道中的下一个命令。 Cmdlet 是参与 PowerShell 管道语义的单个命令。
-这包括二进制（c #） cmdlet、高级脚本函数、CDXML 和工作流。
+这包括二进制 (c # ) cmdlet、高级脚本函数、CDXML 和工作流。
 
 此 SDK 文档介绍如何创建用 c # 编写的二进制 cmdlet。 有关基于脚本的 cmdlet 的信息，请参阅：
 
@@ -60,12 +59,12 @@ PowerShell cmdlet 文档中经常使用以下术语：
 - [BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)：用于为 Cmdlet 提供可选的一次性预处理功能（& e）。
 - [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)：用于为 Cmdlet 提供按记录处理的功能的处理功能。 根据 Cmdlet 的输入， [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法可能会被调用任意次数（或根本不会进行调用）。
 - [System.web. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)：用于为 Cmdlet 提供可选的一次性处理后的功能，。
-- [StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing)：用于在用户以异步方式停止 Cmdlet 时停止处理（例如，按<kbd>CTRL +</kbd> + <kbd>C</kbd>）。
+- [StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing)：用于在用户以异步方式停止 Cmdlet 时停止处理 (例如，按<kbd>CTRL</kbd> + <kbd>C</kbd>) 。
 
 有关这些方法的详细信息，请参阅[Cmdlet 输入处理方法](./cmdlet-input-processing-methods.md)。
 
 实现 cmdlet 时，必须重写这些输入处理方法中的至少一个。
-通常， **ProcessRecord （）** 是重写的方法，因为它是为该 cmdlet 处理的每条记录调用的。 与此相反， **BeginProcessing （）** 方法和**EndProcessing （）** 方法被调用一次来执行记录的预处理或后期处理。 有关这些方法的详细信息，请参阅[输入处理方法](cmdlet-input-processing-methods.md)。
+通常， **ProcessRecord ( # B1**是重写的方法，因为它是为该 cmdlet 处理的每条记录调用的。 与此相反， **BeginProcessing ( # B1**方法和**EndProcessing ( # B3**方法被调用一次来执行记录的预处理或后期处理。 有关这些方法的详细信息，请参阅[输入处理方法](cmdlet-input-processing-methods.md)。
 
 ### <a name="shouldprocess-feature"></a>ShouldProcess 功能
 
@@ -93,7 +92,7 @@ Windows PowerShell 支持从以下两个基类派生的 cmdlet。
   从此类派生允许 cmdlet 使用 Windows PowerShell 运行时上的最小依赖项集。 这带来了两个好处。 第一个优点是，cmdlet 对象更小，不太可能受到对 PowerShell 运行时所做的更改的影响。 第二个优点是，如果你需要，可以直接创建 cmdlet 对象的实例，然后直接调用它，而不是通过 PowerShell 运行时调用它。
 
 - 更复杂的 cmdlet 以派生自[PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet)基类的 .net 类为基础。 从此类派生，可以更好地访问 PowerShell 运行时。 此访问权限允许 cmdlet 调用脚本、访问提供程序和访问当前会话状态。
-  （若要访问当前会话状态，可以获取和设置会话变量和首选项。）但是，从此类派生将增加 cmdlet 对象的大小，这意味着你的 cmdlet 更紧密地耦合到最新版本的 PowerShell 运行时。
+   (访问当前会话状态时，你将获取并设置会话变量和首选项。 ) 不过，从此类派生将增加 cmdlet 对象的大小，这意味着你的 cmdlet 更紧密地耦合到最新版本的 PowerShell 运行时。
 
 通常情况下，除非你需要对 PowerShell 运行时的扩展访问权限，否则你应该从[system.web](/dotnet/api/System.Management.Automation.Cmdlet)类派生。
 但是，PowerShell 运行时具有广泛的日志记录功能，可以执行 cmdlet。 如果审核模型依赖于此日志记录，则可以通过从[PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet)类派生来阻止从另一个 cmdlet 中执行 cmdlet。

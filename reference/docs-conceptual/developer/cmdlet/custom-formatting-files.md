@@ -1,23 +1,16 @@
 ---
 title: 自定义格式设置文件 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 85d27545-8097-4010-9947-6d8b3ce2eac0
-caps.latest.revision: 15
-ms.openlocfilehash: 71c1c181058c5646c817b90d9832976a78c6c7de
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a9633e2ee18e1817459645b4a5950ea8a622850b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369826"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784344"
 ---
 # <a name="custom-formatting-files"></a>自定义格式设置文件
 
-Cmdlet、函数和脚本返回的对象的显示格式是使用格式设置文件（types.ps1xml 文件）定义的。 Windows PowerShell 会提供其中几个文件来定义 Windows PowerShell cmdlet 返回的这些对象的默认显示格式。 但是，您还可以创建自己的自定义格式设置文件来覆盖默认显示格式，或定义您自己的命令返回的对象的显示。
+Cmdlet、函数和脚本返回的对象的显示格式是使用格式化文件定义的 ( # B0 xml 文件) 。 Windows PowerShell 会提供其中几个文件来定义 Windows PowerShell cmdlet 返回的这些对象的默认显示格式。 但是，您还可以创建自己的自定义格式设置文件来覆盖默认显示格式，或定义您自己的命令返回的对象的显示。
 
 Windows PowerShell 使用这些格式设置文件中的数据来确定显示的内容以及如何设置数据的格式。 显示的数据可以包括对象的属性或脚本块的值。  如果希望显示某个不能直接从对象的属性中使用的值，则使用脚本块。 例如，你可能想要添加一个对象的两个属性的值，并将 sum 显示为单独的数据片段。 编写您自己的格式化文件时，需要为要显示的对象定义*视图*。 您可以为每个对象定义一个视图，可以为多个对象定义一个视图，也可以为同一对象定义多个视图。 您可以定义的视图数没有限制。
 
@@ -40,7 +33,7 @@ Windows PowerShell 使用这些格式设置文件中的数据来确定显示的�
 
 ## <a name="view-xml-elements"></a>查看 XML 元素
 
-下面的示例显示用于定义包含两个列的表视图的 XML 标记。 [ViewDefinitions](../format/viewdefinitions-element-format.md)元素是在格式设置文件中定义的所有视图的容器元素。 [View](../format/view-element-format.md)元素定义特定的表、列表、宽视图或自定义视图。 在每个视图中， [name](../format/name-element-for-view-format.md)元素指定视图的名称， [ViewSelectedBy](../format/viewselectedby-element-format.md)元素定义使用视图的对象，不同的控件元素（如 `TableControl` 元素）定义视图的格式。
+下面的示例显示用于定义包含两个列的表视图的 XML 标记。 [ViewDefinitions](../format/viewdefinitions-element-format.md)元素是在格式设置文件中定义的所有视图的容器元素。 [View](../format/view-element-format.md)元素定义特定的表、列表、宽视图或自定义视图。 在每个视图中， [name](../format/name-element-for-view-format.md)元素指定视图的名称， [ViewSelectedBy](../format/viewselectedby-element-format.md)元素定义使用视图的对象，而不同控件元素 (如 `TableControl` 元素) 定义视图的格式。
 
 ```xml
 ViewDefinitions

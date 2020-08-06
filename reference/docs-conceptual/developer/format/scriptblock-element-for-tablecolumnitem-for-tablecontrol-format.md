@@ -1,25 +1,18 @@
 ---
-title: TableControl 的 TableColumnItem 的 ScriptBlock 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: TableControl 的 TableColumnItem 的 ScriptBlock 元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5f1f0f95-1e0a-4607-ab68-bdf85ef29448
-caps.latest.revision: 9
-ms.openlocfilehash: c52cb4c93512090024b43504d382f6dc7255f19a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 676d2462de077213a933eff632a4e3d23757b731
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368486"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783426"
 ---
 # <a name="scriptblock-element-for-tablecolumnitem-for-tablecontrol-format"></a>ScriptBlock Element for TableColumnItem for TableControl (Format)
 
 指定其值显示在行的列中的脚本。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） TableControl 元素（格式） TableRowEntries 元素（格式） TableRowEntry 元素（格式） TableColumnItems 元素（格式） TableColumnItem 元素（格式）TableColumnItem 的 ScriptBlock 元素（格式）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) TableControl 元素 (格式) TableRowEntries 元素 (格式) TableRowEntry 元素 (格式) TableColumnItems 元素 (格式) TableColumnItem (格式) 的 ScriptBlock 元素 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72368486"
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `ScriptBlock` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `ScriptBlock` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,7 +36,7 @@ ms.locfileid: "72368486"
 
 |元素|描述|
 |-------------|-----------------|
-|[TableColumnItem 元素（格式）](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)|定义其值显示在行的列中的属性或脚本。|
+|[TableColumnItem 元素 (格式) ](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)|定义其值显示在行的列中的属性或脚本。|
 
 ## <a name="text-value"></a>文本值
 
@@ -57,6 +50,6 @@ ms.locfileid: "72368486"
 
 [创建表视图](./creating-a-table-view.md)
 
-[TableColumnItem 元素（格式）](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)
+[TableColumnItem 元素 (格式) ](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

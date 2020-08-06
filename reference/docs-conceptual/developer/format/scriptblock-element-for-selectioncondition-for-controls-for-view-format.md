@@ -1,25 +1,18 @@
 ---
-title: 用于视图（格式）的控件的 SelectionCondition 的 ScriptBlock 元素 |Microsoft Docs
-ms.custom: ''
+title: 用于 SelectionCondition 的控件的 ScriptBlock 元素)  (格式的控件 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 08512496-5682-4539-ab56-0c5394ce1f01
-caps.latest.revision: 6
-ms.openlocfilehash: 0137886437f01518f396613c564517e7910e657a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e5f4295a989307cb6ffb655c2c39596f3d1ea806
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364796"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785415"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-controls-for-view-format"></a>ScriptBlock Element for SelectionCondition for Controls for View (Format)
 
-指定触发条件的脚本。 如果此脚本的计算结果为 `true`，则满足条件，并使用定义。 定义可由视图使用的控件时，将使用此元素。
+指定触发条件的脚本。 将此脚本的计算结果为时 `true` ，将满足条件，并使用定义。 定义可由视图使用的控件时，将使用此元素。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） Controls 元素（format） Control 元素 for View （format） CustomControl 元素的控件元素，用于控件的 View （format） CustomEntries 元素CustomControl for view （format） CustomEntry 元素 for view （format）元素 for CustomEntries for view （format） EntrySelectedBy 元素 for view （format）元素 for CustomEntry for view （format） SelectionCondition 元素 for view （Format）用于视图的控件的 SelectionCondition 的 ScriptBlock 元素（格式）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) 控件元素 (格式) 用于控件的控件 (控件元素) 用于控件的控件 (CustomEntries 元素 (Format) 的 CustomEntries 的 CustomEntry 元素，用于视图 (格式) EntrySelectedBy 元素 for CustomEntry for view (格式的控件) SelectionCondition 的控件的控件 (EntrySelectedBy 的控件) 的 ScriptBlock 元素 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72364796"
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `ScriptBlock` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `ScriptBlock` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ ms.locfileid: "72364796"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于视图的控件的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)|定义要使用的控件定义必须存在的条件。|
+|[SelectionCondition Element for EntrySelectedBy for Controls for View (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)|定义要使用的控件定义必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -55,6 +48,6 @@ ms.locfileid: "72364796"
 
 ## <a name="see-also"></a>另请参阅
 
-[用于视图的控件的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)
+[SelectionCondition Element for EntrySelectedBy for Controls for View (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

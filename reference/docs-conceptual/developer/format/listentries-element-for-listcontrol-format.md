@@ -1,25 +1,18 @@
 ---
-title: ListControl 的 ListEntries 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: ListControl (Format) 的 ListEntries 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b62e81cc-4175-40fa-829f-634245b09f86
-caps.latest.revision: 12
-ms.openlocfilehash: aaf16702e485135b5299ccb43a2b62db2d9f5762
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0fe07e739c2d2fec153599ec6c0c0b3ecc14df18
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362756"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785704"
 ---
 # <a name="listentries-element-for-listcontrol-format"></a>ListEntries Element for ListControl (Format)
 
 提供列表视图的定义。 列表视图必须指定一个或多个定义。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） ListControl 元素（format） ListEntries 元素（Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ListControl 元素 (格式) ListEntries 元素 (格式) 
 
 ## <a name="syntax"></a>语法
 
@@ -29,25 +22,25 @@ ms.locfileid: "72362756"
 </ListEntries>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `ListEntries` 元素的属性、子元素和父元素。 必须至少指定一个子元素。
+以下各节描述了元素的属性、子元素和父元素 `ListEntries` 。 必须至少指定一个子元素。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[ListEntry 元素（格式）](./listentry-element-for-listcontrol-format.md)|提供列表视图的定义。|
+|[ListEntry 元素 (格式) ](./listentry-element-for-listcontrol-format.md)|提供列表视图的定义。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[ListControl 元素（格式）](./listcontrol-element-format.md)|定义视图的列表格式。|
+|[ListControl Element (Format)](./listcontrol-element-format.md)|定义视图的列表格式。|
 
 ## <a name="remarks"></a>备注
 
@@ -75,9 +68,9 @@ ms.locfileid: "72362756"
 
 ## <a name="see-also"></a>另请参阅
 
-[ListControl 元素（格式）](./listcontrol-element-format.md)
+[ListControl Element (Format)](./listcontrol-element-format.md)
 
-[ListEntry 元素（格式）](./listentry-element-for-listcontrol-format.md)
+[ListEntry 元素 (格式) ](./listentry-element-for-listcontrol-format.md)
 
 [列表视图](./creating-a-list-view.md)
 

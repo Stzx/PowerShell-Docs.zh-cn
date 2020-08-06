@@ -1,23 +1,16 @@
 ---
 title: 如何从 Cmdlet 内调用 Cmdlet |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: efa4dc9c-ddee-46a3-978a-9dbb61e9bb6f
-caps.latest.revision: 12
-ms.openlocfilehash: 57543a88d04eb66c9d109249a99ddd272b02ef9d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2d5b0788d3310d0dd7b311f86c497afe8eec9d11
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365546"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784140"
 ---
 # <a name="how-to-invoke-a-cmdlet-from-within-a-cmdlet"></a>如何从 Cmdlet 内部调用 Cmdlet
 
-此示例演示如何从另一个 cmdlet 中调用 cmdlet，这允许你将调用的 cmdlet 的功能添加到正在开发的 cmdlet。 在此示例中，将调用 `Get-Process` cmdlet 以获取在本地计算机上运行的进程。 调用 `Get-Process` cmdlet 等效于以下命令。 此命令检索其名称以字符 "a" 到 "t" 开头的所有进程。
+此示例演示如何从另一个 cmdlet 中调用 cmdlet，这允许你将调用的 cmdlet 的功能添加到正在开发的 cmdlet。 在此示例中， `Get-Process` 调用了 cmdlet 来获取本地计算机上运行的进程。 对此 cmdlet 的调用 `Get-Process` 等效于以下命令。 此命令检索其名称以字符 "a" 到 "t" 开头的所有进程。
 
 ```powershell
 Get-Process -name [a-t]
@@ -28,7 +21,7 @@ Get-Process -name [a-t]
 
 ## <a name="to-invoke-a-cmdlet-from-within-a-cmdlet"></a>从 cmdlet 内调用 cmdlet
 
-1. 确保引用定义要调用的 cmdlet 的程序集，并添加相应的 `using` 语句。 在此示例中，添加了以下命名空间。
+1. 确保引用定义要调用的 cmdlet 的程序集，并且添加了相应的 `using` 语句。 在此示例中，添加了以下命名空间。
 
     ```csharp
     using System.Diagnostics;
@@ -43,7 +36,7 @@ Get-Process -name [a-t]
     gp.Name = new string[] { "[a-t]*" };
     ```
 
-3. 调用 " [system.object *](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) " 方法以调用 `Get-Process` Cmdlet。
+3. 调用 " [system.object](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) " 方法来调用该 `Get-Process` Cmdlet。
 
     ```csharp
       foreach (Process p in gp.Invoke<Process>())
@@ -55,7 +48,7 @@ Get-Process -name [a-t]
 
 ## <a name="example"></a>示例
 
-在此示例中，`Get-Process` cmdlet 是从 cmdlet 的[BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)方法中调用的。
+在此示例中， `Get-Process` cmdlet 是从 cmdlet 的[BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)方法中调用的。
 
 ```csharp
 using System;

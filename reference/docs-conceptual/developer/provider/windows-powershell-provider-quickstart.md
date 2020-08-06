@@ -1,19 +1,12 @@
 ---
 title: Windows PowerShell 提供程序快速入门 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
-caps.latest.revision: 5
-ms.openlocfilehash: 4693a2ec02a8f010f900bebf5a50853edef88cb1
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 048812d1a4765b2ff0069698615453f91ee95409
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560927"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783120"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Windows PowerShell 提供程序快速入门
 
@@ -35,13 +28,13 @@ Windows PowerShell 提供程序的最基本功能是创建和删除驱动器。 
 
 1. 添加 System.web 程序集作为对项目的引用。
 
-2. 单击 "**项目 > AccessDBProviderSample Properties > 调试**"。 在 "**启动项目**" 中，单击 "**启动外部程序**"，并导航到 Windows PowerShell 可执行文件（通常为 c:\Windows\System32\WindowsPowerShell\v1.0 \\ ）。
+2. 单击 "**项目 > AccessDBProviderSample Properties > 调试**"。 在 "**启动项目**" 中，单击 "**启动外部程序**"，并导航到 Windows PowerShell 可执行文件 (通常为 c:\Windows\System32\WindowsPowerShell\v1.0 \\.powershell.exe) 。
 
 3. 在 "**启动选项**" 下的 "**命令行参数**" 框中输入以下内容：`-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
 ### <a name="declaring-the-provider-class"></a>声明提供程序类
 
-我们的提供程序派生自[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)类。 大多数提供实际功能的提供程序（访问和操作项、导航数据存储区以及获取和设置项的内容）都派生自[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类。
+我们的提供程序派生自[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)类。 大多数提供实际功能 (提供程序的提供程序，可用于访问和操作项、导航数据存储区，以及) 派生自[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类的项的内容。
 
 除了指定类派生自[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)以外，你还必须将其与 Cmdletproviderattribute 中所示的[System.Management.Automation.Provider.Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)修饰，如示例中所示。
 

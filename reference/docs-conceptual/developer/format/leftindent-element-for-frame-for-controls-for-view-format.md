@@ -1,25 +1,18 @@
 ---
-title: 视图（格式）的控件的框架的 LeftIndent 元素 |Microsoft Docs
-ms.custom: ''
+title: View (Format) 的控件的框架的 LeftIndent 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 85a53ff2-92f0-4d9b-8e13-d06d82299435
-caps.latest.revision: 6
-ms.openlocfilehash: 06ed340e3db237d4090961fef98333bd67a2a755
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e190061152b25f1f63ba5d2d9a9970970b419e0d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365156"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783596"
 ---
 # <a name="leftindent-element-for-frame-for-controls-for-view-format"></a>LeftIndent Element for Frame for Controls for View (Format)
 
 指定数据从左边距向外移动的字符数。 定义可由视图使用的控件时，将使用此元素。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） Controls 元素（format） Control 元素 for View （format） CustomControl 元素的控件元素，用于控件的 View （format） CustomEntries 元素CustomControl for View （Format） CustomEntry 元素 for CustomEntries for view （format） CustomItem 元素 for view （format）元素 for CustomEntry for view （format）的控件视图控件（格式）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) 控件元素 (格式) 用于控件的控件 (控件元素) 用于控件的控件 (CustomControl 的 CustomEntries 元素用于 view (Format 的控件的 CustomEntries) CustomEntry 元素的格式) CustomItem 元素，适用于 CustomEntry for view (格式的的控件的控件) CustomItem (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72365156"
 <LeftIndent>CharactersToShift</LeftIndent>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍 `LeftIndent` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `LeftIndent` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ ms.locfileid: "72365156"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于视图的控件的 CustomItem 的框架元素（格式）](./frame-element-for-customitem-for-controls-for-view-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
+|[Frame Element for CustomItem for Controls for View (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 
 ## <a name="text-value"></a>文本值
 
@@ -53,6 +46,6 @@ ms.locfileid: "72365156"
 
 ## <a name="see-also"></a>另请参阅
 
-[用于视图的控件的 CustomItem 的框架元素（格式）](./frame-element-for-customitem-for-controls-for-view-format.md)
+[Frame Element for CustomItem for Controls for View (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

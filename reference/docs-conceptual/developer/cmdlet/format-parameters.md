@@ -1,19 +1,12 @@
 ---
 title: 格式参数 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 10e025c5-9aa6-45a5-b851-23d14db1f4cc
-caps.latest.revision: 7
-ms.openlocfilehash: 0bd3888d81aa6d1dde26c0066f7bca9dac8a8bca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c8e031f62aa8bcb0e9d5b900b2eace7187b1f3dd
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369746"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784276"
 ---
 # <a name="format-parameters"></a>格式参数
 
@@ -21,13 +14,13 @@ ms.locfileid: "72369746"
 
 |参数|功能|
 |---|---|
-|**As**<br>数据类型：关键字|实现此参数以指定 cmdlet 输出格式。 例如，可能的值可以是文本或脚本。|
-|**Binary**<br>数据类型： SwitchParameter|实现此参数以指示该 cmdlet 处理二进制值。|
+|**方式**<br>数据类型：关键字|实现此参数以指定 cmdlet 输出格式。 例如，可能的值可以是文本或脚本。|
+|**二进制**<br>数据类型： SwitchParameter|实现此参数以指示该 cmdlet 处理二进制值。|
 |**编码**<br>数据类型：关键字|实现此参数可指定支持的编码类型。 例如，可能的值可能是 ASCII、UTF8、Unicode、UTF7、BigEndianUnicode、Byte 和 String。|
 |**换**<br>数据类型： SwitchParameter|实现此参数，以便在指定参数时支持换行字符。|
-|**短名称**<br>数据类型： SwitchParameter|实现此参数以便在指定参数时支持短名称。|
-|宽度<br>数据类型： Int32|实现此参数，以便用户可以指定输出设备的宽度。|
-|**最后**<br>数据类型： SwitchParameter|实现此参数以便在指定参数时支持文本换行。|
+|**ShortName**<br>数据类型： SwitchParameter|实现此参数以便在指定参数时支持短名称。|
+|Width<br>数据类型： Int32|实现此参数，以便用户可以指定输出设备的宽度。|
+|**包装**<br>数据类型： SwitchParameter|实现此参数以便在指定参数时支持文本换行。|
 ## <a name="see-also"></a>另请参阅
 
 [Cmdlet 参数](./cmdlet-parameters.md)

@@ -1,19 +1,12 @@
 ---
 title: GetProcessSample01 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7b48bf80-cbf0-4cb1-8d5b-3b8d06196598
-caps.latest.revision: 10
-ms.openlocfilehash: 27f1c346863458920b310c6c4ce1403b3aab69ba
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 84956fbafdd58623ca4f332efc940fb93b421c6e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563792"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784242"
 ---
 # <a name="getprocesssample01-sample"></a>GetProcessSample01 示例
 
@@ -21,21 +14,21 @@ ms.locfileid: "83563792"
 
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>如何使用 Visual Studio 生成示例。
 
-1. 安装 Windows PowerShell 2.0 SDK 后，导航到 GetProcessSample01 文件夹。 默认位置为 C:\Program Files （x86） \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01。
+1. 安装 Windows PowerShell 2.0 SDK 后，导航到 GetProcessSample01 文件夹。 默认位置为 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01。
 
-2. 双击解决方案（.sln）文件的图标。 这会在 Microsoft Visual Studio 中打开示例项目。
+2. 双击解决方案的图标 ( .sln) 文件。 这会在 Microsoft Visual Studio 中打开示例项目。
 
-3. 在“生成”菜单中选择“生成解决方案”   。
+3. 在“生成”菜单中选择“生成解决方案” 。
 
   示例库将在默认的 \bin 或 \bin\debug 文件夹中生成。
 
 ### <a name="how-to-run-the-sample"></a>如何运行示例
 
-1. 打开“命令提示符”窗口。
+1. 打开命令提示符窗口。
 
 2. 导航到包含示例 .dll 文件的目录。
 
-3. 运行 installutil.exe "GetProcessSample01"。
+3. 运行 installutil.exe "GetProcessSample01.dll"。
 
 4. 启动 Windows PowerShell。
 

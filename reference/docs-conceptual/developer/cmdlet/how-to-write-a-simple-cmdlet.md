@@ -1,19 +1,12 @@
 ---
 title: 如何编写简单的 Cmdlet |Microsoft Docs
-ms.custom: ''
 ms.date: 01/15/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 137543d8-0012-4cba-bcd6-98b25aac83bb
-caps.latest.revision: 9
-ms.openlocfilehash: 9bd72e8f97c194c98adb1049f5a966549113fd12
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 2ff0b47454804c9becd6f03ac521946b9596bb8b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563894"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784055"
 ---
 # <a name="how-to-write-a-cmdlet"></a>如何编写 cmdlet
 
@@ -78,7 +71,7 @@ namespace SendGreeting
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [System.object。](/dotnet/api/System.Management.Automation.Cmdlet)
 

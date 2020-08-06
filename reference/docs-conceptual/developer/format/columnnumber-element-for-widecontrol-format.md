@@ -1,25 +1,18 @@
 ---
-title: WideControl 的 ColumnNumber 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: WideControl (Format) 的 ColumnNumber 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fe9eb5f9-a193-41a4-ad47-a96ba3f8d7e3
-caps.latest.revision: 8
-ms.openlocfilehash: 49f501538b8f72777984a5e575b999866abcdebf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5f151bb0e629efcebe6295cdcae6cebcbbb1b39b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364216"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783851"
 ---
 # <a name="columnnumber-element-for-widecontrol-format"></a>ColumnNumber Element for WideControl (Format)
 
 指定宽视图中显示的列数。
 
-WideControl 的 Configuration 元素（格式） ViewDefinitions 元素（格式） WideControl 元素（format） ColumnNumber 元素（format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) WideControl 元素 (格式) ColumnNumber 元素 (格式) 
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ WideControl 的 Configuration 元素（格式） ViewDefinitions 元素（格式
 <ColumnNumber>PositiveInteger</ColumnNumber>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `ColumnNumber` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `ColumnNumber` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,7 +36,7 @@ WideControl 的 Configuration 元素（格式） ViewDefinitions 元素（格式
 
 |元素|描述|
 |-------------|-----------------|
-|[WideControl 元素（格式）](./widecontrol-element-format.md)|定义视图的宽（单值）列表格式。|
+|[WideControl Element (Format)](./widecontrol-element-format.md)|定义视图的宽 (单个值) 列表格式。|
 
 ## <a name="text-value"></a>文本值
 
@@ -55,14 +48,14 @@ WideControl 的 Configuration 元素（格式） ViewDefinitions 元素（格式
 
 有关宽视图组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
 
-有关宽视图的示例，请参阅[宽视图（基本）](./wide-view-basic.md)。
+有关宽视图的示例，请参阅[宽视图 (基本) ](./wide-view-basic.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[WideControl 的 Autosize 元素（Format）](./autosize-element-for-widecontrol-format.md)
+[WideControl 的 Autosize 元素 (格式) ](./autosize-element-for-widecontrol-format.md)
 
 [创建宽视图](./creating-a-wide-view.md)
 
-[宽视图（基本）](./wide-view-basic.md)
+[宽视图 (Basic)](./wide-view-basic.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

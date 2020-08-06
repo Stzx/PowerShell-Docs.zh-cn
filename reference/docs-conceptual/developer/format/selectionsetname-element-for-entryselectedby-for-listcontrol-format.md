@@ -1,25 +1,18 @@
 ---
-title: ListControl （Format）的 EntrySelectedBy 的 SelectionSetName 元素 |Microsoft Docs
-ms.custom: ''
+title: ListControl (Format) 的 EntrySelectedBy 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: cff7763c-5ce0-49c1-a480-1249c9f57a13
-caps.latest.revision: 11
-ms.openlocfilehash: 7fd431b4b1ddecd3a7358c2bf97f299b97162b34
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4315d81da4ceeb7a5b171087434ae15fb09e6592
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361996"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785262"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-listcontrol-format"></a>SelectionSetName Element for EntrySelectedBy for ListControl (Format)
 
 为列表条目指定一组 .NET 对象。 对于可为条目指定的选项集数没有限制。
 
-配置元素（格式） ViewDefinitions 元素（格式）查看元素（格式） ListControl 元素（格式） ListEntries 元素（格式） ListEntry 元素（format） EntrySelectedBy 元素 for ListEntry （Format） SelectionSetName 元素 forEntrySelectedBy for ListEntry （Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ListControl 元素 (格式) ListEntries 元素 (格式) ListEntry 元素 (格式) EntrySelectedBy (格式) ListEntry 元素 (SelectionSetName) 格式
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72361996"
 <SelectionSetName>NameofSelectionSet</SelectionSetName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍 `SelectionSetName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `SelectionSetName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,7 +36,7 @@ ms.locfileid: "72361996"
 
 |元素|描述|
 |-------------|-----------------|
-|[ListEntry 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-listentry-for-listcontrol-format.md)|定义使用此列表项的 .NET 类型或此项要使用的条件。|
+|[ListEntry 的 EntrySelectedBy 元素 (格式) ](./entryselectedby-element-for-listentry-for-listcontrol-format.md)|定义使用此列表项的 .NET 类型或此项要使用的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -74,6 +67,6 @@ ms.locfileid: "72361996"
 
 [创建列表视图](./creating-a-list-view.md)
 
-[ListEntry 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-listentry-for-listcontrol-format.md)
+[ListEntry 的 EntrySelectedBy 元素 (格式) ](./entryselectedby-element-for-listentry-for-listcontrol-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

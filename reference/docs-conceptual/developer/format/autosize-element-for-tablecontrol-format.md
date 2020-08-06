@@ -1,25 +1,18 @@
 ---
-title: TableControl 的 AutoSize 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: TableControl 的 AutoSize 元素)  (格式 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1df5de23-9ffc-427e-bb34-f5efe073f3fe
-caps.latest.revision: 11
-ms.openlocfilehash: f50ba257ee57c36aedc6b37c680a0130842b69b0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f29b3eb278fd9ff29d2f6f4fbd000513dcaeec7b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364206"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783885"
 ---
 # <a name="autosize-element-for-tablecontrol-format"></a>AutoSize Element for TableControl (Format)
 
 指定是否根据数据大小调整列大小和列数。
 
-TableControl 的 ViewDefinitions 元素（格式） View 元素（format） TableControl 元素（format） AutoSize 元素（format）
+ViewDefinitions 元素 (格式) View 元素 (格式) TableControl (格式) AutoSize 元素 (格式) 
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ TableControl 的 ViewDefinitions 元素（格式） View 元素（format） Tabl
 <AutoSize/>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `AutoSize` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `AutoSize` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,7 +36,7 @@ TableControl 的 ViewDefinitions 元素（格式） View 元素（format） Tabl
 
 |元素|描述|
 |-------------|-----------------|
-|[TableControl 元素（格式）](./tablecontrol-element-format.md)|定义视图的表格格式。|
+|[TableControl Element (Format)](./tablecontrol-element-format.md)|定义视图的表格格式。|
 
 ## <a name="remarks"></a>备注
 
@@ -53,6 +46,6 @@ TableControl 的 ViewDefinitions 元素（格式） View 元素（format） Tabl
 
 [创建表视图](./creating-a-table-view.md)
 
-[TableControl 元素（格式）](./tablecontrol-element-format.md)
+[TableControl Element (Format)](./tablecontrol-element-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

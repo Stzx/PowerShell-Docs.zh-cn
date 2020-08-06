@@ -1,23 +1,16 @@
 ---
 title: Alias 属性声明 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Alias attribute
 - attributes, Alias
 - Alias attribute, described
-ms.assetid: d0df3a46-b1cc-42b9-beb1-e16bce254007
-caps.latest.revision: 10
-ms.openlocfilehash: 4d20672c5181c994c1b53624f6c42a301db11f26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4c1ff34a244611173ca919a44d6598189b19dc98
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72370016"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782406"
 ---
 # <a name="alias-attribute-declaration"></a>别名属性声明
 
@@ -31,7 +24,7 @@ Alias 属性允许用户为 cmdlet 参数指定不同的名称。 可以使用�
 
 #### <a name="parameters"></a>参数
 
-需要 `aliasName` （String []）。 指定 cmdlet 参数的一组以逗号分隔的别名。
+`aliasName`需要 (String [] ) 。 指定 cmdlet 参数的一组以逗号分隔的别名。
 
 ## <a name="remarks"></a>备注
 

@@ -1,25 +1,18 @@
 ---
-title: GroupBy 的 PropertyName 元素（Format） |Microsoft Docs
-ms.custom: ''
+title: GroupBy (Format) 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ddcecc46-ac75-43fa-b03a-802a68524ec3
-caps.latest.revision: 10
-ms.openlocfilehash: da6ac5abe7acbbee8f57b3e81529664f81800b86
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e83ebd49e4f3087c817b3cc8772889dbe85113aa
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362516"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785602"
 ---
 # <a name="propertyname-element-for-groupby-format"></a>PropertyName Element for GroupBy (Format)
 
 指定在新组的值发生更改时启动新组的 .NET 属性。
 
-对于 GroupBy （Format）的 View （Format） PropertyName 元素，Configuration 元素（Format） ViewDefinitions 元素（format） GroupBy 元素
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (Format) GroupBy 元素 (groupby) 格式的 PropertyName 元素 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72362516"
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `PropertyName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `PropertyName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ ms.locfileid: "72362516"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[View 的 GroupBy 元素（格式）](./groupby-element-for-view-format.md)|定义一组 .NET 对象的显示方式。|
+|[GroupBy Element for View (Format)](./groupby-element-for-view-format.md)|定义一组 .NET 对象的显示方式。|
 
 ## <a name="text-value"></a>文本值
 
@@ -67,12 +60,12 @@ ms.locfileid: "72362516"
 
 ```
 
-有关包括此元素的完整格式化文件的示例，请参阅[宽视图（GroupBy）](./wide-view-groupby.md)。
+有关包括此元素的完整格式化文件的示例，请参阅[ (GroupBy) 的宽视图](./wide-view-groupby.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[View 的 GroupBy 元素（格式）](./groupby-element-for-view-format.md)
+[GroupBy Element for View (Format)](./groupby-element-for-view-format.md)
 
-[GroupBy 的 ScriptBlock 元素（格式）](./scriptblock-element-for-groupby-format.md)
+[ScriptBlock Element for GroupBy (Format)](./scriptblock-element-for-groupby-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

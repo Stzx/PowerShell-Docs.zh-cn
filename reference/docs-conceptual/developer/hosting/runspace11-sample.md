@@ -1,19 +1,12 @@
 ---
 title: Runspace11 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9c90d268-730b-4e73-9dfd-5f288c27aed0
-caps.latest.revision: 8
-ms.openlocfilehash: 606f06339d0bbec3393c6b2602df3636c1f4e458
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6e8a4080bb4fb33f7e0d428e24483b5cfac5c70e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565377"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784922"
 ---
 # <a name="runspace11-sample"></a>Runspace11 示例
 
@@ -29,11 +22,11 @@ ms.locfileid: "83565377"
 
 - 创建描述现有 cmdlet 的元数据的[Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata)对象。
 
-- 正在创建一个[Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
+- 创建[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
 
 - 修改 cmdlet 元数据以删除 cmdlet 的参数。
 
-- 将 cmdlet 添加到[Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象，并将该 cmdlet 设为私有。
+- 将 cmdlet 添加到[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象，并将该 cmdlet 设为私有。
 
 - 创建一个代理函数以调用现有的 cmdlet，但只公开一组受限的参数。
 

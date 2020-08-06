@@ -1,25 +1,18 @@
 ---
-title: ViewSelectedBy 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: " (格式) 的 ViewSelectedBy 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: acdeef4d-3554-4f39-a7e6-a684e3848fd7
-caps.latest.revision: 19
-ms.openlocfilehash: efc1c5d1338889ecd0be7150b7733842ce78979e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c8704c1504c6e24c9cac6bc8bc25e92a0d9110cc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367966"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785007"
 ---
 # <a name="viewselectedby-element-format"></a>ViewSelectedBy Element (Format)
 
 定义视图显示的 .NET 对象。 每个视图必须至少指定一个 .NET 对象。
 
-ViewDefinitions 元素（格式） View 元素（Format） ViewSelectedBy 元素（Format）
+ViewDefinitions 元素 (格式) View 元素 (格式) ViewSelectedBy 元素 (格式) 
 
 ## <a name="syntax"></a>语法
 
@@ -30,32 +23,32 @@ ViewDefinitions 元素（格式） View 元素（Format） ViewSelectedBy 元素
 </ViewSelectedBy>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍 `ViewSelectedBy` 元素的属性、子元素和父元素。 此元素必须包含至少一个 `TypeName` 或 `SelectionSetName` 子元素。 对于可以指定的子元素数没有限制，也没有其顺序。
+以下各节描述了元素的属性、子元素和父元素 `ViewSelectedBy` 。 此元素必须包含至少一个 `TypeName` 或 `SelectionSetName` 子元素。 对于可以指定的子元素数没有限制，也没有其顺序。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[ViewSelectedBy 的 TypeName 元素（Format）](./typename-element-for-viewselectedby-format.md)|可选元素。<br /><br /> 指定视图显示的 .NET 对象。|
-|[ViewSelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-viewselectedby-format.md)|可选元素。<br /><br /> 指定视图显示的一组 .NET 对象。|
+|[TypeName Element for ViewSelectedBy (Format)](./typename-element-for-viewselectedby-format.md)|可选元素。<br /><br /> 指定视图显示的 .NET 对象。|
+|[SelectionSetName Element for ViewSelectedBy (Format)](./selectionsetname-element-for-viewselectedby-format.md)|可选元素。<br /><br /> 指定视图显示的一组 .NET 对象。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[View 元素（格式）](./view-element-format.md)|定义一个视图，该视图显示一个或多个 .NET 对象。|
+|[View Element (Format)](./view-element-format.md)|定义一个视图，该视图显示一个或多个 .NET 对象。|
 
 ## <a name="remarks"></a>备注
 
 有关此元素在不同视图中的使用方式的详细信息，请参阅[表视图组件](./creating-a-table-view.md)、[列表视图](./creating-a-list-view.md)组件、[宽视图组件](./creating-a-wide-view.md)和[自定义控件组件](./creating-custom-controls.md)。
 
-当格式文件定义一组由多个视图显示的对象时，将使用 `SelectionSetName` 元素。 有关如何定义和引用选择集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
+`SelectionSetName`当格式设置文件定义了由多个视图显示的一组对象时，使用元素。 有关如何定义和引用选择集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
 
 ## <a name="example"></a>示例
 
@@ -81,10 +74,10 @@ ViewDefinitions 元素（格式） View 元素（Format） ViewSelectedBy 元素
 
 [创建自定义控件](./creating-custom-controls.md)
 
-[定义选择集](./defining-selection-sets.md)
+[定义选项集](./defining-selection-sets.md)
 
-[ViewSelectedBy 的 SelectionSetName 元素（格式）](./selectionsetname-element-for-viewselectedby-format.md)
+[SelectionSetName Element for ViewSelectedBy (Format)](./selectionsetname-element-for-viewselectedby-format.md)
 
-[TypeName 元素（格式）](./typename-element-for-viewselectedby-format.md)
+[TypeName 元素 (格式) ](./typename-element-for-viewselectedby-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

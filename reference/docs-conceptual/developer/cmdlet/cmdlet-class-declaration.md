@@ -1,26 +1,19 @@
 ---
 title: Cmdlet 类声明 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell SDK], declaring
 - declaring cmdlets [PowerShell SDK]
-ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
-caps.latest.revision: 14
-ms.openlocfilehash: 0de49d979c31b0e8d111323a2e1899d97868ec3f
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 96ce8144795346b6f46878ee6163ce69cdb1799a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978706"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784497"
 ---
 # <a name="cmdlet-class-declaration"></a>Cmdlet 类声明
 
-通过将**cmdlet**特性指定为类的元数据，将 Microsoft .NET 框架类声明为 cmdlet。 （ **Cmdlet**属性是所有 cmdlet 的唯一必需的属性）。
+通过将**cmdlet**特性指定为类的元数据，将 Microsoft .NET 框架类声明为 cmdlet。  (**cmdlet**特性是所有 cmdlet) 唯一必需的属性。
 指定**cmdlet**属性时，必须指定用于向用户标识 Cmdlet 的动词和名词对。 并且，你必须描述 cmdlet 支持的 Windows PowerShell 功能。 有关用于指定**cmdlet**特性的声明语法的详细信息，请参阅[cmdlet 特性声明](./cmdlet-attribute-declaration.md)。
 
 > [!NOTE]
@@ -30,7 +23,7 @@ ms.locfileid: "80978706"
 
 Cmdlet 的名词指定该 cmdlet 操作的资源。 名词将 cmdlet 与其他 cmdlet 区分开来。
 
-Cmdlet 名称中的名词必须是特定的，如果是泛型名词（如*server*），最好添加一个短前缀，将资源与其他类似资源区分开来。 例如，包含带有前缀名词的 cmdlet 名称将 `Get-SQLServer`。 将特定名词与更通用的动词组合后，用户可以通过其操作快速找到 cmdlet，然后通过其资源确定 cmdlet，同时避免不必要的 cmdlet 名称重复。
+Cmdlet 名称中的名词必须是特定的，如果是泛型名词（如*server*），最好添加一个短前缀，将资源与其他类似资源区分开来。 例如，包含带有前缀的名词的 cmdlet 名称是 `Get-SQLServer` 。 将特定名词与更通用的动词组合后，用户可以通过其操作快速找到 cmdlet，然后通过其资源确定 cmdlet，同时避免不必要的 cmdlet 名称重复。
 
 有关不能在 cmdlet 名称中使用的特殊字符列表，请参阅[所需的开发指南](./required-development-guidelines.md)。
 
@@ -42,7 +35,7 @@ Cmdlet 名称中的名词必须是特定的，如果是泛型名词（如*server
 
 ## <a name="supporting-windows-powershell-functionality"></a>支持 Windows PowerShell 功能
 
-**Cmdlet**属性还允许你指定 Cmdlet 支持 Windows PowerShell 提供的某些常见功能。 这包括对常见功能的支持，如用户反馈确认（称为对 ShouldProcess 功能的支持）和对事务的支持。 （Windows PowerShell 2.0 中引入了对事务的支持）。
+**Cmdlet**属性还允许你指定 Cmdlet 支持 Windows PowerShell 提供的某些常见功能。 这包括对常见功能的支持，例如用户反馈确认 (称为支持 ShouldProcess 功能) 和支持事务。 Windows PowerShell 2.0) 中引入了 (对事务的支持。
 
 有关用于指定**cmdlet**特性的声明语法的详细信息，请参阅[cmdlet 特性声明](./cmdlet-attribute-declaration.md)。
 
@@ -54,7 +47,7 @@ Cmdlet 名称中的名词必须是特定的，如果是泛型名词（如*server
 
 ## <a name="pascal-casing"></a>Pascal 大小写
 
-命名 cmdlet 时，请使用 Pascal 大小写。 例如，在命名 cmdlet 时，`Get-Item` 和 `Get-ItemProperty` cmdlet 会显示使用大小写的正确方法。
+命名 cmdlet 时，请使用 Pascal 大小写。 例如，在 `Get-Item` `Get-ItemProperty` 命名 cmdlet 时，和 cmdlet 会显示正确使用大小写的方式。
 
 ## <a name="see-also"></a>另请参阅
 

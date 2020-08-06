@@ -1,19 +1,12 @@
 ---
 title: 如何请求确认 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f24f77d5-e224-4b62-b128-535e045d333e
-caps.latest.revision: 9
-ms.openlocfilehash: 19e96b612a8778d82cdbafb528a7ffeb01f15f99
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ebe928724f1b750afc11c1e3c1207375f4ec8e42
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369676"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784089"
 ---
 # <a name="how-to-request-confirmations"></a>如何请求确认
 
@@ -24,7 +17,7 @@ ms.locfileid: "72369676"
 
 ## <a name="to-request-confirmation"></a>请求确认
 
-1. 确保将 Cmdlet 特性的 `SupportsShouldProcess` 参数设置为 `true`。 （对于函数，这是 CmdletBinding 属性的参数。）
+1. 确保 `SupportsShouldProcess` 将 Cmdlet 特性的参数设置为 `true` 。 函数 (这是 CmdletBinding 属性的参数。 ) 
 
     ```csharp
     [Cmdlet(VerbsDiagnostic.Test, "RequestConfirmationTemplate1",
@@ -43,13 +36,13 @@ ms.locfileid: "72369676"
     private bool force;
     ```
 
-3. 添加一个 `if` 语句，该语句使用[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess)方法的返回值来确定是否调用[ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)方法的调用程序。的值。
+3. 添加一 `if` 条语句，该语句使用[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess)方法的返回值来确定是否调用了[ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)方法的调用程序。）。
 
-4. 添加第二个 `if` 语句，该语句使用[ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)方法的返回值和 `Force` 参数的值来确定是否应执行该操作。
+4. 添加第二个 `if` 语句，该语句使用[ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)方法的返回值和参数的值 `Force` 来确定是否应执行该操作。
 
 ## <a name="example"></a>示例
 
-在下面的代码示例中， 将从的重写 中调用 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 和 [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 方法，这些方法是从的 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法。 但是，也可以从其他输入处理方法中调用这些方法。
+在下面的代码示例中，将从[ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess)方法的重写中调用 ShouldContinue 方法，并调用[该方法中](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)的方法来调用[System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)方法的方法。 但是，也可以从其他输入处理方法中调用这些方法。
 
 ```csharp
 protected override void ProcessRecord()

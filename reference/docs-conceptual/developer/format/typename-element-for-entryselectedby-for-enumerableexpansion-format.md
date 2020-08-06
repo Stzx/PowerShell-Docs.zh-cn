@@ -1,25 +1,18 @@
 ---
-title: EnumerableExpansion 的 EntrySelectedBy 的 TypeName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: EntrySelectedBy for EnumerableExpansion (Format) 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c0506928-db92-4ec4-855f-6f3592a383ae
-caps.latest.revision: 6
-ms.openlocfilehash: 5ead806d956ebbef95eeffc42bb39ef784208017
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 670aeb0986b07c8b7834a9f4f9510f1757a62186
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361746"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785075"
 ---
 # <a name="typename-element-for-entryselectedby-for-enumerableexpansion-format"></a>TypeName Element for EntrySelectedBy for EnumerableExpansion (Format)
 
 指定通过此定义扩展的 .NET 类型。 定义默认设置时，将使用此元素。
 
-EnumerableExpansion 的配置元素（格式） DefaultSettings 元素（格式） EnumerableExpansions 元素（format） EnumerableExpansion 元素（format） EntrySelectedBy 元素 for EntrySelectedBy （Format） TypeName 元素 forEnumerableExpansion （格式）
+配置元素 (格式) DefaultSettings 元素 (格式) EnumerableExpansions 元素 (格式) EnumerableExpansion 元素 (格式) EnumerableExpansion 的 EntrySelectedBy 元素 (EntrySelectedBy) 格式 (
 
 ## <a name="syntax"></a>语法
 
@@ -28,11 +21,11 @@ EnumerableExpansion 的配置元素（格式） DefaultSettings 元素（格式�
 
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `TypeName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `TypeName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -44,16 +37,16 @@ EnumerableExpansion 的配置元素（格式） DefaultSettings 元素（格式�
 
 |元素|描述|
 |-------------|-----------------|
-|[EnumerableExpansion 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-enumerableexpansion-format.md)|定义使用此定义的 .NET 类型或要使用此定义时必须存在的条件。|
+|[EntrySelectedBy Element for EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)|定义使用此定义的 .NET 类型或要使用此定义时必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
-指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo`。
+指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo` 。
 
 ## <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>另请参阅
 
-[EnumerableExpansion 的 EntrySelectedBy 元素（格式）](./entryselectedby-element-for-enumerableexpansion-format.md)
+[EntrySelectedBy Element for EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

@@ -1,25 +1,18 @@
 ---
-title: ListControl 的 SelectionCondition for EntrySelectedBy 的 PropertyName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: ListControl (Format) 的 SelectionCondition for EntrySelectedBy 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 71c3f1f6-6fe2-42f1-8260-6974d3871748
-caps.latest.revision: 11
-ms.openlocfilehash: 7d526372cf80327b3fb9b79b6e83429c57780183
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3f0a6b6b381f39492da36dab271503fc7cf6e7fc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362286"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785551"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>PropertyName Element for SelectionCondition for EntrySelectedBy for ListControl (Format)
 
-指定触发条件的 .NET 属性。 如果该属性存在或其计算结果为 `true`，则满足条件，并使用列表项。
+指定触发条件的 .NET 属性。 如果该属性存在或其计算结果为 `true` ，则满足条件，并使用列表项。
 
-配置元素（格式） ViewDefinitions 元素（格式）查看元素（格式） ListControl 元素（格式） ListEntries 元素（格式） ListEntry 元素（format） EntrySelectedBy 元素 for ListEntry （Format） SelectionCondition 元素 forSelectionCondition for EntrySelectedBy for ListEntry 的 ListEntry （Format） PropertyName 元素的 EntrySelectedBy （Format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ListControl 元素 (格式) ListEntries 元素 (格式) ListEntry 元素 (格式) EntrySelectedBy 的 ListEntry 元素 (SelectionCondition 的 EntrySelectedBy) format 元素 (ListEntry) 格式 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72362286"
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `PropertyName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `PropertyName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ ms.locfileid: "72362286"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[ListEntry 的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|定义要使用此列表项必须存在的条件。|
+|[ListEntry (格式的 EntrySelectedBy 的 SelectionCondition 元素) ](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|定义要使用此列表项必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -61,8 +54,8 @@ ms.locfileid: "72362286"
 
 [定义显示数据的条件](./defining-conditions-for-displaying-data.md)
 
-[ListEntry 元素（格式）](./listentry-element-for-listcontrol-format.md)
+[ListEntry 元素 (格式) ](./listentry-element-for-listcontrol-format.md)
 
-[ListEntry 的 EntrySelectedBy 的 SelectionCondition 的 ScriptBlock 元素（格式）](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)
+[用于 ListEntry (格式的 EntrySelectedBy 的 SelectionCondition 的 ScriptBlock 元素) ](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)
