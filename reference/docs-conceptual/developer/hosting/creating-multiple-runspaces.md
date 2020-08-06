@@ -1,27 +1,20 @@
 ---
 title: 创建多个运行空间 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 42c40c7f-1ee7-4021-950c-2e013c8f2a4a
-caps.latest.revision: 4
-ms.openlocfilehash: 606a2ee4e70d303bf1b1d69b7523eb8649f9be0c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1047492d2b859ae14ddd279e25e5e1dff0013820
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367606"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779619"
 ---
-# <a name="creating-multiple-runspaces"></a><span data-ttu-id="4359c-102">创建多个运行空间</span><span class="sxs-lookup"><span data-stu-id="4359c-102">Creating multiple runspaces</span></span>
+# <a name="creating-multiple-runspaces"></a><span data-ttu-id="376aa-102">创建多个运行空间</span><span class="sxs-lookup"><span data-stu-id="376aa-102">Creating multiple runspaces</span></span>
 
-<span data-ttu-id="4359c-103">如果创建大量的运行空间，则可以考虑创建运行空间池。</span><span class="sxs-lookup"><span data-stu-id="4359c-103">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="4359c-104">使用[Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool)对象，而不是创建具有相同特征的大量单个运行空间，可以提高性能。</span><span class="sxs-lookup"><span data-stu-id="4359c-104">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
+<span data-ttu-id="376aa-103">如果创建大量的运行空间，则可以考虑创建运行空间池。</span><span class="sxs-lookup"><span data-stu-id="376aa-103">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="376aa-104">使用[Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool)对象，而不是创建具有相同特征的大量单个运行空间，可以提高性能。</span><span class="sxs-lookup"><span data-stu-id="376aa-104">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
 
-## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="4359c-105">创建和使用运行空间池。</span><span class="sxs-lookup"><span data-stu-id="4359c-105">Creating and using a runspace pool.</span></span>
+## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="376aa-105">创建和使用运行空间池。</span><span class="sxs-lookup"><span data-stu-id="376aa-105">Creating and using a runspace pool.</span></span>
 
- <span data-ttu-id="4359c-106">下面的示例演示如何创建运行空间池，以及如何在池中的运行空间中以异步方式运行命令。</span><span class="sxs-lookup"><span data-stu-id="4359c-106">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
+ <span data-ttu-id="376aa-106">下面的示例演示如何创建运行空间池，以及如何在池中的运行空间中以异步方式运行命令。</span><span class="sxs-lookup"><span data-stu-id="376aa-106">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
 
 ```csharp
 namespace HostRunspacePool
@@ -79,6 +72,6 @@ namespace HostRunspacePool
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="4359c-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4359c-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="376aa-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="376aa-107">See Also</span></span>
 
- [<span data-ttu-id="4359c-108">创建 InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="4359c-108">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
+ [<span data-ttu-id="376aa-108">创建 InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="376aa-108">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
