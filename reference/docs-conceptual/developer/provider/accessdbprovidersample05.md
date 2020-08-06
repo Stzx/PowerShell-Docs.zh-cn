@@ -1,19 +1,12 @@
 ---
 title: AccessDBProviderSample05 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a26661f2-a63c-4ca7-ad3e-dcb4d32ce5a1
-caps.latest.revision: 8
-ms.openlocfilehash: 43d18672ec4f52961b2a2460635468a2d6fb41e5
-ms.sourcegitcommit: 109f132360e8adbbdaf5dbc42a270be73d9dfa9b
+ms.openlocfilehash: 67a10d9192350b339da1b82d9eb367ee4af6ef86
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84633373"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786843"
 ---
 # <a name="accessdbprovidersample05"></a>AccessDBProviderSample05
 
@@ -36,7 +29,7 @@ ms.locfileid: "84633373"
 
 - 定义一个派生自[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类的提供程序类。
 
-- 覆盖[Navigationcmdletprovider. Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem)方法以更改 cmdlet 的行为 `Move-Item` ，允许用户将项从一个位置移到另一个位置。 （此示例不显示如何将动态参数添加到 `Move-Item` cmdlet。）
+- 覆盖[Navigationcmdletprovider. Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem)方法以更改 cmdlet 的行为 `Move-Item` ，允许用户将项从一个位置移到另一个位置。  (此示例不显示如何将动态参数添加到 `Move-Item` cmdlet。 ) 
 
 - 覆盖[Navigationcmdletprovider. Makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath)方法，以更改 cmdlet 的行为方式 `Join-Path` 。
 

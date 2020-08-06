@@ -1,25 +1,18 @@
 ---
-title: EnumerableExpansion 的 EntrySelectedBy 的 SelectionCondition 的 SelectionSetName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: 用于 EntrySelectedBy for EnumerableExpansion (Format) 的 SelectionCondition 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7b7af0b2-68e6-43c3-adcc-7c58007fced8
-caps.latest.revision: 13
-ms.openlocfilehash: 6f7c8d9af3c1c2fbda0208148b0088161701fdbe
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e18c74bb95c658f2c3e7b7454628f78d523f7609
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361986"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787489"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format"></a>SelectionSetName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion (Format)
 
 指定触发条件的 .NET 类型集。 如果此集中的任何类型存在，则满足条件。
 
-用于 EnumerableExpansion 的 DefaultSettings 元素（format） EnumerableExpansions 元素（format） EnumerableExpansions 元素（format） EntrySelectedBy 元素EnumerableExpansion （Format） SelectionSetName 元素 for SelectionCondition for EntrySelectedBy for EnumerableExpansion （Format）
+配置元素 DefaultSettings 元素 (格式) EnumerableExpansions 元素 (格式) EnumerableExpansions 元素 (格式) EnumerableExpansion 的 EntrySelectedBy 元素 (SelectionCondition 的 EntrySelectedBy) EnumerableExpansion 的 SelectionSetName 元素 (SelectionCondition 的 EntrySelectedBy) 格式 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72361986"
 <SelectionSetName>NameofSelectionSet</SelectionSetName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍 `SelectionSetName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `SelectionSetName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ ms.locfileid: "72361986"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[EnumerableExpansion 的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)|定义扩展此定义的集合对象时必须存在的条件。|
+|[SelectionCondition Element for EntrySelectedBy for EnumerableExpansion (Format)](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)|定义扩展此定义的集合对象时必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -57,8 +50,8 @@ ms.locfileid: "72361986"
 
 ## <a name="see-also"></a>另请参阅
 
-[定义选择集](./defining-selection-sets.md)
+[定义选项集](./defining-selection-sets.md)
 
-[EnumerableExpansion 的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)
+[SelectionCondition Element for EntrySelectedBy for EnumerableExpansion (Format)](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

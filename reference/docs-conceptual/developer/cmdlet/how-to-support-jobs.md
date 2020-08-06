@@ -1,19 +1,12 @@
 ---
 title: 如何支持作业 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5eac452c-eae2-4193-b4da-0b618bef3677
-caps.latest.revision: 9
-ms.openlocfilehash: 65f6b3d44910a0a3e848b4d2cd3e619186e5ed25
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.openlocfilehash: 7ae4e6c118965c73ba6b3d4d38b1bd3171d2b3da
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706234"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786622"
 ---
 # <a name="how-to-support-jobs"></a>如何支持作业
 
@@ -21,7 +14,7 @@ ms.locfileid: "77706234"
 
 ## <a name="to-support-jobs"></a>支持作业
 
-1. 定义 `AsJob` 开关参数，以便用户可以决定是否将 cmdlet 作为作业运行。
+1. 定义 `AsJob` 开关参数，使用户可以决定是否将 cmdlet 作为作业运行。
 
     下面的示例演示了 AsJob 参数声明。
 
@@ -47,7 +40,7 @@ ms.locfileid: "77706234"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobObject](msh_samplesGetProc06#GetProc06JobObject)]  -->
 
-3. 在记录处理方法中，添加一个 `if` 语句来检测 cmdlet 是否应作为作业运行。 下面的代码使用[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法来实现。
+3. 在记录处理方法中，添加 `if` 语句以检测 cmdlet 是否应作为作业运行。 下面的代码使用[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法来实现。
 
     ```csharp
     protected override void ProcessRecord()

@@ -1,19 +1,12 @@
 ---
 title: 创建自定义控件 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c3baa406-cd33-4420-be5a-07ef09d93480
-caps.latest.revision: 8
-ms.openlocfilehash: 3504ab1d974c55e9279172d0e851961474ccb926
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c36fa9b778e01501a3c88f735cdefdfbb04411a0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363376"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786112"
 ---
 # <a name="creating-custom-controls"></a>创建自定义控件
 
@@ -21,7 +14,7 @@ ms.locfileid: "72363376"
 
 ## <a name="custom-control-example"></a>自定义控件示例
 
-下面的示例显示了 types.ps1xml 文件中定义的自定义控件。 此自定义控件用于分隔在表视图中显示的[system.object](/dotnet/api/System.Management.Automation.Signature)对象。
+下面的示例演示了在 Certificates.Format.ps1xml 文件中定义的自定义控件。 此自定义控件用于分隔在表视图中显示的[system.object](/dotnet/api/System.Management.Automation.Signature)对象。
 
 ```xml
 <Controls>
@@ -53,4 +46,4 @@ ms.locfileid: "72363376"
 
 ## <a name="see-also"></a>另请参阅
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

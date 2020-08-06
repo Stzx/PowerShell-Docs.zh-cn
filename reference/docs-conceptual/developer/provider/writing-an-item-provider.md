@@ -1,19 +1,12 @@
 ---
 title: 写入项提供程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 606c880c-6cf1-4ea6-8730-dbf137bfabff
-caps.latest.revision: 5
-ms.openlocfilehash: 12d2cb8c40c9fd6278bb964a6259d03167536195
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1df30e7af1b534756f797b9b5d4e29b689cbc782
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359876"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786758"
 ---
 # <a name="writing-an-item-provider"></a>编写项提供程序
 
@@ -46,7 +39,7 @@ ms.locfileid: "72359876"
 
 ### <a name="implementing-getitem"></a>实现 GetItem
 
-当用户在提供程序上调用[GetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.getitemcommand) cmdlet 时，PowerShell 引擎将调用[Itemcmdletprovider. Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) . e x * *。 方法返回指定路径处的项。 在 Access 数据库示例中，方法检查项是否为驱动器本身、数据库中的表或数据库中的行。 此方法通过调用[Cmdletprovider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)方法将该项发送到 PowerShell 引擎中。
+当用户在提供程序上调用[GetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.getitemcommand) cmdlet 时，PowerShell 引擎将调用[Itemcmdletprovider. Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) .. e x * *。 方法返回指定路径处的项。 在 Access 数据库示例中，方法检查项是否为驱动器本身、数据库中的表或数据库中的行。 此方法通过调用[Cmdletprovider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)方法将该项发送到 PowerShell 引擎中。
 
 ```csharp
 protected override void GetItem(string path)

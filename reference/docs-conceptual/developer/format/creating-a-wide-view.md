@@ -1,19 +1,12 @@
 ---
 title: 创建宽视图 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2d4303c5-b451-4ccb-9831-b17a17ceac20
-caps.latest.revision: 16
-ms.openlocfilehash: 651de5d3bc2619f20438f3951ac5a8c4b0bf46d4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0cf6a35201c47e4b12dd160191570eccec3427ef
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368946"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786129"
 ---
 # <a name="creating-a-wide-view"></a>创建宽视图
 
@@ -21,7 +14,7 @@ ms.locfileid: "72368946"
 
 ## <a name="a-wide-view-display"></a>宽视图显示
 
-下面的示例演示了 Windows PowerShell 如何显示在将其输出传送到[格式范围](/powershell/module/Microsoft.PowerShell.Utility/Format-Wide)cmdlet 时由[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 返回的[system.object](/dotnet/api/System.Diagnostics.Process)对象。 （默认情况下，[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 返回表视图。）在此示例中，两个列用于显示每个返回对象的进程的名称。 不显示对象属性的名称，只显示属性的值。
+下面的示例演示了 Windows PowerShell 如何显示在将其输出传送到[格式范围](/powershell/module/Microsoft.PowerShell.Utility/Format-Wide)cmdlet 时由[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 返回的[system.object](/dotnet/api/System.Diagnostics.Process)对象。  (默认情况下，[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 返回表视图。在此示例中，) 使用这两列显示每个返回对象的进程的名称。 不显示对象属性的名称，只显示属性的值。
 
 ```
 Get-Process | format-wide
@@ -72,11 +65,11 @@ View>
 
 以下 XML 元素用于定义宽视图：
 
-- [View](./view-element-format.md)元素是宽视图的父元素。 （这是表、列表和自定义控件视图的相同父元素。）
+- [View](./view-element-format.md)元素是宽视图的父元素。  (此表、列表和自定义控件视图的父元素相同。 ) 
 
 - [Name](./name-element-for-view-format.md)元素指定视图的名称。 此元素对于所有视图都是必需的。
 
-- [ViewSelectedBy](./viewselectedby-element-format.md)元素定义使用视图的对象。 需要此元素。
+- [ViewSelectedBy](./viewselectedby-element-format.md)元素定义使用视图的对象。 此元素是必需的。
 
 - [GroupBy](./groupby-element-for-view-format.md)元素定义何时显示新的对象组。 每当特定属性或脚本的值发生更改时，就会启动一个新组。 此元素为可选元素。
 
@@ -84,11 +77,11 @@ View>
 
 - [WideControl](./widecontrol-element-format.md)元素及其子元素定义视图中显示的内容。 在前面的示例中，视图设计为显示[Processname](/dotnet/api/System.Diagnostics.Process.ProcessName)属性。
 
-有关定义简单宽视图的完整格式化文件的示例，请参阅[宽视图（基本）](./wide-view-basic.md)。
+有关定义简单宽视图的完整格式化文件的示例，请参阅[宽视图 (基本) ](./wide-view-basic.md)。
 
 ## <a name="providing-definitions-for-your-wide-view"></a>为宽视图提供定义
 
-宽视图可以通过使用[WideControl](./widecontrol-element-format.md)元素的子元素来提供一个或多个定义。 通常，视图将只有一个定义。 在下面的示例中，视图提供了一个显示[Processname](/dotnet/api/System.Diagnostics.Process.ProcessName)属性值的定义。 宽视图可以显示属性的值或脚本的值（示例中未显示）。
+宽视图可以通过使用[WideControl](./widecontrol-element-format.md)元素的子元素来提供一个或多个定义。 通常，视图将只有一个定义。 在下面的示例中，视图提供了一个显示[Processname](/dotnet/api/System.Diagnostics.Process.ProcessName)属性值的定义。 宽视图可以显示属性的值或脚本的值 (不会在示例) 中显示。
 
 ```xml
 <WideControl>
@@ -112,7 +105,7 @@ View>
 
 - [ColumnNumber](./columnnumber-element-for-widecontrol-format.md)元素指定在宽视图中显示的列数。 此元素为可选元素。
 
-- [WideEntries](./wideentries-element-for-widecontrol-format.md)元素提供视图的定义。 在大多数情况下，视图将只有一个定义。 需要此元素。
+- [WideEntries](./wideentries-element-for-widecontrol-format.md)元素提供视图的定义。 在大多数情况下，视图将只有一个定义。 此元素是必需的。
 
 - [WideEntry](./wideentry-element-for-widecontrol-format.md)元素提供视图的定义。 至少需要一个[WideEntry](./wideentry-element-for-widecontrol-format.md) ;但是，可以添加的元素数没有最大限制。 在大多数情况下，视图将只有一个定义。
 
@@ -126,7 +119,7 @@ View>
 
 - "[格式字符串](./formatstring-element-for-wideitem-for-widecontrol-format.md)" 元素指定用于显示数据的模式。 此元素为可选元素。
 
-有关定义宽视图定义的完整格式化文件的示例，请参阅[宽视图（基本）](./wide-view-basic.md)。
+有关定义宽视图定义的完整格式化文件的示例，请参阅[宽视图 (基本) ](./wide-view-basic.md)。
 
 ## <a name="defining-the-objects-that-use-the-wide-view"></a>定义使用大视图的对象
 
@@ -150,7 +143,7 @@ View>
 
 - [TypeName](./typename-element-for-viewselectedby-format.md)元素指定视图显示的 .net。 完全限定的 .NET 类型名称是必需的。 您必须为视图指定至少一个类型或选择集，但没有可指定的最大元素数。
 
-有关完整格式化文件的示例，请参阅[宽视图（基本）](./wide-view-basic.md)。
+有关完整格式化文件的示例，请参阅[宽视图 (基本) ](./wide-view-basic.md)。
 
 下面的示例使用[ViewSelectedBy](./viewselectedby-element-format.md)和[SelectionSetName](./selectionsetname-element-for-viewselectedby-format.md)元素。 使用选择集，其中有一组使用多个视图显示的相关对象，例如为同一对象定义宽视图和表视图。 有关如何创建选项集的详细信息，请参阅[定义选择集](./defining-selection-sets.md)。
 
@@ -186,9 +179,9 @@ View>
 
 - [TypeName](./typename-element-for-viewselectedby-format.md)元素指定由定义显示的 .net。 使用此元素时，需要完全限定的 .NET 类型名称。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。
 
-- [SelectionSetName](./selectionsetname-element-for-viewselectedby-format.md)元素（未显示）指定可由此定义显示的一组对象。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。
+-  (未显示的[SelectionSetName](./selectionsetname-element-for-viewselectedby-format.md)元素) 指定可由此定义显示的一组对象。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。
 
-- [SelectionCondition](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)元素（未显示）指定必须存在的条件才能使用此定义。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。 有关定义选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+-  (未显示的[SelectionCondition](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)元素) 指定要使用此定义必须存在的条件。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。 有关定义选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="displaying-groups-of-objects-in-a-wide-view"></a>以宽视图显示对象组
 
@@ -216,11 +209,11 @@ View>
 
 - [CustomControlName](./customcontrolname-element-for-groupby-format.md)元素指定用于显示数据的通用控件或视图控件。 此元素为可选元素。
 
-有关定义组的完整格式化文件的示例，请参阅[宽视图（GroupBy）](./wide-view-groupby.md)。
+有关定义组的完整格式化文件的示例，请参阅[ (GroupBy) 的宽视图](./wide-view-groupby.md)。
 
 ## <a name="using-format-strings"></a>使用格式字符串
 
-可以将字符串的格式添加到宽视图，进一步定义数据的显示方式。 下面的示例演示如何为 `StartTime` 属性的值定义格式字符串。
+可以将字符串的格式添加到宽视图，进一步定义数据的显示方式。 下面的示例演示如何为属性的值定义格式字符串 `StartTime` 。
 
 ```xml
 <WideItem>
@@ -237,9 +230,9 @@ View>
 
 - "格式[字符串](./formatstring-element-for-wideitem-for-widecontrol-format.md)" 元素指定定义属性或脚本值在视图中显示方式的格式模式
 
-- [ScriptBlock](./scriptblock-element-for-wideitem-for-widecontrol-format.md)元素（未显示）指定其值由视图显示的脚本。 您必须指定脚本或属性，但不能同时指定两者。
+-  (未显示[ScriptBlock](./scriptblock-element-for-wideitem-for-widecontrol-format.md)元素) 指定视图显示其值的脚本。 您必须指定脚本或属性，但不能同时指定两者。
 
-在下面的示例中，调用 `ToString` 方法来设置脚本的值的格式。 脚本可以调用对象的任何方法。 因此，如果对象具有具有格式参数的方法（如 `ToString`），则脚本可以调用该方法来设置脚本的输出值的格式。
+在下面的示例中， `ToString` 调用方法以设置脚本的值的格式。 脚本可以调用对象的任何方法。 因此，如果对象具有 `ToString` 具有格式参数的方法（如），则脚本可以调用该方法来设置脚本的输出值的格式。
 
 ```xml
 <WideItem>
@@ -254,12 +247,12 @@ View>
 
 - [WideItem](./wideitem-element-for-widecontrol-format.md)元素指定视图显示的数据。
 
-- [ScriptBlock](./scriptblock-element-for-wideitem-for-widecontrol-format.md)元素（未显示）指定其值由视图显示的脚本。 您必须指定脚本或属性，但不能同时指定两者。
+-  (未显示[ScriptBlock](./scriptblock-element-for-wideitem-for-widecontrol-format.md)元素) 指定视图显示其值的脚本。 您必须指定脚本或属性，但不能同时指定两者。
 
 ## <a name="see-also"></a>另请参阅
 
-[宽视图（基本）](./wide-view-basic.md)
+[宽视图 (Basic)](./wide-view-basic.md)
 
-[宽视图（GroupBy）](./wide-view-groupby.md)
+[宽视图 (GroupBy)](./wide-view-groupby.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

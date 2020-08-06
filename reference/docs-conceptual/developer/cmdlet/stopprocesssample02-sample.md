@@ -1,33 +1,26 @@
 ---
 title: StopProcessSample02 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 213ca1a4-e9fe-4969-b7d0-2fca070c6142
-caps.latest.revision: 10
-ms.openlocfilehash: 594c06367baedd1f9bfdbfff9f0e072d579b4099
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bab32f5a2544905bd858bcecf5b0b2e2d127e642
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369376"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786435"
 ---
 # <a name="stopprocesssample02-sample"></a>StopProcessSample02 示例
 
-此示例演示如何编写一个在本地计算机上停止进程时写入 debug （WriteDebug）、verbose （WriteVerbose）和 warning （WriteWarning）消息的 cmdlet。 此 cmdlet 类似于 Windows PowerShell 2.0 提供的 `Stop-Process` cmdlet。
+此示例演示如何编写一个 cmdlet，该 cmdlet 在停止本地计算机上的进程时写入 debug (WriteDebug) 、verbose (WriteVerbose) 和警告 (WriteWarning) 消息。 此 cmdlet 类似于 `Stop-Process` Windows PowerShell 2.0 提供的 cmdlet。
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>如何使用 Visual Studio 生成示例。
 
 1. 打开 Windows Internet Explorer 并导航到示例目录下的 StopProcessSample02 目录。
 
-    安装 Windows PowerShell 2.0 SDK 后，导航到 StopProcessSample02 文件夹。 默认位置为 C:\Program Files （x86） \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02。
+    安装 Windows PowerShell 2.0 SDK 后，导航到 StopProcessSample02 文件夹。 默认位置为 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02。
 
-2. 双击解决方案（.sln）文件的图标。 这会在 Microsoft Visual Studio 中打开示例项目。
+2. 双击解决方案的图标 ( .sln) 文件。 这会在 Microsoft Visual Studio 中打开示例项目。
 
-3. 在“生成”菜单中选择“生成解决方案”。
+3. 在“生成”菜单中选择“生成解决方案” 。
 
     示例库将在默认的 \bin 或 \bin\debug 文件夹中生成。
 
@@ -53,7 +46,7 @@ ms.locfileid: "72369376"
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此示例演示以下各项。
 
@@ -69,7 +62,7 @@ ms.locfileid: "72369376"
 
 ## <a name="example"></a>示例
 
-此示例演示如何使用 `WriteDebug`、`WriteVerbose`和 `WriteWarning` 方法来编写调试、详细和警告消息。
+此示例演示如何通过使用 `WriteDebug` 、和方法来编写调试、详细和警告消息 `WriteVerbose` `WriteWarning` 。
 
 ```csharp
 using System;

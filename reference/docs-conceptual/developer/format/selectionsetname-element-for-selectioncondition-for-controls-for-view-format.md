@@ -1,25 +1,18 @@
 ---
-title: 用于视图（格式）的 SelectionCondition 的 SelectionSetName 元素 |Microsoft Docs
-ms.custom: ''
+title: View (Format) 的控件的 SelectionCondition 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: daea8c6f-873a-4639-9eee-599642822958
-caps.latest.revision: 6
-ms.openlocfilehash: 697f2ea284393ebddd77a862c408f27f3d332900
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0feb23f860487952344680f75ee674e9e0e6dcc6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361966"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787523"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-controls-for-view-format"></a>SelectionSetName Element for SelectionCondition for Controls for View (Format)
 
 指定触发条件的 .NET 类型集。 如果此集中的任何类型存在，则满足条件，并使用此控件显示该对象。 定义可由视图使用的控件时，将使用此元素。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） Controls 元素（format） Control 元素 for View （format） CustomControl 元素的控件元素，用于控件的 View （format） CustomEntries 元素CustomControl for view （format） CustomEntry 元素 for view （format）元素 for CustomEntries for view （format） EntrySelectedBy 元素 for view （format）元素 for CustomEntry for view （format） SelectionCondition 元素 for view （Format） SelectionSetName 的 SelectionCondition 的元素，用于视图的控件（格式）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) 控件元素 (格式) 用于控件的控件 (控件元素) 用于控件的控件 (CustomEntries 元素 (Format) 的 CustomEntries 的 CustomEntry 元素，用于视图 (格式) EntrySelectedBy 元素 for CustomEntry for view (格式的控件的控件) SelectionCondition 元素 for EntrySelectedBy 的控件 (SelectionSetName) 
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72361966"
 <SelectionSetName>NameofSelectionSet</SelectionSetName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `SelectionSetName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `SelectionSetName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ ms.locfileid: "72361966"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于视图的控件的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)|定义要使用的控件定义必须存在的条件。|
+|[SelectionCondition Element for EntrySelectedBy for Controls for View (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)|定义要使用的控件定义必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -57,10 +50,10 @@ ms.locfileid: "72361966"
 
 ## <a name="see-also"></a>另请参阅
 
-[用于视图的控件的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)
+[SelectionCondition Element for EntrySelectedBy for Controls for View (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)
 
 [定义显示数据的条件](./defining-conditions-for-displaying-data.md)
 
-[定义选择集](./defining-selection-sets.md)
+[定义选项集](./defining-selection-sets.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

@@ -1,19 +1,12 @@
 ---
 title: 创建表视图 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
-caps.latest.revision: 23
-ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cbe81962a0f68d64506062898a8f21a1596cc29a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363406"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786146"
 ---
 # <a name="creating-a-table-view"></a>创建表视图
 
@@ -21,7 +14,7 @@ ms.locfileid: "72363406"
 
 ## <a name="a-table-view-display"></a>表格视图显示
 
-下面的示例演示 Windows PowerShell 如何显示由[Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) [Cmdlet 返回](/powershell/module/microsoft.powershell.management/get-service)的 system.serviceprocess 对象。 对于此对象，Windows PowerShell 定义了显示 `Status` 属性、`Name` 属性（此属性是 `ServiceName` 属性的 alias 属性）和 `DisplayName` 属性的表视图。 表中的每一行表示该 cmdlet 返回的对象。
+下面的示例演示 Windows PowerShell 如何显示由[Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) [Cmdlet 返回](/powershell/module/microsoft.powershell.management/get-service)的 system.serviceprocess 对象。 对于此对象，Windows PowerShell 定义了显示属性的表视图 `Status` ， `Name` (此属性的属性为 `ServiceName` 属性) 和属性的别名属性 `DisplayName` 。 表中的每一行表示该 cmdlet 返回的对象。
 
 ```output
 Status   Name               DisplayName
@@ -75,17 +68,17 @@ Running  Appinfo            Application Information
 
 以下 XML 元素用于定义列表视图：
 
-- [View](./view-element-format.md)元素是表视图的父元素。 （这是列表、宽控件和自定义控件视图的相同父元素。）
+- [View](./view-element-format.md)元素是表视图的父元素。  (这是 "列表"、"宽" 和 "自定义" 控件视图的相同父元素。 ) 
 
 - [Name](./name-element-for-view-format.md)元素指定视图的名称。 此元素对于所有视图都是必需的。
 
-- [ViewSelectedBy](./viewselectedby-element-format.md)元素定义使用视图的对象。 需要此元素。
+- [ViewSelectedBy](./viewselectedby-element-format.md)元素定义使用视图的对象。 此元素是必需的。
 
-- [GroupBy](./groupby-element-for-view-format.md)元素（在本示例中未显示）定义显示新的对象组的时间。 每当特定属性或脚本的值发生更改时，就会启动一个新组。 此元素为可选元素。
+- 此示例中未显示[GroupBy](./groupby-element-for-view-format.md)元素 () 定义显示新的对象组的时间。 每当特定属性或脚本的值发生更改时，就会启动一个新组。 此元素为可选元素。
 
-- [Controls](./controls-element-for-view-format.md)元素（在本示例中未显示）定义表视图定义的自定义控件。 控件使您可以进一步指定数据的显示方式。 此元素为可选元素。 视图可以定义自己的自定义控件，也可以使用可由格式设置文件中的任何视图使用的公共控件。 有关自定义控件的详细信息，请参阅[创建自定义控件](./creating-custom-controls.md)。
+- 在此示例中不显示[Controls](./controls-element-for-view-format.md)元素 () 定义由表视图定义的自定义控件。 控件使您可以进一步指定数据的显示方式。 此元素为可选元素。 视图可以定义自己的自定义控件，也可以使用可由格式设置文件中的任何视图使用的公共控件。 有关自定义控件的详细信息，请参阅[创建自定义控件](./creating-custom-controls.md)。
 
-- [HideTableHeaders](./hidetableheaders-element-format.md)元素（在本示例中不显示）指定表将不会在表的顶部显示任何标签。 此元素为可选元素。
+- 在此示例中， [HideTableHeaders](./hidetableheaders-element-format.md)元素 (不显示) 指定表将不会在表的顶部显示任何标签。 此元素为可选元素。
 
 - 定义表的标头和行信息的[TableControl](./tablecontrol-element-format.md)元素。 与所有其他视图类似，表视图可以显示对象属性的值或脚本生成的值。
 
@@ -99,7 +92,7 @@ Running  Appinfo            Application Information
 
 3. [Label](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)元素指定显示的文本。 此元素为可选元素。
 
-4. [Width](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)元素指定列的宽度（以字符为字符）。 此元素为可选元素。
+4. [Width](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)元素指定列 (以字符) 的宽度。 此元素为可选元素。
 
 5. [对齐](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)元素指定如何显示标签。 标签可以左对齐、右对齐或居中对齐。 此元素为可选元素。
 
@@ -107,7 +100,7 @@ Running  Appinfo            Application Information
 
 表视图可以提供一个或多个定义，这些定义通过使用[TableRowEntries](./tablerowentries-element-for-tablecontrol-format.md)元素的子元素来指定在表的行中显示哪些数据。 请注意，您可以为表中的行指定多个定义，但无论使用哪种行定义，行的标头都保持不变。 通常，表只有一个定义。
 
-在下面的示例中，视图提供了一个定义，用于显示系统的多个属性的值[。Displayproperty = Fullname](/dotnet/api/System.Diagnostics.Process)对象。 表视图可以在其行中显示属性的值或脚本的值（不在示例中显示）。
+在下面的示例中，视图提供了一个定义，用于显示系统的多个属性的值[。Displayproperty = Fullname](/dotnet/api/System.Diagnostics.Process)对象。 表视图可以显示属性的值或脚本的值 (未显示在其行的示例) 中。
 
 ```xml
 <TableRowEntries>
@@ -209,13 +202,13 @@ Running  Appinfo            Application Information
 
 - [TypeName](./typename-element-for-entryselectedby-for-listcontrol-format.md)元素指定由定义显示的 .net 对象。 使用此元素时，必须提供完全限定的 .NET 类型名称。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。
 
-- [SelectionSetName](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)元素（未显示）指定可由此定义显示的一组对象。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。
+-  (未显示的[SelectionSetName](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)元素) 指定可由此定义显示的一组对象。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。
 
-- [SelectionCondition](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)元素（未显示）指定必须存在的条件才能使用此定义。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。 有关定义选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+-  (未显示的[SelectionCondition](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)元素) 指定要使用此定义必须存在的条件。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。 有关定义选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="using-format-strings"></a>使用格式字符串
 
-可以将字符串的格式添加到视图中，以便进一步定义数据的显示方式。 下面的示例演示如何为 `StartTime` 属性的值定义格式字符串。
+可以将字符串的格式添加到视图中，以便进一步定义数据的显示方式。 下面的示例演示如何为属性的值定义格式字符串 `StartTime` 。
 
 ```xml
 <TableColumnItem>
@@ -232,7 +225,7 @@ Running  Appinfo            Application Information
 
 - "格式[字符串](./label-element-for-listitem-for-listcontrol-format.md)" 元素指定定义如何显示属性或脚本值的格式模式。
 
-在下面的示例中，调用 `ToString` 方法来设置脚本的值的格式。 脚本可以调用对象的任何方法。 因此，如果对象具有具有格式参数的方法（如 `ToString`），则脚本可以调用该方法来设置脚本的输出值的格式。
+在下面的示例中， `ToString` 调用方法以设置脚本的值的格式。 脚本可以调用对象的任何方法。 因此，如果对象具有 `ToString` 具有格式参数的方法（如），则脚本可以调用该方法来设置脚本的输出值的格式。
 
 ```xml
 <ListItem>
@@ -251,4 +244,4 @@ Running  Appinfo            Application Information
 
 ## <a name="see-also"></a>另请参阅
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

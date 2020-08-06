@@ -1,22 +1,15 @@
 ---
 title: 创建基本 Windows PowerShell 提供程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - base provider [PowerShell Programmer's Guide]
 - providers [PowerShell Programmer's Guide], base provider
-ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
-caps.latest.revision: 7
-ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 16cadb6099bb4f315bacda4aea617b89f9af5626
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978502"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787217"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>创建基础 Windows PowerShell 提供程序
 
@@ -31,7 +24,7 @@ ms.locfileid: "80978502"
 
 创建 Windows PowerShell 提供程序的第一步是定义其 .NET 类。 此基本提供程序定义了一个名为 `AccessDBProvider` 的类，该类派生自[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider)基类。
 
-建议将提供程序类放在 API 命名空间的 `Providers` 命名空间中，例如 xxx。PowerShell。 此提供程序使用 `Microsoft.Samples.PowerShell.Provider` 命名空间，在该命名空间中运行所有 Windows PowerShell 提供程序示例。
+建议将提供程序类放在 `Providers` API 命名空间的命名空间中，例如 xxx。PowerShell。 此提供程序使用 `Microsoft.Samples.PowerShell.Provider` 命名空间，在该命名空间中运行所有 Windows PowerShell 提供程序示例。
 
 > [!NOTE]
 > Windows PowerShell 提供程序的类必须显式标记为公共。 未标记为 "公共" 的类将默认为内部类，且不会由 Windows PowerShell 运行时找到。
@@ -40,7 +33,7 @@ ms.locfileid: "80978502"
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs" range="23-24":::
 
-在类定义之前，您必须用语法 [CmdletProvider （）] 声明[Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)属性，而不是。
+在类定义之前，必须用语法 [CmdletProvider ( # A1] 来声明[Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)属性，然后才能定义。
 
 如有必要，可以设置属性关键字以进一步声明该类。 请注意，此处声明的[Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)特性包括两个参数。 第一个 attribute 参数指定提供程序的默认友好名称，用户可以在以后修改该名称。 第二个参数指定 Windows PowerShell 定义的功能，提供程序在命令处理过程中将这些功能公开给 Windows PowerShell 运行时。 提供程序功能的可能值是由[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)枚举定义的。 因为这是一个基本提供程序，所以它不支持任何功能。
 
@@ -108,4 +101,4 @@ Registry             ShouldProcess                 {HKLM, HKCU}
 
 [创建 Windows PowerShell 提供程序](./how-to-create-a-windows-powershell-provider.md)
 
-[设计你的 Windows PowerShell 提供程序](./designing-your-windows-powershell-provider.md)
+[设计 Windows PowerShell 提供程序](./designing-your-windows-powershell-provider.md)

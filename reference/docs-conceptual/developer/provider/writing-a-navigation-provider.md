@@ -1,23 +1,16 @@
 ---
 title: 编写导航提供程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 98bcfda0-6ee2-46f5-bbc7-5fab8b780d6a
-caps.latest.revision: 5
-ms.openlocfilehash: c557a6ec51d52f529faaaa316c89da359cd97051
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 2fd27314a2b8547a15dd1bb72aa8f970d40b18cc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83562503"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786775"
 ---
 # <a name="writing-a-navigation-provider"></a>编写导航提供程序
 
-本主题介绍如何实现支持嵌套容器的 Windows PowerShell 提供程序（多级别数据存储区）、移动项和相对路径。 导航提供程序必须从[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类中派生。
+本主题介绍如何实现支持嵌套容器 (多级别数据存储) 、移动项和相对路径）的 Windows PowerShell 提供程序的方法。 导航提供程序必须从[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类中派生。
 
 本主题中的示例中的提供程序使用 Access 数据库作为其数据存储。 有几个帮助器方法和用于与数据库进行交互的类。 有关包含帮助程序方法的完整示例，请参阅[AccessDBProviderSample05](./accessdbprovidersample05.md)。
 
@@ -111,7 +104,7 @@ protected override string GetChildName(string path)
 
 ### <a name="implementing-getparentpath"></a>实现 GetParentPath
 
-[Navigationcmdletprovider. Getparentpath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath)方法获取指定路径处的项的父项的位置的路径。 如果指定路径中的项是数据存储区的根（因此没有父项），则此方法应返回根路径。
+[Navigationcmdletprovider. Getparentpath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath)方法获取指定路径处的项的父项的位置的路径。 如果指定路径中的项是数据存储区的根 (因此它没有父) ，则此方法应返回根路径。
 
 ```csharp
 protected override string GetParentPath(string path, string root)
@@ -132,7 +125,7 @@ protected override string GetParentPath(string path, string root)
 
 ### <a name="implementing-makepath"></a>实现 MakePath
 
-[Navigationcmdletprovider. Makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath)方法联接指定的父路径和指定的子路径以创建提供程序内部路径（有关提供程序可以支持的路径类型的信息，请参阅[Windows PowerShell 提供程序概述](./windows-powershell-provider-overview.md)。 当用户调用[JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) cmdlet 时，PowerShell 引擎将调用此方法。
+[Navigationcmdletprovider. Makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath)方法联接指定的父路径和指定的子路径以创建提供程序内部路径 (有关提供程序可以支持的路径类型的信息，请参阅[Windows PowerShell 提供程序概述](./windows-powershell-provider-overview.md)。 当用户调用[JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) cmdlet 时，PowerShell 引擎将调用此方法。
 
 ```csharp
 protected override string MakePath(string parent, string child)

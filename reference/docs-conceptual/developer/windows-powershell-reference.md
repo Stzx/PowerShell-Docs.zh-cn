@@ -1,21 +1,14 @@
 ---
 title: Windows PowerShell 参考 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows PowerShell SDK
-ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
-caps.latest.revision: 11
-ms.openlocfilehash: c00590df4d07e0f5ed9e93fd84a2780329753e39
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 1c1a3a4de2df2043fe12cad6a69b7bc36ab9d3d7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870857"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786673"
 ---
 # <a name="windows-powershell-reference"></a>Windows PowerShell 参考
 
@@ -25,7 +18,7 @@ Windows PowerShell 允许系统管理员通过直接或通过脚本执行命令�
 
 ## <a name="developer-audience"></a>面向开发人员
 
-Windows PowerShell 软件开发工具包（SDK）是针对需要 Windows PowerShell 提供的 Api 的参考信息的命令开发人员编写的。 命令开发人员使用 Windows PowerShell 来创建命令和提供程序，以扩展可由 Windows PowerShell 执行的任务。
+Windows PowerShell 软件开发工具包 (SDK) 专为需要 Windows PowerShell 提供的 Api 参考信息的命令开发人员编写。 命令开发人员使用 Windows PowerShell 来创建命令和提供程序，以扩展可由 Windows PowerShell 执行的任务。
 
 ## <a name="windows-powershell-resources"></a>Windows PowerShell 资源
 

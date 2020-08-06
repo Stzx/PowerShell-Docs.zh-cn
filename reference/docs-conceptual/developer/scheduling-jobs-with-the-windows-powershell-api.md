@@ -1,13 +1,12 @@
 ---
 title: 使用 Windows PowerShell API 安排作业
 ms.date: 09/13/2016
-ms.topic: article
-ms.openlocfilehash: 4e1d4ed6bffd858b92bf29b1dc6d8503454fafda
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 19962d3140b6e20164c378e63a317b888120e13b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359826"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786724"
 ---
 # <a name="scheduling-jobs-with-the-windows-powershell-api"></a>使用 Windows PowerShell API 安排作业
 
@@ -31,7 +30,7 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 
 可以通过创建参数字典来定义 Windows PowerShell 作业。 支持以下参数。
 
-|参数名称|描述|
+|参数名称|说明|
 |---|---|
 |名称|作业的名称。|
 |ScriptBock|指定作业执行的操作的 Windows PowerShell 脚本块。|
@@ -54,7 +53,7 @@ jobDefParameters.Add("ScriptBlock", scriptBlock);  // A scriptblock or script Fi
 
 ## <a name="creating-the-invocation-and-job-definition-objects"></a>创建调用和作业定义对象
 
-然后，创建 ScheduledJobInvocationInfo 和 ScheduledJobDefinition 对象以运行作业。 以下代码对此做了演示。
+然后，创建 ScheduledJobInvocationInfo 和 ScheduledJobDefinition 对象以运行作业。 下面的代码对此进行了演示。
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(

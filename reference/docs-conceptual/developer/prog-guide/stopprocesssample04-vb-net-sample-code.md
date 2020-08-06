@@ -1,28 +1,21 @@
 ---
-title: StopProcessSample04 （VB.NET）示例代码 |Microsoft Docs
-ms.custom: ''
+title: StopProcessSample04 (VB.NET) 示例代码 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 48019ceb-0aeb-4cd1-8b42-79f2c29c3e65
-caps.latest.revision: 5
-ms.openlocfilehash: 3e709f0897b0d77f4c5f12e1c042edd4e24b142a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5526bec79f3bb38f0de11680302a94699240a3d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417817"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786979"
 ---
 # <a name="stopprocesssample04-vbnet-sample-code"></a>StopProcessSample04 (VB.NET) 代码示例
 
-下面是 StopProc04 示例 cmdlet 的完整 VB.NET 示例代码。 这是[将参数集添加到 cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md)中所述的 `Stop-Process` cmdlet 的代码。 `Stop-Process` cmdlet 旨在停止使用 Get-help cmdlet （在[创建第一个 cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)中介绍）检索的进程。
+下面是 StopProc04 示例 cmdlet 的完整 VB.NET 示例代码。 这是 `Stop-Process` [将参数集添加到 cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md)中所述 cmdlet 的代码。 该 `Stop-Process` cmdlet 旨在停止使用 ([创建第一个 cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)) 中所述的检索的进程。
 
 > [!NOTE]
-> 你可以使用适用于 Windows Vista 的 Microsoft Windows 软件开发工具包和 .NET Framework 3.0 运行时组件下载此 VB.NET （stopprocesssample04）源文件。 有关下载说明，请参阅[如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
+> 你可以使用适用于 Windows Vista 的 Microsoft Windows 软件开发工具包和 .NET Framework 3.0 运行时组件，为此 VB.NET cmdlet 下载 () stopprocesssample04 文件。 有关下载说明，请参阅[如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
 >
-> 下载的源文件在 **\<PowerShell 示例 >** 目录中提供。
+> 下载的源文件在目录中提供 **\<PowerShell Samples>** 。
 
 ```vb
 Imports System

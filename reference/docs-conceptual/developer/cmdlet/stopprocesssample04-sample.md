@@ -1,31 +1,24 @@
 ---
 title: StopProcessSample04 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ac4903f5-fd40-4f1c-b1d1-18923c16ce45
-caps.latest.revision: 8
-ms.openlocfilehash: 26e882dad839af43945f84d4cdd6cda7bdb2d587
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a256d29b9e0be878d805a82ddf5a538461d283d6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369356"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786418"
 ---
 # <a name="stopprocesssample04-sample"></a>StopProcessSample04 示例
 
-此示例演示如何编写声明参数集、指定默认参数集并可接受输入对象的 cmdlet。 此 cmdlet 类似于 Windows PowerShell 2.0 提供的 `Stop-Process` cmdlet。
+此示例演示如何编写声明参数集、指定默认参数集并可接受输入对象的 cmdlet。 此 cmdlet 类似于 `Stop-Process` Windows PowerShell 2.0 提供的 cmdlet。
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>如何使用 Visual Studio 生成示例。
 
-1. 安装 Windows PowerShell 2.0 SDK 后，导航到 StopProcessSample04 文件夹。 默认位置为 C:\Program Files （x86） \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04。
+1. 安装 Windows PowerShell 2.0 SDK 后，导航到 StopProcessSample04 文件夹。 默认位置为 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04。
 
-2. 双击解决方案（.sln）文件的图标。 这会在 Microsoft Visual Studio 中打开示例项目。
+2. 双击解决方案的图标 ( .sln) 文件。 这会在 Microsoft Visual Studio 中打开示例项目。
 
-3. 在“生成”菜单中选择“生成解决方案”。
+3. 在“生成”菜单中选择“生成解决方案” 。
 
     示例库将在默认的 \bin 或 \bin\debug 文件夹中生成。
 
@@ -51,7 +44,7 @@ ms.locfileid: "72369356"
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此示例演示以下各项。
 

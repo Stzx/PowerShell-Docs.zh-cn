@@ -1,19 +1,12 @@
 ---
 title: AccessDBProviderSample06 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 46dc0657-110f-4367-8bb6-a95dca2c5016
-caps.latest.revision: 8
-ms.openlocfilehash: 52c1fac134f7184462842a56f466f634aec1222c
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 893eb80574c7f142f92906961588e22b1ced0052
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692450"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786826"
 ---
 # <a name="accessdbprovidersample06"></a>AccessDBProviderSample06
 
@@ -34,9 +27,9 @@ ms.locfileid: "83692450"
 
 - 声明 `CmdletProvider` 特性。
 - 定义一个派生自[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类的提供程序类，并声明一个声明[Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider)接口的提供程序类。
-- 覆盖[Clearcontent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent)方法以更改 cmdlet 的行为 `Clear-Content` ，从而使用户能够从项中删除内容。 Icontentcmdletprovider * 方法。 （此示例不显示如何将动态参数添加到 `Clear-Content` cmdlet。）
-- 覆盖 Getcontentreader * 方法以更改 cmdlet 的行为，使用户能够检索项的内容。 [Icontentcmdletprovider. *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader)方法用于更改 `Get-Content` 项的内容。 （此示例不显示如何将动态参数添加到 `Get-Content` cmdlet。）。
-- 覆盖[Getcontentwriter *](/dotnet/api/Microsoft.PowerShell.Commands.FileSystemProvider.GetContentWriter)方法，以更改 cmdlet 的行为 `Set-Content` ，从而使用户能够更新项的内容。 Filesystemprovider。 （此示例不显示如何将动态参数添加到 `Set-Content` cmdlet。）
+- 覆盖[Clearcontent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent)方法以更改 cmdlet 的行为 `Clear-Content` ，从而使用户能够从项中删除内容。 Icontentcmdletprovider * 方法。  (此示例不显示如何将动态参数添加到 `Clear-Content` cmdlet。 ) 
+- 覆盖 Getcontentreader * 方法以更改 cmdlet 的行为，使用户能够检索项的内容。 [Icontentcmdletprovider. *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader)方法用于更改 `Get-Content` 项的内容。  (此示例不显示如何将动态参数添加到 `Get-Content` cmdlet。 ) 。
+- 覆盖[Getcontentwriter *](/dotnet/api/Microsoft.PowerShell.Commands.FileSystemProvider.GetContentWriter)方法，以更改 cmdlet 的行为 `Set-Content` ，从而使用户能够更新项的内容。 Filesystemprovider。  (此示例不显示如何将动态参数添加到 `Set-Content` cmdlet。 ) 
 
 ## <a name="example"></a>示例
 

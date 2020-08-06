@@ -1,13 +1,12 @@
 ---
 title: 扩展类型系统类型转换器
 ms.date: 07/09/2020
-ms.topic: conceptual
-ms.openlocfilehash: f709a64febe68733b79ed8af804714d3f3ddeaac
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+ms.openlocfilehash: 0d04293fffde9901ed2e33a9bab21e6612ce9cd5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217921"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786180"
 ---
 # <a name="ets-type-converters"></a>ETS 类型转换器
 
@@ -19,26 +18,26 @@ ms.locfileid: "86217921"
 
 | From (valueToConvert)  |   (resultType)   |                                                                               返回                                                                               |
 | --------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Null                  | 字符串            | ""                                                                                                                                                                  |
+| Null                  | String            | ""                                                                                                                                                                  |
 | Null                  | Char              | '\0'                                                                                                                                                                |
-| Null                  | 数值           | `0`在**resultType**参数中指定的类型的。                                                                                                          |
-| Null                  | 布尔           | 调用方法的结果 `IsTrue(System.Object)(Null)` 。                                                                                                        |
+| Null                  | 数字           | `0`在**resultType**参数中指定的类型的。                                                                                                          |
+| Null                  | Boolean           | 调用方法的结果 `IsTrue(System.Object)(Null)` 。                                                                                                        |
 | Null                  | PSObject          | 类型**PSObject**的新对象。                                                                                                                                    |
 | Null                  | 非值类型    | 无效.                                                                                                                                                               |
 | Null                  | 可以为 null 的 &lt; T&gt; | 无效.                                                                                                                                                               |
 | 派生类         | 基类        | **valueToConvert**                                                                                                                                                  |
 | 任何内容              | Void              | **Automationnull.value**                                                                                                                                            |
-| 任何内容              | 字符串            | 调用 `ToString` 机制。                                                                                                                                         |
-| 任何内容              | 布尔           | `IsTrue(System.Object) (valueToConvert)`                                                                                                                            |
+| 任何内容              | String            | 调用 `ToString` 机制。                                                                                                                                         |
+| 任何内容              | Boolean           | `IsTrue(System.Object) (valueToConvert)`                                                                                                                            |
 | 任何内容              | PSObject          | 调用方法的结果 `AsPSObject(System.Object) (valueToConvert)` 。                                                                                         |
 | 任何内容              | Xml 文档      | 将**valueToConvert**转换为字符串，然后**调用**构造函数。                                                                                      |
 | Array                 | Array             | 尝试转换数组的每个元素。                                                                                                                      |
-| 单一实例             | 数组             | `Array[0]`等于**valueToConvert** ，它转换为数组的元素类型。                                                                            |
+| 单例             | 数组             | `Array[0]`等于**valueToConvert** ，它转换为数组的元素类型。                                                                            |
 | IDictionary           | 哈希表        | 调用哈希表 (valueToConvert) 的结果。                                                                                                                       |
-| 字符串                | Char[]            | `valueToConvert.ToCharArray`                                                                                                                                        |
-| 字符串                | RegEx             | 调用的结果 `Regx(valueToConvert)` 。                                                                                                                          |
-| 字符串                | 类型              | 使用**valueToConvert**参数来搜索**RunspaceConfiguration**，返回相应的类型。                                                 |
-| 字符串                | Numeric           | 如果**valueToConvert**是 ""，则返回 `0` **resultType**。 否则，将使用区域性 "区域性固定" 来生成数字值。                       |
+| String                | Char[]            | `valueToConvert.ToCharArray`                                                                                                                                        |
+| String                | RegEx             | 调用的结果 `Regx(valueToConvert)` 。                                                                                                                          |
+| String                | 类型              | 使用**valueToConvert**参数来搜索**RunspaceConfiguration**，返回相应的类型。                                                 |
+| String                | Numeric           | 如果**valueToConvert**是 ""，则返回 `0` **resultType**。 否则，将使用区域性 "区域性固定" 来生成数字值。                       |
 | Integer               | System.Enum       | 如果整数由枚举定义，则将整数转换为常量。 如果未定义整数，则会引发**PSInvalidCastException**异常。 |
 
 ## <a name="custom-conversions"></a>自定义转换

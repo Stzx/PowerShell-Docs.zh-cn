@@ -1,25 +1,18 @@
 ---
-title: ListControl 的 SelectionCondition for EntrySelectedBy 的 TypeName 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: ListControl (Format) 的 SelectionCondition for EntrySelectedBy 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: bd025a3a-3780-40db-a068-873e7df38015
-caps.latest.revision: 9
-ms.openlocfilehash: 2b76b040b39088cc9c3b9d6890c38df3c533b39f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bc58d630e65b316f9223bf3c529f928358e38ebc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361556"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787368"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>TypeName Element for SelectionCondition for EntrySelectedBy for ListControl (Format)
 
 指定触发条件的 .NET 类型。 如果存在此类型，则使用列表项。
 
-配置元素（格式） ViewDefinitions 元素（格式） View 元素（format） ListControl 元素（format） ListEntries 元素 for ListControl （Format） ListEntry 元素 for ListEntries for ListControl （Format） EntrySelectedBy 元素 for用于 ListControl 的 EntrySelectedBy for SelectionCondition （format） TypeName 元素的 ListEntry for ListControl （Format） SelectionCondition 元素（format）
+配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ListControl 元素 (格式) ListEntries 元素用于 ListControl (格式) ListEntry for ListEntries 的 ListControl 元素 (EntrySelectedBy ListEntry 的 ListControl 元素) SelectionCondition 的 EntrySelectedBy 的 ListControl (格式) SelectionCondition (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ ms.locfileid: "72361556"
 <TypeName>Nameof.NetType</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `TypeName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `TypeName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -43,11 +36,11 @@ ms.locfileid: "72361556"
 
 |元素|描述|
 |-------------|-----------------|
-|[ListControl 的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|定义要使用此列表项必须存在的条件。|
+|[SelectionCondition Element for EntrySelectedBy for ListControl (Format)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|定义要使用此列表项必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
-指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo`。
+指定 .NET 类型的完全限定名，如 `System.IO.DirectoryInfo` 。
 
 ## <a name="remarks"></a>备注
 
@@ -61,6 +54,6 @@ ms.locfileid: "72361556"
 
 [定义显示数据的条件](./defining-conditions-for-displaying-data.md)
 
-[ListControl 的 EntrySelectedBy 的 SelectionCondition 元素（格式）](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
+[SelectionCondition Element for EntrySelectedBy for ListControl (Format)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

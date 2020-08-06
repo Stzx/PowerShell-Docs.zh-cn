@@ -1,25 +1,18 @@
 ---
-title: 用于配置控件的 CustomItem 的文本元素（格式） |Microsoft Docs
-ms.custom: ''
+title: 用于配置 (格式) 的控件的 CustomItem 的文本元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 87a4079e-602c-42de-9de5-9b59df986caa
-caps.latest.revision: 6
-ms.openlocfilehash: b45e96252672a872023a5eb698ffe22d677c5468
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d9f9687f9fb47f2085b25899193dda85b8fa068b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368136"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787387"
 ---
 # <a name="text-element-for-customitem-for-controls-for-configuration-format"></a>Text Element for CustomItem for Controls for Configuration (Format)
 
 指定添加到由控件显示的数据的文本，如标签、用方括号括起来的数据以及用于缩进数据的空格。 此元素在定义可供格式设置文件中的所有视图使用的公共控件时使用。
 
-Configuration 元素（格式）控制配置（format） CustomControl 元素的控件的配置（Format）控件元素的元素，以控制 CustomControl for configuration （Format） CustomEntries 元素的配置（Format） CustomEntry 元素 for CustomControl for CustomItem 元素 for CustomEntry for 元素 for for 元素 for for 元素
+配置元素 (格式) 控制配置 (格式的控件) 控件元素，用于控件的配置 (格式) 用于控件的配置 (格式) CustomEntries 元素 (用于配置) 格式的 CustomControl 的 CustomEntry 元素 (CustomControl 的控件的配置文本元素) CustomItem 的控件 (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 <Text>TextToDisplay</Text>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `Text` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `Text` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -55,4 +48,4 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 
 [用于配置控件的 CustomEntry 的 CustomItem 元素](./customitem-element-for-customentry-for-controls-for-configuration-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

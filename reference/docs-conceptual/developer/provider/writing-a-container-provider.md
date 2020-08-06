@@ -1,19 +1,12 @@
 ---
 title: 编写容器提供程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 524fd900-c0fe-4d13-87f2-14903a8fd5a4
-caps.latest.revision: 5
-ms.openlocfilehash: 48ab9102e8f1b17b3b533cc3b0aa1dacef0e2076
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: da91f18226d6e6c236c6a6e469db0f692af48abf
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366236"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786792"
 ---
 # <a name="writing-a-container-provider"></a>编写容器提供程序
 
@@ -44,7 +37,7 @@ ms.locfileid: "72366236"
 
 ### <a name="implementing-getchilditems"></a>实现 GetChildItems
 
-当用户调用 [Microsoft.PowerShell.Commands.GetChildItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.Getchilditemcommand) cmdlet 时，PowerShell 引擎将调用 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 方法。 此方法获取作为指定路径处的项的子级的项。
+当用户调用 GetChildItemCommand cmdlet 时，PowerShell 引擎将调用[Containercmdletprovider. Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems)方法。 " [Microsoft.PowerShell.Commands.GetChildItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.Getchilditemcommand) "）。 此方法获取作为指定路径处的项的子级的项。
 
 在 Access 数据库示例中， [Containercmdletprovider. Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems)方法的行为取决于指定的项的类型的类型。 如果项是驱动器，则子项是表，方法返回数据库中的表集。 如果指定的项是表，则子级是该表的行。 如果该项为行，则它没有子级，并且方法仅返回该行。 所有子项都将通过[Cmdletprovider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)方法发回给 PowerShell 引擎的。
 
@@ -157,7 +150,7 @@ protected override void GetChildNames(string path,
 
 [Containercmdletprovider. Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem)方法将在指定的路径处创建指定类型的新项。 当用户调用[NewItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.newitemcommand) cmdlet 时，PowerShell 引擎将调用此方法。
 
-在此示例中，方法实现逻辑以确定路径和类型是否匹配。 也就是说，只能在驱动器（数据库）下直接创建一个表，并且只能在表下创建一行。 如果指定的路径和项类型不以这种方式匹配，则该方法将引发异常。
+在此示例中，方法实现逻辑以确定路径和类型是否匹配。 也就是说，只能在 (数据库) 的驱动器下直接创建一个表，并且只能在表下创建一行。 如果指定的路径和项类型不以这种方式匹配，则该方法将引发异常。
 
 ```csharp
 protected override void NewItem(string path, string type,

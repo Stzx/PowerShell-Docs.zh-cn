@@ -1,31 +1,24 @@
 ---
 title: StopProcessSample01 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
-caps.latest.revision: 9
-ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6d4737d0526a7d142b4a986986974bcbdc12ec7e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365296"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786452"
 ---
 # <a name="stopprocesssample01-sample"></a>StopProcessSample01 示例
 
-此示例演示如何编写一个 cmdlet，用于在尝试停止进程之前请求用户提供反馈，以及如何实现一个 `PassThru` 参数，该参数指示用户希望该 cmdlet 返回对象。 此 cmdlet 类似于 Windows PowerShell 2.0 提供的 `Stop-Process` cmdlet。
+此示例演示如何编写一个 cmdlet，用于在尝试停止进程之前请求用户提供反馈，以及如何实现一个 `PassThru` 参数，指示用户希望该 cmdlet 返回对象。 此 cmdlet 类似于 `Stop-Process` Windows PowerShell 2.0 提供的 cmdlet。
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>如何使用 Visual Studio 生成示例。
 
-1. 安装 Windows PowerShell 2.0 SDK 后，导航到 StopProcessSample01 文件夹。 默认位置为 C:\Program Files （x86） \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01。
+1. 安装 Windows PowerShell 2.0 SDK 后，导航到 StopProcessSample01 文件夹。 默认位置为 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01。
 
-2. 双击解决方案（.sln）文件的图标。 这会在 Microsoft Visual Studio 中打开示例项目。
+2. 双击解决方案的图标 ( .sln) 文件。 这会在 Microsoft Visual Studio 中打开示例项目。
 
-3. 在“生成”菜单中选择“生成解决方案”。
+3. 在“生成”菜单中选择“生成解决方案” 。
 
     示例库将在默认的 \bin 或 \bin\debug 文件夹中生成。
 
@@ -51,7 +44,7 @@ ms.locfileid: "72365296"
 
 此示例需要 Windows PowerShell 2.0。
 
-## <a name="demonstrates"></a>说明
+## <a name="demonstrates"></a>演示
 
 此示例演示以下各项。
 
@@ -65,7 +58,7 @@ ms.locfileid: "72365296"
 
 ## <a name="example"></a>示例
 
-此示例演示如何实现一个 `PassThru` 参数，该参数指示用户希望 cmdlet 返回对象，以及如何通过调用 `ShouldProcess` 和 `ShouldContinue` 方法请求用户反馈。
+此示例演示如何实现一个 `PassThru` 参数，该参数指示用户希望该 cmdlet 返回对象，以及如何通过调用和方法请求用户反馈 `ShouldProcess` `ShouldContinue` 。
 
 ```csharp
 using System;

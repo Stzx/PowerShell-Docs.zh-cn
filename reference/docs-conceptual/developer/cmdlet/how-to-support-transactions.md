@@ -1,19 +1,12 @@
 ---
 title: 如何支持事务 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4732e38c-b1a0-4de7-b6de-75dbde850488
-caps.latest.revision: 8
-ms.openlocfilehash: c5eea216efd8048aee5768c78c0b48617670f091
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6fda27394091195b589afef5ee53c6d3bec4efc0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365536"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786605"
 ---
 # <a name="how-to-support-transactions"></a>如何支持事务
 
@@ -25,15 +18,15 @@ ms.locfileid: "72365536"
 ## <a name="to-support-transactions"></a>支持事务
 
 1. 声明 Cmdlet 属性时，指定该 cmdlet 支持事务。
-   当 cmdlet 支持事务时，Windows PowerShell 会在运行时将 `UseTransaction` 参数添加到 cmdlet。
+   当 cmdlet 支持事务时，Windows PowerShell 会在 `UseTransaction` 运行时将参数添加到 cmdlet。
 
     ```csharp
     [Cmdlet(VerbsCommunications.Send, "GreetingTx",
             SupportsTransactions=true )]
     ```
 
-2. 在其中一个输入处理方法中，添加一个 `if` 块以确定事务是否可用。
-   如果 `if` 语句解析为 `true`，则可以在当前事务的上下文中执行此语句内的操作。
+2. 在其中一个输入处理方法中，添加一个 `if` 块来确定事务是否可用。
+   如果 `if` 语句解析为 `true` ，则可以在当前事务的上下文中执行此语句内的操作。
 
     ```csharp
     if (TransactionAvailable())

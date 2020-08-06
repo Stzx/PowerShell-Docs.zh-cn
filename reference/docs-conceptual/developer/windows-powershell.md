@@ -1,13 +1,12 @@
 ---
 title: Windows PowerShell SDK
 ms.date: 09/13/2016
-ms.topic: article
-ms.openlocfilehash: 7627ab336ddc40ab47c3017eed77c78bbdac4e7f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0501f511499bc5de35fad5d7798f0d16e2d3b36b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366056"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786656"
 ---
 # <a name="windows-powershell"></a>Windows PowerShell
 
@@ -32,6 +31,6 @@ Windows PowerShell® 是基于任务的命令行管理程序和脚本语言，�
 
 - [编写 Windows PowerShell 主机应用程序](./hosting/writing-a-windows-powershell-host-application.md)提供可由程序管理员使用的信息，这些程序管理器正在设计宿主应用程序，并由实现它们的开发人员使用。 主机应用程序可以定义运行命令的运行空间，打开本地或远程计算机上的会话，并根据应用程序的需要以同步或异步方式调用命令。
 
-- [编写 PowerShell 格式化文件](./format/writing-a-powershell-formatting-file.md)提供有关创作格式化文件的信息，这些文件控制由命令返回的对象的显示格式（cmdlet、函数和脚本）。
+- [编写 PowerShell 格式化文件](./format/writing-a-powershell-formatting-file.md)提供有关创作格式化文件的信息，这些文件控制由 (cmdlet、函数和脚本的命令返回的对象的显示格式) 。
 
 - [Windows PowerShell 参考](./windows-powershell-reference.md)提供用于编写 cmdlet、提供程序和主机应用程序以及其他支持 Api 的 Api 的参考内容。

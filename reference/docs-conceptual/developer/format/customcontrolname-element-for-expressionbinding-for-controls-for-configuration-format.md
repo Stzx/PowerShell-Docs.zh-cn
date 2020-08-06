@@ -1,25 +1,18 @@
 ---
-title: 用于配置的控件（格式）的 ExpressionBinding 的 CustomControlName 元素 |Microsoft Docs
-ms.custom: ''
+title: 用于) 配置 (格式的控件的 ExpressionBinding 的 CustomControlName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c5242935-2782-4d23-84f5-2446b2b7ba83
-caps.latest.revision: 8
-ms.openlocfilehash: c9abd9f22907b87323c16d603a9f75bb3d375a03
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 690b6ae01b8116b72fbd00aef574feda1fd737b0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364116"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786027"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-controls-for-configuration-format"></a>CustomControlName Element for ExpressionBinding for Controls for Configuration (Format)
 
 指定公共控件的名称。 此元素在定义可供格式设置文件中的所有视图使用的公共控件时使用。
 
-Configuration 元素（格式）控制配置（format） CustomControl 元素的控件的配置（Format）控件元素的元素，以控制 CustomControl for configuration （Format） CustomEntries 元素的配置（Format） CustomEntry 元素 for CustomControl for CustomItem 元素 for CustomEntry for 元素 for for 元素 for for ExpressionBinding for control for control for control CustomItem用于配置控件的 ExpressionBinding 的元素（格式）
+配置元素 (格式) 控制配置 (格式的控件) 控件元素，用于控件的配置 (格式) CustomEntries 元素，用于 CustomControl 的 for configuration (格式) CustomEntry 元素对于 CustomControl for control for control (format) CustomItem 元素 For CustomEntry for for for for for Control ExpressionBinding control For for Control control For CustomItem for control for control (format) )  (
 
 ## <a name="syntax"></a>语法
 
@@ -27,11 +20,11 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 <CustomControlName>NameofCustomControl</CustomControlName>
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍了 `CustomControlName` 元素的属性、子元素和父元素。
+以下各节描述了元素的属性、子元素和父元素 `CustomControlName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -41,9 +34,9 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[用于配置的控件的 CustomItem 的 ExpressionBinding 元素（格式）](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|定义控件显示的数据。|
+|[ExpressionBinding Element for CustomItem for Controls for Configuration (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|定义控件显示的数据。|
 
 ## <a name="text-value"></a>文本值
 
@@ -53,16 +46,16 @@ Configuration 元素（格式）控制配置（format） CustomControl 元素的
 
 您可以创建可供格式设置文件的所有视图使用的公共控件，还可以创建可供特定视图使用的视图控件。 以下元素指定这些控件的名称：
 
-- [用于控件的控件的名称元素（格式）](./name-element-for-control-for-controls-for-configuration-format.md)
+- [Name Element for Control for Controls for Configuration (Format)](./name-element-for-control-for-controls-for-configuration-format.md)
 
-- [用于控件的控件的名称元素（格式）](./name-element-for-control-for-controls-for-view-format.md)
+- [Name Element for Control for Controls for View (Format)](./name-element-for-control-for-controls-for-view-format.md)
 
 ## <a name="see-also"></a>另请参阅
 
-[用于控件的控件的名称元素（格式）](./name-element-for-control-for-controls-for-configuration-format.md)
+[Name Element for Control for Controls for Configuration (Format)](./name-element-for-control-for-controls-for-configuration-format.md)
 
-[用于控件的控件的名称元素（格式）](./name-element-for-control-for-controls-for-view-format.md)
+[Name Element for Control for Controls for View (Format)](./name-element-for-control-for-controls-for-view-format.md)
 
-[用于配置的控件的 CustomItem 的 ExpressionBinding 元素（格式）](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)
+[ExpressionBinding Element for CustomItem for Controls for Configuration (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

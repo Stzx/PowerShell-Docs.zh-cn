@@ -1,25 +1,18 @@
 ---
-title: TableHeaders 元素（格式） |Microsoft Docs
-ms.custom: ''
+title: " (格式) 的 TableHeaders 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f9fa2b6f-b99a-42de-9779-44e9cb583f71
-caps.latest.revision: 15
-ms.openlocfilehash: bd44fcf4878c858afe81fb071ce72f627ac465dc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b3176cbe1316d5b30cb61831d9915a80389709a5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361816"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787421"
 ---
 # <a name="tableheaders-element-format"></a>TableHeaders Element (Format)
 
 定义表中各列的标头。
 
-ViewDefinitions 元素（格式） View 元素（format） TableControl 元素（format） TableHeaders 元素 for TableControl （Format）
+ViewDefinitions 元素 (格式) View 元素 (格式) TableControl 元素 (格式) TableHeaders 元素 TableControl (格式) 
 
 ## <a name="syntax"></a>语法
 
@@ -30,11 +23,11 @@ ViewDefinitions 元素（格式） View 元素（format） TableControl 元素�
 
 ```
 
-## <a name="attributes-and-elements"></a>属性和元素
+## <a name="attributes-and-elements"></a>特性和元素
 
-以下各节介绍 `TableHeaders` 元素的属性、子元素和父元素。 对于要显示的对象的每个属性，都必须有一个子元素。 列标题信息按指定子元素的顺序显示。
+以下各节描述了元素的属性、子元素和父元素 `TableHeaders` 。 对于要显示的对象的每个属性，都必须有一个子元素。 列标题信息按指定子元素的顺序显示。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 无。
 
@@ -42,13 +35,13 @@ ViewDefinitions 元素（格式） View 元素（format） TableControl 元素�
 
 |元素|描述|
 |-------------|-----------------|
-|[TableColumnHeader 元素（格式）](./tablecolumnheader-element-format.md)|可选元素。<br /><br /> 定义表视图的列的数据标签、宽度和对齐方式。|
+|[TableColumnHeader Element (Format)](./tablecolumnheader-element-format.md)|可选元素。<br /><br /> 定义表视图的列的数据标签、宽度和对齐方式。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[TableControl 元素（格式）](./tablecontrol-element-format.md)|定义视图的表格格式。|
+|[TableControl Element (Format)](./tablecontrol-element-format.md)|定义视图的表格格式。|
 
 ## <a name="remarks"></a>备注
 
@@ -56,7 +49,7 @@ ViewDefinitions 元素（格式） View 元素（format） TableControl 元素�
 
 ## <a name="example"></a>示例
 
-此示例演示一个定义两个列标题的 `TableHeaders` 元素。
+此示例演示一个 `TableHeaders` 定义两个列标题的元素。
 
 ```xml
 <TableHeaders>
@@ -77,8 +70,8 @@ ViewDefinitions 元素（格式） View 元素（format） TableControl 元素�
 
 [创建表视图](./creating-a-table-view.md)
 
-[TableColumnHeader 元素（格式）](./tablecolumnheader-element-format.md)
+[TableColumnHeader Element (Format)](./tablecolumnheader-element-format.md)
 
-[TableControl 元素（格式）](./tablecontrol-element-format.md)
+[TableControl Element (Format)](./tablecontrol-element-format.md)
 
-[编写 PowerShell 格式化文件](./writing-a-powershell-formatting-file.md)
+[编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

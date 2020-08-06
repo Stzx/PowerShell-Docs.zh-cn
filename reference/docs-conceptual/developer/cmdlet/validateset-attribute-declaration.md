@@ -1,23 +1,16 @@
 ---
 title: ValidateSet 特性声明 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attributes, ValidateSet
 - ValidateSet attribute, described
 - ValidateSet attribute
-ms.assetid: 4a6f97ab-45b2-4f3d-84d4-30acf8e074d0
-caps.latest.revision: 12
-ms.openlocfilehash: b036f39cd01ffe4b4ce7db9627cb6da0d5327190
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0b6833efb0ce8e9474e9d91049fd201fc845cbea
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364276"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787761"
 ---
 # <a name="validateset-attribute-declaration"></a>ValidateSet 属性声明
 
@@ -32,16 +25,16 @@ ValidateSetAttribute 属性为 cmdlet 参数参数指定一组可能的值。 �
 [ValidateSetAttribute(params string[] validValues, Named Parameters)]
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-需要 `ValidValues` （[system.string](/dotnet/api/System.String)）。 指定有效的参数元素值。 下面的示例演示如何指定一个或多个元素。
+`ValidValues`需要[ () 。](/dotnet/api/System.String) 指定有效的参数元素值。 下面的示例演示如何指定一个或多个元素。
 
 ```csharp
 [ValidateSetAttribute("Steve")]
 [ValidateSetAttribute("Steve","Mary")]
 ```
 
-`IgnoreCase` （[system.string](/dotnet/api/System.Boolean)）可选命名参数。 `true` 的默认值指示忽略大小写。 `false` 的值使 cmdlet 区分大小写。
+`IgnoreCase` ([system.object](/dotnet/api/System.Boolean)) 可选的命名参数。 的默认值 `true` 指示忽略大小写。 值为 `false` ，使 cmdlet 区分大小写。
 
 ## <a name="remarks"></a>备注
 

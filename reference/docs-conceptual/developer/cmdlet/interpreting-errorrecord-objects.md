@@ -1,19 +1,12 @@
 ---
 title: 解释 ErrorRecord 对象 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2a65b964-5bc6-4ade-a66b-b6afa7351ce7
-caps.latest.revision: 9
-ms.openlocfilehash: 32ebf2531237bfd1042310ccc4155193a58401fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 249fff7d14023806d75aeca40f4d9b7231e14311
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365416"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786588"
 ---
 # <a name="interpreting-errorrecord-objects"></a>解释 ErrorRecord 对象
 
@@ -24,7 +17,7 @@ ms.locfileid: "72365416"
 当 cmdlet 遇到终止或非终止错误时，它应创建描述错误情况的错误记录。 宿主应用程序必须调查这些错误记录，并执行任何可缓解错误的操作。 主机应用程序还必须调查错误记录中是否存在无法处理记录但能够继续的非终止错误，还必须调查错误记录以终止导致管道停止的错误。
 
 > [!NOTE]
-> 对于终止错误，该 cmdlet 将调用[Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)方法。 对于非终止错误，该 cmdlet 将调用[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)方法。
+> 对于终止错误，该 cmdlet 将调用[Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)方法。 对于非终止错误，该 cmdlet 将调用[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)方法。。
 
 ## <a name="error-record-design"></a>错误记录设计
 
@@ -38,7 +31,7 @@ ms.locfileid: "72365416"
 
 - 错误异常
 
-- 完全限定的错误标识符（FQID）
+- 完全限定的错误标识符 (FQID) 
 
 - 其他信息
 
@@ -52,7 +45,7 @@ Cmdlet 可以指定 CloseError、OpenError、InvalidType、ReadError 和 WriteEr
 
 错误记录中包含的异常由 cmdlet 提供，并可通过[ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)对象的[ErrorRecord *](/dotnet/api/System.Management.Automation.ErrorRecord.Exception)属性进行访问，可通过此方法访问。
 
-宿主应用程序可以使用 `is` 关键字来确定异常是否属于特定类或派生类。 最好在异常类型上进行分支，如下面的示例中所示。
+主机应用程序可以使用 `is` 关键字来确定异常属于特定类还是派生类。 最好在异常类型上进行分支，如下面的示例中所示。
 
 `if (MyNonTerminatingError.Exception is AccessDeniedException)`
 
@@ -60,7 +53,7 @@ Cmdlet 可以指定 CloseError、OpenError、InvalidType、ReadError 和 WriteEr
 
 ### <a name="the-fqid"></a>FQID
 
-FQID 是可用于标识错误的最具体的信息。 它是一个字符串，其中包含 cmdlet 定义的标识符、cmdlet 类的名称以及报告错误的源。 通常，错误记录类似于 Windows 事件日志的事件记录。 FQID 类似于以下元组，该元组标识事件记录的类：（*日志名称*、*源*、*事件 ID*）。
+FQID 是可用于标识错误的最具体的信息。 它是一个字符串，其中包含 cmdlet 定义的标识符、cmdlet 类的名称以及报告错误的源。 通常，错误记录类似于 Windows 事件日志的事件记录。 FQID 类似于以下元组，该元组标识事件记录的类： (*日志名称*、*源*、*事件 ID*) 。
 
 FQID 设计为作为单个字符串被检查。 但是，在这种情况下，错误标识符旨在由主机应用程序进行分析。 下面的示例是一个格式正确的完全限定的错误标识符。
 

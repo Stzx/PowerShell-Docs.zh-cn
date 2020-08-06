@@ -1,19 +1,12 @@
 ---
 title: AccessDBProviderSample02 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: aaf9351e-157f-4d48-8b8f-1fd64855b682
-caps.latest.revision: 10
-ms.openlocfilehash: 219f8c2367939d16da928ede789843669b4451c6
-ms.sourcegitcommit: 109f132360e8adbbdaf5dbc42a270be73d9dfa9b
+ms.openlocfilehash: e9a0444d17bec230633e1dd1709455f6ba83dd5c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84633407"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786894"
 ---
 # <a name="accessdbprovidersample02"></a>AccessDBProviderSample02
 
@@ -36,7 +29,7 @@ ms.locfileid: "84633407"
 
 - 定义从[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)类中驱动的提供程序类。
 
-- 覆盖[Drivecmdletprovider. Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive)方法，以支持创建新驱动器。 （此示例不显示如何将动态参数添加到 `New-PSDrive` cmdlet。）
+- 覆盖[Drivecmdletprovider. Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive)方法，以支持创建新驱动器。  (此示例不显示如何将动态参数添加到 `New-PSDrive` cmdlet。 ) 
 
 - 覆盖[Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive)方法，以支持删除现有驱动器。
 

@@ -1,23 +1,16 @@
 ---
 title: 模块和管理单元 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2d342f91-23e0-467f-8de2-f9657d820693
-caps.latest.revision: 6
-ms.openlocfilehash: b3d8209ea7e3e8353e73ebce1531991ec9519c74
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 07cdc55fd6d1462130f1a81deb30056623a525e6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811656"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787302"
 ---
 # <a name="modules-and-snap-ins"></a>模块和管理单元
 
-Cmdlet 可以使用模块（由 Windows PowerShell 2.0 引入）或管理单元添加到会话中。将 cmdlet 添加到会话后，它可以通过主机应用程序以编程方式运行，或在命令行中以编程方式运行。
+Cmdlet 可以使用 Windows PowerShell 2.0) 或管理单元引入 (模块添加到会话中。将 cmdlet 添加到会话后，它可以通过主机应用程序以编程方式运行，或在命令行中以编程方式运行。
 
 出于以下原因，建议使用模块作为向会话添加 cmdlet 的传递方法：
 

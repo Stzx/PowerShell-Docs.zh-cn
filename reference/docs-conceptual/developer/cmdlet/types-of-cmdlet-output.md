@@ -1,21 +1,14 @@
 ---
 title: Cmdlet 输出的类型 |Microsoft Docs
-ms.custom: ''
 ms.date: 01/18/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell SDK], output
-ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
-caps.latest.revision: 12
-ms.openlocfilehash: de21d9ebfec4f23d3819695df225f7a230864a7b
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 8f761fdddd264b7c580c4a860081fdc5d2776ee7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561402"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786350"
 ---
 # <a name="types-of-cmdlet-output"></a>Cmdlet 输出的类型
 
@@ -62,7 +55,7 @@ Cmdlet 可以通过调用[WriteWarning](/dotnet/api/System.Management.Automation
 
 ## <a name="accessing-the-output-functionality-of-a-host-application"></a>访问主机应用程序的输出功能
 
-你还可以设计 cmdlet，以通过 PowerShell 运行时直接访问主机应用程序的输出功能。 使用 PowerShell 提供的宿主 Api，而不是使用[system. 控制台](/dotnet/api/System.Console)或[System.web。窗体](/dotnet/api/System.Windows.Forms)可确保你的 cmdlet 可与各种主机一起使用。 例如： **ngen.exe**控制台主机、 **powershell_ise**图形宿主、powershell 远程处理主机和第三方主机。
+你还可以设计 cmdlet，以通过 PowerShell 运行时直接访问主机应用程序的输出功能。 使用 PowerShell 提供的宿主 Api，而不是使用[system. 控制台](/dotnet/api/System.Console)或[System.web。窗体](/dotnet/api/System.Windows.Forms)可确保你的 cmdlet 可与各种主机一起使用。 例如： **powershell.exe**控制台主机、 **powershell_ise.exe**图形主机、PowerShell 远程处理主机和第三方主机。
 
 ## <a name="see-also"></a>另请参阅
 
