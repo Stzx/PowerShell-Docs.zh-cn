@@ -1,62 +1,55 @@
 ---
 title: Events01 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
-caps.latest.revision: 10
-ms.openlocfilehash: 772f73793449856651ab6b03e1ccc14faed941fc
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: c7b0f759ca6f3c078649a462eac1713e8214a237
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561441"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774451"
 ---
-# <a name="events01-sample"></a><span data-ttu-id="bb9fb-102">Events01 示例</span><span class="sxs-lookup"><span data-stu-id="bb9fb-102">Events01 Sample</span></span>
+# <a name="events01-sample"></a><span data-ttu-id="70816-102">Events01 示例</span><span class="sxs-lookup"><span data-stu-id="70816-102">Events01 Sample</span></span>
 
-<span data-ttu-id="bb9fb-103">此示例演示如何创建一个 cmdlet，该 cmdlet 允许用户注册[FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher)引发的事件。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-103">This sample shows how to create a cmdlet that allows the user to register for events that are raised by [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).</span></span>
-<span data-ttu-id="bb9fb-104">使用此 cmdlet，用户可以注册在特定目录下创建文件时要执行的操作。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-104">With this cmdlet, users can register an action to execute when a file is created under a specific directory.</span></span>
-<span data-ttu-id="bb9fb-105">此示例是从[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)基类派生的。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-105">This sample derives from the [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) base class.</span></span>
+<span data-ttu-id="70816-103">此示例演示如何创建一个 cmdlet，该 cmdlet 允许用户注册[FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher)引发的事件。</span><span class="sxs-lookup"><span data-stu-id="70816-103">This sample shows how to create a cmdlet that allows the user to register for events that are raised by [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).</span></span>
+<span data-ttu-id="70816-104">使用此 cmdlet，用户可以注册在特定目录下创建文件时要执行的操作。</span><span class="sxs-lookup"><span data-stu-id="70816-104">With this cmdlet, users can register an action to execute when a file is created under a specific directory.</span></span>
+<span data-ttu-id="70816-105">此示例是从[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)基类派生的。</span><span class="sxs-lookup"><span data-stu-id="70816-105">This sample derives from the [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) base class.</span></span>
 
-## <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="bb9fb-106">如何使用 Visual Studio 生成示例。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-106">How to build the sample by using Visual Studio.</span></span>
+## <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="70816-106">如何使用 Visual Studio 生成示例。</span><span class="sxs-lookup"><span data-stu-id="70816-106">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="bb9fb-107">安装 Windows PowerShell 2.0 SDK 后，导航到 Events01 文件夹。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-107">With the Windows PowerShell 2.0 SDK installed, navigate to the Events01 folder.</span></span>
-   <span data-ttu-id="bb9fb-108">默认位置为 `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-108">The default location is `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.</span></span>
+1. <span data-ttu-id="70816-107">安装 Windows PowerShell 2.0 SDK 后，导航到 Events01 文件夹。</span><span class="sxs-lookup"><span data-stu-id="70816-107">With the Windows PowerShell 2.0 SDK installed, navigate to the Events01 folder.</span></span>
+   <span data-ttu-id="70816-108">默认位置为 `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`。</span><span class="sxs-lookup"><span data-stu-id="70816-108">The default location is `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`.</span></span>
 
-2. <span data-ttu-id="bb9fb-109">双击解决方案（.sln）文件的图标。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-109">Double-click the icon for the solution (.sln) file.</span></span>
-   <span data-ttu-id="bb9fb-110">这会在 Microsoft Visual Studio 中打开示例项目。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-110">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="70816-109">双击解决方案的图标 ( .sln) 文件。</span><span class="sxs-lookup"><span data-stu-id="70816-109">Double-click the icon for the solution (.sln) file.</span></span>
+   <span data-ttu-id="70816-110">这会在 Microsoft Visual Studio 中打开示例项目。</span><span class="sxs-lookup"><span data-stu-id="70816-110">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="bb9fb-111">在“生成”菜单中选择“生成解决方案”   。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-111">In the **Build** menu, select **Build Solution**.</span></span>
-   <span data-ttu-id="bb9fb-112">示例的库将在默认 `\bin` 或文件夹中生成 `\bin\debug` 。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-112">The library for the sample will be built in the default `\bin` or `\bin\debug` folders.</span></span>
+3. <span data-ttu-id="70816-111">在“生成”菜单中选择“生成解决方案” 。</span><span class="sxs-lookup"><span data-stu-id="70816-111">In the **Build** menu, select **Build Solution**.</span></span>
+   <span data-ttu-id="70816-112">示例的库将在默认 `\bin` 或文件夹中生成 `\bin\debug` 。</span><span class="sxs-lookup"><span data-stu-id="70816-112">The library for the sample will be built in the default `\bin` or `\bin\debug` folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="bb9fb-113">如何运行示例</span><span class="sxs-lookup"><span data-stu-id="bb9fb-113">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="70816-113">如何运行示例</span><span class="sxs-lookup"><span data-stu-id="70816-113">How to run the sample</span></span>
 
-1. <span data-ttu-id="bb9fb-114">创建以下模块文件夹：</span><span class="sxs-lookup"><span data-stu-id="bb9fb-114">Create the following module folder:</span></span>
+1. <span data-ttu-id="70816-114">创建以下模块文件夹：</span><span class="sxs-lookup"><span data-stu-id="70816-114">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/events01`
 
-2. <span data-ttu-id="bb9fb-115">将示例的库文件复制到模块文件夹中。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-115">Copy the library file for the sample to the module folder.</span></span>
+2. <span data-ttu-id="70816-115">将示例的库文件复制到模块文件夹中。</span><span class="sxs-lookup"><span data-stu-id="70816-115">Copy the library file for the sample to the module folder.</span></span>
 
-3. <span data-ttu-id="bb9fb-116">启动 Windows PowerShell。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-116">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="70816-116">启动 Windows PowerShell。</span><span class="sxs-lookup"><span data-stu-id="70816-116">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="bb9fb-117">运行以下命令，将 cmdlet 加载到 Windows PowerShell：</span><span class="sxs-lookup"><span data-stu-id="bb9fb-117">Run the following command to load the cmdlet into Windows PowerShell:</span></span>
+4. <span data-ttu-id="70816-117">运行以下命令，将 cmdlet 加载到 Windows PowerShell：</span><span class="sxs-lookup"><span data-stu-id="70816-117">Run the following command to load the cmdlet into Windows PowerShell:</span></span>
 
     ```powershell
     import-module events01
     ```
 
-5. <span data-ttu-id="bb9fb-118">使用 FileSystemEvent cmdlet 注册一个操作，该操作将在临时目录下创建文件时写入一条消息。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-118">Use the Register-FileSystemEvent cmdlet to register an action that will write a message when a file is created under the TEMP directory.</span></span>
+5. <span data-ttu-id="70816-118">使用 FileSystemEvent cmdlet 注册一个操作，该操作将在临时目录下创建文件时写入一条消息。</span><span class="sxs-lookup"><span data-stu-id="70816-118">Use the Register-FileSystemEvent cmdlet to register an action that will write a message when a file is created under the TEMP directory.</span></span>
 
     ```powershell
     Register-FileSystemEvent $env:temp Created -filter "*.txt" -action { Write-Host "A file was created in the TEMP directory" }
     ```
 
-6. <span data-ttu-id="bb9fb-119">在临时目录下创建文件，并注意执行操作（显示消息）。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-119">Create a file under the TEMP directory and note that the action is executed (the message is displayed).</span></span>
+6. <span data-ttu-id="70816-119">在临时目录下创建文件，并注意 () 显示消息时执行操作。</span><span class="sxs-lookup"><span data-stu-id="70816-119">Create a file under the TEMP directory and note that the action is executed (the message is displayed).</span></span>
 
-<span data-ttu-id="bb9fb-120">这是通过执行以下步骤而产生的示例输出。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-120">This is a sample output that results by following these steps.</span></span>
+<span data-ttu-id="70816-120">这是通过执行以下步骤而产生的示例输出。</span><span class="sxs-lookup"><span data-stu-id="70816-120">This is a sample output that results by following these steps.</span></span>
 
 ```output
 Id              Name            State      HasMoreData     Location             Command
@@ -73,22 +66,22 @@ Set-Content $env:temp\test.txt "This is a test file"
 A file was created in the TEMP directory
 ```
 
-## <a name="requirements"></a><span data-ttu-id="bb9fb-121">要求</span><span class="sxs-lookup"><span data-stu-id="bb9fb-121">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="70816-121">要求</span><span class="sxs-lookup"><span data-stu-id="70816-121">Requirements</span></span>
 
-<span data-ttu-id="bb9fb-122">此示例需要 Windows PowerShell 2.0。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-122">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="70816-122">此示例需要 Windows PowerShell 2.0。</span><span class="sxs-lookup"><span data-stu-id="70816-122">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="bb9fb-123">演示</span><span class="sxs-lookup"><span data-stu-id="bb9fb-123">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="70816-123">演示</span><span class="sxs-lookup"><span data-stu-id="70816-123">Demonstrates</span></span>
 
-<span data-ttu-id="bb9fb-124">此示例演示以下各项。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-124">This sample demonstrates the following.</span></span>
+<span data-ttu-id="70816-124">此示例演示以下各项。</span><span class="sxs-lookup"><span data-stu-id="70816-124">This sample demonstrates the following.</span></span>
 
-### <a name="how-to-write-a-cmdlet-for-event-registration"></a><span data-ttu-id="bb9fb-125">如何为事件注册编写 cmdlet</span><span class="sxs-lookup"><span data-stu-id="bb9fb-125">How to write a cmdlet for event registration</span></span>
+### <a name="how-to-write-a-cmdlet-for-event-registration"></a><span data-ttu-id="70816-125">如何为事件注册编写 cmdlet</span><span class="sxs-lookup"><span data-stu-id="70816-125">How to write a cmdlet for event registration</span></span>
 
-<span data-ttu-id="bb9fb-126">该 cmdlet 派生自[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)类，该类提供对 cmdlet 的通用参数的支持 `Register-*Event` 。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-126">The cmdlet derives from the [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) class, which provides support for parameters common to the `Register-*Event` cmdlets.</span></span>
-<span data-ttu-id="bb9fb-127">派生自[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)的 cmdlet 只需定义其特定参数并重写 `GetSourceObject` 和 `GetSourceObjectEventName` 抽象方法。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-127">Cmdlets that are derived from [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) need only to define their particular parameters and override the `GetSourceObject` and `GetSourceObjectEventName` abstract methods.</span></span>
+<span data-ttu-id="70816-126">该 cmdlet 派生自[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)类，该类提供对 cmdlet 的通用参数的支持 `Register-*Event` 。</span><span class="sxs-lookup"><span data-stu-id="70816-126">The cmdlet derives from the [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) class, which provides support for parameters common to the `Register-*Event` cmdlets.</span></span>
+<span data-ttu-id="70816-127">派生自[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase)的 cmdlet 只需定义其特定参数并重写 `GetSourceObject` 和 `GetSourceObjectEventName` 抽象方法。</span><span class="sxs-lookup"><span data-stu-id="70816-127">Cmdlets that are derived from [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) need only to define their particular parameters and override the `GetSourceObject` and `GetSourceObjectEventName` abstract methods.</span></span>
 
-## <a name="example"></a><span data-ttu-id="bb9fb-128">示例</span><span class="sxs-lookup"><span data-stu-id="bb9fb-128">Example</span></span>
+## <a name="example"></a><span data-ttu-id="70816-128">示例</span><span class="sxs-lookup"><span data-stu-id="70816-128">Example</span></span>
 
-<span data-ttu-id="bb9fb-129">此示例演示如何注册[FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher)引发的事件。</span><span class="sxs-lookup"><span data-stu-id="bb9fb-129">This sample shows how to register for events raised by [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).</span></span>
+<span data-ttu-id="70816-129">此示例演示如何注册[FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher)引发的事件。</span><span class="sxs-lookup"><span data-stu-id="70816-129">This sample shows how to register for events raised by [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher).</span></span>
 
 ```csharp
 namespace Sample
@@ -187,6 +180,6 @@ namespace Sample
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="bb9fb-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bb9fb-130">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70816-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="70816-130">See Also</span></span>
 
-[<span data-ttu-id="bb9fb-131">编写 Windows PowerShell Cmdlet</span><span class="sxs-lookup"><span data-stu-id="bb9fb-131">Writing a Windows PowerShell Cmdlet</span></span>](writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="70816-131">编写 Windows PowerShell Cmdlet</span><span class="sxs-lookup"><span data-stu-id="70816-131">Writing a Windows PowerShell Cmdlet</span></span>](writing-a-windows-powershell-cmdlet.md)
