@@ -5,12 +5,12 @@ helpviewer_keywords:
 - action names [PowerShell SDK]
 - verb names [PowerShell SDK]
 - cmdlets [PowerShell SDK], verb names
-ms.openlocfilehash: 1cdfed5727c0b93bd1d4008fd0d6c03c448c6aed
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: f065610b6e54c9a6a927948bc6b2ffe5a1671e0c
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782389"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162471"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>PowerShell 命令的批准的谓词
 
@@ -18,6 +18,14 @@ ms.locfileid: "87782389"
 
 > [!NOTE]
 > PowerShell 使用术语 "_谓词_" 来描述一个表示操作的单词，即使该单词不是英语的标准谓词也是如此。 例如，"_新建_" 一词是有效的 PowerShell 谓词名称，因为它表示一个操作，即使它不是英语中的谓词。
+
+<!--
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+-->
+
+每个批准的谓词都定义了相应的_别名前缀_。
+此别名前缀通常用于为使用该谓词的命令命名别名。
+例如，的别名为 `Import` `ip` 和，因此的别名 `Import-Module` 是 `ipmo` 。  这是一个建议，但不是规则;特别是，无需考虑命令别名模拟其他环境中的已知命令。
 
 ## <a name="verb-naming-rules"></a>谓词命名规则
 
