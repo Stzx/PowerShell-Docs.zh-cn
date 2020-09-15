@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,配置,安装程序
 title: EnableDebugConfiguration 方法
-ms.openlocfilehash: f1290e4d898332361850ffc85aa0a8d79863c8f7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: be75b1012f49db79eb75a68c6912ffd5772bf16f
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953434"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464088"
 ---
 # <a name="enabledebugconfiguration-method"></a>EnableDebugConfiguration 方法
 

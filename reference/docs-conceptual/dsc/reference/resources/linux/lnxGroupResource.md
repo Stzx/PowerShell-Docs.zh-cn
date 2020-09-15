@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/17/2020
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux 的 DSC nxGroup 资源
-ms.openlocfilehash: 3682cb728d314d00b4a64a93b93018e8a6d12a21
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: f196c74b94ec27818d58b59d1e489facd8ab0a65
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560842"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464428"
 ---
 # <a name="dsc-for-linux-nxgroup-resource"></a>适用于 Linux 的 DSC nxGroup 资源
 

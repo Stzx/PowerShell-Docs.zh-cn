@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/17/2020
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux 的 DSC nxSshAuthorizedKeys 资源
-ms.openlocfilehash: 4c35590095732a478e3edc56438f3bdd1c0b24df
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 3a62bb7a3dbdebae4f0ca6084db1624c1b76ab1f
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557186"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464462"
 ---
 # <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a>适用于 Linux 的 DSC nxSshAuthorizedKeys 资源
 

@@ -3,12 +3,12 @@ title: 关于 switch 语句的各项须知内容
 description: PowerShell 中的 switch 语句提供了其他语言没有的功能。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: ebf6191d56374273465ae6bee49ef82a02cc1580
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 685a5691599408a0d54ca99bf383bcd7702322a6
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149420"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469712"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>关于 switch 语句的各项须知内容
 
@@ -17,7 +17,7 @@ ms.locfileid: "84149420"
 > [!NOTE]
 > 本文的[原始版本][]发布在 [@KevinMarquette][] 撰写的博客上。 PowerShell 团队感谢 Kevin 与我们分享这篇文章。 请前往 [PowerShellExplained.com][] 访问他的博客。
 
-## <a name="if-statement"></a>If 语句
+## <a name="the-if-statement"></a>`if` 语句
 
 你最先学习的语句之一是 `if` 语句。 如果语句为 `$true`，则允许执行脚本块。
 

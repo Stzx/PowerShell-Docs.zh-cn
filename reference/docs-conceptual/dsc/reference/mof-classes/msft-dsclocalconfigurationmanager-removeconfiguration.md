@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,配置,安装程序
 title: RemoveConfiguration 方法
-ms.openlocfilehash: aacbed96beb960d7e0d449423a4de9a27f0a287e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ef15c873d8dfaf28e5cdeb611b72a70921c099be
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953394"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464343"
 ---
 # <a name="removeconfiguration-method"></a>RemoveConfiguration 方法
 

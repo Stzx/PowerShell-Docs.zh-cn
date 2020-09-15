@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,配置,安装程序
 title: DSC WindowsFeature 资源。
-ms.openlocfilehash: d3384b1f45324df6b6b209f25b64d9d77615ad7f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: b15b267c6898697816b386a381e5a6d59acd492a
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954624"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464105"
 ---
 # <a name="dsc-windowsfeature-resource"></a>DSC WindowsFeature 资源。
 
@@ -24,7 +24,6 @@ WindowsFeature [string] #ResourceName
     [ Credential = [PSCredential] ]
     [ IncludeAllSubFeature = [bool] ]
     [ LogPath = [string] ]
-    [ Source = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
     [ PsDscRunAsCredential = [PSCredential] ]
@@ -39,7 +38,6 @@ WindowsFeature [string] #ResourceName
 |凭据 |指示要用于添加或删除角色或功能的凭据。 |
 |IncludeAllSubFeature |将此属性设置为 `$true` 以确保所有必需的子功能的状态为通过 **Name** 属性指定的功能的状态。 |
 |LogPath |指示你希望资源提供程序在其中记录操作的日志文件的路径。 |
-|源 |指示要用于安装的源文件的位置（如有必要）。 |
 
 ## <a name="common-properties"></a>公共属性
 

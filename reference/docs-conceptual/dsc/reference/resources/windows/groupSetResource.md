@@ -3,12 +3,12 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,配置,安装程序
 description: 提供了管理目标节点上的本地组的机制。
 title: DSC GroupSet 资源
-ms.openlocfilehash: 99b9cafdd4d799e18e1b9b1f08d7dd41ec435711
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 90e0c3f0e09c6a300988869265dfdb432ed5d217
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560332"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464189"
 ---
 # <a name="dsc-groupset-resource"></a>DSC GroupSet 资源
 
@@ -24,8 +24,6 @@ Windows PowerShell Desired State Configuration (DSC) 中的 **GroupSet** 资源�
 Group [string] #ResourceName
 {
     GroupName = [string[]]
-    [ Members = [string[]] ]
-    [ Description = [string[]] ]
     [ MembersToInclude = [string[]] ]
     [ MembersToExclude = [string[]] ]
     [ Credential = [PSCredential] ]
@@ -41,7 +39,6 @@ Group [string] #ResourceName
 |---|---|
 |GroupName |要确保其处于特定状态的组的名称。 |
 |成员 |使用此属性将当前的组成员身份替换为指定成员。 此属性的值是一组形式为 `Domain\UserName` 的字符串。 如果你在配置中设置此属性，请勿使用 **MembersToExclude** 或 **MembersToInclude** 属性。 这样做会导致错误生成。 |
-|说明 |组的说明。 |
 |MembersToInclude |使用此属性将成员添加到组的现有成员资格中。 此属性的值是一组形式为 `Domain\UserName` 的字符串。 如果你在配置中设置此属性，请勿使用 **Members** 属性。 这样做会导致错误生成。 |
 |MembersToExclude |使用此属性从现有的组成员身份中删除成员。 此属性的值是一组形式为 `Domain\UserName` 的字符串。 如果你在配置中设置此属性，请勿使用 **Members** 属性。 这样做会导致错误生成。 |
 |凭据 |访问远程资源所需的凭据。 此帐户必须具有相应的 Active Directory 权限才能将所有非将本地帐户添加到组中；否则，将发生错误。 |
