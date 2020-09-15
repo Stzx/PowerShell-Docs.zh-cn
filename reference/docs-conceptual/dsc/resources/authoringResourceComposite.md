@@ -1,19 +1,20 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: 复合资源--将 DSC 配置用作资源
-ms.openlocfilehash: 79fe94bd5bab8fa460714e5994d2e2487f302410
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1baa5e4ca5dfa808edc4452db4874a83aa78107e
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75415891"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217536"
 ---
 # <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>复合资源：将 DSC 配置用作资源
 
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
-在实际情况中，配置可能会变得长而复杂，调用许多不同的资源，并设置大量的属性。 将 Windows PowerShell Desired State Configuration (DSC) 配置用作其他配置的资源可以解决复杂性的问题。 这叫做复合资源。 复合资源是使用参数的 DSC 配置。 配置的参数充当资源的属性。 此配置将另存为带有 `.schema.psm1` 扩展名的文件。 它取代了 MOF 架构和典型 DSC 资源中的资源脚本。 有关 DSC 资源的详细信息，请参阅 [Windows PowerShell Desired State Configuration 资源](resources.md)。
+在实际情况中，配置可能会变得长而复杂，调用许多不同的资源，并设置大量的属性。 将 Windows PowerShell Desired State Configuration (DSC) 配置用作其他配置的资源可以解决复杂性的问题。 这叫做复合资源。 复合资源是使用参数的 DSC 配置。 配置的参数充当资源的属性。
+此配置将另存为带有 `.schema.psm1` 扩展名的文件。 它取代了 MOF 架构和典型 DSC 资源中的资源脚本。 有关 DSC 资源的详细信息，请参阅 [Windows PowerShell Desired State Configuration 资源](resources.md)。
 
 ## <a name="creating-the-composite-resource"></a>创建复合资源
 

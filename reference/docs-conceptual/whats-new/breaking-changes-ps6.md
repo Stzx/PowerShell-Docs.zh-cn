@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell, 核心
 title: PowerShell 6.0 的重大更改
-ms.openlocfilehash: 47ed14cceed86e4dd04a8e0079af00f6a98988ea
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9ead635232930598634141369fd2cc299f0b1799
+ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76995463"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158184"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>PowerShell 6.x 的重大变更
 
@@ -35,8 +35,8 @@ ms.locfileid: "76995463"
 
 如果在操作系统重启后需要使用检查点来恢复脚本，建议在操作系统启动时使用任务计划程序运行脚本，但此脚本将需要维持自身的状态（例如将它保存到文件）。
 
-[workflow]: /powershell/scripting/components/workflows-guide
-[workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/
+[workflow]: /previous-versions/powershell/scripting/components/workflows-guide
+[workflow-foundation]: /dotnet/framework/windows-workflow-foundation/
 
 ### <a name="custom-snap-ins"></a>自定义管理单元
 
@@ -46,7 +46,7 @@ ms.locfileid: "76995463"
 
 现在，这将中断 Windows 和 Windows Server 中的 `ActiveDirectory` 和 `DnsClient` 模块。
 
-[snapin]: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pssnapins
+[snapin]: /powershell/module/microsoft.powershell.core/about/about_pssnapins
 
 ### <a name="wmi-v1-cmdlets"></a>WMI v1 cmdlet
 
@@ -246,8 +246,8 @@ CoreCLR 不支持 Windows Presentation Framework。 以下 cmdlet 受到影响�
 
 以前，在使用 API 以编程方式创建 PowerShell 运行空间时，可以使用旧版 [`RunspaceConfiguration`][runspaceconfig] 或较新的 [`InitialSessionState`][iss]。 此更改不再支持 `RunspaceConfiguration` 并仅支持 `InitialSessionState`。
 
-[runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
-[iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
+[runspaceconfig]: /dotnet/api/system.management.automation.runspaces.runspaceconfiguration
+[iss]: /dotnet/api/system.management.automation.runspaces.initialsessionstate
 
 ### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923"></a>`CommandInvocationIntrinsics.InvokeScript` 将参数绑定到 `$input` 而不是 `$args` [#4923](https://github.com/PowerShell/PowerShell/issues/4923)
 

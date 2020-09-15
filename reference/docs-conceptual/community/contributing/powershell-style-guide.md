@@ -3,12 +3,12 @@ title: PowerShell-Docs 风格指南
 description: 本文介绍用于撰写 PowerShell 文档的风格规则。
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b60ad9a4965e75cc5f68309604f1893e5757f351
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 32df641f7cafa2a5bfcf1bcbf94be594aa77c7d0
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690850"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837437"
 ---
 # <a name="powershell-docs-style-guide"></a>PowerShell-Docs 风格指南
 
@@ -240,7 +240,7 @@ URL 和文件链接都允许深层链接。 将定位点添加到目标路径的
 - `[about_Splatting](about_Splatting.md#splatting-with-arrays)`
 - `[custom key bindings](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings)`
 
-有关详细信息，请参阅[在文档中使用链接](https://docs.microsoft.com/contribute/how-to-write-links)。
+有关详细信息，请参阅[在文档中使用链接](/contribute/how-to-write-links)。
 
 ## <a name="formatting-command-syntax-elements"></a>设置命令语法元素格式
 

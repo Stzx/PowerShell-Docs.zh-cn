@@ -1,13 +1,13 @@
 ---
-ms.date: 06/18/2019
+ms.date: 06/11/2020
 keywords: powershell,cmdlet
 title: PowerShell 学习资源
-ms.openlocfilehash: 5681fd903b323ab3cf87dc212ba64dbfdf2d78e7
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: d9d2f77090a7da7a5bef0c6d0c2af80c3a07be46
+ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808429"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722841"
 ---
 # <a name="powershell-learning-resources"></a>PowerShell 学习资源
 
@@ -23,7 +23,7 @@ ms.locfileid: "83808429"
 
 ## <a name="channel-9-videos"></a>Channel 9 视频
 
-Channel 9 是我们的视频发布平台。 有数百个关于 PowerShell 的可用视频。 [搜索“PowerShell”](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated)以查看哪些视频可用。
+Channel 9 是我们的视频发布平台。 有数百个关于 PowerShell 的可用视频。 [搜索“PowerShell”](https://channel9.msdn.com/Tags/powershell)以查看哪些视频可用。
 
 ### <a name="microsoft-virtual-academy"></a>Microsoft Virtual Academy
 

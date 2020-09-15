@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: DSC 请求服务
-ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c4e725569db776fe0dbd5395b2f0f8b8e70cbbeb
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500725"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837471"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Desired State Configuration 请求服务
 
@@ -278,5 +278,5 @@ DSC 社区已创作多个解决方案来实现请求服务协议。 对于本地
 - [Windows PowerShell Desired State Configuration 概述](../overview/overview.md)
 - [执行配置](enactingConfigurations.md)
 - [使用 DSC 报表服务器](reportServer.md)
-- [[MS-DSCPM]：Desired State Configuration 请求模型协议](https://docs.microsoft.com/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9)
-- [[MS-DSCPM]：Desired State Configuration 请求模型协议 Errata](https://docs.microsoft.com/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5)
+- [[MS-DSCPM]：Desired State Configuration 请求模型协议](/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9)
+- [[MS-DSCPM]：Desired State Configuration 请求模型协议 Errata](/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5)

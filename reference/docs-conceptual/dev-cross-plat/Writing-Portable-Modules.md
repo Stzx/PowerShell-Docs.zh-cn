@@ -2,12 +2,12 @@
 ms.date: 01/10/2020
 keywords: powershell,cmdlet
 title: 编写可移植模块
-ms.openlocfilehash: 124e6efadfd07b8c5214a5c0446b1589f7142388
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: a6b2f8b263e71b6c9dbd50900536cb5072597e71
+ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809613"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158116"
 ---
 # <a name="portable-modules"></a>可移植模块
 
@@ -130,15 +130,12 @@ Time Elapsed 00:00:05.40
 在生成模块之后，可以导入它并执行示例 cmdlet。
 
 ```powershell
-ipmo .\bin\Debug\netstandard2.0\myModule.dll
+Import-Module .\bin\Debug\netstandard2.0\myModule.dll
 Test-SampleCmdlet -?
 Test-SampleCmdlet -FavoriteNumber 7 -FavoritePet Cat
 ```
 
 ```output
-PS C:\Users\Steve\myModule> ipmo .\bin\Debug\netstandard2.0\myModule.dll
-PS C:\Users\Steve\myModule> Test-SampleCmdlet -?
-
 NAME
     Test-SampleCmdlet
 
@@ -153,8 +150,6 @@ ALIASES
 REMARKS
     None
 
-
-PS C:\Users\Steve\myModule> Test-SampleCmdlet -FavoriteNumber 7 -FavoritePet Cat
 
 FavoriteNumber FavoritePet
 -------------- -----------
@@ -306,4 +301,4 @@ managed.dll folder
 [PowerShell 库]: https://www.powershellgallery.com
 [.NET 可移植性分析器]: https://github.com/Microsoft/dotnet-apiport
 [CompatiblePSEditions]: /powershell/scripting/gallery/concepts/module-psedition-support
-[.NET RID 目录]: https://docs.microsoft.com/dotnet/core/rid-catalog
+[.NET RID 目录]: /dotnet/core/rid-catalog

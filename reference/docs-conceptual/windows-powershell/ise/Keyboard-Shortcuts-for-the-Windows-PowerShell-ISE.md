@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 的键盘快捷方式
-ms.openlocfilehash: ee1b5961f8528d44330345bc49368e61970861ca
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 36fa3f983dc2d8440dd3b87aefd92eb49c028dc9
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809763"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092110"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Windows PowerShell ISE 的键盘快捷方式
 
@@ -75,7 +75,7 @@ ms.locfileid: "83809763"
 | **运行/继续**           | <kbd>F5</kbd>                                  | 脚本窗格，调试脚本时 |
 | **步入**              | <kbd>F11</kbd>                                 | 脚本窗格，调试脚本时 |
 | **步越**              | <kbd>F10</kbd>                                 | 脚本窗格，调试脚本时 |
-| **步出**               | <kbd>SHIFT</kbd>+<kbd><kbd>F11</kbd></kbd>     | 脚本窗格，调试脚本时 |
+| **步出**               | <kbd>SHIFT</kbd>+<kbd>F11</kbd>                | 脚本窗格，调试脚本时 |
 | **显示调用堆栈**     | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>  | 脚本窗格，调试脚本时 |
 | **列出断点**       | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>L</kbd>  | 脚本窗格，调试脚本时 |
 | **切换断点**      | <kbd>F9</kbd>                                  | 脚本窗格，调试脚本时 |
