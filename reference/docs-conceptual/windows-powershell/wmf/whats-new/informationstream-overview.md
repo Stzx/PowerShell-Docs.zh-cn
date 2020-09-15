@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,安装程序
 title: 信息流
-ms.openlocfilehash: 39cb3c36a70530b3ff9777edc74b88d276cbbb7c
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 1a8df66f7489910b964ec398e90b76e9f30cd2e2
+ms.sourcegitcommit: 87b9b989f261b52969e99159e99ee28ad8d8839a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808923"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86567835"
 ---
-# <a name="information-stream"></a><span data-ttu-id="e5595-103">信息流</span><span class="sxs-lookup"><span data-stu-id="e5595-103">Information Stream</span></span>
+# <a name="information-stream"></a><span data-ttu-id="60242-103">信息流</span><span class="sxs-lookup"><span data-stu-id="60242-103">Information Stream</span></span>
 
-<span data-ttu-id="e5595-104">PowerShell 5.0 添加了新的结构化信息  流以在脚本及其主机之间传输结构化数据。</span><span class="sxs-lookup"><span data-stu-id="e5595-104">PowerShell 5.0 adds a new structured **Information** stream to transmit structured data between a script and its host.</span></span> <span data-ttu-id="e5595-105">已将 `Write-Host` 更新为将其输出发出到信息  流，你现在可以在信息流中捕获或抑制它。</span><span class="sxs-lookup"><span data-stu-id="e5595-105">`Write-Host` has also been updated to emit its output to the **Information** stream where you can now capture or silence it.</span></span> <span data-ttu-id="e5595-106">新的 `Write-Information` cmdlet 与 InformationVariable  和 InformationAction  通用参数一起使用可以增加灵活性并启用更多功能。</span><span class="sxs-lookup"><span data-stu-id="e5595-106">The new `Write-Information` cmdlet used with **InformationVariable** and **InformationAction** common parameters enables more flexibility and capability.</span></span>
+<span data-ttu-id="60242-104">PowerShell 5.0 添加了新的结构化信息  流以在脚本及其主机之间传输结构化数据。</span><span class="sxs-lookup"><span data-stu-id="60242-104">PowerShell 5.0 adds a new structured **Information** stream to transmit structured data between a script and its host.</span></span> <span data-ttu-id="60242-105">已将 `Write-Host` 更新为将其输出发出到信息  流，你现在可以在信息流中捕获或抑制它。</span><span class="sxs-lookup"><span data-stu-id="60242-105">`Write-Host` has also been updated to emit its output to the **Information** stream where you can now capture or silence it.</span></span> <span data-ttu-id="60242-106">新的 `Write-Information` cmdlet 与 InformationVariable  和 InformationAction  通用参数一起使用可以增加灵活性并启用更多功能。</span><span class="sxs-lookup"><span data-stu-id="60242-106">The new `Write-Information` cmdlet used with **InformationVariable** and **InformationAction** common parameters enables more flexibility and capability.</span></span>
 
-<span data-ttu-id="e5595-107">以下函数使用充分利用新信息  流的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="e5595-107">The following function uses cmdlets that take advantage of the new **Information** stream.</span></span>
+<span data-ttu-id="60242-107">以下函数使用充分利用新信息  流的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="60242-107">The following function uses cmdlets that take advantage of the new **Information** stream.</span></span>
 
 ```powershell
 function OutputGusher {
@@ -38,10 +38,10 @@ function OutputGusher {
 }
 ```
 
-<span data-ttu-id="e5595-108">以下示例显示运行此函数的结果。</span><span class="sxs-lookup"><span data-stu-id="e5595-108">The following examples show the results of running this function.</span></span>
+<span data-ttu-id="60242-108">以下示例显示运行此函数的结果。</span><span class="sxs-lookup"><span data-stu-id="60242-108">The following examples show the results of running this function.</span></span>
 
 ```powershell
-$r = c:\temp\OutputGusher
+$r = OutputGusher
 ```
 
 ```Output
@@ -53,14 +53,14 @@ I <3 Output
 SCRIPT COMPLETE!!
 ```
 
-<span data-ttu-id="e5595-109">`$r` 变量已捕获脚本变量 `$p` 中的进程信息。</span><span class="sxs-lookup"><span data-stu-id="e5595-109">The `$r` variable has captured the process information in the script variable `$p`.</span></span>
+<span data-ttu-id="60242-109">`$r` 变量已捕获脚本变量 `$p` 中的进程信息。</span><span class="sxs-lookup"><span data-stu-id="60242-109">The `$r` variable has captured the process information in the script variable `$p`.</span></span>
 
 ```powershell
 $r.Id
 4008
 ```
 
-<span data-ttu-id="e5595-110">与 `Write-Host` cmdlet 不同，使用  **的 InformationVariable**`Write-Information` 参数可以捕获变量中的输出。</span><span class="sxs-lookup"><span data-stu-id="e5595-110">Unlike the `Write-Host` cmdlet, using the **InformationVariable** parameter of `Write-Information` allows you to capture the output in a variable.</span></span> <span data-ttu-id="e5595-111">使用标记  可以为发送到信息  流的消息创建单独通道。</span><span class="sxs-lookup"><span data-stu-id="e5595-111">Using the **Tag**, you can create separate channels for message sent to the **Information** stream.</span></span>
+<span data-ttu-id="60242-110">与 `Write-Host` cmdlet 不同，使用  **的 InformationVariable**`Write-Information` 参数可以捕获变量中的输出。</span><span class="sxs-lookup"><span data-stu-id="60242-110">Unlike the `Write-Host` cmdlet, using the **InformationVariable** parameter of `Write-Information` allows you to capture the output in a variable.</span></span> <span data-ttu-id="60242-111">使用标记  可以为发送到信息  流的消息创建单独通道。</span><span class="sxs-lookup"><span data-stu-id="60242-111">Using the **Tag**, you can create separate channels for message sent to the **Information** stream.</span></span>
 
 ```powershell
 $r = OutputGusher -InformationVariable iv
@@ -83,7 +83,7 @@ Process              {System.Diagnostics.Process (powershell)}
 PSHOST               {Preparing to give you output!, =============================, I , <3 ...}
 ```
 
-<span data-ttu-id="e5595-112">使用标记将消息发送到信息  流时，该消息不会显示在主机应用程序中，但可以使用标记名称进行检索。</span><span class="sxs-lookup"><span data-stu-id="e5595-112">When you send a message to the **Information** stream with a tag, that message is not displayed in the host application but can be retrieved using the tag name.</span></span> <span data-ttu-id="e5595-113">例如：</span><span class="sxs-lookup"><span data-stu-id="e5595-113">For example:</span></span>
+<span data-ttu-id="60242-112">使用标记将消息发送到信息  流时，该消息不会显示在主机应用程序中，但可以使用标记名称进行检索。</span><span class="sxs-lookup"><span data-stu-id="60242-112">When you send a message to the **Information** stream with a tag, that message is not displayed in the host application but can be retrieved using the tag name.</span></span> <span data-ttu-id="60242-113">例如：</span><span class="sxs-lookup"><span data-stu-id="60242-113">For example:</span></span>
 
 ```powershell
 $iv | where Tags -eq 'LogHigh'
