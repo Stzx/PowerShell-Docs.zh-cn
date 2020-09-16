@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 初始启动时使用 DSC 配置虚拟机
-ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 48f5e30bed0b97b80724fbf95ec604ede9f2ea5d
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954604"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236282"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>初始启动时使用 DSC 配置虚拟机
 
@@ -22,7 +22,7 @@ ms.locfileid: "71954604"
 
 若要运行这些示例，则需要：
 
-- 要使用的可启动 VHD。 可以在 [TechNet 评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016)下载具有 Windows Server 2016 评估副本的 ISO。
+- 要使用的可启动 VHD。 可以在 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)下载具有 Windows Server 2016 评估副本的 ISO。
   可以在[创建可启动虚拟硬盘](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10))处找到有关如何从 ISO 映像创建 VHD 的说明。
 - 已启用 Hyper-V 的主计算机。 有关信息，请参阅 [Hyper-V 概述](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))。
 

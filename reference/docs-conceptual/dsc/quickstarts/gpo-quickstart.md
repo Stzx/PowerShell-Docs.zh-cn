@@ -2,12 +2,12 @@
 ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,配置,安装程序
 title: 快速入门 - 将组策略转换为 DSC
-ms.openlocfilehash: a9ce9cecd71fe00d2908024a3ee474ec836af3ba
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 852710f261ea1d57228c05d4093c1d78584e0ca5
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808242"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236231"
 ---
 # <a name="quickstart-convert-group-policy-into-dsc"></a>快速入门：将组策略转换为 DSC
 
@@ -23,7 +23,7 @@ ms.locfileid: "83808242"
 
 上面列出的 cmdlet 将基线转换为 DSC `.mof` 文件。 还可选择输出能编辑和重新编译的配置脚本 (`.ps1`)。 cmdlet 会检测缺少资源或资源块重复的编译错误。 注释掉可能导致编译错误的资源块。
 
-以下示例将 [Microsoft 安全基线](https://www.microsoft.com/en-us/download/details.aspx?id=55319)转换为 DSC 配置脚本 (`.ps1`) 和 `.mof` 文件。
+以下示例将 [Microsoft 安全基线](https://www.microsoft.com/download/details.aspx?id=55319)转换为 DSC 配置脚本 (`.ps1`) 和 `.mof` 文件。
 
 ```powershell
 Install-Module BaselineManagement

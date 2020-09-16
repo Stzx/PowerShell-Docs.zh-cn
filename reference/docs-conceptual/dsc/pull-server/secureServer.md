@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 请求服务器最佳做法
-ms.openlocfilehash: 2d707dc64c327cf30d09104aee140e5b78ee7c29
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 7b717e9e3bd753ef287701f3e2406e3fde1e2542
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692248"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236248"
 ---
 # <a name="pull-server-best-practices"></a>请求服务器最佳做法
 
@@ -64,7 +64,7 @@ Windows PowerShell 为所需状态配置提供了一组语言扩展，可以用�
 ### <a name="wmf"></a>WMF
 
 Windows Server 2012 R2 包括一种名为 DSC 服务的功能。 DSC 服务功能提供请求服务器功能，包括支持 OData 终结点的二进制文件。 WMF 包含在 Windows Server 中，在各个 Windows Server 版本之间进行敏捷更新。
-[新版 WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=54616) 可能包含对 DSC 服务功能的更新。 因此，最佳做法是下载最新版本的 WMF 并查看发行说明以确定该版本是否包含对 DSC 服务功能的更新。 还应查看指示更新或方案的设计状态是列为稳定还是试验性的发行说明部分。 若要允许实现敏捷发行周期，各个功能可以声明为稳定，这指示功能已准备就绪，可以在生产环境中使用（即使 WMF 是以预览版发行）。 历史上一直通过 WMF 版本进行更新的其他功能（请参阅 WMF 发行说明以了解进一步详细信息）：
+[新版 WMF 5.0](https://www.microsoft.com/download/details.aspx?id=54616) 可能包含对 DSC 服务功能的更新。 因此，最佳做法是下载最新版本的 WMF 并查看发行说明以确定该版本是否包含对 DSC 服务功能的更新。 还应查看指示更新或方案的设计状态是列为稳定还是试验性的发行说明部分。 若要允许实现敏捷发行周期，各个功能可以声明为稳定，这指示功能已准备就绪，可以在生产环境中使用（即使 WMF 是以预览版发行）。 历史上一直通过 WMF 版本进行更新的其他功能（请参阅 WMF 发行说明以了解进一步详细信息）：
 
 - Windows PowerShell Windows PowerShell 集成脚本
 - 环境 (ISE) Windows PowerShell Web 服务（Management OData
