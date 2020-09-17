@@ -73,6 +73,8 @@
           href: learn/deep-dives/everything-about-null.md
         - name: 关于 ShouldProcess 的各项须知内容
           href: learn/deep-dives/everything-about-shouldprocess.md
+        - name: 多线程处理时的写入进度
+          href: learn/deep-dives/write-progress-across-multiple-threads.md
     - name: PowerShell 远程处理
       items:
         - name: Just Enough Administration (JEA)
@@ -225,7 +227,7 @@
               href: windows-powershell/wmf/whats-new/bugfixes.md
             - name: 新的和更新的 cmdlet
               href: windows-powershell/wmf/whats-new/new-updated-cmdlets.md
-            - name: 使用 PowerShell 类创建自定义类型
+            - name: PowerShell 5.0 中的新语言功能
               href: windows-powershell/wmf/whats-new/class-overview.md
             - name: WMF 5.1 中的控制台改进
               href: windows-powershell/wmf/whats-new/console-improvements.md
@@ -358,7 +360,7 @@
               href: dsc/resources/authoringResourceClass.md
             - name: 在 PowerShell 中编写复合资源
               href: dsc/resources/authoringResourceComposite.md
-            - name: '在 C# 中编写基于 MOF 的资源'
+            - name: 在 C# 中编写基于 MOF 的资源
               href: dsc/resources/authoringResourceMofCS.md
             - name: 使用资源设计器工具
               href: dsc/resources/authoringResourceMofDesigner.md
@@ -562,6 +564,8 @@
       href: community/hall-of-fame.md
     - name: Docs 中的新增内容
       items:
+        - name: 2020-Q3
+          href: community/2020-Q3.md
         - name: 2020-Q2
           href: community/2020-Q2.md
         - name: 2020-Q1
@@ -626,7 +630,7 @@
           href: samples/managing-processes-with-process-cmdlets.md
         - name: 管理服务
           href: samples/managing-services.md
-        - name: 管理 Windows PowerShell 驱动器
+        - name: 管理 PowerShell 驱动器
           href: samples/managing-windows-powershell-drives.md
         - name: 使用打印机
           href: samples/working-with-printers.md
@@ -782,8 +786,14 @@
           href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: 编写可移植模块
       href: dev-cross-plat/writing-portable-modules.md
+    - name: 使用 PlatyPS 创建模块帮助
+      href: dev-cross-plat/create-help-using-platyps.md
     - name: 如何创建标准库二进制模块
       href: dev-cross-plat/create-standard-library-binary-module.md
+    - name: 为 .NET 项目选择正确的 NuGet 包
+      href: dev-cross-plat/choosing-the-right-nuget-package.md
+    - name: 解决模块程序集依赖项冲突
+      href: dev-cross-plat/resolving-dependency-conflicts.md
     - name: 旧版 PowerShell SDK
       items:
         - name: 概述
@@ -794,11 +804,11 @@
           href: developer/windows-powershell-reference.md
         - name: 新增功能
           href: developer/windows-powershell-reference-whats-new.md
-        - name: 编写 Windows PowerShell Cmdlet
+        - name: 写入 PowerShell Cmdlet
           items:
             - name: Cmdlet 概述
               href: developer/cmdlet/cmdlet-overview.md
-            - name: Windows PowerShell Cmdlet 概念
+            - name: PowerShell Cmdlet 概念
               href: developer/cmdlet/windows-powershell-cmdlet-concepts.md
               items:
                 - name: Cmdlet 开发指南
@@ -812,7 +822,7 @@
                       href: developer/cmdlet/advisory-development-guidelines.md
                 - name: Cmdlet 类声明
                   href: developer/cmdlet/cmdlet-class-declaration.md
-                - name: Windows PowerShell 命令的已批准谓词
+                - name: PowerShell 命令的已批准谓词
                   href: developer/cmdlet/approved-verbs-for-windows-powershell-commands.md
                 - name: Cmdlet 输入处理方法
                   href: developer/cmdlet/cmdlet-input-processing-methods.md
@@ -910,7 +920,7 @@
                       href: developer/cmdlet/users-requesting-confirmation.md
                     - name: 确认消息
                       href: developer/cmdlet/confirmation-messages.md
-                - name: Windows PowerShell 错误报告
+                - name: PowerShell 错误报告
                   href: developer/cmdlet/windows-powershell-error-reporting.md
                   items:
                     - name: 错误报告概念
@@ -921,7 +931,7 @@
                       href: developer/cmdlet/non-terminating-errors.md
                     - name: 显示错误信息
                       href: developer/cmdlet/displaying-error-information.md
-                    - name: Windows PowerShell 错误记录
+                    - name: PowerShell 错误记录
                       href: developer/cmdlet/windows-powershell-error-records.md
                     - name: 解释 ErrorRecord 对象
                       href: developer/cmdlet/interpreting-errorrecord-objects.md
@@ -931,7 +941,7 @@
                   href: developer/cmdlet/invoking-cmdlets-and-scripts-within-a-cmdlet.md
                 - name: Cmdlet 集
                   href: developer/cmdlet/cmdlet-sets.md
-                - name: Windows PowerShell 会话状态
+                - name: PowerShell 会话状态
                   href: developer/cmdlet/windows-powershell-session-state.md
             - name: Cmdlet 代码示例
               href: developer/cmdlet/examples-of-cmdlet-code.md
@@ -1022,11 +1032,11 @@
                   href: developer/cmdlet/stopprocesssample04-sample.md
                 - name: Events01 示例
                   href: developer/cmdlet/events01-sample.md
-        - name: 编写 Windows PowerShell 模块
+        - name: 写入 PowerShell 模块
           items:
             - name: 概述
               href: developer/module/writing-a-windows-powershell-module.md
-            - name: 了解 Windows PowerShell 模块
+            - name: 理解 PowerShell 模块
               href: developer/module/understanding-a-windows-powershell-module.md
             - name: 如何编写 PowerShell 脚本模块
               href: developer/module/how-to-write-a-powershell-script-module.md
@@ -1050,17 +1060,17 @@
                   items:
                     - name: 概述
                       href: developer/module/how-to-create-a-windows-powershell-snap-in.md
-                    - name: 编写 Windows PowerShell 管理单元
+                    - name: 写入 PowerShell 管理单元
                       href: developer/module/writing-a-windows-powershell-snap-in.md
-                    - name: 编写自定义 Windows PowerShell 管理单元
+                    - name: 写入自定义 PowerShell 管理单元
                       href: developer/module/writing-a-custom-windows-powershell-snap-in.md
             - name: 导入 PowerShell 模块
               href: developer/module/importing-a-powershell-module.md
-        - name: 编写 Windows PowerShell 提供程序
+        - name: 写入 PowerShell 提供程序
           items:
-            - name: Windows PowerShell 提供程序快速入门
+            - name: PowerShell 提供程序快速入门
               href: developer/provider/windows-powershell-provider-quickstart.md
-            - name: Windows PowerShell 提供程序概述
+            - name: PowerShell 提供程序概述
               href: developer/provider/windows-powershell-provider-overview.md
               items:
                 - name: 提供程序类型
@@ -1092,9 +1102,9 @@
                   href: developer/provider/accessdbprovidersample05.md
                 - name: AccessDBProviderSample06
                   href: developer/provider/accessdbprovidersample06.md
-        - name: 编写 Windows PowerShell 主机应用程序
+        - name: 编写 PowerShell 主机应用程序
           items:
-            - name: Windows PowerShell 主机快速入门
+            - name: PowerShell 主机快速入门
               href: developer/hosting/windows-powershell-host-quickstart.md
             - name: 创建运行空间
               href: developer/hosting/creating-runspaces.md
@@ -1114,12 +1124,12 @@
             - name: 主机应用程序示例
               href: developer/hosting/host-application-samples.md
               items:
-                - name: Windows PowerShell API 示例
+                - name: PowerShell API 示例
                   href: developer/hosting/windows-powershell-api-samples.md
                   items:
-                    - name: Windows PowerShell01 示例
+                    - name: PowerShell01 示例
                       href: developer/hosting/windows-powershell01-sample.md
-                    - name: Windows PowerShell02 示例
+                    - name: PowerShell02 示例
                       href: developer/hosting/windows-powershell02-sample.md
                 - name: 自定义主机示例
                   href: developer/hosting/custom-host-samples.md
@@ -1633,7 +1643,7 @@
                   href: developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
                 - name: WrapTables Element (Format)
                   href: developer/format/wraptables-element-format.md
-        - name: 编写针对 Windows PowerShell 的帮助
+        - name: 编写针对 PowerShell 的帮助
           items:
             - name: 概述
               href: developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
@@ -1655,7 +1665,7 @@
                   href: developer/help/examples-of-comment-based-help.md
             - name: 编写针对命令的基于 XML 的帮助主题
               items:
-                - name: 编写针对 Windows PowerShell Cmdlet 的帮助
+                - name: 编写针对 PowerShell Cmdlet 的帮助
                   items:
                     - name: 概述
                       href: developer/help/writing-help-for-windows-powershell-cmdlets.md
@@ -1679,9 +1689,10 @@
                       href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
                     - name: 如何向 Cmdlet 帮助主题添加相关链接
                       href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
-                - name: 编写针对 Windows PowerShell 模块的帮助
-                  href: developer/module/writing-help-for-windows-powershell-modules.md
+                - name: 编写针对 PowerShell 模块的帮助
                   items:
+                    - name: 概述
+                      href: developer/help/writing-help-for-windows-powershell-modules.md
                     - name: 命名帮助文件
                       href: developer/help/naming-help-files.md
                     - name: 支持可更新帮助
@@ -1719,93 +1730,55 @@
                               href: developer/help/how-to-test-updatable-help.md
                         - name: 支持联机帮助
                           href: developer/help/supporting-online-help.md
-                - name: 编写针对 Windows PowerShell 提供程序的帮助
+                - name: 编写针对 PowerShell 提供程序的帮助
                   items:
                     - name: 如何向提供程序帮助主题添加动态参数
                       href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
                     - name: 如何向提供程序帮助主题添加“另请参阅”部分
                       href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
-        - name: 创建管理 OData Web 服务
+        - name: 扩展的类型系统 (ETS)
           items:
-            - name: 概述
-              href: developer/webservices/creating-a-management-odata-web-service.md
-            - name: 向管理 OData Web 服务添加资源
-              href: developer/webservices/adding-resources-to-a-management-odata-web-service.md
-            - name: 实现管理 OData Web 服务的自定义授权
-              items:
-                - name: 概述
-                  href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
-                - name: 配置基于角色的授权
-                  href: developer/webservices/configuring-role-based-authorization.md
-                - name: 基于角色的授权配置架构
-                  href: developer/webservices/role-based-authorization-configuration-schema.md
-                - name: 通过管理 OData Web 服务调用 Windows PowerShell cmdlet
-                  href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
-            - name: 实现管理 OData Web 服务的会话配置
-              href: developer/webservices/implementing-sessionconfiguration-for-a-management-odata-web-service.md
-            - name: 创作管理 OData Web 服务的 MOF 架构文件
-              href: developer/webservices/authoring-the-mof-schema-file-for-a-management-odata-web-service.md
-            - name: 创作管理 OData Web 服务的 XML 架构文件
-              href: developer/webservices/authoring-the-xml-schema-file-for-a-management-odata-web-service.md
-            - name: 创作管理 OData Web 服务的 Web.config 架构文件
-              href: developer/webservices/authoring-the-web-config-file-for-a-management-odata-web-service.md
-            - name: 部署管理 OData Web 服务
-              href: developer/webservices/deploying-a-management-odata-web-service.md
-            - name: 关联管理 OData 实体
-              href: developer/webservices/associating-management-odata-entities.md
-            - name: 管理 OData IIS 扩展架构文件
-              items:
-                - name: 概述
-                  href: developer/webservices/management-odata-iis-extension-schema-files.md
-                - name: 资源映射架构
-                  href: developer/webservices/resource-mapping-schema.md
-                - name: 公共资源架构
-                  href: developer/webservices/public-resource-schema.md
-        - name: 编写 Windows PowerShell 工作流
-          items:
-            - name: 概述
-              href: developer/workflow/writing-a-windows-powershell-workflow.md
-            - name: 向 Visual Studio 工具箱添加 Windows PowerShell 活动
-              href: developer/workflow/adding-windows-powershell-activities-to-the-visual-studio-toolbox.md
-            - name: 创建具有 Windows PowerShell 活动的工作流
-              href: developer/workflow/creating-a-workflow-with-windows-powershell-activities.md
-            - name: 使用 Windows PowerShell 脚本创建工作流
-              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
-            - name: 导入并调用 Windows PowerShell 工作流
-              href: developer/workflow/importing-and-invoking-a-windows-powershell-workflow.md
-            - name: 通过 Windows PowerShell Cmdlet 创建工作流活动
-              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
-            - name: 使用 Windows PowerShell API 安排作业
-              href: developer/workflow/scheduling-jobs-with-the-windows-powershell-api.md
-            - name: 常见工作流参数
-              href: developer/workflow/common-workflow-parameters.md
+            - name: ETS 概述
+              href: developer/ets/overview.md
+            - name: ETS 成员
+              href: developer/ets/members.md
+            - name: ETS 成员集
+              href: developer/ets/membersets.md
+            - name: ETS 属性
+              href: developer/ets/properties.md
+            - name: ETS 方法
+              href: developer/ets/methods.md
+            - name: ETS 类型转换器
+              href: developer/ets/typeconverters.md
+            - name: ETS 中的错误和异常
+              href: developer/ets/errors-exceptions.md
         - name: Windows PowerShell 程序员指南
           href: developer/prog-guide/windows-powershell-programmer-s-guide.md
           items:
-            - name: 如何创建 Windows PowerShell 提供程序
+            - name: 如何创建 PowerShell 提供程序
               href: developer/prog-guide/how-to-create-a-windows-powershell-provider.md
               items:
-                - name: 设计 Windows PowerShell 提供程序
+                - name: 设计 PowerShell 提供程序
                   href: developer/prog-guide/designing-your-windows-powershell-provider.md
-                - name: 创建基础 Windows PowerShell 提供程序
+                - name: 创建基础 PowerShell 提供程序
                   href: developer/prog-guide/creating-a-basic-windows-powershell-provider.md
-                - name: 创建 Windows PowerShell 驱动器提供程序
+                - name: 创建 PowerShell 驱动器提供程序
                   href: developer/prog-guide/creating-a-windows-powershell-drive-provider.md
-                - name: 创建 Windows PowerShell 项提供程序
+                - name: 创建 PowerShell 项提供程序
                   href: developer/prog-guide/creating-a-windows-powershell-item-provider.md
-                - name: 创建 Windows PowerShell 容器提供程序
+                - name: 创建 PowerShell 容器提供程序
                   href: developer/prog-guide/creating-a-windows-powershell-container-provider.md
-                - name: 创建 Windows PowerShell 导航提供程序
+                - name: 创建 PowerShell 导航提供程序
                   href: developer/prog-guide/creating-a-windows-powershell-navigation-provider.md
-                - name: 创建 Windows PowerShell 内容提供程序
+                - name: 创建 PowerShell 内容提供程序
                   href: developer/prog-guide/creating-a-windows-powershell-content-provider.md
-                - name: 创建 Windows PowerShell 属性提供程序
+                - name: 创建 PowerShell 属性提供程序
                   href: developer/prog-guide/creating-a-windows-powershell-property-provider.md
             - name: 如何创建控制台 Shell
               href: developer/prog-guide/how-to-create-a-console-shell.md
-            - name: Windows PowerShell 概念
+            - name: PowerShell 概念
               href: developer/prog-guide/windows-powershell-concepts.md
-            - name: Windows PowerShell 示例代码
+            - name: PowerShell 代码示例
               href: developer/prog-guide/windows-powershell-sample-code.md
               items:
                 - name: AccessDbProviderSample01 代码示例
@@ -1823,68 +1796,68 @@
                 - name: GetProc01 代码示例
                   href: developer/prog-guide/getproc01-code-samples.md
                   items:
-                    - name: 'GetProc01 (C#) 示例代码'
+                    - name: GetProc01 (C#) 示例代码
                       href: developer/prog-guide/getproc01-csharp-sample-code.md
                     - name: GetProc01 (VB.NET) 示例代码
                       href: developer/prog-guide/getproc01-vb-net-sample-code.md
                 - name: GetProc02 代码示例
                   href: developer/prog-guide/getproc02-code-samples.md
                   items:
-                    - name: 'GetProc02 (C#) 示例代码'
+                    - name: GetProc02 (C#) 示例代码
                       href: developer/prog-guide/getproc02-csharp-sample-code.md
                     - name: GetProc02 (VB.NET) 示例代码
                       href: developer/prog-guide/getproc02-vb-net-sample-code.md
                 - name: GetProc03 代码示例
                   href: developer/prog-guide/getproc03-code-samples.md
                   items:
-                    - name: 'GetProc03 (C#) 示例代码'
+                    - name: GetProc03 (C#) 示例代码
                       href: developer/prog-guide/getproc03-csharp-sample-code.md
                     - name: GetProc03 (VB.NET) 示例代码
                       href: developer/prog-guide/getproc03-vb-net-sample-code.md
                 - name: GetProc04 代码示例
                   href: developer/prog-guide/getproc04-code-samples.md
                   items:
-                    - name: 'GetProc04 (C#) 示例代码'
+                    - name: GetProc04 (C#) 示例代码
                       href: developer/prog-guide/getproc04-csharp-sample-code.md
                     - name: GetProc04 (VB.NET) 示例代码
                       href: developer/prog-guide/getproc04-vb-net-sample-code.md
                 - name: GetProc05 代码示例
                   href: developer/prog-guide/getproc05-code-samples.md
                   items:
-                    - name: 'GetProc05 (C#) 示例代码'
+                    - name: GetProc05 (C#) 示例代码
                       href: developer/prog-guide/getproc05-csharp-sample-code.md
                     - name: GetProc05 (VB.NET) 示例代码
                       href: developer/prog-guide/getproc05-vb-net-sample-code.md
                 - name: StopProc01 代码示例
                   href: developer/prog-guide/stopproc01-code-samples.md
                   items:
-                    - name: 'StopProc01 (C#) 示例代码'
+                    - name: StopProc01 (C#) 示例代码
                       href: developer/prog-guide/stopproc01-csharp-sample-code.md
                 - name: StopProcessSample04 代码示例
                   href: developer/prog-guide/stopprocesssample04-code-samples.md
                   items:
-                    - name: 'StopProcessSample04 (C#) 代码示例'
+                    - name: StopProcessSample04 (C#) 代码示例
                       href: developer/prog-guide/stopprocesssample04-csharp-sample-code.md
                     - name: StopProcessSample04 (VB.NET) 代码示例
                       href: developer/prog-guide/stopprocesssample04-vb-net-sample-code.md
                 - name: Runspace01 代码示例
                   href: developer/prog-guide/runspace01-code-samples.md
                   items:
-                    - name: 'Runspace01 (C#) 代码示例'
+                    - name: Runspace01 (C#) 代码示例
                       href: developer/prog-guide/runspace01-csharp-code-sample.md
                     - name: Runspace01 (VB.NET) 代码示例
                       href: developer/prog-guide/runspace01-vb-net-code-sample.md
                 - name: Runspace02 代码示例
                   href: developer/prog-guide/runspace02-code-samples.md
                   items:
-                    - name: 'Runspace02 (C#) 代码示例'
+                    - name: Runspace02 (C#) 代码示例
                       href: developer/prog-guide/runspace02-csharp-code-sample.md
                     - name: Runspace02 (VB.NET) 代码示例
                       href: developer/prog-guide/runspace02-vb-net-code-sample.md
                 - name: RunSpace03 代码示例
                   href: developer/prog-guide/runspace03-code-samples.md
                   items:
-                    - name: 'RunSpace03 (C#) 代码示例'
+                    - name: RunSpace03 (C#) 代码示例
                       href: developer/prog-guide/runspace03-csharp-code-sample.md
                     - name: RunSpace03 (VB.NET) 代码示例
                       href: developer/prog-guide/runspace03-vb-net-code-sample.md

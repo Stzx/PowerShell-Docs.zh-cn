@@ -1,13 +1,13 @@
 ---
-ms.date: 04/28/2020
+ms.date: 09/14/2020
 title: 使用 PowerShell 中的实验性功能
 description: 列出了目前可用的实验性功能及其用法。
-ms.openlocfilehash: 72a4309d6eeede4cd2ff7c38ce8e99ce3ace30eb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 74623240bfb19022ae342a5d23e2ed4f455afa45
+ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809183"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574464"
 ---
 # <a name="using-experimental-features-in-powershell"></a>使用 PowerShell 中的实验性功能
 
@@ -24,22 +24,46 @@ PowerShell 中的实验性功能支持提供了一种机制，可便于实验性
 
 本文介绍了可用的实验性功能及其用法。
 
-|                            名称                            |   6.2   |   7.0   | 7.1（预览版） |
-| ---------------------------------------------------------- | :-----: | :-----: | :-----------: |
-| PSTempDrive（PS 7.0 及更高版本中的主要支持）                        | &check; |         |               |
-| PSUseAbbreviationExpansion（PS 7.0 及更高版本中的主要支持）         | &check; |         |               |
-| PSCommandNotFoundSuggestion                                | &check; | &check; |    &check;    |
-| PSImplicitRemotingBatching                                 | &check; | &check; |    &check;    |
-| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; |    &check;    |
-| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; |    &check;    |
-| PSNullConditionalOperators                                 |         | &check; |    &check;    |
-| PSUnixFileStat（仅限非 Windows）                          |         | &check; |    &check;    |
-| PSNativePSPathResolution                                   |         |         |    &check;    |
-| PSCultureInvariantReplaceOperator                          |         |         |    &check;    |
+|                            名称                            |   6.2   |   7.0   |   7.1   |
+| ---------------------------------------------------------- | :-----: | :-----: | :-----: |
+| PSTempDrive（PS 7.0 及更高版本中的主要支持）                        | &check; |         |         |
+| PSUseAbbreviationExpansion（PS 7.0 及更高版本中的主要支持）         | &check; |         |         |
+| PSCommandNotFoundSuggestion                                | &check; | &check; | &check; |
+| PSImplicitRemotingBatching                                 | &check; | &check; | &check; |
+| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; | &check; |
+| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
+| PSNullConditionalOperators（PS 7.1 及更高版本中的主要支持）         |         | &check; |         |
+| PSUnixFileStat（仅限非 Windows）                          |         | &check; | &check; |
+| PSNativePSPathResolution（PS 7.1 及更高版本中的主要支持）           |         |         |         |
+| PSCultureInvariantReplaceOperator                          |         |         | &check; |
+| PSNotApplyErrorActionToStderr                              |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
-在 `Debug-Runspace` 和 `Debug-Job` cmdlet 上启用 BreakAll  参数，以允许用户在附加调试器时决定是否要让 PowerShell 在当前位置立即中断。
+在 PowerShell 7.0 中，此实验性功能可在 `Debug-Runspace` 和 `Debug-Job` cmdlet 上启用 BreakAll 参数，以允许用户在附加调试器时决定是否要让 PowerShell 在当前位置立即中断。
+
+在 PowerShell 7.1 中，此实验性功能还可将“运行空间”参数添加到 `*-PSBreakpoint` cmdlet。
+
+- `Disable-PSBreakpoint`
+- `Enable-PSBreakpoint`
+- `Get-PSBreakpoint`
+- `Remove-PSBreakpoint`
+- `Set-PSBreakpoint`
+
+“运行空间”参数会指定一个“运行空间”对象，以便可在指定的运行空间中与断点进行交互。
+
+```powershell
+Start-Job -ScriptBlock {
+    Set-PSBreakpoint -Command Start-Sleep
+    Start-Sleep -Seconds 10
+}
+
+$runspace = Get-Runspace -Id 1
+
+$breakpoint = Get-PSBreakPoint -Runspace $runspace
+```
+
+在此示例中，将启动一个作业，并将一个断点设置为当运行 `Set-PSBreakPoint` 时中断。 运行空间存储在变量中，并通过“运行空间”参数传递到 `Get-PSBreakPoint` 命令。 然后，则可以在 `$breakpoint` 变量中查看断点。
 
 ## <a name="pscommandnotfoundsuggestion"></a>PSCommandNotFoundSuggestion
 
@@ -129,6 +153,17 @@ Milliseconds      : 209
 - 如果路径不是 PSDrive 或 `~`（在 Windows 上），则不会进行路径规范化
 - 如果路径是用单引号引住，则不会进行解析，而是被视为文本
 
+> [!NOTE]
+> 此功能已退出实验性阶段，并已成为 PowerShell 7.1 及更高版本中的主要支持功能。
+
+## <a name="psnotapplyerroractiontostderr"></a>PSNotApplyErrorActionToStderr
+
+启用此实验性功能后，从本机命令重定向的错误记录（例如，使用重定向运算符 (`2>&1`) 时）不会写入到 `$Error` 变量，并且首选项变量 `$ErrorActionPreference` 不会影响重定向的输出。
+
+许多本机命令都会写入到 `stderr`，来将其作为获取额外信息的备用流。 查找错误时，此行为可能会导致混淆，如果将 `$ErrorActionPreference` 设置为静音输出的状态，则用户可能会丢失额外的输出信息。
+
+当本机命令包含非零的退出代码时，`$?` 会设置为 `$false`。 如果退出代码为零，`$?` 会设置为 `$true`。
+
 ## <a name="psnullconditionaloperators"></a>PSNullConditionalOperators
 
 为 Null 条件成员访问运算符引入新的运算符，即 `?.` 和 `?[]`。 Null 成员访问运算符可用于标量类型和数组类型。 如果变量不为 null，则返回被访问成员的值。 如果变量的值为 null，则返回 null。
@@ -150,6 +185,9 @@ ${x}?.MyMethod()
 
 由于 PowerShell 允许 `?` 作为变量名称的一部分，因此如果在使用运算符时变量名称和运算符之间没有空格，必须消除歧义。 为了消除歧义，变量必须在变量名称两边使用 `{}`（如 `${x?}?.propertyName` 或 `${y}?[0]`）。
 
+> [!NOTE]
+> 此功能已退出实验性阶段，并已成为 PowerShell 7.1 及更高版本中的主要支持功能。
+
 ## <a name="pstempdrive"></a>PSTempDrive
 
 创建映射到用户的临时目录路径的 `TEMP:` PSDrive。
@@ -164,7 +202,7 @@ ${x}?.MyMethod()
 `Get-ChildItem` 的输出应如下所示：
 
 ```powershell
-PS> dir | select -first 4 -skip 5
+dir | select -first 4 -skip 5
 
 
     Directory: /Users/jimtru/src/github/forks/JamesWTruher/PowerShell-1

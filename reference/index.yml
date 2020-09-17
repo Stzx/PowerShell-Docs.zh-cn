@@ -9,29 +9,29 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: dfaf084a76d6f1cb37a722956fb8abca5bc8416c
-  ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+  ms.openlocfilehash: 14d9c28093ec91351048819e719ab80d5dd9c501
+  ms.sourcegitcommit: a073c7db07d765ab45f52345ab98c7660582bc98
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/22/2020
-  ms.locfileid: "80500538"
+  ms.lasthandoff: 07/29/2020
+  ms.locfileid: "87377503"
 highlightedContent:
   items:
   - title: 概述
     itemType: get-started
-    url: https://docs.microsoft.com/powershell/scripting/overview
+    url: /powershell/scripting/overview
   - title: 设置和安装
     itemType: download
-    url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell
+    url: /powershell/scripting/install/installing-powershell
   - title: 示例脚本
     itemType: how-to-guide
-    url: https://docs.microsoft.com/powershell/scripting/samples/sample-scripts-for-administration
+    url: /powershell/scripting/samples/sample-scripts-for-administration
   - title: PowerShell 库
     itemType: deploy
     url: https://www.powershellgallery.com/
   - title: PowerShell 模块浏览器
     itemType: reference
-    url: https://docs.microsoft.com/powershell/module/
+    url: /powershell/module/
   - title: GitHub 上的 PowerShell
     itemType: architecture
     url: https://github.com/PowerShell/PowerShell
@@ -39,101 +39,101 @@ productDirectory:
   title: PowerShell 版本 + 工具
   summary: 支持 PowerShell 的可用版本、工具和技术
   items:
-  - title: PowerShell 5.1
-    imageSrc: ./media/index/powershell_128.svg
-    links:
-    - url: https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell
-      text: 安装 Windows PowerShell
-    - url: https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-windows-powershell-50
-      text: PowerShell Core 5.x 中的新增功能
-  - title: PowerShell Core
+  - title: PowerShell
     imageSrc: ./media/index/ps_black_128.svg
     links:
-    - url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows
-      text: 在 Windows 上安装 PowerShell Core
-    - url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux
-      text: 在 Linux 上安装 PowerShell Core
-    - url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos
-      text: 在 macOS 上安装 PowerShell Core
-    - url: https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-62
-      text: PowerShell 6.2 中的新增功能
+    - url: /powershell/scripting/install/installing-powershell-core-on-windows
+      text: 在 Windows 上安装 PowerShell
+    - url: /powershell/scripting/install/installing-powershell-core-on-linux
+      text: 在 Linux 上安装 PowerShell
+    - url: /powershell/scripting/install/installing-powershell-core-on-macos
+      text: 在 macOS 上安装 PowerShell
+    - url: /powershell/scripting/whats-new/what-s-new-in-powershell-70
+      text: PowerShell 7.0 中的新增功能
+  - title: Windows PowerShell 5.1
+    imageSrc: ./media/index/powershell_128.svg
+    links:
+    - url: /powershell/scripting/windows-powershell/install/installing-windows-powershell
+      text: 安装 Windows PowerShell
+    - url: /powershell/scripting/windows-powershell/whats-new/what-s-new-in-windows-powershell-50
+      text: Windows PowerShell 5.x 中的新增功能
   - title: PowerShell 库
     imageSrc: ./media/index/avatar_128.svg
     links:
     - url: https://www.powershellgallery.com/
       text: PowerShell 库
-    - url: https://docs.microsoft.com/powershell/scripting/gallery/overview
+    - url: /powershell/scripting/gallery/overview
       text: PowerShell 库是什么
-    - url: https://docs.microsoft.com/powershell/scripting/gallery/concepts/publishing-guidelines
-      text: 最佳做法
-    - url: https://docs.microsoft.com/powershell/scripting/gallery/faqs
+    - url: /powershell/scripting/gallery/concepts/publishing-guidelines
+      text: 最佳实践
+    - url: /powershell/scripting/gallery/faqs
       text: 常见问题解答
   - title: PowerShell DSC
-    imageSrc: https://docs.microsoft.com/media/common/i_config-tools.svg
+    imageSrc: /media/common/i_config-tools.svg
     links:
-    - url: https://docs.microsoft.com/powershell/scripting/dsc/overview/overview
+    - url: /powershell/scripting/dsc/overview/overview
       text: DSC 概述
-    - url: https://docs.microsoft.com/powershell/scripting/dsc/getting-started/lnxgettingstarted
+    - url: /powershell/scripting/dsc/getting-started/lnxgettingstarted
       text: DSC for Linux 入门
     - url: https://dsccommunity.org/
       text: DSC 社区
   - title: 开发人员资源
-    imageSrc: https://docs.microsoft.com/media/common/i_code-edit.svg
+    imageSrc: /media/common/i_code-edit.svg
     links:
-    - url: https://docs.microsoft.com/powershell/scripting/developer/windows-powershell
-      text: PowerShell SDK 文档
-    - url: https://docs.microsoft.com/dotnet/api/?view=pscore-6.2.0
-      text: PowerShell Core SDK 6.2.0 API 参考
     - url: https://code.visualstudio.com/docs/languages/powershell
       text: Visual Studio Code PowerShell 扩展
-    - url: https://docs.microsoft.com/powershell/scripting/components/vscode/using-vscode-for-remote-editing-and-debugging
+    - url: /powershell/scripting/components/vscode/using-vscode-for-remote-editing-and-debugging
       text: 使用 VSCode 进行远程编辑和调试
+    - url: /powershell/scripting/developer/windows-powershell
+      text: Windows PowerShell SDK 文档
+    - url: /dotnet/api/?view=powershellsdk-7.0.0
+      text: PowerShell 7.0.0 API 参考
   - title: 相关技术
-    imageSrc: https://docs.microsoft.com/media/common/i_tools.svg
+    imageSrc: /media/common/i_tools.svg
     links:
-    - url: https://docs.microsoft.com/powershell/scripting/wmf/overview
+    - url: /powershell/scripting/windows-powershell/wmf/overview
       text: Windows Management Framework
-    - url: https://docs.microsoft.com/powershell/windows/get-started?view=win10-ps
+    - url: /powershell/windows/get-started?view=win10-ps
       text: 管理 Windows 的 PowerShell 模块
     - url: https://aka.ms/cloudshell/powershell-docs
       text: Azure Cloud Shell 中的 PowerShell
-    - url: https://docs.microsoft.com/powershell/azure/overview
+    - url: /powershell/azure/overview
       text: Azure PowerShell
-    - url: https://docs.microsoft.com/azure/automation/automation-runbook-types
+    - url: /azure/automation/automation-runbook-types
       text: Azure 自动化 Runbook
-    - url: https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-powershell
+    - url: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-powershell
       text: 使用 PowerShell 的 Azure Functions
 tools:
   title: 社区资源
   summary: 与其他 PowerShell 用户联系
   items:
   - title: 用户组
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group.svg
+    imageSrc: /media/hubs/powershell/i_group.svg
     url: https://aka.ms/psusergroup
   - title: PowerShell 技术社区
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
-    url: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
+    imageSrc: /media/hubs/powershell/i_group-feedback.svg
+    url: https://techcommunity.microsoft.com/t5/powershell/ct-p/WindowsPowerShell
   - title: DSC 社区
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
+    imageSrc: /media/hubs/powershell/i_group-feedback.svg
     url: https://dsccommunity.org/
   - title: PowerShell.org
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
+    imageSrc: /media/hubs/powershell/i_group-feedback.svg
     url: https://powershell.org/
   - title: StackOverFlow
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/logo_stackoverflow.svg
+    imageSrc: /media/hubs/powershell/logo_stackoverflow.svg
     url: https://stackoverflow.com/questions/tagged/powershell
   - title: r/PowerShell
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/logo_reddit.svg
+    imageSrc: /media/hubs/powershell/logo_reddit.svg
     url: https://www.reddit.com/r/PowerShell/
   - title: PowerShell Slack
-    imageSrc: https://docs.microsoft.com/media/logos/logo-slack.svg
-    url: http://poshcode.org/slack
+    imageSrc: /media/logos/logo-slack.svg
+    url: https://aka.ms/psslack
   - title: PowerShell Discord
     imageSrc: ./media/index/discord.svg
-    url: http://poshcode.org/discord
+    url: https://aka.ms/psdiscord
   - title: 数字艺术
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_digital-art.svg
-    url: https://docs.microsoft.com/powershell/scripting/community/digital-art
+    imageSrc: /media/hubs/powershell/i_digital-art.svg
+    url: /powershell/scripting/community/digital-art
 additionalContent:
   sections:
   - title: PowerShell 团队
