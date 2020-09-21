@@ -2,12 +2,12 @@
 title: PowerShell Core 支持生命周期
 description: 用于管理 PowerShell Core 支持的策略
 ms.date: 03/09/2020
-ms.openlocfilehash: e7ec0fd9a702b7d23a784eff6e730fc3a6c30467
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 717fd5c4845835f314eaf7c3617d5123318da2dc
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560723"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236197"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 支持生命周期
 
@@ -97,6 +97,9 @@ PowerShell Core 的版本 6.x 分支（例如 6.0、6.1、6.2 等）大约每六
 |   6.1   | 2019 年 9 月 28 日 |
 |   6.0   | 2019 年 2 月 13 日  |
 
+> [!NOTE]
+> 本文档是关于对 PowerShell Core 6 和 PowerShell 7 的支持。 Windows PowerShell (1.0 - 5.1) 是 Windows OS 的一个组件。 组件获得的支持与其父产品或平台相同。 有关详细信息，请参阅[产品和服务生命周期信息](/lifecycle/products/)
+
 ## <a name="unsupported-platforms"></a>不支持的平台
 
 如果某个平台版本已到达平台所有者定义的生命周期终止日期，PowerShell Core 也会停止支持相应平台版本。 以前发布的包对需要访问的客户仍可用，但将不再提供任何种类的正式支持和更新。
@@ -183,4 +186,4 @@ PowerShell 遵守 [Microsoft 的 Windows 安全服务标准][]。
 [模块兼容性列表]: /powershell/scripting/whats-new/module-compatibility
 [WindowsPSModulePath]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
 [实验性功能]: /powershell/module/microsoft.powershell.core/about/about_powershell_config#experimentalfeatures
-[Microsoft 的 Windows 安全服务标准]: https://www.microsoft.com/en-us/msrc/windows-security-servicing-criteria
+[Microsoft 的 Windows 安全服务标准]: https://www.microsoft.com/msrc/windows-security-servicing-criteria

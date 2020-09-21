@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux 的 Desired State Configuration (DSC) 入门
-ms.openlocfilehash: b1bc9b9fafd89a1af0f967de38a817bff1f3ffe3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 64657dda04fa2df97fa2ad7c7a5c2d15b66a270a
+ms.sourcegitcommit: 4bb44f183dcbfa8dced57f075812e02d3b45fd70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "73933851"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301329"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>适用于 Linux 的 Desired State Configuration (DSC) 入门
 
@@ -23,17 +23,6 @@ ms.locfileid: "73933851"
 - Red Hat Enterprise Linux Server 5、6 和 7 (x86/x64)
 - SUSE Linux Enterprise Server 10、11 和 12 (x86/x64)
 - Ubuntu Server 12.04 LTS、14.04 LTS 和 16.04 LTS (x86/x64)
-
-下表说明了适用于 Linux 的 DSC 所需的程序包依赖项。
-
-|  所需程序包 |  说明 |  最低版本 |
-|---|---|---|
-| glibc| GNU 库| 2…4 – 31.30|
-| Python| Python| 2.4 – 3.4|
-| omiserver| 开放式管理基础结构| 1.0.8.1|
-| openssl| OpenSSL 库| 0.9.8 或 1.0|
-| ctypes| Python CTypes 库| 必须与 Python 版本匹配|
-| libcurl| cURL http 客户端库| 7.15.1|
 
 ## <a name="installing-dsc-for-linux"></a>安装适用于 Linux 的 DSC
 
@@ -129,7 +118,7 @@ $Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Aut
 > 对于“推送”模式，用户凭据必须为 Linux 计算机上的根用户。
 > 适用于 Linux 的 DSC 仅支持 SSL/TLS 连接，使用 `New-CimSession` 时必须将 –UseSSL 参数设置为 $true。
 > 在 `/etc/opt/omi/conf/omiserver.conf` 文件中通过 pemfile 和 keyfile 属性指定（DSC 的）OMI 使用的 SSL 证书。
-> 如果 [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) cmdlet 运行于的 Windows 计算机不信任此证书，你可以通过以下 CIMSession 选项选择忽略证书验证：`-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`。
+> 如果 [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) cmdlet 运行于的 Windows 计算机不信任此证书，你可以通过以下 CIMSession 选项选择忽略证书验证：`-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
 
 运行以下命令以将 DSC 配置推送到 Linux 节点。
 
@@ -183,7 +172,7 @@ $Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Aut
 
 为适用于 Linux 的.DSC 生成了以下日志文件。
 
-|日志文件|目录|说明|
+|日志文件|Directory|说明|
 |---|---|---|
-|omiserver.log |`/var/opt/omi/log`|与 OMI CIM 服务器操作相关的消息。|
-|dsc.log |`/var/opt/omi/log`|与本地配置管理器 (LCM) 操作和 DSC 资源操作相关的消息。|
+|**omiserver.log**|`/var/opt/omi/log`|与 OMI CIM 服务器操作相关的消息。|
+|**dsc.log**|`/var/opt/omi/log`|与本地配置管理器 (LCM) 操作和 DSC 资源操作相关的消息。|

@@ -3,12 +3,12 @@ title: 关于 ShouldProcess 的各项须知内容
 description: ShouldProcess 是一项经常被忽略的重要功能。 借助 WhatIf 和 Confirm 参数，可以将其轻松添加到函数中。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 1d9110302a191b90bd11bdf742f77704a8c9d6f0
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 6bd4dbd5255203f2daf804163aa2a84d992d6697
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149480"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469729"
 ---
 # <a name="everything-you-wanted-to-know-about-shouldprocess"></a>关于 ShouldProcess 的各项须知内容
 
@@ -481,7 +481,7 @@ if ($PSCmdlet.ShouldProcess('TARGET')){
 
 如果有人同时指定了 `-Force` 和 `-WhatIf`，则需优先考虑 `-WhatIf`。 此方法保留了 `-WhatIf` 处理，因为会始终执行 `ShouldProcess`。
 
-不要在含 `ShouldProcess` 的 if 语句中添加 `$Force` 值检查。 这是此特定场景的反模式，尽管这是我在 `ShouldContinue` 的下一部分要讨论的内容。
+请勿在含 `ShouldProcess` 的 `if` 语句中添加 `$Force` 值检查。 这是此特定场景的反模式，尽管这是我在 `ShouldContinue` 的下一部分要讨论的内容。
 
 ### <a name="shouldcontinue--force"></a>ShouldContinue -Force
 

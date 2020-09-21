@@ -2,12 +2,12 @@
 title: 了解 VS Code 和 PowerShell 中的文件编码
 description: 在 VS Code 和 PowerShell 中配置文件编码
 ms.date: 02/28/2019
-ms.openlocfilehash: 1333c5aedd5abd16078ac32979f19f38818a26c8
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: a4b13bcfbe5cffc4e015a37a5fd64fbb8b91f949
+ms.sourcegitcommit: 01a1c253f48b61c943f6d6aca4e603118014015f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809893"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87900006"
 ---
 # <a name="understanding-file-encoding-in-vs-code-and-powershell"></a>了解 VS Code 和 PowerShell 中的文件编码
 
@@ -41,27 +41,27 @@ VS Code 和 PowerShell 都使用合理的默认编码配置进行安装。 但�
 
 ### <a name="how-to-tell-when-you-have-encoding-issues"></a>如何判断出现了编码问题
 
-编码错误通常表现为脚本中的分析错误。 如果在脚本中发现奇怪的字符序列，则这可能是问题所在。 在以下示例中，短划线 (`–`) 显示为字符 `â&euro;"`：
+编码错误通常表现为脚本中的分析错误。 如果在脚本中发现奇怪的字符序列，则这可能是问题所在。 在以下示例中，短划线 (`–`) 显示为字符 `â€"`：
 
 ```Output
 Send-MailMessage : A positional parameter cannot be found that accepts argument 'Testing FuseMail SMTP...'.
 At C:\Users\<User>\<OneDrive>\Development\PowerShell\Scripts\Send-EmailUsingSmtpRelay.ps1:6 char:1
-+ Send-MailMessage â&euro;"From $from â&euro;"To $recipient1 â&euro;"Subject $subject  ...
++ Send-MailMessage â€"From $from â€"To $recipient1 â€"Subject $subject  ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidArgument: (:) [Send-MailMessage], ParameterBindingException
     + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SendMailMessage
 ```
 
-发生此问题的原因是 VS Code 将采用 UTF-8 的字符 `–` 编码为字节 `0xE2 0x80 0x93`。 当这些字节解码为 Windows-1252 时，它们会被解释为字符 `â&euro;"`。
+发生此问题的原因是 VS Code 将采用 UTF-8 的字符 `–` 编码为字节 `0xE2 0x80 0x93`。 当这些字节解码为 Windows-1252 时，它们会被解释为字符 `â€"`。
 
 可能会看到的一些奇怪字符序列包括：
 
 <!-- markdownlint-disable MD038 -->
-- `â&euro;"`（而不是 `–`）
-- `â&euro;"`（而不是 `—`）
+- `â€"`（而不是 `–`）
+- `â€"`（而不是 `—`）
 - `Ã„2`（而不是 `Ä`）
 - `Â`（而不是 ` `（不间断空格））
-- `Ã&copy;`（而不是 `é`）
+- `Ã©`（而不是 `é`）
 <!-- markdownlint-enable MD038 -->
 
 此便捷[参考](https://www.i18nqa.com/debug/utf8-debug.html)列出了指示 UTF-8/Windows-1252 编码问题的常见模式。
@@ -71,8 +71,8 @@ At C:\Users\<User>\<OneDrive>\Development\PowerShell\Scripts\Send-EmailUsingSmtp
 PowerShell 扩展通过多种方式与脚本进行交互：
 
 1. 在 VS Code 中编辑脚本时，内容由 VS Code 发送到扩展。 [语言服务器协议][]要求此内容采用 UTF-8 进行传输。 因此，扩展不可能获取错误的编码。
-2. 当脚本直接在集成控制台中执行时，它们直接由 PowerShell 从文件读取。 如果 PowerShell 的编码与 VS Code 的编码不同，则可能会出错。
-3. 当在 VS Code 中打开的一个脚本引用未在 VS Code 中打开的另一个脚本时，扩展会回退到从文件系统加载该脚本的内容。 PowerShell 扩展默认为 UTF-8 编码，但使用[字节顺序标记][]（或 BOM）检测来选择正确编码。
+1. 当脚本直接在集成控制台中执行时，它们直接由 PowerShell 从文件读取。 如果 PowerShell 的编码与 VS Code 的编码不同，则可能会出错。
+1. 当在 VS Code 中打开的一个脚本引用未在 VS Code 中打开的另一个脚本时，扩展会回退到从文件系统加载该脚本的内容。 PowerShell 扩展默认为 UTF-8 编码，但使用[字节顺序标记][]（或 BOM）检测来选择正确编码。
 
 当采用无 BOM 式格式的编码（如没有 BOM 的 [UTF-8][] 和 [Windows-1252][]）时，会出现问题。 PowerShell 扩展默认为 UTF-8。 扩展无法更改 VS Code 的编码设置。 有关详细信息，请参阅[问题 #824](https://github.com/Microsoft/VSCode/issues/824)。
 
@@ -187,7 +187,7 @@ finally
 - [@mklement0][有关 StackOverflow 上的 PowerShell 编码的解答](https://stackoverflow.com/a/40098904)。
 - [@rkeithhill][有关在 PowerShell 中处理无 BOM 式 UTF-8 输入的博客文章](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/)。
 
-无法强制 PowerShell 使用特定输入编码。 在没有 BOM 时，PowerShell 5.1 及以下版本默认为 Windows-1252 编码。 出于互操作性原因，最好使用具有 BOM 的 Unicode 格式保存脚本。
+无法强制 PowerShell 使用特定输入编码。 如果未提供 BOM，则在 Windows（区域设置为 en-US）上运行的 PowerShell 5.1 及更低版本默认使用 Windows-1252 编码。 其他区域设置可能使用不同的编码。 为了确保互操作性，最好使用具有 BOM 的 Unicode 格式保存脚本。
 
 > [!IMPORTANT]
 > 涉及 PowerShell 脚本的任何其他工具都可能会受到编码选择的影响，或是将脚本重新编码为另一种编码。

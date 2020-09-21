@@ -1,14 +1,14 @@
 ---
 title: 关于数组的各项须知内容
 description: 数组是大多数编程语言的一项基本语言功能。
-ms.date: 05/23/2020
+ms.date: 07/07/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 5cab354a99b122401f8f8119de24e075cf9d21f8
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: e744878844a3cfd32d6124538a44a29ba90798ab
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149600"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092093"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>关于数组的各项须知内容
 
@@ -241,6 +241,8 @@ Lee Dailey 还向我指出，我们可以使用 `$data.GetUpperBound(0)` 获取�
 
 ```powershell
 PS> $data.GetUpperBound(0)
+3
+PS> $data[ $data.GetUpperBound(0) ]
 Three
 ```
 
@@ -586,7 +588,7 @@ True
 
 ### <a name="-in"></a>-in
 
-如果要验证的单个值与几个值中的一个相匹配，则可以使用 `-in` 运算符。 该值位于运算式的左侧，而数组位于右侧。
+如果要验证的单个值与几个值中的一个相匹配，则可以使用 `-in` 运算符。 该值位于运算符的左侧，而数组位于右侧。
 
 ```powershell
 PS> $data = @('red','green','blue')
@@ -850,7 +852,7 @@ $myarray = [System.Collections.ArrayList]::new()
 
 如果数组中的唯一数据是字符串，那么还可以使用 [StringBuilder][]。 它几乎是一样的，但有一些仅用于处理字符串的方法。 `StringBuilder` 专为性能而设计。
 
-人们从数组转向 `ArrayList` 非常常见。 但它来自于 C# 尚未获得广泛支持的时代。 支持泛型 `List[]` 后，`ArrayList` 已过时
+人们从数组转向 `ArrayList` 非常常见。 但它来自于 C# 尚未获得广泛支持的时代。 `ArrayList` 在泛型 `List[]` 获得支持后弃用
 
 ### <a name="generic-list"></a>泛型列表
 
@@ -898,7 +900,7 @@ PS> $myList[-1]
 
 #### <a name="listpsobject"></a>List[PSObject]
 
-你可以使用任何类型的列表，但当你不知道对象的类型时，可以使用 `[List[PSObject]]` 来包含它们。
+你可以使用任何类型的列表，但如果不知道对象的类型，可以使用 `[List[PSObject]]` 来包含它们。
 
 ```powershell
 $list = [List[PSObject]]::new()

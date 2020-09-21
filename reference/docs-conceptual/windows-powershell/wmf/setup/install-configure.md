@@ -1,15 +1,15 @@
 ---
-ms.date: 06/12/2017
+ms.date: 06/10/2020
 ms.topic: conceptual
 keywords: wmf,powershell,安装程序
 contributor: keithb
 title: 安装和配置 WMF 5.1
-ms.openlocfilehash: 241f52be011e1afc87d25c9a934db0c1e0361b76
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 9e0b4b6ed387b0a0d7fcf62a913677986d70de92
+ms.sourcegitcommit: 4a283fe5419f47102e6c1de7060880a934842ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808473"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671387"
 ---
 # <a name="install-and-configure-wmf-51"></a>安装和配置 WMF 5.1
 
@@ -51,18 +51,17 @@ ms.locfileid: "83808473"
 
 - 必须安装最新 Service Pack。
 - **不得**安装 WMF 3.0。 安装 WMF 5.1 来替代 WMF 3.0 会导致 PSModulePath (`$env:PSModulePath`) 丢失，进而可能会导致其他应用无法正常运行。 安装 WMF 5.1 前，要么必须先卸载 WMF 3.0，要么必须先保存 PSModulePath，然后在 WMF 5.1 安装完成后进行手动还原。
-- WMF 5.1 中至少需要[.NET Framework 4.5.2](https://www.microsoft.com/download/details.aspx?id=42642)。
-  可按照下载位置的说明安装 Microsoft .NET Framework 4.5.2。
+- WMF 5.1 中至少需要[.NET Framework 4.5.2](https://www.microsoft.com/download/details.aspx?id=42642)。 可按照下载位置的说明安装 Microsoft .NET Framework 4.5.2。
 
 ### <a name="installing-wmf-51-on-windows-server-2008-r2-and-windows-7"></a>在 Windows Server 2008 R2 和 Windows 7 上安装 WMF 5.1
 
 1. 转到在其中下载了 ZIP 文件的文件夹。
 
-2. 右键单击 ZIP 文件，然后选择“全部提取...”。ZIP 文件包含两个文件：MSU 和 `Install-WMF5.1.ps1` 脚本文件。 解压缩 ZIP 文件后，便可以将内容复制到运行 Windows 7 或 Windows Server 2008 R2 的任何一台计算机上。
+1. 右键单击 ZIP 文件，然后选择“全部提取...”。ZIP 文件包含两个文件：MSU 和 `Install-WMF5.1.ps1` 脚本文件。 解压缩 ZIP 文件后，便可以将内容复制到运行 Windows 7 或 Windows Server 2008 R2 的任何一台计算机上。
 
-3. 提取 ZIP 文件内容后，以管理员身份打开 PowerShell，然后导航到包含 ZIP 文件内容的文件夹。
+1. 提取 ZIP 文件内容后，以管理员身份打开 PowerShell，然后导航到包含 ZIP 文件内容的文件夹。
 
-4. 在此文件夹中运行 `Install-WMF5.1.ps1` 脚本，然后按说明操作。 此脚本会在本地计算机上检查系统必备，如果系统必备已满足，则会安装 WMF 5.1。 下文中列出了系统必备。
+1. 在此文件夹中运行 `Install-WMF5.1.ps1` 脚本，然后按说明操作。 此脚本会在本地计算机上检查系统必备，如果系统必备已满足，则会安装 WMF 5.1。 下文中列出了系统必备。
 
    `Install-WMF5.1.ps1` 采用以下参数，以简化在 Windows Server 2008 R2 和 Windows 7 上自动执行安装：
 
@@ -78,16 +77,16 @@ Windows PowerShell Desired State Configuration (DSC) 依赖 WinRM。 在 Windows
 ### <a name="install-from-windows-file-explorer"></a>从 Windows 文件资源管理器安装
 
 1. 导航到在其中下载了 MSU 文件的文件夹。
-2. 双击 MSU 以运行它。
+1. 双击 MSU 以运行它。
 
 ### <a name="installing-from-the-command-prompt"></a>通过命令提示符进行安装
 
 1. 下载适用于计算机体系结构的正确程序包后，使用提升的用户权限（以管理员身份运行）打开“命令提示符”窗口。 在 Windows Server 2012 R2、Windows Server 2012 或 Windows Server 2008 R2 SP1 的服务器核心安装选项上，命令提示符默认使用提升的用户权限打开。
-2. 将目录更改为向其中下载或复制 WMF 5.1 安装包的文件夹。
-3. 运行下列命令之一：
-   - 在运行 Windows Server 2012 R2 或 Windows 8.1 x64 的计算机上，运行 `Win8.1AndW2K12R2-KB3191564-x64.msu /quiet`。
-   - 在运行 Windows Server 2012 的计算机上，运行 `W2K12-KB3191565-x64.msu /quiet`。
-   - 在运行 Windows 8.1 x86 的计算机上，运行 `Win8.1-KB3191564-x86.msu /quiet`。
+1. 将目录更改为向其中下载或复制 WMF 5.1 安装包的文件夹。
+1. 运行下列命令之一：
+   - 在运行 Windows Server 2012 R2 或 Windows 8.1 x64 的计算机上，运行 `Win8.1AndW2K12R2-KB3191564-x64.msu /quiet /norestart`。
+   - 在运行 Windows Server 2012 的计算机上，运行 `W2K12-KB3191565-x64.msu /quiet /norestart`。
+   - 在运行 Windows 8.1 x86 的计算机上，运行 `Win8.1-KB3191564-x86.msu /quiet /norestart`。
 
-> [!NOTE]
-> 安装 WMF 5.1 需要重新启动。 使用 `/quiet` 选项将重新启动系统而不发出警告。 使用 `/norestart` 选项可避免重新启动。 但是，要重新启动才会安装 WMF 5.1。
+   > [!NOTE]
+   > 安装 WMF 5.1 需要重新启动。 单独使用 `/quiet` 选项将重新启动系统而不发出警告。 使用 `/norestart` 选项可避免重新启动。 但是，要重新启动才会安装 WMF 5.1。

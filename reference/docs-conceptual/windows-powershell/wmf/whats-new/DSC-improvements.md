@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,安装程序
 title: WMF 5.1 中的 DSC 改进
-ms.openlocfilehash: 78c15f453977384ba437b0bd69cd620eb1a29fbd
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 445d0f7bb54c6b21b6af26c4174f3d6422caf6dd
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809093"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771543"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>WMF 5.1 中的 Desired State Configuration (DSC) 改进
 
@@ -80,7 +80,7 @@ ms.locfileid: "83809093"
 
 - 生成的 MOF 文件中嵌入的“ConfigurationName”。
 
-  ![生成的 mof 文件示例](media/DSC-improvements/PartialGeneratedMof.png)
+  ![生成的 MOF 文件示例](media/DSC-improvements/PartialGeneratedMof.png)
 
 - 拉取配置存储库中的文件名
 
@@ -345,12 +345,12 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
   Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
   ```
 
-  ![ErrorUnsignedMofPushed](media/DSC-improvements/PushUnsignedMof.png)
+  ![错误 - 推送了未签名的 MOF 文件](media/DSC-improvements/PushUnsignedMof.png)
 
 - 使用代码签名证书对配置文件进行签名。
 
-  ![SignMofFile](media/DSC-improvements/SignMofFile.png)
+  ![对 MOF 文件进行签名](media/DSC-improvements/SignMofFile.png)
 
 - 请尝试推送已签名的 MOF 文件。
 
-  ![PushSignedMofFile](media/DSC-improvements/PushSignedMof.png)
+  ![推送已签名的 MOF 文件](media/DSC-improvements/PushSignedMof.png)

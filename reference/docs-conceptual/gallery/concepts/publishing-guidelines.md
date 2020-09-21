@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: 库,powershell,cmdlet,psgallery
 description: 面向发行者的指南
 title: PowerShell 库发布指南和最佳做法
-ms.openlocfilehash: 5ee33ba12475f9d3e5ceb3b31f37d9f2acc19d9e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c58b23b0021e0745ee690a78f7e42c821d59cdb0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500600"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777853"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 库发布指南和最佳做法
 
@@ -127,8 +127,8 @@ PowerShell 模块采用文件夹结构，可以随包添加多个文件夹和文
 - Linux：与 Linux 操作系统兼容的包
 - MacOS：与 Mac 操作系统兼容的包
 
-使用兼容平台标记包之后，该包将包含在搜索结果左窗格上的“库”搜索筛选器中。 如果在 GitHub 上托管包，则在标记包时，还可以充分利用 [PowerShell 库兼容性护盾](https://img.shields.io/powershellgallery/p/:packageName.svg)
-![兼容性护盾](media/publishing-guidelines/CosmosDB.svg)。
+使用兼容平台标记包之后，该包将包含在搜索结果左窗格上的“库”搜索筛选器中。 如果在 GitHub 上托管包，则在标记包时，还可以充分利用 [PowerShell 库兼容性保护程序](https://img.shields.io/powershellgallery/p/:packageName.svg)
+![兼容性保护程序示例](media/publishing-guidelines/CosmosDB.svg)。
 
 ## <a name="include-tests"></a>添加测试
 

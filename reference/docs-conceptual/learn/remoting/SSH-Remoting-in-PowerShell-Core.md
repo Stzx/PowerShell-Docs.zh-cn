@@ -1,13 +1,13 @@
 ---
 title: 通过 SSH 进行 PowerShell 远程处理
 description: 在 PowerShell Core 中使用 SSH 进行远程处理
-ms.date: 09/30/2019
-ms.openlocfilehash: 9fe3e22c54a4695a1027f416acf113f2f7fd2cd7
-ms.sourcegitcommit: 7c7f8bb9afdc592d07bf7ff4179d000a48716f13
+ms.date: 07/23/2020
+ms.openlocfilehash: cc65db481fcedcafec16093dbf7e6af4975c73db
+ms.sourcegitcommit: 9dddf1d2e91ebcd347fcfb7bf6ef670d49a12ab7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82174121"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87133463"
 ---
 # <a name="powershell-remoting-over-ssh"></a>通过 SSH 进行 PowerShell 远程处理
 
@@ -25,7 +25,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-若要创建远程会话，请使用 `HostName` 参数指定目标计算机并通过 `UserName` 提供用户名。 当以交互方式运行 cmdlet 时，系统会提示输入密码。 还可以通过带有 `KeyFilePath` 参数的私钥文件来使用 SSH 密钥身份验证。
+若要创建远程会话，请使用 HostName 参数指定目标计算机，并通过 UserName 提供用户名 。 当以交互方式运行 cmdlet 时，系统会提示输入密码。 还可以采用包含 KeyFilePath 参数的私钥文件来使用 SSH 密钥身份验证。
 
 ## <a name="general-setup-information"></a>常规安装信息
 
@@ -64,7 +64,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    创建托管远程计算机上的 PowerShell 进程的 SSH 子系统：
 
    ```
-   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -122,7 +122,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    添加 PowerShell 子系统条目：
 
    ```
-   Subsystem powershell /usr/bin/pwsh -sshs -NoLogo -NoProfile
+   Subsystem powershell /usr/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -168,7 +168,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    添加 PowerShell 子系统条目：
 
    ```
-   Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
+   Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -191,12 +191,14 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
 
 通过 SSH 进行 PowerShell 远程处理依赖于 SSH 客户端和 SSH 服务之间的身份验证交换，并且本身不实现任何身份验证方案。 这使得任何配置的身份验证方案（包括多重身份验证）都由 SSH 处理，并且独立于 PowerShell。 例如，可以将 SSH 服务配置为需要公钥身份验证以及一次性密码，从而增加安全性。 多重身份验证的配置不在本文档的讨论范围。 若要了解如何正确配置多重身份验证，请参阅相关的 SSH 文档，并在尝试将其用于 PowerShell 远程处理之前先在 PowerShell 之外验证它的运行效果。
 
+> [!NOTE]
+> 用户在远程会话中具有相同的权限。 这意味着，管理员有权访问提升的 shell，而普通用户将无法访问。
+
 ## <a name="powershell-remoting-example"></a>PowerShell 远程处理示例
 
 测试远程处理最简单的方法是在单个计算机上进行测试。 在本示例中，我们创建返回到同一 Linux 计算机上的远程会话。 我们交互式使用 PowerShell cmdlet，这样我们可看到 SSH 提示我们验证主机计算机并要求提供密码。 可以在 Windows 计算机上执行相同的操作以确保远程处理正常工作。 然后，通过更改主机名在计算机之间进行远程处理。
 
 ```powershell
-#
 # Linux to Linux
 #
 $session = New-PSSession -HostName UbuntuVM1 -UserName TestUser
@@ -249,7 +251,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName           
 Enter-PSSession -HostName WinVM1 -UserName PTestName
 ```
 
-```Output
+```
 PTestName@WinVM1s password:
 ```
 
@@ -318,9 +320,13 @@ GitCommitId                    v6.0.0-alpha.17
 [WinVM2]: PS C:\Users\PSRemoteUser\Documents>
 ```
 
-### <a name="known-issues"></a>已知问题
+### <a name="limitations"></a>限制
 
-**sudo** 命令对 Linux 计算机上的远程会话不起作用。
+- **sudo** 命令对 Linux 计算机上的远程会话不起作用。
+
+- 通过 SSH 进行 PowerShell 远程处理不支持配置文件，并且无法访问 `$PROFILE`。 进入会话后，可以通过完整文件路径并使用点来获取配置文件来源，以加载该配置文件。 这与 SSH 配置文件无关。 可以将 SSH 服务器配置为使用 PowerShell 作为默认 shell，并通过 SSH 加载配置文件。 有关详细信息，请参阅 SSH 文档。
+
+- 在 PowerShell 7.1 之前，通过 SSH 进行远程处理不支持第二个跃点的远程会话。 此功能仅限于使用 WinRM 的会话。 PowerShell 7.1 允许 `Enter-PSSession` 和 `Enter-PSHostProcess` 在任何交互式远程会话中工作。
 
 ## <a name="see-also"></a>另请参阅
 

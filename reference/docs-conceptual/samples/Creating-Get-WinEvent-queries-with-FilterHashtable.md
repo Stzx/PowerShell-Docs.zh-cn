@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: 使用 FilterHashtable 创建 Get-WinEvent 查询
-ms.openlocfilehash: 485b0cf05489d9add201c71c01fe2ed0c48db387
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 002d84515368663e0e807f48ffe883bd533be1d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563935"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786639"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>使用 FilterHashtable 创建 Get-WinEvent 查询
 
@@ -97,7 +97,7 @@ Get-WinEvent -FilterHashtable @{
 
 继续使用 ProviderName 键生成哈希表。 ProviderName 是在“Windows 事件查看器”的“源”字段中显示的名称。   例如，下面的屏幕截图中的“.NET 运行时”：
 
-![“Windows 事件查看器”源的图片。](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
+![“Windows 事件查看器”源的图片](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
 更新哈希表，并包含键为 ProviderName、值为“.NET 运行时”的键值对  。
 
@@ -127,7 +127,7 @@ Keywords 是哈希表中的下一个键。 Keywords 数据类型是一个包含�
 打开“Windows 事件查看器”，从“操作”窗格单击“筛选当前日志”。  
 “关键字”下拉菜单将显示可用的关键字，如下面的屏幕截图所示：
 
-![“Windows 事件查看器”关键字的图片。](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
+![“Windows 事件查看器”关键字的图片](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
 
 使用下面的命令显示 `StandardEventKeywords` 属性名称。
 

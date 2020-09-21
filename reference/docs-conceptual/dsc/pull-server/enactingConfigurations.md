@@ -2,12 +2,12 @@
 ms.date: 10/16/2017
 keywords: dsc,powershell,配置,安装程序
 title: 执行配置
-ms.openlocfilehash: 3bbe90c7cf09a7e236f6dd14f731ae306f497a0d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1437521471d95fd80dc6a6cec62a0b75df4224ec
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78277878"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783069"
 ---
 # <a name="enacting-configurations"></a>执行配置
 
@@ -17,7 +17,7 @@ ms.locfileid: "78277878"
 
 ## <a name="push-mode"></a>推送模式
 
-![推送模式](media/enactingConfigurations/pushModel.png "推送模式的工作原理")
+![推送模式概述](media/enactingConfigurations/pushModel.png "推送模式的工作原理")
 
 推送模式指的是用户通过调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet 主动将配置应用到目标节点。
 
@@ -28,7 +28,7 @@ ms.locfileid: "78277878"
 
 ## <a name="pull-mode"></a>请求模式
 
-![请求模式](media/enactingConfigurations/pullModel.png "请求模式的工作原理")
+![请求模式概述](media/enactingConfigurations/pullModel.png "请求模式的工作原理")
 
 在请求模式下，配置请求客户端以从远程请求服务中获取所需的状态配置。 同样，已将请求服务设置为托管 DSC 服务，并预配了请求服务器所需的配置和资源。 每个请求客户端都有计划的事件，在节点的配置上定期执行符合性检查。 首次触发事件时，请求客户端上的本地配置管理器 (LCM) 对请求服务发出请求，获取 LCM 中指定的配置。 如果请求服务上存在该配置，并通过了初始验证检查，则配置将下载到请求客户端，然后在其上由 LCM 进行执行。
 
@@ -40,6 +40,6 @@ LCM 会按其 **ConfigurationModeFrequencyMins** 属性指定的时间间隔来�
 
 以下主题说明了请求服务和客户端：
 
-- [Azure Automation DSC 概述](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
+- [Azure Automation DSC 概述](/azure/automation/automation-dsc-overview)
 - [设置 SMB 请求服务器](pullServerSMB.md)
 - [配置请求客户端](pullClientConfigID.md)

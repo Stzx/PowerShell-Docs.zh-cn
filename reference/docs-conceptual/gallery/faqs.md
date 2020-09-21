@@ -3,20 +3,20 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: PowerShell 库常见问题解答
-ms.openlocfilehash: 035681e108e1a3e05fe5d659d527ae1ad1c64cf4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 29f930cf552abec8acbbf02f5570c6ac0a14066d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500586"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777816"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
-## <a name="what-is-a-powershell-module"></a>PowerShell 模块是什么？
+## <a name="what-is-a-powershell-module"></a>什么是 PowerShell 模块？
 
 PowerShell 模块是包含某些 PowerShell 功能的可重复使用程序包。 PowerShell 中的所有内容（函数、变量、DSC 资源等）都可打包在模块中。 通常，模块是包含特定路径上存储的特定类型文件的文件夹。 共有几种不同的 PowerShell 模块类型。
 
-## <a name="what-is-a-powershell-script"></a>PowerShell 脚本是什么？
+## <a name="what-is-a-powershell-script"></a>什么是 PowerShell 脚本？
 
 PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重用和共享。 PowerShell 工作流也是 PowerShell 脚本，可概述任务组和提供这些任务的序列。 有关详细信息，请访问 [Getting Started with PowerShell Workflow](https://technet.microsoft.com/library/jj134242.aspx)（PowerShell 工作流入门）。
 
@@ -34,14 +34,14 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 在库中注册后，使用 [Publish-Module][] 或 [Publish-Script][] cmdlet 将包发布到库中。 有关如何运行这些 cmdlet 的详细信息，请访问“发布”选项卡，或阅读 [Publish-Module][] 和 [Publish-Script][] 文档。
 
-安装或保存包无需注册或登录到库。 
+安装或保存包无需注册或登录到库。****
 
-## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>尝试将项发布到 PowerShell 库时，出现“无法处理请求。 ‘指定的 API 密钥无效或无权限访问指定的包。’。 远程服务器返回了错误：(403) 已禁止。” 错误。 这是什么意思？
+## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>尝试将项发布到 PowerShell 库时，出现“无法处理请求。 ‘指定的 API 密钥无效或无权限访问指定的包。’。 远程服务器返回错误：(403) 已禁止。” 错误。 这是什么意思？
 
 出现该错误的原因可能如下：
 
-- 指定的 API 密钥无效。  请确保帐户中指定了有效的 API 密钥。 若要获取 API 密钥，请查看个人资料页。
-- 指定的包名称不属于你。  如果已确认 API 密钥正确无误，则可能是因为已存在一个具有与你尝试使用的名称相同的包。 该包可能被其所有者取消列出，在这种情况下，该包不会出现在任何搜索结果中。 若要确定具有相同名称的包已经存在，请打开浏览器并导航至该包的详细信息页：`https://www.powershellgallery.com/packages/<packageName>`。 例如，直接导航至 `https://www.powershellgallery.com/packages/pester` 将进入 Pester 模块的详细信息页上，无论其列出与否。 如果具有冲突名称的包已经存在且被取消列出，则可以执行以下操作：
+- 指定的 API 密钥无效。**** 请确保帐户中指定了有效的 API 密钥。 若要获取 API 密钥，请查看个人资料页。
+- 指定的包名称不属于你。**** 如果已确认 API 密钥正确无误，则可能是因为已存在一个具有与你尝试使用的名称相同的包。 该包可能被其所有者取消列出，在这种情况下，该包不会出现在任何搜索结果中。 若要确定具有相同名称的包已经存在，请打开浏览器并导航至该包的详细信息页：`https://www.powershellgallery.com/packages/<packageName>`。 例如，直接导航至 `https://www.powershellgallery.com/packages/pester` 将进入 Pester 模块的详细信息页上，无论其列出与否。 如果具有冲突名称的包已经存在且被取消列出，则可以执行以下操作：
   - 选择其他包名称。
   - 联系现有包的所有者。
 
@@ -56,12 +56,12 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>将模块发布到 PowerShell 库中有什么要求？
 
-任何种类的 PowerShell 模块（脚本模块、二进制模块或清单模块）都可发布到库中。 若要发布模块，PowerShellGet 需要了解该模块的版本、说明、作者和许可方式等信息。 从模块清单  (.psd1) 文件或 [Publish-Module][] cmdlet 的 LicenseUri  参数的值的部分发布过程中读取此信息。 所有发布到库中的模块必须具有模块清单。 清单中包含以下信息的任何模块都可发布到库中：
+任何种类的 PowerShell 模块（脚本模块、二进制模块或清单模块）都可发布到库中。 若要发布模块，PowerShellGet 需要了解该模块的版本、说明、作者和许可方式等信息。 从模块清单** (.psd1) 文件或 [Publish-Module][] cmdlet 的 **LicenseUri** 参数的值的部分发布过程中读取此信息。 所有发布到库中的模块必须具有模块清单。 清单中包含以下信息的任何模块都可发布到库中：
 
 - 版本
 - 说明
 - 作者
-- 一个该模块许可条款的 URI，或作为该清单的 PrivateData 的一部分，或在 [Publish-Module][] cmdlet 的 LicenseUri 参数中。
+- 一个该模块许可条款的 URI，或作为该清单的 **PrivateData** 的一部分，或在 [Publish-Module][] cmdlet 的 **LicenseUri** 参数中。
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>如何创建格式正确的模块清单？
 
@@ -73,12 +73,12 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 ## <a name="what-are-the-requirements-to-publish-a-script-to-the-gallery"></a>将脚本发布到库中有什么要求？
 
-任何种类的 PowerShell 脚本（脚本或工作流）都可发布到库中。 若要发布脚本，PowerShellGet 需要了解该脚本的版本、说明、作者和许可方式等信息。 从脚本文件的 PSScriptInfo 部分  或 [Publish-Script][] cmdlet 的 LicenseUri  参数的值的部分发布过程中读取此信息。 所有发布到库中的脚本必须具有元数据信息。 PSScriptInfo 部分中包括以下信息的任何脚本都可发布到库中：
+任何种类的 PowerShell 脚本（脚本或工作流）都可发布到库中。 若要发布脚本，PowerShellGet 需要了解该脚本的版本、说明、作者和许可方式等信息。 从脚本文件的 PSScriptInfo 部分** 或 [Publish-Script][] cmdlet 的 **LicenseUri** 参数的值的部分发布过程中读取此信息。 所有发布到库中的脚本必须具有元数据信息。 PSScriptInfo 部分中包括以下信息的任何脚本都可发布到库中：
 
 - 版本
 - 说明
 - 作者
-- 一个该脚本许可条款的 URI，或作为此脚本的 PSScriptInfo 的一部分，或在 [Publish-Script][] cmdlet 的 LicenseUri 参数中。
+- 一个该脚本许可条款的 URI，或作为此脚本的 **PSScriptInfo** 的一部分，或在 [Publish-Script][] cmdlet 的 **LicenseUri** 参数中。
 
 ## <a name="how-do-i-search"></a>如何搜索？
 
@@ -137,7 +137,7 @@ PowerShellGet 使用 NuGet 提供程序支持基于 NuGet 的存储库，例如 
 
 在 PackageManagement 程序包提供程序层，PSModule 程序包提供程序实际调用到其他 PackageManagement 程序包提供程序。 例如，使用基于 NuGet 的库（例如 PowerShell 库）时，PSModule 程序包提供程序会使用 NuGet 程序包提供程序作用于该存储库。
 
-![PowerShellGet 体系结构](media/faqs/powershellgetArchitecture.png)
+![PowerShellGet 体系结构图](media/faqs/powershellgetArchitecture.png)
 
 图 1：PowerShellGet 体系结构
 
@@ -150,8 +150,8 @@ PowerShellGet 使用 NuGet 提供程序支持基于 NuGet 的存储库，例如 
 因此，**PowerShellGet** 需要以下操作系统之一：
 
 - Windows 10
-- Windows 8.1 Pro
-- Windows 8.1 Enterprise
+- Windows 8.1 专业版
+- Windows 8.1 企业版
 - Windows 7 SP1
 - Windows Server 2016
 - Windows Server 2012 R2

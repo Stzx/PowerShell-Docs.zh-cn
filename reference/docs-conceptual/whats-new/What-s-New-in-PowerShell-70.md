@@ -2,12 +2,12 @@
 title: PowerShell 7.0 中的新增功能
 description: PowerShell 7.0 中发布的新功能和更改
 ms.date: 03/04/2020
-ms.openlocfilehash: 313ed2b663262b57abd52bfc7378e1f4661dc03a
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: d52b536efd9d7a1f8e6b01a58952f08ca49016b1
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808395"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162454"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0 中的新增功能
 
@@ -284,7 +284,7 @@ Get-ChildItem: Cannot find path 'C:\NotReal' because it does not exist
 ![脚本中的错误显示](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
 PowerShell 7 中的默认视图是 ConciseView。 之前的默认视图是 NormalView，你可通过设置首选项变量 `$ErrorView` 来选择它。
- 
+
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
 $ErrorView = 'ConciseView' # Sets the error view to ConciseView
@@ -357,11 +357,12 @@ $Env:POWERSHELL_UPDATECHECK = 'Default'
 
 此 cmdlet 直接调用 DSC 资源，而无需创建配置文档。 使用此 cmdlet，配置管理产品可以使用 DSC 资源来管理 Windows 或 Linux。 在启用调试的情况下运行 DSC 引擎时，此 cmdlet 还可用于调试资源。
 
-此命令调用名为“Log”的资源的 Set 方法，并指定 Message 属性 。
+此命令调用名为 WindowsProcess 的资源的 Set 方法，并提供必需的路径和参数属性以启动指定的 Windows 进程   。
 
 ```powershell
-Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
-  Message = 'Hello World'
+Invoke-DscResource -Name WindowsProcess -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
+  Path = 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
+  Arguments = ''
 }
 ```
 
@@ -518,7 +519,7 @@ Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration
 - 清除上个月提交的 CodeFactor 样式问题 (#10591)（感谢 @iSazonov！）
 - 修复 PSTernaryOperator 实验性功能描述中的拼写错误 (#10586)（感谢 @bergmeister！）
 - 将 ActionPreference.Suspend 枚举值转换为不受支持的保留状态，并删除对在首选项变量中使用 ActionPreference.Ignore 的限制 (#10317)（感谢 @KirkMunro！）
-- 将 ArrayList 替换为 List\<T> 来获取可读性更强且更可靠的代码，而不更改功能 (#10333)（感谢 @iSazonov！）
+- 将 ArrayList 替换为 List\<T>，以获取更具可读性且更可靠的代码，而无需更改功能 (#10333)（感谢 @iSazonov！）
 - 对 TestConnectionCommand 进行代码样式修复 (#10439)（感谢 @vexx32！）
 - 清除 AutomationEngine 并删除额外的 SetSessionStateDrive 方法调用 (#10416)（感谢 @iSazonov！）
 - 将默认的 ParameterSetName 重命名回 ConvertTo-Csv 和 ConvertFrom-Csv 的分隔符 (#10425)

@@ -1,13 +1,13 @@
 ---
-ms.date: 05/22/2020
+ms.date: 07/29/2020
 keywords: powershell,cmdlet
 title: 如何使用 PowerShell 文档
-ms.openlocfilehash: 259eb1eea1dc7e8b5ae5730f97c938b838a320bf
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 1cfeb9eea564e7618062e1b8ada4948bd9e22969
+ms.sourcegitcommit: 9f9eb95bc859e9e0fed48101327a602b2ced351d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808259"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821523"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>如何使用 PowerShell 文档
 
@@ -25,9 +25,9 @@ ms.locfileid: "83808259"
 
 使用页面顶部的版本选取器来选择所需的 PowerShell 版本。
 
-![版本选取器](media/how-to-use-docs/version-search.gif)
+![使用版本选取器](media/how-to-use-docs/version-search.gif)
 
-可以通过查看 `$PSversionTable.PSVersion` 值来验证所使用的 PowerShell 版本。 下面的示例演示 Windows PowerShell v5.1 的输出。
+可以通过查看 `$PSversionTable.PSVersion` 值来验证所使用的 PowerShell 版本。 下面的示例演示 Windows PowerShell 5.1 的输出。
 
 ```powershell
 $PSVersionTable.PSVersion
@@ -36,8 +36,10 @@ $PSVersionTable.PSVersion
 ```Output
 Major  Minor  Build  Revision
 -----  -----  -----  --------
-5      1      18362  145
+5      1      19041  1
 ```
+
+如果你还不熟悉 PowerShell，并需要有关理解命令语法方面的帮助，请参阅 [about_Command_Syntax](/powershell/module/microsoft.powershell.core/about/about_command_syntax)。
 
 ## <a name="finding-articles-for-previous-versions"></a>在文章中查找历史版本
 

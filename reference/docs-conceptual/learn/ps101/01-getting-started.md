@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 0f72fb5baf5b829142b18ed774261e9b3b66291b
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: e8938a5d36cd1c9c5a74eed1c22cd5d0e1a91966
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438018"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786741"
 ---
 # <a name="chapter-1---getting-started-with-powershell"></a>第 1 章 - 开始使用 PowerShell
 
@@ -29,7 +29,7 @@ ms.locfileid: "84438018"
 
 在 Windows 10 上查找 PowerShell 的最简单方法是在搜索栏中键入“PowerShell”，如图 1-1 所示。
 
-![图 1-1](media/figure1-1.png)
+![图 1-1 - 在“开始”菜单中搜索 PowerShell](media/figure1-1.png)
 
 请注意，图 1-1 显示了四种不同的 PowerShell 快捷方式。 本书中用于演示的计算机运行的是 64 位版本的 Windows 10，如快捷方式上的 (x86) 后缀所示，分别有 64 位以及 32 位版本的 PowerShell 控制台和 PowerShell ISE（集成脚本环境）。 如果运行的是 32 位版本的 Windows 10，则只有两种快捷方式。 这些项没有 (x86) 后缀，但为 32 位版本。 如果使用的是 64 位操作系统，建议运行 64 位版本的 PowerShell，除非出于特殊原因才运行 32 位版本。
 
@@ -41,7 +41,7 @@ ms.locfileid: "84438018"
 
 我通过单击“Windows PowerShell”快捷方式启动了 PowerShell 控制台，如图 1-1 所示。
 
-![图 1-4](media/figure1-4.png)
+![图 1-4 - PowerShell 窗口的标题栏](media/figure1-4.png)
 
 请注意，PowerShell 控制台的标题栏显示为“Windows PowerShell”，如图 1-4 所示。 一些命令运行正常，但 PowerShell 无法参与用户访问控制 (UAC)。 这意味着它无法提示用户对需要管理员批准的任务进行提升。
 生成以下错误消息：
@@ -66,7 +66,7 @@ At line:1 char:29
 
 关闭 PowerShell。 重启 PowerShell 控制台，但这次需要右键单击 Windows PowerShell 快捷方式，然后选择“以管理员身份运行”，如图 1-5 所示 。
 
-![图 1-5](media/figure1-5.png)
+![图 1-5 - 上下文菜单 - 以管理员身份运行](media/figure1-5.png)
 
 如果以普通用户身份登录 Windows，系统将提示你输入凭据。 我将输入我的用户帐户的凭据，其身份是域用户和本地管理员，如图 1-6 所示。
 
@@ -86,11 +86,11 @@ At line:1 char:29
 
 右键单击当前固定在任务栏上的 PowerShell 快捷方式，然后选择属性，如图 1-9 所示。
 
-![图 1-9](media/figure1-9.png)
+![图 1-9 - 用户帐户控制 - 输入凭据](media/figure1-9.png)
 
 单击图 1-10 中的 #1 所表示的“高级”，然后选中图 1-10 中的 #2 所表示的“以管理员身份运行”复选框，然后双击“确定”，以接受更改并退出这两个对话框。
 
-![图 1-10](media/figure1-10.png)
+![图 1-10 - 显示“管理员”的标题栏](media/figure1-10.png)
 
 无需再次查找 PowerShell 或再次担心它是否以管理员身份运行。
 
@@ -217,13 +217,15 @@ Start-Service -Name w32time
 如果想详细了解本章所介绍的主题，建议阅读以下 PowerShell 帮助主题。
 
 - [about_Automatic_Variables][]
+- [about_Hash_Tables][]
 - [about_Execution_Policies][]
 
 在下一章中，你将了解 PowerShell 中命令的可发现性。 下一章将介绍的内容之一是如何更新 PowerShell，以便可以直接在 PowerShell 内部查看这些帮助主题，而不必在 Internet 上查看它们。
 
 <!-- link references -->
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
-[about_Execution_Policies]: /powershell//powershell/module/microsoft.powershell.core/about/about_execution_policies
+[about_Hash_Tables]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
+[about_Execution_Policies]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
 [升级现有的 Windows PowerShell]: /powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell
 [安装 PowerShell]: /powershell/scripting/install/installing-powershell
 [启动 Windows PowerShell]: /powershell/scripting/windows-powershell/starting-windows-powershell

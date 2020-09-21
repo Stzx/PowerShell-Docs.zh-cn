@@ -2,12 +2,12 @@
 title: 如何复制 Visual Studio Code 中的 ISE 体验
 description: 如何复制 Visual Studio Code 中的 ISE 体验
 ms.date: 08/06/2018
-ms.openlocfilehash: 899e1c393fd49b0659631b88d610e80ec885e69e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 6b0b8ce054695d6cc0fc578290c554e2dc1472bc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809593"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784616"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>如何复制 Visual Studio Code 中的 ISE 体验
 
@@ -25,7 +25,7 @@ ms.locfileid: "83809593"
 
 此命令会自动应用下面所述的设置，结果如下所示：
 
-![ISE 模式](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
+![处于 ISE 模式的 Visual Studio Code](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
 
 ## <a name="ise-mode-configuration-settings"></a>ISE 模式配置设置
 
@@ -122,7 +122,7 @@ ISE 模式对 VS Code 设置进行了以下更改。
 
 - 4sysops 上有一篇有关如何将 VS Code 配置得更像 ISE 的[精彩文章][4sysops]。
 - Mike F Robbins 撰写了一篇关于如何设置 VS Code 的[出色文章][mikefrobbins]。
-- Learn PowerShell 上有一篇关于为 PowerShell 进行设置的[优秀文章][learnpwsh]。
+<!-- - Learn PowerShell has [an excellent write up][learnpwsh] setup for PowerShell. -->
 
 ## <a name="vs-code-tips"></a>VS Code 提示
 
@@ -134,7 +134,7 @@ ISE 模式对 VS Code 设置进行了以下更改。
 
 - 禁用“调试控制台”
 
-  如果你只计划使用 VS Code 进行 PowerShell 脚本编写，则可以隐藏“调试控制台”  ，因为 PowerShell 扩展不会用到它。 为此，请右键单击“调试控制台”，  然后单击复选标记以将其隐藏。
+  如果你只计划使用 VS Code 进行 PowerShell 脚本编写，则可以隐藏“调试控制台”，因为 PowerShell 扩展不会用到它。 为此，请右键单击“调试控制台”，然后单击复选标记以将其隐藏。
 
 ## <a name="more-settings"></a>更多设置
 
@@ -145,7 +145,7 @@ ISE 模式对 VS Code 设置进行了以下更改。
 <!-- link references -->
 [vsc-docs]: https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette
 [命令面板]: #vs-code-tips
-[提出问题]: https://github.com/PowerShell/VSCode-powershell/issues/new/choose
+[创建问题]: https://github.com/PowerShell/VSCode-powershell/issues/new/choose
 
 [4sysops]: https://4sysops.com/archives/make-visual-studio-code-look-and-behave-like-powershell-ise/
 [mikefrobbins]: https://mikefrobbins.com/2017/08/24/how-to-install-visual-studio-code-and-configure-it-as-a-replacement-for-the-powershell-ise/

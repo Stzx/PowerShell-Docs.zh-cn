@@ -1,18 +1,18 @@
 ---
-title: 关于 IF 语句的各项须知内容
+title: 关于 if 语句的各项须知内容
 description: 与许多其他语言一样，PowerShell 提供了用于在脚本中有条件地执行代码的语句。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 6ffb70af694e80430d31991045b9fadc1a2cc3f0
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: b6bafb99bfb8ecd0152bae841e5c58d4c27ccd3e
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149520"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469746"
 ---
-# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>关于 IF 语句的各项须知内容
+# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>关于 `if` 语句的各项须知内容
 
-与许多其他语言一样，PowerShell 提供了用于在脚本中有条件地执行代码的语句。 其中一个语句是 [if][] 语句。 今天，我们将深入探讨 PowerShell 中最基本的命令之一。
+与许多其他语言一样，PowerShell 提供了用于在脚本中有条件地执行代码的语句。 其中一个语句是 [If][] 语句。 今天，我们将深入探讨 PowerShell 中最基本的命令之一。
 
 > [!NOTE]
 > 本文的[原始版本][]发布在 [@KevinMarquette][] 撰写的博客上。 PowerShell 团队感谢 Kevin 与我们分享这篇文章。 请前往 [PowerShellExplained.com][] 访问他的博客。
@@ -22,7 +22,7 @@ ms.locfileid: "84149520"
 你的脚本通常需要做出决策，并根据这些决策执行不同的逻辑。
 这就是条件执行的意思。 需要计算一个语句或值，然后根据该计算结果执行不同的代码段。 这正是 `if` 语句的作用。
 
-## <a name="the-if-statement"></a>if 语句
+## <a name="the-if-statement"></a>`if` 语句
 
 下面是 `if` 语句的基本示例：
 
@@ -60,7 +60,7 @@ if ( 5 -eq $value )
 
 一个可能的用例是在对值执行操作之前检查值的状态。 你可以获得一种服务，并检查状态是否正在运行，然后再对其调用 `Restart-Service`。
 
-在其他语言（如 C#）中，通常使用 `==` 检查是否相等（例如：`5 == $value`），但此方法不适用于 PowerShell。 人们常犯的另一种错误是保留等号（例如：`5 = $value`）来为变量赋值。 将已知值放在左侧会让这个错误变得更尴尬。
+在其他语言（如 C#）中，通常使用 `==` 检查是否相等（例如：`5 == $value`），但此方法不适用于 PowerShell。 人们常犯的另一种错误是保留等号（例如：`5 = $value`）来为变量赋值。 将已知值放在左侧就可以避免发生这种错误。
 
 此运算符（以及其他运算符）具有几个变体。
 
@@ -533,7 +533,7 @@ else
 }
 ```
 
-每个脚本块将结果、命令或值放入管道。 然后，将 if 语句的结果赋给 `$discount` 变量。 该示例可以在每个脚本块中轻松地直接将这些值赋给 `$discount` 变量。 我不能说我经常将此方法与 `if` 语句一起使用，但我确实有一个最近使用的例子。
+每个脚本块将结果、命令或值放入管道。 然后，将 `if` 语句的结果赋给 `$discount` 变量。 该示例可以在每个脚本块中轻松地直接将这些值赋给 `$discount` 变量。 我不能说我经常将此方法与 `if` 语句一起使用，但我确实有一个最近使用的例子。
 
 ### <a name="array-inline"></a>数组内联
 
@@ -567,7 +567,7 @@ $snowSqlParam = @(
 
 ## <a name="simplify-complex-operations"></a>简化复杂操作
 
-你不可避免会遇到这样的情况：有太多的比较需要检查，if 语句从屏幕右侧滚出。
+你不可避免会遇到这样的情况：要检查的比较太多，以致于 `If` 语句从屏幕右侧滚出。
 
 ```powershell
 $user = Get-ADUser -Identity $UserName
@@ -599,7 +599,7 @@ if ($null -ne $user -and
 
 ### <a name="pre-calculating-results"></a>预先计算结果
 
-我们可以将该语句从 if 语句中取出并仅检查结果。
+我们可以将该语句从 `if` 语句中取出并仅检查结果。
 
 ```powershell
 $needsSecureHomeDrive = $null -ne $user -and
@@ -691,11 +691,11 @@ if ( -not (Test-Path -Path $folder) )
 `if` 语句非常简单，但它是 PowerShell 不可或缺的一个基本部分。 你会发现在自己编写的几乎每个脚本中都会多次使用这个语句。 希望本文能让你比以往更深入地理解这一语句。
 
 <!-- link references -->
-[原始版本]: https://powershellexplained.com/2019-08-11-PowerShell-if-then-else-equals-operator/
+[原始版本]: https://powershellexplained.com/2019-08-11-Powershell-if-then-else-equals-operator/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [if]: /powershell/module/microsoft.powershell.core/about/about_if
-[位运算符]: https://powershellexplained.com/powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
+[位运算符]: /powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
 [使用正则表达式的多种方式]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression/
 [关于异常的各项须知内容]: everything-about-exceptions.md
 [关于 $null 的各项须知内容]: everything-about-null.md

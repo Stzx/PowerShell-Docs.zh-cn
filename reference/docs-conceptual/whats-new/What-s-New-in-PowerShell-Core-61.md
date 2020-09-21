@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1 中的新增内容
 description: PowerShell Core 6.1 中发布的新功能和更改
 ms.date: 09/13/2018
-ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7a50bc3a909df38d21a604399d590a2805359593
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78277709"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837530"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1 中的新增内容
 
@@ -34,9 +34,9 @@ ms.locfileid: "78277709"
 
 Windows兼容包使 PowerShell Core 能使用 Windows 10 2018 年 10 月更新和 Windows Server 2019 附带的 1900 多个 cmdlet  。
 
-## <a name="support-for-application-whitelisting"></a>对应用程序允许列表的支持
+## <a name="support-for-application-allow-lists"></a>对应用程序允许列表的支持
 
-PowerShell Core 6.1 与支持 [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 和 [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 应用程序允许列表的 Windows PowerShell 5.1 具有奇偶一致性。 根据应用程序允许列表，可使用 PowerShell [受限语言模式](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)精确地控制允许执行的二进制文件。
+PowerShell Core 6.1 与支持 [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 和 [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 应用程序允许列表的 Windows PowerShell 5.1 具有奇偶一致性。 根据应用程序允许列表，可使用 PowerShell [受限语言模式](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)精确地控制允许执行的二进制文件。
 
 ## <a name="performance-improvements"></a>性能改进
 
@@ -88,12 +88,11 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 | 时间 (秒)   | 0.259                  | 0.577               | 0.125                  |
 | 加快 (%) | 空值                    | -122.8%             | 78.3%（从 WPS 为 51.7%） |
 
-## <a name="check-system32-for-compatible-in-box-modules-on-windows"></a>在 Windows 上检查 `system32` 以获取兼容的内置模块
+## <a name="check-system32-for-compatible-built-in-modules-on-windows"></a>在 Windows 上检查 `system32` 以获取兼容的内置模块
 
 在 Windows 10 1809 更新和 Windows Server 2019 中，我们更新了许多内置 PowerShell 模块，将其标记为与 PowerShell Core 兼容。
 
 当 PowerShell Core 6.1 启动时，它会自动将 `$windir\System32` 包含为 `PSModulePath` 环境变量的一部分。 但是，如果模块 `CompatiblePSEdition` 被标记为与 `Core` 兼容，则它仅将模块公开给 `Get-Module` 和 `Import-Module`。
-
 
 ```powershell
 Get-Module -ListAvailable
@@ -198,7 +197,7 @@ Markdown 是创建可读明文文档的标准，其基本格式可以呈现为 H
 
 [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) 是 PowerShell 和 Hyper-V 的一项功能，允许在没有网络连接或其他远程管理服务的情况下连接到 Hyper-V VM 或容器。
 
-在过去，PowerShell Direct 使用容器上的收件箱 Windows PowerShell 实例进行连接。 现在，PowerShell Direct 先尝试使用 `PATH` 环境变量上任何可用的 `pwsh.exe` 进行连接。 如果 `pwsh.exe` 不可用，PowerShell Direct 则会回退为使用 `powershell.exe`。
+在过去，PowerShell Direct 使用容器上的内置 Windows PowerShell 实例进行连接。 现在，PowerShell Direct 先尝试使用 `PATH` 环境变量上任何可用的 `pwsh.exe` 进行连接。 如果 `pwsh.exe` 不可用，PowerShell Direct 则会回退为使用 `powershell.exe`。
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting` 现在为预览版本创建单独的远程处理终结点
 

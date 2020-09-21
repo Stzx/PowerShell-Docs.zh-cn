@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,配置,安装程序
 title: DSC Environment 资源
-ms.openlocfilehash: d6d3b4a2086be28fbfa2bf200acef9b13b7b7825
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: d8519a66d457767dcbc0e08b01a69a9264997479
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954714"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464411"
 ---
 # <a name="dsc-environment-resource"></a>DSC Environment 资源
 
@@ -22,6 +22,7 @@ Environment [string] #ResourceName
 {
     Name = [string]
     [ Path = [bool] ]
+    [ Target = [string] { Process | Machine } ]
     [ Value = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
@@ -35,7 +36,8 @@ Environment [string] #ResourceName
 |---|---|
 |名称 |指示指示你想要确保其特定状态的环境变量的名称。 |
 |路径 |定义正在配置的环境变量。 如果变量是 **Path**，则将此属性设置为 `$true`；否则将其设置为 `$false`。 默认为 `$false`。 如果正在配置的变量是 **Path**，则通过 **Value** 属性提供的值将被附加到现有值。 |
-|值 |要分配给环境变量的值。 |
+|目标| 指示检索变量的位置：计算机或进程。 如果同时指示了这两个位置，则仅返回计算机的值。 默认值为这两者的值，因为这是其余资源的默认值。 |
+|Value |要分配给环境变量的值。 |
 
 ## <a name="common-properties"></a>公共属性
 

@@ -1,12 +1,12 @@
 ---
 title: PowerShell 7 模块兼容性
 ms.date: 02/03/2020
-ms.openlocfilehash: 273e25e3b7cd48e09b63e50c34ed0b98a4e766f0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d618f9e55f5997bfd724a4e58bb94c348bd681ce
+ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565057"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722807"
 ---
 # <a name="powershell-7-module-compatibility"></a>PowerShell 7 模块兼容性
 
@@ -69,13 +69,14 @@ Install-WindowsFeature -Name ActiveDirectory
 | 模块名称                        | 状态                               | 支持的 OS                       |
 | ---------------------------------- | ------------------------------------ | ---------------------------------- |
 | ActiveDirectory                    | 本机兼容                  | 具有 RSAT-AD-PowerShell 的 Windows Server 1809+<br>具有 Rsat.ActiveDirectory.DS-LDS.Tools 的 Windows 10 1809+ |
+| ADDSDeployment                     | 使用兼容性层       |  Windows Server 2019 1809+         |
 | ADFS                               | 未使用兼容性层进行测试    |                                    |
 | AppBackgroundTask                  | 本机兼容                  | Windows 10 1903+                   |
 | AppLocker                          | 未使用兼容性层进行测试    |                                    |
 | AppvClient                         | 未使用兼容性层进行测试    |                                    |
 | Appx                               | 本机兼容                  | Windows Server 1809+<br>Windows 10 1809+ |
 | AssignedAccess                     | 本机兼容                  | Windows 10 1809+                   |
-| BestPractices                      | 未使用兼容性层进行测试    |                                    |
+| BestPractices                      | 不受兼容性层支持 |                                    |
 | BitLocker                          | 本机兼容                  | 具有 BitLocker 的 Windows Server 1809+<br>Windows 10 1809+ |
 | BitsTransfer                       | 本机兼容                  | Windows Server 20H1<br>Windows 10 20H1 |
 | BootEventCollector                 | 未使用兼容性层进行测试    |                                        |
@@ -148,7 +149,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | 设置                       | 未使用兼容性层进行测试    |                                               |
 | PSDesiredStateConfiguration        | 部分                            | 内置于 PowerShell 7 中                       |
 | PSDiagnostics                      | 本机兼容                  | 内置于 PowerShell 7 中                       |
-| PSScheduledJob                     | 未使用兼容性层 | 内置于 PowerShell 5.1 中                     |
+| PSScheduledJob                     | 不受兼容性层支持 | 内置于 PowerShell 5.1 中                     |
 | PSWorkflow                         | 未使用兼容性层进行测试    |                                               |
 | PSWorkflowUtility                  | 未使用兼容性层进行测试    |                                               |
 | RemoteAccess                       | 未使用兼容性层进行测试    |                                               |
@@ -156,7 +157,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | ScheduledTasks                     | 本机兼容                  | Windows Server 1809+<br>Windows 10 1809+      |
 | SecureBoot                         | 本机兼容                  | Windows Server 1809+<br>Windows 10 1809+      |
 | ServerCore                         | 未使用兼容性层进行测试    |                                               |
-| ServerManager                      | 未使用兼容性层进行测试    |                                               |
+| ServerManager                      | 本机兼容                  | Windows Server 1809+<br>具有 Rsat.ServerManager.Tools 的 Windows 10 1809+<br>请参阅以下说明 |
 | ServerManagerTasks                 | 未使用兼容性层进行测试    |                                               |
 | ShieldedVMDataFile                 | 本机兼容                  | 具有 RSAT-Shielded-VM-Tools 的 Windows Server 1903+<br>具有 Rsat.Shielded.VM.Tools 的 Windows 10 1903+ |
 | ShieldedVMProvisioning             | 本机兼容                  | 具有 HostGuardian 的 Windows Server 1809+<br>具有 HostGuardian 的 Windows 10 1809+  |
@@ -178,7 +179,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | TroubleshootingPack                | 本机兼容                  | Windows 10 1903+                              |
 | TrustedPlatformModule              | 本机兼容                  | Windows Server 1809+<br>Windows 10 1809+      |
 | UEV                                | 本机兼容                  | Windows Server（带桌面体验的服务器的未来版本）<br>Windows 10 1903+ |
-| UpdateServices                     | 未使用兼容性层 |                                               |
+| UpdateServices                     | 不受兼容性层支持 |                                               |
 | VpnClient                          | 本机兼容                  | Windows Server 1809+<br>Windows 10 1809+      |
 | Wdac                               | 本机兼容                  | Windows Server 1809+<br>Windows 10 1809+      |
 | WebAdministration                  | 未使用兼容性层进行测试    |                                               |
@@ -189,3 +190,10 @@ Install-WindowsFeature -Name ActiveDirectory
 | WindowsServerBackup                | 本机兼容                  | 具有 Windows-Server-Backup 的 Windows Server 19H2 |
 | WindowsUpdate                      | 本机兼容                  | Windows Server 1809+<br>Windows 10 1809+       |
 | WindowsUpdateProvider              | 本机兼容                  | Windows Server 1809+<br>Windows 10 1809+       |
+
+## <a name="notes"></a>说明
+
+### <a name="servermanager-module"></a>ServerManager 模块
+
+该模块与 PowerShell 7 中的格式化输出有一些较小的兼容性问题。 例如，`Get-WindowsFeature` cmdlet 返回具有所有属性的适当对象，但默认的显示格式设置使某些属性显示为空。 可使用 `Select-Object` 或通过直接成员访问在对象属性中获取实际值。
+

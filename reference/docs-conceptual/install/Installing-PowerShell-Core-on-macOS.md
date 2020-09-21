@@ -1,19 +1,17 @@
 ---
 title: 在 macOS 上安装 PowerShell
 description: 介绍如何在 macOS 上安装 PowerShell
-ms.date: 05/21/2020
-ms.openlocfilehash: 32b3ebf3eb4017af41fc1a062f2f0a2e08629a58
-ms.sourcegitcommit: fd6a33b9fac973b3554fecfea7f51475e650a606
+ms.date: 08/24/2020
+ms.openlocfilehash: 8f38d573d9d67276dbc95cfb70f1fde80af62bb6
+ms.sourcegitcommit: ea9270bacee7dd1b9df2519384de277576357ce2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791471"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88857908"
 ---
 # <a name="installing-powershell-on-macos"></a>在 macOS 上安装 PowerShell
 
-PowerShell 支持 macOS 10.12 及更高版本。
-GitHub [版本][]页面上提供有所有可用包。
-安装包以后，从终端运行 `pwsh`。
+PowerShell 支持 macOS 10.12 及更高版本。 PowerShell 7.0.3 及更高版本和 PowerShell 预览版 7.1.0 及更高版本需要 macOS 10.13 及更高版本。 GitHub [版本][]页面上提供有所有可用包。 安装包以后，从终端运行 `pwsh`。
 
 > [!NOTE]
 > PowerShell 7 是就地升级，升级后会删除 PowerShell Core 6.x。
@@ -22,13 +20,17 @@ GitHub [版本][]页面上提供有所有可用包。
 >
 > 如果需要与 PowerShell 7 并行运行 PowerShell 6，请使用[二进制存档](#binary-archives)方法重新安装 PowerShell 6。
 
-## <a name="about-brew"></a>关于 Brew
+可采用多种方法在 macOS 上安装 PowerShell。 选择下列方法之一：
 
-[Homebrew][brew] 是 macOS 的首选包管理器。 如果未找到 `brew` 命令，则需要按照[说明][brew]安装 Homebrew。 或者，可通过[直接下载](#installation-via-direct-download)或从[二进制存档](#binary-archives)安装 PowerShell。
+- 使用 Homebrew 安装。 Homebrew 是 macOS 的首选包管理器。
+- 通过[直接下载](#installation-via-direct-download)安装 PowerShell
+- 从[二进制存档](#binary-archives)安装
 
-## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1012-or-higher"></a>通过 Homebrew 在 macOS 10.12 或更高版本上安装最新的稳定版本
+安装 PowerShell 后，应安装 [OpenSSL](#installing-dependencies)。 PowerShell 远程处理和 CIM 操作均需要 OpenSSL。
 
-有关 Brew 的信息，请参阅[关于 Brew](#about-brew)。
+## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1013-or-higher"></a>通过 Homebrew 在 macOS 10.13 或更高版本上安装最新的稳定版本
+
+如果未找到 `brew` 命令，则需要按照[说明][brew]安装 Homebrew。
 
 现在，可以开始安装 PowerShell：
 
@@ -54,12 +56,9 @@ brew cask upgrade powershell
 
 [brew]: https://brew.sh/
 
-## <a name="installation-of-latest-preview-release-via-homebrew-on-macos-1012-or-higher"></a>通过 Homebrew 在 macOS 10.12 或更高版本上安装最新的预览版
+## <a name="installation-of-latest-preview-release-via-homebrew-on-macos-1013-or-higher"></a>通过 Homebrew 在 macOS 10.13 或更高版本上安装最新的预览版
 
-有关 Brew 的信息，请参阅[关于 Brew](#about-brew)。
-
-安装 Homebrew 后，可以安装 PowerShell。
-首先，安装 [Cask-Versions ][cask-versions] 包，通过它可安装替代版本的 cask 包：
+安装 Homebrew 后，可以安装 PowerShell。 首先，安装 [Cask-Versions ][cask-versions] 包，通过它可安装替代版本的 cask 包：
 
 ```sh
 brew tap homebrew/cask-versions
@@ -88,18 +87,40 @@ brew cask upgrade powershell-preview
 > 可能会从 PowerShell (pwsh) 主机调用上面的命令，但是调用后必须退出 PowerShell 并重新启动以完成升级。
 > 然后刷新 `$PSVersionTable` 中显示的值。
 
+稳定版本和 LTS 版本也支持使用 Homebrew tap 方法安装 PowerShell。
+
+```sh
+brew install powershell/tap/powershell
+```
+
+现在可以验证你的安装
+
+```sh
+pwsh
+```
+
+发布新版本的 PowerShell 时，只需运行以下命令即可。
+
+```sh
+brew upgrade powershell
+```
+
+> [!NOTE]
+> 无论使用 cask 还是 tap 方法，在更新到较新版本的 PowerShell 时，请使用最初安装 PowerShell 所使用的相同方法。 如果使用其他方法，则打开新的 pwsh 会话时将继续使用较旧版本的 PowerShell。
+>
+> 如果决定使用其他方法，可以使用 [Homebrew link 方法](https://docs.brew.sh/Manpage#link-ln-options-formula)来解决此问题。
+
 ## <a name="installation-via-direct-download"></a>通过直接下载安装
 
-下载 PKG 包`powershell-lts-7.0.1-osx-x64.pkg`
-（从[版本][]页下载）到 macOS 计算机上。
+请从[版本][]页中将 PKG 包 `powershell-lts-7.0.3-osx-x64.pkg` 下载到 CentOS 计算机。
 
 可以双击文件并按照提示操作，或者从终端安装：
 
 ```sh
-sudo installer -pkg powershell-lts-7.0.1-osx-x64.pkg -target /
+sudo installer -pkg powershell-lts-7.0.3-osx-x64.pkg -target /
 ```
 
-安装 [OpenSSL](#install-openssl). PowerShell 远程处理和 CIM 操作均需要 OpenSSL。
+安装 [OpenSSL](#installing-dependencies). PowerShell 远程处理和 CIM 操作均需要 OpenSSL。
 
 ## <a name="install-as-a-net-global-tool"></a>作为 .NET 全局工具安装
 
@@ -111,57 +132,56 @@ dotnet tool install --global PowerShell
 
 dotnet 工具安装程序将 `~/.dotnet/tools` 添加到 `PATH` 环境变量中。 但是，当前运行的 shell 没有更新的 `PATH`。 应该可以通过键入 `pwsh` 从新 shell 启动 PowerShell。
 
+安装 [OpenSSL](#installing-dependencies). PowerShell 远程处理和 CIM 操作均需要 OpenSSL。
+
 ## <a name="binary-archives"></a>二进制存档
 
-已对 macOS 平台提供 PowerShell 二进制 `tar.gz` 存档，以启用高级部署方案。
+已对 macOS 平台提供 PowerShell 二进制 `tar.gz` 存档，以启用高级部署方案。 使用此方法安装时，还必须手动安装所有依赖项。
+
+安装 [OpenSSL](#installing-dependencies). PowerShell 远程处理和 CIM 操作均需要 OpenSSL。
 
 ### <a name="installing-binary-archives-on-macos"></a>在 macOS 上安装二进制存档
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.1/powershell-7.0.1-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/7.0.1
+sudo mkdir -p /usr/local/microsoft/powershell/7.0.3
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.0.1
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.0.3
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/7.0.1/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/7.0.3/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/7.0.1/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/7.0.3/pwsh /usr/local/bin/pwsh
 ```
-
-安装 [OpenSSL](#install-openssl). PowerShell 远程处理和 CIM 操作均需要 OpenSSL。
 
 ## <a name="installing-dependencies"></a>安装依赖关系
 
-### <a name="install-xcode-command-line-tools"></a>安装 XCode 命令行工具
+PowerShell 远程处理和 CIM 操作均需要 OpenSSL。 如有需要，可通过 MacPorts 安装 OpenSSL。
 
-```sh
-xcode-select --install
-```
+> [!NOTE]
+> 在同一系统上使用 MacPorts 和 Homebrew 时可能会出现问题。 但是，Homebrew 没有适用于 OpenSSL 1.0 的包。 有关详细信息，请参阅 [MacPorts 常见问题解答](https://trac.macports.org/wiki/FAQ)。
 
-### <a name="install-openssl"></a>安装 OpenSSL
+1. 安装 Xcode 命令行工具。 MacPorts 需要 Xcode 工具。
 
-PowerShell 远程处理和 CIM 操作均需要 OpenSSL。 可以通过 MacPorts 进行安装。
+   ```sh
+   xcode-select --install
+   ```
 
-#### <a name="install-openssl-via-macports"></a>通过 MacPorts 安装 OpenSSL
-
-1. 安装 [XCode 命令行工具](#install-xcode-command-line-tools)。
-1. 安装 MacPorts。
-   如需说明，请参阅[安装指南](https://guide.macports.org/chunked/installing.macports.html)。
+1. 安装 MacPorts。 如需说明，请参阅[安装指南](https://www.macports.org/install.php)。
 1. 通过运行 `sudo port selfupdate` 更新 MacPorts。
 1. 通过运行 `sudo port upgrade outdated` 升级 MacPorts 包。
 1. 通过运行 `sudo port install openssl10` 安装 OpenSSL。
 1. 链接库，使其可供 PowerShell 使用：
 
-```sh
-sudo mkdir -p /usr/local/opt/openssl
-sudo ln -s /opt/local/lib/openssl-1.0 /usr/local/opt/openssl/lib
-```
+   ```sh
+   sudo mkdir -p /usr/local/opt/openssl
+   sudo ln -s /opt/local/lib/openssl-1.0 /usr/local/opt/openssl/lib
+   ```
 
 ## <a name="uninstalling-powershell"></a>卸载 PowerShell
 
@@ -184,27 +204,29 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 ## <a name="paths"></a>路径
 
-* `$PSHOME` 是 `/usr/local/microsoft/powershell/7.0.1/`
-* 将从 `~/.config/powershell/profile.ps1` 中读取用户配置文件
-* 将从 `$PSHOME/profile.ps1` 中读取默认配置文件
-* 将从 `~/.local/share/powershell/Modules` 中读取用户模块
-* 将从 `/usr/local/share/powershell/Modules` 中读取共享模块
-* 将从 `$PSHOME/Modules` 中读取默认模块
-* PSReadline 历史记录将记录到 `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
+- `$PSHOME` 是 `/usr/local/microsoft/powershell/7.0.3/`
+- 将从 `~/.config/powershell/profile.ps1` 中读取用户配置文件
+- 将从 `$PSHOME/profile.ps1` 中读取默认配置文件
+- 将从 `~/.local/share/powershell/Modules` 中读取用户模块
+- 将从 `/usr/local/share/powershell/Modules` 中读取共享模块
+- 将从 `$PSHOME/Modules` 中读取默认模块
+- PSReadline 历史记录将记录到 `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
 
-配置文件采用 PowerShell 的每个主机配置。
-因此主机特定的默认配置文件位于相同位置的 `Microsoft.PowerShell_profile.ps1`。
+配置文件采用 PowerShell 的每个主机配置。 因此主机特定的默认配置文件位于相同位置的 `Microsoft.PowerShell_profile.ps1`。
 
 PowerShell 采用 macOS 上的 [XDG Base Directory 规范][xdg-bds]。
 
-由于 macOS 派生自 BSD，因此前缀为 `/usr/local`而不是 `/opt`。
-因此，`$PSHOME` 是 `/usr/local/microsoft/powershell/7.0.1/`，且符号链接位于 `/usr/local/bin/pwsh` 中。
+由于 macOS 派生自 BSD，因此前缀为 `/usr/local`而不是 `/opt`。 因此，`$PSHOME` 是 `/usr/local/microsoft/powershell/7.0.3/`，且符号链接位于 `/usr/local/bin/pwsh` 中。
+
+## <a name="installation-support"></a>安装支持
+
+Microsoft 支持本文档中的安装方法。 其他源可能会提供其他安装方法。 尽管这些工具和方法可能有效，但 Microsoft 无法支持这些方法。
 
 ## <a name="additional-resources"></a>其他资源
 
-* [Homebrew Web][brew]
-* [Homebrew Github 存储库][GitHub]
-* [Homebrew-Cask][cask]
+- [Homebrew Web][brew]
+- [Homebrew Github 存储库][GitHub]
+- [Homebrew-Cask][cask]
 
 [brew]: http://brew.sh/
 [Cask]: https://github.com/Homebrew/homebrew-cask

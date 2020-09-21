@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0 中的新增功能
-ms.openlocfilehash: dba016546fe034684f6b7afe43ec2e7a1b793d96
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 314be1d4da2d3df967ac8898745b7b1aaf69de2a
+ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809213"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215999"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0 中的新增功能
 
@@ -187,7 +187,7 @@ Windows PowerShell 5.0 默认安装在 Windows Server 2016 Technical Preview 和
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Windows PowerShell ISE 中的新增功能
 
-- 你现在可以通过运行 Enter-PSSession 在存储你希望编辑的文件的计算机上启动远程会话，然后运行 PSEdit \<远程计算机上的路径和文件名\>  以在 Windows PowerShell ISE 的本地副本中编辑远程 Windows PowerShell 脚本和文件。 此功能实现轻松编辑存储在 Windows Server 的服务器核心安装选项（Windows PowerShell ISE 无法在其中运行）上的 Windows PowerShell 文件。
+- 现在可以通过运行 Enter-PSSession 在存储你希望编辑的文件的计算机上启动远程会话，然后运行 PSEdit \<path and file name on the remote computer\> 以在 Windows PowerShell ISE 的本地副本中编辑远程 Windows PowerShell 脚本和文件。 此功能实现轻松编辑存储在 Windows Server 的服务器核心安装选项（Windows PowerShell ISE 无法在其中运行）上的 Windows PowerShell 文件。
 - Windows PowerShell ISE 中现在支持 Start-Transcript cmdlet。
 - 现在可以在 Windows PowerShell ISE 中调试远程脚本。
 - 新的菜单命令 **Break All** (Ctrl+B) 会强行进入本地和远程运行的脚本的调试器中。
@@ -353,7 +353,7 @@ Windows PowerShell 工作流将 Windows Workflow Foundation 的强大功能引�
 
 Windows PowerShell Web 访问是一项 Windows Server 2012 功能，它允许用户在基于 Web 的控制台中运行 Windows PowerShell 命令和脚本。 使用基于 Web 的控制台的设备不需要安装 Windows PowerShell、远程管理软件或浏览器插件。 只需要正确配置的 Windows PowerShell Web 访问网关以及支持 JavaScript 和接受 Cookie 的客户端设备浏览器。
 
-有关详细信息，请参阅[部署 Windows PowerShell Web 访问](/powershell/scripting/components/web-access/install-and-use-windows-powershell-web-access)。
+有关详细信息，请参阅[部署 Windows PowerShell Web 访问](/previous-versions/powershell/scripting/components/web-access/install-and-use-windows-powershell-web-access)。
 
 ### <a name="new-windows-powershell-ise-features"></a>新的 Windows PowerShell ISE 功能
 

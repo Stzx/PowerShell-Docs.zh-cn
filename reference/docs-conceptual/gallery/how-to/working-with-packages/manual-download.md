@@ -3,12 +3,12 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: 库, powershell, psgallery
 title: 手动包下载
-ms.openlocfilehash: e562f5b94b4d2caa7d31269a324e417d1a9e844a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 3e29437c4e35e47ab2028a7eea9f408daf1a59e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278695"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782848"
 ---
 # <a name="manual-package-download"></a>手动包下载
 
@@ -22,7 +22,7 @@ PowerShell 库支持直接下载网站中的包而无需使用 PowerShellGet cmd
 
 每个页面都有一个手动下载链接，如下所示：
 
-![手动下载](media/manual-download/packagedisplaypagewithpseditions.png)
+![包含安装选项的包显示页面](media/manual-download/packagedisplaypagewithpseditions.png)
 
 若要手动下载，请单击“下载原始 nupkg 文件”  。 将包的副本复制到名称为 `<name>.<version>.nupkg` 的浏览器的下载文件夹中。
 

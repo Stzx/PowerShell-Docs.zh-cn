@@ -3,12 +3,12 @@ ms.date: 09/10/2018
 contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: 管理 API 密钥
-ms.openlocfilehash: 0f44a080415f1acf13680771b6e9db5b805f8f45
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c428689d065c63716db6bc546434623e9375f8ba
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278270"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777577"
 ---
 # <a name="managing-api-keys"></a>管理 API 密钥
 
@@ -59,7 +59,7 @@ PowerShell 库支持创建多个 API 密钥以支持一系列发布要求。 API
 
 可更改现有密钥的某些设置。 如上文所述，无法修改现有 API 密钥的安全作用域或更改到期时间。 可更改的选项如下面的屏幕截图所示：
 
-![获取新的 API 密钥值](media/creating-APIkeys/PSGallery_EditAPIKey.png)
+![编辑 API 密钥值](media/creating-APIkeys/PSGallery_EditAPIKey.png)
 
 若要更改由密钥控制的包，可从列表中选择单个包，或更改 glob 模式。
 

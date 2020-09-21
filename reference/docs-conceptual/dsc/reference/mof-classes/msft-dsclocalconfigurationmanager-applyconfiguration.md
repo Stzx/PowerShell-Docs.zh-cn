@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/14/2020
 keywords: dsc,powershell,配置,安装程序
 title: ApplyConfiguration 方法
-ms.openlocfilehash: 0425b9a7db37e421830ba37da8f5c0a4877a1b72
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: bec74ccd6f75448484adfd26bf8a4af4e224eb3f
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953454"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463833"
 ---
 # <a name="applyconfiguration-method"></a>ApplyConfiguration 方法
 
@@ -25,13 +25,15 @@ uint32 ApplyConfiguration(
 
 ## <a name="parameters"></a>参数
 
-force  \[in\]：若为 true  ，将会重新应用当前配置，即使有挂起的配置，也不例外。
+### <a name="force"></a>force
+
+如果为 **true**，将会重新应用当前配置，即使存在挂起的配置。
 
 ## <a name="return-value"></a>返回值
 
 如果成功，则返回零；否则返回错误代码。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 这是一种静态方法。
 

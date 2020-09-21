@@ -2,37 +2,32 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 配置本地配置管理器
-ms.openlocfilehash: c736f1c6a7cd6740f9d777dd68559f29909bc5b6
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: b4766157bca72a7c2bb385ab2255c9780846830a
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691997"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837556"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>配置本地配置管理器
 
 > 适用于：Windows PowerShell 5.0
 
-本地配置管理器 (LCM) 是 Desired State Configuration (DSC) 的引擎。
-LCM 在每个目标节点上运行，负责分析和执行发送到节点的配置。
-它还负责 DSC 的许多方面，包括以下各方面。
+本地配置管理器 (LCM) 是 Desired State Configuration (DSC) 的引擎。 LCM 在每个目标节点上运行，负责分析和执行发送到节点的配置。 它还负责 DSC 的许多方面，包括以下各方面。
 
 - 确定刷新模式（推送或请求）。
 - 指定节点请求和执行配置的频率。
 - 将节点与请求服务相关联。
 - 指定部分配置。
 
-使用特殊类型的配置将 LCM 配置为指定以上各行为。
-以下各节介绍如何配置 LCM。
+使用特殊类型的配置将 LCM 配置为指定以上各行为。 以下各节介绍如何配置 LCM。
 
-Windows PowerShell 5.0 引入了全新的设置来管理本地配置管理器。
-有关在 Windows PowerShell 4.0 中配置 LCM 的信息，请参阅[在早期版本的 Windows PowerShell 中配置本地配置管理器](metaconfig4.md)。
+Windows PowerShell 5.0 引入了全新的设置来管理本地配置管理器。 有关在 Windows PowerShell 4.0 中配置 LCM 的信息，请参阅[在早期版本的 Windows PowerShell 中配置本地配置管理器](metaconfig4.md)。
 
 ## <a name="writing-and-enacting-an-lcm-configuration"></a>编写和执行 LCM 配置
 
 若要配置 LCM，请创建并运行应用 LCM 设置的特殊类型的配置。
-若要指定 LCM 配置，你可以使用 DscLocalConfigurationManager 特性。
-下面演示将 LCM 设置为推送模式的简单配置。
+若要指定 LCM 配置，你可以使用 DscLocalConfigurationManager 特性。 下面演示将 LCM 设置为推送模式的简单配置。
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -48,27 +43,20 @@ configuration LCMConfig
 }
 ```
 
-将设置应用于 LCM 的过程与应用 DSC 配置的过程类似。
-创建 LCM 配置、将其编译为 MOF 文件，然后应用于节点。
-与 DSC 配置不同的是，不通过调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet 来执行 LCM 配置。
-而是通过调用 [Set-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager)，将路径作为参数提供给 LCM 配置 MOF。
-执行 LCM 配置后，可以通过调用 [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) cmdlet 查看 LCM 的属性。
+将设置应用于 LCM 的过程与应用 DSC 配置的过程类似。 创建 LCM 配置、将其编译为 MOF 文件，然后应用于节点。 与 DSC 配置不同的是，不通过调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet 来执行 LCM 配置。 而是通过调用 [Set-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager)，将路径作为参数提供给 LCM 配置 MOF。 执行 LCM 配置后，可以通过调用 [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) cmdlet 查看 LCM 的属性。
 
-LCM 配置只能包含有限组资源的块。
-在上面的示例中，调用的唯一资源名为 **Settings**。
-其他可用资源有：
+LCM 配置只能包含有限组资源的块。 在上面的示例中，调用的唯一资源名为 **Settings**。 其他可用资源有：
 
-* **ConfigurationRepositoryWeb**：指定用于配置的 HTTP 请求服务。
-* **ConfigurationRepositoryShare**：指定用于配置的 SMB 共享。
-* **ResourceRepositoryWeb**：指定用于模块的 HTTP 请求服务。
-* **ResourceRepositoryShare**：指定用于模块的 SMB 共享。
-* **ReportServerWeb**：指定将报告发送到的 HTTP 请求服务。
-* **PartialConfiguration**：提供数据以启用部分配置。
+- **ConfigurationRepositoryWeb**：指定用于配置的 HTTP 请求服务。
+- **ConfigurationRepositoryShare**：指定用于配置的 SMB 共享。
+- **ResourceRepositoryWeb**：指定用于模块的 HTTP 请求服务。
+- **ResourceRepositoryShare**：指定用于模块的 SMB 共享。
+- **ReportServerWeb**：指定将报告发送到的 HTTP 请求服务。
+- **PartialConfiguration**：提供数据以启用部分配置。
 
 ## <a name="basic-settings"></a>基本设置
 
-不通过指定请求服务终结点/路径和部分配置 LCM 的所有属性，而是在 Settings  块中进行配置。
-**Settings** 块中提供下列属性。
+不通过指定请求服务终结点/路径和部分配置 LCM 的所有属性，而是在 Settings  块中进行配置。 **Settings** 块中提供下列属性。
 
 |  properties  |  类型  |  说明   |
 |----------- |------- |--------------- |
@@ -91,13 +79,10 @@ LCM 配置只能包含有限组资源的块。
 > [!NOTE]
 > LCM 基于以下条件启动 ConfigurationModeFrequencyMins  周期：
 >
-> - 使用 `Set-DscLocalConfigurationManager` 应用新的元配置
+> - 使用 `Set-DscLocalConfigurationManager` 应用更改了 ConfigurationModeFrequencyMins 的新的元配置
 > - 计算机重新启动
 >
-> 对于计时器进程遇到故障的任何状况，会在 30 秒内检测到该状况，并且会重新启动周期。
-> 并发操作可能会延迟周期启动，如果此操作的持续时间超过配置的频率，则下一个计时器不会启动。
->
-> 例如，元配置以 15 分钟请求频率进行配置，请求会在 T1 进行。  节点未在 16 分钟内完成工作。  第一个 15 分钟周期会被忽略，下一个请求会在 T1+15+15 进行。
+> 对于计时器进程遇到故障的任何状况，会在 30 秒内检测到该状况，并且会重新启动周期。 并发操作可能会延迟周期启动，如果此操作的持续时间超过配置的频率，则下一个计时器不会启动。 例如，元配置以 15 分钟请求频率进行配置，请求会在 T1 进行。 节点未在 16 分钟内完成工作。 第一个 15 分钟周期会被忽略，下一个请求会在 T1+15+15 进行。
 
 ## <a name="pull-service"></a>请求服务
 
@@ -111,8 +96,7 @@ LCM 配置支持定义以下类型的请求服务终结点：
 
 ## <a name="configuration-server-blocks"></a>配置服务器块
 
-若要定义基于 Web 的配置服务器，请创建 **ConfigurationRepositoryWeb** 块。
-**ConfigurationRepositoryWeb** 定义以下属性。
+若要定义基于 Web 的配置服务器，请创建 **ConfigurationRepositoryWeb** 块。 **ConfigurationRepositoryWeb** 定义以下属性。
 
 |properties|类型|说明|
 |---|---|---|
@@ -125,38 +109,35 @@ LCM 配置支持定义以下类型的请求服务终结点：
 |ProxyCredential*|pscredential|用于 http 代理的凭据。|
 
 > [!NOTE]
->
-> * 在 Windows 版本 1809 及更高版本中受支持。
+> 在 Windows 版本 1809 及更高版本中受支持。
 
-提供简化本地节点的 ConfigurationRepositoryWeb 值配置的示例脚本 - 请参阅[生成 DSC 元配置](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
+提供简化本地节点的 ConfigurationRepositoryWeb 值配置的示例脚本 - 请参阅[生成 DSC 元配置](/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
-要定义基于 SMB 的配置服务器，请创建 **ConfigurationRepositoryShare** 块。
-**ConfigurationRepositoryShare** 定义以下属性。
+要定义基于 SMB 的配置服务器，请创建 **ConfigurationRepositoryShare** 块。 **ConfigurationRepositoryShare** 定义以下属性。
 
-|properties|类型|说明|
-|---|---|---|
-|凭据|MSFT_Credential|用于对 SMB 共享进行身份验证的凭据。|
-|SourcePath|字符串|SMB 共享的路径。|
+|  properties  |      类型       |                      说明                      |
+| ---------- | --------------- | ----------------------------------------------------- |
+| 凭据 | MSFT_Credential | 用于对 SMB 共享进行身份验证的凭据。 |
+| SourcePath | 字符串          | SMB 共享的路径。                            |
 
 ## <a name="resource-server-blocks"></a>资源服务器块
 
 若要定义基于 Web 的资源服务器，请创建 **ResourceRepositoryWeb** 块。
 **ResourceRepositoryWeb** 定义以下属性。
 
-|properties|类型|说明|
-|---|---|---|
-|AllowUnsecureConnection|bool|设置为 **$TRUE** 以允许无需身份验证即可从节点连接到服务器。 设置为 **$FALSE** 以要求进行身份验证。|
-|CertificateID|字符串|用于向服务器进行身份验证的证书指纹。|
-|RegistrationKey|字符串|用于将节点标识到请求服务的 GUID。|
-|ServerURL|字符串|配置服务器的 URL。|
-|ProxyURL*|字符串|要在与配置服务通信时使用的 http 代理的 URL。|
-|ProxyCredential*|pscredential|用于 http 代理的凭据。|
+|        properties         |     类型     |                                                              说明                                                               |
+| ----------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| AllowUnsecureConnection | bool         | 设置为 **$TRUE** 以允许无需身份验证即可从节点连接到服务器。 设置为 **$FALSE** 以要求进行身份验证。 |
+| CertificateID           | 字符串       | 用于向服务器进行身份验证的证书指纹。                                                                    |
+| RegistrationKey         | 字符串       | 用于将节点标识到请求服务的 GUID。                                                                                   |
+| ServerURL               | 字符串       | 配置服务器的 URL。                                                                                                   |
+| ProxyURL*               | 字符串       | 要在与配置服务通信时使用的 http 代理的 URL。                                                    |
+| ProxyCredential*        | pscredential | 用于 http 代理的凭据。                                                                                                  |
 
 > [!NOTE]
->
-> * 在 Windows 版本 1809 及更高版本中受支持。
+> 在 Windows 版本 1809 及更高版本中受支持。
 
-提供简化本地节点的 ResourceRepositoryWeb 值配置的示例脚本 - 请参阅[生成 DSC 元配置](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
+提供简化本地节点的 ResourceRepositoryWeb 值配置的示例脚本 - 请参阅[生成 DSC 元配置](/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
 若要定义的基于 SMB 的资源服务器，请创建 **ResourceRepositoryShare** 块。
 **ResourceRepositoryShare** 定义以下属性。
@@ -168,29 +149,25 @@ LCM 配置支持定义以下类型的请求服务终结点：
 
 ## <a name="report-server-blocks"></a>报表服务器块
 
-若要定义报表服务器，请创建 **ReportServerWeb** 块。
-报表服务器角色与基于 SMB 的请求服务不兼容。
-**ReportServerWeb** 定义以下属性。
+若要定义报表服务器，请创建 **ReportServerWeb** 块。 报表服务器角色与基于 SMB 的请求服务不兼容。 **ReportServerWeb** 定义以下属性。
 
-|properties|类型|说明|
-|---|---|---|
-|AllowUnsecureConnection|bool|设置为 **$TRUE** 以允许无需身份验证即可从节点连接到服务器。 设置为 **$FALSE** 以要求进行身份验证。|
-|CertificateID|字符串|用于向服务器进行身份验证的证书指纹。|
-|RegistrationKey|字符串|用于将节点标识到请求服务的 GUID。|
-|ServerURL|字符串|配置服务器的 URL。|
-|ProxyURL*|字符串|要在与配置服务通信时使用的 http 代理的 URL。|
-|ProxyCredential*|pscredential|用于 http 代理的凭据。|
+|        properties         |     类型     |                                                              说明                                                               |
+| ----------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| AllowUnsecureConnection | bool         | 设置为 **$TRUE** 以允许无需身份验证即可从节点连接到服务器。 设置为 **$FALSE** 以要求进行身份验证。 |
+| CertificateID           | 字符串       | 用于向服务器进行身份验证的证书指纹。                                                                    |
+| RegistrationKey         | 字符串       | 用于将节点标识到请求服务的 GUID。                                                                                   |
+| ServerURL               | 字符串       | 配置服务器的 URL。                                                                                                   |
+| ProxyURL*               | 字符串       | 要在与配置服务通信时使用的 http 代理的 URL。                                                    |
+| ProxyCredential*        | pscredential | 用于 http 代理的凭据。                                                                                                  |
 
 > [!NOTE]
->
-> * 在 Windows 版本 1809 及更高版本中受支持。
+> 在 Windows 版本 1809 及更高版本中受支持。
 
-提供简化本地节点的 ReportServerWeb 值配置的示例脚本 - 请参阅[生成 DSC 元配置](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
+提供简化本地节点的 ReportServerWeb 值配置的示例脚本 - 请参阅[生成 DSC 元配置](/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
 ## <a name="partial-configurations"></a>部分配置
 
-若要定义部分配置，请创建 **PartialConfiguration** 块。
-有关部分配置的详细信息，请参阅 [DSC 部分配置](../pull-server/partialConfigs.md)。
+若要定义部分配置，请创建 **PartialConfiguration** 块。 有关部分配置的详细信息，请参阅 [DSC 部分配置](../pull-server/partialConfigs.md)。
 **PartialConfiguration** 定义以下属性。
 
 |properties|类型|说明|
@@ -199,17 +176,19 @@ LCM 配置支持定义以下类型的请求服务终结点：
 |DependsOn|string{}|应用此部分配置之前必须完成的其他配置名称的列表。|
 |说明|字符串|用于描述部分配置的文本。|
 |ExclusiveResources|string[]|此部分配置专用的资源数组。|
-|RefreshMode|字符串|指定 LCM 如何获取此部分配置。 可取值为 __Disabled__、__Push__ 和 __Pull__。 <ul><li>__Disabled__：禁用此部分配置。</li><li> __Push__：通过调用 [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration) cmdlet 将部分配置推送到节点。 从服务推送或请求该节点的所有部分配置后，可以通过调用 `Start-DscConfiguration –UseExisting` 来启动配置。 这是默认值。</li><li>__Pull：__ 将节点配置为从拉取服务定期检查部分配置。 如果将此属性设置为 __Pull__，则必须在 __ConfigurationSource__ 属性中指定请求服务。 有关 Azure 自动化请求服务的详细信息，请参阅 [Azure 自动化 DSC 概述](https://docs.microsoft.com/azure/automation/automation-dsc-overview)。</li></ul>|
+|RefreshMode|字符串|指定 LCM 如何获取此部分配置。 可取值为 __Disabled__、__Push__ 和 __Pull__。 <ul><li>__Disabled__：禁用此部分配置。</li><li> __Push__：通过调用 [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration) cmdlet 将部分配置推送到节点。 从服务推送或请求该节点的所有部分配置后，可以通过调用 `Start-DscConfiguration –UseExisting` 来启动配置。 这是默认值。</li><li>__Pull：__ 将节点配置为从拉取服务定期检查部分配置。 如果将此属性设置为 __Pull__，则必须在 __ConfigurationSource__ 属性中指定请求服务。 有关 Azure 自动化请求服务的详细信息，请参阅 [Azure 自动化 DSC 概述](/azure/automation/automation-dsc-overview)。</li></ul>|
 |ResourceModuleSource|string[]|可从中下载此部分配置所需资源的资源服务器的名称数组。 这些名称必须表示之前在 ResourceRepositoryWeb  和 ResourceRepositoryShare  块中定义的服务终结点。|
 
-__注意：__ Azure 自动化 DSC 支持部分配置，但每个节点只能从每个自动化帐户中请求一个配置。
+> [!NOTE]
+> Azure Automation DSC 支持部分配置，但每个节点只能从每个自动化帐户中请求一个配置。
 
 ## <a name="see-also"></a>另请参阅
 
 ### <a name="concepts"></a>概念
+
 [Desired State Configuration 概述](../overview/overview.md)
 
-[Azure 自动化 DSC 入门](https://docs.microsoft.com/azure/automation/automation-dsc-getting-started)
+[Azure 自动化 DSC 入门](/azure/automation/automation-dsc-getting-started)
 
 ### <a name="other-resources"></a>其他资源
 

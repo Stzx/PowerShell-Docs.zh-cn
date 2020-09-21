@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,配置,安装程序
 title: ResourceTest 方法
-ms.openlocfilehash: ff06fd645a94055e79aa0f8d20f2f06e16483720
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7ef65227342091cb2a5063aaf95a2780d217f85a
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954944"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463799"
 ---
 # <a name="resourcetest-method"></a>ResourceTest 方法
 
@@ -30,9 +30,9 @@ ResourceType  \[in\]：要调用的资源的名称。
 
 ModuleName  \[in\]：包含要调用资源的模块名称。
 
-resourceProperty  \[in\]：在哈希表中分别将资源属性名及其值指定为键和值。 使用 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet 可以发现资源属性及其类型。
+***resourceProperty** \[in\] 在哈希表中分别将资源属性名及其值指定为键和值。 使用 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet 可以发现资源属性及其类型。
 
-InDesiredState  \[out\]：返回响应时，如果目标节点处于所需状态，便会将此属性设置为 true  。
+*InDesiredState** \[out\] 返回响应时，如果目标节点处于所需状态，便会将此属性设置为 true。
 
 ## <a name="return-value"></a>返回值
 

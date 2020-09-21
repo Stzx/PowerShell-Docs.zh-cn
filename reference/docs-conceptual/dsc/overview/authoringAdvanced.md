@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 了解 CI/CD 管道中的 DSC 角色
-ms.openlocfilehash: 8d7244a6e5e2c215d9d3ada959b716df2cce0b83
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 6df621f45caed3ac8a8b4dd1afa575d413259e0d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500827"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783103"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>了解 CI/CD 管道中的 DSC 角色
 
 本文介绍了可用于组合配置和资源的方法类型。
 每种方案的目标都是相同的，即在首选多个配置时降低复杂性以达到服务器部署最终状态。 为服务器部署结果做出贡献的多个团队可作为该方面的一个示例，例如维护应用程序状态的应用程序所有者和释放安全基线更改的中央团队。 此处详细介绍了每种方法的细微差别，包括收益和风险。
 
-![管道](media/authoringAdvanced/Pipeline.jpg)
+![CI/CD 管道流程](media/authoringAdvanced/Pipeline.jpg)
 
 ## <a name="types-of-collaborative-authoring-techniques"></a>协同创作技术的类型
 
@@ -33,7 +33,7 @@ ms.locfileid: "80500827"
 
 使用部分配置时，将本地 Configuration Manager 配置为独立管理多个配置。 独立编译配置，然后将其分配给节点。 这需要提前使用每个配置的名称配置 LCM。
 
-![PartialConfiguration](media/authoringAdvanced/PartialConfiguration.jpg)
+![部分配置的图示](media/authoringAdvanced/PartialConfiguration.jpg)
 
 部分配置提供两个或以上完全控制服务器配置的团队，通常没有通信或协作的权益。
 
@@ -45,7 +45,7 @@ ms.locfileid: "80500827"
 
 在下图中，团队 B 将其部分配置发布到团队 A，然后团队 A 针对应用了两种配置的服务器运行测试。 在此模型中，只有一个机构有权在生产中进行更改。
 
-![PartialSinglePipeline](media/authoringAdvanced/PartialSinglePipeline.jpg)
+![部分单管道的图示](media/authoringAdvanced/PartialSinglePipeline.jpg)
 
 团队 B 需要进行更改时，他们应针对团队 A 的源代码管理环境提交拉取请求。 若确信更改不会导致服务器托管的应用程序或服务出现错误，则团队 A 将使用测试自动化审阅更改并将其发布到生产中。
 
@@ -53,7 +53,7 @@ ms.locfileid: "80500827"
 
 复合资源只是作为资源打包的 DSC 配置。 配置 LCM 以接受复合资源没有特殊要求。 在新配置中使用资源，在一个 MOF 文件中生成单个编译结果。
 
-![CompositeResource](media/authoringAdvanced/CompositeResource.jpg)
+![复合资源的图示](media/authoringAdvanced/CompositeResource.jpg)
 
 复合资源有两种常见方案。 第一个方案是降低复杂性和抽象独特概念。 第二个方案是允许为应用程序团队打包基线，以便在所有测试通过后通过其发布管道将其安全地部署到生产。
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: 使用 PowerShell 类编写自定义 DSC 资源
-ms.openlocfilehash: f96a567253ab4808381c004df243c96886948407
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: b7f6d3135cb1da7ade106f8a4cc41e3afb7306af
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692227"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217553"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>使用 PowerShell 类编写自定义 DSC 资源
 
@@ -15,17 +15,19 @@ ms.locfileid: "83692227"
 
 了解了在 Windows PowerShell 5.0 中使用 PowerShell 类的简介后，现在你可以通过创建一个类来定义 DSC 资源。 类可以同时定义资源的架构和实现，因此无需创建单独的 MOF 文件。 因为无需 **DSCResources** 文件夹，基于类的资源的文件夹结构也得以简化。
 
-在基于类的 DSC 资源中，架构被定义为类的属性，可通过特性对其进行修改来指定属性类型。 资源通过 **Get()** 、**Set()** 和 **Test()** 的方法得到实现（相当于脚本资源中的 **Get-TargetResource**、**Set-TargetResource** 和 **Test-TargetResource** 函数）。
+在基于类的 DSC 资源中，架构被定义为类的属性，可通过特性对其进行修改来指定属性类型。 资源通过 `Get()` 、`Set()` 和 `Test()` 的方法得到实现（相当于脚本资源中的 `Get-TargetResource`、`Set-TargetResource` 和 `Test-TargetResource` 函数）。
 
 在本主题中，我们将创建一个名为 **FileResource** 的简单资源来管理指定路径中的文件。
 
 有关 DSC 资源的详细信息，请参阅[构建自定义 Windows PowerShell Desired State Configuration 资源](authoringResource.md)。
 
->**注意：** 基于类的资源中不支持泛型集合。
+> [!Note]
+> 基于类的资源中不支持泛型集合。
 
 ## <a name="folder-structure-for-a-class-resource"></a>类资源的文件夹结构
 
-想要使用 PowerShell 类实现 DSC 自定义资源，请创建下列文件夹结构。 在 **MyDscResource.psm1** 中定义类，并且在 **MyDscResource.psd1** 中定义模块清单。
+想要使用 PowerShell 类实现 DSC 自定义资源，请创建下列文件夹结构。
+在 `MyDscResource.psm1` 中定义类，并且在 `MyDscResource.psd1` 中定义模块清单。
 
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -36,7 +38,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 ## <a name="create-the-class"></a>创建类
 
-使用类关键字创建 PowerShell 类。 使用 **DscResource()** 特性来指定类是 DSC 资源。 类的名称就是 DSC 资源的名称。
+使用类关键字创建 PowerShell 类。 使用 `DscResource()` 特性来指定类是 DSC 资源。 类的名称就是 DSC 资源的名称。
 
 ```powershell
 [DscResource()]
@@ -66,10 +68,10 @@ DSC 资源架构被定义为类的属性。 我们声明下列三个属性。
 
 - **DscProperty(Key)** ：属性是必需的。 属性为键。 所有被标记为键的属性的值必须接合以唯一地标识配置内的资源实例。
 - **DscProperty(Mandatory)** ：属性是必需的。
-- **DscProperty(NotConfigurable)** ：属性为只读属性。 使用此特性标记的属性不能通过配置进行设置，但出现时使用 **Get()** 方法进行填充。
+- **DscProperty(NotConfigurable)** ：属性为只读属性。 使用此特性标记的属性不能通过配置进行设置，但出现时使用 `Get()` 方法进行填充。
 - **DscProperty()** ：属性可配置，但不是必需的。
 
-**$Path** 和 **$SourcePath** 属性都是字符串。 **$CreationTime** 是一个 [DateTime](/dotnet/api/system.datetime) 属性。 **$Ensure** 属性是枚举类，定义如下。
+`$Path` 和 `$SourcePath` 属性均为字符串。 `$CreationTime` 是一个 [DateTime](/dotnet/api/system.datetime) 属性。 `$Ensure` 属性是枚举类，定义如下。
 
 ```powershell
 enum Ensure
@@ -81,9 +83,9 @@ enum Ensure
 
 ### <a name="implementing-the-methods"></a>实现该方法
 
-**Get()** 、**Set()** 和 **Test()** 方法类似于脚本资源中的 **Get-TargetResource**、**Set-TargetResource** 和 **Test-TargetResource** 函数。
+`Get()` 、`Set()` 和 `Test()` 方法类似于脚本资源中的 `Get-TargetResource`、`Set-TargetResource` 和 `Test-TargetResource` 函数。
 
-此代码还包括 CopyFile() 函数，是一个可将文件从 **$SourcePath** 复制到 **$Path** 的 helper 函数。
+此代码还包括 `CopyFile()` 函数，这是一个可将文件从 `$SourcePath` 复制到 `$Path` 的 helper 函数。
 
 ```powershell
     <#
@@ -416,7 +418,7 @@ class FileResource
 
 ## <a name="create-a-manifest"></a>创建清单
 
-若要让基于类的资源对 DSC 引擎可用，你必须在清单文件中添加 **DscResourcesToExport** 声明，以指示模块导出资源。 我们的清单如下所示：
+若要让基于类的资源对 DSC 引擎可用，你必须在清单文件中添加 `DscResourcesToExport` 声明，以指示模块导出资源。 我们的清单如下所示：
 
 ```powershell
 @{
@@ -473,15 +475,13 @@ Start-DscConfiguration -Wait -Force Test
 
 ## <a name="supporting-psdscrunascredential"></a>支持 PsDscRunAsCredential
 
->**注意：** PsDscRunAsCredential 在 PowerShell 5.0 及更高版本中受支持。
+> [注意] PsDscRunAsCredential 在 PowerShell 5.0 及更高版本中受支持。
 
-可以在 [DSC 配置](../configurations/configurations.md)资源块中使用 PsDscRunAsCredential 属性，以指定应使用指定的一组凭据运行资源。
-有关详细信息，请参阅[使用用户凭据运行 DSC](../configurations/runAsUser.md)。
+可以在 [DSC 配置](../configurations/configurations.md)资源块中使用 PsDscRunAsCredential 属性，以指定应使用指定的一组凭据运行资源。 有关详细信息，请参阅[使用用户凭据运行 DSC](../configurations/runAsUser.md)。
 
 ### <a name="require-or-disallow-psdscrunascredential-for-your-resource"></a>需要或禁止对资源使用 PsDscRunAsCredential
 
-DscResource() 属性需要使用可选的参数 RunAsCredential。
-此参数可取以下三个值之一：
+`DscResource()` 属性使用可选参数 RunAsCredential。 此参数可取以下三个值之一：
 
 - `Optional` PsDscRunAsCredential：对于调用此资源的配置，此为可选值。 这是默认值。
 - `Mandatory` PsDscRunAsCredential：必须用它来调用此资源的所有配置。
@@ -511,7 +511,7 @@ class FileResource {
            |- SecondResource.psm1
    ```
 
-2. 定义“DSCResources”文件夹下的所有资源。
+1. 定义“DSCResources”文件夹下的所有资源。
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)

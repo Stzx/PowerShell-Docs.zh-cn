@@ -1,20 +1,20 @@
 ---
-ms.date: 12/12/2018
+ms.date: 06/22/2020
 keywords: dsc,powershell,配置,服务,设置
 title: 编写、编译和应用配置
-ms.openlocfilehash: 11de1d4552bc9c438adf9e3dea2059834e11e10c
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 9acb2db882795d7150326fadb2964deb1105b2cc
+ms.sourcegitcommit: 7eea0885dd7ac90ab36e5664501438a292217f7f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808293"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295669"
 ---
 # <a name="write-compile-and-apply-a-configuration"></a>编写、编译和应用配置
 
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
-本练习演示创建和应用 Desired State Configuration (DSC) 配置的完整过程。
-在以下示例中，你将学习如何编写和应用一个非常简单的配置。 该配置会确保本地计算机上存在“HelloWorld.txt”文件。 如果删除该文件，则 DSC 会在下次更新时重新创建它。
+本练习演示创建和应用 Desired State Configuration (DSC) 配置的完整过程。 在以下示例中，你将学习如何编写和应用一个非常简单的配置。 该配置会确保本地计算机上存在“HelloWorld.txt”文件。
+如果删除该文件，则 DSC 会在下次更新时重新创建它。
 
 有关什么是 DSC 及其工作原理的概述，请参阅[面向开发人员的 Desired State Configuration 概述](../overview/overview.md)。
 
@@ -34,10 +34,12 @@ Configuration HelloWorld {
     # Import the module that contains the File resource.
     Import-DscResource -ModuleName PsDesiredStateConfiguration
 
-    # The Node statement specifies which targets to compile MOF files for, when this configuration is executed.
+    # The Node statement specifies which targets to compile MOF files for, when
+    # this configuration is executed.
     Node 'localhost' {
 
-        # The File resource can ensure the state of files, or copy them from a source to a destination with persistent updates.
+        # The File resource can ensure the state of files, or copy them from a
+        # source to a destination with persistent updates.
         File HelloWorld {
             DestinationPath = "C:\Temp\HelloWorld.txt"
             Ensure = "Present"
@@ -47,8 +49,8 @@ Configuration HelloWorld {
 }
 ```
 
-> 重要提示！在需要导入多个模块以便在同一配置中使用多个 DSC 资源的更高级方案中，请务必使用 `Import-DscResource` 让每个模块单独占一行。
-> 这样一来，在源代码管理中更易于维护，这也是在 Azure 状态配置中使用 DSC 时所必需的操作。
+> [!IMPORTANT]
+> 在更为复杂的场景中，如果需要导入多个模块以便在同一配置中使用多个 DSC 资源，请务必使用 `Import-DscResource` 让每个模块单独占一行。 这样一来，在源代码管理中更易于维护，这也是在 Azure 状态配置中使用 DSC 时所必需的操作。
 >
 > ```powershell
 >  Configuration HelloWorld {
@@ -67,13 +69,10 @@ Configuration HelloWorld {
 
 ## <a name="compile-the-configuration"></a>编译配置
 
-对于要应用于节点的 DSC 配置，必须首先将其编译为 MOF 文件。
-与函数类似，运行配置会为 `Node` 块定义的每个节点编译一个“.mof”文件。
-若要运行配置，需要使用点将“HelloWorld.ps1”脚本的来源获取到当前范围中。
-有关详细信息，请参阅 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)。
+对于要应用于节点的 DSC 配置，必须首先将其编译为 MOF 文件。 与函数类似，运行配置会为 `Node` 块定义的每个节点编译一个 `.mof` 文件。 若要运行配置，需要使用点将 `HelloWorld.ps1` 脚本的来源获取到当前作用域内。 有关详细信息，请参阅 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)。
 
 <!-- markdownlint-disable MD038 -->
-通过在 `. `（点，空格）后键入用于存储“HelloWorld.ps1”脚本的路径，来使用点获取其来源。 随后可以通过调用配置（类似于函数）来运行它。
+通过在 `. `（点、空格）后键入用于存储 `HelloWorld.ps1` 脚本的路径，来使用点获取其来源。 随后可以通过调用配置（类似于函数）来运行它。 还可以调用脚本底部的配置函数，以便无需使用点获取来源。
 <!-- markdownlint-enable MD038 -->
 
 ```powershell
@@ -83,7 +82,7 @@ HelloWorld
 
 此操作生成以下输出：
 
-```output
+```Output
 Directory: C:\Scripts\HelloWorld
 
 
@@ -96,10 +95,9 @@ Mode                LastWriteTime         Length Name
 
 现在你已编译好 MOF，可以通过调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet 将配置应用于目标节点（在本例中为本地计算机）。
 
-`Start-DscConfiguration` cmdlet 通知作为 DSC 引擎的[本地配置管理器 (LCM)](../managing-nodes/metaConfig.md) 应用配置。
-LCM 的工作是调用 DSC 资源以应用配置。
+`Start-DscConfiguration` cmdlet 通知作为 DSC 引擎的[本地配置管理器 (LCM)](../managing-nodes/metaConfig.md) 应用配置。 LCM 的工作是调用 DSC 资源以应用配置。
 
-使用下面的代码执行 `Start-DSCConfiguration` cmdlet。 向 `-Path` 参数指定用于存储“localhost.mof”的目录路径。 `Start-DSCConfiguration` Cmdlet 在指定的目录中查找任何“\<computername\>.mof”文件。 `Start-DSCConfiguration` Cmdlet 尝试将找到的每个“.mof”文件应用于通过文件名指定的计算机名（“localhost”、“server01”、“dc-02”等）。
+使用下面的代码执行 `Start-DSCConfiguration` cmdlet。 向 Path 参数指定用于存储 `localhost.mof` 的目录路径。 `Start-DSCConfiguration` cmdlet 在指定的目录中查找任何 `<computername>.mof` 文件。 `Start-DSCConfiguration` cmdlet 尝试将找到的每个 `.mof` 文件应用于通过文件名指定的 `computername`（“localhost”、“server01”、“dc-02”等）。
 
 > [!NOTE]
 > 如果未指定 `-Wait` 参数，则 `Start-DSCConfiguration` 会创建后台作业来执行操作。 通过指定 `-Verbose` 参数可以观察操作的详细输出。 `-Wait` 和 `-Verbose` 是可选参数。
@@ -110,17 +108,17 @@ Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
 
 ## <a name="test-the-configuration"></a>测试配置
 
-`Start-DSCConfiguration` cmdlet 完成后，便应在指定的位置看到“HelloWorld.txt”文件。 可以使用 [Get-content](/powershell/module/microsoft.powershell.management/get-content) cmdlet 验证内容。
+`Start-DSCConfiguration` cmdlet 完成后，指定的位置就会出现 `HelloWorld.txt` 文件。 可以使用 [Get-content](/powershell/module/microsoft.powershell.management/get-content) cmdlet 验证内容。
 
 还可以使用 [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) 测试当前状态。
 
-如果节点当前符合所应用的配置，则输出应为“True”。
+如果节点当前符合所应用的配置，则输出应为 `True`。
 
 ```powershell
 Test-DSCConfiguration
 ```
 
-```output
+```Output
 True
 ```
 
@@ -128,7 +126,7 @@ True
 Get-Content -Path C:\Temp\HelloWorld.txt
 ```
 
-```output
+```Output
 Hello World from DSC!
 ```
 

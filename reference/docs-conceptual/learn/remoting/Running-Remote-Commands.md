@@ -1,19 +1,19 @@
 ---
-ms.date: 08/14/2018
+ms.date: 08/21/2020
 keywords: powershell,cmdlet
 title: 运行远程命令
-ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ab6d464c31144349ee38cd01e82a2cf1470aaa95
+ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030320"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88799615"
 ---
 # <a name="running-remote-commands"></a>运行远程命令
 
 可以使用单个 PowerShell 命令在一台或数百台计算机上运行命令。 Windows PowerShell 通过使用各种技术（包括 WMI、RPC 和 WS-Management）支持远程计算。
 
-PowerShell Core 支持 WMI、WS-Management 和 SSH 远程处理。 不再支持 RPC。
+PowerShell Core 支持 WMI、WS-Management 和 SSH 远程处理。 在 PowerShell 6 中，RPC 不再受支持。 在 PowerShell 7 及更高版本中，RPC 仅在 Windows 中受支持。
 
 有关在 PowerShell Core 中进行远程处理的详细信息，请参阅以下文章：
 
@@ -55,8 +55,7 @@ Get-Command | where { $_.parameters.keys -contains "ComputerName" -and $_.parame
 
 ### <a name="start-an-interactive-session"></a>启动交互会话
 
-若要使用单台远程计算机启动交互会话，请使用 [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet。
-例如，若要使用 Server01 远程计算器启动交互会话，请键入：
+若要使用单台远程计算机启动交互会话，请使用 [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet。 例如，若要使用 Server01 远程计算器启动交互会话，请键入：
 
 ```powershell
 Enter-PSSession Server01
@@ -77,7 +76,7 @@ Exit-PSSession
 
 ### <a name="run-a-remote-command"></a>运行远程命令
 
-若要在一台或多台计算机上运行一个命令，请使用 [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command) cmdlet。 例如，若要在 Server01 和 Server02 远程计算机上运行 [Get-UICulture ](/powershell/module/microsoft.powershell.utility/get-uiculture) 命令，请键入：
+若要在一台或多台计算机上运行一个命令，请使用 [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command) cmdlet。 例如，若要在 Server01 和 Server02 远程计算机上运行 [Get-UICulture](/powershell/module/microsoft.powershell.utility/get-uiculture) 命令，请键入：
 
 ```powershell
 Invoke-Command -ComputerName Server01, Server02 -ScriptBlock {Get-UICulture}
@@ -134,7 +133,7 @@ Windows PowerShell 包含一个 WSMan 提供程序。 提供程序创建 `WSMAN:
 
 有关详细信息，请参阅：
 
-- [有关远程的常见问题解答](https://technet.microsoft.com/library/dd315359.aspx)
+- [关于远程 FAQ](https://technet.microsoft.com/library/dd315359.aspx)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
 - [Import-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
 

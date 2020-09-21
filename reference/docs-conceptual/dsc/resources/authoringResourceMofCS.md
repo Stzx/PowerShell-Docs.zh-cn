@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: 在 C# 中创作 DSC 资源
-ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4652d5d99c32685e124f2cd1b718f973380ab16a
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417699"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217502"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>在 C 中创作 DSC 资源\#
 
@@ -18,6 +18,7 @@ ms.locfileid: "74417699"
 除在 C# 中用 cmdlet 实现资源外，创建 MOF 架构、创建文件夹结构、导入和使用自定义 DSC 资源的过程都与[使用 MOF 编写自定义 DSC 资源](authoringResourceMOF.md)中介绍的相同。
 
 ## <a name="writing-a-cmdlet-based-resource"></a>编写基于 cmdlet 的资源
+
 此示例中，我们将实现一个管理文本文件及其内容的简单资源。
 
 ### <a name="writing-the-mof-schema"></a>编写 MOF 架构
@@ -35,6 +36,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 ```
 
 ### <a name="setting-up-the-visual-studio-project"></a>设置 Visual Studio 项目
+
 #### <a name="setting-up-a-cmdlet-project"></a>设置 cmdlet 项目
 
 1. 打开 Visual Studio。
@@ -46,11 +48,9 @@ class MSFT_XDemoFile : OMI_BaseResource
 
 ### <a name="writing-the-cmdlet-code"></a>编写 cmdlet 代码
 
-下列 C# 代码会实现 **Get-TargetResource**、**Set-TargetResource** 和 **Test-TargetResource** cmdlet。
+以下 C# 代码实现 `Get-TargetResource`、`Set-TargetResource` 和 `Test-TargetResource` cmdlet。
 
 ```C#
-
-
 namespace cSharpDSCResourceExample
 {
     using System;
@@ -278,7 +278,11 @@ $env: psmodulepath (folder)
 ```
 
 ### <a name="see-also"></a>另请参阅
+
 #### <a name="concepts"></a>概念
+
 [使用 MOF 编写自定义 DSC 资源](authoringResourceMOF.md)
+
 #### <a name="other-resources"></a>其他资源
+
 [编写 Windows PowerShell Cmdlet](/powershell/scripting/developer/windows-powershell)

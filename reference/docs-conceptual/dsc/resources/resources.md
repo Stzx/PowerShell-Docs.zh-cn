@@ -1,13 +1,13 @@
 ---
-ms.date: 02/28/2020
+ms.date: 07/23/2020
 keywords: dsc,powershell,配置,安装程序
 title: DSC 资源
-ms.openlocfilehash: bae08447763a3bdb6ee8fcdd4f8d49209a5de805
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 6ab831c9d423c6189951b43bfab92f800366ceca
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692200"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777922"
 ---
 # <a name="dsc-resources"></a>DSC 资源
 
@@ -22,11 +22,11 @@ Desired State Configuration (DSC) 资源为 DSC 配置提供构建基块。 资�
 每个资源都具有用于确定使用[配置](../configurations/configurations.md)中的资源所需的语法的 *架构。
 可以按以下方式定义资源的架构：
 
-- `Schema.Mof` 文件：大多数资源使用[托管对象格式](/windows/desktop/wmisdk/managed-object-format--mof-)定义它们在“schema.mof”文件中的架构。
+- `Schema.Mof` 文件：大多数资源使用[托管对象格式](/windows/desktop/wmisdk/managed-object-format--mof-)定义它们在 `schema.mof` 文件中的架构。
 - `<Resource Name>.schema.psm1` 文件：[复合资源](../configurations/compositeConfigs.md)使用[参数块](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters)定义其在 `<ResourceName>.schema.psm1` 文件中的架构。
 - `<Resource Name>.psm1` 文件：基于类的 DSC 资源定义它们在类定义中的架构。 语法项表示为类属性。 有关详细信息，请参阅 [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc)。
 
-若要检索 DSC 资源的语法，请将 [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet 与 `-Syntax` 参数一起使用。 此用法类似于将 [Get-Command](/powershell/module/microsoft.powershell.core/get-command) 与 `-Syntax` 参数一起使用以获取 cmdlet 语法。 所看到的输出将显示用于指定资源的资源块的模板。
+若要检索 DSC 资源的语法，请将 [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet 与 Syntax 参数一起使用。 此用法类似于将 [Get-Command](/powershell/module/microsoft.powershell.core/get-command) 与 Syntax 参数一起使用以获取 cmdlet 语法。 所看到的输出将显示用于指定资源的资源块的模板。
 
 ```powershell
 Get-DscResource -Syntax Service
@@ -54,6 +54,9 @@ Service [String] #ResourceName
     [State = [string]{ Running | Stopped }]
 }
 ```
+
+> [!NOTE]
+> 在低于 7.0 的 PowerShell 版本中，`Get-DscResource` 找不到基于类的 DSC 资源。
 
 在配置内，Service 资源块可能如下所示以确保 Spooler 服务正在运行。
 
@@ -104,9 +107,9 @@ Configuration TestConfig
 ```
 
 > [!NOTE]
-> 从 PowerShell 5.0 开始，为 DSC 添加了 Intellisense。 借助这一新功能，可以使用 <kbd>TAB</kbd> 和 <kbd>Ctr</kbd>+<kbd>Space</kbd> 自动补全键名称。
+> 从 PowerShell 5.0 开始，为 DSC 添加了 IntelliSense。 借助这一新功能，可以使用 <kbd>TAB</kbd> 和 <kbd>Ctr</kbd>+<kbd>Space</kbd> 自动补全键名称。
 
-![资源 Tab 自动补全](media/resources/resource-tabcompletion.png)
+![使用 Tab 自动补全的资源 IntelliSense](media/resources/resource-tabcompletion.png)
 
 ## <a name="types-of-resources"></a>资源类型
 

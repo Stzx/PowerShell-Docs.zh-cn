@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,配置,安装程序
 title: DSC Archive 资源
-ms.openlocfilehash: 679de8b965304c149b10321e73e42b224f49ecc5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: cbe32012c2035fb3e145bd06fadd73cdba93fd3e
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560366"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463782"
 ---
 # <a name="dsc-archive-resource"></a>DSC Archive 资源
 
@@ -23,6 +23,7 @@ Archive [string] #ResourceName
     Destination = [string]
     Path = [string]
     [ Checksum = [string] { CreatedDate | ModifiedDate | SHA-1 | SHA-256 | SHA-512 } ]
+    [ Credential = [PSCredential] ]
     [ Force = [bool] ]
     [ Validate = [bool] ]
     [ Ensure = [string] { Absent | Present } ]
@@ -35,11 +36,12 @@ Archive [string] #ResourceName
 
 |properties |说明 |
 |---|---|
-|目标 |指定你想将存档内容提取至哪个位置。 |
-|路径 |指定存档文件的源路径。 |
-|校验和 |定义当确定两个文件是否相同时使用的类型。 如果未指定**校验和**，则只是文件或目录名用于比较。 有效值包括：**SHA-1**、**SHA-256**、**SHA-512**、**createdDate**、**modifiedDate**。 如果指定**校验和**不指定**验证**，则配置会失败。 |
-|Force |某些文件操作（如覆盖文件或删除不为空的目录）将导致错误。 使用 **Force** 属性覆盖此类错误。 默认值为 **False**。 |
-|验证| 使用 **Checksum** 属性来确定存档是否和签名匹配。 如果指定**校验和**不指定**验证**，则配置会失败。 如果指定 Validate  而不指定 Checksum  ，则默认使用 SHA-256  Checksum  。 |
+| 目标 | 指定你想将存档内容提取至哪个位置。 |
+| 路径 | 指定存档文件的源路径。 |
+| 校验和 | 定义当确定两个文件是否相同时使用的类型。 如果未指定**校验和**，则只是文件或目录名用于比较。 有效值包括：**SHA-1**、**SHA-256**、**SHA-512**、**createdDate**、**modifiedDate**。 如果指定**校验和**不指定**验证**，则配置会失败。 |
+| 凭据 | 有权访问指定存档路径和目标的用户帐户的凭据（如有需要）。 |
+| Force | 某些文件操作（如覆盖文件或删除不为空的目录）将导致错误。 使用 **Force** 属性覆盖此类错误。 默认值为 **False**。 |
+| 验证| 使用 **Checksum** 属性来确定存档是否和签名匹配。 如果指定**校验和**不指定**验证**，则配置会失败。 如果指定 **Validate** 而不指定 **Checksum**，则默认使用 _SHA-256_ **Checksum**。 |
 
 ## <a name="common-properties"></a>公共属性
 
@@ -54,7 +56,7 @@ Archive [string] #ResourceName
 
 ## <a name="example"></a>示例
 
-以下示例演示如何使用 Archive 资源来确保名为 `Test.zip` 的存档文件的内容存在，并将内容提取到指定的目标位置。
+以下示例演示如何使用 Archive 资源来确保名为 `Test.zip` 的存档文件的内容存在，并将内容提取到要使用且经过授权的指定的目标位置。
 
 ```powershell
 Archive ArchiveExample {

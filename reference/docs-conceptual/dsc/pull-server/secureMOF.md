@@ -1,13 +1,13 @@
 ---
-ms.date: 10/31/2017
+ms.date: 07/06/2020
 keywords: dsc,powershell,配置,安装程序
 title: 保护 MOF 文件
-ms.openlocfilehash: 30b7ff276781b398aeae94e710c810f5fccafdfb
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b1319167010a85e639fdb51a1a0b8b472dfda3a6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556381"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778147"
 ---
 # <a name="securing-the-mof-file"></a>保护 MOF 文件
 
@@ -15,10 +15,10 @@ ms.locfileid: "83556381"
 
 DSC 通过应用存储于 MOF 文件中的信息来管理服务器节点的配置，其中本地配置管理器 (LCM) 在该文件中实现所需的结束状态。 由于此文件包含配置的详细信息，确保其安全非常重要。 本主题介绍如何确保目标节点已加密文件。
 
-自 PowerShell 版本 5.0 起，在将 MOF 文件应用于使用 `Start-DSCConfiguration` cmdlet 的节点时，默认情况下将加密整个 MOF 文件。 仅在使用请求服务协议实现解决方案（如果证书未被托管）时，才需用到本文所述相关过程，以确保目标节点下载的配置在被应用之前可由系统解密和读取（例如 Windows Server 中可用的请求服务）。 注册到 [Azure 自动化 DSC](https://docs.microsoft.com/azure/automation/automation-dsc-overview) 的节点将自动安装证书并使其由服务进行托管，无需承担管理开销。
+自 PowerShell 版本 5.0 起，在将 MOF 文件应用于使用 `Start-DSCConfiguration` cmdlet 的节点时，默认情况下将加密整个 MOF 文件。 仅在使用请求服务协议实现解决方案（如果证书未被托管）时，才需用到本文所述相关过程，以确保目标节点下载的配置在被应用之前可由系统解密和读取（例如 Windows Server 中可用的请求服务）。 注册到 [Azure 自动化 DSC](/azure/automation/automation-dsc-overview) 的节点将自动安装证书并使其由服务进行托管，无需承担管理开销。
 
 > [!NOTE]
-> 本主题讨论用于加密的证书。 对于加密，自签名证书就已足够，因为私钥始终保密，而加密并不表示信任该文档。 自签名证书*不*得用于身份验证目的。 应使用来自受信任的证书颁发机构 (CA) 的证书进行任何身份验证。
+> 本主题讨论用于加密的证书。 对于加密，自签名证书就已足够，因为私钥始终保密，而加密并不表示信任该文档。 自签名证书_不_得用于身份验证目的。 应使用来自受信任的证书颁发机构 (CA) 的证书进行任何身份验证。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -29,14 +29,17 @@ DSC 通过应用存储于 MOF 文件中的信息来管理服务器节点的配�
 - **每个目标节点的个人存储区中均保存了可加密的证书**。 在 Windows PowerShell 中，该存储区的路径为 Cert:\LocalMachine\My。 本主题中的示例使用“工作站身份验证”模板，你可以在[默认证书模板](https://technet.microsoft.com/library/cc740061(v=WS.10).aspx)中找到它（以及其他证书模板）。
 - 如果你将在计算机而不是目标节点上运行此配置，请**导出证书的公钥**，然后将其导入到你将要从中运行配置的计算机。 请确保仅导出**公**钥；保护私钥安全。
 
+> [!NOTE]
+> 当涉及加密时，脚本资源具有限制。 有关详细信息，请参阅[脚本资源](../reference/resources/windows/scriptResource.md#known-limitations)
+
 ## <a name="overall-process"></a>整体进程
 
  1. 设置证书、密钥和指纹，确保每个目标节点具有证书的副本，且配置计算机具有公钥和指纹。
- 2. 创建包含公钥的路径和指纹的配置数据块。
- 3. 创建配置脚本，该脚本定义目标节点的所需配置，并通过命令本地配置管理器使用证书及其指纹解密配置数据来设置目标节点上的解密。
- 4. 运行配置，这将设置本地配置管理器设置并启动 DSC 配置。
+ 1. 创建包含公钥的路径和指纹的配置数据块。
+ 1. 创建配置脚本，该脚本定义目标节点的所需配置，并通过命令本地配置管理器使用证书及其指纹解密配置数据来设置目标节点上的解密。
+ 1. 运行配置，这将设置本地配置管理器设置并启动 DSC 配置。
 
-![Diagram1](media/secureMOF/CredentialEncryptionDiagram1.png)
+![凭据加密的流程流](media/secureMOF/CredentialEncryptionDiagram1.png)
 
 ## <a name="certificate-requirements"></a>证书要求
 
@@ -45,14 +48,14 @@ DSC 通过应用存储于 MOF 文件中的信息来管理服务器节点的配�
 1. **密钥用法**：
    - 必须包含：“KeyEncipherment”和“DataEncipherment”。
    - 不应包含：“数字签名”。
-2. **增强型密钥用法**：
+1. **增强型密钥用法**：
    - 必须包含：文档加密 (1.3.6.1.4.1.311.80.1)。
    - 不应包含：客户端身份验证 (1.3.6.1.5.5.7.3.2) 和服务器身份验证 (1.3.6.1.5.5.7.3.1)。
-3. 证书的私钥在*目标节点_上可用。
-4. 证书的**提供程序**必须是“Microsoft RSA SChannel Cryptographic Provider”。
+1. 证书的私钥在*目标节点_上可用。
+1. 证书的**提供程序**必须是“Microsoft RSA SChannel Cryptographic Provider”。
 
 > [!IMPORTANT]
-> 虽然你可以使用包含“数字签名”密钥用法或某个身份验证 EKU 的证书，但这会导致加密密钥更容易被误用，而且更容易受到攻击。 因此，最好是使用为保护 DSC 凭据而专门创建的省略了这些密钥用法和 EKU 的证书。
+> 虽然可以使用包含“数字签名”密钥用法或某个身份验证 EKU 的证书，但这会导致加密密钥更容易被误用，而且更容易受到攻击。 因此，最好是使用为保护 DSC 凭据而专门创建的省略了这些密钥用法和 EKU 的证书。
 
 _目标节点_上满足这些条件的任何现有证书都可以用于保护 DSC 凭据。
 
@@ -61,7 +64,7 @@ _目标节点_上满足这些条件的任何现有证书都可以用于保护 DS
 可以采用两种方法创建和使用所需的加密证书（公钥-私钥对）。
 
 1. 在**目标节点**上创建密钥对，并仅将公钥导出到**创作节点**
-2. 在**创作节点**上创建密钥对，并将整个密钥对导出到**目标节点**
+1. 在**创作节点**上创建密钥对，并将整个密钥对导出到**目标节点**
 
 建议使用方法 1，因为用于解密 MOF 中凭据的私钥始终停留在目标节点上。
 
@@ -70,8 +73,8 @@ _目标节点_上满足这些条件的任何现有证书都可以用于保护 DS
 私钥必须是保密的，因为它可用于解密**目标节点**上的 MOF。为此，最简单的方法是在**目标节点**上创建私钥证书，并将**公钥证书**复制到用于将 DSC 配置编写到 MOF 文件中的计算机内。 下面的示例：
 
 1. 在**目标节点**上创建证书
-2. 在**目标节点**上导出公钥证书。
-3. 将公钥证书导入到**创作节点**上**我的**证书存储。
+1. 在**目标节点**上导出公钥证书。
+1. 将公钥证书导入到**创作节点**上**我的**证书存储。
 
 #### <a name="on-the-target-node-create-and-export-the-certificate"></a>在目标节点上：创建并导出证书
 
@@ -87,6 +90,7 @@ $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 一旦导出完成，需要将 `DscPublicKey.cer` 复制到**创作节点**。
 
 > 目标节点：Windows Server 2012 R2/Windows 8.1 及更早版本
+
 > [!WARNING]
 > 因为 Windows 10 和 Windows Server 2016 之前版本的 Windows 操作系统上的 `New-SelfSignedCertificate` cmdlet 不支持 Type 参数，因此，在这些操作系统上创建此证书需要其他方法。 在这种情况下，可以使用 `makecert.exe` 或者 `certutil.exe` 来创建证书。 一种替代方法是[从 Microsoft 脚本中心下载 New-SelfSignedCertificateEx.ps1 脚本](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 并改为使用它来创建证书：
 
@@ -128,9 +132,9 @@ Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cer
 或者，可以在**创作节点**上创建加密证书，并与**私钥**以 PFX 文件导出，然后在**目标节点**上导入。 这是当前用于在 _Nano Server_ 上实现 DSC 凭据加密的方法。 尽管 PFX 使用密码保护，但在传输过程中也应保证其安全性。 下面的示例：
 
 1. 在**创作节点**上创建证书
-2. 在**创作节点**上导出证书（包括私钥）。
-3. 从**创作节点**中删除私钥，但将公钥证书保留在**我的**存储。
-4. 将私钥证书导入到目标节点上的 My(Personal) 证书存储。
+1. 在**创作节点**上导出证书（包括私钥）。
+1. 从**创作节点**中删除私钥，但将公钥证书保留在**我的**存储。
+1. 将私钥证书导入到目标节点上的 My(Personal) 证书存储。
    - 必须将其添加到根存储，以便受到**目标节点**的信任。
 
 #### <a name="on-the-authoring-node-create-and-export-the-certificate"></a>在创作节点上：创建并导出证书
@@ -152,6 +156,7 @@ Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cer
 一旦导出完成，需要将 `DscPrivateKey.pfx` 复制到**目标节点**。
 
 > 目标节点：Windows Server 2012 R2/Windows 8.1 及更早版本
+
 > [!WARNING]
 > 因为 Windows 10 和 Windows Server 2016 之前版本的 Windows 操作系统上的 `New-SelfSignedCertificate` cmdlet 不支持 Type 参数，因此，在这些操作系统上创建此证书需要其他方法。 在这种情况下，可以使用 `makecert.exe` 或者 `certutil.exe` 来创建证书。 一种替代方法是[从 Microsoft 脚本中心下载 New-SelfSignedCertificateEx.ps1 脚本](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 并改为使用它来创建证书：
 
@@ -221,8 +226,8 @@ $ConfigData= @{
                 # The thumbprint of the Encryption Certificate
                 # used to decrypt the credentials on target node
                 Thumbprint = "AC23EA3A9E291A75757A556D0B71CBBF8C4F6FD8"
-            };
-        );
+            }
+        )
     }
 ```
 
@@ -237,8 +242,7 @@ configuration CredentialEncryptionExample
         [Parameter(Mandatory=$true)]
         [ValidateNotNullorEmpty()]
         [PsCredential] $credential
-        )
-
+    )
 
     Node $AllNodes.NodeName
     {
@@ -279,8 +283,7 @@ configuration CredentialEncryptionExample
         [Parameter(Mandatory=$true)]
         [ValidateNotNullorEmpty()]
         [PsCredential] $credential
-        )
-
+    )
 
     Node $AllNodes.NodeName
     {
@@ -336,8 +339,7 @@ configuration CredentialEncryptionExample
         [Parameter(Mandatory=$true)]
         [ValidateNotNullorEmpty()]
         [PsCredential] $credential
-        )
-
+    )
 
     Node $AllNodes.NodeName
     {
@@ -361,7 +363,6 @@ function Start-CredentialEncryptionExample
 {
     [CmdletBinding()]
     param ($computerName)
-
 
     [string] $thumbprint = Get-EncryptionCertificate -computerName $computerName -Verbose
     Write-Verbose "using cert: $thumbprint"
@@ -394,9 +395,7 @@ function Start-CredentialEncryptionExample
 
     Write-Verbose "Starting Configuration..."
     Start-DscConfiguration .\CredentialEncryptionExample -wait -Verbose
-
 }
-
 
 #region HelperFunctions
 
@@ -408,28 +407,30 @@ function Get-EncryptionCertificate
 {
     [CmdletBinding()]
     param ($computerName)
+
     $returnValue= Invoke-Command -ComputerName $computerName -ScriptBlock {
-            $certificates = dir Cert:\LocalMachine\my
+        $certificates = dir Cert:\LocalMachine\my
 
-            $certificates | %{
+        $certificates | %{
                     # Verify the certificate is for Encryption and valid
-                    if ($_.PrivateKey.KeyExchangeAlgorithm -and $_.Verify())
-                    {
-                        # Create the folder to hold the exported public key
-                        $folder= Join-Path -Path $env:SystemDrive\ -ChildPath $using:publicKeyFolder
-                        if (! (Test-Path $folder))
-                        {
-                            md $folder | Out-Null
-                        }
+            if ($_.PrivateKey.KeyExchangeAlgorithm -and $_.Verify())
+            {
+                # Create the folder to hold the exported public key
+                $folder= Join-Path -Path $env:SystemDrive\ -ChildPath $using:publicKeyFolder
+                if (! (Test-Path $folder))
+                {
+                    md $folder | Out-Null
+                }
 
-                        # Export the public key to a well known location
-                        $certPath = Export-Certificate -Cert $_ -FilePath (Join-Path -path $folder -childPath "EncryptionCertificate.cer")
+                # Export the public key to a well known location
+                $certPath = Export-Certificate -Cert $_ -FilePath (Join-Path -path $folder -childPath "EncryptionCertificate.cer")
 
-                        # Return the thumbprint, and exported certificate path
-                        return @($_.Thumbprint,$certPath);
-                    }
-                  }
+                # Return the thumbprint, and exported certificate path
+                return @($_.Thumbprint,$certPath);
+            }
         }
+    }
+
     Write-Verbose "Identified and exported cert..."
     # Copy the exported certificate locally
     $destinationPath = join-path -Path "$env:SystemDrive\$script:publicKeyFolder" -childPath "$computername.EncryptionCertificate.cer"

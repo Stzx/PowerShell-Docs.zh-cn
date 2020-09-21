@@ -3,16 +3,16 @@ title: 如何管理拉取请求
 description: 本文介绍 PowerShell-Docs 团队如何管理拉取请求。
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b9b37816dfdf38e4d8b7c2d66799164d0e97d257
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: af5280e91aa3744b6172dc3555df6989cb0ce1a2
+ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060382"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158167"
 ---
 # <a name="managing-pull-requests"></a>管理拉取请求
 
-本文记录了如何管理 PowerShell-Docs 存储库中的拉取请求。 本文旨在为 PowerShell-Docs 团队成员提供帮助。 在此处发布本文，以便为公共参与者提供流程透明性。
+本文说明了如何管理 PowerShell-Docs 存储库中的拉取请求。 本文旨在为 PowerShell-Docs 团队成员提供帮助。 在此处发布本文，以便为公共参与者提供流程透明性。
 
 ## <a name="best-practices"></a>最佳做法
 

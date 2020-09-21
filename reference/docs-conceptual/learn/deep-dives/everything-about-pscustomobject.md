@@ -1,14 +1,14 @@
 ---
 title: 关于 PSCustomObject 的各项须知内容
 description: PSCustomObject 是创建结构化数据的一种简单方法。
-ms.date: 05/23/2020
+ms.date: 07/29/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: fbc8b5b6d2cfafaa75fa820f420762a1804074ac
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 9a5cab7e662ef89b6565a29079ce1d5a657f94d0
+ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149490"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410132"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>关于 PSCustomObject 的各项须知内容
 
@@ -71,7 +71,7 @@ $myObject = New-Object -TypeName PSObject -Property $myHashtable
 
 ### <a name="saving-to-a-file"></a>保存到文件
 
-我发现将哈希表保存到文件的最佳方法是将其保存为 JSON。 可以将其导入回 `[PSCusomObject]`
+我发现将哈希表保存到文件的最佳方法是将其保存为 JSON。 可以将其导入回 `[PSCustomObject]`
 
 ```powershell
 $myObject | ConvertTo-Json -depth 1- | Set-Content -Path $Path
@@ -139,7 +139,7 @@ $myObject.$property
 
 我知道这看起来很奇怪，但确实有效。
 
-### <a name="convert-pscustomboject-into-a-hashtable"></a>将 pscustomboject 转换为哈希表
+### <a name="convert-pscustombobject-into-a-hashtable"></a>将 PSCustombObject 转换为哈希表
 
 要从上一节继续操作，可以动态地遍历属性并从中创建一个哈希表。
 
@@ -254,6 +254,9 @@ $myObject = [PSCustomObject]@{
 ```
 
 这刚好适用于这种语言，我很喜欢。 现在，我们有了一个具有正确类型名称的对象，接下来可以做更多工作。
+
+> [!NOTE]
+> 还可以使用 PowerShell 类创建自定义 PowerShell 类型。 有关详细信息，请参阅 [PowerShell 类概述](/powershell/module/Microsoft.PowerShell.Core/About/about_Classes)。
 
 ## <a name="using-defaultpropertyset-the-long-way"></a>使用 DefaultPropertySet（绕远路）
 

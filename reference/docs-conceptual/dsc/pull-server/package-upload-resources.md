@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 打包资源并将其上传到拉取服务器
-ms.openlocfilehash: 8aac343d7495ecda94ed76d1d97079397eecd65f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: d0e070b7aa43acbbbf087729d53f06dbc7e7734a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278489"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782882"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>打包资源并将其上传到拉取服务器
 
@@ -20,14 +20,14 @@ ms.locfileid: "78278489"
 
 ## <a name="package-resource-modules"></a>包资源模块
 
-可供客户端下载的每个资源必须存储在“.zip”文件中。 下面的示例将显示使用 [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0) 资源所需的步骤。
+可供客户端下载的每个资源必须存储在 `.zip` 文件中。 下面的示例将显示使用 [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0) 资源所需的步骤。
 
 > [!NOTE]
 > 如果有任何使用 PowerShell 4.0 的客户端，则将需要展开资源文件夹结构并删除任何版本的文件夹。 有关详细信息，请参阅[多个资源版本](../configurations/import-dscresource.md#multiple-resource-versions)。
 
-可以使用喜欢的任何实用工具、脚本或方法压缩资源目录。 在 Windows 中，可以  右键单击“xPSDesiredStateConfiguration”目录，然后依次选择“发送到”和“压缩文件夹”。
+可以使用喜欢的任何实用工具、脚本或方法压缩资源目录。 在 Windows 上，可以右键单击 `xPSDesiredStateConfiguration` 目录并选择“发送到”，然后选择“压缩文件夹” 。
 
-![右键单击](media/package-upload-resources/right-click.gif)
+![右键单击 - 发送到 - 压缩文件夹](media/package-upload-resources/right-click.gif)
 
 ### <a name="naming-the-resource-archive"></a>命名资源存档
 
@@ -37,11 +37,11 @@ ms.locfileid: "78278489"
 {ModuleName}_{Version}.zip
 ```
 
-在上面的示例中，“xPSDesiredStateConfiguration.zip”应重命名为“xPSDesiredStateConfiguration_8.4.4.0.zip”。
+在上面的示例中，应将 `xPSDesiredStateConfiguration.zip` 重命名为 `xPSDesiredStateConfiguration_8.4.4.0.zip`。
 
 ### <a name="create-checksums"></a>创建校验和
 
-压缩并重命名资源模块后，需要创建校验和  。  客户端上的 LCM 使用校验和  来确定该资源是否已更改，以及是否需要重新下载。 可以使用 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet 创建校验和，如下面的示例中所示。
+压缩并重命名资源模块后，需要创建校验和  。 客户端上的 LCM 使用校验和  来确定该资源是否已更改，以及是否需要重新下载。 可以使用 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet 创建校验和，如下面的示例中所示。
 
 ```powershell
 New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip

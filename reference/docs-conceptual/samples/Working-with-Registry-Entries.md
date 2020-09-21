@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 使用注册表条目
-ms.openlocfilehash: c1fd6f57f13240eb2039f2d5756796678800aee0
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7f8ee87cebb8b220570bcb969445071a72a68526
+ms.sourcegitcommit: d3f78120bdc9096c72aa0dfdbdd91efaf254c738
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030728"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758476"
 ---
 # <a name="working-with-registry-entries"></a>使用注册表条目
 
@@ -111,7 +111,7 @@ DevicePath   : C:\WINDOWS\inf
 此命令返回标准 Windows PowerShell 属性以及 **DevicePath** 属性。
 
 > [!NOTE]
-> 尽管 `Get-ItemProperty` 具有 Filter  、Include  和 Exclude  参数，但它们无法用于按属性名称进行筛选。 这些参数引用注册表项（即项路径），而不引用注册表条目。 注册表条目是项属性。
+> 尽管 `Get-ItemProperty` 具有 Filter  、Include  和 Exclude  参数，但它们无法用于按属性名称进行筛选。 这些参数引用注册表项（即项路径），而不引用注册表条目（即项属性）。
 
 另一种方法是使用 Reg.exe 命令行工具。 有关 reg.exe 的帮助，请在命令提示符下键入 `reg.exe /?`。 若要查找 DevicePath 条目，请使用 reg.exe，如以下命令中所示：
 
@@ -126,7 +126,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
     DevicePath  REG_EXPAND_SZ   %SystemRoot%\inf
 ```
 
-还可以使用 WshShell  COM 对象查找某些注册表条目，尽管此方法对大型二进制数据或包含诸如“\\”字符的注册表条目名称不起作用也是如此。 将属性名称附加到带有 \\ 分隔符的项路径：
+还可以使用 WshShell**** COM 对象查找某些注册表条目，尽管此方法对大型二进制数据或包含诸如“\\”字符的注册表条目名称不起作用也是如此。 将属性名称附加到带有 \\ 分隔符的项路径：
 
 ```powershell
 (New-Object -ComObject WScript.Shell).RegRead("HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DevicePath")
@@ -138,9 +138,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
 
 ## <a name="setting-a-single-registry-entry"></a>获取单个注册表条目
 
-如果希望在注册表项中更改特定条目，可以使用几种可能的方法之一。 此示例修改 `HKEY_CURRENT_USER\Environment` 下的 Path 条目。 Path  条目指定在哪里可以找到可执行文件。
+如果希望在注册表项中更改特定条目，可以使用几种可能的方法之一。 此示例修改 `HKEY_CURRENT_USER\Environment` 下的 Path**** 条目。 Path**** 条目指定在哪里可以找到可执行文件。
 
-1. 使用 `Get-ItemProperty` 检索 Path 条目的当前值。
+1. 使用 `Get-ItemProperty` 检索 Path**** 条目的当前值。
 2. 添加新值，将其与 `;` 分离。
 3. 将 `Set-ItemProperty` 与指定的键、条目名称和值结合使用，以修改注册表条目。
 
@@ -151,13 +151,13 @@ Set-ItemProperty -Path HKCU:\Environment -Name Path -Value $newpath
 ```
 
 > [!NOTE]
-> 尽管 `Set-ItemProperty` 具有 Filter  、Include  和 Exclude  参数，但它们无法用于按属性名称进行筛选。 这些参数引用注册表项（即项路径），而不引用注册表条目（即项属性）。
+> 尽管 `Set-ItemProperty` 具有 Filter****、Include**** 和 Exclude**** 参数，但它们无法用于按属性名称进行筛选。 这些参数引用注册表项（即项路径），而不引用注册表条目（即项属性）。
 
 另一种方法是使用 Reg.exe 命令行工具。 有关 reg.exe 的帮助，请键入 **reg.exe /?**
 。
 
-下面的示例通过删除在上面的示例添加的路径来更改 Path  条目。
-`Get-ItemProperty` 仍可用于检索当前值，以避免必须解析从 `reg query` 返回的字符串。 SubString  和 LastIndexOf  方法用于检索添加到 Path  条目的最后一个路径。
+下面的示例通过删除在上面的示例添加的路径来更改 Path**** 条目。
+`Get-ItemProperty` 仍可用于检索当前值，以避免必须解析从 `reg query` 返回的字符串。 SubString**** 和 LastIndexOf**** 方法用于检索添加到 Path**** 条目的最后一个路径。
 
 ```powershell
 $value = Get-ItemProperty -Path HKCU:\Environment -Name Path
@@ -171,7 +171,7 @@ The operation completed successfully.
 
 ## <a name="creating-new-registry-entries"></a>创建新注册表条目
 
-若要将名为“PowerShellPath”的新条目添加到 CurrentVersion  键，请将 `New-ItemProperty` 与该键的路径、条目名称和条目的值一起使用。 对于此示例，我们将采用 Windows PowerShell 变量 `$PSHome` 的值，该变量可存储 Windows PowerShell 的安装目录的路径。
+若要将名为“PowerShellPath”的新条目添加到 CurrentVersion**** 键，请将 `New-ItemProperty` 与该键的路径、条目名称和条目的值一起使用。 对于此示例，我们将采用 Windows PowerShell 变量 `$PSHome` 的值，该变量可存储 Windows PowerShell 的安装目录的路径。
 
 你可以通过使用以下命令来将新条目添加到项，该命令还会返回有关新条目的信息：
 
@@ -192,7 +192,7 @@ PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 
 |PropertyType 值|含义|
 |----------------------|-----------|
-|Binary|Binary data|
+|二进制|Binary data|
 |DWord|一个数字，类型为有效的 UInt32|
 |ExpandString|一个字符串，可包含动态扩展的环境变量|
 |MultiString|一个多行字符串|
@@ -200,18 +200,18 @@ PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 |QWord|8 字节的二进制数据|
 
 > [!NOTE]
-> 你可以通过为 **Path** 参数指定一组值来将注册表条目添加到多个位置：
+> 你可以通过为 **Path** 参数指定一组值来将注册表条目添加到多个位置。
 
 ```powershell
 New-ItemProperty -Name PowerShellPath -PropertyType String -Value $PSHome `
   -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion, HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion
 ```
 
-还可以替代预先存在的注册表条目值，方法是将 Force  参数添加到任何 `New-ItemProperty` 命令。
+还可以替代预先存在的注册表条目值，方法是将 Force**** 参数添加到任何 `New-ItemProperty` 命令。
 
 ## <a name="renaming-registry-entries"></a>重命名注册表条目
 
-若要将 PowerShellPath  条目重命名为“PSHome”，请使用 `Rename-ItemProperty`：
+若要将 PowerShellPath**** 条目重命名为“PSHome”，请使用 `Rename-ItemProperty`：
 
 ```powershell
 Rename-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PowerShellPath -NewName PSHome

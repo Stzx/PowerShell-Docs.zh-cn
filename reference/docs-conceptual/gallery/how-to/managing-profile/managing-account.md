@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: 库,powershell,cmdlet,psgallery
 title: PowerShell 库帐户设置
-ms.openlocfilehash: 7f67311b42123f247a00a9c7a5bf775685b64d48
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b71c7f0658c24ec2eeddb050e48b777a37c11917
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560451"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771781"
 ---
 # <a name="powershell-gallery-account-settings"></a>PowerShell 库帐户设置
 
@@ -36,7 +36,7 @@ PowerShell 库提供了以下通知选项：
 - 用户可通过 PowerShell 库与我联系
 - 使用我的帐户向 PowerShell 库推送包时通知我
 
-![更改电子邮件地址](media/managing-account/PSGallery_AccountEmailOptions.png)
+![选择电子邮件地址选项](media/managing-account/PSGallery_AccountEmailOptions.png)
 
 如页面所述，无法禁用 PowerShell 库中的重要通知。
 其中包括：
@@ -49,20 +49,20 @@ PowerShell 库提供了以下通知选项：
 
 若要更改登录帐户，必须使用当前帐户登录。 请使用以下步骤完成更改。
 
-![登录帐户设置](media/managing-account/PSGallery_LoginAccountSettings.png)
+![更改登录帐户设置](media/managing-account/PSGallery_LoginAccountSettings.png)
 
 1. 单击“更改帐户”  。 弹出窗口说明更改登录帐户适用于 PowerShell 库中该帐户的所有用途。 查看信息，然后单击“确定”以继续  。
 
-   ![登录帐户设置](media/managing-account/PSGallery_LoginAccountChange-1.png)
+   ![更改确认 - 确定/取消](media/managing-account/PSGallery_LoginAccountChange-1.png)
 
 2. 随后系统将提示使用新账户登录  。
 
-   ![登录帐户设置](media/managing-account/PSGallery_LoginAccountChange-2.png)
+   ![使用新帐户登录](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
 3. 单击“下一步”时，将看到使用当前帐户登录的消息  。
    单击“使用不同的帐户注销和登录”  。
 
-   ![登录帐户设置](media/managing-account/PSGallery_LoginAccountChange-3.png)
+   ![注销并使用其他帐户登录](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. 请输入新帐户的密码。 输入密码后，将返回到“帐户设置”页面，显示登录帐户已更新。
 

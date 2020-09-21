@@ -3,12 +3,12 @@ title: 关于哈希表的各项须知内容
 description: 哈希表在 PowerShell 中非常重要，因此最好对它们进行全面深入的了解。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 60a5172485b9caf6343f54194563cd048648206e
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
+ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85353815"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>关于哈希表的各项须知内容
 
@@ -541,10 +541,9 @@ $person = @{
 ```powershell
 $person.location.city
 Austin
-```powershell
+```
 
-There are many ways to approach the structure of your objects. Here is a second way to look at a
-nested hashtable.
+可以通过多种方式处理对象的结构。 下面是查看嵌套哈希表的另一种方法。
 
 ```powershell
 $people = @{
@@ -669,19 +668,61 @@ $people | ConvertTo-JSON | Set-Content -Path $path
 $people = Get-Content -Path $path -Raw | ConvertFrom-JSON
 ```
 
-此方法有两个重要方面。 首先，JSON 采用多行编写，因此我需要使用 `-Raw` 选项将其读回到单个字符串中。 其次，导入的对象不再是 `[hashtable]`。 它现在是 `[pscustomobject]`，如果你没有预料到，可能会导致问题。
+此方法有两个重要方面。 首先，JSON 采用多行编写，因此我需要使用 `-Raw` 选项将其读回到单个字符串中。 其次，导入的对象不再是 `[hashtable]`。 它现在是 `[pscustomobject]`，如果你不希望是这样，可能会导致问题。
 
-如果需要它在导入时是 `[hashtable]`，则需要使用 `Export-CliXml` 和 `Import-CliXml` 命令。
+观察深度嵌套的哈希表。 将其转换为 JSON 时，可能无法获得预期结果。
+
+```powershell
+@{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json
+
+{
+  "a": {
+    "b": {
+      "c": "System.Collections.Hashtable"
+    }
+  }
+}
+```
+
+使用 Depth 参数，确保已展开所有嵌套的哈希表。
+
+```powershell
+@{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json -Depth 3
+
+{
+  "a": {
+    "b": {
+      "c": {
+        "d": "e"
+      }
+    }
+  }
+}
+```
+
+如果需要在导入时为 `[hashtable]`，则需要使用 `Export-CliXml` 和 `Import-CliXml` 命令。
 
 ### <a name="converting-json-to-hashtable"></a>将 JSON 转换为哈希表
 
-如果需要将 JSON 转换为 `[hashtable]`，我知道有一种方法：使用 .NET 中的 [JavaScriptSerializer][]。
+如果需要将 JSON 转换为 `[hashtable]`，我知道有一种方法可以使用 .NET 中的 [JavaScriptSerializer][] 实现此目的。
 
 ```powershell
 [Reflection.Assembly]::LoadWithPartialName("System.Web.Script.Serialization")
 $JSSerializer = [System.Web.Script.Serialization.JavaScriptSerializer]::new()
 $JSSerializer.Deserialize($json,'Hashtable')
 ```
+
+从 PowerShell v6 开始，JSON 支持使用了 NewtonSoft JSON.NET ，并添加了哈希表支持。
+
+```powershell
+'{ "a": "b" }' | ConvertFrom-Json -AsHashtable
+
+Name      Value
+----      -----
+a         b
+```
+
+PowerShell 6.2 向 `ConvertFrom-Json` 添加了 Depth 参数。 Depth 的默认值为 1024。
 
 ### <a name="reading-directly-from-a-file"></a>直接从文件读取
 
@@ -698,9 +739,9 @@ $hashtable = ( & $scriptBlock )
 
 在这种情况下，你是否知道模块清单（psd1 文件）只是一个哈希表？
 
-## <a name="keys-are-just-strings"></a>键就是字符串
+## <a name="keys-can-be-any-object"></a>键可以是任何对象
 
-我不想跑题，但键就是字符串。 所以，我们就可以给任何内容加上引号，并使其成为一个键。
+大多数情况下，键只是字符串。 这样，我们就可以给任何内容加上引号，并使其成为一个键。
 
 ```powershell
 $person = @{
@@ -721,13 +762,35 @@ $person.$key
 
 仅仅因为你能做某事，并不意味着你应该去做。 最后一个看起来就像是一个等待发生的 bug，很容易被读你代码的人误解。
 
-从技术上说，你的键不一定是字符串，但如果你只使用字符串，就更容易考虑。
+从技术上说，你的键不一定是字符串，但如果你只使用字符串，就更容易考虑。 但是，索引不适合用于复杂的键。
+
+```powershell
+$ht = @{ @(1,2,3) = "a" }
+$ht
+
+Name                           Value
+----                           -----
+{1, 2, 3}                      a
+```
+
+按值的键访问哈希表中的值并非始终适用。 例如：
+
+```powershell
+$key = $ht.keys[0]
+$ht.$($key)
+a
+$ht[$key]
+a
+```
+
+如果键为数组，则必须将 `$key` 变量包装在子表达式中，使其可与成员访问 (`.`) 表示法一起使用。 也可使用数组索引 (`[]`) 表示法。
 
 ## <a name="use-in-automatic-variables"></a>在自动变量中使用
 
 ### <a name="psboundparameters"></a>$PSBoundParameters
 
-[$PSBoundParameters][] 是只存在于函数上下文中的自动变量。 它包含调用函数时所用的所有参数。 这并不是确切的哈希表，但足够接近，可以将其视为一个哈希表。
+[$PSBoundParameters][] 是只存在于函数上下文中的自动变量。
+它包含调用函数时所用的所有参数。 这并不是确切的哈希表，但足够接近，可以将其视为一个哈希表。
 
 这包括删除键并将其展开到其他函数。 如果你发现自己正在编写代理函数，请仔细查看这个函数。
 
@@ -892,9 +955,7 @@ function Get-DeepClone
 
 ## <a name="anything-else"></a>任何其他内容？
 
-我已经快速介绍了很多内容。 希望你每次阅读本文时都能学到新知识或有新的理解。 因为我介绍了此功能的全部内容，所以有些方面现在可能不适合你。 这要取决于你对 PowerShell 的使用程度，这很正常也是意料之中的。
-
-下面是我们所介绍的所有内容列表，以便你跳转查看。 通常情况下，这会放在开头，但这是从上到下编写的，其中包含根据之前的所有内容构建的示例。
+我已经快速介绍了很多内容。 希望你每次阅读本文时都能学到新知识或有新的理解。 因为我介绍了此功能的全部内容，所以有些方面现在可能不适合你。 这完全正常并且是意料之中，具体况取决于你对 PowerShell 的使用程度。
 
 <!-- link references -->
 [原始版本]: https://powershellexplained.com/2016-11-06-powershell-hashtable-everything-you-wanted-to-know-about/
@@ -902,7 +963,7 @@ function Get-DeepClone
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [哈希表]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
 [数组]: /powershell/module/microsoft.powershell.core/about/about_arrays
-[如果性能很重要，请对其进行测试]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best%20Practices/Performance.md
+[如果性能很重要，请对其进行测试]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [展开]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [pscustomobject]: everything-about-pscustomobject.md
 [JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8

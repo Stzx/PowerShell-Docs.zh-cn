@@ -3,12 +3,12 @@ title: 如何提交拉取请求
 description: 本文介绍如何向 PowerShell-Docs 存储库提交拉取请求。
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b56911dd4703530f31dd077a8d85ac131c82ee65
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 8b392a36c9469b83cf4f088c1799720a091434b4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690960"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782644"
 ---
 # <a name="how-to-submit-pull-requests"></a>如何提交拉取请求
 
@@ -58,7 +58,7 @@ Docs platform, so the values set in these 3 places will be ignored. Please remov
 1. 提交 PR。
 1. 指示 PR 状态的 GitHub 备注将显示以下状态：存储库已启用“检查”。 请注意，在此示例中启用了两个检查，即“提交验证”和“OpenPublishing.Build”：
 
-   ![一些检查失败](media/pull-requests/validation-failed.png)
+   ![验证状态 - 一些检查失败](media/pull-requests/validation-failed.png)
 
    即使提交验证失败，生成也可以过关。
 
@@ -66,7 +66,7 @@ Docs platform, so the values set in these 3 places will be ignored. Please remov
 1. “详细信息”页将显示所有已失败的验证检查，并包含关于如何解决问题的信息。
 1. 验证成功后，会将以下注释会添加到 PR：
 
-   ![生成验证](media/pull-requests/build-validation.png)
+   ![验证状态：成功](media/pull-requests/build-validation.png)
 
 > [!NOTE]
 > 若你是外部（非 Microsoft 员工）参与者，则无权访问详细的生成报告或预览链接。
