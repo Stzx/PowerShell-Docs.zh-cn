@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1 中的新增内容
 description: PowerShell Core 6.1 中发布的新功能和更改
 ms.date: 09/13/2018
-ms.openlocfilehash: 7a50bc3a909df38d21a604399d590a2805359593
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
+ms.openlocfilehash: 16159059285f89c2ddd85b506b0920f0aa8748ae
+ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837530"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90846909"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1 中的新增内容
 
@@ -48,8 +48,8 @@ PowerShell Core 6.0 取得了一些显着的性能提升。 PowerShell Core 6.1 
 Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Group-Object }
 ```
 
-|              | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1 |
-|--------------|------------------------|---------------------|---------------------|
+|    指标    | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1 |
+| ------------ | ---------------------- | ------------------- | ------------------- |
 | 时间 (秒)   | 25.178                 | 19.653              | 6.641               |
 | 加快 (%) | 空值                    | 21.9%               | 66.2%               |
 
@@ -59,8 +59,8 @@ Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Group-O
 Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Sort-Object }
 ```
 
-|              | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1 |
-|--------------|------------------------|---------------------|---------------------|
+|    指标    | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1 |
+| ------------ | ---------------------- | ------------------- | ------------------- |
 | 时间 (秒)   | 12.170                 | 8.493               | 7.08                |
 | 加快 (%) | 空值                    | 30.2%               | 16.6%               |
 
@@ -71,8 +71,8 @@ Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Sort-Ob
 Measure-Command {$a = Import-Csv foo.csv}
 ```
 
-|              | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1    |
-|--------------|------------------------|---------------------|------------------------|
+|    指标    | Windows PowerShell 5.1 | PowerShell Core 6.0 |  PowerShell Core 6.1   |
+| ------------ | ---------------------- | ------------------- | ---------------------- |
 | 时间 (秒)   | 0.441                  | 1.069               | 0.268                  |
 | 加快 (%) | 空值                    | -142.4%             | 74.9%（来自 WPS 的 39.2%） |
 
@@ -83,8 +83,8 @@ Measure-Command {$a = Import-Csv foo.csv}
 Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 ```
 
-|              | Windows PowerShell 5.1 | PowerShell Core 6.0 | PowerShell Core 6.1    |
-|--------------|------------------------|---------------------|------------------------|
+|    指标    | Windows PowerShell 5.1 | PowerShell Core 6.0 |  PowerShell Core 6.1   |
+| ------------ | ---------------------- | ------------------- | ---------------------- |
 | 时间 (秒)   | 0.259                  | 0.577               | 0.125                  |
 | 加快 (%) | 空值                    | -122.8%             | 78.3%（从 WPS 为 51.7%） |
 
