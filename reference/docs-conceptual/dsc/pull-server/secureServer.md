@@ -1,28 +1,27 @@
 ---
 ms.date: 06/12/2017
+description: 本文档介绍了一些最佳做法，以帮助工程师部署 DSC 拉取服务器。
 keywords: dsc,powershell,配置,安装程序
 title: 请求服务器最佳做法
-ms.openlocfilehash: 7b717e9e3bd753ef287701f3e2406e3fde1e2542
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: 99009fd73ea08ca4ac42832a055e914a3ce6dbcf
+ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236248"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90846943"
 ---
 # <a name="pull-server-best-practices"></a>请求服务器最佳做法
 
 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> 请求服务器（Windows 功能 DSC-Service）是 Windows Server 的一个受支持组件，不过目前没有提供新功能的计划  。 建议开始将托管客户端转换至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)（包括 Windows Server 上的请求服务器以外的功能）或[此处](pullserver.md#community-solutions-for-pull-service)列出的社区解决方案之一。
+> 请求服务器（Windows 功能 DSC-Service）是 Windows Server 的一个受支持组件，不过目前没有提供新功能的计划**。 建议开始将托管客户端转换至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)（包括 Windows Server 上的请求服务器以外的功能）或[此处](pullserver.md#community-solutions-for-pull-service)列出的社区解决方案之一。
 
 摘要：本文档旨在包括用于帮助为解决方案进行准备的工程师的过程和可扩展性。 详细信息应提供由客户确定，然后由产品团队验证的最佳做法，以确保建议面向未来并且可视为是稳定的。
 
-|           |                      文档信息                      |
-| :-------- | :------------------------------------------------- |
-| 作者    | Michael Greene                                     |
-| 审阅者 | Ben Gelens、Ravikanth Chaganti、Aleksandar Nikolic |
-| 已发布 | 2015 年 4 月                                        |
+- 作者：Michael Greene
+- 审阅者：Ben Gelens、Ravikanth Chaganti、Aleksandar Nikolic
+- 发布时间：2015 年 4 月
 
 ## <a name="abstract"></a>摘要
 
@@ -59,7 +58,7 @@ Windows PowerShell 为所需状态配置提供了一组语言扩展，可以用�
 
 ### <a name="software-downloads"></a>软件下载
 
-除了从 Windows 更新安装最新内容，还有两个下载被视为用于部署 DSC 请求服务器的最佳做法：Windows Management Framework 的最新版本，以及一个用于自动执行请求服务器预配的 DSC 模块。
+除了从 Windows 更新安装最新内容，还有两个被视为用于部署 DSC 请求服务器的最佳做法的下载文件：Windows Management Framework 的最新版本，以及用于自动执行请求服务器设置的 DSC 模块。
 
 ### <a name="wmf"></a>WMF
 
@@ -75,7 +74,7 @@ Windows Server 2012 R2 包括一种名为 DSC 服务的功能。 DSC 服务功�
 
 可以通过使用 DSC 配置脚本设置服务来简化请求服务器部署。 本文档包含可以用于部署生产准备就绪服务器节点的配置脚本。 若要使用配置脚本，需要一个未包含在 Windows Server 中的 DSC 模块。 所需模块名称是 **xPSDesiredStateConfiguration**，其中包括 DSC 资源 **xDscWebService**。 可以在[此处](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d)下载 xPSDesiredStateConfiguration 模块。
 
-使用 PowerShellGet  模块中的 `Install-Module` cmdlet。
+使用 PowerShellGet**** 模块中的 `Install-Module` cmdlet。
 
 ```powershell
 Install-Module xPSDesiredStateConfiguration
@@ -98,7 +97,7 @@ Install-Module xPSDesiredStateConfiguration
 物理和虚拟服务器上都支持请求服务器部署。 请求服务器的大小调整要求与 Windows Server 2012 R2 的要求保持一致。
 
 - CPU：1.4 GHz 64 位处理器
-- 内存: 512 MB
+- 内存：512 MB
 - 磁盘空间：32 GB
 - 网络：千兆位以太网适配器
 
@@ -123,7 +122,7 @@ DNS CNAME 使你可以创建别名以引用主机 (A) 记录。 附加名称记�
 为 DNS 记录选择名称时，请记住解决方案体系结构。
 如果使用负载平衡，则用于在 HTTPS 上保护流量安全的证书需要共享与 DNS 记录相同的名称。
 
-|       场景        |                                                                                         最佳做法
+|       方案        |                                                                                         最佳做法
 |:--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 |测试环境       | 在可能时重现计划生产环境。 服务器主机名适用于简单配置。 如果 DNS 不可用，则可以使用 IP 地址替代主机名。
 |单节点部署 | 创建指向服务器主机名的 DNS CNAME 记录。
@@ -204,11 +203,11 @@ New-DscChecksum -ConfigurationPath .\ -OutPath .\
 
 #### <a name="dsc-configurations"></a>DSC 配置
 
-请求服务器的用途是提供一种集中式机制，用于将 DSC 配置分发到客户端节点。 配置作为 MOF 文档存储在服务器上。 每个文档都使用唯一的 Guid 进行命名  。 客户端配置为与请求服务器连接时，还会向它们提供它们应请求的配置的 Guid  。 这一通过 Guid 引用配置的系统可保证全局唯一性，并且十分灵活，以便配置可按照每个节点的粒度进行应用，或作为跨应具有相同配置的多台服务器的角色配置  。
+请求服务器的用途是提供一种集中式机制，用于将 DSC 配置分发到客户端节点。 配置作为 MOF 文档存储在服务器上。 每个文档都使用唯一的 Guid 进行命名。 客户端配置为与请求服务器连接时，还会向它们提供它们应请求的配置的 Guid。 这一通过 Guid 引用配置的系统可保证全局唯一性，并且十分灵活，以便配置可按照每个节点的粒度进行应用，或作为跨应具有相同配置的多台服务器的角色配置。
 
 #### <a name="guids"></a>Guid
 
-全面考虑请求服务器部署时，规划配置 Guid 值得多加注意  。 对于如何处理 Guid 没有特定要求，该过程可能对于每个环境是唯一的  。 该过程的范围可以从简单到复杂：集中存储的 CSV 文件、简单 SQL 表、CMDB 或需要与其他工具或软件解决方案集成的复杂解决方案。 有两种常规方法：
+全面考虑请求服务器部署时，规划配置 Guid 值得多加注意。 对于如何处理 Guid 没有特定要求，该过程可能对于每个环境是唯一的。 该过程的范围可以从简单到复杂：集中存储的 CSV 文件、简单 SQL 表、CMDB 或需要与其他工具或软件解决方案集成的复杂解决方案。 有两种常规方法：
 
 - **对每台服务器分配 Guid** — 提供一种措施来保证分别控制每台服务器配置。 这提供了更新方面的精度级别，十分适合于包含少量服务器的环境。
 - **对每个服务器角色分配 Guid** — 执行相同功能的所有服务器（如 Web 服务器）都使用相同 GUID 引用所需配置数据。 请注意，如果有许多服务器共享相同 GUID，则它们都会在配置更改时同时更新。
