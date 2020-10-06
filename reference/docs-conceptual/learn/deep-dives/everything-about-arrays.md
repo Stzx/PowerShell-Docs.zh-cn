@@ -3,12 +3,12 @@ title: 关于数组的各项须知内容
 description: 数组是大多数编程语言的一项基本语言功能。
 ms.date: 07/07/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: e744878844a3cfd32d6124538a44a29ba90798ab
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+ms.openlocfilehash: 307189bf27d383159d34181eca4dac1f77792e51
+ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092093"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91543366"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>关于数组的各项须知内容
 
@@ -752,7 +752,10 @@ if ( -not ( $results -ne 'Passed') )
 
 ## <a name="adding-to-arrays"></a>添加到数组
 
-现在，你开始想知道如何向数组中添加项。 简单回答是，不能添加。 数组在内存中具有固定大小。 如果需要对其进行扩展或向其中添加单个项，则需要创建新数组，并从旧数组中复制所有值。 这听起来非常昂贵，而且工作量很大，但 PowerShell 隐藏了创建新数组的复杂性。
+现在，你开始想知道如何向数组中添加项。 简单回答是，不能添加。 数组在内存中具有固定大小。 如果需要对其进行扩展或向其中添加单个项，则需要创建新数组，并从旧数组中复制所有值。 这听起来似乎工作量很大，但 PowerShell 隐藏了创建新数组的复杂性。 PowerShell 为数组实现了加法运算符 (`+`)。
+
+> [!NOTE]
+> PowerShell 未实现减法运算。 如果需要一个灵活的数组替代项，需要使用[泛型 `List`](#generic-list) 对象。
 
 ### <a name="array-addition"></a>数组加法
 
@@ -814,8 +817,6 @@ $array = foreach ( $node in (1..5))
     "ATX-SQL-$node"
 }
 ```
-
-通过将 `foreach` 的结果分配给一个变量，我们会捕获所有对象并创建一个数组。
 
 ## <a name="array-types"></a>数组类型
 
