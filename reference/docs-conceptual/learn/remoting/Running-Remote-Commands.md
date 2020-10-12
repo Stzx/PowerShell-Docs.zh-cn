@@ -2,12 +2,12 @@
 ms.date: 08/21/2020
 keywords: powershell,cmdlet
 title: 运行远程命令
-ms.openlocfilehash: ab6d464c31144349ee38cd01e82a2cf1470aaa95
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: f12d08b03757b24d1de50402b301faff193f27be
+ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88799615"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91814729"
 ---
 # <a name="running-remote-commands"></a>运行远程命令
 
@@ -129,7 +129,7 @@ Windows PowerShell 远程管理就在此处开始。 通过使用随 Windows Pow
 
 Windows PowerShell 包含一个 WSMan 提供程序。 提供程序创建 `WSMAN:` 驱动器，允许你在本地计算机和远程计算机上的配置设置层次结构之间导航。
 
-有关 WSMan 提供程序的详细信息，请参阅 [WSMan 提供程序](https://technet.microsoft.com/library/dd819476.aspx)和[关于 WS-Management Cmdlet](/powershell/module/microsoft.powershell.core/about/about_ws-management_cmdlets)，或在 Windows PowerShell 控制台中键入 `Get-Help wsman`。
+有关 WSMan 提供程序的详细信息，请参阅 [WSMan 提供程序](https://technet.microsoft.com/library/dd819476.aspx)和[关于 WS-Management Cmdlet](/powershell/module/microsoft.wsman.management/about/about_ws-management_cmdlets)，或在 Windows PowerShell 控制台中键入 `Get-Help wsman`。
 
 有关详细信息，请参阅：
 
