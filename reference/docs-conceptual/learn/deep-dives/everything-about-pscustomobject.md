@@ -1,14 +1,14 @@
 ---
 title: 关于 PSCustomObject 的各项须知内容
 description: PSCustomObject 是创建结构化数据的一种简单方法。
-ms.date: 07/29/2020
+ms.date: 10/05/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 52620fd628d03f62db574210a2a5758c3bf29135
-ms.sourcegitcommit: a1886ba2cf35aebd650aafb3e5d7437c4e381781
+ms.openlocfilehash: ccbdcdae5ad38f555233dffbed7e8a6ec2b0726b
+ms.sourcegitcommit: 1695df0d241c0390cac71a7401e61198fc6ff756
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90804774"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91772314"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>关于 PSCustomObject 的各项须知内容
 
@@ -159,10 +159,10 @@ foreach( $property in $myobject.psobject.properties.name )
 if( $null -ne $myObject.ID )
 ```
 
-但是，如果该值可以为 `$null`，并且仍需要检查该值，则可以检查其 `psobject.properties`。
+但如果值可以是 `$null`，则可以通过检查它的 `psobject.properties` 来查看其是否存在。
 
 ```powershell
-if( $myobject.psobject.properties.match('ID') )
+if( $myobject.psobject.properties.match('ID').Count )
 ```
 
 ## <a name="adding-object-methods"></a>添加对象方法
@@ -264,7 +264,7 @@ PowerShell 为我们决定默认情况下显示哪些属性。 很多本机命�
 
 ```powershell
 $defaultDisplaySet = 'Name','Language'
-$defaultDisplayPropertySet = New-Object System.Management.Automation.PSPropertySet(‘DefaultDisplayPropertySet’,[string[]]$defaultDisplaySet)
+$defaultDisplayPropertySet = New-Object System.Management.Automation.PSPropertySet('DefaultDisplayPropertySet',[string[]]$defaultDisplaySet)
 $PSStandardMembers = [System.Management.Automation.PSMemberInfo[]]@($defaultDisplayPropertySet)
 $MyObject | Add-Member MemberSet PSStandardMembers $PSStandardMembers
 ```
