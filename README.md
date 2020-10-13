@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0d91230aa063e58106b35a4ada1d577f316f8f27
-ms.sourcegitcommit: c752ae8d0fa47eaaf3c5eae2a5a770f06c63921c
+ms.openlocfilehash: f46b14e44c32ce31b4da1a14580fe03564bf9946
+ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840988"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91899262"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开放源代码行为准则
 
@@ -25,23 +25,33 @@ ms.locfileid: "83840988"
 
 ## <a name="repository-structure"></a>存储库结构
 
-此存储库中的以下每个顶级文件夹都包含一个发布到 [Microsoft Docs](https://docs.microsoft.com/powershell) 的 DocSet。
+以下列表列出了此存储库中的主文件夹。
 
-- [/reference/](https://docs.microsoft.com/powershell/scripting/) 对应于跨 5.1、6.0 和 7.0 版本的 PowerShell 概念主题和模块参考。 此内容也是 `Get-Help` cmdlet 检索的帮助内容的来源。
-  - [docs-conceptual/](https://docs.microsoft.com/powershell) - 此文件夹包含概念文档和以下文档集：
-    - [developer/](https://docs.microsoft.com/powershell/scripting/developer/) 是 PowerShell SDK 文档（从 MSDN 迁移）
-    - [dsc/](https://docs.microsoft.com/powershell/scripting/dsc/) 对应于 Desired State Configuration 功能
-    - [gallery/](https://docs.microsoft.com/powershell/scripting/gallery) 对应于 [PowerShell 库](https://www.powershellgallery.com/)
-    - [jea/](https://docs.microsoft.com/powershell/scripting/learn/remoting/jea/overview) 对应于 Just Enough Administration 功能
-    - [wmf/](https://docs.microsoft.com/powershell/scripting/windows-powershell/wmf/overview) 包含 Windows Management Framework 的发行说明，该软件包用于将 PowerShell 的新版本分发到之前版本的 Windows。
+- `.github` -包含 GitHub 用于此存储库的配置设置
+- `.vscode` - 包含 Visual Studio Code (VS Code) 的配置设置和建议扩展
+- `assets` - 包含文档中链接的可下载文件
+- `reference` - 包含发布到 [docs.microsoft.com]([https://docs.microsoft.com/powershell/scripting/) 的文档。 这包括引用和概念内容。
+  - `5.1` - 包含 PowerShell 5.1 的 cmdlet 参考和“关于”主题
+  - `6` - 包含 PowerShell 6 的 cmdlet 参考和“关于”主题
+  - `7.0` - 包含 PowerShell 7.0 的 cmdlet 参考和“关于”主题
+  - `7.1` - 包含 PowerShell 7.1 的 cmdlet 参考和“关于”主题
+  - `bread` - 包含用于痕迹导航的 TOC
+  - `docs-conceptual` - 包含发布到 Docs 站点的概念文章。 通常，文件夹结构会建立目录 (TOC) 镜像。
+  - `mapping` - 包含生成系统使用的版本映射配置
+  - `media` - 包含文档中使用的图像文件。 `docs-conceptual` 内容中有媒体文件夹。 有关在文档中使用图像的信息，请参阅“参与者指南”。
+  - `module` - 包含“模块浏览器”页面的 markdown 源
+- `tests` - 包含生成系统使用的 Pester 测试
+- `tools` - 包含生成系统使用的其他工具
+
+> 注意：参考内容（在编号文件夹中）用于在 Docs 站点上创建网页，也可用作针对 PowerShell 的可更新帮助。
+> `docs-conceptual` 文件夹中的文章仅发布到 Docs 网站。
 
 ## <a name="contributing"></a>供稿
 
-通过[拉取请求](https://help.github.com/articles/using-pull-requests/)到临时分支，我们正积极将贡献的文档并入此存储库。
-请注意在提交拉取请求前，必须签订[贡献许可协议](https://cla.microsoft.com/)，以确保社区成员可免费使用你提交的内容。
+通过[拉取请求](https://help.github.com/articles/using-pull-requests/)到临时分支，我们欢迎将贡献的公共文档并入此存储库。
+请注意，必须签署我们的[贡献许可协议](https://cla.microsoft.com/)，我们才会接受你的拉取请求。 只需执行此操作一次。
 
-若要详细了解如何参与，请阅读[参与者指南](https://docs.microsoft.com/powershell/scripting/community/contributing/overview)。
-参与者指南详细介绍了如何参与撰写文档、推荐的工具以及样式和格式设置要求。 请使用“问题和提取请求”模板来帮助文档在各版本之间保持一致性。
+若要详细了解如何参与，请阅读[参与者指南](https://aka.ms/PSDocsContributor)。 参与者指南详细介绍了如何参与撰写文档、推荐的工具以及样式和格式设置要求。 请使用“问题和提取请求”模板来帮助文档在各版本之间保持一致性。
 
 ## <a name="licenses"></a>许可证
 
