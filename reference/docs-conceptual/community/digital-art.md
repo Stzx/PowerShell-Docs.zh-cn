@@ -2,19 +2,20 @@
 author: sdwheeler
 ms.author: sewhee
 ms.date: 02/14/2020
+description: 下载 PowerShell 相关图稿和海报
 title: PowerShell 数字艺术
-ms.openlocfilehash: e67cafa274ca1720661aa24953278c13444d7698
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: efc246af2ae946c10d4ce9d759bd42d041663e98
+ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060312"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91980149"
 ---
 # <a name="powershell-digital-art"></a>PowerShell 数字艺术
 
 *传言是真的！确保安全传递到云的功能强大的 shell。但是怎么做？*
 
-请欣赏下面链接的数字作品。 向你的同伴演示你已通过 Monad 滚动获得委托的情况！ 
+请欣赏下面链接的数字作品。 向你的同伴演示你已通过 Monad 滚动获得委托的情况！
 
 ## <a name="powershell-infographic"></a>PowerShell 信息图
 

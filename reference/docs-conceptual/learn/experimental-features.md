@@ -1,13 +1,13 @@
 ---
-ms.date: 09/14/2020
+ms.date: 10/15/2020
 title: 使用 PowerShell 中的实验性功能
 description: 列出了目前可用的实验性功能及其用法。
-ms.openlocfilehash: 74623240bfb19022ae342a5d23e2ed4f455afa45
-ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
+ms.openlocfilehash: e98b1222755f3d4ffbd432af6b01d56f63307bb2
+ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574464"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156569"
 ---
 # <a name="using-experimental-features-in-powershell"></a>使用 PowerShell 中的实验性功能
 
@@ -34,9 +34,10 @@ PowerShell 中的实验性功能支持提供了一种机制，可便于实验性
 | PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
 | PSNullConditionalOperators（PS 7.1 及更高版本中的主要支持）         |         | &check; |         |
 | PSUnixFileStat（仅限非 Windows）                          |         | &check; | &check; |
-| PSNativePSPathResolution（PS 7.1 及更高版本中的主要支持）           |         |         |         |
+| PSNativePSPathResolution                                   |         |         | &check; |
 | PSCultureInvariantReplaceOperator                          |         |         | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; |
+| PSSubsystemPluginModel                                     |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
@@ -153,9 +154,6 @@ Milliseconds      : 209
 - 如果路径不是 PSDrive 或 `~`（在 Windows 上），则不会进行路径规范化
 - 如果路径是用单引号引住，则不会进行解析，而是被视为文本
 
-> [!NOTE]
-> 此功能已退出实验性阶段，并已成为 PowerShell 7.1 及更高版本中的主要支持功能。
-
 ## <a name="psnotapplyerroractiontostderr"></a>PSNotApplyErrorActionToStderr
 
 启用此实验性功能后，从本机命令重定向的错误记录（例如，使用重定向运算符 (`2>&1`) 时）不会写入到 `$Error` 变量，并且首选项变量 `$ErrorActionPreference` 不会影响重定向的输出。
@@ -228,3 +226,11 @@ drwxr-xr-x jimtru    staff         11/8/2019 10:37         896 tools
 
 > [!NOTE]
 > 此功能已退出实验性阶段，并已成为 PowerShell 7 及更高版本中的主要支持功能。
+
+## <a name="pssubsystempluginmodel"></a>PSSubsystemPluginModel
+
+此功能在 PowerShell 中启用子系统插件模型。 利用此功能，可以将 `System.Management.Automation.dll` 的组件分隔到驻留在自己的程序集中的各个子系统。 这种隔离可减少核心 PowerShell 引擎的磁盘占用，并支持这些组件成为最小 PowerShell 安装的可选功能。
+
+目前仅支持 CommandPredictor 子系统。 该子系统与 PSReadLine 模块一起使用，以提供自定义预测插件。 将来  ，Job、CommandCompleter、Remoting 和其他组件可以分隔到 `System.Management.Automation.dll` 外的子系统程序集。
+
+试验性功能包括新的 cmdlet [Get-PSSubsystem](xref:Microsoft.PowerShell.Core.Get-PSSubsystem)。 只有启用此功能时，此 cmdlet 才可用。 此 cmdlet 将返回有关系统上可用子系统的信息。
