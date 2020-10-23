@@ -778,12 +778,14 @@
       items:
         - name: 使用 Visual Studio Code
           href: dev-cross-plat/vscode/using-vscode.md
-        - name: 如何复制 Visual Studio Code 中的 ISE 体验
+        - name: 如何在 VS Code 中复制 ISE 体验
           href: dev-cross-plat/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-        - name: 使用 Visual Studio Code 进行远程编辑和调试
+        - name: 使用 VS Code 进行远程编辑和调试
           href: dev-cross-plat/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
         - name: 了解 VS Code 和 PowerShell 中的文件编码
           href: dev-cross-plat/vscode/understanding-file-encoding.md
+        - name: 使用 VS Code 调试已编译的 cmdlet
+          href: dev-cross-plat/vscode/using-vscode-for-debugging-compiled-cmdlets.md
     - name: 编写可移植模块
       href: dev-cross-plat/writing-portable-modules.md
     - name: 使用 PlatyPS 创建模块帮助
