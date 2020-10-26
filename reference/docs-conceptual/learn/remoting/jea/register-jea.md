@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: 注册 JEA 配置
-ms.openlocfilehash: 7cc67e891bc14dd667c97e9a8b550b33b4c2b874
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 向系统注册 JEA 终结点，使终结点可供用户和自动化引擎使用。
+ms.openlocfilehash: 6e7f8cdc1e7a666bddaa42034d70fcbcf55c1972
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706200"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499903"
 ---
 # <a name="registering-jea-configurations"></a>注册 JEA 配置
 
@@ -61,7 +62,7 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 - 已获得允许在每台计算机上执行管理操作的凭据，或有权访问用于管理计算机的 DSC 拉取服务器。
 - 已下载 [JEA DSC 资源](https://github.com/powershell/JEA/tree/master/DSC%20Resource)。
 
-在目标计算机或拉取服务器上创建 JEA 终结点的 DSC 配置。 在此配置中，JustEnoughAdministration DSC 资源定义会话配置文件，文件资源从文件共享复制角色功能   。
+在目标计算机或拉取服务器上创建 JEA 终结点的 DSC 配置。 在此配置中，JustEnoughAdministration DSC 资源定义会话配置文件，文件资源从文件共享复制角色功能  。
 
 下列属性可使用 DSC 资源进行配置：
 

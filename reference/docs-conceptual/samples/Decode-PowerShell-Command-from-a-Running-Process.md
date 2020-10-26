@@ -3,12 +3,13 @@ ms.date: 11/13/2018
 keywords: powershell,cmdlet
 title: 从正在运行的进程解码 PowerShell 命令
 author: randomnote1
-ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文演示了如何解码 PowerShell 进程当前运行的脚本块。
+ms.openlocfilehash: 95b4b806665bf8137712ebb183329039bc1e1deb
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "66470964"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500481"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>从正在运行的进程解码 PowerShell 命令
 
@@ -33,7 +34,7 @@ powershell.exe -Command {
 
 ## <a name="view-the-process"></a>查看进程
 
-PowerShell 正在执行的命令正文存储在 [Win32_Process][] 类的 CommandLine 属性中。 如果命令为编码命令，**CommandLine** 属性将包含字符串“EncodedCommand”。 使用此信息，可以通过以下进程取消对编码命令的模糊处理。
+PowerShell 正在执行的命令正文存储在  属性中。 如果命令为编码命令， **CommandLine** 属性将包含字符串“EncodedCommand”。 使用此信息，可以通过以下进程取消对编码命令的模糊处理。
 
 以管理员身份启动 PowerShell。 以管理员身份运行 PowerShell 至关重要，否则在查询正在运行的进程时不会返回任何结果。
 
@@ -81,7 +82,7 @@ $commandDetails[0]
 
 现在可以通过选择解码后的命令属性来查看已解码的命令。
 
-```output
+```Output
 ProcessId      : 8752
 EncodedCommand : IAAKAAoACgAgAAoAIAAgACAAIAAkAGkAIAA9ACAAMQAgAAoACgAKACAACgAgACAAIAAgAHcAaABpAGwAZQAgACgAIAAkAGkAIAAtAG
                  wAZQAgADEAMAAgACkAIAAKAAoACgAgAAoAIAAgACAAIAB7ACAACgAKAAoAIAAKACAAIAAgACAAIAAgACAAIABXAHIAaQB0AGUALQBP

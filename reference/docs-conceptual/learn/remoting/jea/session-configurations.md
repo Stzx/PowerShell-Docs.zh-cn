@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: JEA 会话配置
-ms.openlocfilehash: 650d0d11ef13605847d0822249e29e3491180629
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 会话配置定义了可使用 JEA 终结点的人员及其有权访问的角色。
+ms.openlocfilehash: b616d5bf260bbdfe89b6422fd4a8b4866f7fdc67
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "70017728"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501552"
 ---
 # <a name="jea-session-configurations"></a>JEA 会话配置
 
@@ -56,7 +57,7 @@ JEA 在后台运行已连接用户的命令时需要使用标识（即帐户）�
 #### <a name="local-virtual-account"></a>本地虚拟帐户
 
 如果为 JEA 终结点定义的所有角色均用于管理本地计算机，并且本地管理员帐户足以成功运行命令，则本地虚拟帐户非常有用。
-虚拟帐户是特定用户所独有的临时帐户，仅在 PowerShell 会话的持续时间内有效。 在成员服务器或工作站上，虚拟帐户属于本地计算机的管理员组  。 在 Active Directory 域控制器上，虚拟帐户属于域的**域管理员**组。
+虚拟帐户是特定用户所独有的临时帐户，仅在 PowerShell 会话的持续时间内有效。 在成员服务器或工作站上，虚拟帐户属于本地计算机的管理员组  。 在 Active Directory 域控制器上，虚拟帐户属于域的 **域管理员** 组。
 
 ```powershell
 # Setting the session to use a virtual account
@@ -107,11 +108,11 @@ GroupManagedServiceAccount = 'Domain\MyJEAGMSA'
 TranscriptDirectory = 'C:\ProgramData\JEAConfiguration\Transcripts'
 ```
 
-脚本由本地系统帐户写入到文件夹中，该帐户需要目录的读取和写入权限  。 标准用户应无权访问该文件夹。 请限制有权审核脚本的安全管理员的数量。
+脚本由本地系统帐户写入到文件夹中，该帐户需要目录的读取和写入权限。 标准用户应无权访问该文件夹。 请限制有权审核脚本的安全管理员的数量。
 
 ### <a name="user-drive"></a>用户驱动器
 
-如果连接用户需要将文件复制到 JEA 终结点或从中复制文件，可在会话配置文件中启用用户驱动器。 用户驱动器是映射到各连接用户的唯一文件夹的 **PSDrive**。 此文件夹允许用户将文件复制到系统或从中复制文件，但不提供访问完整文件系统的权限，也不公开 FileSystem 提供程序。 用户驱动器内容在会话之间持续存在，以便应对网络连接可能中断的情况。
+如果连接用户需要将文件复制到 JEA 终结点或从中复制文件，可在会话配置文件中启用用户驱动器。 用户驱动器是映射到各连接用户的唯一文件夹的 **PSDrive** 。 此文件夹允许用户将文件复制到系统或从中复制文件，但不提供访问完整文件系统的权限，也不公开 FileSystem 提供程序。 用户驱动器内容在会话之间持续存在，以便应对网络连接可能中断的情况。
 
 ```powershell
 MountUserDrive = $true
@@ -134,7 +135,7 @@ UserDriveMaximumSize = 524288000
 
 ### <a name="role-definitions"></a>角色定义
 
-会话配置文件中的角色定义可定义**用户**到**角色**的映射。 注册时，此字段中包含的所有用户或组都将获得 JEA 终结点的权限。
+会话配置文件中的角色定义可定义 **用户** 到 **角色** 的映射。 注册时，此字段中包含的所有用户或组都将获得 JEA 终结点的权限。
 每个用户或组仅可在哈希表中以键的形式内附一次，但可向其分配多个角色。 角色功能名称应为角色功能文件的名称，但不带 `.psrc` 扩展名。
 
 ```powershell
@@ -165,7 +166,7 @@ JEA 使用 `$env:PSModulePath` 环境变量来确定扫描角色功能文件的�
 
 ### <a name="conditional-access-rules"></a>条件访问规则
 
-RoleDefinitions 字段中包含的所有用户和组都将自动获得访问 JEA 终结点的权限  。 通过条件访问规则，可优化此访问权限并要求用户隶属于其他不会影响其所拥有角色的安全组。 如果要将 JEA 与即时特权访问管理解决方案、智能卡身份验证或其他多重身份验证解决方案进行集成，此规则十分有用。
+RoleDefinitions 字段中包含的所有用户和组都将自动获得访问 JEA 终结点的权限。 通过条件访问规则，可优化此访问权限并要求用户隶属于其他不会影响其所拥有角色的安全组。 如果要将 JEA 与即时特权访问管理解决方案、智能卡身份验证或其他多重身份验证解决方案进行集成，此规则十分有用。
 
 条件访问规则在会话配置文件的 RequiredGroups 字段中进行定义。
 可在此处提供哈希表（选择性嵌套），利用“And”和“Or”键构造规则。 以下是如何使用此字段的一些示例：

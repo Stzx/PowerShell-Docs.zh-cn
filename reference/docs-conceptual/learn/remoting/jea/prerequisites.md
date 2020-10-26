@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: JEA 先决条件
-ms.openlocfilehash: 5083a9ad4aa87c753799d36f55540342225ecddd
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+description: 本文介绍使用 JEA 前必须满足的先决条件。
+ms.openlocfilehash: 5cc70a06887a2d0a840cc83117f865d3148056e1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556863"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501722"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -46,7 +47,7 @@ JEA 适用于 PowerShell 5.0 及更高版本。 要使用完整功能，建议�
 | Windows 8、8.1          | 包含 WMF 5.1 的完整功能                      |
 | Windows 7               | 减少了功能<sup>1</sup>（如果 WMF 5.1 已安装）       |
 
-- <sup>1</sup> 无法将 JEA 配置为在 Windows Server 2008 R2 或 Windows 7 上使用组托管服务帐户。 *支持*虚拟帐户和其他 JEA 功能。
+- <sup>1</sup> 无法将 JEA 配置为在 Windows Server 2008 R2 或 Windows 7 上使用组托管服务帐户。 *支持* 虚拟帐户和其他 JEA 功能。
 
 - <sup>2</sup> Windows 10 版本 1511 和 1603 不支持以下 JEA 功能：
 

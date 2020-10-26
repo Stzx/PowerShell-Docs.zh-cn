@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: 使用 JEA
-ms.openlocfilehash: 46d0cc3d1cbad7454a8723f34d6a0aa34af3277f
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+description: 本文介绍连接和使用 JEA 终结点的各种方式。
+ms.openlocfilehash: b3d81cc0aa76549c81136e5a1a5af28df9c6fa7a
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86953278"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501535"
 ---
 # <a name="using-jea"></a>使用 JEA
 
