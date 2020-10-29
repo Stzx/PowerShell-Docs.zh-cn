@@ -1,20 +1,19 @@
 ---
 title: PowerShell Core 支持生命周期
-description: 用于管理 PowerShell Core 支持的策略
+description: 详细介绍管理 PowerShell 支持的策略
 ms.date: 03/09/2020
-ms.openlocfilehash: 717fd5c4845835f314eaf7c3617d5123318da2dc
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: 1681df188d03a1115b13518fb88c21ebf79701d4
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236197"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501739"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 支持生命周期
 
 PowerShell 是独特的工具和组件集，该集从 Windows PowerShell 单独传输、安装和配置。 PowerShell 不包含在 Windows 许可协议中。
 
-PowerShell 受传统 Microsoft 支持协议的支持，包括[付费支持][]、[Microsoft 企业协议][enterprise-agreement]和 [Microsoft 软件保障][assurance]。
-还可通过针对相应问题填写支持请求，从而付费获取有关 PowerShell 的[辅助支持][]。
+PowerShell 受传统 Microsoft 支持协议的支持，包括[付费支持][]、[Microsoft 企业协议][enterprise-agreement]和 [Microsoft 软件保障][assurance]。 还可通过针对相应问题填写支持请求，从而付费获取有关 PowerShell 的[辅助支持][]。
 
 ## <a name="community-support"></a>社区支持
 
@@ -98,7 +97,7 @@ PowerShell Core 的版本 6.x 分支（例如 6.0、6.1、6.2 等）大约每六
 |   6.0   | 2019 年 2 月 13 日  |
 
 > [!NOTE]
-> 本文档是关于对 PowerShell Core 6 和 PowerShell 7 的支持。 Windows PowerShell (1.0 - 5.1) 是 Windows OS 的一个组件。 组件获得的支持与其父产品或平台相同。 有关详细信息，请参阅[产品和服务生命周期信息](/lifecycle/products/)
+> 本文档是关于对 PowerShell Core 6 和 PowerShell 7 的支持。 Windows PowerShell (1.0 - 5.1) 是 Windows OS 的一个组件。 组件获得的支持与其父产品或平台相同。 有关详细信息，请参阅[产品和服务生命周期信息](/lifecycle/products/)。
 
 ## <a name="unsupported-platforms"></a>不支持的平台
 

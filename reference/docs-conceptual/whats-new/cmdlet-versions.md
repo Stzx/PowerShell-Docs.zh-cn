@@ -2,16 +2,17 @@
 ms.date: 02/03/2020
 keywords: powershell, 核心
 title: 模块和 cmdlet 发行历史记录
-ms.openlocfilehash: 4cb69e9d53151a0a221654f76ad7eb5eeb8fa218
-ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
+description: 本文列出了 PowerShell 的各种版本包含的模块和 cmdlet。
+ms.openlocfilehash: cefd84c5d3785d19670ee649f5af951d5975912c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83751327"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501654"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>模块和 cmdlet 发行历史记录
 
-本文列出了 PowerShell 的各种版本随附的模块和 cmdlet。 这是发行说明中信息的摘要。 如需了解更多详情，请参阅发行说明：
+本文列出了 PowerShell 的各种版本包含的模块和 cmdlet。 这是发行说明中信息的摘要。 如需了解更多详情，请参阅发行说明：
 
 - [PowerShell Core 6.2 的最近更新](what-s-new-in-powershell-core-62.md)
 - [PowerShell Core 6.1 的最近更新](what-s-new-in-powershell-core-61.md)

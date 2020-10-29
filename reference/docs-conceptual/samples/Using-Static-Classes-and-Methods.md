@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 使用静态类和方法
-ms.openlocfilehash: 437e7b430f37224de7c617e120e37c3efcd7787a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍如何识别和使用 .NET 静态类的属性和方法。
+ms.openlocfilehash: 2e83fe442f7b3fdf62ceaab587450251ac4e7958
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030749"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501246"
 ---
 # <a name="using-static-classes-and-methods"></a>使用静态类和方法
 
@@ -27,7 +28,7 @@ At line:1 char:11
 + New-Object  <<<< System.Math
 ```
 
-之所以发生这些错误，是因为无法从这些类创建新的对象。 这些类是不更改状态的方法和属性的引用库。 你无需创建这些类，只需要使用它们。 这样的类和方法称为*静态类*，因为它们不会被创建、销毁或更改。 为了明确这一点，我们将提供静态类的使用示例。
+之所以发生这些错误，是因为无法从这些类创建新的对象。 这些类是不更改状态的方法和属性的引用库。 你无需创建这些类，只需要使用它们。 这样的类和方法称为 *静态类* ，因为它们不会被创建、销毁或更改。 为了明确这一点，我们将提供静态类的使用示例。
 
 ## <a name="getting-environment-data-with-systemenvironment"></a>使用 System.Environment 获取环境数据
 
@@ -35,7 +36,7 @@ At line:1 char:11
 
 ### <a name="referring-to-the-static-systemenvironment-class"></a>引用静态的 System.Environment 类
 
-可以通过使用方括号将类名称括起来以引用静态类。 例如，可以通过在括号内键入名称来引用 **System.Environment**。 执行此操作会显示某些泛型类型的信息：
+可以通过使用方括号将类名称括起来以引用静态类。 例如，可以通过在括号内键入名称来引用 **System.Environment** 。 执行此操作会显示某些泛型类型的信息：
 
 ```
 PS> [System.Environment]
@@ -46,11 +47,11 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> 正如我们之前提到的，当你使用 **New-Object** 时，Windows PowerShell 会 使用 **New-Object**.时输入名称。 使用被括号括起来的类型名称时也会发生同样的情况，因此可以将 **\[System.Environment]** 指定为 **\[Environment]** 。
+> 正如我们之前提到的，当你使用 **New-Object** 时，Windows PowerShell 会 使用 **New-Object** .时输入名称。 使用被括号括起来的类型名称时也会发生同样的情况，因此可以将 **\[System.Environment]** 指定为 **\[Environment]** 。
 
 **System.Environment** 类包含关于当前进程工作环境的一般信息，如果是在 Windows PowerShell 内工作，该进程为 powershell.exe。
 
-如果尝试通过键入 **\[System.Environment] | Get-Member** 来查看此类的详细信息，对象类型将报告为 **System.RuntimeType**，而不是 **System.Environment**：
+如果尝试通过键入 **\[System.Environment] | Get-Member** 来查看此类的详细信息，对象类型将报告为 **System.RuntimeType** ，而不是 **System.Environment** ：
 
 ```
 PS> [System.Environment] | Get-Member

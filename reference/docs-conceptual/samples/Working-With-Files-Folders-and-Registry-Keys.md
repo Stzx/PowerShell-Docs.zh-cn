@@ -2,17 +2,18 @@
 ms.date: 07/28/2020
 keywords: powershell,cmdlet
 title: 使用文件、文件夹和注册表项
-ms.openlocfilehash: 7ead5d0e82feb852845468fb3a012a0908a4ce75
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+description: 本文介绍如何使用 PowerShell 处理注册表项操作任务。
+ms.openlocfilehash: 6f653c1fb409a238aa05658e89261a12e96f6fe1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410183"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499971"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>使用文件、文件夹和注册表项
 
 Windows PowerShell 使用名词 **Item** 来引用在 Windows PowerShell 驱动器上找到的项。
-处理 Windows PowerShell FileSystem 提供程序时，**Item** 可能是文件、文件夹或 Windows PowerShell 驱动器。 列出并使用这些项是大部分管理设置中的关键基本任务，因此我们想要详细讨论这些任务。
+处理 Windows PowerShell FileSystem 提供程序时， **Item** 可能是文件、文件夹或 Windows PowerShell 驱动器。 列出并使用这些项是大部分管理设置中的关键基本任务，因此我们想要详细讨论这些任务。
 
 ## <a name="enumerating-files-folders-and-registry-keys-get-childitem"></a>枚举文件、文件夹和注册表项 (Get-ChildItem)
 

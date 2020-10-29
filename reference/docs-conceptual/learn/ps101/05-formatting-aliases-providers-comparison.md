@@ -4,12 +4,13 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: eb23b048a50f10ea83d156c0499772b1be439336
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+description: 本章介绍输出格式设置、命令别名、提供程序和比较操作的概念。
+ms.openlocfilehash: efe70d2d220f8451e781603b6000c3553dda910c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84437998"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501603"
 ---
 # <a name="chapter-5---formatting-aliases-providers-comparison"></a>第 5 章 - 格式设置、别名、提供程序、比较
 

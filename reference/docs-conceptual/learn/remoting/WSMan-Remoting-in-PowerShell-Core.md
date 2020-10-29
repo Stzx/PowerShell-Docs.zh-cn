@@ -2,27 +2,22 @@
 title: PowerShell Core 中的 WS-Management (WSMan) 远程处理
 description: 在 PowerShell Core 中使用 WSMan 进行远程处理
 ms.date: 08/06/2018
-ms.openlocfilehash: e5f00128bc8ebc1b432cc77a5896a9e09d684109
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: fdc4159279db28b8ee60bc0853e19512a1f9ec14
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "62058873"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501297"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>PowerShell Core 中的 WS-Management (WSMan) 远程处理
 
 ## <a name="instructions-to-create-a-remoting-endpoint"></a>有关创建远程处理终结点的说明
 
-适用于 Windows 的 PowerShell Core 包包括 WinRM 插件 (`pwrshplugin.dll`) 和 `$PSHome` 中的安装脚本 (`Install-PowerShellRemoting.ps1`)。
-指定终结点时，这些文件可使 PowerShell 接受传入的 PowerShell 远程连接。
+适用于 Windows 的 PowerShell Core 包包括 WinRM 插件 (`pwrshplugin.dll`) 和 `$PSHome` 中的安装脚本 (`Install-PowerShellRemoting.ps1`)。 指定终结点时，这些文件可使 PowerShell 接受传入的 PowerShell 远程连接。
 
 ### <a name="motivation"></a>动机
 
-安装 PowerShell 可使用 `New-PSSession` 和 `Enter-PSSession` 针对远程计算机创建 PowerShell 会话。
-若要使其接受传入的 PowerShell 远程连接，用户必须创建一个 WinRM 远程处理终结点。
-这是一个显式选择加入方案，其中用户运行 Install-PowerShellRemoting.ps1 创建 WinRM 终结点。
-将其他功能添加到 `Enable-PSRemoting` 以执行相同操作前，安装脚本是一个短期解决方案。
-有关详细信息，请参阅问题 [#1193](https://github.com/PowerShell/PowerShell/issues/1193)。
+安装 PowerShell 可使用 `New-PSSession` 和 `Enter-PSSession` 针对远程计算机创建 PowerShell 会话。 若要使其接受传入的 PowerShell 远程连接，用户必须创建一个 WinRM 远程处理终结点。 这是一个显式选择加入方案，其中用户运行 Install-PowerShellRemoting.ps1 创建 WinRM 终结点。 将其他功能添加到 `Enable-PSRemoting` 以执行相同操作前，安装脚本是一个短期解决方案。 有关详细信息，请参阅问题 [#1193](https://github.com/PowerShell/PowerShell/issues/1193)。
 
 ### <a name="script-actions"></a>脚本操作
 
@@ -56,7 +51,8 @@ Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 .\Install-PowerShellRemoting.ps1 -PowerShellHome "C:\Program Files\PowerShell\6.0.0\"
 ```
 
-**注意：** 该远程处理注册脚本将重新启动 WinRM，因此该脚本运行后所有现有 PSRP 会话会立即终止。 如果在远程会话期间运行，则会终止连接。
+> [!NOTE]
+> 远程处理注册脚本将重启 WinRM。 运行此脚本后，所有现有 PSRP 会话将立即终止。 如果在远程会话期间运行，脚本将终止连接。
 
 ## <a name="how-to-connect-to-the-new-endpoint"></a>如何连接到新的终结点
 

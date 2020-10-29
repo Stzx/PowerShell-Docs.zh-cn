@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 执行网络任务
-ms.openlocfilehash: e0aa3b8ef3d911ab0fe851f6621d70e1265c5bd4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍如何使用 PowerShell 中的 WMI 类来管理 Windows 中的网络配置设置。
+ms.openlocfilehash: 95b05c193f4168cdcdf8414399c4f8c569bff754
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737196"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500243"
 ---
 # <a name="performing-networking-tasks"></a>执行网络任务
 
@@ -64,7 +65,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 
 网络适配器配置对象的默认显示为一组非常精简的可用信息。 对于深入检查和疑难解答，请使用 `Select-Object` 或格式设置 cmdlet（例如 `Format-List`）来指定要显示的属性。
 
-在新式 TCP/IP 网络中，你可能对 IPX 或 WINS 属性不感兴趣。 可以使用 `Select-Object` 的 ExcludeProperty 参数隐藏以“WINS”或“IPX”名称开头的属性。
+在新式 TCP/IP 网络中，你可能对 IPX 或 WINS 属性不感兴趣。 可以使用 `Select-Object` 的 ExcludeProperty  参数隐藏以“WINS”或“IPX”名称开头的属性。
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -81,7 +82,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'"
 ```
 
-摘要信息是更为有用的形式，它显示下面的命令生成的 Address、ResponseTime 以及 StatusCode 属性。 `Format-Table` 的 Autosize 参数调整表列的大小，以使其正确显示在 PowerShell 中。
+摘要信息是更为有用的形式，它显示下面的命令生成的 Address、ResponseTime 以及 StatusCode 属性。 `Format-Table` 的 Autosize  参数调整表列的大小，以使其正确显示在 PowerShell 中。
 
 ```powershell
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'" |
@@ -108,7 +109,7 @@ Address   ResponseTime StatusCode
 
 可以使用相同的命令格式对一个子网（例如使用网络号码 (192.168.1.0) 和标准 C 类子网掩码 (255.255.255.0) 的专用网）上的所有计算机执行 Ping 操作。仅在 192.168.1.1 到 192.168.1.254 范围内的地址为合法本地地址（0 始终为网络号码保留，255 是子网广播地址）。
 
-若要在 PowerShell 中表示从 1 到 254 范围内的数字数组，请使用语句 **1..254**。
+若要在 PowerShell 中表示从 1 到 254 范围内的数字数组，请使用语句 **1..254** 。
 可以通过生成数组，然后将值添加到 ping 语句中的部分地址上，执行完整的子网 Ping 操作：
 
 ```powershell
@@ -133,7 +134,7 @@ Get-CimInstance -Class Win32_NetworkAdapter -ComputerName .
 
 ## <a name="assigning-the-dns-domain-for-a-network-adapter"></a>为网络适配器分配 DNS 域
 
-若要分配 DNS 域以便进行自动名称解析，请使用 Win32_NetworkAdapterConfiguration 的 SetDNSDomain 方法。 由于你单独为每个网络适配器配置分配 DNS 域，因此需要使用 `ForEach-Object` 语句将域分配给每个适配器：
+若要分配 DNS 域以便进行自动名称解析，请使用 Win32_NetworkAdapterConfiguration  的 SetDNSDomain  方法。 由于你单独为每个网络适配器配置分配 DNS 域，因此需要使用 `ForEach-Object` 语句将域分配给每个适配器：
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -211,7 +212,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$tru
 
 ### <a name="releasing-and-renewing-dhcp-leases-on-all-adapters"></a>释放和续订所有适配器上的 DHCP 租约
 
-可以通过使用 **Win32_NetworkAdapterConfiguration** 方法、**ReleaseDHCPLeaseAll** 和 **RenewDHCPLeaseAll** 对所有适配器指定全局 DHCP 地址释放或续订。
+可以通过使用 **Win32_NetworkAdapterConfiguration** 方法、 **ReleaseDHCPLeaseAll** 和 **RenewDHCPLeaseAll** 对所有适配器指定全局 DHCP 地址释放或续订。
 但是，该命令必须适用于 WMI 类，而不是特定的适配器，因为全局释放和续订租约是对该类执行的，而不是对特定适配器执行的。
 
 可以通过列出所有 WMI 类，然后按名称仅选择所需类来获取对 WMI 类而不是类实例的引用。 例如，下面的命令将返回 Win32_NetworkAdapterConfiguration  类：
@@ -220,7 +221,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$tru
 Get-CimInstance -List | Where-Object {$_.Name -eq 'Win32_NetworkAdapterConfiguration'}
 ```
 
-可以将整个命令视为类，并在其上调用**ReleaseDHCPAdapterLease** 方法。 在下面的命令中，`Get-CimInstance` 和 `Where-Object` 管道元素两边的括号指示 PowerShell 先对其进行评估：
+可以将整个命令视为类，并在其上调用 **ReleaseDHCPAdapterLease** 方法。 在下面的命令中，`Get-CimInstance` 和 `Where-Object` 管道元素两边的括号指示 PowerShell 先对其进行评估：
 
 ```powershell
 (Get-CimInstance -List |

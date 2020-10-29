@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 使用文件和文件夹
-ms.openlocfilehash: 8876ff70adbd10c9019f6d80ce7ad327f2932c74
-ms.sourcegitcommit: 08acbea14c69a347f2f46aafcb215a5233c7d830
+description: 本文介绍如何使用 PowerShell 处理特定文件和文件夹操作任务。
+ms.openlocfilehash: c0c3abb082b05296daa480ac06bcbfa3a784e0c9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82691485"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500022"
 ---
 # <a name="working-with-files-and-folders"></a>使用文件和文件夹
 
-在 Windows PowerShell 驱动器中导航和操作其上面的项类似于操作 Windows 物理磁盘驱动器上的文件和文件夹。 本节讨论如何使用 PowerShell 处理特定文件和文件夹操作任务。
+在 Windows PowerShell 驱动器中导航和操作其上面的项类似于操作 Windows 物理磁盘驱动器上的文件和文件夹。 本文介绍如何使用 PowerShell 处理特定文件和文件夹操作任务。
 
 ## <a name="listing-all-the-files-and-folders-within-a-folder"></a>列出某个文件夹内的所有文件和文件夹
 
@@ -63,7 +64,7 @@ Copy-Item C:\temp\test1 -Recurse C:\temp\DeleteMe
 Copy-Item -Filter *.txt -Path c:\data -Recurse -Destination C:\temp\text
 ```
 
-你仍然可以使用其他工具执行文件系统复制。 XCOPY、ROBOCOPY 和 COM 对象（如 **Scripting.FileSystemObject**）都适用于 Windows PowerShell。 例如，可以使用 Windows 脚本宿主 Scripting.FileSystem COM  类将 `C:\boot.ini` 备份到 `C:\boot.bak`：
+你仍然可以使用其他工具执行文件系统复制。 XCOPY、ROBOCOPY 和 COM 对象（如 **Scripting.FileSystemObject** ）都适用于 Windows PowerShell。 例如，可以使用 Windows 脚本宿主 Scripting.FileSystem COM  类将 `C:\boot.ini` 备份到 `C:\boot.bak`：
 
 ```powershell
 (New-Object -ComObject Scripting.FileSystemObject).CopyFile('C:\boot.ini', 'C:\boot.bak')
@@ -135,7 +136,7 @@ multi(0)disk(0)rdisk(0)partition(1)\WINDOWS=" Microsoft Windows XP Professional
 with Data Execution Prevention" /noexecute=optin /fastdetect
 ```
 
-`Get-Content` 已将从文件读取的数据视为数组，其中每行文件内容为一个元素。 可以通过检查返回的内容的**长度**来确认此点：
+`Get-Content` 已将从文件读取的数据视为数组，其中每行文件内容为一个元素。 可以通过检查返回的内容的 **长度** 来确认此点：
 
 ```
 PS> (Get-Content -Path C:\boot.ini).Length

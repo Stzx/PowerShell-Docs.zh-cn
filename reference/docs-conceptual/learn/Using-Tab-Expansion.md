@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 使用 Tab 键扩展
-ms.openlocfilehash: d96cbf848f464aff29a7bed9b70d0b6a000aa808
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+description: 介绍如何使用 PowerShell 中的 Tab 键扩展功能。
+ms.openlocfilehash: d3408aac8cc9325666082577a7b00bc3362bfca3
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438268"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500039"
 ---
 # <a name="using-tab-expansion"></a>使用 Tab 键扩展
 

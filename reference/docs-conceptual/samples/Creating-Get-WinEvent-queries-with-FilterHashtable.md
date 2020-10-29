@@ -1,12 +1,13 @@
 ---
 ms.date: 09/13/2019
 title: 使用 FilterHashtable 创建 Get-WinEvent 查询
-ms.openlocfilehash: 002d84515368663e0e807f48ffe883bd533be1d9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 本文介绍如何使用 Get-WinEvent 的 FilterHashtable 查询 Windows 事件日志。
+ms.openlocfilehash: 8e080f17436d97adda277600cd202a0e6e9283e0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786639"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500600"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>使用 FilterHashtable 创建 Get-WinEvent 查询
 
@@ -151,7 +152,7 @@ WdiContext       Property   static System.Diagnostics.Eventing.Reader.StandardEv
 WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEventKey…
 ```
 
-枚举值将记录在 .NET Framework 中。 有关详细信息，请参阅 [StandardEventKeywords 枚举](/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?redirectedfrom=MSDN&view=netframework-4.7.2)。
+枚举值将记录在 .NET Framework 中。 有关详细信息，请参阅 [StandardEventKeywords 枚举](/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords)。
 
 Keywords 名称和枚举值如下所示：
 
@@ -232,7 +233,7 @@ Verbose       Property   static System.Diagnostics.Eventing.Reader.StandardEvent
 Warning       Property   static System.Diagnostics.Eventing.Reader.StandardEventLevel Warning {get;}
 ```
 
-枚举值将记录在 .NET Framework 中。 有关详细信息，请参阅 [StandardEventLevel 枚举](/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel?redirectedfrom=MSDN&view=netframework-4.7.2)。
+枚举值将记录在 .NET Framework 中。 有关详细信息，请参阅 [StandardEventLevel 枚举](/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel)。
 
 Level 键的名称和枚举值如下所示：
 

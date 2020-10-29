@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 使用 Out Cmdlet 重定向数据
-ms.openlocfilehash: d4cc14e26bdef0f973f948177d0c1e68929605fa
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍如何使用管理 PowerShell 中的输出的 cmdlet。
+ms.openlocfilehash: 3a9e3b1ac06f5be4e6f3bbc52a15c4afb5b12cef
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030078"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500209"
 ---
 # <a name="redirecting-data-with-out--cmdlets"></a>使用 Out-* Cmdlet 重定向数据
 
@@ -15,7 +16,7 @@ Windows PowerShell 提供多个 cmdlet，可让你直接控制数据输出。 �
 
 第一，它们通常将数据转换为某种形式的文本。 这样做的原因是它们将数据输出到需要文本输入的系统组件。 这意味着它们需要将对象表示为文本。 因此，文本的格式设置为你在 Windows PowerShell 控制台窗口中看到的形式。
 
-第二，这些 cmdlet 使用 Windows PowerShell 谓词 **Out**，因为它们会将信息从 Windows PowerShell 发送到别处。 **Out-Host** cmdlet 也不例外：主机窗口显示在 Windows PowerShell 之外。 这一点尤为重要，原因是将数据发送出 Windows PowerShell 时，实际上已删除该数据。 在你尝试创建用于将数据分页到主机窗口的管道，然后尝试将其格式化为列表时，可以看到此内容，如下所示：
+第二，这些 cmdlet 使用 Windows PowerShell 谓词 **Out** ，因为它们会将信息从 Windows PowerShell 发送到别处。 **Out-Host** cmdlet 也不例外：主机窗口显示在 Windows PowerShell 之外。 这一点尤为重要，原因是将数据发送出 Windows PowerShell 时，实际上已删除该数据。 在你尝试创建用于将数据分页到主机窗口的管道，然后尝试将其格式化为列表时，可以看到此内容，如下所示：
 
 ```powershell
 Get-Process | Out-Host -Paging | Format-List
@@ -75,7 +76,7 @@ Name    : explorer
 Get-Command | Out-Host -Paging
 ```
 
-你还可以使用 **more** 函数对数据进行分页。 在 Windows PowerShell 中，**more** 是调用 **Out-Host -Paging** 的函数。 下面的命令演示了如何使用 **more** 函数对 Get-Command 的输出进行分页：
+你还可以使用 **more** 函数对数据进行分页。 在 Windows PowerShell 中， **more** 是调用 **Out-Host -Paging** 的函数。 下面的命令演示了如何使用 **more** 函数对 Get-Command 的输出进行分页：
 
 ```powershell
 Get-Command | more
@@ -120,7 +121,7 @@ Get-Command Get-Command | Out-Printer -Name 'Microsoft Office Document Image Wri
 
 ## <a name="saving-data-out-file"></a>保存数据 (Out-File)
 
-可以使用 **Out-File** cmdlet 将输出发送到文件而不是控制台窗口。 下面的命令行将进程列表发送到文件 **C:\\temp\\processlist.txt**：
+可以使用 **Out-File** cmdlet 将输出发送到文件而不是控制台窗口。 下面的命令行将进程列表发送到文件 **C:\\temp\\processlist.txt** ：
 
 ```powershell
 Get-Process | Out-File -FilePath C:\temp\processlist.txt
@@ -128,7 +129,7 @@ Get-Process | Out-File -FilePath C:\temp\processlist.txt
 
 如果你习惯使用传统的输出重定向，则使用 **Out-File** cmdlet 可能与你的预期结果有所不同。 若要了解其行为，必须知道运行 **Out-File** cmdlet 的上下文。
 
-默认情况下，**Out-File** cmdlet 创建 Unicode 文件。 从长远来看，这是最佳默认操作，但是它意味着应创建 ASCII 文件的工具将无法使用默认的输出格式正常运作。 可以使用 **Encoding** 参数将默认输出格式更改为 ASCII：
+默认情况下， **Out-File** cmdlet 创建 Unicode 文件。 从长远来看，这是最佳默认操作，但是它意味着应创建 ASCII 文件的工具将无法使用默认的输出格式正常运作。 可以使用 **Encoding** 参数将默认输出格式更改为 ASCII：
 
 ```powershell
 Get-Process | Out-File -FilePath C:\temp\processlist.txt -Encoding ASCII

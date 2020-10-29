@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 创建 .NET 和 COM 对象 (New Object)
-ms.openlocfilehash: 6e98a159451bc7da4ba3b37eaeb813eb71590d2b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 作为一种面向对象的脚本语言，PowerShell 同时支持 .NET 和基于 COM 的对象。 本文介绍如何创建这些对象并与之交互。
+ms.openlocfilehash: e6189ba465749dd045add7015fc82223c31c7e32
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71325173"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500566"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>创建 .NET 和 COM 对象 (New-Object)
 
@@ -28,7 +29,7 @@ PS> New-Object -TypeName System.Diagnostics.EventLog
 
 ### <a name="using-constructors-with-new-object"></a>将构造函数与 New-Object 一起使用
 
-若要引用特定的事件日志，需要指定日志的名称。 **New-Object** 具有 **ArgumentList** 参数。 作为值传递到此形参的实参将由对象的特殊的启动方法使用。 此方法叫做*构造函数*，因为它将用于构造对象。 例如，若要对获取应用程序日志的引用，请指定字符串“Application”作为实参：
+若要引用特定的事件日志，需要指定日志的名称。 **New-Object** 具有 **ArgumentList** 参数。 作为值传递到此形参的实参将由对象的特殊的启动方法使用。 此方法叫做 *构造函数* ，因为它将用于构造对象。 例如，若要对获取应用程序日志的引用，请指定字符串“Application”作为实参：
 
 ```
 PS> New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Application
@@ -63,7 +64,7 @@ PS> $AppLog
 
 ### <a name="accessing-a-remote-event-log-with-new-object"></a>使用 New-Object 访问远程事件日志
 
-上一节中使用的命令以本地计算机为目标；**Get-EventLog** cmdlet 可做到这一点。 若要访问远程计算机上的应用程序日志，必须同时将日志名称和计算机名称（或 IP 地址）作为参数提供。
+上一节中使用的命令以本地计算机为目标； **Get-EventLog** cmdlet 可做到这一点。 若要访问远程计算机上的应用程序日志，必须同时将日志名称和计算机名称（或 IP 地址）作为参数提供。
 
 ```
 PS> $RemoteAppLog = New-Object -TypeName System.Diagnostics.EventLog Application,192.168.1.81
@@ -120,9 +121,9 @@ PS> $RemoteAppLog
 ## <a name="creating-com-objects-with-new-object"></a>使用 New-Object 创建 COM 对象
 可以使用 **New-Object** 来处理组件对象模型 (COM) 组件。 组件的范围从 Windows 脚本宿主 (WSH) 包含的各种库到 ActiveX 应用程序（如大多数系统上安装的 Internet Explorer）。
 
-**New-Object** 使用 .NET Framework 运行时可调用的包装器创建 COM 对象，因此调用 COM 对象时它与 .NET Framework 具有相同的限制。 若要创建 COM 对象，需要为 **ComObject** 参数指定要使用的 COM 类的编程标识符（或 *ProgId*）。 COM 用途限制的全面讨论和确定系统上可用的 ProgId 已超出本用户指南的范围，但来自环境的大多数已知对象（如 WSH）都可在 Windows PowerShell 内使用。
+**New-Object** 使用 .NET Framework 运行时可调用的包装器创建 COM 对象，因此调用 COM 对象时它与 .NET Framework 具有相同的限制。 若要创建 COM 对象，需要为 **ComObject** 参数指定要使用的 COM 类的编程标识符（或 *ProgId* ）。 COM 用途限制的全面讨论和确定系统上可用的 ProgId 已超出本用户指南的范围，但来自环境的大多数已知对象（如 WSH）都可在 Windows PowerShell 内使用。
 
-可通过指定以下 progid 来创建 WSH 对象：**WScript.Shell**、**WScript.Network**、**Scripting.Dictionary** 和 **Scripting.FileSystemObject**。 以下命令将创建这些对象：
+可通过指定以下 progid 来创建 WSH 对象： **WScript.Shell** 、 **WScript.Network** 、 **Scripting.Dictionary** 和 **Scripting.FileSystemObject** 。 以下命令将创建这些对象：
 
 ```powershell
 New-Object -ComObject WScript.Shell
@@ -155,7 +156,7 @@ CreateShortcut           Method                IDispatch CreateShortcut (str...
 ...
 ```
 
-**Get-Member** 具有可选 **InputObject** 参数，你可以使用这个参数而不使用管道为 **Get-Member** 提供输入。 如果改用命令 **Get-Member-InputObject $WshShell**，你会得到与如上所示相同的输出。 如果使用 **InputObject**，它将视其参数为单个项。 这意味着，如果变量中有几个对象，那么 **Get-Member** 会将它们视为一个对象数组。 例如：
+**Get-Member** 具有可选 **InputObject** 参数，你可以使用这个参数而不使用管道为 **Get-Member** 提供输入。 如果改用命令 **Get-Member-InputObject $WshShell** ，你会得到与如上所示相同的输出。 如果使用 **InputObject** ，它将视其参数为单个项。 这意味着，如果变量中有几个对象，那么 **Get-Member** 会将它们视为一个对象数组。 例如：
 
 ```
 PS> $a = 1,2,"three"
@@ -167,7 +168,7 @@ Count              AliasProperty Count = Length
 ...
 ```
 
-**WScript.Shell CreateShortcut** 方法接受单个参数，即要创建的快捷方式文件的路径。 我们可以键入桌面的完整路径，但还有更简单的方法。 桌面通常由当前用户的主文件夹内名为 Desktop 的文件夹表示。 Windows PowerShell 具有变量 **$Home**，它包含此文件夹的路径。 我们可以通过使用此变量指定主文件夹的路径，然后通过键入以下内容添加 Desktop 文件夹的名称和要创建的快捷方式的名称：
+**WScript.Shell CreateShortcut** 方法接受单个参数，即要创建的快捷方式文件的路径。 我们可以键入桌面的完整路径，但还有更简单的方法。 桌面通常由当前用户的主文件夹内名为 Desktop 的文件夹表示。 Windows PowerShell 具有变量 **$Home** ，它包含此文件夹的路径。 我们可以通过使用此变量指定主文件夹的路径，然后通过键入以下内容添加 Desktop 文件夹的名称和要创建的快捷方式的名称：
 
 ```powershell
 $lnk = $WshShell.CreateShortcut("$Home\Desktop\PSHome.lnk")
@@ -182,7 +183,7 @@ PS> '$Home\Desktop\PSHome.lnk'
 $Home\Desktop\PSHome.lnk
 ```
 
-我们现在有一个名为 **$lnk** 的变量，其中包含新的快捷方式引用。 如果想要查看其成员，你可以通过管道将它传递到 **Get-Member**。 下面的输出显示了完成创建快捷方式所需使用的成员：
+我们现在有一个名为 **$lnk** 的变量，其中包含新的快捷方式引用。 如果想要查看其成员，你可以通过管道将它传递到 **Get-Member** 。 下面的输出显示了完成创建快捷方式所需使用的成员：
 
 ```
 PS> $lnk | Get-Member
@@ -195,7 +196,7 @@ Save             Method       void Save ()
 TargetPath       Property     string TargetPath () {get} {set}
 ```
 
-我们需要指定 **TargetPath**（它是 Windows PowerShell 的应用程序文件夹），然后通过调用 **Save** 方法保存快捷方式 **$lnk**。 Windows PowerShell 应用程序文件夹路径存储在变量 **$PSHome** 中，因此我们可以通过键入以下内容执行此操作：
+我们需要指定 **TargetPath** （它是 Windows PowerShell 的应用程序文件夹），然后通过调用 **Save** 方法保存快捷方式 **$lnk** 。 Windows PowerShell 应用程序文件夹路径存储在变量 **$PSHome** 中，因此我们可以通过键入以下内容执行此操作：
 
 ```powershell
 $lnk.TargetPath = $PSHome
@@ -215,9 +216,9 @@ $ie = New-Object -ComObject InternetExplorer.Application
 此命令将启动 Internet Explorer，但不显示它。 如果你键入 Get-Process，将可以看到名为 iexplore 的进程正在运行。 事实上，如果你退出 Windows PowerShell，该过程将继续运行。 必须重启计算机或使用任务管理器等工具结束 iexplore 进程。
 
 > [!NOTE]
-> 作为独立进程（通常称为 *ActiveX 可执行文件*）启动的 COM 对象启动时可能显示也可能不显示用户界面窗口。 如果它们创建而不显示窗口（如 Internet Explorer），则焦点通常会移到 Windows 桌面，这时必须显示窗口才能与其进行交互。
+> 作为独立进程（通常称为 *ActiveX 可执行文件* ）启动的 COM 对象启动时可能显示也可能不显示用户界面窗口。 如果它们创建而不显示窗口（如 Internet Explorer），则焦点通常会移到 Windows 桌面，这时必须显示窗口才能与其进行交互。
 
-通过键入 **$ie | Get-Member**，可以查看 Internet Explorer 的属性和方法。 若要查看 Internet Explorer 窗口，请通过键入以下内容将 Visible 属性设置为 $true：
+通过键入 **$ie | Get-Member** ，可以查看 Internet Explorer 的属性和方法。 若要查看 Internet Explorer 窗口，请通过键入以下内容将 Visible 属性设置为 $true：
 
 ```powershell
 $ie.Visible = $true
@@ -263,7 +264,7 @@ Remove-Variable ie
 
 ## <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>获取有关 .NET Framework 包装的 COM 对象的警告
 
-在某些情况下，COM 对象可能具有相关联的 .NET Framework *运行时可调用包装器*（或称 RCW），它将由 **New-Object** 使用。 因为 RCW 的行为可能与普通 COM 对象的行为不同，所以 **New-Object** 具有 **Strict** 参数，它将对访问 RCW 进行警告。 如果指定 **Strict** 参数然后创建使用 RCW 的 COM 对象，你会收到一条警告消息：
+在某些情况下，COM 对象可能具有相关联的 .NET Framework *运行时可调用包装器* （或称 RCW），它将由 **New-Object** 使用。 因为 RCW 的行为可能与普通 COM 对象的行为不同，所以 **New-Object** 具有 **Strict** 参数，它将对访问 RCW 进行警告。 如果指定 **Strict** 参数然后创建使用 RCW 的 COM 对象，你会收到一条警告消息：
 
 ```
 PS> $xl = New-Object -ComObject Excel.Application -Strict

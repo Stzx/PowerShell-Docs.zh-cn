@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 直接操作项
-ms.openlocfilehash: 50aed569cf6b876297abe3cf1544eba70f6279ce
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell 提供了多个 cmdlet，可帮助管理本地和远程计算机上的项。 项是由 PowerShell 提供程序公开的对象，如文件系统、注册表、证书等。
+ms.openlocfilehash: 20132b63a8ff4ef24b1d8346066315dbb053e59c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030122"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500311"
 ---
 # <a name="manipulating-items-directly"></a>直接操作项
 
-在 Windows PowerShell 驱动器中看到的元素（例如文件系统驱动器中的文件和文件夹），以及 Windows PowerShell 注册表驱动器中的注册表项在 Windows PowerShell 中均称为*项*。 用于使用这些项的 cmdlet 名称中具有名词 **Item**。
+你在 Windows PowerShell 驱动器中看到的元素（例如文件系统驱动器中的文件和文件夹），以及 Windows PowerShell 注册表驱动器中的注册表项在 Windows PowerShell 中均称为 *项* 。 用于使用这些项的 cmdlet 名称中具有名词 **Item** 。
 
 **Get-Command -Noun Item** 命令的输出显示有九个 Windows PowerShell 项 cmdlet。
 
@@ -59,7 +60,7 @@ Mode                LastWriteTime     Length Name
 -a---        2006-05-18  11:44 AM          0 file1
 ```
 
-可以使用相同技术创建新的注册表项。 事实上，注册表项更容易创建，因为 Windows 注册表中的唯一项类型就是注册表项。 （注册表条目是项*属性*。）例如，若要在 CurrentVersion 子项中创建名为“_Test”的项，请键入：
+可以使用相同技术创建新的注册表项。 事实上，注册表项更容易创建，因为 Windows 注册表中的唯一项类型就是注册表项。 （注册表条目是项 *属性* 。）例如，若要在 CurrentVersion 子项中创建名为“_Test”的项，请键入：
 
 ```
 PS> New-Item -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion_Test
@@ -92,11 +93,11 @@ SKC  VC Name                           Property
   3   0 OptionalComponents             {}
 ```
 
-尽管将注册表条目视为项会很方便，但无法确保指定的注册表条目路径是唯一的。 路径表示法不区分名为 **Run** 的注册表子项和 **Run** 子项中的 **(Default)** 注册表条目。 此外，由于注册表条目名称可以包含反斜杠字符 (\\  )，因此如果注册表条目是项，则无法使用路径表示法区分名为 Windows\\CurrentVersion\\Run  的注册表条目和此路径中的子项。
+尽管将注册表条目视为项会很方便，但无法确保指定的注册表条目路径是唯一的。 路径表示法不区分名为 **Run** 的注册表子项和 **Run** 子项中的 **(Default)** 注册表条目。 此外，由于注册表条目名称可以包含反斜杠字符 (\\)，因此如果注册表条目是项，则无法使用路径表示法区分名为 Windows\\CurrentVersion\\Run 的注册表条目和此路径中的子项。
 
 ## <a name="renaming-existing-items-rename-item"></a>重命名现有项 (Rename-Item)
 
-若要更改文件或文件夹的名称，请使用 **Rename-Item** cmdlet。 以下命令将 **file1.txt** 文件的名称更改为 **fileOne.txt**。
+若要更改文件或文件夹的名称，请使用 **Rename-Item** cmdlet。 以下命令将 **file1.txt** 文件的名称更改为 **fileOne.txt** 。
 
 ```powershell
 Rename-Item -Path C:\temp\New.Directory\file1.txt fileOne.txt
@@ -115,7 +116,7 @@ At line:1 char:12
 
 若要移动文件或文件夹，请使用 **Move-Item** cmdlet。
 
-例如，以下命令将 New.Directory 目录从 C:\\temp 目录移动到 C: 驱动器的根目录。 若要验证该项是否已移动，请包含 **Move-Item** cmdlet 的 **PassThru** 参数。 在没有 **Passthru** 的情况下，**Move-Item** cmdlet 不显示任何结果。
+例如，以下命令将 New.Directory 目录从 C:\\temp 目录移动到 C: 驱动器的根目录。 若要验证该项是否已移动，请包含 **Move-Item** cmdlet 的 **PassThru** 参数。 在没有 **Passthru** 的情况下， **Move-Item** cmdlet 不显示任何结果。
 
 ```
 PS> Move-Item -Path C:\temp\New.Directory -Destination C:\ -PassThru
@@ -168,7 +169,7 @@ Mode                LastWriteTime     Length Name
 
 ## <a name="deleting-items-remove-item"></a>删除项 (Remove-Item)
 
-若要删除文件和文件夹，请使用 **Remove-Item** cmdlet。 可进行重要且不可逆更改的 Windows PowerShell cmdlet（例如 **Remove-Item**）在你输入其命令时通常将提示你进行确认。 例如，如果你尝试删除 **New.Directory** 文件夹，系统将提示你确认命令，因为该文件夹中包含文件：
+若要删除文件和文件夹，请使用 **Remove-Item** cmdlet。 可进行重要且不可逆更改的 Windows PowerShell cmdlet（例如 **Remove-Item** ）在你输入其命令时通常将提示你进行确认。 例如，如果你尝试删除 **New.Directory** 文件夹，系统将提示你确认命令，因为该文件夹中包含文件：
 
 ```
 PS> Remove-Item C:\New.Directory
@@ -181,7 +182,7 @@ specified. If you continue, all children will be removed with the item. Are you
 (default is "Y"):
 ```
 
-由于“是”  是默认响应，因此若要删除文件夹及其文件，请按“Enter”  键。 若要删除文件夹而不进行确认，请使用 **-Recurse**参数。
+由于  键。 若要删除文件夹而不进行确认，请使用 **-Recurse** 参数。
 
 ```powershell
 Remove-Item C:\temp\New.Directory -Recurse

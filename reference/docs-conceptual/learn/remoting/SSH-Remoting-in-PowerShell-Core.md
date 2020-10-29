@@ -1,13 +1,13 @@
 ---
 title: 通过 SSH 进行 PowerShell 远程处理
-description: 在 PowerShell Core 中使用 SSH 进行远程处理
-ms.date: 07/23/2020
-ms.openlocfilehash: cc65db481fcedcafec16093dbf7e6af4975c73db
-ms.sourcegitcommit: 9dddf1d2e91ebcd347fcfb7bf6ef670d49a12ab7
+ms.date: 10/19/2020
+description: 介绍如何为 PowerShell 远程处理设置 SSH 协议。
+ms.openlocfilehash: c3373ac30fd915d42e8c9fb7f1eae348a2aee7f1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133463"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501331"
 ---
 # <a name="powershell-remoting-over-ssh"></a>通过 SSH 进行 PowerShell 远程处理
 
@@ -25,15 +25,15 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-若要创建远程会话，请使用 HostName 参数指定目标计算机，并通过 UserName 提供用户名 。 当以交互方式运行 cmdlet 时，系统会提示输入密码。 还可以采用包含 KeyFilePath 参数的私钥文件来使用 SSH 密钥身份验证。
+若要创建远程会话，请使用 HostName 参数指定目标计算机，并通过 UserName 提供用户名 。 当以交互方式运行 cmdlet 时，系统会提示输入密码。 还可以通过包含 KeyFilePath 参数的私钥文件来使用 SSH 密钥身份验证。 为 SSH 身份验证创建密钥的操作因平台而异。
 
 ## <a name="general-setup-information"></a>常规安装信息
 
-必须在所有计算机上安装 PowerShell 6 或更高版本，以及 SSH。 安装 SSH 客户端 (`ssh.exe`) 和服务器 (`sshd.exe`)，以便对计算机进行远程处理或从计算机进行远程处理。 OpenSSH for Windows 现已在 Windows 10 内部版本 1809 和 Windows Server 2019 中可用。 有关详细信息，请参阅[使用 OpenSSH 管理 Windows](/windows-server/administration/openssh/openssh_overview)。 对于 Linux，请安装适用于平台的 SSH（包括 sshd 服务器）。 此外，还需要从 GitHub 安装 PowerShell 以获取 SSH 远程处理功能。 必须配置 SSH 服务器以创建 SSH 子系统来托管远程计算机上的 PowerShell 进程。 还必须启用**密码**或**基于密钥的**身份验证。
+必须在所有计算机上安装 PowerShell 6 或更高版本，以及 SSH。 安装 SSH 客户端 (`ssh.exe`) 和服务器 (`sshd.exe`)，以便对计算机进行远程处理或从计算机进行远程处理。 OpenSSH for Windows 现已在 Windows 10 内部版本 1809 和 Windows Server 2019 中可用。 有关详细信息，请参阅[使用 OpenSSH 管理 Windows](/windows-server/administration/openssh/openssh_overview)。 对于 Linux，请安装适用于平台的 SSH（包括 sshd 服务器）。 此外，还需要从 GitHub 安装 PowerShell 以获取 SSH 远程处理功能。 必须配置 SSH 服务器以创建 SSH 子系统来托管远程计算机上的 PowerShell 进程。 还必须启用 **密码** 或 **基于密钥的** 身份验证。
 
 ## <a name="set-up-on-a-windows-computer"></a>在 Windows 计算机上设置
 
-1. 安装最新版本的 PowerShell，请参阅[在 Windows 上安装 PowerShell Core](../../install/installing-powershell-core-on-windows.md#msi)。
+1. 安装最新版本的 PowerShell。 有关详细信息，请参阅[在 Windows 上安装 PowerShell Core](../../install/installing-powershell-core-on-windows.md#msi)。
 
    可通过列出 `New-PSSession` 参数集来确认 PowerShell 具有 SSH 远程处理支持。 你会注意到存在以 **SSH** 开头的参数集名称。 这些参数集包括 **SSH** 参数。
 
@@ -119,6 +119,14 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    PasswordAuthentication yes
    ```
 
+   启用密钥身份验证（可选）：
+
+   ```
+   PubkeyAuthentication yes
+   ```
+
+   有关在 Ubuntu 上创建 SSH 密钥的详细信息，请参阅 [ssh-keygen](http://manpages.ubuntu.com/manpages/xenial/man1/ssh-keygen.1.html) 的手册页。
+
    添加 PowerShell 子系统条目：
 
    ```
@@ -134,15 +142,15 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
    PubkeyAuthentication yes
    ```
 
-1. 重启 **sshd** 服务。
+1. 重启 ssh 服务。
 
    ```bash
-   sudo service sshd restart
+   sudo service ssh restart
    ```
 
 ## <a name="set-up-on-a-macos-computer"></a>在 macOS 计算机上设置
 
-1. 安装最新版本的 PowerShell，请参阅[在 macOS 上安装 PowerShell Core](../../install/installing-powershell-core-on-macos.md)。
+1. 安装最新版本的 PowerShell。 有关详细信息，请参阅[在 macOS 上安装 PowerShell Core](../../install/installing-powershell-core-on-macos.md)。
 
    按照以下步骤确保已启用 SSH 远程处理：
 
@@ -153,7 +161,7 @@ WinRM 为 PowerShell 远程会话提供可靠的托管模型。 基于 SSH 的�
 
 1. 编辑 `/private/etc/ssh/sshd_config` 位置中的 `sshd_config` 文件。
 
-   打开文本编辑器，例如 **nano**：
+   打开文本编辑器，例如 **nano** ：
 
    ```bash
    sudo nano /private/etc/ssh/sshd_config

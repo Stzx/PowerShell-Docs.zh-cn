@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 使用 Process Cmdlet 管理进程
-ms.openlocfilehash: 8de0cbae508958bf7970ce69e03257ea0a8dca6f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell 提供了多个 cmdlet，可帮助管理本地和远程计算机上的进程。
+ms.openlocfilehash: 977a3459eeac22536341753ccd59357d718745f2
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75870738"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500430"
 ---
 # <a name="managing-processes-with-process-cmdlets"></a>使用 Process Cmdlet 管理进程
 
@@ -15,7 +16,7 @@ ms.locfileid: "75870738"
 
 ## <a name="getting-processes-get-process"></a>获取进程 (Get-Process)
 
-若要获取在本地计算机上运行的进程，请运行不具有参数的 **Get-Process**。
+若要获取在本地计算机上运行的进程，请运行不具有参数的 **Get-Process** 。
 
 你可以通过指定其进程名称或进程 ID 来获取特定进程。 以下命令将获取空闲进程：
 
@@ -27,7 +28,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
       0       0        0         16     0               0 Idle
 ```
 
-尽管某些情况下 cmdlet 不会返回任何数据很正常，但当你按其 ProcessId 指定一个进程时，如果未找到任何匹配项，**Get-Process** 将生成一个错误，因为通常的目的是检索一个已知的正在运行的进程。 如果按该 ID 找不到进程，则很可能该 ID 不正确或相关进程已退出：
+尽管某些情况下 cmdlet 不会返回任何数据很正常，但当你按其 ProcessId 指定一个进程时，如果未找到任何匹配项， **Get-Process** 将生成一个错误，因为通常的目的是检索一个已知的正在运行的进程。 如果按该 ID 找不到进程，则很可能该 ID 不正确或相关进程已退出：
 
 ```
 PS> Get-Process -Id 99

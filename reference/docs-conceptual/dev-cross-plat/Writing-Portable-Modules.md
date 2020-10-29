@@ -1,13 +1,14 @@
 ---
-ms.date: 01/10/2020
+ms.date: 10/21/2020
 keywords: powershell,cmdlet
 title: 编写可移植模块
-ms.openlocfilehash: a6b2f8b263e71b6c9dbd50900536cb5072597e71
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: 本文介绍如何创建新模块或更新现有模块，使其能够跨 PowerShell 支持的平台工作。
+ms.openlocfilehash: 6d5c36263c3c6d1219f963cea2e94ae92b07e863
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158116"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500787"
 ---
 # <a name="portable-modules"></a>可移植模块
 
@@ -17,10 +18,9 @@ Windows PowerShell 是为 [.NET Framework][] 编写的，而 PowerShell Core 是
 
 ### <a name="porting-a-pssnapin"></a>移植 PSSnapIn
 
-PowerShell [SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) 在 PowerShell Core 中不受支持。 然而，将 PSSnapIn 转换为 PowerShell 模块非常简单。 通常，PSSnapIn 注册代码位于派生自 [PSSnapIn][] 的类的单个源文件中。
-从生成中删除此源文件；不再需要该文件。
+PowerShell [SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) 在 PowerShell Core 中不受支持。 然而，将 PSSnapIn 转换为 PowerShell 模块非常简单。 通常，PSSnapIn 注册代码位于派生自 [PSSnapIn][] 的类的单个源文件中。 从生成中删除此源文件；不再需要该文件。
 
-使用 [New-ModuleManifest][] 创建一个新的模块清单，进而无需 PSSnapIn 注册代码。 **PSSnapIn** 中的某些值（例如 **Description**）可以在模块清单中重复使用。
+使用 [New-ModuleManifest][] 创建一个新的模块清单，进而无需 PSSnapIn 注册代码。 **PSSnapIn** 中的某些值（例如 **Description** ）可以在模块清单中重复使用。
 
 模块清单中的 **RootModule** 属性应设置为实施 cmdlet 的程序集 (dll) 的名称。
 
@@ -65,11 +65,11 @@ Options:
   -lang, --language   Filters templates based on language and specifies the language of the template to create.
 
 
-Templates                                         Short Name         Language          Tags
-----------------------------------------------------------------------------------------------------------------------------
-Console Application                               console            [C#], F#, VB      Common/Console
-Class library                                     classlib           [C#], F#, VB      Common/Library
-PowerShell Standard Module                        psmodule           [C#]              Library/PowerShell/Module
+Templates                        Short Name         Language          Tags
+-----------------------------------------------------------------------------------------------
+Console Application              console            [C#], F#, VB      Common/Console
+Class library                    classlib           [C#], F#, VB      Common/Library
+PowerShell Standard Module       psmodule           [C#]              Library/PowerShell/Module
 ...
 ```
 
@@ -156,9 +156,15 @@ FavoriteNumber FavoritePet
              7 Cat
 ```
 
+### <a name="debugging-the-module"></a>调试模块
+
+有关设置用于调试模块的 Visual Studio Code 的指南，请参阅[使用 Visual Studio Code 调试已编译的 cmdlet][]。
+
+## <a name="supporting-technologies"></a>支持技术
+
 以下各节详细说明了此模板使用的一些技术。
 
-## <a name="net-standard-library"></a>.NET Standard 库
+### <a name="net-standard-library"></a>.NET Standard 库
 
 [.NET Standard][] 是可在所有 .NET 实现中使用的 .NET API 的正式规范。 以 .NET Standard 为目标的托管代码适用于与该版本的 .NET Standard 兼容的 .NET Framework 和 .NET Core 版本。
 
@@ -170,7 +176,7 @@ FavoriteNumber FavoritePet
 
 但是，只要使用兼容 API，则不需要以 .NET Standard 为目标来让模块来同时适用于 Windows PowerShell 和 PowerShell Core。 中间语言 (IL) 在两个运行时之间是兼容的。 可面向 .Net Framework 4.6.1，它与 .Net Standard 2.0 兼容。 如果不使用 .Net Standard 2.0 之外的 API，模块将适用于 PowerShell Core 6，而无需重新编译。
 
-## <a name="powershell-standard-library"></a>PowerShell Standard 库
+### <a name="powershell-standard-library"></a>PowerShell Standard 库
 
 [PowerShell Standard][] 库是 PowerShell API 的正式规范，适用于所有大于或等于该标准版本的 PowerShell 版本。
 
@@ -179,9 +185,9 @@ FavoriteNumber FavoritePet
 建议使用 PowerShell Standard 库编译模块。 该库确保 API 同时适用于 Windows PowerShell 和 PowerShell Core 6 并可在两者中实现。
 PowerShell Standard 旨在始终向前兼容。 使用 PowerShell Standard 库 5.1 生成的模块将始终与 PowerShell 的未来版本兼容。
 
-## <a name="module-manifest"></a>模块清单
+### <a name="module-manifest"></a>模块清单
 
-### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>指示与 Windows PowerShell 和 PowerShell Core 的兼容性
+#### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>指示与 Windows PowerShell 和 PowerShell Core 的兼容性
 
 在验证模块同时适用于 Windows PowerShell 和 PowerShell Core 之后，模块清单应使用 [CompatiblePSEditions][] 属性显式指示兼容性。 值 `Desktop` 表示模块与 Windows PowerShell 兼容，而值 `Core` 表示模块与 PowerShell Core 兼容。 同时包含 `Desktop` 和 `Core` 意味着该模块同时与 Windows PowerShell 和 PowerShell Core 兼容。
 
@@ -249,7 +255,7 @@ PowerShell Standard 旨在始终向前兼容。 使用 PowerShell Standard 库 5
 }
 ```
 
-## <a name="dependency-on-native-libraries"></a>本机库的依赖项
+### <a name="dependency-on-native-libraries"></a>本机库的依赖项
 
 旨在跨不同操作系统或处理器体系结构使用的模块可能依赖于托管库，而托管库本身又依赖于一些本机库。
 
@@ -259,33 +265,33 @@ PowerShell Standard 旨在始终向前兼容。 使用 PowerShell Standard 库 5
 
 ```
 managed.dll folder
-                |
-                |--- 'win-x64' folder
-                |       |--- native.dll
-                |
-                |--- 'win-x86' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm64' folder
-                |       |--- native.dll
-                |
-                |--- 'linux-x64' folder
-                |       |--- native.so
-                |
-                |--- 'linux-x86' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm64' folder
-                |       |--- native.so
-                |
-                |--- 'osx-x64' folder
-                |       |--- native.dylib
+    |
+    |--- 'win-x64' folder
+    |       |--- native.dll
+    |
+    |--- 'win-x86' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm64' folder
+    |       |--- native.dll
+    |
+    |--- 'linux-x64' folder
+    |       |--- native.so
+    |
+    |--- 'linux-x86' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm64' folder
+    |       |--- native.so
+    |
+    |--- 'osx-x64' folder
+    |       |--- native.dylib
 ```
 
 <!-- reference links -->
@@ -295,6 +301,7 @@ managed.dll folder
 [New-ModuleManifest]: /powershell/module/microsoft.powershell.core/new-modulemanifest
 [运行时检查]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
 [.NET CLI]: /dotnet/core/tools/?tabs=netcore2x
+[使用 Visual Studio Code 调试已编译的 cmdlet]: vscode/using-vscode-for-debugging-compiled-cmdlets.md
 [.NET Standard]: /dotnet/standard/net-standard
 [PowerShell Standard]: https://github.com/PowerShell/PowerShellStandard
 [PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0

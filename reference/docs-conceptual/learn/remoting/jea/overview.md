@@ -1,21 +1,22 @@
 ---
 ms.date: 07/10/2019
 keywords: jea,powershell,安全性
-title: Just Enough Administration 概述
-ms.openlocfilehash: 4b74e5be9558810748a8844a325c8213e1b3ebc9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+title: Just Enough Administration (JEA) 概述
+description: JEA 是一项安全技术，通过它可以对 PowerShell 管理的任何内容进行委托管理。
+ms.openlocfilehash: cc1c49960e274b58635c1ca4e6769a54c3c7ded6
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "70017698"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501705"
 ---
 # <a name="just-enough-administration"></a>Just Enough Administration
 
 Just Enough Administration (JEA) 是一项安全技术，委派的管理员可通过它执行由 PowerShell 管理的任意操作。 使用 JEA，你可以：
 
 - 减少计算机上的管理员数量，使用虚拟帐户或组托管服务帐户代表普通用户执行特权操作  。
-- 通过指定用户可运行的 cmdlet、函数和外部命令，**限制用户可执行的操作**。
-- 使用准确显示用户在会话中所执行命令的脚本和日志，**更好地了解你的用户进行的操作**。
+- 通过指定用户可运行的 cmdlet、函数和外部命令， **限制用户可执行的操作** 。
+- 使用准确显示用户在会话中所执行命令的脚本和日志， **更好地了解你的用户进行的操作** 。
 
 **JEA 为何很重要？**
 

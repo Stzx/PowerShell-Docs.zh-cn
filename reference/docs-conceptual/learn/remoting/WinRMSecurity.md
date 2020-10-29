@@ -1,15 +1,16 @@
 ---
 ms.date: 06/11/2020
 keywords: powershell,cmdlet
-title: WinRMSecurity
-ms.openlocfilehash: ee7e5f2c9c9a863e29c9278c40703a05c1943246
-ms.sourcegitcommit: fd223afa50092839c74d8d5fbba791869665455f
+title: 使用 WinRM 进行 PowerShell 远程处理时的安全注意事项
+description: 本文档将介绍与使用 PowerShell 远程处理相关的安全问题、建议和最佳做法。
+ms.openlocfilehash: 48167bd297905883b3d75caf9a07d06e6a9fc467
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353832"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501467"
 ---
-# <a name="powershell-remoting-security-considerations"></a>PowerShell 远程处理安全注意事项
+# <a name="security-considerations-for-powershell-remoting-using-winrm"></a>使用 WinRM 进行 PowerShell 远程处理时的安全注意事项
 
 PowerShell 远程处理是管理 Windows 系统的推荐方式。 在 Windows Server 2012 R2 中，默认启用 PowerShell 远程处理。 本文档将介绍与使用 PowerShell 远程处理相关的安全问题、建议和最佳做法。
 

@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,安全性
 title: JEA 角色功能
-ms.openlocfilehash: 5b5b5977d4fec1ed850f1146fe7c09463908651b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 角色功能是一个带 .psrc 扩展名的 PowerShell 数据文件，其中列出了向连接用户提供的所有 cmdlet、函数、提供程序和外部程序。
+ms.openlocfilehash: 233d9081f4a8f977f0959addb5573c4566f885d0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79402394"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499988"
 ---
 # <a name="jea-role-capabilities"></a>JEA 角色功能
 
@@ -19,7 +20,7 @@ ms.locfileid: "79402394"
 
 你如何执行此过程由你的组织和目标而定。 以下提示可帮助确保你正确选择。
 
-1. **标识**用户用于完成工作的命令。 这可能需要调查 IT 员工、检查自动化脚本，或者分析 PowerShell 会话脚本和日志。
+1. **标识** 用户用于完成工作的命令。 这可能需要调查 IT 员工、检查自动化脚本，或者分析 PowerShell 会话脚本和日志。
 2. 将命令行工具改为使用 PowerShell 等效工具（若可能），实现最佳的审核和 JEA 自定义体验  。 不可将外部程序限制为与本机 PowerShell cmdlet 和 JEA 中的函数一样精细。
 3. 将 cmdlet 的范围限制为仅允许特定参数或参数值  。 如果用户只该管理系统的一部分，则这尤其重要。
 4. 创建自定义函数，替换复杂的命令或很难在 JEA 中进行约束的命令  。 封装了复杂命令或应用其他验证逻辑的简单函数可提供额外的掌控力，简化管理员和最终用户的操作。
@@ -36,12 +37,12 @@ ms.locfileid: "79402394"
 
 |                                            风险                                            |                                示例                                |                                                                              相关命令                                                                              |
 | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 向连接用户授予管理员特权以绕过 JEA                                | `Add-LocalGroupMember -Member 'CONTOSO\jdoe' -Group 'Administrators'` | `Add-ADGroupMember`、`Add-LocalGroupMember`、`net.exe`、`dsadd.exe`                                                                                                        |
-| 运行任意代码（如恶意软件、攻击或自定义脚本）以绕过保护 | `Start-Process -FilePath '\\san\share\malware.exe'`                   | `Start-Process`、`New-Service`、`Invoke-Item`、`Invoke-WmiMethod`、`Invoke-CimMethod`、`Invoke-Expression`、`Invoke-Command`、`New-ScheduledTask`、`Register-ScheduledJob` |
+| 向连接用户授予管理员特权以绕过 JEA                                | `Add-LocalGroupMember -Member 'CONTOSO\jdoe' -Group 'Administrators'` | `Add-ADGroupMember`, `Add-LocalGroupMember`, `net.exe`, `dsadd.exe`                                                                                                        |
+| 运行任意代码（如恶意软件、攻击或自定义脚本）以绕过保护 | `Start-Process -FilePath '\\san\share\malware.exe'`                   | `Start-Process`, `New-Service`, `Invoke-Item`, `Invoke-WmiMethod`, `Invoke-CimMethod`, `Invoke-Expression`, `Invoke-Command`, `New-ScheduledTask`, `Register-ScheduledJob` |
 
 ## <a name="create-a-role-capability-file"></a>创建角色功能文件
 
-可使用 [New-PSRoleCapabilityFile](/powershell/module/microsoft.powershell.core/new-psrolecapabilityfile?view=powershell-6) cmdlet 创建新的 PowerShell 角色功能文件。
+可使用 [New-PSRoleCapabilityFile](/powershell/module/microsoft.powershell.core/new-psrolecapabilityfile) cmdlet 创建新的 PowerShell 角色功能文件。
 
 ```powershell
 New-PSRoleCapabilityFile -Path .\MyFirstJEARole.psrc
@@ -51,7 +52,7 @@ New-PSRoleCapabilityFile -Path .\MyFirstJEARole.psrc
 
 ### <a name="allowing-powershell-cmdlets-and-functions"></a>允许 PowerShell cmdlet 和函数
 
-若要授权用户运行 PowerShell cmdlet 或函数，请将 cmdlet 或函数名称添加到 VisibleCmdlets 或 VisibleFunctions 字段。 如果不确定命令是 cmdlet 还是函数，可运行 `Get-Command <name>` 并查看输出中的 CommandType 属性  。
+若要授权用户运行 PowerShell cmdlet 或函数，请将 cmdlet 或函数名称添加到 VisibleCmdlets 或 VisibleFunctions 字段。 如果不确定命令是 cmdlet 还是函数，可运行 `Get-Command <name>` 并查看输出中的 CommandType 属性。
 
 ```powershell
 VisibleCmdlets = 'Restart-Computer', 'Get-NetIPAddress'
@@ -75,9 +76,9 @@ VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; Val
 > 不可在参数字段中明确列出这些参数。
 
 下表介绍自定义可见 cmdlet 或函数的各种方式。
-可在 VisibleCmdlets 字段中将以下任何内容进行组合和配对  。
+可在 VisibleCmdlets 字段中将以下任何内容进行组合和配对。
 
-|                                           示例                                           |                                                             用例                                                              |
+|                                           示例                                           |                                                             使用案例                                                              |
 | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | `'My-Func'` 或 `@{ Name = 'My-Func' }`                                                      | 允许用户运行 `My-Func` 且不限制参数。                                                      |
 | `'MyModule\My-Func'`                                                                        | 允许用户通过模块 `MyModule` 运行 `My-Func` 且不限制参数。                           |
@@ -90,15 +91,15 @@ VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; Val
 > [!WARNING]
 > 最佳的安全做法是，建议在定义可见 cmdlet 或函数时不要使用通配符。 相反，应明确列出每个受信任的命令，确保共享同一命名方案的其他命令均未在无意中获得授权。
 
-无法向同一 cmdlet 或函数同时应用 ValidatePattern 和 ValidateSet   。
+无法向同一 cmdlet 或函数同时应用 ValidatePattern 和 ValidateSet  。
 
-若如此操作，ValidatePattern 会覆盖 ValidateSet   。
+若如此操作，ValidatePattern 会覆盖 ValidateSet  。
 
 有关 ValidatePattern 的详细信息，请参阅[“你好，脚本专家”博文](https://devblogs.microsoft.com/scripting/validate-powershell-parameters-before-running-the-script/)和 [PowerShell 正则表达式](/powershell/module/microsoft.powershell.core/about/about_regular_expressions)参考内容。
 
 ### <a name="allowing-external-commands-and-powershell-scripts"></a>允许使用外部命令和 PowerShell 脚本
 
-要使用户能在 JEA 会话中运行可执行文件和 PowerShell 脚本 (.ps1)，必须在 VisibleExternalCommands 字段中添加每个程序的完整路径  。
+要使用户能在 JEA 会话中运行可执行文件和 PowerShell 脚本 (.ps1)，必须在 VisibleExternalCommands 字段中添加每个程序的完整路径。
 
 ```powershell
 VisibleExternalCommands = 'C:\Windows\System32\whoami.exe', 'C:\Program Files\Contoso\Scripts\UpdateITSoftware.ps1'
@@ -108,7 +109,7 @@ VisibleExternalCommands = 'C:\Windows\System32\whoami.exe', 'C:\Program Files\Co
 
 通过很多可执行文件，可读取当前状态，随后再通过提供其他参数来更改它。
 
-例如，考虑使用文件服务器管理员的角色，它可管理系统托管的网络共享。 管理共享的一种方法是使用 `net share`。 但是，允许 net.exe 会带来风险，因为用户可使用该命令获取 `net group Administrators unprivilegedjeauser /add` 的管理员权限。 更安全的选项是允许使用 [Get-SmbShare](/powershell/module/smbshare/get-smbshare)，该命令可实现相同的结果，但范围更受限制。
+例如，考虑使用文件服务器管理员的角色，它可管理系统托管的网络共享。 管理共享的一种方法是使用 `net share`。 但是，允许 net.exe 会带来风险，因为用户可使用该命令获取 `net group Administrators unprivilegedjeauser /add` 的管理员权限  。 更安全的选项是允许使用 [Get-SmbShare](/powershell/module/smbshare/get-smbshare)，该命令可实现相同的结果，但范围更受限制。
 
 使外部命令可供用户在 JEA 会话中使用时，始终指定可执行文件的完整路径。 这可防止执行位于系统上其他位置的同名潜在恶意程序。
 
@@ -161,7 +162,7 @@ FunctionDefinitions = @{
 
 在 PowerShell 6 之前的版本中，必须将角色功能文件存储在 PowerShell 模块的“RoleCapabilities”  文件夹中，PowerShell 才能找到它。 此模块可存储在 `$env:PSModulePath` 环境变量内附的任何文件夹中，但不得放在 `$env:SystemRoot\System32` 中，也不得放到允许不受信任的用户修改其中文件的文件夹内。
 
-下面的示例在 `$env:ProgramFiles` 路径中创建名为“ContosoJEA”的 PowerShell 脚本模块，用于托管角色功能文件。
+下面的示例在 `$env:ProgramFiles` 路径中创建名为“ContosoJEA”  的 PowerShell 脚本模块，用于托管角色功能文件。
 
 ```powershell
 # Create a folder for the module

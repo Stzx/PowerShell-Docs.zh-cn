@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 获取 WMI 对象 - Get-CimInstance
-ms.openlocfilehash: 4ff47844fd367a49f554c7c05c491bdddf28eabc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文展示如何从计算机系统获取 WMI 对象的实例的多个示例。
+ms.openlocfilehash: f7a005bbf39cf141e6474815d3e050314830453c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77002647"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500447"
 ---
 # <a name="getting-wmi-objects-get-ciminstance"></a>获取 WMI 对象 (Get-CimInstance)
 
@@ -57,7 +58,7 @@ Get-CimClass -Namespace root/CIMV2 -ComputerName 192.168.1.29
 
 ### <a name="displaying-wmi-class-details"></a>显示 WMI 类详细信息
 
-如果已知 WMI 类的名称，即可使用它获取信息。 例如，常用于检索有关计算机信息的 WMI 类之一 **Win32_OperatingSystem**。
+如果已知 WMI 类的名称，即可使用它获取信息。 例如，常用于检索有关计算机信息的 WMI 类之一 **Win32_OperatingSystem** 。
 
 ```powershell
 Get-CimInstance -Class Win32_OperatingSystem

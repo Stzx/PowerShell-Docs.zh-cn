@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 使用软件安装
-ms.openlocfilehash: f3023d8819d6cdcc9f55befcfedb21e6ff9d282c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍如何使用 WMI 管理安装在 Windows 中的软件。
+ms.openlocfilehash: 3cf8e3c58e9f2814e2551b3602bd7b47b375aed8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996127"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500872"
 ---
 # <a name="working-with-software-installations"></a>使用软件安装
 
@@ -75,7 +76,7 @@ CimInstanceProperties : {Caption, Description, IdentifyingNumber, Name...}
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-或者，可以使用 `Get-CimInstance`**Filter** 参数来仅选择 Microsoft .NET 2.0 运行时。 “Filter”  参数的值使用 WMI 查询语言 (WQL) 语法，而不是 Windows PowerShell 语法。 例如：
+或者，可以使用 `Get-CimInstance` **Filter** 参数来仅选择 Microsoft .NET 2.0 运行时。 “Filter”  参数的值使用 WMI 查询语言 (WQL) 语法，而不是 Windows PowerShell 语法。 例如：
 
 ```powershell
 Get-CimInstance -Class Win32_Product -Filter "Name='Microsoft .NET Core Runtime - 2.1.5 (x64)'" |
@@ -103,7 +104,7 @@ IdentifyingNumber : {ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
 
 由于大多数标准应用程序都向 Windows 注册了卸载程序，我们通过在 Windows 注册表中查找它们便可以在本地对其进行处理。 无法保证找到系统上的每个应用程序。 但可以在下列注册表项的“添加或删除程序”  中显示的列表中查找所有程序：
 
-`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall` 列中的一个值匹配。
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`.
 
 我们可以检查此项以查找应用程序。 若要更加轻松地查看 Uninstall 项，我们可以将 PowerShell 驱动器映射到此注册表位置：
 

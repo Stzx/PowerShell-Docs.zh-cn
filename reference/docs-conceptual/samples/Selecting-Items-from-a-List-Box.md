@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 从列表框中选择项
-ms.openlocfilehash: 048bccd403e01e2290a8930a0faba30d4c7caa73
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍如何使用 Windows PowerShell 中的 .NET Framework 窗体构建功能创建列表框控件。
+ms.openlocfilehash: cfd6110a9cfcc3cea891d68d8ce7be5b332a949a
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706166"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501042"
 ---
 # <a name="selecting-items-from-a-list-box"></a>从列表框中选择项
 
@@ -74,7 +75,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-该脚本首先加载两个 .NET Framework 类：**System.Drawing** 和 **System.Windows.Forms**。 然后，启动 .NET Framework 类 **System.Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
+该脚本首先加载两个 .NET Framework 类： **System.Drawing** 和 **System.Windows.Forms** 。 然后，启动 .NET Framework 类 **System.Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms
@@ -87,8 +88,8 @@ Add-Type -AssemblyName System.Drawing
 
 - **大小。** 这是窗体的大小（以像素为单位）。 上述脚本创建的窗体大小为宽 300 像素、高 200 像素。
 
-- **StartingPosition。** 在上述脚本中，此可选属性将设置为 **CenterScreen**。
-  如果未添加此属性，Windows 将在窗体打开时选择一个位置。 通过将 **StartingPosition** 设置为 **CenterScreen**，可使窗体在每次加载时都自动显示在屏幕中间。
+- **StartingPosition。** 在上述脚本中，此可选属性将设置为 **CenterScreen** 。
+  如果未添加此属性，Windows 将在窗体打开时选择一个位置。 通过将 StartingPosition 设置为 CenterScreen，可使窗体在每次加载时都自动显示在屏幕中间 。
 
 ```powershell
 $form.Text = 'Select a Computer'
@@ -142,7 +143,7 @@ $listBox.Height = 80
 在下一部分中，你可以指定希望列表框向用户显示的值。
 
 > [!NOTE]
-> 此脚本创建的列表框只允许进行单选。 若要创建允许进行多选的列表框控件，请指定 SelectionMode  属性的值，类似于以下内容：`$listBox.SelectionMode = 'MultiExtended'`。 有关详细信息，请参阅[多选列表框](Multiple-selection-List-Boxes.md)。
+> 此脚本创建的列表框只允许进行单选。 若要创建允许进行多选的列表框控件，请指定 SelectionMode 属性的值，类似于以下内容：`$listBox.SelectionMode = 'MultiExtended'`。 有关详细信息，请参阅[多选列表框](Multiple-selection-List-Boxes.md)。
 
 ```powershell
 [void] $listBox.Items.Add('atl-dc-001')
@@ -167,13 +168,13 @@ $form.Topmost = $true
 $result = $form.ShowDialog()
 ```
 
-最后，**If** 块内的代码指示在用户从列表框中选择某个选项，然后单击“确定”  按钮或按“Enter”  键后，Windows 应如何处理该窗体。
+最后，  按钮或按“Enter”  键后，Windows 应如何处理该窗体。
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 {
-    $x = $listBox.SelectedItem
-    $x
+    $x = $listBox.SelectedItem
+    $x
 }
 ```
 

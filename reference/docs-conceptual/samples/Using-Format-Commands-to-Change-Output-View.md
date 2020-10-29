@@ -2,12 +2,13 @@
 ms.date: 11/22/2019
 keywords: powershell,cmdlet
 title: 使用格式命令更改输出视图
-ms.openlocfilehash: f270d5ec5efe5caf506d6a8a45285990996f6ae6
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell 具有可扩展的格式设置系统，可用于在列表、表或自定义布局中显示输出。
+ms.openlocfilehash: ebb285a19c7fe1bc80608385f9e2842469e95817
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417593"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500940"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>使用格式命令更改输出视图
 
@@ -29,7 +30,7 @@ Cmdlet          Format-Wide        6.1.0.0    Microsoft.PowerShell.Utility
 
 本文介绍 `Format-Wide`、`Format-List` 和 `Format-Table` cmdlet。
 
-PowerShell 中的每个对象类型都具有未指定要显示的属性时使用的默认属性。 各 cmdlet 也使用相同的 Property 参数，来指定要显示的属性  。 因为 `Format-Wide` 只显示单个属性，其 Property 参数仅采用单个值，但 `Format-List` 和 `Format-Table` 的属性参数接受一系列属性名称。
+PowerShell 中的每个对象类型都具有未指定要显示的属性时使用的默认属性。 各 cmdlet 也使用相同的 Property 参数，来指定要显示的属性  。 因为 `Format-Wide` 只显示单个属性，其 Property 参数仅采用单个值，但 `Format-List` 和 `Format-Table` 的属性参数接受一系列属性名称  。
 
 在此示例中，`Get-Process` cmdlet 的默认输出显示，我们有两个正在运行的 Internet Explorer 实例。
 
@@ -155,7 +156,7 @@ Running  WinRM              Windows Remote Management (WS-Manag...
 
 ### <a name="improving-format-table-output-autosize"></a>改进 Format-Table 输出（自动调整大小）
 
-尽管表格视图对显示大量信息很有用，但如果显示区域对于数据来说太窄，则可能导致数据难以理解。 在上面的示例中，输出被截断。 当你运行 `Format-Table` 命令时，如果你指定 AutoSize 参数，PowerShell 会根据显示的实际数据来计算列宽。 这使得列可读。
+尽管表格视图对显示大量信息很有用，但如果显示区域对于数据来说太窄，则可能导致数据难以理解。 在上面的示例中，输出被截断。 当你运行 `Format-Table` 命令时，如果你指定 AutoSize  参数，PowerShell 会根据显示的实际数据来计算列宽。 这使得列可读。
 
 ```powershell
 Get-Service -Name win* | Format-Table -AutoSize
@@ -190,7 +191,7 @@ WinRM               Running Automatic Windows Remote Management (WS-Management) 
 
 ### <a name="wrapping-format-table-output-in-columns-wrap"></a>让列中的 Format-Table 输出自动换行 (Wrap)
 
-可以通过使用 Wrap 参数让较长的 `Format-Table` 数据在其显示列中自动换行  。 使用 Wrap 参数可能不会实现所需的操作，因为如果你不同时指定 AutoSize，它会使用默认设置   ：
+可以通过使用 Wrap 参数让较长的 `Format-Table` 数据在其显示列中自动换行  。 使用 Wrap 参数可能不会实现所需的操作，因为如果你不同时指定 AutoSize，它会使用默认设置  ：
 
 ```powershell
 Get-Service -Name win* | Format-Table -Property Name,Status,StartType,DisplayName,DependentServices -Wrap
@@ -212,7 +213,7 @@ WinRM               Running Automatic Windows Remote Management (WS-Management) 
 
 使用 Wrap 参数基本不会减慢进程速度  。 但是，使用 AutoSize 格式化大型目录结构的递归文件列表可能得耗用大量时间和内存，才能显示第一批输出项  。
 
-如果你并不关心系统负载，那么结合使用 AutoSize 和 Wrap 参数则会获得良好的效果   。
+如果你并不关心系统负载，那么结合使用 AutoSize 和 Wrap 参数则会获得良好的效果  。
 初始列仍根据需要最大限度地使用宽度来在一行上显示项，但在必要时将最后一列换行。
 
 > [!NOTE]
@@ -240,7 +241,7 @@ FileVersion                          Path                                       
 
 ### <a name="organizing-table-output--groupby"></a>组织选项卡输出 (-GroupBy)
 
-用于表格输出控制的另一个有用参数是 **GroupBy**。 较长的列表可能尤其难以进行比较。 **GroupBy** 参数基于属性值对输出进行分组 例如，我们可以按 StartType 对服务分组以便于检查，同时从属性列表中省略 StartType 值   ：
+用于表格输出控制的另一个有用参数是 **GroupBy** 。 较长的列表可能尤其难以进行比较。 **GroupBy** 参数基于属性值对输出进行分组 例如，我们可以按 StartType 对服务分组以便于检查，同时从属性列表中省略 StartType 值  ：
 
 ```powershell
 Get-Service -Name win* | Sort-Object StartType | Format-Table -GroupBy StartType

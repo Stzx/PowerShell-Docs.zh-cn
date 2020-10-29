@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 收集有关计算机的信息
-ms.openlocfilehash: 9407ff15b3c3ca6b3adab60d4d01d957c599e79e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍如何使用 WMI 和 CIM cmdlet 收集有关计算机配置的信息。
+ms.openlocfilehash: 5088960ab7c049085a9d7c05ec4571b6fd7e3545
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737230"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500583"
 ---
 # <a name="collecting-information-about-computers"></a>收集有关计算机的信息
 
@@ -26,7 +27,7 @@ Get-CimInstance -ClassName Win32_Desktop
 > [!NOTE]
 > WMI 类返回的某些信息可能非常详细，且通常包括有关 WMI 类的元数据。
 
-因为这些元数据属性大多具有以 Cim 开头的名称，因此可以使用 `Select-Object` 筛选属性。 指定值为“Cim*”的 -ExcludeProperty 参数  。 例如：
+因为这些元数据属性大多具有以 Cim 开头的名称，因此可以使用 `Select-Object` 筛选属性  。 指定值为“Cim*”的 -ExcludeProperty 参数  。 例如：
 
 ```powershell
 Get-CimInstance -ClassName Win32_Desktop | Select-Object -ExcludeProperty "CIM*"
@@ -36,7 +37,7 @@ Get-CimInstance -ClassName Win32_Desktop | Select-Object -ExcludeProperty "CIM*"
 
 ## <a name="listing-bios-information"></a>列出 BIOS 信息
 
-WMI Win32_BIOS 类返回有关本地计算机上系统 BIOS 的高度压缩的完整信息  ：
+WMI Win32_BIOS 类返回有关本地计算机上系统 BIOS 的高度压缩的完整信息：
 
 ```powershell
 Get-CimInstance -ClassName Win32_BIOS
@@ -92,7 +93,7 @@ Source Description     HotFixID  InstalledBy   InstalledOn PSComputerName
        Security Update KB4048951 Administrator 12/16/2017  .
 ```
 
-为了使输出更简洁，可能需要排除某些属性。 尽管可以使用 `Get-CimInstance` 的 Property 参数以仅选择 HotFixID，但这样做实际上将返回更多信息，因为默认显示所有元数据   ：
+为了使输出更简洁，可能需要排除某些属性。 尽管可以使用 `Get-CimInstance` 的 Property 参数以仅选择 HotFixID，但这样做实际上将返回更多信息，因为默认显示所有元数据  ：
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixID
@@ -117,7 +118,7 @@ CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ...
 ```
 
-返回额外数据是因为 `Get-CimInstance` 中的 Property 参数限制从 WMI 类实例返回的属性，而不限制返回到 PowerShell 的对象。 若要减少输出，请使用 `Select-Object`：
+返回额外数据是因为 `Get-CimInstance` 中的 Property 参数限制从 WMI 类实例返回的属性，而不限制返回到 PowerShell 的对象。  若要减少输出，请使用 `Select-Object`：
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixId | Select-Object -Property HotFixId
@@ -236,13 +237,13 @@ PSComputerName :
 
 ## <a name="displaying-service-status"></a>显示服务状态
 
-若要查看指定计算机上所有服务的状态，可以本地使用 `Get-Service` cmdlet。 对于远程系统，可以使用 Win32_Service WMI 类  。 如果还使用 `Select-Object` 来筛选 Status、Name 和 DisplayName 的结果，则输出格式将与 `Get-Service` 的输出格式几乎完全相同：
+若要查看指定计算机上所有服务的状态，可以本地使用 `Get-Service` cmdlet。 对于远程系统，可以使用 Win32_Service WMI 类  。 如果还使用 `Select-Object` 来筛选 Status、Name 和 DisplayName 的结果，则输出格式将与 `Get-Service` 的输出格式几乎完全相同  ：
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service | Select-Object -Property Status,Name,DisplayName
 ```
 
-若要完整显示具有极长名称的临时服务的名称，可能需要使用具有 AutoSize 和 Wrap 参数的 `Format-Table`，用于优化列宽并允许较长名称换行而不是被截断   ：
+若要完整显示具有极长名称的临时服务的名称，可能需要使用具有 AutoSize 和 Wrap 参数的 `Format-Table`，用于优化列宽并允许较长名称换行而不是被截断  ：
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service | Format-Table -Property Status,Name,DisplayName -AutoSize -Wrap

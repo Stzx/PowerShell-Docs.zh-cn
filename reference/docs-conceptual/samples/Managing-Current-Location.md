@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 管理当前位置
-ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell 使用名词 Location 来代指工作目录，并实现一系列 cmdlet 来检查你的位置并对其进行操作。
+ms.openlocfilehash: 0ce9ed1269921233b0d6b07da832c12e159a84dc
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030196"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500464"
 ---
 # <a name="managing-current-location"></a>管理当前位置
 
@@ -51,7 +52,7 @@ C:\WINDOWS
 
 采用在大多数 UNIX 和 Windows 命令 shell 中指定路径的相同方式，指定相对于当前位置的路径。 在相对路径的标准表示法中，句点 ( **.** ) 表示当前文件夹，而双句点 ( **..** ) 表示当前位置的父目录。
 
-例如，如果你位于 **C:\\Windows** 文件夹中，则句点 ( **.** ) 表示 **C:\\Windows**，而双句点 ( **..** ) 表示 **C:** 。 你可以从当前位置更改到 C: 驱动器的根目录，方法是键入：
+例如，如果你位于 **C:\\Windows** 文件夹中，则句点 ( **.** ) 表示 **C:\\Windows** ，而双句点 ( **..** ) 表示 **C:** 。 你可以从当前位置更改到 C: 驱动器的根目录，方法是键入：
 
 ```
 PS> Set-Location -Path .. -PassThru

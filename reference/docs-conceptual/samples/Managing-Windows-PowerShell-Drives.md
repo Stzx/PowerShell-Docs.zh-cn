@@ -2,18 +2,19 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 管理 Windows PowerShell 驱动器
-ms.openlocfilehash: 5d1aba459caeaab2542e17e74534da6713b0faa9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell 驱动器是一个数据存储位置，你可以像访问 PowerShell 中的文件系统驱动器那样访问它。 默认情况下，PowerShell 包含支持文件系统、注册表、证书存储和其他对象的提供程序。
+ms.openlocfilehash: e4e5347c3f3458f25cea31c8e5a499474985220a
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "70215507"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500328"
 ---
 # <a name="managing-windows-powershell-drives"></a>管理 Windows PowerShell 驱动器
 
-*Windows PowerShell 驱动器*是一个数据存储位置，你可以像访问 Windows PowerShell 中的文件系统驱动器那样访问它。 Windows PowerShell 提供程序将为你创建一些驱动器，例如文件系统驱动器（包括 C: 和 D:）、注册表驱动器（HKCU: 和 HKLM:）和证书驱动器 (Cert:)，你也可以创建自己的 Windows PowerShell 驱动器。 这些驱动器非常有用，但它们仅在 Windows PowerShell 内可用。 你无法通过使用其他 Windows 工具（如文件资源管理器或 Cmd.exe）访问它们。
+*Windows PowerShell 驱动器* 是一个数据存储位置，你可以像访问 Windows PowerShell 中的文件系统驱动器那样访问它。 Windows PowerShell 提供程序将为你创建一些驱动器，例如文件系统驱动器（包括 C: 和 D:）、注册表驱动器（HKCU: 和 HKLM:）和证书驱动器 (Cert:)，你也可以创建自己的 Windows PowerShell 驱动器。 这些驱动器非常有用，但它们仅在 Windows PowerShell 内可用。 你无法通过使用其他 Windows 工具（如文件资源管理器或 Cmd.exe）访问它们。
 
-Windows PowerShell 可针对适用于 Windows PowerShell 驱动器的命令使用名词 **PSDrive**。 有关 Windows PowerShell 会话中的 Windows PowerShell 驱动器列表，请使用 **Get-PSDrive** cmdlet。
+Windows PowerShell 可针对适用于 Windows PowerShell 驱动器的命令使用名词 **PSDrive** 。 有关 Windows PowerShell 会话中的 Windows PowerShell 驱动器列表，请使用 **Get-PSDrive** cmdlet。
 
 ```
 PS> Get-PSDrive
@@ -102,7 +103,7 @@ ring>] [-OutBuffer <Int32>] [-WhatIf] [-Confirm]
 
 - 根，即指向新驱动器的根目录的路径
 
-例如，可以创建一个名为“Office”的驱动器，它将映射到包含你的计算机上的 Microsoft Office 应用程序的文件夹，例如 **C:\\Program Files\\Microsoft Office\\OFFICE11**。 若要创建该驱动器，请键入以下命令：
+例如，可以创建一个名为“Office”的驱动器，它将映射到包含你的计算机上的 Microsoft Office 应用程序的文件夹，例如 **C:\\Program Files\\Microsoft Office\\OFFICE11** 。 若要创建该驱动器，请键入以下命令：
 
 ```
 PS> New-PSDrive -Name Office -PSProvider FileSystem -Root "C:\Program Files\Microsoft Office\OFFICE11"
@@ -115,9 +116,9 @@ Office     FileSystem    C:\Program Files\Microsoft Offic...
 > [!NOTE]
 > 一般情况下，路径不区分大小写。
 
-在执行所有 Windows PowerShell 驱动器时，请参考新的 Windows PowerShell 驱动器，格式是在名称后面跟一个冒号 ( **:** )。
+在执行所有 Windows PowerShell 驱动器时，请参考新的 Windows PowerShell 驱动器，格式是其名称后面跟一个冒号 ( **:** )。
 
-Windows PowerShell 驱动器可以使许多任务变得更简单。 例如，Windows 注册表中的某些最重要的项的路径长度非常长，难以访问且难以记住这些路径。 关键的配置信息位于 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion**。 若要查看和更改 CurrentVersion 注册表项中的项，你可以创建一个其根在该项中的 Windows PowerShell 驱动器，方法是键入：
+Windows PowerShell 驱动器可以使许多任务变得更简单。 例如，Windows 注册表中的某些最重要的项的路径长度非常长，难以访问且难以记住这些路径。 关键的配置信息位于 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion** 。 若要查看和更改 CurrentVersion 注册表项中的项，你可以创建一个其根在该项中的 Windows PowerShell 驱动器，方法是键入：
 
 ```
 PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\Windows\CurrentVersion
@@ -127,13 +128,13 @@ Name       Provider      Root                                   CurrentLocation
 cvkey      Registry      HKLM\Software\Microsoft\Windows\...
 ```
 
-然后，你可以像对任何其他驱动器一样，将位置更改为 cvkey:  驱动器：
+然后，你可以像对任何其他驱动器一样，将位置更改为 **cvkey:** 驱动器：
 
 ```
 PS> cd cvkey:
 ```
 
-或者：
+或：
 
 ```
 PS> Set-Location cvkey: -PassThru
@@ -149,7 +150,7 @@ New-PsDrive cmdlet 仅将新的驱动器添加到当前 Windows PowerShell 会�
 
 你可以通过使用 **Remove-PSDrive** cmdlet 从 Windows PowerShell 中删除驱动器。 **Remove-PSDrive** cmdlet 易于使用；若要删除特定 Windows PowerShell 驱动器，只需提供 Windows PowerShell 驱动器名称。
 
-例如，如果已添加 **Office:** Windows PowerShell 驱动器（如 **New-PSDrive** 主题中所示），则可以通过键入以下内容将其删除：
+例如，如果你添加了 Office：Windows PowerShell 驱动器（如 New-PSDrive 主题中所示），则可以通过键入以下内容将其删除：
 
 ```powershell
 Remove-PSDrive -Name Office

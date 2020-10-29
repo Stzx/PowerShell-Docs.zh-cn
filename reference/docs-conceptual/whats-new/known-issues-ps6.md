@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell, 核心
 title: PowerShell 6.0 的已知问题
-ms.openlocfilehash: e9550e3db53865cfc2713d1d80665cced6f0d47a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 这是对 PowerShell 6 中的已知问题或限制的总结
+ms.openlocfilehash: 528315eff660167513045542227dce335355a7b8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996103"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501671"
 ---
 # <a name="known-issues-for-powershell-60"></a>PowerShell 6.0 的已知问题
 
@@ -104,10 +105,10 @@ Linux/macOS 上的 PowerShell 目前无法创建约束管理 (JEA) 远程处理�
 
 |命令|操作状态|说明|
 |--------|-----------------|-----|
-|`Get-Service`、`New-Service`、`Restart-Service`、`Resume-Service`、`Set-Service`、`Start-Service`、`Stop-Service`、`Suspend-Service`|不可用。|这些命令无法识别。 应在将来的版本中解决此问题。|
-|`Get-Acl`、`Get-AuthenticodeSignature`、`Get-CmsMessage`、`New-FileCatalog`、`Protect-CmsMessage`、`Set-Acl`、`Set-AuthenticodeSignature`、`Test-FileCatalog`、`Unprotect-CmsMessage`|不可用。|这些命令无法识别。 应在将来的版本中解决此问题。|
+|`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|不可用。|这些命令无法识别。 应在将来的版本中解决此问题。|
+|`Get-Acl`, `Get-AuthenticodeSignature`, `Get-CmsMessage`, `New-FileCatalog`, `Protect-CmsMessage`, `Set-Acl`, `Set-AuthenticodeSignature`, `Test-FileCatalog`, `Unprotect-CmsMessage`|不可用。|这些命令无法识别。 应在将来的版本中解决此问题。|
 |`Wait-Process`|可用，无法正常工作。 |例如，`Start-Process gvim -PassThru | Wait-Process` 无效；它无法等待进程。|
-|`Connect-PSSession`、`Disable-PSRemoting`、`Disable-PSSessionConfiguration`、`Disconnect-PSSession`、`Enable-PSRemoting`、`Enable-PSSessionConfiguration`、`Get-PSSessionCapability`、`Get-PSSessionConfiguration`、`New-PSSessionConfigurationFile`、`Receive-PSSession`、`Register-PSSessionConfiguration`、`Set-PSSessionConfiguration`、`Test-PSSessionConfigurationFile`、`Unregister-PSSessionConfiguration`|不可用。|这些命令无法识别。 应在将来的版本中解决此问题。|
-|`Get-Event`、`New-Event`、`Register-EngineEvent`、`Remove-Event`、`Unregister-Event`|可用，但没有可用的事件源。|PowerShell 事件命令存在，但与命令一起使用的大部分事件源（例如 System.Timers.Timer）在 Linux 上不可用，使得 Alpha 版本中的命令无效。|
+|`Connect-PSSession`, `Disable-PSRemoting`, `Disable-PSSessionConfiguration`, `Disconnect-PSSession`, `Enable-PSRemoting`, `Enable-PSSessionConfiguration`, `Get-PSSessionCapability`, `Get-PSSessionConfiguration`, `New-PSSessionConfigurationFile`, `Receive-PSSession`, `Register-PSSessionConfiguration`, `Set-PSSessionConfiguration`, `Test-PSSessionConfigurationFile`, `Unregister-PSSessionConfiguration`|不可用。|这些命令无法识别。 应在将来的版本中解决此问题。|
+|`Get-Event`, `New-Event`, `Register-EngineEvent`, `Remove-Event`, `Unregister-Event`|可用，但没有可用的事件源。|PowerShell 事件命令存在，但与命令一起使用的大部分事件源（例如 System.Timers.Timer）在 Linux 上不可用，使得 Alpha 版本中的命令无效。|
 |`Set-ExecutionPolicy`|可用，但不起作用。|返回消息，指示在此平台上不受支持。 执行策略是以用户为中心的“安全带”，有助于防止用户犯下代价昂贵的错误。 这不是安全边界。|
-|`New-PSSessionOption`、`New-PSTransportOption`|可用，但 `New-PSSession` 不起作用。|在 `New-PSSession` 起作用时，`New-PSSessionOption` 和 `New-PSTransportOption` 当前未被验证起作用。|
+|`New-PSSessionOption`, `New-PSTransportOption`|可用，但 `New-PSSession` 不起作用。|在 `New-PSSession` 起作用时，`New-PSSessionOption` 和 `New-PSTransportOption` 当前未被验证起作用。|

@@ -2,16 +2,18 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 对对象进行排序
-ms.openlocfilehash: ed78e7e333f3468781c9cd96df2194fbdfebe753
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 使用 Sort-Object cmdlet 可依据一个或多个属性对一系列对象进行排序。
+ms.openlocfilehash: 836207adfc566003e9714e45920d9b4e24a677e9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030784"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501008"
 ---
 # <a name="sorting-objects"></a>对对象进行排序
 
-可以通过使用 `Sort-Object` cmdlet 组织已显示的数据，使其更易于扫描。 `Sort-Object` 依据一个或多个属性的名称进行排序，并返回按这些属性的值进行排序的数据。
+可以通过使用 `Sort-Object` cmdlet 组织已显示的数据，使其更易于扫描。
+`Sort-Object` 依据一个或多个属性的名称进行排序，并返回按这些属性的值进行排序的数据。
 
 ## <a name="basic-sorting"></a>基本排序
 

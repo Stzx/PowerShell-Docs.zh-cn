@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 查看对象结构 (Get Member)
-ms.openlocfilehash: 80b36abd303a708195f12d96511e616178d11b5a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Get-Member 是一种功能强大的工具，借助它可查看 PowerShell 中对象的类型和结构。
+ms.openlocfilehash: 3c294fe47294e2cf8daf125aac55661dd38cf9bb
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030701"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501212"
 ---
 # <a name="viewing-object-structure-get-member"></a>查看对象结构 (Get-Member)
 
@@ -23,7 +24,7 @@ Get-Process | Get-Member | Out-Host -Paging
 
 此命令的输出将如下所示：
 
-```output
+```Output
 TypeName: System.Diagnostics.Process
 
 Name                           MemberType     Definition
@@ -38,7 +39,7 @@ add_Disposed                   Method         System.Void add_Disposed(Event...
 ...
 ```
 
-我们可以通过筛选想要查看的元素，让这个冗长的信息列表更易于使用。 **Get-Member** 命令仅允许你列出属性成员。 属性的形式有数种。 如果将 Get-Member MemberType 参数设置为值属性，则 cmdlet 将显示任何类型的属性   。 生成的列表仍会很长，但较之前更易于管理：
+我们可以通过筛选想要查看的元素，让这个冗长的信息列表更易于使用。 **Get-Member** 命令仅允许你列出属性成员。 属性的形式有数种。 如果将 Get-Member MemberType 参数设置为值属性，则 cmdlet 将显示任何类型的属性  。 生成的列表仍会很长，但较之前更易于管理：
 
 ```
 PS> Get-Process | Get-Member -MemberType Properties
