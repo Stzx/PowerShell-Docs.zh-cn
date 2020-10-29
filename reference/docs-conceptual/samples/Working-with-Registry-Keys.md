@@ -2,20 +2,21 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 使用注册表项
-ms.openlocfilehash: 3feaf6d26db51a507434a6cec1f1095c9013efc8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍如何使用 PowerShell 处理注册表项。
+ms.openlocfilehash: 90e8417fc3454b959dc2a86fc63e722832bdab23
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736839"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501382"
 ---
-# <a name="working-with-registry-keys"></a><span data-ttu-id="b1c75-103">使用注册表项</span><span class="sxs-lookup"><span data-stu-id="b1c75-103">Working with Registry Keys</span></span>
+# <a name="working-with-registry-keys"></a><span data-ttu-id="f97a0-104">使用注册表项</span><span class="sxs-lookup"><span data-stu-id="f97a0-104">Working with Registry Keys</span></span>
 
-<span data-ttu-id="b1c75-104">由于注册表项是 PowerShell 驱动器上的项，因此使用它们的方法和使用文件及文件夹的方法非常相似。</span><span class="sxs-lookup"><span data-stu-id="b1c75-104">Because registry keys are items on PowerShell drives, working with them is very similar to working with files and folders.</span></span> <span data-ttu-id="b1c75-105">一个关键区别在于，基于注册表的 PowerShell 驱动器上的每个项都是一个容器，就像文件系统驱动器上有一个文件夹一样。</span><span class="sxs-lookup"><span data-stu-id="b1c75-105">One critical difference is that every item on a registry-based PowerShell drive is a container, just like a folder on a file system drive.</span></span> <span data-ttu-id="b1c75-106">但是，注册表条目及其关联的值只是项的属性，而不是不同的项。</span><span class="sxs-lookup"><span data-stu-id="b1c75-106">However, registry entries and their associated values are properties of the items, not distinct items.</span></span>
+<span data-ttu-id="f97a0-105">由于注册表项是 PowerShell 驱动器上的项，因此使用它们的方法和使用文件及文件夹的方法非常相似。</span><span class="sxs-lookup"><span data-stu-id="f97a0-105">Because registry keys are items on PowerShell drives, working with them is very similar to working with files and folders.</span></span> <span data-ttu-id="f97a0-106">一个关键区别在于，基于注册表的 PowerShell 驱动器上的每个项都是一个容器，就像文件系统驱动器上有一个文件夹一样。</span><span class="sxs-lookup"><span data-stu-id="f97a0-106">One critical difference is that every item on a registry-based PowerShell drive is a container, just like a folder on a file system drive.</span></span> <span data-ttu-id="f97a0-107">但是，注册表条目及其关联的值只是项的属性，而不是不同的项。</span><span class="sxs-lookup"><span data-stu-id="f97a0-107">However, registry entries and their associated values are properties of the items, not distinct items.</span></span>
 
-## <a name="listing-all-subkeys-of-a-registry-key"></a><span data-ttu-id="b1c75-107">列出注册表项的所有子项</span><span class="sxs-lookup"><span data-stu-id="b1c75-107">Listing All Subkeys of a Registry Key</span></span>
+## <a name="listing-all-subkeys-of-a-registry-key"></a><span data-ttu-id="f97a0-108">列出注册表项的所有子项</span><span class="sxs-lookup"><span data-stu-id="f97a0-108">Listing All Subkeys of a Registry Key</span></span>
 
-<span data-ttu-id="b1c75-108">可以通过使用 `Get-ChildItem` 直接显示某个注册表项中的所有项目。</span><span class="sxs-lookup"><span data-stu-id="b1c75-108">You can show all items directly within a registry key by using `Get-ChildItem`.</span></span> <span data-ttu-id="b1c75-109">添加可选的 **Force** 参数以显示隐藏项或系统项。</span><span class="sxs-lookup"><span data-stu-id="b1c75-109">Add the optional **Force** parameter to display hidden or system items.</span></span> <span data-ttu-id="b1c75-110">例如，以下命令将直接显示 PowerShell 驱动器 `HKCU:`（对应于 `HKEY_CURRENT_USER` 注册表 Hive）中的项：</span><span class="sxs-lookup"><span data-stu-id="b1c75-110">For example, this command displays the items directly within PowerShell drive `HKCU:`, which corresponds to the `HKEY_CURRENT_USER` registry hive:</span></span>
+<span data-ttu-id="f97a0-109">可以通过使用 `Get-ChildItem` 直接显示某个注册表项中的所有项目。</span><span class="sxs-lookup"><span data-stu-id="f97a0-109">You can show all items directly within a registry key by using `Get-ChildItem`.</span></span> <span data-ttu-id="f97a0-110">添加可选的 **Force** 参数以显示隐藏项或系统项。</span><span class="sxs-lookup"><span data-stu-id="f97a0-110">Add the optional **Force** parameter to display hidden or system items.</span></span> <span data-ttu-id="f97a0-111">例如，以下命令将直接显示 PowerShell 驱动器 `HKCU:`（对应于 `HKEY_CURRENT_USER` 注册表 Hive）中的项：</span><span class="sxs-lookup"><span data-stu-id="f97a0-111">For example, this command displays the items directly within PowerShell drive `HKCU:`, which corresponds to the `HKEY_CURRENT_USER` registry hive:</span></span>
 
 ```powershell
 Get-ChildItem -Path HKCU:\ | Select-Object Name
@@ -45,9 +46,9 @@ HKEY_CURRENT_USER\WXP
 HKEY_CURRENT_USER\Volatile Environment
 ```
 
-<span data-ttu-id="b1c75-111">这些是注册表编辑器 (Regedit.exe) 中 `HKEY_CURRENT_USER` 下可见的顶级项。</span><span class="sxs-lookup"><span data-stu-id="b1c75-111">These are the top-level keys visible under `HKEY_CURRENT_USER` in the Registry Editor (Regedit.exe).</span></span>
+<span data-ttu-id="f97a0-112">这些是注册表编辑器 (Regedit.exe) 中 `HKEY_CURRENT_USER` 下可见的顶级项。</span><span class="sxs-lookup"><span data-stu-id="f97a0-112">These are the top-level keys visible under `HKEY_CURRENT_USER` in the Registry Editor (Regedit.exe).</span></span>
 
-<span data-ttu-id="b1c75-112">还可以通过指定注册表提供程序的名称（后跟“`::`”）来指定此注册表路径。</span><span class="sxs-lookup"><span data-stu-id="b1c75-112">You can also specify this registry path by specifying the registry provider's name, followed by `::`.</span></span> <span data-ttu-id="b1c75-113">注册表提供程序的全名是 `Microsoft.PowerShell.Core\Registry`，但是可以将其缩短为仅 `Registry`。</span><span class="sxs-lookup"><span data-stu-id="b1c75-113">The registry provider's full name is `Microsoft.PowerShell.Core\Registry`, but this can be shortened to just `Registry`.</span></span> <span data-ttu-id="b1c75-114">任一以下命令都可直接列出 `HKCU:` 下面的内容。</span><span class="sxs-lookup"><span data-stu-id="b1c75-114">Any of the following commands will list the contents directly under `HKCU:`.</span></span>
+<span data-ttu-id="f97a0-113">还可以通过指定注册表提供程序的名称（后跟“`::`”）来指定此注册表路径。</span><span class="sxs-lookup"><span data-stu-id="f97a0-113">You can also specify this registry path by specifying the registry provider's name, followed by `::`.</span></span> <span data-ttu-id="f97a0-114">注册表提供程序的全名是 `Microsoft.PowerShell.Core\Registry`，但是可以将其缩短为仅 `Registry`。</span><span class="sxs-lookup"><span data-stu-id="f97a0-114">The registry provider's full name is `Microsoft.PowerShell.Core\Registry`, but this can be shortened to just `Registry`.</span></span> <span data-ttu-id="f97a0-115">任一以下命令都可直接列出 `HKCU:` 下面的内容。</span><span class="sxs-lookup"><span data-stu-id="f97a0-115">Any of the following commands will list the contents directly under `HKCU:`.</span></span>
 
 ```powershell
 Get-ChildItem -Path Registry::HKEY_CURRENT_USER
@@ -57,61 +58,61 @@ Get-ChildItem -Path Microsoft.PowerShell.Core\Registry::HKCU
 Get-ChildItem HKCU:
 ```
 
-<span data-ttu-id="b1c75-115">这些命令将仅列出直接包含的项，类似于使用 Cmd.exe 中的 `DIR` 或 UNIX shell 中的 `ls`。</span><span class="sxs-lookup"><span data-stu-id="b1c75-115">These commands list only the directly contained items, much like using `DIR` in **Cmd.exe** or `ls` in a UNIX shell.</span></span> <span data-ttu-id="b1c75-116">为了显示包含的项，需要指定 **Recurse** 参数。</span><span class="sxs-lookup"><span data-stu-id="b1c75-116">To show contained items, you need to specify the **Recurse** parameter.</span></span> <span data-ttu-id="b1c75-117">若要列出 `HKCU:` 中的所有注册表项，请使用以下命令。</span><span class="sxs-lookup"><span data-stu-id="b1c75-117">To list all registry keys in `HKCU:`, use the following command.</span></span>
+<span data-ttu-id="f97a0-116">这些命令将仅列出直接包含的项，类似于使用 Cmd.exe 中的 `DIR` 或 UNIX shell 中的 `ls`。</span><span class="sxs-lookup"><span data-stu-id="f97a0-116">These commands list only the directly contained items, much like using `DIR` in **Cmd.exe** or `ls` in a UNIX shell.</span></span> <span data-ttu-id="f97a0-117">为了显示包含的项，需要指定 **Recurse** 参数。</span><span class="sxs-lookup"><span data-stu-id="f97a0-117">To show contained items, you need to specify the **Recurse** parameter.</span></span> <span data-ttu-id="f97a0-118">若要列出 `HKCU:` 中的所有注册表项，请使用以下命令。</span><span class="sxs-lookup"><span data-stu-id="f97a0-118">To list all registry keys in `HKCU:`, use the following command.</span></span>
 
 ```powershell
 Get-ChildItem -Path HKCU:\ -Recurse
 ```
 
-<span data-ttu-id="b1c75-118">`Get-ChildItem` 可以通过其 Path  、Filter  、Include  和 Exclude  参数执行复杂的筛选功能，但这些参数通常只基于名称。</span><span class="sxs-lookup"><span data-stu-id="b1c75-118">`Get-ChildItem` can perform complex filtering capabilities through its **Path**, **Filter**, **Include**, and **Exclude** parameters, but those parameters are typically based only on name.</span></span> <span data-ttu-id="b1c75-119">还可以通过使用 `Where-Object` cmdlet 基于项的其他属性执行复杂的筛选。</span><span class="sxs-lookup"><span data-stu-id="b1c75-119">You can perform complex filtering based on other properties of items by using the `Where-Object` cmdlet.</span></span> <span data-ttu-id="b1c75-120">下面的命令用于查找 `HKCU:\Software` 中不止只有一个子项并且刚好具有 4 个值的所有项：</span><span class="sxs-lookup"><span data-stu-id="b1c75-120">The following command finds all keys within `HKCU:\Software` that have no more than one subkey and also have exactly four values:</span></span>
+<span data-ttu-id="f97a0-119">`Get-ChildItem` 可以通过其 Path  、Filter  、Include  和 Exclude  参数执行复杂的筛选功能，但这些参数通常只基于名称。</span><span class="sxs-lookup"><span data-stu-id="f97a0-119">`Get-ChildItem` can perform complex filtering capabilities through its **Path** , **Filter** , **Include** , and **Exclude** parameters, but those parameters are typically based only on name.</span></span> <span data-ttu-id="f97a0-120">还可以通过使用 `Where-Object` cmdlet 基于项的其他属性执行复杂的筛选。</span><span class="sxs-lookup"><span data-stu-id="f97a0-120">You can perform complex filtering based on other properties of items by using the `Where-Object` cmdlet.</span></span> <span data-ttu-id="f97a0-121">下面的命令用于查找 `HKCU:\Software` 中不止只有一个子项并且刚好具有 4 个值的所有项：</span><span class="sxs-lookup"><span data-stu-id="f97a0-121">The following command finds all keys within `HKCU:\Software` that have no more than one subkey and also have exactly four values:</span></span>
 
 ```powershell
 Get-ChildItem -Path HKCU:\Software -Recurse |
   Where-Object {($_.SubKeyCount -le 1) -and ($_.ValueCount -eq 4) }
 ```
 
-## <a name="copying-keys"></a><span data-ttu-id="b1c75-121">复制项</span><span class="sxs-lookup"><span data-stu-id="b1c75-121">Copying Keys</span></span>
+## <a name="copying-keys"></a><span data-ttu-id="f97a0-122">复制项</span><span class="sxs-lookup"><span data-stu-id="f97a0-122">Copying Keys</span></span>
 
-<span data-ttu-id="b1c75-122">复制通过 `Copy-Item` 完成。</span><span class="sxs-lookup"><span data-stu-id="b1c75-122">Copying is done with `Copy-Item`.</span></span> <span data-ttu-id="b1c75-123">下面的示例将 `HKLM:\SOFTWARE\Microsoft\Windows\` 的 `CurrentVersion` 子项及其所有属性复制到 `HKCU:\`。</span><span class="sxs-lookup"><span data-stu-id="b1c75-123">The following example copies the `CurrentVersion` subkey of `HKLM:\SOFTWARE\Microsoft\Windows\` and all of its properties to `HKCU:\`.</span></span>
+<span data-ttu-id="f97a0-123">复制通过 `Copy-Item` 完成。</span><span class="sxs-lookup"><span data-stu-id="f97a0-123">Copying is done with `Copy-Item`.</span></span> <span data-ttu-id="f97a0-124">下面的示例将 `HKLM:\SOFTWARE\Microsoft\Windows\` 的 `CurrentVersion` 子项及其所有属性复制到 `HKCU:\`。</span><span class="sxs-lookup"><span data-stu-id="f97a0-124">The following example copies the `CurrentVersion` subkey of `HKLM:\SOFTWARE\Microsoft\Windows\` and all of its properties to `HKCU:\`.</span></span>
 
 ```powershell
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination HKCU:
 ```
 
-<span data-ttu-id="b1c75-124">如果你在注册表编辑器中或通过使用 `Get-ChildItem` 检查此新项，你会注意到在新位置中没有所包含子项的副本。</span><span class="sxs-lookup"><span data-stu-id="b1c75-124">If you examine this new key in the registry editor or by using `Get-ChildItem`, you notice that you do not have copies of the contained subkeys in the new location.</span></span> <span data-ttu-id="b1c75-125">为了复制容器的所有内容，需要指定 **Recurse** 参数。</span><span class="sxs-lookup"><span data-stu-id="b1c75-125">In order to copy all of the contents of a container, you need to specify the **Recurse** parameter.</span></span> <span data-ttu-id="b1c75-126">若要使上述的复制命令递归，你将使用此命令：</span><span class="sxs-lookup"><span data-stu-id="b1c75-126">To make the preceding copy command recursive, you would use this command:</span></span>
+<span data-ttu-id="f97a0-125">如果你在注册表编辑器中或通过使用 `Get-ChildItem` 检查此新项，你会注意到在新位置中没有所包含子项的副本。</span><span class="sxs-lookup"><span data-stu-id="f97a0-125">If you examine this new key in the registry editor or by using `Get-ChildItem`, you notice that you do not have copies of the contained subkeys in the new location.</span></span> <span data-ttu-id="f97a0-126">为了复制容器的所有内容，需要指定 **Recurse** 参数。</span><span class="sxs-lookup"><span data-stu-id="f97a0-126">In order to copy all of the contents of a container, you need to specify the **Recurse** parameter.</span></span> <span data-ttu-id="f97a0-127">若要使上述的复制命令递归，你将使用此命令：</span><span class="sxs-lookup"><span data-stu-id="f97a0-127">To make the preceding copy command recursive, you would use this command:</span></span>
 
 ```powershell
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination HKCU: -Recurse
 ```
 
-<span data-ttu-id="b1c75-127">你仍然可以使用已有的其他可用工具执行文件系统复制。</span><span class="sxs-lookup"><span data-stu-id="b1c75-127">You can still use other tools you already have available to perform filesystem copies.</span></span> <span data-ttu-id="b1c75-128">任何注册表编辑工具（包括 reg.exe  、regini.exe  和 regedit.exe  ）以及支持注册表编辑的 COM 对象（如 WScript.Shell  和 WMI 的 StdRegProv  类）均可用于 Windows PowerShell。</span><span class="sxs-lookup"><span data-stu-id="b1c75-128">Any registry editing tools—including **reg.exe**, **regini.exe**, **regedit.exe**, and COM objects that support registry editing, such as **WScript.Shell** and WMI's **StdRegProv** class can be used from within Windows PowerShell.</span></span>
+<span data-ttu-id="f97a0-128">你仍然可以使用已有的其他可用工具执行文件系统复制。</span><span class="sxs-lookup"><span data-stu-id="f97a0-128">You can still use other tools you already have available to perform filesystem copies.</span></span> <span data-ttu-id="f97a0-129">任何注册表编辑工具（包括 reg.exe  、regini.exe  和 regedit.exe  ）以及支持注册表编辑的 COM 对象（如 WScript.Shell  和 WMI 的 StdRegProv  类）均可用于 Windows PowerShell。</span><span class="sxs-lookup"><span data-stu-id="f97a0-129">Any registry editing tools—including **reg.exe** , **regini.exe** , **regedit.exe** , and COM objects that support registry editing, such as **WScript.Shell** and WMI's **StdRegProv** class can be used from within Windows PowerShell.</span></span>
 
-## <a name="creating-keys"></a><span data-ttu-id="b1c75-129">创建项</span><span class="sxs-lookup"><span data-stu-id="b1c75-129">Creating Keys</span></span>
+## <a name="creating-keys"></a><span data-ttu-id="f97a0-130">创建项</span><span class="sxs-lookup"><span data-stu-id="f97a0-130">Creating Keys</span></span>
 
-<span data-ttu-id="b1c75-130">在注册表中创建新项比在文件系统中创建新项简单。</span><span class="sxs-lookup"><span data-stu-id="b1c75-130">Creating new keys in the registry is simpler than creating a new item in a file system.</span></span> <span data-ttu-id="b1c75-131">由于所有注册表项都是容器，因此，你无需指定项类型；只需提供一个明确的路径即可，如：</span><span class="sxs-lookup"><span data-stu-id="b1c75-131">Because all registry keys are containers, you do not need to specify the item type; you simply supply an explicit path, such as:</span></span>
+<span data-ttu-id="f97a0-131">在注册表中创建新项比在文件系统中创建新项简单。</span><span class="sxs-lookup"><span data-stu-id="f97a0-131">Creating new keys in the registry is simpler than creating a new item in a file system.</span></span> <span data-ttu-id="f97a0-132">由于所有注册表项都是容器，因此，你无需指定项类型；只需提供一个明确的路径即可，如：</span><span class="sxs-lookup"><span data-stu-id="f97a0-132">Because all registry keys are containers, you do not need to specify the item type; you simply supply an explicit path, such as:</span></span>
 
 ```powershell
 New-Item -Path HKCU:\Software_DeleteMe
 ```
 
-<span data-ttu-id="b1c75-132">此外还可以使用基于提供程序的路径来指定某项：</span><span class="sxs-lookup"><span data-stu-id="b1c75-132">You can also use a provider-based path to specify a key:</span></span>
+<span data-ttu-id="f97a0-133">此外还可以使用基于提供程序的路径来指定某项：</span><span class="sxs-lookup"><span data-stu-id="f97a0-133">You can also use a provider-based path to specify a key:</span></span>
 
 ```powershell
 New-Item -Path Registry::HKCU\Software_DeleteMe
 ```
 
-## <a name="deleting-keys"></a><span data-ttu-id="b1c75-133">删除项</span><span class="sxs-lookup"><span data-stu-id="b1c75-133">Deleting Keys</span></span>
+## <a name="deleting-keys"></a><span data-ttu-id="f97a0-134">删除项</span><span class="sxs-lookup"><span data-stu-id="f97a0-134">Deleting Keys</span></span>
 
-<span data-ttu-id="b1c75-134">从本质而言，删除项对所有提供程序都是相同的。</span><span class="sxs-lookup"><span data-stu-id="b1c75-134">Deleting items is essentially the same for all providers.</span></span> <span data-ttu-id="b1c75-135">以下命令将以无提示方式删除项：</span><span class="sxs-lookup"><span data-stu-id="b1c75-135">The following commands will silently remove items:</span></span>
+<span data-ttu-id="f97a0-135">从本质而言，删除项对所有提供程序都是相同的。</span><span class="sxs-lookup"><span data-stu-id="f97a0-135">Deleting items is essentially the same for all providers.</span></span> <span data-ttu-id="f97a0-136">以下命令将以无提示方式删除项：</span><span class="sxs-lookup"><span data-stu-id="f97a0-136">The following commands will silently remove items:</span></span>
 
 ```powershell
 Remove-Item -Path HKCU:\Software_DeleteMe
 Remove-Item -Path 'HKCU:\key with spaces in the name'
 ```
 
-## <a name="removing-all-keys-under-a-specific-key"></a><span data-ttu-id="b1c75-136">删除特定项下的所有项</span><span class="sxs-lookup"><span data-stu-id="b1c75-136">Removing All Keys Under a Specific Key</span></span>
+## <a name="removing-all-keys-under-a-specific-key"></a><span data-ttu-id="f97a0-137">删除特定项下的所有项</span><span class="sxs-lookup"><span data-stu-id="f97a0-137">Removing All Keys Under a Specific Key</span></span>
 
-<span data-ttu-id="b1c75-137">可以通过使用 `Remove-Item` 删除包含的项，但如果项包含任何其他内容，系统将提示你确认该删除。</span><span class="sxs-lookup"><span data-stu-id="b1c75-137">You can remove contained items by using `Remove-Item`, but you will be prompted to confirm the removal if the item contains anything else.</span></span> <span data-ttu-id="b1c75-138">例如，如果我们尝试删除我们创建的 `HKCU:\CurrentVersion` 子项，我们将看到：</span><span class="sxs-lookup"><span data-stu-id="b1c75-138">For example, if we attempt to delete the `HKCU:\CurrentVersion` subkey we created, we see this:</span></span>
+<span data-ttu-id="f97a0-138">可以通过使用 `Remove-Item` 删除包含的项，但如果项包含任何其他内容，系统将提示你确认该删除。</span><span class="sxs-lookup"><span data-stu-id="f97a0-138">You can remove contained items by using `Remove-Item`, but you will be prompted to confirm the removal if the item contains anything else.</span></span> <span data-ttu-id="f97a0-139">例如，如果我们尝试删除我们创建的 `HKCU:\CurrentVersion` 子项，我们将看到：</span><span class="sxs-lookup"><span data-stu-id="f97a0-139">For example, if we attempt to delete the `HKCU:\CurrentVersion` subkey we created, we see this:</span></span>
 
 ```powershell
 Remove-Item -Path HKCU:\CurrentVersion
@@ -125,13 +126,13 @@ the item. Are you sure you want to continue?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-<span data-ttu-id="b1c75-139">若要在无提示下删除包含的项，请指定 Recurse  参数：</span><span class="sxs-lookup"><span data-stu-id="b1c75-139">To delete contained items without prompting, specify the **Recurse** parameter:</span></span>
+<span data-ttu-id="f97a0-140">若要在无提示下删除包含的项，请指定 Recurse  参数：</span><span class="sxs-lookup"><span data-stu-id="f97a0-140">To delete contained items without prompting, specify the **Recurse** parameter:</span></span>
 
 ```powershell
 Remove-Item -Path HKCU:\CurrentVersion -Recurse
 ```
 
-<span data-ttu-id="b1c75-140">如果要删除 `HKCU:\CurrentVersion` 中的所有项，但不删除 `HKCU:\CurrentVersion` 本身，则可以改用：</span><span class="sxs-lookup"><span data-stu-id="b1c75-140">If you wanted to remove all items within `HKCU:\CurrentVersion` but not `HKCU:\CurrentVersion` itself, you could instead use:</span></span>
+<span data-ttu-id="f97a0-141">如果要删除 `HKCU:\CurrentVersion` 中的所有项，但不删除 `HKCU:\CurrentVersion` 本身，则可以改用：</span><span class="sxs-lookup"><span data-stu-id="f97a0-141">If you wanted to remove all items within `HKCU:\CurrentVersion` but not `HKCU:\CurrentVersion` itself, you could instead use:</span></span>
 
 ```powershell
 Remove-Item -Path HKCU:\CurrentVersion\* -Recurse
