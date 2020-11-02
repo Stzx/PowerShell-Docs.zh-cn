@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: DSC WaitForSome 资源
-ms.openlocfilehash: ea2618fbb77dd24a0c73fd9357e87862da514b66
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC WaitForSome 资源
+ms.openlocfilehash: bc9c3df2b476e7046ccfe6257acc1d1641e7594b
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464377"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143086"
 ---
 # <a name="dsc-waitforsome-resource"></a>DSC WaitForSome 资源
 
@@ -15,10 +16,12 @@ ms.locfileid: "86464377"
 
 可以在 [DSC 配置](../../../configurations/configurations.md)中的节点块内使用 WaitForSome  Desired State Configuration (DSC) 资源，以指定依赖其他节点上的配置。
 
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
 如果由 ResourceName  属性指定的资源在 NodeName  属性定义的最少节点数（由 NodeCount  指定）上都处于所需状态，那么此资源成功。
 
 > [!NOTE]
-> WaitForSome 资源使用 Windows 远程管理来检查其他节点的状态  。 要详细了解 WinRM 的端口和安全性要求，请参阅 [PowerShell 远程处理安全注意事项](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6)。
+> WaitForSome 资源使用 Windows 远程管理来检查其他节点的状态  。 要详细了解 WinRM 的端口和安全性要求，请参阅 [PowerShell 远程处理安全注意事项](/powershell/scripting/learn/remoting/winrmsecurity)。
 
 ## <a name="syntax"></a>语法
 

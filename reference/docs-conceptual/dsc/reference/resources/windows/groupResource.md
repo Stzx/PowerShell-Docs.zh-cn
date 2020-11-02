@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: DSC Group 资源
-ms.openlocfilehash: 5570d46d872e205917eef49bfa869419b20a77b0
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC Group 资源
+ms.openlocfilehash: 8e2d1139c9573d7e310fec2410b14df04b79e1b2
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464207"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142440"
 ---
 # <a name="dsc-group-resource"></a>DSC Group 资源
 
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.x
 
 Windows PowerShell Desired State Configuration (DSC) 中的 **Group** 资源提供用于管理目标节点上的本地组的机制。
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>语法
 
@@ -48,7 +51,7 @@ Group [string] #ResourceName
 |properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
-|Ensure |指示该组是否存在。 将此属性设置为 **Absent** 可确保组不存在。 将其设置为 **Present** 可确保组存在。 默认值为 **Present**。 |
+|Ensure |指示该组是否存在。 将此属性设置为 **Absent** 可确保组不存在。 将其设置为 **Present** 可确保组存在。 默认值为 **Present** 。 |
 |PsDscRunAsCredential |设置用于运行整个资源的身份的凭据。 |
 
 > [!NOTE]

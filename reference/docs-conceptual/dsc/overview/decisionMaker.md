@@ -2,12 +2,13 @@
 ms.date: 10/11/2019
 keywords: dsc,powershell,配置,安装程序
 title: 适用于决策者的 Desired State Configuration 概述
-ms.openlocfilehash: bb73ee8fe636272f99989aa45712fe34fedad617
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文档描述了使用 PowerShell Desired State Configuration (DSC) 的商业利益，而非技术指南。
+ms.openlocfilehash: fc28c9290c993131fc7bf2046eb64b144d3da609
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75870789"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654142"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>适用于决策者的 Desired State Configuration 概述
 

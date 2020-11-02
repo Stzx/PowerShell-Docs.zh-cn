@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: DSC ProcessSet 资源
-ms.openlocfilehash: b96c6e6830a53d93cf8144cba28e264e23912306
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC ProcessSet 资源
+ms.openlocfilehash: 3e09c8c7b4ca7d8e95b36f9d4c20c2a85abad9dd
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463986"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142559"
 ---
 # <a name="dsc-processset-resource"></a>DSC ProcessSet 资源
 
 > 适用于：Windows PowerShell 5.x
 
 Windows PowerShell Desired State Configuration (DSC) 中的 **ProcessSet** 资源提供了用于在目标节点上配置进程的机制。
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>语法
 
@@ -48,7 +51,7 @@ ProcessSet [string] #ResourceName
 |properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
-|Ensure |指定进程是否存在。 将此属性设置为 **Present** 可确保进程存在。 否则，将其设置为 **Absent**。 默认值为 **Present**。 |
+|Ensure |指定进程是否存在。 将此属性设置为 **Present** 可确保进程存在。 否则，将其设置为 **Absent** 。 默认值为 **Present** 。 |
 |PsDscRunAsCredential |设置用于运行整个资源的身份的凭据。 |
 
 > [!NOTE]

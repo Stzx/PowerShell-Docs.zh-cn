@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: DSC Log 资源
-ms.openlocfilehash: bc59bb2670561306a039d024fcff5e0746a659f2
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC Log 资源
+ms.openlocfilehash: 281d1f8aeeb4d075f073419ac02a0f81888ed2b5
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464020"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142457"
 ---
 # <a name="dsc-log-resource"></a>DSC Log 资源
 
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.x
 
 Windows PowerShell Desired State Configuration (DSC) 内的 **Log** 资源提供了将消息写入 Microsoft-Windows-Desired State Configuration/Analytic 事件日志的机制。
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>语法
 
@@ -50,7 +53,7 @@ Log [string] #ResourceName
 下面的示例演示如何在 Microsoft-Windows-Desired State Configuration/Analytic 事件日志中纳入消息。
 
 > [!NOTE]
-> 如果在配置此资源后运行 [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/test-dscconfiguration?view=powershell-5.1)，它始终会返回 $false  。
+> 如果在配置此资源后运行 [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/test-dscconfiguration)，它始终会返回 $false  。
 
 ```powershell
 Configuration logResourceTest

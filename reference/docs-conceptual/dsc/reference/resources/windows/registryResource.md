@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: DSC Registry 资源
-ms.openlocfilehash: da4be9152a58d9945051f9c811270e871612ca0d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC Registry 资源
+ms.openlocfilehash: 075f64abffb429b83958d859b0328b4eeec4cee6
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463612"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142491"
 ---
 # <a name="dsc-registry-resource"></a>DSC Registry 资源
 
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.x
 
 Windows PowerShell Desired State Configuration (DSC) 中的 **Registry** 资源提供了在目标节点上管理注册表项和值的机制。
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>语法
 
@@ -37,18 +40,18 @@ Registry [string] #ResourceName
 |properties |说明 |
 |---|---|
 |密钥 |指示要确保其特定状态的注册表项的路径。 路径必须包含配置单元。 |
-|ValueName |指示注册表值的名称。 若要添加或删除注册表项，请将此属性指定为空字符串，无需指定 **ValueType** 或 **ValueData**。 若要修改或删除注册表项的默认值，请将此属性指定为空字符串，同时指定 **ValueType** 或 **ValueData**。 |
-|Force |如果指定的注册表项存在，**Force** 将用新值覆盖它。 如果要删除包含子项的注册表项，这必须是 `$true`。 |
+|ValueName |指示注册表值的名称。 若要添加或删除注册表项，请将此属性指定为空字符串，无需指定 **ValueType** 或 **ValueData** 。 若要修改或删除注册表项的默认值，请将此属性指定为空字符串，同时指定 **ValueType** 或 **ValueData** 。 |
+|Force |如果指定的注册表项存在， **Force** 将用新值覆盖它。 如果要删除包含子项的注册表项，这必须是 `$true`。 |
 |Hex |指示是否以十六进制格式表示数据。 如果指定此项，则以十六进制格式显示 DWORD/QWORD 值数据。 对其他类型无效。 默认值是 `$false`。 |
 |ValueData |注册表值的数据。 |
-|ValueType |指示值的类型。 支持的类型包括：**String** (REG_SZ)、**Binary** (REG-BINARY)、**Dword**（32 位 REG_DWORD）、**Qword**（64 位 REG_QWORD）、**MultiString** (REG_MULTI_SZ)、**ExpandString** (REG_EXPAND_SZ)。 |
+|ValueType |指示值的类型。 支持的类型包括： **String** (REG_SZ)、 **Binary** (REG-BINARY)、 **Dword** （32 位 REG_DWORD）、 **Qword** （64 位 REG_QWORD）、 **MultiString** (REG_MULTI_SZ)、 **ExpandString** (REG_EXPAND_SZ)。 |
 
 ## <a name="common-properties"></a>公共属性
 
 |properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
-|Ensure |指示项和值是否存在。 若要确保其存在，请将此属性设置为 **Present**。 若要确保其不存在，请将此属性设置为 **Absent**。 默认值为 **Present**。 |
+|Ensure |指示项和值是否存在。 若要确保其存在，请将此属性设置为 **Present** 。 若要确保其不存在，请将此属性设置为 **Absent** 。 默认值为 **Present** 。 |
 |PsDscRunAsCredential |设置用于运行整个资源的身份的凭据。 |
 
 > [!NOTE]

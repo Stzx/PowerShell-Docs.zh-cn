@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: DSC Environment 资源
-ms.openlocfilehash: d8519a66d457767dcbc0e08b01a69a9264997479
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC Environment 资源
+ms.openlocfilehash: c7995fc5e7efdfb9a1dbae3da9f824d33c67085c
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464411"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142576"
 ---
 # <a name="dsc-environment-resource"></a>DSC Environment 资源
 
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.x
 
 Windows PowerShell Desired State Configuration (DSC) 中的 **Environment** 资源提供了管理系统环境变量的机制。
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>语法
 
@@ -22,7 +25,6 @@ Environment [string] #ResourceName
 {
     Name = [string]
     [ Path = [bool] ]
-    [ Target = [string] { Process | Machine } ]
     [ Value = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
@@ -35,8 +37,7 @@ Environment [string] #ResourceName
 |properties |说明 |
 |---|---|
 |名称 |指示指示你想要确保其特定状态的环境变量的名称。 |
-|路径 |定义正在配置的环境变量。 如果变量是 **Path**，则将此属性设置为 `$true`；否则将其设置为 `$false`。 默认为 `$false`。 如果正在配置的变量是 **Path**，则通过 **Value** 属性提供的值将被附加到现有值。 |
-|目标| 指示检索变量的位置：计算机或进程。 如果同时指示了这两个位置，则仅返回计算机的值。 默认值为这两者的值，因为这是其余资源的默认值。 |
+|路径 |定义正在配置的环境变量。 如果变量是 **Path** ，则将此属性设置为 `$true`；否则将其设置为 `$false`。 默认为 `$false`。 如果正在配置的变量是 **Path** ，则通过 **Value** 属性提供的值将被附加到现有值。 |
 |Value |要分配给环境变量的值。 |
 
 ## <a name="common-properties"></a>公共属性
@@ -52,7 +53,7 @@ Environment [string] #ResourceName
 
 ## <a name="example"></a>示例
 
-以下示例可确保 TestEnvironmentVariable 存在且具有值 _TestValue_。 如果不存在，则创建它。
+以下示例可确保 TestEnvironmentVariable 存在且具有值 _TestValue_ 。 如果不存在，则创建它。
 
 ```powershell
 Environment EnvironmentExample

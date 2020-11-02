@@ -1,13 +1,13 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: ISESnippetCollection 对象
-ms.openlocfilehash: 6cdc43dd1d82e94f66122d7f7b313c02e755fed7
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: ISESnippetCollection 对象是 ISESnippet 对象的集合。 与 PowerShellTab 对象关联的文件集合是此类的成员。
+ms.openlocfilehash: e6170ddf72d5ead840aa3015d4de1dcb21dbfeff
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808573"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655972"
 ---
 # <a name="the-isesnippetcollection-object"></a>ISESnippetCollection 对象
 
@@ -30,6 +30,6 @@ $SnipFile = Join-Path ( Split-Path $profile) 'Snippets\MySnips.snippets.ps1xml' 
 
 ## <a name="see-also"></a>另请参阅
 
-- [ISESnippetObject](The-ISESnippetObject.md)
+- [ISESnippet 对象](The-ISESnippetObject.md)
 - [Windows PowerShell ISE 脚本对象模型的用途](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [ISE 对象模型层次结构](The-ISE-Object-Model-Hierarchy.md)

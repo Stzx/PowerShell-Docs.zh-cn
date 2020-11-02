@@ -1,14 +1,14 @@
 ---
 ms.date: 09/20/2019
-keywords: dsc,powershell,配置,安装程序
-description: 提供了管理目标节点上的本地组的机制。
+ms.topic: reference
 title: DSC GroupSet 资源
-ms.openlocfilehash: 90e0c3f0e09c6a300988869265dfdb432ed5d217
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC GroupSet 资源
+ms.openlocfilehash: a9d1803aca40ac3571d42a5fd762489c03ed274e
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464189"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142882"
 ---
 # <a name="dsc-groupset-resource"></a>DSC GroupSet 资源
 
@@ -18,10 +18,12 @@ Windows PowerShell Desired State Configuration (DSC) 中的 **GroupSet** 资源�
 
 当你要对多个组添加和/或删除相同成员列表、删除多个组或添加具有相同成员列表的多个组时，请使用此资源。
 
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
 ## <a name="syntax"></a>语法
 
 ```Syntax
-Group [string] #ResourceName
+GroupSet [string] #ResourceName
 {
     GroupName = [string[]]
     [ MembersToInclude = [string[]] ]
@@ -35,7 +37,7 @@ Group [string] #ResourceName
 
 ## <a name="properties"></a>属性
 
-|properties |说明 |
+|Property |说明 |
 |---|---|
 |GroupName |要确保其处于特定状态的组的名称。 |
 |成员 |使用此属性将当前的组成员身份替换为指定成员。 此属性的值是一组形式为 `Domain\UserName` 的字符串。 如果你在配置中设置此属性，请勿使用 **MembersToExclude** 或 **MembersToInclude** 属性。 这样做会导致错误生成。 |
@@ -48,7 +50,7 @@ Group [string] #ResourceName
 |properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
-|Ensure |指示组是否存在。 将此属性设置为 **Absent** 可确保组不存在。 将其设置为 **Present** 可确保组存在。 默认值为 **Present**。 |
+|Ensure |指示组是否存在。 将此属性设置为 **Absent** 可确保组不存在。 将其设置为 **Present** 可确保组存在。 默认值为 **Present** 。 |
 |PsDscRunAsCredential |设置用于运行整个资源的身份的凭据。 |
 
 > [!NOTE]

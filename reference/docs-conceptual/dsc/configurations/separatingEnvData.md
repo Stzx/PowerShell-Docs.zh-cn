@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 分离配置和环境数据
-ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 通过使用配置数据，可将 DSC 配置中使用的数据与配置本身分离。 这样做可将单个配置用于多个环境。
+ms.openlocfilehash: 84ca4e4945a36111d23116524fd8f98c04e16d32
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954434"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645059"
 ---
 # <a name="separating-configuration-and-environment-data"></a>分离配置和环境数据
 
->适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
+> 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
-通过使用配置数据，可将 DSC 配置中使用的数据与配置本身分离。
-这样做可将单个配置用于多个环境。
+通过使用配置数据，可将 DSC 配置中使用的数据与配置本身分离。 这样做可将单个配置用于多个环境。
 
 例如，如果要开发应用程序，可将一个配置同时用于开发和生产环境，并使用配置数据指定每个环境的数据。
 
@@ -22,24 +22,23 @@ ms.locfileid: "71954434"
 
 配置数据是编译相应配置时在哈希表中定义并传递给 DSC 配置的数据。
 
-有关 **ConfigurationData** 哈希表的详细说明，请参阅[使用配置数据](configData.md)。
+有关 **ConfigurationData** 哈希表的详细说明，请参阅 [使用配置数据](configData.md)。
 
 ## <a name="a-simple-example"></a>一个简单示例
 
-让我们通过一个非常简单的示例来看看其工作方式。
-我们将创建单个配置，确保一些节点上存在 **IIS**，另一些节点上存在 **Hyper-V**：
+让我们通过一个非常简单的示例来看看其工作方式。 我们将创建单个配置，确保一些节点上存在 **IIS** ，另一些节点上存在 **Hyper-V** ：
 
 ```powershell
 Configuration MyDscConfiguration {
 
-    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
+  Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
     {
-        WindowsFeature IISInstall {
-            Ensure = 'Present'
-            Name   = 'Web-Server'
-        }
+  WindowsFeature IISInstall {
+    Ensure = 'Present'
+    Name   = 'Web-Server'
+  }
 
-    }
+ }
     Node $AllNodes.Where{$_.Role -eq "VMHost"}.NodeName
     {
         WindowsFeature HyperVInstall {
@@ -82,7 +81,7 @@ Mode                LastWriteTime         Length Name
 -a----        3/31/2017   5:09 PM           1970 VM-2.mof
 ```
 
-`$MyData` 指定两个不同节点，每个都具有其自己的 `NodeName` 和 `Role`。 配置动态创建“节点”块，方法是采用来自 `$MyData`（特别是 `$AllNodes`）的节点的集合，并根据 `Role` 属性筛选该集合。
+`$MyData` 指定两个不同节点，每个都具有其自己的 `NodeName` 和 `Role`。 配置动态创建“节点”块，方法是采用来自 `$MyData`（特别是 `$AllNodes`）的节点的集合，并根据 `Role` 属性筛选该集合  。
 
 ## <a name="using-configuration-data-to-define-development-and-production-environments"></a>使用配置数据定义开发环境和生产环境
 
@@ -102,7 +101,7 @@ Mode                LastWriteTime         Length Name
             SQLServerName   = "MySQLServer"
             SqlSource       = "C:\Software\Sql"
             DotNetSrc       = "C:\Software\sxs"
-        WebSiteName     = "New website"
+            WebSiteName     = "New website"
         },
 
         @{
@@ -129,13 +128,11 @@ Mode                LastWriteTime         Length Name
 
 ### <a name="configuration-script-file"></a>配置脚本文件
 
-现在，在配置（在 `.ps1` 文件中定义）中，根据其角色（`MSSQL` 和/或 `Dev`）筛选在 `DevProdEnvData.psd1` 中定义的节点并进行相应配置。
-在开发环境中，SQL Server 和 IIS 位于同一个节点上，而在生产环境中，SQL Server 和 IIS 位于两个不同节点上。
-站点内容也是不同的，具体由 `SiteContents` 属性指定。
+现在，在配置（在 `.ps1` 文件中定义）中，根据其角色（`MSSQL` 和/或 `Dev`）筛选在 `DevProdEnvData.psd1` 中定义的节点并进行相应配置。 在开发环境中，SQL Server 和 IIS 位于同一个节点上，而在生产环境中，SQL Server 和 IIS 位于两个不同节点上。 站点内容也是不同的，具体由 `SiteContents` 属性指定。
 
 在配置脚本末尾，调用配置（将其编译为 MOF 文档），将 `DevProdEnvData.psd1` 作为 `$ConfigurationData` 参数传递。
 
->**注意：** 此配置要求在目标节点上安装模块 `xSqlPs` 和 `xWebAdministration`。
+> **注意：** 此配置要求在目标节点上安装模块 `xSqlPs` 和 `xWebAdministration`。
 
 让我们在名为 `MyWebApp.ps1` 的文件中定义配置：
 
@@ -244,75 +241,70 @@ Mode                LastWriteTime         Length Name
 
 ## <a name="using-non-node-data"></a>使用非节点数据
 
-对于并非节点专用的数据，可以向 **ConfigurationData** 哈希表添加其他键。
-以下配置确保了两个网站的存在。
-每个网站的数据都在 **AllNodes** 数组中定义。
-文件 `Config.xml` 用于这两个网站，因此我们使用名称 `NonNodeData` 在其他键中对该文件进行定义。
-请注意，其他键的数量没有限制，并可根据需要对其命名。
-`NonNodeData` 不是保留字，它只是我们决定用于命名其他键的名字。
+对于并非节点专用的数据，可以向 **ConfigurationData** 哈希表添加其他键。 以下配置确保了两个网站的存在。 每个网站的数据都在 **AllNodes** 数组中定义。 文件 `Config.xml` 用于这两个网站，因此我们使用名称 `NonNodeData` 在其他键中对该文件进行定义。 请注意，其他键的数量没有限制，并可根据需要对其命名。 `NonNodeData` 不是保留字，它只是我们决定用于命名其他键的名字。
 
-你可以使用特殊变量 **$ConfigurationData** 访问其他键。
-在此示例中，通过以下代码行访问 `ConfigFileContents`：
+你可以使用特殊变量 **$ConfigurationData** 访问其他键。 在此示例中，通过以下代码行访问 `ConfigFileContents`：
+
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
  ```
- 在 `File` 资源块中。
 
+ 在 `File` 资源块中。
 
 ```powershell
 $MyData =
 @{
-    AllNodes =
-    @(
-        @{
-            NodeName           = "*"
-            LogPath            = "C:\Logs"
-        },
+    AllNodes =
+    @(
+        @{
+            NodeName           = "*"
+            LogPath            = "C:\Logs"
+        },
 
-        @{
-            NodeName = "VM-1"
-            SiteContents = "C:\Site1"
-            SiteName = "Website1"
-        },
+        @{
+            NodeName = "VM-1"
+            SiteContents = "C:\Site1"
+            SiteName = "Website1"
+        },
 
 
-        @{
-            NodeName = "VM-2"
-            SiteContents = "C:\Site2"
-            SiteName = "Website2"
-        }
-    );
+        @{
+            NodeName = "VM-2"
+            SiteContents = "C:\Site2"
+            SiteName = "Website2"
+        }
+    );
 
-    NonNodeData =
-    @{
-        ConfigFileContents = (Get-Content C:\Template\Config.xml)
-     }
+    NonNodeData =
+    @{
+        ConfigFileContents = (Get-Content C:\Template\Config.xml)
+     }
 }
 
 configuration WebsiteConfig
 {
-    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
+    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
 
-    node $AllNodes.NodeName
-    {
-        xWebsite Site
-        {
-            Name         = $Node.SiteName
-            PhysicalPath = $Node.SiteContents
-            Ensure       = "Present"
-        }
+    node $AllNodes.NodeName
+    {
+        xWebsite Site
+        {
+            Name         = $Node.SiteName
+            PhysicalPath = $Node.SiteContents
+            Ensure       = "Present"
+        }
 
-        File ConfigFile
-        {
-            DestinationPath = $Node.SiteContents + "\\config.xml"
-            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
-        }
-    }
+        File ConfigFile
+        {
+            DestinationPath = $Node.SiteContents + "\\config.xml"
+            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
+        }
+    }
 }
 ```
 
-
 ## <a name="see-also"></a>另请参阅
+
 - [使用配置数据](configData.md)
 - [配置数据中的凭据选项](configDataCredentials.md)
 - [DSC 配置](configurations.md)

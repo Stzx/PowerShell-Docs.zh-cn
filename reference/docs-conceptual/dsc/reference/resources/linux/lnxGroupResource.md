@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: 适用于 Linux 的 DSC nxGroup 资源
-ms.openlocfilehash: f196c74b94ec27818d58b59d1e489facd8ab0a65
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: 适用于 Linux 的 DSC nxGroup 资源
+ms.openlocfilehash: 3544bee763c0a4456002f9a02fde38de5d4fb65c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464428"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664257"
 ---
 # <a name="dsc-for-linux-nxgroup-resource"></a>适用于 Linux 的 DSC nxGroup 资源
 
@@ -43,7 +44,7 @@ nxGroup <string> #ResourceName
 |properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
-|Ensure |确定是否检查组是否存在。 将此属性设置为 **Present** 可确保组存在。 将其设置为 **Absent** 可确保组不存在。 默认值为 **Present**。 |
+|Ensure |确定是否检查组是否存在。 将此属性设置为 **Present** 可确保组存在。 将其设置为 **Absent** 可确保组不存在。 默认值为 **Present** 。 |
 
 ## <a name="example"></a>示例
 

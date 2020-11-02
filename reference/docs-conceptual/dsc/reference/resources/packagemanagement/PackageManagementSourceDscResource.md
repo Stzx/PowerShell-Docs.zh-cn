@@ -1,13 +1,14 @@
 ---
 ms.date: 07/15/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: DSC PackageManagementSource 资源
-ms.openlocfilehash: b24558574f192347aace5a809d57385e01d9acb3
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC PackageManagementSource 资源
+ms.openlocfilehash: 495b6548ef86f639e93b914ec8bd8ea7818ff8dd
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463884"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142848"
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>DSC PackageManagementSource 资源
 
@@ -18,6 +19,8 @@ Windows PowerShell Desired State Configuration (DSC) 中的 **PackageManagementS
 
 > [!IMPORTANT]
 > PackageManagement  模块应至少为版本 1.1.7.0，以下属性信息才正确。
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>语法
 
@@ -42,7 +45,7 @@ PackageManagementSource [String] #ResourceName
 |名称 |指定要在系统上注册或取消注册的包源名称。 |
 |ProviderName |指定 OneGet 提供程序的名称，借此可以与包源进行互操作。 |
 |SourceLocation |指定包源的 URI。 |
-|InstallationPolicy |供提供程序使用，如内置的 Nuget 提供程序。 确定是否信任包的源。 即以下函数之一：**Untrusted** 或 **Trusted**。 |
+|InstallationPolicy |供提供程序使用，如内置的 Nuget 提供程序。 确定是否信任包的源。 即以下函数之一： **Untrusted** 或 **Trusted** 。 |
 |SourceCredential |提供远程源上程序包的访问权限。 |
 
 ## <a name="common-properties"></a>公共属性
@@ -50,7 +53,7 @@ PackageManagementSource [String] #ResourceName
 |properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
-|Ensure |确定是要注册还是要取消注册包源。 默认值为 **Present**。 |
+|Ensure |确定是要注册还是要取消注册包源。 默认值为 **Present** 。 |
 |PsDscRunAsCredential |设置用于运行整个资源的身份的凭据。 |
 
 > [!NOTE]

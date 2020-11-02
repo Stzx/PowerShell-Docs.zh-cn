@@ -2,12 +2,13 @@
 ms.date: 04/11/2018
 keywords: dsc,powershell,配置,安装程序
 title: 设置 DSC SMB 请求服务器
-ms.openlocfilehash: be41f7a708f1a129919fae8300fc4307441097f7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC SMB 请求服务器是计算机托管 SMB 文件共享，可在目标节点提出请求时向它们提供 DSC 配置文件和 DSC 资源。
+ms.openlocfilehash: 4ac1b0db719fa124d6fa9a654acb64ec24d9ea41
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500706"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658422"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>设置 DSC SMB 请求服务器
 
@@ -33,7 +34,7 @@ DSC [SMB](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh83
 
 > [!NOTE]
 > `Install-Module` 包含在 PowerShellGet  模块中，后者纳入 PowerShell 5.0。
-> **xSmbShare** 包含 DSC 资源 **xSmbShare**，后者可用于创建 SMB 文件共享。
+> **xSmbShare** 包含 DSC 资源 **xSmbShare** ，后者可用于创建 SMB 文件共享。
 
 ### <a name="create-the-directory-and-file-share"></a>创建目录和文件共享
 
@@ -131,7 +132,7 @@ Configuration DSCSMB
 
 将希望客户端节点请求的所有配置 MOF 文件和/或 DSC 资源保存在 SMB 共享文件夹中。
 
-所有配置 MOF 文件都必须命名为 *ConfigurationID*.mof，其中 *ConfigurationID* 是目标节点的 LCM 的 **ConfigurationID** 属性值。 若要详细了解如何设置请求客户端，请参阅[使用配置 ID 设置请求客户端](pullClientConfigID.md)。
+任何配置 MOF 文件都必须命名为 *ConfigurationID* .mof，其中 *ConfigurationID* 是目标节点上 LCM 的 **ConfigurationID** 属性值。 若要详细了解如何设置请求客户端，请参阅[使用配置 ID 设置请求客户端](pullClientConfigID.md)。
 
 > [!NOTE]
 > 如果你使用的是 SMB 请求服务器，则必须使用配置 ID。 SMB 不支持配置名称。
@@ -159,7 +160,7 @@ Configuration DSCSMB
 有关配置 LCM 的详细信息，请参阅[使用配置 ID 设置请求客户端](pullClientConfigID.md)。
 
 > [!NOTE]
-> 为简单起见，此示例使用 PSDscAllowPlainTextPassword  ，以允许将明文密码传递到 Credential  参数。 有关更安全传递凭据的信息，请参阅[配置数据中的凭据选项](../configurations/configDataCredentials.md)。 即使仅请求资源，也必须在 SMB 请求服务器的 metaconfiguration“设置”块中指定“ConfigurationID”。
+> 为简单起见，此示例使用 PSDscAllowPlainTextPassword  ，以允许将明文密码传递到 Credential  参数。 有关更安全传递凭据的信息，请参阅[配置数据中的凭据选项](../configurations/configDataCredentials.md)。 即使仅请求资源，也必须  在 SMB 请求服务器的 metaconfiguration“设置”  块中指定“ConfigurationID”  。
 
 ```powershell
 $secpasswd = ConvertTo-SecureString "Pass1Word" -AsPlainText -Force
