@@ -75,6 +75,8 @@
           href: learn/deep-dives/everything-about-shouldprocess.md
         - name: 多线程处理时的写入进度
           href: learn/deep-dives/write-progress-across-multiple-threads.md
+        - name: 向 PowerShell 函数添加凭据支持
+          href: learn/deep-dives/add-credentials-to-powershell-functions.md
     - name: PowerShell 远程处理
       items:
         - name: Just Enough Administration (JEA)
@@ -564,6 +566,8 @@
       href: community/hall-of-fame.md
     - name: Docs 中的新增内容
       items:
+        - name: 2020 年第 4 季度
+          href: community/2020-Q4.md
         - name: 2020-Q3
           href: community/2020-Q3.md
         - name: 2020-Q2
