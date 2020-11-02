@@ -1,13 +1,13 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,cmdlet
 title: 如何在脚本窗格和控制台窗格中使用 Tab 自动补全
-ms.openlocfilehash: 07cf9ff75db8d33ed018542153bfcd7503035e40
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 如何在脚本窗格和控制台窗格中使用 Tab 自动补全
+ms.openlocfilehash: d59a324ef5ca8eb882814c51bd9b7780b5916e81
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808823"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663672"
 ---
 # <a name="how-to-use-tab-completion-in-the-script-pane-and-console-pane"></a>如何在脚本窗格和控制台窗格中使用 Tab 自动补全
 

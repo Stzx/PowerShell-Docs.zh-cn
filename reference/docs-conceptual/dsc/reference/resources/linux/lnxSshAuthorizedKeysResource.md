@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: 适用于 Linux 的 DSC nxSshAuthorizedKeys 资源
-ms.openlocfilehash: 3a62bb7a3dbdebae4f0ca6084db1624c1b76ab1f
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: 适用于 Linux 的 DSC nxSshAuthorizedKeys 资源
+ms.openlocfilehash: 881e94aa583a745cdac7f01b6e445352ef4ca937
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464462"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662768"
 ---
 # <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a>适用于 Linux 的 DSC nxSshAuthorizedKeys 资源
 
@@ -31,8 +32,8 @@ nxAuthorizedKeys <string> #ResourceName
 |properties |说明 |
 |---|---|
 |KeyComment |密钥的唯一注释。 它用于对密钥进行唯一标识。 |
-|用户名 |要管理其 ssh 授权密钥的用户名。 如果未定义，则默认用户为 **root**。 |
-|密钥 |密钥的内容。 如果将 **Ensure** 设置为 **Present**，则此项为必需项。|
+|用户名 |要管理其 ssh 授权密钥的用户名。 如果未定义，则默认用户为 **root** 。 |
+|密钥 |密钥的内容。 如果将 **Ensure** 设置为 **Present** ，则此项为必需项。|
 
 ## <a name="common-properties"></a>公共属性
 

@@ -1,13 +1,14 @@
 ---
 ms.date: 07/14/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: DisableDebugConfiguration 方法
-ms.openlocfilehash: 52d55ff6b1fd126482bbaa9480efc131ab2f100c
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DisableDebugConfiguration 方法
+ms.openlocfilehash: 6894f86d9626ca03f93477477f573f45a5de4c49
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463748"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648988"
 ---
 # <a name="disabledebugconfiguration-method"></a>DisableDebugConfiguration 方法
 
@@ -35,7 +36,7 @@ uint32 DisableDebugConfiguration();
 
 **MOF：** DscCore.mof
 
-**命名空间**：Root\Microsoft\Windows\DesiredStateConfiguration
+**命名空间** ：Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>另请参阅
 

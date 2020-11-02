@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: 适用于 Linux nxArchive 资源的 DSC
-ms.openlocfilehash: 386378fa6e1608117d6934b983dcebe23e55d60d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: 适用于 Linux nxArchive 资源的 DSC
+ms.openlocfilehash: 2705829ccae0c1baa27324030433340e7f3949c1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464241"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648862"
 ---
 # <a name="dsc-for-linux-nxarchive-resource"></a>适用于 Linux nxArchive 资源的 DSC
 
@@ -33,7 +34,7 @@ nxArchive <string> #ResourceName
 |---|---|
 |SourcePath |指定存档文件的源路径。 这应该是 .tar、.zip 或 .tar.gz 文件。 |
 |DestinationPath |指定你想将存档内容提取至哪个位置。 |
-|校验和 |定义在确定是否已更新源存档时要使用的类型。 值为：**ctime**、**mtime** 或 **md5**。 默认值为 **md5**。 |
+|校验和 |定义在确定是否已更新源存档时要使用的类型。 值为： **ctime** 、 **mtime** 或 **md5** 。 默认值为 **md5** 。 |
 |Force |某些文件操作（如覆盖文件或删除不为空的目录）将导致错误。 使用 **Force** 属性覆盖此类错误。 默认值是 `$false`。 |
 
 ## <a name="common-properties"></a>公共属性
@@ -41,7 +42,7 @@ nxArchive <string> #ResourceName
 |properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
-|Ensure |确定是否要检查存档的内容是否位于**目标**上。 将此属性设置为 **Present** 可确保内容存在。 将其设置为 **Absent** 可确保内容不存在。 默认值为 **Present**。 |
+|Ensure |确定是否要检查存档的内容是否位于 **目标** 上。 将此属性设置为 **Present** 可确保内容存在。 将其设置为 **Absent** 可确保内容不存在。 默认值为 **Present** 。 |
 
 ## <a name="example"></a>示例
 

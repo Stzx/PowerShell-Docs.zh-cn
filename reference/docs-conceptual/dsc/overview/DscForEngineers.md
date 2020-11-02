@@ -2,12 +2,13 @@
 ms.date: 10/13/2017
 keywords: dsc,powershell,配置,安装程序
 title: 适用于工程师的 Desired State Configuration 概述
-ms.openlocfilehash: dbed274d5333c216970247b88d2a0956025e969d
-ms.sourcegitcommit: a5e945e0889d0635b7af767d80d6a13bc5526269
+description: 本文档旨在使开发人员和运营团队了解 PowerShell Desired State Configuration (DSC) 的优势。
+ms.openlocfilehash: c98295d0e78f4dc89e5df429e3c1de9a0c024054
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82584491"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646932"
 ---
 # <a name="desired-state-configuration-overview-for-engineers"></a>适用于工程师的 Desired State Configuration 概述
 

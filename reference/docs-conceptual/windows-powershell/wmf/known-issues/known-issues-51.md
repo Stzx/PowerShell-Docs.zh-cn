@@ -1,14 +1,14 @@
 ---
 ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: wmf,powershell,安装程序
 title: WMF 5.1 中的已知问题
-ms.openlocfilehash: 4f4c85e1f4984d9e91ea74ba65fdbf7188c5c7ab
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 5.1 中的已知问题
+ms.openlocfilehash: 7d27bc570108a0ae1470ae06f5bdf5fcd7849d16
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808703"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663325"
 ---
 # <a name="known-issues-in-wmf-51"></a>WMF 5.1 中的已知问题
 

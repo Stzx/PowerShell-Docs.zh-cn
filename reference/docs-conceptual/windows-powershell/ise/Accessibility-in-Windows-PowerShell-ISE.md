@@ -1,13 +1,13 @@
 ---
 ms.date: 12/19/2019
-keywords: powershell,cmdlet
 title: Windows PowerShell ISE 中的辅助功能
-ms.openlocfilehash: 89eff839d69fdbd5a1fa48b61dab627ef83f751b
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 本主题介绍 Windows PowerShell 集成脚本环境 (ISE) 的辅助功能，也许对你有所帮助。
+ms.openlocfilehash: 18acf447965eaaa7f93bb4c443a304b37216a9ba
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808513"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663854"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Windows PowerShell ISE 中的辅助功能
 
@@ -85,8 +85,8 @@ Microsoft 致力于使其产品和服务更便于每个人使用。 下列主题
 | **运行**                      | <kbd>F5</kbd>                                                                                                                                                                                                              |
 | **运行选定内容**            | <kbd>F8</kbd>                                                                                                                                                                                                              |
 | **停止执行**           | <kbd>CTRL</kbd>+<kbd>BREAK</kbd>。 可以在上下文不明确时（未选定任何文本时）使用 <kbd>CTRL</kbd>+<kbd>C</kbd>。                                                                               |
-| **Tab**（切换到下一个脚本）     | <kbd>CTRL</kbd>+<kbd>TAB</kbd> **注意：** 按 Tab 键切换到下一个脚本仅适用于打开单个 PowerShell 选项卡或打开多个 PowerShell 选项卡，但焦点在脚本窗格中的情况。                |
-| **Tab**（切换到上一个脚本） | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd> **注意：** 按 Tab 键切换到上一个脚本适用于仅打开一个 PowerShell 选项卡或打开多个 PowerShell 选项卡，但焦点在脚本窗格中的情况。 |
+| **Tab** （切换到下一个脚本）     | <kbd>CTRL</kbd>+<kbd>TAB</kbd> **注意：** 按 Tab 键切换到下一个脚本仅适用于打开单个 PowerShell 选项卡或打开多个 PowerShell 选项卡，但焦点在脚本窗格中的情况。                |
+| **Tab** （切换到上一个脚本） | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd> **注意：** 按 Tab 键切换到上一个脚本适用于仅打开一个 PowerShell 选项卡或打开多个 PowerShell 选项卡，但焦点在脚本窗格中的情况。 |
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>自定义视图的键盘快捷方式
 
@@ -129,7 +129,7 @@ Microsoft 致力于使其产品和服务更便于每个人使用。 下列主题
 | **步入**                           | <kbd>S</kbd>                 | 控制台窗格，调试脚本时 |
 | **步越**                           | <kbd>V</kbd>                 | 控制台窗格，调试脚本时 |
 | **步出**                            | <kbd>O</kbd>                 | 控制台窗格，调试脚本时 |
-| **重复上一个命令**（步入/步越） | <kbd>ENTER</kbd>             | 控制台窗格，调试脚本时 |
+| **重复上一个命令** （步入/步越） | <kbd>ENTER</kbd>             | 控制台窗格，调试脚本时 |
 | **显示调用堆栈**                  | <kbd>K</kbd>                 | 控制台窗格，调试脚本时 |
 | **停止调试**                      | <kbd>Q</kbd>                 | 控制台窗格，调试脚本时 |
 | **列出脚本**                     | <kbd>L</kbd>                 | 控制台窗格，调试脚本时 |
@@ -153,7 +153,7 @@ Microsoft 致力于使其产品和服务更便于每个人使用。 下列主题
 |                        操作                         |               键盘快捷方式               |
 | ----------------------------------------------------- | --------------------------------------------- |
 | **退出**                                              | <kbd>ALT</kbd>+<kbd>F4</kbd>                  |
-| **启动 PowerShell.exe**（Windows PowerShell 控制台） | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> |
+| **启动 PowerShell.exe** （Windows PowerShell 控制台） | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> |
 
 ## <a name="breakpoint-management"></a>断点管理
 

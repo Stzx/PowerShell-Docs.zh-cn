@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: 适用于 Linux 的 DSC nxScript 资源
-ms.openlocfilehash: e39808e110d5ee4bf9d0ccd418ca3b15ac9fe420
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: 适用于 Linux 的 DSC nxScript 资源
+ms.openlocfilehash: c92d7ac76323d39167512734ef743c299857c9a6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463646"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648800"
 ---
 # <a name="dsc-for-linux-nxscript-resource"></a>适用于 Linux 的 DSC nxScript 资源
 
@@ -32,8 +33,8 @@ nxScript <string> #ResourceName
 |properties |说明 |
 |---|---|
 |GetScript |提供用于返回计算机当前状态的脚本。 调用 [GetDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 脚本时，将运行此脚本。 该脚本必须以 shebang 开头，如 `#!/bin/bash`。 |
-|SetScript |提供将计算机置于正确状态的脚本。 调用 [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 脚本时，将首先运行 TestScript  。 如果 **TestScript** 块返回非 0 退出代码，则将运行 **SetScript** 块。 如果 **TestScript** 返回退出代码 0，则将不运行 **SetScript**。 该脚本必须以 shebang 开头，如 `#!/bin/bash`。 |
-|TestScript |提供一个脚本，用于评估节点当前是否处于正确状态。 调用 [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 脚本时，将首先运行此脚本。 如果它返回非 0 退出代码，则将运行 **SetScript**。 如果它返回退出代码 0，则将不运行 **SetScript**。 调用 [TestDscConfiguration](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 脚本时，也会运行 TestScript。 但是，在这种情况下，无论从 **TestScript** 返回何种退出代码，都不会运行 **SetScript**。 如果实际配置与当前所需状态配置相匹配，则 TestScript  必须包含内容且必须返回退出代码 0；如两者不匹配，则返回非 0 退出代码。 当前所需状态配置是在使用 DSC 的节点上执行的最后一个配置。 该脚本必须以 shebang 开头，如 `#!/bin/bash`。 |
+|SetScript |提供将计算机置于正确状态的脚本。 调用 [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 脚本时，将首先运行 TestScript  。 如果 **TestScript** 块返回非 0 退出代码，则将运行 **SetScript** 块。 如果 **TestScript** 返回退出代码 0，则将不运行 **SetScript** 。 该脚本必须以 shebang 开头，如 `#!/bin/bash`。 |
+|TestScript |提供一个脚本，用于评估节点当前是否处于正确状态。 调用 [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 脚本时，将首先运行此脚本。 如果它返回非 0 退出代码，则将运行 **SetScript** 。 如果它返回退出代码 0，则将不运行 **SetScript** 。 调用 [TestDscConfiguration](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 脚本时，也会运行 TestScript。 但是，在这种情况下，无论从 **TestScript** 返回何种退出代码，都不会运行 **SetScript** 。 如果实际配置与当前所需状态配置相匹配，则 TestScript  必须包含内容且必须返回退出代码 0；如两者不匹配，则返回非 0 退出代码。 当前所需状态配置是在使用 DSC 的节点上执行的最后一个配置。 该脚本必须以 shebang 开头，如 `#!/bin/bash`。 |
 |用户 |将该脚本作为此用户运行。 |
 |组 |将该脚本作为此组运行。 |
 

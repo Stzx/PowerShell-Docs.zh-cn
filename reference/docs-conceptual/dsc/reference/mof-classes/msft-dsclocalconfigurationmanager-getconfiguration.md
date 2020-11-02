@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: GetConfiguration 方法
-ms.openlocfilehash: 989aeef4cd9aa5d55741b48c8565c657c4b6512c
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: GetConfiguration 方法
+ms.openlocfilehash: a49f810bd227142c8c3ae4de45f69450400e4e8c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463816"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650871"
 ---
 # <a name="getconfiguration-method"></a>GetConfiguration 方法
 
@@ -17,8 +18,8 @@ ms.locfileid: "86463816"
 
 ```mof
 uint32 GetConfiguration(
-  [in]  uint8            configurationData[],
-  [out] OMI_BaseResource configurations[]
+  [in]  uint8            configurationData[],
+  [out] OMI_BaseResource configurations[]
 );
 ```
 
@@ -40,7 +41,7 @@ configurations  \[out\]：返回响应时，包含配置的嵌入实例。
 
 **MOF：** DscCore.mof
 
-**命名空间**：Root\Microsoft\Windows\DesiredStateConfiguration
+**命名空间** ：Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>另请参阅
 

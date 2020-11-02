@@ -1,13 +1,13 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,cmdlet
 title: 如何在 Windows PowerShell ISE 中编写和运行脚本
-ms.openlocfilehash: 2e3122a3b436ba878d2c5f9d72d4f9e024d4d031
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 本文说明如何在脚本窗格中创建、编辑、运行以及保存脚本。
+ms.openlocfilehash: 8e85da1d4eecbb975f2dd799c91512e0081309d2
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808753"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663651"
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>如何在 Windows PowerShell ISE 中编写和运行脚本
 
@@ -119,7 +119,7 @@ ms.locfileid: "83808753"
 1. 在“文件”菜单上，单击“另存为”。   将出现“另存为”对话框。 
 2. 在“文件名称”框中，输入文件的名称。 
 3. 在“保存类型”框中，选择文件类型。  例如，在“另存为类型”  框中，选择“PowerShell 脚本 (`*.ps1`)”。
-4. 单击“ **保存**”。
+4. 单击“ **保存** ”。
 
 ### <a name="to-save-a-script-in-ascii-encoding"></a>以 ASCII 编码保存脚本
 

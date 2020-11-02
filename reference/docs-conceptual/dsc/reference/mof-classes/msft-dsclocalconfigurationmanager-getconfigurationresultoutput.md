@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: GetConfigurationResultOutput 方法
-ms.openlocfilehash: 9c81082c28b2ffcc329264d29784782deaa9779d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: GetConfigurationResultOutput 方法
+ms.openlocfilehash: 7c885109b3078189b7ac653733a5fb24db66312e
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464071"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644710"
 ---
 # <a name="getconfigurationresultoutput-method"></a>GetConfigurationResultOutput 方法
 
@@ -17,9 +18,9 @@ ms.locfileid: "86464071"
 
 ```mof
 uint32 GetConfigurationResultOutput(
-  [in]  string                      jobId,
-  [in]  uint8                       resumeOutputBookmark[],
-  [out] MSFT_DSCConfigurationOutput output[]
+  [in]  string                      jobId,
+  [in]  uint8                       resumeOutputBookmark[],
+  [out] MSFT_DSCConfigurationOutput output[]
 );
 ```
 
@@ -43,7 +44,7 @@ output  \[out\]：指定作业的输出。
 
 **MOF：** DscCore.mof
 
-**命名空间**：Root\Microsoft\Windows\DesiredStateConfiguration
+**命名空间** ：Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>另请参阅
 

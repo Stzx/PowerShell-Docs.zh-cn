@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: GetMetaConfiguration 方法
-ms.openlocfilehash: 5111cb3b15e0fba0bf71b412580efdd3cd95b2dc
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: GetMetaConfiguration 方法
+ms.openlocfilehash: deca6b8ec342a34543bbe0e1fabbc2a740a88feb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463969"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644724"
 ---
 # <a name="getmetaconfiguration-method"></a>GetMetaConfiguration 方法
 
@@ -17,7 +18,7 @@ ms.locfileid: "86463969"
 
 ```mof
 uint32 GetMetaConfiguration(
-  [out] MSFT_DSCMetaConfiguration MetaConfiguration
+  [out] MSFT_DSCMetaConfiguration MetaConfiguration
 );
 ```
 
@@ -37,7 +38,7 @@ MetaConfiguration  \[out\]：返回响应时，包含定义设置的 MSFT_DSCMet
 
 **MOF：** DscCore.mof
 
-**命名空间**：Root\Microsoft\Windows\DesiredStateConfiguration
+**命名空间** ：Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>另请参阅
 

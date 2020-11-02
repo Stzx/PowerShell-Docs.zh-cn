@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: GetConfigurationStatus 方法
-ms.openlocfilehash: c2c478151428052d656832fb4079f12d666a910d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: GetConfigurationStatus 方法
+ms.openlocfilehash: fe25d17069d9011e931ac50fec27cb9ebafba365
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464038"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650860"
 ---
 # <a name="getconfigurationstatus-method"></a>GetConfigurationStatus 方法
 
@@ -17,8 +18,8 @@ ms.locfileid: "86464038"
 
 ```mof
 uint32 GetConfigurationStatus(
-  [in]  boolean                     All,
-  [out] MSFT_DSCConfigurationStatus configurationStatus[]
+  [in]  boolean                     All,
+  [out] MSFT_DSCConfigurationStatus configurationStatus[]
 );
 ```
 
@@ -40,7 +41,7 @@ configurationStatus  \[out\]：返回响应时，包含定义设置的 MSFT_DSCC
 
 **MOF：** DscCore.mof
 
-**命名空间**：Root\Microsoft\Windows\DesiredStateConfiguration
+**命名空间** ：Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: 适用于 Linux nxFileLine 资源的 DSC
-ms.openlocfilehash: c87054ec7039923bcb5e7c5c5d58f9221a12c9ca
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: 适用于 Linux nxFileLine 资源的 DSC
+ms.openlocfilehash: b342021176e4d8584afec82173f31bf5191ad264
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463663"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644752"
 ---
 # <a name="dsc-for-linux-nxfileline-resource"></a>适用于 Linux nxFileLine 资源的 DSC
 

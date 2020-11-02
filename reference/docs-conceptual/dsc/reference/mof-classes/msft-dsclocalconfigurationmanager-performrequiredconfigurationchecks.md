@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: PerformRequiredConfigurationChecks 方法
-ms.openlocfilehash: ea4294ffdcb2580fa7b39b18966b642d58073eb6
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: PerformRequiredConfigurationChecks 方法
+ms.openlocfilehash: c5e847cda6376f4266cc771dc947032a279e25f4
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464445"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650833"
 ---
 # <a name="performrequiredconfigurationchecks-method"></a>PerformRequiredConfigurationChecks 方法
 
@@ -17,7 +18,7 @@ ms.locfileid: "86464445"
 
 ```mof
 uint32 PerformRequiredConfigurationChecks(
-  [in] uint32 Flags
+  [in] uint32 Flags
 );
 ```
 
@@ -44,7 +45,7 @@ Flags  \[in\]：指定要运行的一致性检查类型的位掩码。 以下值
 
 **MOF：** DscCore.mof
 
-**命名空间**：Root\Microsoft\Windows\DesiredStateConfiguration
+**命名空间** ：Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>另请参阅
 

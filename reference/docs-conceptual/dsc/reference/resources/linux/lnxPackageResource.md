@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: 适用于 Linux 的 DSC nxPackage 资源
-ms.openlocfilehash: f61b337f6fbb8e2ea48128642874f050787fc576
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: 适用于 Linux 的 DSC nxPackage 资源
+ms.openlocfilehash: b84c7963297e8a88e729cd67611245b017c27fb7
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464479"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648839"
 ---
 # <a name="dsc-for-linux-nxpackage-resource"></a>适用于 Linux 的 DSC nxPackage 资源
 
@@ -34,8 +35,8 @@ nxPackage <string> #ResourceName
 |properties |说明 |
 |---|---|
 |名称 |要确保其特定状态的程序包的名称。 |
-|PackageManager |支持的值包括 **yum**、**apt** 和 **zypper**。 指定安装程序包时要使用的程序包管理器。 如果指定了 **FilePath**，则将使用提供的路径安装程序包。 否则，将使用程序包管理器从预配置的存储库安装程序包。 如果既不提供 **PackageManager**，也不提供 **FilePath**，则将使用系统默认的程序包管理器。 |
-|PackageGroup |如果为 `$true`，则 **Name** 应为用于 **PackageManager** 的包组的名称。 提供 **FilePath** 时，**PackageGroup** 无效。 |
+|PackageManager |支持的值包括 **yum** 、 **apt** 和 **zypper** 。 指定安装程序包时要使用的程序包管理器。 如果指定了 **FilePath** ，则将使用提供的路径安装程序包。 否则，将使用程序包管理器从预配置的存储库安装程序包。 如果既不提供 **PackageManager** ，也不提供 **FilePath** ，则将使用系统默认的程序包管理器。 |
+|PackageGroup |如果为 `$true`，则 **Name** 应为用于 **PackageManager** 的包组的名称。 提供 **FilePath** 时， **PackageGroup** 无效。 |
 |参数 |将完全按原样传输给程序包的参数字符串。 |
 |ReturnCode |预期的返回代码。 如果实际返回代码与此处提供的预期值不匹配，则配置将返回错误。 |
 |文件路径 |包所在的文件路径。 |
@@ -45,7 +46,7 @@ nxPackage <string> #ResourceName
 |properties |说明 |
 |---|---|
 |DependsOn |指示必须先运行其他资源的配置，再配置此资源。 例如，如果想要首先运行 ID 为 ResourceName、类型为 ResourceType 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 |
-|Ensure |确定是否检查程序包是否存在。 将此属性设置为 **Present** 可确保包存在。 将其设置为 **Absent** 可确保包不存在。 默认值为 **Present**。 |
+|Ensure |确定是否检查程序包是否存在。 将此属性设置为 **Present** 可确保包存在。 将其设置为 **Absent** 可确保包不存在。 默认值为 **Present** 。 |
 
 ## <a name="example"></a>示例
 

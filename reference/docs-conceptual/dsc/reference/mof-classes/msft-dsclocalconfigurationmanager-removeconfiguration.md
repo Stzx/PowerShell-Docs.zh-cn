@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: RemoveConfiguration 方法
-ms.openlocfilehash: ef15c873d8dfaf28e5cdeb611b72a70921c099be
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: RemoveConfiguration 方法
+ms.openlocfilehash: d5988ac014c457407c56a097c9a376427376eb3f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464343"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650730"
 ---
 # <a name="removeconfiguration-method"></a>RemoveConfiguration 方法
 
@@ -17,8 +18,8 @@ ms.locfileid: "86464343"
 
 ```mof
 uint32 RemoveConfiguration(
-  [in] uint32  Stage,
-  [in] boolean Force
+  [in] uint32  Stage,
+  [in] boolean Force
 );
 ```
 
@@ -28,9 +29,9 @@ Stage  \[in\]：指定要删除的配置文档。 以下为有效值：
 
 |值 |说明 |
 |:--- |:---|
-|**1** | **当前**配置文档 (current.mof)。 |
-|**2** | **挂起的**配置文档 (pending.mof)。  |
-|**4** | **以前的**配置文档 (previous.mof)。 |
+|**1** | **当前** 配置文档 (current.mof)。 |
+|**2** | **挂起的** 配置文档 (pending.mof)。  |
+|**4** | **以前的** 配置文档 (previous.mof)。 |
 
 Force  \[in\]：若为 true  ，则强制删除配置。
 
@@ -46,7 +47,7 @@ Force  \[in\]：若为 true  ，则强制删除配置。
 
 **MOF：** DscCore.mof
 
-**命名空间**：Root\Microsoft\Windows\DesiredStateConfiguration
+**命名空间** ：Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>另请参阅
 

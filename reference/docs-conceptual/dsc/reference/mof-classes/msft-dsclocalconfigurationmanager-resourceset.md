@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,配置,安装程序
+ms.topic: reference
 title: ResourceSet 方法
-ms.openlocfilehash: c015960b2a5ffca0d28b714d571aa616400555bd
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: ResourceSet 方法
+ms.openlocfilehash: 2554ff5805d7ed9518bd283565dc879a0fdfdfd0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464039"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650691"
 ---
 # <a name="resourceset-method"></a>ResourceSet 方法
 
@@ -17,10 +18,10 @@ ms.locfileid: "86464039"
 
 ```mof
 uint32 ResourceSet(
-  [in]  string  ResourceType,
-  [in]  string  ModuleName,
-  [in]  uint8   resourceProperty[],
-  [out] boolean RebootRequired
+  [in]  string  ResourceType,
+  [in]  string  ModuleName,
+  [in]  uint8   resourceProperty[],
+  [out] boolean RebootRequired
 );
 ```
 
@@ -46,7 +47,7 @@ RebootRequired  \[out\]：返回响应时，如果目标节点需要重启，便
 
 **MOF：** DscCore.mof
 
-**命名空间**：Root\Microsoft\Windows\DesiredStateConfiguration
+**命名空间** ：Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>另请参阅
 

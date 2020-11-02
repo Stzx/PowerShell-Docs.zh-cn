@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,安装程序
 title: WMF 5.x 发行说明
-ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 5.x 发行说明
+ms.openlocfilehash: d783592104262b08815b12bd8de01adf13b60372
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809873"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655847"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>Windows Management Framework (WMF) 5.x 发行说明
 
@@ -92,13 +91,13 @@ $env:PSDisableModuleAnalysisCacheCleanup = 1
 
 在 WMF 5.1 中：
 
-- 可以使用 [ModuleSpecification Constructor (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor?view=powershellsdk-1.1.0#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_)。
+- 可以使用 [ModuleSpecification Constructor (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_)。
 
   此哈希表具有与 `Get-Module -FullyQualifiedName` 相同的格式。
 
   **示例：** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
-- 如果有多个版本的模块，则 PowerShell 会使用与 `Import-Module`**相同的解析逻辑**，不会返回错误 - - 行为与 `Import-Module` 和 `Import-DscResource` 相同。
+- 如果有多个版本的模块，则 PowerShell 会使用与 `Import-Module`**相同的解析逻辑** ，不会返回错误 - - 行为与 `Import-Module` 和 `Import-DscResource` 相同。
 
 ## <a name="improvements-to-pester"></a>针对 Pester 的改进
 

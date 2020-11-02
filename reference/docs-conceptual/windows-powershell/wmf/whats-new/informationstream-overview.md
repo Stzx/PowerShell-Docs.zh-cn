@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,安装程序
 title: 信息流
-ms.openlocfilehash: 1a8df66f7489910b964ec398e90b76e9f30cd2e2
-ms.sourcegitcommit: 87b9b989f261b52969e99159e99ee28ad8d8839a
+description: PowerShell 5.0 添加了新的结构化信息  流以在脚本及其主机之间传输结构化数据。
+ms.openlocfilehash: 818c99ce281f5ada596ff92cd7bafb8b7cacf709
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86567835"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646706"
 ---
 # <a name="information-stream"></a>信息流
 

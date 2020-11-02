@@ -1,12 +1,13 @@
 ---
 ms.date: 07/29/2020
 title: PowerShell 5.0 中的新语言功能
-ms.openlocfilehash: dada39c4121a810c7ce87a642f232934152104e5
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+description: PowerShell 5.0 添加了使用类似于其他面向对象的编程语言的语法和语义定义类和其他用户定义的类型的功能。
+ms.openlocfilehash: 31ff54ba6f2800a0680c1a2db3832ca97246973d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410166"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663303"
 ---
 # <a name="new-language-features-in-powershell-50"></a>PowerShell 5.0 中的新语言功能
 
@@ -61,7 +62,7 @@ enum OtherEnum { Max = [SomeEnum]::Max + 1 }
 
 ### <a name="implementingassembly"></a>ImplementingAssembly
 
-已将新字段 ImplementingAssembly 添加到了 ModuleInfo。 如果脚本模块定义类，或者二进制模块的加载程序集，则会将此字段设置为为脚本模块创建的动态程序集。 当 ModuleType**** 为 Manifest**** 时，不会对该字段进行设置。
+已将新字段 ImplementingAssembly 添加到了 ModuleInfo。 如果脚本模块定义类，或者二进制模块的加载程序集，则会将此字段设置为为脚本模块创建的动态程序集。 当 ModuleType  为 Manifest  时，不会对该字段进行设置。
 
 **ImplementingAssembly** 字段上的反射可发现模块中的资源。 这意味着你可以发现用 PowerShell 或其他托管语言编写的资源。
 

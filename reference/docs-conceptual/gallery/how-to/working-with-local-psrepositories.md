@@ -1,14 +1,13 @@
 ---
 ms.date: 11/06/2018
-contributor: JKeithB
-keywords: 库,powershell,cmdlet,psgallery,psget
 title: 使用本地 PSRepository
-ms.openlocfilehash: 421b73c141c7551224e2298f51464a19bc736d0e
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
+description: PowerShellGet 模块支持 PowerShell 库以外的存储库。 本文介绍如何设置本地 PowerShell 存储库。
+ms.openlocfilehash: 24a2fd23124b3897952d64a347d103d9ee10248f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837573"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662354"
 ---
 # <a name="working-with-private-powershellget-repositories"></a>使用专用 PowerShellGet 存储库
 

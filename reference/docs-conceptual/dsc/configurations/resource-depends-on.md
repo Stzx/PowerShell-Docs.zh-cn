@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 使用 DependsOn 的资源依赖项
-ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 随着配置越来越大且越复杂，可以使用 `DependsOn` 键更改资源的应用顺序，具体方法是指定一个资源依赖于另一个资源。
+ms.openlocfilehash: 18f19a3606834ede0737213930e6af0e251225ab
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954474"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645103"
 ---
 # <a name="resource-dependencies-using-dependson"></a>使用 DependsOn 的资源依赖项
 
