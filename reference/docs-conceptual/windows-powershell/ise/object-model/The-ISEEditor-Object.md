@@ -1,13 +1,13 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: ISEEditor 对象
-ms.openlocfilehash: cb63acebc1a8bb9fa6cc07199088ae0d5441bc91
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: ISEEditor 对象是 Microsoft.PowerShell.Host.ISE.ISEEditor 类的实例。 控制台窗格是 ISEEditor 对象。
+ms.openlocfilehash: ffcb6e35e1160beab6efb29cc84847fa9ffd012b
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809693"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654055"
 ---
 # <a name="the-iseeditor-object"></a>ISEEditor 对象
 
@@ -69,7 +69,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
 在 Windows PowerShell ISE 3.0 和更高版本中受支持，但不存在于早期版本中。
 
-如果编辑器对象的 CanGoToMatch  属性是 `$true`，当脱字号直接位于左括号、中括号或大括号 - `(`、`[`、`{` 之前或直接位于右括号、中括号或大括号 - `)`、`]`、`}` 之后。 脱字号位于开始字符之前或结束字符之后。 如果 CanGoToMatch  属性是 `$false`，则此方法不执行任何操作。
+如果编辑器对象的 CanGoToMatch 属性是 `$true`，当脱字号直接位于左括号、中括号或大括号 - `(`、`[`、`{` 之前或直接位于右括号、中括号或大括号 - `)`、`]`、`}` 之后。 脱字号位于开始字符之前或结束字符之后。 如果 CanGoToMatch 属性是 `$false`，则此方法不执行任何操作。
 
 ```powershell
 # Goes to the matching character if CanGoToMatch() is $true
@@ -90,7 +90,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GoToMatch()
 
 在 Windows PowerShell ISE 2.0 和更高版本中受支持。
 
-从 **startLine**、**startColumn**、**endLine** 和 **endColumn** 参数中选择文本。
+从 **startLine** 、 **startColumn** 、 **endLine** 和 **endColumn** 参数中选择文本。
 
 **startLine** - Integer 所选内容的起始行。
 

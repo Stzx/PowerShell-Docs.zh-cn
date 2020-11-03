@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell, 核心
 title: PowerShell 6.0 的重大更改
-ms.openlocfilehash: 9ead635232930598634141369fd2cc299f0b1799
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: 本文总结了 Windows PowerShell 5.1 和 PowerShell 6.0 之间的差异。
+ms.openlocfilehash: 7ed6e811b9136cb1c35422a9d682ba2bfaa136a0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158184"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501688"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>PowerShell 6.x 的重大变更
 
@@ -214,7 +215,7 @@ CoreCLR 不支持 Windows Presentation Framework。 以下 cmdlet 受到影响�
 
 以前，使用 `Export-CSV` 导出的对象（带有使用 `ConvertFrom-Csv` 导入的 `TypeInformation`）已不保留类型信息。 此更改会将类型信息添加到 `PSTypeNames` 成员（若可从 CSV 文件中获得）。
 
-### <a name="-notypeinformation-should-be-default-on-export-csv-5131"></a>`-NoTypeInformation` 在 `Export-Csv` 上应为默认设置 [#5131](https://github.com/PowerShell/PowerShell/issues/5131)
+### <a name="-notypeinformation-should-be-default-on-export-csv-5131"></a>`-NoTypeInformation` 在  上应为默认设置 `Export-Csv` [#5131](https://github.com/PowerShell/PowerShell/issues/5131)
 
 此更改旨在解决客户对 `Export-CSV` 的默认行为的反馈，以包括类型信息。
 
@@ -230,7 +231,7 @@ CoreCLR 不支持 Windows Presentation Framework。 以下 cmdlet 受到影响�
 
 从 `Add-Type` 删除 `AddTypeCommandBase` 类以提高性能。 此类仅供 Add-Type cmdlet 使用，不应影响用户。
 
-### <a name="unify-cmdlets-with-parameter--encoding-to-be-of-type-systemtextencoding-5080"></a>将带有参数 `-Encoding` 的 cmdlet 统一为 `System.Text.Encoding` 类型 [#5080](https://github.com/PowerShell/PowerShell/issues/5080)
+### <a name="unify-cmdlets-with-parameter--encoding-to-be-of-type-systemtextencoding-5080"></a>将带有参数 `-Encoding` 的 cmdlet 统一为  类型 `System.Text.Encoding` [#5080](https://github.com/PowerShell/PowerShell/issues/5080)
 
 `-Encoding` 值 `Byte` 已从文件系统提供程序 cmdlet 中删除。 新参数 `-AsByteStream` 现可用于指定需要一个字节流作为输入，或用于指定输出是一个字节流。
 
@@ -253,11 +254,11 @@ CoreCLR 不支持 Windows Presentation Framework。 以下 cmdlet 受到影响�
 
 形参的位置不正确会导致将实参作为输入而不是实参进行传递。
 
-### <a name="remove-unsupported--showwindow-switch-from-get-help-4903"></a>从 `-showwindow` 中删除不受支持的 `Get-Help` 开关 [#4903](https://github.com/PowerShell/PowerShell/issues/4903)
+### <a name="remove-unsupported--showwindow-switch-from-get-help-4903"></a>从  中删除不受支持的 `-showwindow` 开关 `Get-Help` [#4903](https://github.com/PowerShell/PowerShell/issues/4903)
 
 `-showwindow` 依赖于 WPF，这在 CoreCLR 上不受支持。
 
-### <a name="allow--to-be-used-in-registry-path-for-remove-item-4866"></a>允许为 `Remove-Item` 在注册表路径中使用 * [#4866](https://github.com/PowerShell/PowerShell/issues/4866)
+### <a name="allow--to-be-used-in-registry-path-for-remove-item-4866"></a>允许为  在注册表路径中使用 * `Remove-Item` [#4866](https://github.com/PowerShell/PowerShell/issues/4866)
 
 以前，给定通配符的 `-LiteralPath` 将其视为与 `-Path` 相同，如果该通配符未找到任何文件，则会以无提示方式退出。 正确的行为应该是 `-LiteralPath` 是文本，因此，如果文件不存在，它应显示错误。 更改就是将与 `-Literal` 一起使用的通配符视作文本。
 
@@ -279,9 +280,9 @@ PowerShell 中的命名应与我们的命名保持一致，并符合 Apple 对 m
 
 ### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036"></a>使用 bool 参数执行 PowerShell 脚本不起作用 [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-以前，使用 powershell.exe  （现在使用 pwsh.exe  ）执行 PowerShell 脚本，使用 `-File` 无法将 `$true`/`$false` 作为参数值进行传递。 添加了支持将 `$true`/`$false` 作为参数的解析值。 由于当前记录的语法不起作用，也支持开关值。
+以前，使用 powershell.exe（现在使用 pwsh.exe）执行 PowerShell 脚本，使用 `-File` 无法将 `$true`/`$false` 作为参数值进行传递。 添加了支持将 `$true`/`$false` 作为参数的解析值。 由于当前记录的语法不起作用，也支持开关值。
 
-### <a name="remove-clrversion-property-from-psversiontable-4027"></a>从 `ClrVersion` 删除 `$PSVersionTable` 属性 [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
+### <a name="remove-clrversion-property-from-psversiontable-4027"></a>从  删除 `ClrVersion` 属性 `$PSVersionTable` [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
 `$PSVersionTable` 的 `ClrVersion` 属性对 CoreCLR 用处不大，最终用户不应使用该值来确定兼容性。
 
@@ -344,7 +345,7 @@ PowerShell 中的命名应与我们的命名保持一致，并符合 Apple 对 m
 - `Get-WmiObject -Class`
 - `Get-WmiObject -Property`
 
-### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482"></a>在 `Import-Csv` 中添加支持 W3C 扩展日志文件格式 [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
+### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482"></a>在  中添加支持 W3C 扩展日志文件格式 `Import-Csv` [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
 
 以前，`Import-Csv` cmdlet 不能用于直接导入采用 W3C 扩展日志格式的日志文件，并且需要执行其他操作。 进行此更改后，支持 W3C 扩展日志格式。
 
@@ -352,7 +353,7 @@ PowerShell 中的命名应与我们的命名保持一致，并符合 Apple 对 m
 
 `ValueFromRemainingArguments` 现在返回一些值作为数组，而不是本身是数组的单个值。
 
-### <a name="buildversion-is-removed-from-psversiontable-1415"></a>从 `BuildVersion` 中删除 `$PSVersionTable` [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
+### <a name="buildversion-is-removed-from-psversiontable-1415"></a>从  中删除 `BuildVersion``$PSVersionTable` [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
 
 从 `$PSVersionTable` 中删除 `BuildVersion` 属性。 此属性与 Windows 内部版本相关。 我们建议使用 `GitCommitId` 检索 PowerShell Core 的确切内部版本。
 

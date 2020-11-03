@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 使用配置 ID 发布到拉取服务器 (v4/v5)
-ms.openlocfilehash: 99c5b89e7d556fa72eaa6a3ba1654936f96a0b9d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍了如何上传资源以供下载，以及如何将客户端配置为自动下载资源。
+ms.openlocfilehash: 20e12e3cac6b6e4a86563576f4a915429b18aadb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500748"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646836"
 ---
 # <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>使用配置 ID 发布到拉取服务器 (v4/v5)
 
@@ -16,7 +17,7 @@ ms.locfileid: "80500748"
 - [设置 DSC SMB 拉取服务器](pullServerSmb.md)
 - [设置 DSC HTTP 拉取服务器](pullServer.md)
 
-每个目标节点都可以配置为下载配置、资源，甚至是报告其状态。 本文介绍了如何上传资源以供下载，以及如何将客户端配置为自动下载资源。 如果节点通过“拉取”  或“推送”  (v5) 收到分配的配置，便会从本地配置管理器 (LCM) 中指定的位置自动下载配置所需的任何资源。
+每个目标节点都可以配置为下载配置、资源，甚至是报告其状态。 本文介绍了如何上传资源以供下载，以及如何将客户端配置为自动下载资源。 如果节点通过“拉取”或“推送”(v5) 收到分配的配置，便会从本地配置管理器 (LCM) 中指定的位置自动下载配置所需的任何资源。
 
 ## <a name="compile-configurations"></a>编译配置
 
@@ -61,7 +62,7 @@ Guid
 Rename-Item -Path .\localhost.mof -NewName '64856475-939e-41fb-aba5-4469f4006059.mof'
 ```
 
-有关在环境中使用 Guid  的详细信息，请参阅[规划 Guid](secureServer.md#guids)。
+有关在环境中使用 Guid 的详细信息，请参阅[规划 Guid](secureServer.md#guids)。
 
 ### <a name="configuration-names"></a>配置名称
 
@@ -89,7 +90,7 @@ New-DscChecksum -Path '.\' -Force
 
 ### <a name="on-a-dsc-http-pull-server"></a>在 DSC HTTP 拉取服务器上
 
-当按照[设置 DSC HTTP 拉取服务器](pullServer.md)中所述设置 HTTP 拉取服务器时，指定 ModulePath  和 ConfigurationPath  键的目录。 ModulePath  键指明了应在哪里存储模块的打包 `.zip` 文件。 ConfigurationPath  键指明了应在哪里存储任何 `.mof` 文件和 `.checksum` 文件。
+当按照[设置 DSC HTTP 拉取服务器](pullServer.md)中所述设置 HTTP 拉取服务器时，指定 ModulePath  和 ConfigurationPath  键的目录。 ModulePath 键指明了应在哪里存储模块的打包 `.zip` 文件。 ConfigurationPath 键指明了应在哪里存储任何 `.mof` 文件和 `.checksum` 文件。
 
 ```powershell
     xDscWebService PSDSCPullServer
@@ -104,7 +105,7 @@ New-DscChecksum -Path '.\' -Force
 
 ### <a name="on-an-smb-share"></a>在 SMB 共享上
 
-将拉取客户端设置为使用 SMB 共享时，指定 ConfigurationRepositoryShare  。
+将拉取客户端设置为使用 SMB 共享时，指定 ConfigurationRepositoryShare。
 所有 `.mof` 文件和 `.checksum` 文件应存储在 ConfigurationRepositoryShare 块的 SourcePath 目录中。
 
 ```powershell
