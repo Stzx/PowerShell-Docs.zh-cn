@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 11/01/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Culture
-ms.openlocfilehash: d7e9ebd56db3ad9de2bfbcec62f73f1f8c0e2eaa
-ms.sourcegitcommit: 2e497178126b2b33a169ff04c31e251e0b59e89b
+ms.openlocfilehash: 214bdd9296dbdbec166e30ba1da0b7976a664ec8
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "93196705"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239928"
 ---
 # Get-Culture
 
@@ -26,25 +26,30 @@ Get-Culture [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**获取区域性** cmdlet 获取有关当前区域性设置的信息。
-这包括有关系统上的当前语言设置的信息（例如键盘布局）以及项的显示格式（例如数字、货币和日期）。
 
-还可使用 Get-UICulture cmdlet，此 cmdlet 可获取系统上的当前用户界面区域性，以及国际模块中的 [Set-Culture](https://go.microsoft.com/fwlink/?LinkID=242258) cmdlet。
-用户界面 UI 区域性确定哪些文本字符串用于用户界面元素，例如菜单和消息。
+`Get-Culture`Cmdlet 获取有关当前区域性设置的信息。 这包括有关系统上的当前语言设置的信息（例如键盘布局）以及项的显示格式（例如数字、货币和日期）。
+
+你还可以使用 `Get-UICulture` cmdlet 来获取系统上的当前用户界面区域性，并使用国际模块中的 [集区域性](/powershell/module/international/set-culture) cmdlet。 用户界面 UI 区域性确定哪些文本字符串用于用户界面元素，例如菜单和消息。
 
 ## 示例
 
 ### 示例1：获取区域性设置
 
+```powershell
+Get-Culture
 ```
-PS C:\> Get-Culture
+
+```Output
+LCID             Name             DisplayName
+----             ----             -----------
+1033             en-US            English (United States)
 ```
 
 此命令显示有关计算机上的区域设置的信息。
 
 ### 示例2：设置区域性对象属性的格式
 
-```
+```powershell
 PS C:\> $C = Get-Culture
 PS C:\> $C | Format-List -Property *
 Parent                         : en
@@ -67,14 +72,18 @@ DateTimeFormat                 : System.Globalization.DateTimeFormatInfo
 Calendar                       : System.Globalization.GregorianCalendar
 OptionalCalendars              : {System.Globalization.GregorianCalendar, System.Globalization.GregorianCalendar}
 UseUserOverride                : True
-IsReadOnly                     : False PS C:\> $C.Calendar
+IsReadOnly                     : False
+
+PS C:\> $C.Calendar
 MinSupportedDateTime : 1/1/0001 12:00:00 AM
 MaxSupportedDateTime : 12/31/9999 11:59:59 PM
 AlgorithmType        : SolarCalendar
 CalendarType         : Localized
 Eras                 : {1}
 TwoDigitYearMax      : 2029
-IsReadOnly           : False PS C:\> $C.DateTimeFormat
+IsReadOnly           : False
+
+PS C:\> $C.DateTimeFormat
 AMDesignator                     : AM
 Calendar                         : System.Globalization.GregorianCalendar
 DateSeparator                    : /
@@ -100,54 +109,51 @@ MonthNames                       : {January, February, March, April...}
 IsReadOnly                       : False
 NativeCalendarName               : Gregorian Calendar
 AbbreviatedMonthGenitiveNames    : {Jan, Feb, Mar, Apr...}
-MonthGenitiveNames               : {January, February, March, April...} PS C:\> $C.DateTimeFormat.FirstDayOfWeek
+MonthGenitiveNames               : {January, February, March, April...}
+
+PS C:\> $C.DateTimeFormat.FirstDayOfWeek
 Sunday
 ```
 
-此示例演示区域性对象中的大量数据。
-它演示如何显示对象的属性和子属性。
+此示例演示区域性对象中的大量数据。 它演示如何显示对象的属性和子属性。
 
-第一个命令使用 " **接收区域性** " cmdlet 获取计算机上的当前区域性设置。
-它将生成的区域性对象存储在 $C 的变量中。
+第一个命令使用 `Get-Culture` cmdlet 来获取计算机上的当前区域性设置。
+它将生成的区域性对象存储在 `$C` 变量中。
 
-第二个命令显示区域性对象的所有属性。
-它使用管道运算符 (|) 将 $C 中的区域性对象发送到 Format-List cmdlet。
-它使用 *Property* 参数显示对象的所有 ( * ) 属性。
-此命令可以缩写为 `$c | fl *` 。
+第二个命令显示区域性对象的所有属性。 它使用管道运算符 (`|`) 将中的区域性对象发送 `$C` 到 `Format-List` cmdlet。 它使用 **Property** 参数显示对象的所有 (`*`) 属性。 此命令可以缩写为 `$c | fl *` 。
 
-剩余的命令使用点表示法来显示对象属性的值，从而探索区域性对象的属性。
-你可以使用此表示法显示对象的任何属性的值。
+剩余的命令使用点表示法来显示对象属性的值，从而探索区域性对象的属性。 你可以使用此表示法显示对象的任何属性的值。
 
-第三个命令使用点表示法显示区域性对象的 Calendar 属性的值。
+第三个命令使用点表示法显示区域性对象的 **Calendar** 属性的值。
 
-第四个命令使用点表示法显示区域性对象的 DataTimeFormat 属性的值。
+第四个命令使用点表示法显示区域性对象的 **DataTimeFormat** 属性的值。
 
-许多对象属性具有属性。
-第五个命令使用点表示法显示 DateTimeFormat 属性的 FirstDayOfWeek 属性的值。
+许多对象属性具有属性。 第五个命令使用点表示法显示 **DateTimeFormat** 属性的 **FirstDayOfWeek** 属性的值。
 
 ## PARAMETERS
 
 ### CommonParameters
+
 此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。 有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。
 
 ## 输入
 
 ### 无
+
 不能通过管道将输入传递给此 cmdlet。
 
 ## 输出
 
 ### System.Globalization.CultureInfo
-**Get-Culture** 返回表示当前区域性的对象。
+
+`Get-Culture` 返回表示当前区域性的对象。
 
 ## 注释
 
-* 你还可以使用 $PsCulture 和 $PsUICulture 变量。 $PsCulture 变量存储当前区域性的名称，$PsUICulture 存储当前 UI 区域性的名称。
-
-*
+你还可以使用 `$PsCulture` 和 `$PsUICulture` 变量。 `$PsCulture`变量存储当前区域性的名称， `$PsUICulture` 变量存储当前 UI 区域性的名称。
 
 ## 相关链接
 
-[Set-Culture](/powershell/module/internationalcmdlets/set-culture)
+[Set-Culture](/powershell/module/international/set-culture)
 
 [Get-UICulture](Get-UICulture.md)
