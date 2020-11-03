@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/14/2020
+ms.date: 11/02/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-modulemanifest?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ModuleManifest
-ms.openlocfilehash: c84105db4079766c6bf329d1076d5db571c1fbfe
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d72bc32ffa96720a9eb2451ff28ad126b69f0d7a
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198535"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239778"
 ---
 # New-ModuleManifest
 
@@ -1028,6 +1028,9 @@ Accept wildcard characters: False
 模块清单通常是可选的。 但是，若要导出安装在全局程序集缓存中的程序集，则模块清单是必需的。
 
 若要在目录中添加或更改文件 `$pshome\Modules` ，请以 "以 **管理员身份运行** " 选项启动 PowerShell。
+
+> [!NOTE]
+> 从 PowerShell 6.2 开始，PowerShell 将尝试加载在模块清单的 **FileList** 属性中列出的所有 DLL 文件。 本机 Dll 在进程中无法加载 **FileList** ，将忽略该错误。 所有托管的 Dll 都加载到进程中。 此行为已在 PowerShell 7.1 中被删除。
 
 在 PowerShell 2.0 中，许多参数 `New-ModuleManifest` 都是必需的，即使它们在模块清单中不是必需的。 从 PowerShell 3.0 开始，只有 **Path** 参数是必需的。
 

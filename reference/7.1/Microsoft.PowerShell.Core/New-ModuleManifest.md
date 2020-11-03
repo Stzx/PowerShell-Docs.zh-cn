@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/14/2020
+ms.date: 11/02/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-modulemanifest?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ModuleManifest
-ms.openlocfilehash: caf67f951beb054e9bedb46d010fe1a5d8db7ab8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5fbd197f6c22de0ca50b4d2b6b76a914b85f7120
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198799"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239768"
 ---
 # New-ModuleManifest
 
@@ -1082,6 +1082,9 @@ Accept wildcard characters: False
 
 若要在目录中添加或更改文件 `$pshome\Modules` ，请以 "以 **管理员身份运行** " 选项启动 PowerShell。
 
+> [!NOTE]
+> 从 PowerShell 6.2 开始，PowerShell 将尝试加载在模块清单的 **FileList** 属性中列出的所有 DLL 文件。 本机 Dll 在进程中无法加载 **FileList** ，将忽略该错误。 所有托管的 Dll 都加载到进程中。 此行为已在 PowerShell 7.1 中被删除。
+
 在 PowerShell 2.0 中，许多参数 `New-ModuleManifest` 都是必需的，即使它们在模块清单中不是必需的。 从 PowerShell 3.0 开始，只有 **Path** 参数是必需的。
 
 会话是 PowerShell 执行环境的一个实例。 一个会话可以具有一个或多个会话状态。 默认情况下，会话仅具有全局会话状态，但每个导入的模块都具有其自己的会话状态。 会话状态允许模块中的命令在不影响全局会话状态的情况下运行。
@@ -1103,4 +1106,3 @@ Accept wildcard characters: False
 [Test-ModuleManifest](Test-ModuleManifest.md)
 
 [about_Modules](./About/about_Modules.md)
-
