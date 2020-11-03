@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 创建图形日期选取器
-ms.openlocfilehash: b748e301b24ed643488079b547e2da1a5a7a6551
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍如何使用 Windows PowerShell 中的 .NET Framework 窗体构建功能创建自定义日历式控件。
+ms.openlocfilehash: b73c9ba78817af7c38c20642402752765a7a3674
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706116"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500498"
 ---
 # <a name="creating-a-graphical-date-picker"></a>创建图形日期选取器
 
@@ -60,7 +61,7 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 }
 ```
 
-该脚本首先加载两个 .NET Framework 类：System.Drawing 和 System.Windows.Forms   。 然后，启动 .NET Framework 类 **Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
+该脚本首先加载两个 .NET Framework 类： **System.Drawing** 和 **System.Windows.Forms** 。 然后，启动 .NET Framework 类 **Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
 
 ```powershell
 $form = New-Object Windows.Forms.Form -Property @{
@@ -71,16 +72,16 @@ $form = New-Object Windows.Forms.Form -Property @{
 }
 ```
 
-此示例使用 Property 属性和 hashtable 将值分配给此类的四个属性  。
+此示例使用 Property 属性和 hashtable 将值分配给此类的四个属性。
 
-1. **StartPosition**：如果未添加此属性，Windows 将在窗体打开时选择一个位置。 通过将此属性设置为 CenterScreen  ，可使窗体在每次加载时都自动显示在屏幕中间。
+1. **StartPosition** ：如果未添加此属性，Windows 将在窗体打开时选择一个位置。 通过将此属性设置为 CenterScreen，可使窗体在每次加载时都自动显示在屏幕中间。
 
-2. **Size**：这是窗体的大小（以像素为单位）。
+2. **Size** ：这是窗体的大小（以像素为单位）。
    上述脚本创建的窗体大小为宽 243 像素、高 230 像素。
 
-3. **Text**：这将成为该窗口的标题。
+3. **Text** ：这将成为该窗口的标题。
 
-4. **Topmost**：通过将此属性设置为 `$true`，可以强制此窗口在其他已打开的窗口和对话框之上打开。
+4. **Topmost** ：通过将此属性设置为 `$true`，可以强制此窗口在其他已打开的窗口和对话框之上打开。
 
 接下来，在窗体中创建并添加一个日历控件。
 在此示例中，当前日期未突出显示或带圆圈。
@@ -108,7 +109,7 @@ $form.Controls.Add($okButton)
 ```
 
 采用相同方式创建“取消”按钮。 
-“取消”按钮距窗口上边缘 165 像素，但距左边缘 113 像素。 
+“取消”按钮距窗口上边缘 165 像素，但距左边缘 113 像素。
 
 ```powershell
 $cancelButton = New-Object Windows.Forms.Button -Property @{
@@ -127,7 +128,7 @@ $form.Controls.Add($cancelButton)
 $result = $form.ShowDialog()
 ```
 
-最后，`if` 块内的代码指示在用户在日历上选择某一天，然后单击“确定”按钮或按“Enter”键后，Windows 应如何处理该窗体   。 Windows PowerShell 向用户显示选定的日期。
+最后，`if` 块内的代码指示在用户在日历上选择某一天，然后单击“确定”按钮或按“Enter”键后，Windows 应如何处理该窗体。 Windows PowerShell 向用户显示选定的日期。
 
 ```powershell
 if ($result -eq [Windows.Forms.DialogResult]::OK) {
@@ -139,4 +140,4 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 ## <a name="see-also"></a>另请参阅
 
 - [GitHub：Dave Wyatt 的 WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [本周 Windows PowerShell 提示：创建图形日期选取器](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730942(v=technet.10))
+- [Windows PowerShell 每周提示：创建图形日期选取器](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730942(v=technet.10))
