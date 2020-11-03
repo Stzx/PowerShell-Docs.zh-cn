@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/14/2020
+ms.date: 11/02/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-modulemanifest?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ModuleManifest
-ms.openlocfilehash: 750204ed64c18b123d858abdb3edd7b1fe869e47
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 8177b1ed45f6d6cdabf13670e36be4fcbb55a77b
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197033"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239948"
 ---
 # New-ModuleManifest
 
@@ -337,7 +337,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CLRVersion
+### -ClrVersion
 
 指定模块需要的 Microsoft .NET Framework 的公共语言运行时 (CLR) 的最低版本。
 
@@ -1060,6 +1060,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。 有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。
 
 ## 输入
@@ -1081,6 +1082,9 @@ Accept wildcard characters: False
 模块清单通常是可选的。 但是，若要导出安装在全局程序集缓存中的程序集，则模块清单是必需的。
 
 若要在目录中添加或更改文件 `$pshome\Modules` ，请以 "以 **管理员身份运行** " 选项启动 PowerShell。
+
+> [!NOTE]
+> 从 PowerShell 6.2 开始，PowerShell 将尝试加载在模块清单的 **FileList** 属性中列出的所有 DLL 文件。 本机 Dll 在进程中无法加载 **FileList** ，将忽略该错误。 所有托管的 Dll 都加载到进程中。 此行为已在 PowerShell 7.1 中被删除。
 
 在 PowerShell 2.0 中，许多参数 `New-ModuleManifest` 都是必需的，即使它们在模块清单中不是必需的。 从 PowerShell 3.0 开始，只有 **Path** 参数是必需的。
 
