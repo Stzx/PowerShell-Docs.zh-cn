@@ -2,16 +2,17 @@
 ms.date: 08/11/2020
 keywords: dsc,powershell,配置,安装程序
 title: 直接调用 DSC 资源方法
-ms.openlocfilehash: 029a278c938e414820e172b85fac3cb3ad4b4afa
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
+description: Invoke-DscResource cmdlet 可用于调用 DSC 资源的函数或方法。 这可为想要使用 DSC 资源的第三方所用，也可以作为开发资源时非常有用的工具。
+ms.openlocfilehash: 5ccf0f589b60cef4ec197d1e0a583af9ed60d5e7
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162488"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92651003"
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>直接调用 DSC 资源方法
 
->适用于：Windows PowerShell 5.0
+> 适用于：Windows PowerShell 5.0
 
 可以使用 [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource) cmdlet 直接调用 DSC 资源的函数或方法（基于 MOF 资源的 `Get-TargetResource`、`Set-TargetResource` 和 `Test-TargetResource` 函数，或基于类的资源的 Get、Set 和 Test 方法）  。 这可为想要使用 DSC 资源的第三方所用，也可以作为开发资源时非常有用的工具。
 
@@ -51,7 +52,7 @@ $result = Invoke-DscResource -Name File -Method Get -Property @{
 $result.ItemValue | fl
 ```
 
->[!NOTE]
+> [!NOTE]
 > 不支持直接调用复合资源方法。 请改为调用构成复合资源的基础资源的方法。
 
 ## <a name="see-also"></a>另请参阅

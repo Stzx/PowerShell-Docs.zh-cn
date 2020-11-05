@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,安装程序
 title: 脚本跟踪和日志记录
-ms.openlocfilehash: dd18453c041428d5a6537c413c3ebe324a62dfee
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Windows PowerShell 5.x 添加了新的事件日志记录，允许你审核脚本块执行。
+ms.openlocfilehash: d47fb6fdd1ee4b9372fab7b81e6dc94fb45b8880
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809863"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663121"
 ---
 # <a name="script-tracing-and-logging"></a>脚本跟踪和日志记录
 

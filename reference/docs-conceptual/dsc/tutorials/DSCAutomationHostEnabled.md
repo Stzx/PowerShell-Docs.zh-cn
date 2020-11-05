@@ -2,25 +2,25 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: DSCAutomationHostEnabled 注册表项
-ms.openlocfilehash: 0f35a798e5b7d51fdfb66e4e79ceab0e36ccea5b
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 本文定义了可在 DSCAutomationHostEnabled 注册表项中设置的值
+ms.openlocfilehash: 50f752dd882e9b0787ed4a4cbc22731fc1d608f5
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808327"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656188"
 ---
 # <a name="dscautomationhostenabled-registry-key"></a>DSCAutomationHostEnabled 注册表项
 
 > 适用对象：Windows PowerShell 5.0
 
-DSC 使用 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System 下的 DSCAutomationHostEnabled 注册表项，以便在初始启动时配置计算机。
-DSCAutomationHostEnabled 支持三种模式：
+DSC 使用 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System 下的 DSCAutomationHostEnabled 注册表项，以便在初始启动时配置计算机。 DSCAutomationHostEnabled 支持三种模式：
 
-|  DSCAutomationHostEnabled 值  |  说明   |
-|---|---|
-0 | 禁用对启动状态计算机的配置。 |
-1 | 启用对启动状态计算机的配置。 |
-2 | 仅在 DSC 处于挂起或当前状态时，启用对计算机的配置。 这是默认值。 |
+| DSCAutomationHostEnabled 值 |                                              说明                                              |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| 0                              | 禁用对启动状态计算机的配置。                                                           |
+| 1                              | 启用对启动状态计算机的配置。                                                            |
+| 2                              | 仅在 DSC 处于挂起或当前状态时，启用对计算机的配置。 这是默认值。 |
 
 ## <a name="see-also"></a>另请参阅
 

@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 了解 CI/CD 管道中的 DSC 角色
-ms.openlocfilehash: 6df621f45caed3ac8a8b4dd1afa575d413259e0d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 本文介绍了可用于组合 CI/CD 管道中的配置和资源的方法类型。
+ms.openlocfilehash: 8d06b86724eb25e657687e6518c01bb29d984264
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783103"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647037"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>了解 CI/CD 管道中的 DSC 角色
 

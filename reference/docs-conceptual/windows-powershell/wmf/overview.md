@@ -2,12 +2,13 @@
 ms.date: 04/19/2019
 keywords: wmf,powershell,安装程序
 title: Windows Management Framework (WMF)
-ms.openlocfilehash: d581370fd602e03c86aa549eb8b273ff4d01b4e5
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 是 Windows PowerShell 的必备组件。 本文介绍了 WMF 版本的历史记录，并提供有关如何查找和安装 WMF 的信息。
+ms.openlocfilehash: 339b140325befea0b28aa470d4249170937f2c37
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808683"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654033"
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
 
@@ -51,8 +52,8 @@ WMF 安装添加和/或更新了以下功能：
 | Windows Server 2003<br>*不支持* |              |                             |              |              | 是          |
 | Windows XP<br>*不支持*          |              |                             |              | 是          | 是          |
 
-- **内置提供**：指定版本的 WMF 的功能内置于所示的 Windows 客户端或 Windows Server 版本中。
-- **不支持**：Microsoft 不再支持这些产品。 必须升级到受支持的新版本。 有关详细信息，请参阅 [Microsoft 生命周期策略][]页。
+- **内置提供** ：指定版本的 WMF 的功能内置于所示的 Windows 客户端或 Windows Server 版本中。
+- **不支持** ：Microsoft 不再支持这些产品。 必须升级到受支持的新版本。 有关详细信息，请参阅 [Microsoft 生命周期策略][]页。
 
 > [!NOTE]
 > WMF 5.0 的安装程序不再可用或受支持。 它已被 WMF 5.1 取代。

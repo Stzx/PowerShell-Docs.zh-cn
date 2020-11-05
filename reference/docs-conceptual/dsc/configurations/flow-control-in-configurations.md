@@ -2,21 +2,21 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 配置中的条件语句和循环
-ms.openlocfilehash: 86f75be4a3d1c1760dd6269335431e8ab9fd8d09
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍了如何使用条件语句和循环来使配置更加动态。 将条件语句和循环与参数和配置数据结合使用，用户可以在编译配置时更灵活地进行控制。
+ms.openlocfilehash: 7af8a360c17a0842fa2b95d1d1fb288323c327ef
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736890"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658470"
 ---
 # <a name="conditional-statements-and-loops-in-a-configuration"></a>配置中的条件语句和循环
 
 可以使用 PowerShell 流控制关键字使[配置](configurations.md)更加动态。 本文介绍了如何使用条件语句和循环来使 `Configuration` 更加动态。 将条件语句和循环与[参数](add-parameters-to-a-configuration.md)和[配置数据](configData.md)结合使用，用户可以在编译 `Configuration` 时更灵活地进行控制。
 
-就像函数或脚本块一样，可以在 `Configuration` 中使用任何 PowerShell 语言。
-只有在调用 `Configuration` 来编译“`.mof`”文件时才会计算使用的语句。 下面的示例展示了一些场景来演示概念。 条件语句和循环通常与参数和配置数据一起使用。
+就像函数或脚本块一样，可以在 `Configuration` 中使用任何 PowerShell 语言。 只有在调用 `Configuration` 来编译“`.mof`”文件时才会计算使用的语句。 下面的示例展示了一些场景来演示概念。 条件语句和循环通常与参数和配置数据一起使用。
 
-在这个简单示例中，Service  资源块在编译时检索服务的当前状态，以生成维护其当前状态的“`.mof`”文件。
+在这个简单示例中，Service 资源块在编译时检索服务的当前状态，以生成维护其当前状态的“`.mof`”文件。
 
 > [!NOTE]
 > 使用动态资源块将抢占 Intellisense 的效率。 在编译 `Configuration` 之前，PowerShell 解析器无法确定指定的值是否可接受。
@@ -92,7 +92,7 @@ Configuration ServiceState
 Mention Get-DSCConfigurationFromSystem
 -->
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 总之，可以在 `Configuration` 中使用任何 PowerShell 语言功能。
 
@@ -104,7 +104,7 @@ Mention Get-DSCConfigurationFromSystem
 - 远程处理
 - WMI 和 CIM
 - ActiveDirectory 对象
-- 更多...
+- 等等...
 
 在 `Configuration` 中定义的任何 PowerShell 代码都将在编译时计算，但也可以将代码置于包含 `Configuration` 的脚本中。 导入 `Configuration` 时，将执行 `Configuration` 块之外的任何代码。
 

@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,安装程序
 title: Desired State Configuration (DSC) 已知问题和限制
-ms.openlocfilehash: a76c5bb336804c5b384e6b6ba6a705c6049ef7fb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Windows PowerShell 5.x 中的 DSC 已知问题和限制
+ms.openlocfilehash: 1163ed9e130430f6bbca98405a8993bb054dd1a8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808693"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662053"
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Desired State Configuration (DSC) 已知问题和限制
 
@@ -44,15 +44,15 @@ mofcomp $env:windir\system32\wbem\DscCoreConfProv.mof
 
 ## <a name="lcm-can-go-into-an-unstable-state-while-using-get-dscconfiguration-in-debugmode"></a>在 DebugMode 中使用 Get-DscConfiguration 时，LCM 可能进入不稳定状态
 
-如果 LCM 处于 DebugMode，按 Ctrl+C 来停止 `Get-DscConfiguration` 处理可能导致 LCM 进入不稳定状态，从而导致大部分 DSC cmdlet 失效。
+如果 LCM 处于 DebugMode，按 CTRL+C 来停止 `Get-DscConfiguration` 处理可能导致 LCM 进入不稳定状态，从而导致大部分 DSC cmdlet 失效。
 
-**解决方法：** 调试 `Get-DscConfiguration` cmdlet 时，不要按 Ctrl+C。
+**解决方法：** 调试 `Get-DscConfiguration` cmdlet 时，不要按 CTRL+C。
 
 ## <a name="stop-dscconfiguration-may-not-respond-in-debugmode"></a>在 DebugMode 中，Stop-DscConfiguration 可能不响应
 
 如果 LCM 处于 DebugMode，则试图停止由 `Get-DscConfiguration` 启动的操作时，`Stop-DscConfiguration` 可能不响应
 
-**解决方法：** 按[调试 DSC 资源](/powershell/scripting/dsc/troubleshooting/debugResource)中所述完成由 `Get-DscConfiguration` 所启动操作的调试。
+**解决方法：** 按 [调试 DSC 资源](/powershell/scripting/dsc/troubleshooting/debugResource)中所述完成由 `Get-DscConfiguration` 所启动操作的调试。
 
 ## <a name="no-verbose-error-messages-are-shown-in-debugmode"></a>DebugMode 中不显示详细错误消息
 

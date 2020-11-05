@@ -2,26 +2,27 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 编写 DSC 配置的帮助
-ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 可在 DSC 配置中使用基于注释的帮助。 用户可以使用 `-?` 参数调用配置或使用 Get-Help cmdlet 来访问帮助内容。
+ms.openlocfilehash: 01c4f43253f4d4d8421ea3e0dfca797776acd426
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954134"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658631"
 ---
 # <a name="writing-help-for-dsc-configurations"></a>编写 DSC 配置的帮助
 
->适用于：Windows PowerShell 5.0
+> 适用于：Windows PowerShell 5.0
 
-可在 DSC 配置中使用基于注释的帮助。 若要访问帮助内容，用户可以使用 `-?` 调用配置或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。 将基于注释的帮助直接置于 `Configuration` 关键字上方。
-可以将参数帮助置于注释块的同一行中，或直接放置在参数声明上方，或同时放置在两个位置，如下面的示例中所示。
+可在 DSC 配置中使用基于注释的帮助。 若要访问帮助内容，用户可以使用 `-?` 调用配置或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。 将基于注释的帮助直接置于 `Configuration` 关键字上方。 可以将参数帮助置于注释块的同一行中，或直接放置在参数声明上方，或同时放置在两个位置，如下面的示例中所示。
 
 若要详细了解基于 PowerShell 注释的帮助内容，请参阅 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)。
 
 > [!NOTE]
-> PowerShell 开发环境（如 VSCode 和 ISE）也具有可用于自动插入注释块模板的代码片段。
+> PowerShell 开发环境（如 VS Code 和 ISE）也具有可用于自动插入注释块模板的代码片段。
 
-下面的示例演示了一个脚本，它包含一个配置以及有关该配置的基于注释的帮助。 此示例显示带有参数的配置。 若要了解有关在配置中使用参数的详细信息，请参阅[将参数添加到配置中](add-parameters-to-a-configuration.md)。
+下面的示例演示了一个脚本，它包含一个配置以及有关该配置的基于注释的帮助。
+此示例显示带有参数的配置。 若要了解有关在配置中使用参数的详细信息，请参阅[将参数添加到配置中](add-parameters-to-a-configuration.md)。
 
 ```powershell
 <#
@@ -30,26 +31,32 @@ A brief description of the function or script. This keyword can be used only onc
 
 
 .DESCRIPTION
-A detailed description of the function or script. This keyword can be used only once for each configuration.
-
+A detailed description of the function or script. This keyword can be used only once for each
+configuration.
 
 .PARAMETER ComputerName
-The description of a parameter. Add a .PARAMETER keyword for each parameter in the function or script syntax.
+The description of a parameter. Add a .PARAMETER keyword for each parameter in the function or
+script syntax.
 
-Type the parameter name on the same line as the .PARAMETER keyword. Type the parameter description on the lines following the .PARAMETER keyword.
-Windows PowerShell interprets all text between the .PARAMETER line and the next keyword or the end of the comment block as part of the parameter description.
-The description can include paragraph breaks.
+Type the parameter name on the same line as the .PARAMETER keyword. Type the parameter description
+on the lines following the .PARAMETER keyword. Windows PowerShell interprets all text between the
+.PARAMETER line and the next keyword or the end of the comment block as part of the parameter
+description. The description can include paragraph breaks.
 
-The Parameter keywords can appear in any order in the comment block, but the function or script syntax determines the order in which the parameters
-(and their descriptions) appear in help topic. To change the order, change the syntax.
+The Parameter keywords can appear in any order in the comment block, but the function or script
+syntax determines the order in which the parameters (and their descriptions) appear in help topic.
+To change the order, change the syntax.
 
 .EXAMPLE
 HelpSample -ComputerName localhost
 
-A sample command that uses the function or script, optionally followed by sample output and a description. Repeat this keyword for each example.
-PowerShell automatically prefaces the first line with a PowerShell prompt. Additional lines are treated as output and description. The example can contain spaces, newlines and PowerShell code.
+A sample command that uses the function or script, optionally followed by sample output and a
+description. Repeat this keyword for each example. PowerShell automatically prefaces the first line
+with a PowerShell prompt. Additional lines are treated as output and description. The example can
+contain spaces, newlines and PowerShell code.
 
 If you have multiple examples, there is no need to number them. PowerShell will number the examples in help text.
+
 .EXAMPLE
 HelpSample -FilePath "C:\output.txt"
 
@@ -83,7 +90,7 @@ configuration HelpSample1
 Get-Help HelpSample1 -Detailed
 ```
 
-```output
+```Output
 NAME
     HelpSample1
 
@@ -92,7 +99,9 @@ SYNOPSIS
 
 
 SYNTAX
-    HelpSample1 [[-InstanceName] <String>] [[-DependsOn] <String[]>] [[-PsDscRunAsCredential] <PSCredential>] [[-OutputPath] <String>] [[-ConfigurationData] <Hashtable>] [[-ComputerName] <String>] [[-FilePath] <String>] [<CommonParameters>]
+    HelpSample1 [[-InstanceName] <String>] [[-DependsOn] <String[]>] [[-PsDscRunAsCredential] <PSCredential>]
+      [[-OutputPath] <String>] [[-ConfigurationData] <Hashtable>] [[-ComputerName] <String>] [[-FilePath] <String>]
+      [<CommonParameters>]
 
 
 DESCRIPTION
@@ -111,14 +120,17 @@ PARAMETERS
     -ConfigurationData <Hashtable>
 
     -ComputerName <String>
-        The description of a parameter. Add a .PARAMETER keyword for each parameter in the function or script syntax.
+        The description of a parameter. Add a .PARAMETER keyword for each parameter in the function
+        or script syntax.
 
-        Type the parameter name on the same line as the .PARAMETER keyword. Type the parameter description on the lines following the .PARAMETER keyword.
-        Windows PowerShell interprets all text between the .PARAMETER line and the next keyword or the end of the comment block as part of the parameter description.
-        The description can include paragraph breaks.
+        Type the parameter name on the same line as the .PARAMETER keyword. Type the parameter
+        description on the lines following the .PARAMETER keyword. Windows PowerShell interprets all
+        text between the .PARAMETER line and the next keyword or the end of the comment block as
+        part of the parameter description. The description can include paragraph breaks.
 
-        The Parameter keywords can appear in any order in the comment block, but the function or script syntax determines the order in which the parameters
-        (and their descriptions) appear in help topic. To change the order, change the syntax.
+        The Parameter keywords can appear in any order in the comment block, but the function or
+        script syntax determines the order in which the parameters (and their descriptions) appear
+        in help topic. To change the order, change the syntax.
 
     -FilePath <String>
         Provide a PARAMETER section for each parameter that your script or function accepts.
@@ -133,12 +145,13 @@ PARAMETERS
 
     PS C:\>HelpSample -ComputerName localhost
 
-    A sample command that uses the function or script, optionally followed by sample output and a description. Repeat this keyword for each example.
-    PowerShell automatically prefaces the first line with a PowerShell prompt. Additional lines are treated as output and description. The example can contain spaces, newlines and PowerShell code.
+    A sample command that uses the function or script, optionally followed by sample output and a
+    description. Repeat this keyword for each example. PowerShell automatically prefaces the first
+    line with a PowerShell prompt. Additional lines are treated as output and description. The
+    example can contain spaces, newlines and PowerShell code.
 
-    If you have multiple examples, there is no need to number them. PowerShell will number the examples in help text.
-
-
+    If you have multiple examples, there is no need to number them. PowerShell will number the
+    examples in help text.
 
 
     -------------------------- EXAMPLE 2 --------------------------
@@ -146,8 +159,6 @@ PARAMETERS
     PS C:\>HelpSample -FilePath "C:\output.txt"
 
     This example will be labeled "EXAMPLE 2" when help is displayed to the user.
-
-
 
 
 REMARKS

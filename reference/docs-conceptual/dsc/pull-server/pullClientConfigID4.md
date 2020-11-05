@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 在 PowerShell 4.0 中使用配置 ID 设置拉取客户端
-ms.openlocfilehash: 9259c624c8725f7d76f61e9ad7caa42e1bfa308c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍了如何在 PowerShell 4.0 中使用配置 ID 设置拉取客户端
+ms.openlocfilehash: 2a3d7b79f29030620cddc2b2131cb4432e41e4eb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955144"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92649006"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>在 PowerShell 4.0 中使用配置 ID 设置拉取客户端
 

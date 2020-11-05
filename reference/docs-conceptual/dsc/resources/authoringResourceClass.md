@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: 使用 PowerShell 类编写自定义 DSC 资源
-ms.openlocfilehash: b7f6d3135cb1da7ade106f8a4cc41e3afb7306af
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 本文演示了如何创建简单的资源来管理指定路径中的文件。
+ms.openlocfilehash: 72a828795c29e10ff66f164b8871b0fea7a1e0a8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217553"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667311"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>使用 PowerShell 类编写自定义 DSC 资源
 
@@ -17,7 +18,7 @@ ms.locfileid: "86217553"
 
 在基于类的 DSC 资源中，架构被定义为类的属性，可通过特性对其进行修改来指定属性类型。 资源通过 `Get()` 、`Set()` 和 `Test()` 的方法得到实现（相当于脚本资源中的 `Get-TargetResource`、`Set-TargetResource` 和 `Test-TargetResource` 函数）。
 
-在本主题中，我们将创建一个名为 **FileResource** 的简单资源来管理指定路径中的文件。
+在本文中，我们将创建一个名为 FileResource 的简单资源来管理指定路径中的文件。
 
 有关 DSC 资源的详细信息，请参阅[构建自定义 Windows PowerShell Desired State Configuration 资源](authoringResource.md)。
 

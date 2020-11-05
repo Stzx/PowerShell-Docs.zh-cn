@@ -2,19 +2,19 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: 使用资源设计器工具
-ms.openlocfilehash: 04fd2fbcc5afd9f1c7cbfaa44d6bdfde93bca399
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 资源设计器工具是一组由 xDscResourceDesigner 模块公开的 cmdlet，它使 PowerShell DSC 的创建更加轻松简单。
+ms.openlocfilehash: efe36d045ac3fba3823cb1f812bb5761d238fdf1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217485"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656492"
 ---
 # <a name="using-the-resource-designer-tool"></a>使用资源设计器工具
 
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
-资源设计器工具是一组由 **xDscResourceDesigner** 模块公开的 cmdlet，它使 Windows PowerShell Desired State Configuration (DSC) 的创建更加轻松简单。 此资源中的 cmdlet 能帮助你创建新资源的 MOF 架构、脚本模块和目录结构。 有关 DSC 资源的详细信息，请参阅[构建自定义 Windows PowerShell Desired State Configuration 资源](authoringResource.md)。
-在本主题中，我们将创建一个管理 Active Directory 用户的 DSC 资源。 使用 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet 安装 **xDscResourceDesigner** 模块。
+资源设计器工具是一组由 **xDscResourceDesigner** 模块公开的 cmdlet，它使 Windows PowerShell Desired State Configuration (DSC) 的创建更加轻松简单。 此资源中的 cmdlet 能帮助你创建新资源的 MOF 架构、脚本模块和目录结构。 有关 DSC 资源的详细信息，请参阅[构建自定义 Windows PowerShell Desired State Configuration 资源](authoringResource.md)。 在本文中，我们将创建一个管理 Active Directory 用户的 DSC 资源。 使用 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet 安装 **xDscResourceDesigner** 模块。
 
 ## <a name="creating-resource-properties"></a>创建资源属性
 
@@ -22,10 +22,10 @@ ms.locfileid: "86217485"
 
 参数名称  说明
 
-- **UserName**：唯一标识用户的键属性。
-- **Ensure**：指定用户帐户应该为 Present 还是 Absent。 此参数只有两个可能的值。
-- **DomainCredential**：用户的域密码。
-- **Password**：允许必要时配置对用户密码进行更改所需的用户密码。
+- **UserName** ：唯一标识用户的键属性。
+- **Ensure** ：指定用户帐户应该为 Present 还是 Absent。 此参数只有两个可能的值。
+- **DomainCredential** ：用户的域密码。
+- **Password** ：允许必要时配置对用户密码进行更改所需的用户密码。
 
 若要创建属性，可使用 `New-xDscResourceProperty` cmdlet。 下面的 PowerShell 命令可以创建上述属性。
 

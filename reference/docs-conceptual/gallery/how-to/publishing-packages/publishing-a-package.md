@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: 库,powershell,cmdlet,psgallery
 title: 创建和发布项
-ms.openlocfilehash: 1aa9cc84f259869ca6f8b8e2f6952e43eaac14df
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍了有关如何准备脚本或模块，并将其发布到 PowerShell 库的机制和重要步骤
+ms.openlocfilehash: be846799aff71d38bdd0c98b3f43eaee5aef7798
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71327918"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662508"
 ---
 # <a name="creating-and-publishing-an-item"></a>创建和发布项
 
@@ -67,7 +66,8 @@ PowerShell 库项的作者和所有者是相关概念，并非总是一致。 �
 
 [PowerShell 脚本分析器](https://www.powershellgallery.com/packages/PSScriptAnalyzer/)是一款静态代码分析工具，可用于扫描代码，以确保其符合基本的 PowerShell 编码准则。 此工具可发现代码存在的常见和严重问题，应在开发过程中定期运行，这样有助于确保项可供发布。 PowerShell 脚本分析器会列出标识为“错误”、“警告”和“信息”的问题。 必须先修复所有错误，然后才能将项发布到 PowerShell 库中。 如果是警告，则需要查看，并且大多数都应予以解决。 每当在 PowerShell 库中发布或更新项时，都会运行 PowerShell 脚本分析器。 库运营团队会联系项所有者来修复已发现的错误。
 
-如果 PowerShell 库基础结构无法读取项中的清单信息，将无法发布此项。 [Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest) 可捕获导致已安装的模块不可用的常见问题。 必须先对每个模块运行此命令，然后才能将其发布到 PowerShell 库中。
+如果 PowerShell 库基础结构无法读取项中的清单信息，将无法发布此项。
+[Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest) 可捕获导致已安装的模块不可用的常见问题。 必须先对每个模块运行此命令，然后才能将其发布到 PowerShell 库中。
 
 同样，[Test-ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo) 可用于验证脚本中的元数据。必须先对与模块分开发布的每个脚本运行此命令，然后才能将其发布到 PowerShell 库中。
 
@@ -94,4 +94,3 @@ PowerShell 库项的作者和所有者是相关概念，并非总是一致。 �
 将项发布到 PowerShell 库后，需要检查是否有项反馈。
 
 - 请务必监视与发布帐户相关联的电子邮件地址。 用户和 PowerShell 库运营团队会通过此帐户提供反馈，包括通过 PSSA 或防病毒扫描发现的问题。 如果电子邮件帐户无效，或将严重问题报告给此帐户后很长时间都未得到解决，可以将项视为已放弃，并将从 PowerShell 库中删除项，如我们的[使用条款](https://www.powershellgallery.com/policies/Terms)所述。
-- 建议订阅已发布的每个 PowerShell 库项的评论。 这样，如果有人在 PowerShell 库中对你的项发表评论，可以收到通知。 可以根据需要进行订阅，因为这需要创建 LiveFyre 帐户。

@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 配置本地配置管理器
-ms.openlocfilehash: b4766157bca72a7c2bb385ab2255c9780846830a
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
+description: 本地配置管理器 (LCM) 是 DSC 的引擎，负责分析和应用发送到节点的配置。
+ms.openlocfilehash: bb904397e40e8aed0853c463b4cf20c63e53170f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837556"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647051"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>配置本地配置管理器
 
@@ -45,14 +46,14 @@ configuration LCMConfig
 
 将设置应用于 LCM 的过程与应用 DSC 配置的过程类似。 创建 LCM 配置、将其编译为 MOF 文件，然后应用于节点。 与 DSC 配置不同的是，不通过调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet 来执行 LCM 配置。 而是通过调用 [Set-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager)，将路径作为参数提供给 LCM 配置 MOF。 执行 LCM 配置后，可以通过调用 [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) cmdlet 查看 LCM 的属性。
 
-LCM 配置只能包含有限组资源的块。 在上面的示例中，调用的唯一资源名为 **Settings**。 其他可用资源有：
+LCM 配置只能包含有限组资源的块。 在上面的示例中，调用的唯一资源名为 **Settings** 。 其他可用资源有：
 
-- **ConfigurationRepositoryWeb**：指定用于配置的 HTTP 请求服务。
-- **ConfigurationRepositoryShare**：指定用于配置的 SMB 共享。
-- **ResourceRepositoryWeb**：指定用于模块的 HTTP 请求服务。
-- **ResourceRepositoryShare**：指定用于模块的 SMB 共享。
-- **ReportServerWeb**：指定将报告发送到的 HTTP 请求服务。
-- **PartialConfiguration**：提供数据以启用部分配置。
+- **ConfigurationRepositoryWeb** ：指定用于配置的 HTTP 请求服务。
+- **ConfigurationRepositoryShare** ：指定用于配置的 SMB 共享。
+- **ResourceRepositoryWeb** ：指定用于模块的 HTTP 请求服务。
+- **ResourceRepositoryShare** ：指定用于模块的 SMB 共享。
+- **ReportServerWeb** ：指定将报告发送到的 HTTP 请求服务。
+- **PartialConfiguration** ：提供数据以启用部分配置。
 
 ## <a name="basic-settings"></a>基本设置
 
@@ -60,16 +61,16 @@ LCM 配置只能包含有限组资源的块。 在上面的示例中，调用的
 
 |  properties  |  类型  |  说明   |
 |----------- |------- |--------------- |
-| ActionAfterReboot| 字符串| 指定在应用配置期间重启后进行什么操作。 可取值为 __ContinueConfiguration__ 和 __StopConfiguration__。 <ul><li> __ContinueConfiguration__：在计算机重新启动后继续应用当前配置。 此为默认值。</li><li>__StopConfiguration__：在计算机重新启动后停止当前配置。</li></ul>|
-| AllowModuleOverwrite| bool| 若允许从请求服务下载的新配置覆盖目标节点上的旧配置，则为 __$TRUE__。 否则为 $FALSE。|
+| ActionAfterReboot| 字符串| 指定在应用配置期间重启后进行什么操作。 可取值为 __ContinueConfiguration__ 和 __StopConfiguration__ 。 <ul><li> __ContinueConfiguration__ ：在计算机重新启动后继续应用当前配置。 此为默认值。</li><li>__StopConfiguration__ ：在计算机重新启动后停止当前配置。</li></ul>|
+| AllowModuleOverwrite| bool| 若允许从请求服务下载的新配置覆盖目标节点上的旧配置，则为 __$TRUE__ 。 否则为 $FALSE。|
 | CertificateID| 字符串| 用于保护在配置中传递的凭据的证书指纹。 更多详细信息，请参阅 [Want to secure credentials in Windows PowerShell Desired State Configuration?（希望在 Windows PowerShell Desired State Configuration 中保护凭据？）](https://devblogs.microsoft.com/powershell/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/)。 <br> __注意：__ 如果使用 Azure 自动化 DSC 请求服务，则会自动进行管理。|
 | ConfigurationDownloadManagers| CimInstance[]| 已过时。 使用 __ConfigurationRepositoryWeb__ 和 __ConfigurationRepositoryShare__ 块定义配置请求服务终结点。|
 | ConfigurationID| 字符串| 用于向后兼容早期版本的请求服务。 用于标识要从请求服务获取的配置文件的 GUID。 如果配置 MOF 名为 ConfigurationID.mof，那么节点将在请求服务上请求配置。<br> __注意：__ 如果设置此属性，将无法使用 RegistrationKey 将节点注册到请求服务  。 有关详细信息，请参阅[使用配置名称设置请求客户端](../pull-server/pullClientConfigNames.md)。|
-| ConfigurationMode| 字符串 | 指定 LCM 实际如何将配置应用到目标节点。 可能的值为 __ApplyOnly__、__ApplyAndMonitor__ 和 __ApplyAndAutoCorrect__。 <ul><li>__ApplyOnly__：DSC 将应用配置，但若未向目标节点推送新配置或从服务请求新配置，则它不会执行任何进一步操作。 首次应用新配置后，DSC 将不检查以前配置状态的偏离。 请注意，__ApplyOnly__ 生效前，DSC 将尝试应用配置，直到成功为止。 </li><li> __ApplyAndMonitor__：这是默认值。 LCM 将应用任意新配置。 首次应用新配置后，如果目标节点偏离所需状态，DSC 将在日志中报告差异。 请注意，__ApplyAndMonitor__ 生效前，DSC 将尝试应用配置，直到成功为止。</li><li>__ApplyAndAutoCorrect__：DSC 将应用任何新配置。 首次应用新配置后，如果目标节点偏离适当状态，则 DSC 将在日志中报告差异然后重新应用当前配置。</li></ul>|
+| ConfigurationMode| 字符串 | 指定 LCM 实际如何将配置应用到目标节点。 可能的值为 __ApplyOnly__ 、 __ApplyAndMonitor__ 和 __ApplyAndAutoCorrect__ 。 <ul><li>__ApplyOnly__ ：DSC 将应用配置，但若未向目标节点推送新配置或从服务请求新配置，则它不会执行任何进一步操作。 首次应用新配置后，DSC 将不检查以前配置状态的偏离。 请注意， __ApplyOnly__ 生效前，DSC 将尝试应用配置，直到成功为止。 </li><li> __ApplyAndMonitor__ ：这是默认值。 LCM 将应用任意新配置。 首次应用新配置后，如果目标节点偏离所需状态，DSC 将在日志中报告差异。 请注意， __ApplyAndMonitor__ 生效前，DSC 将尝试应用配置，直到成功为止。</li><li>__ApplyAndAutoCorrect__ ：DSC 将应用任何新配置。 首次应用新配置后，如果目标节点偏离适当状态，则 DSC 将在日志中报告差异然后重新应用当前配置。</li></ul>|
 | ConfigurationModeFrequencyMins| UInt32| 检查和应用当前配置的时间间隔（以分钟为单位）。 如果将 ConfigurationMode 属性设置为 ApplyOnly，则将忽略此属性。 默认值为 15。|
-| DebugMode| 字符串| 可取值为 __None__、__ForceModuleImport__ 和 __All__。 <ul><li>设置为 __None__ 可以使用缓存的资源。 这是默认值，应在生产方案中使用。</li><li>设置为 __ForceModuleImport__ 会导致 LCM 重载所有 DSC 资源模块，即使这些模块之前已被加载并缓存，也是如此。 这会影响 DSC 操作的性能，因为将在使用时重新加载每个模块。 通常在调试资源时使用此值</li><li>在此版本中，__All__ 等同于 __ForceModuleImport__</li></ul> |
+| DebugMode| 字符串| 可取值为 __None__ 、 __ForceModuleImport__ 和 __All__ 。 <ul><li>设置为 __None__ 可以使用缓存的资源。 这是默认值，应在生产方案中使用。</li><li>设置为 __ForceModuleImport__ 会导致 LCM 重载所有 DSC 资源模块，即使这些模块之前已被加载并缓存，也是如此。 这会影响 DSC 操作的性能，因为将在使用时重新加载每个模块。 通常在调试资源时使用此值</li><li>在此版本中， __All__ 等同于 __ForceModuleImport__</li></ul> |
 | RebootNodeIfNeeded| bool| 将此设置为 `$true` 可使资源使用 `$global:DSCMachineStatus` 标志重新启动节点。 否则，你必须为要求重启的配置手动重启节点。 默认值是 `$false`。 若要在通过 DSC 以外的其他配置（例如 Windows Installer）执行重启条件时使用此设置，请将此设置和 [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) 模块中的 __PendingReboot__ 资源组合使用。|
-| RefreshMode| 字符串| 指定 LCM 如何获取配置。 可取值为 __Disabled__、__Push__ 和 __Pull__。 <ul><li>__Disabled__：DSC 配置对该节点禁用。</li><li> __Push__：通过调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet 启动配置。 将配置立即应用到节点。 这是默认值。</li><li>__Pull：__ 将节点配置为从请求服务或 SMB 路径定期检查配置。 如果此属性被设置为 __Pull__，则必须在 __ConfigurationRepositoryWeb__ 或 __ConfigurationRepositoryShare__ 块中指定 HTTP（服务）或 SMB（共享）路径。</li></ul>|
+| RefreshMode| 字符串| 指定 LCM 如何获取配置。 可取值为 __Disabled__ 、 __Push__ 和 __Pull__ 。 <ul><li>__Disabled__ ：DSC 配置对该节点禁用。</li><li> __Push__ ：通过调用 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet 启动配置。 将配置立即应用到节点。 这是默认值。</li><li>__Pull：__ 将节点配置为从请求服务或 SMB 路径定期检查配置。 如果此属性被设置为 __Pull__ ，则必须在 __ConfigurationRepositoryWeb__ 或 __ConfigurationRepositoryShare__ 块中指定 HTTP（服务）或 SMB（共享）路径。</li></ul>|
 | RefreshFrequencyMins| Uint32| LCM 按此时间间隔（以分钟为单位）检查请求服务以获取更新的配置。 如果 LCM 未配置为请求模式，则将忽略此值。 默认值为 30。|
 | ReportManagers| CimInstance[]| 已过时。 使用 __ReportServerWeb__ 块定义终结点，以将报告数据发送到请求服务。|
 | ResourceModuleManagers| CimInstance[]| 已过时。 使用 __ResourceRepositoryWeb__ 和 __ResourceRepositoryShare__ 块分别定义请求服务 HTTP 终结点和 SMB 路径。|
@@ -88,9 +89,9 @@ LCM 配置只能包含有限组资源的块。 在上面的示例中，调用的
 
 LCM 配置支持定义以下类型的请求服务终结点：
 
-- **配置服务器**：DSC 配置的存储库。 使用 **ConfigurationRepositoryWeb**（对于基于 Web 的服务器）和 **ConfigurationRepositoryShare**（对于基于 SMB 的服务器）块定义配置服务器。
-- **资源服务器**：打包为 PowerShell 模块的 DSC 资源存储库。 使用 **ResourceRepositoryWeb**（对于基于 Web 的服务器）和 **ResourceRepositoryShare**（对于基于 SMB 的服务器）块定义资源服务器。
-- **报表服务器**：DSC 将报表数据发送到的服务。 使用 **ReportServerWeb** 块定义报表服务器。 报表服务器必须是 Web 服务。
+- **配置服务器** ：DSC 配置的存储库。 使用 **ConfigurationRepositoryWeb** （对于基于 Web 的服务器）和 **ConfigurationRepositoryShare** （对于基于 SMB 的服务器）块定义配置服务器。
+- **资源服务器** ：打包为 PowerShell 模块的 DSC 资源存储库。 使用 **ResourceRepositoryWeb** （对于基于 Web 的服务器）和 **ResourceRepositoryShare** （对于基于 SMB 的服务器）块定义资源服务器。
+- **报表服务器** ：DSC 将报表数据发送到的服务。 使用 **ReportServerWeb** 块定义报表服务器。 报表服务器必须是 Web 服务。
 
 有关请求服务的更多详细信息，请参阅 [Desired State Configuration 请求服务](../pull-server/pullServer.md)。
 
@@ -176,7 +177,7 @@ LCM 配置支持定义以下类型的请求服务终结点：
 |DependsOn|string{}|应用此部分配置之前必须完成的其他配置名称的列表。|
 |说明|字符串|用于描述部分配置的文本。|
 |ExclusiveResources|string[]|此部分配置专用的资源数组。|
-|RefreshMode|字符串|指定 LCM 如何获取此部分配置。 可取值为 __Disabled__、__Push__ 和 __Pull__。 <ul><li>__Disabled__：禁用此部分配置。</li><li> __Push__：通过调用 [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration) cmdlet 将部分配置推送到节点。 从服务推送或请求该节点的所有部分配置后，可以通过调用 `Start-DscConfiguration –UseExisting` 来启动配置。 这是默认值。</li><li>__Pull：__ 将节点配置为从拉取服务定期检查部分配置。 如果将此属性设置为 __Pull__，则必须在 __ConfigurationSource__ 属性中指定请求服务。 有关 Azure 自动化请求服务的详细信息，请参阅 [Azure 自动化 DSC 概述](/azure/automation/automation-dsc-overview)。</li></ul>|
+|RefreshMode|字符串|指定 LCM 如何获取此部分配置。 可取值为 __Disabled__ 、 __Push__ 和 __Pull__ 。 <ul><li>__Disabled__ ：禁用此部分配置。</li><li> __Push__ ：通过调用 [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration) cmdlet 将部分配置推送到节点。 从服务推送或请求该节点的所有部分配置后，可以通过调用 `Start-DscConfiguration –UseExisting` 来启动配置。 这是默认值。</li><li>__Pull：__ 将节点配置为从拉取服务定期检查部分配置。 如果将此属性设置为 __Pull__ ，则必须在 __ConfigurationSource__ 属性中指定请求服务。 有关 Azure 自动化请求服务的详细信息，请参阅 [Azure 自动化 DSC 概述](/azure/automation/automation-dsc-overview)。</li></ul>|
 |ResourceModuleSource|string[]|可从中下载此部分配置所需资源的资源服务器的名称数组。 这些名称必须表示之前在 ResourceRepositoryWeb  和 ResourceRepositoryShare  块中定义的服务终结点。|
 
 > [!NOTE]

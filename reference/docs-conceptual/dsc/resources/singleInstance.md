@@ -2,17 +2,18 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: 编写单实例 DSC 资源（最佳做法）
-ms.openlocfilehash: cd6048c0f8aeef7fb5458a5f0bfefef25169297c
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 本文介绍了在配置中定义仅允许单个实例的 DSC 资源的最佳做法。
+ms.openlocfilehash: 4744136b5a733c86b517b239b2c37ce57a4246f7
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217604"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662641"
 ---
 # <a name="writing-a-single-instance-dsc-resource-best-practice"></a>编写单实例 DSC 资源（最佳做法）
 
 > [!NOTE]
-> 本主题介绍了在配置中定义仅允许单个配置实例的 DSC 资源的最佳做法。 目前还没有用于实现此操作的内置 DSC 功能。 将来可能会发生改变。
+> 本文介绍了在配置中定义仅允许单个实例的 DSC 资源的最佳做法。 目前还没有用于实现此操作的内置 DSC 功能。 将来可能会发生改变。
 
 在一些情况下，你不希望允许在配置中多次使用某一资源。 例如，在 [xTimeZone](https://github.com/PowerShell/xTimeZone) 资源的早期实现中，配置可以多次调用资源，在每个资源块中将时区设置为不同的设置：
 
@@ -47,9 +48,9 @@ Configuration SetTimeZone
 }
 ```
 
-这是由 DSC 资源键的作用方式导致的。 一个资源必须具有至少一个键属性。 如果资源实例的所有键属性的值组合是唯一的，那么该实例也被视为是唯一的。 在其早期实现中，[xTimeZone](https://github.com/PowerShell/xTimeZone) 资源仅有一个属性（即 **TimeZone**），该属性必须是一个键。 因此，如上所示的配置可以编译和运行，而不会发出警告。 每个 **xTimeZone** 资源块都被视为是唯一的。 这将导致配置重复应用于该节点，反复循环时区。
+这是由 DSC 资源键的作用方式导致的。 一个资源必须具有至少一个键属性。 如果资源实例的所有键属性的值组合是唯一的，那么该实例也被视为是唯一的。 在其早期实现中， [xTimeZone](https://github.com/PowerShell/xTimeZone) 资源仅有一个属性（即 **TimeZone** ），该属性必须是一个键。 因此，如上所示的配置可以编译和运行，而不会发出警告。 每个 **xTimeZone** 资源块都被视为是唯一的。 这将导致配置重复应用于该节点，反复循环时区。
 
-为确保配置只能为目标节点设置一次时区，已更新资源以添加另一属性，即 **IsSingleInstance**，该属性已成为键属性。 已使用 **ValueMap** 将 **IsSingleInstance** 限制为单个值，即“Yes”。 该资源的旧 MOF 架构为：
+为确保配置只能为目标节点设置一次时区，已更新资源以添加另一属性，即 **IsSingleInstance** ，该属性已成为键属性。 已使用 **ValueMap** 将 **IsSingleInstance** 限制为单个值，即“Yes”。 该资源的旧 MOF 架构为：
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -202,7 +203,7 @@ Function Set-TimeZone {
 Export-ModuleMember -Function *-TargetResource
 ```
 
-请注意，**TimeZone** 属性不再是一个键。 现在，如果配置（通过使用两个具有不同 **TimeZone** 值的 **xTimeZone** 块）尝试设置时区两次，尝试编译配置将会导致错误生成：
+请注意， **TimeZone** 属性不再是一个键。 现在，如果配置（通过使用两个具有不同 **TimeZone** 值的 **xTimeZone** 块）尝试设置时区两次，尝试编译配置将会导致错误生成：
 
 ```Output
 Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and

@@ -1,17 +1,17 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell,cmdlet
 title: ISEAddOnTool 对象
-ms.openlocfilehash: a5357005ec1a883f5a14882a42e3150e09ff33a2
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: ISEAddonTool 对象表示已安装的可提供 Windows PowerShell ISE 附加功能的附加设备工具。
+ms.openlocfilehash: cc2d50881b7d0033e08de9af5d4cc9e1a9aa55db
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809723"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667124"
 ---
 # <a name="the-iseaddontool-object"></a>ISEAddOnTool 对象
 
-**ISEAddonTool** 对象表示已安装的可提供 Windows PowerShell ISE 附加功能的附加设备工具。 例如，“**命令**”工具，你可以通过单击“**查看**”，然后单击“**显示命令附加设备**”进行显示。 然后，你可以通过操作各种可用 **ISEAddOnTool** 对象来访问此工具。
+ISEAddonTool 对象表示已安装的可提供 Windows PowerShell ISE 附加功能的附加设备工具。 例如，“ **命令** ”工具，你可以通过单击“ **查看** ”，然后单击“ **显示命令附加设备** ”进行显示。 然后，你可以通过操作各种可用 **ISEAddOnTool** 对象来访问此工具。
 
 每个附加设备工具可以与垂直窗格或水平窗格相关联。 垂直窗格停靠在 Windows PowerShell ISE 的右边缘。 水平窗格停靠在底部边缘。
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 09/11/2018
-contributor: JKeithB
-keywords: 库, powershell, psgallery
 title: 手动包下载
-ms.openlocfilehash: 3e29437c4e35e47ab2028a7eea9f408daf1a59e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 介绍如何手动下载 PowerShell 库中的包。
+ms.openlocfilehash: 50cd51d970bf21f8e957e60ceed2e98f306b57ab
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782848"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662283"
 ---
 # <a name="manual-package-download"></a>手动包下载
 
@@ -47,10 +46,10 @@ NuGet 包文件包含以下特定于 NuGet  的元素，这些元素不是原始
 步骤如下：
 
 1. 取消阻止 Internet 下载的 NuGet 包 (`.nupkg`) 文件，例如使用 `Unblock-File -Path C:\Downloads\module.nupkg` cmdlet。
-2. 将 NuGet 包的内容提取到本地文件夹。
-2. 从文件夹中删除特定于 NuGet 的元素。
-3. 重命名文件夹。 默认文件夹名称通常是 `<name>.<version>`。 若将模块标记为预发布版本，则版本可包含 `-prerelease`。 将文件夹重命名为模块名称。 例如，`azurerm.storage.5.0.4-preview` 重命名为 `azurerm.storage`。
-4. 将文件夹复制到 `$env:PSModulePath value` 中的一个文件夹。 `$env:PSModulePath` 是以分号分隔的一组路径，PowerShell 应在这些路径中查找模块。
+1. 将 NuGet 包的内容提取到本地文件夹。
+1. 从文件夹中删除特定于 NuGet 的元素。
+1. 重命名文件夹。 默认文件夹名称通常是 `<name>.<version>`。 若将模块标记为预发布版本，则版本可包含 `-prerelease`。 将文件夹重命名为模块名称。 例如，`azurerm.storage.5.0.4-preview` 重命名为 `azurerm.storage`。
+1. 将文件夹复制到 `$env:PSModulePath value` 中的一个文件夹。 `$env:PSModulePath` 是以分号分隔的一组路径，PowerShell 应在这些路径中查找模块。
 
 > [!IMPORTANT]
 > 手动下载不包括模块所需的任何依赖项。 若包具有依赖项，则必须在系统上安装它们才能使此模块正常工作。 PowerShell 库显示包所需的所有依赖项。
@@ -65,9 +64,9 @@ NuGet 包文件包含以下特定于 NuGet  的元素，这些元素不是原始
 步骤如下：
 
 1. 取消阻止 Internet 下载的 NuGet 包 (`.nupkg`) 文件，例如使用 `Unblock-File -Path C:\Downloads\package.nupkg` cmdlet。
-2. 提取 NuGet 包的内容。
-2. 文件夹中的 `.PS1` 文件可直接从此位置使用。
-3. 可删除文件夹中特定于 NuGet 的元素。
+1. 提取 NuGet 包的内容。
+1. 文件夹中的 `.PS1` 文件可直接从此位置使用。
+1. 可删除文件夹中特定于 NuGet 的元素。
 
 有关特定于 NuGet 的元素的列表，请参阅[使用手动下载以获取包](#using-manual-download-to-acquire-a-package)。
 

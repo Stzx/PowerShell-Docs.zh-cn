@@ -2,12 +2,13 @@
 ms.date: 10/16/2017
 keywords: dsc,powershell,配置,安装程序
 title: 执行配置
-ms.openlocfilehash: 1437521471d95fd80dc6a6cec62a0b75df4224ec
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 有两种执行 PowerShell DSC 配置的方法 - 推送模式和拉取模式。
+ms.openlocfilehash: 466eb43cd266ceb4ae81cc997a7b338e041f8a15
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783069"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661721"
 ---
 # <a name="enacting-configurations"></a>执行配置
 

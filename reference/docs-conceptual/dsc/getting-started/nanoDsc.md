@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用 Nano Server 上的 DSC
-ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC 是一个可选包，可在为 Windows Nano Server 创建 VHD 时安装。
+ms.openlocfilehash: 18585323359abd85515d4db194dae4adbad7c3d8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953854"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647074"
 ---
 # <a name="using-dsc-on-nano-server"></a>使用 Nano Server 上的 DSC
 
@@ -44,13 +45,13 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
 - [Get-DscConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus)
 - [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource)
-- [Find-DscResource](/powershell/module/powershellget/find-dscresource?view=powershell-6)
+- [Find-DscResource](/powershell/module/powershellget/find-dscresource)
 - [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)
 - [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum)
 
 - 编译配置（请参阅 [DSC 配置](../configurations/configurations.md)）
 
-  **问题：** 在配置编译期间密码加密不起作用（请参阅[保护 MOF 文件](../pull-server/secureMOF.md)）。
+  **问题：** 在配置编译期间密码加密不起作用（请参阅 [保护 MOF 文件](../pull-server/secureMOF.md)）。
 
 - 编译元配置（请参阅[配置本地配置管理器](../managing-nodes/metaConfig.md)）
 
@@ -60,7 +61,7 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 
 - 调试 DSC 资源（见[调试 DSC 资源](../troubleshooting/debugResource.md)）
 
-  **问题：** 在资源使用 PsDscRunAsCredential 时不起作用（请参阅[使用用户凭据运行 DSC](../configurations/runAsUser.md)）
+  **问题：** 在资源使用 PsDscRunAsCredential 时不起作用（请参阅 [使用用户凭据运行 DSC](../configurations/runAsUser.md)）
 
 - [指定跨节点依赖关系](../configurations/crossNodeDependencies.md)
 
@@ -80,34 +81,38 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 
 - 功能齐全的资源
 
-- **存档**
-- **环境**
-- **File**
-- **日志**
-- **ProcessSet**
-- **注册表**
-- **脚本**
-- **WindowsPackageCab**
-- **WindowsProcess**
-- **WaitForAll**（请参阅[请参阅指定跨节点依赖关系](../configurations/crossNodeDependencies.md)）
-- **WaitForAny**（请参阅[指定跨节点依赖关系](../configurations/crossNodeDependencies.md)）
-- **WaitForSome**（请参阅[指定跨节点依赖关系](../configurations/crossNodeDependencies.md)）
+  - **存档**
+  - **环境**
+  - **文件**
+  - **日志**
+  - **ProcessSet**
+  - **注册表**
+  - **脚本**
+  - **WindowsPackageCab**
+  - **WindowsProcess**
+  - **WaitForAll** （请参阅[请参阅指定跨节点依赖关系](../configurations/crossNodeDependencies.md)）
+  - **WaitForAny** （请参阅[指定跨节点依赖关系](../configurations/crossNodeDependencies.md)）
+  - **WaitForSome** （请参阅[指定跨节点依赖关系](../configurations/crossNodeDependencies.md)）
 
 - 实现部分功能的资源
-- **分组**
-- **GroupSet**
 
-  **问题：** 如果调用两次特定实例（运行相同的配置两次），上面的资源失败
+  - **组**
+  - **GroupSet**
 
-- **服务**
-- **ServiceSet**
+    **问题：** 如果调用两次特定实例（运行相同的配置两次），上面的资源失败
 
-  **问题：** 仅对处于正在启动/停止（状态）的服务有效。 如果有人尝试更改其他服务属性（如 startuptype、credentials、description 等），则会失败。 引发的错误类似于：
+  - **服务**
+  - **ServiceSet**
 
-  找不到类型 [management.managementobject]: 请验证包含此类型的程序集是否已加载。 
+    **问题：** 仅对处于正在启动/停止（状态）的服务有效。 如果有人尝试更改其他服务属性（如 startuptype、credentials、description 等），则会失败。 引发的错误类似于：
+
+    ```
+    Cannot find type [management.managementobject]: verify that the assembly containing this type is loaded.
+    ```
 
 - 无法实现功能的资源
-- **用户**
+
+  - **用户**
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Nano Server 上不可用的 DSC 功能
 

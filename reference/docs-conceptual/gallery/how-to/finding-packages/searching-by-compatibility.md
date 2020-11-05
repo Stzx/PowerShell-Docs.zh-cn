@@ -1,14 +1,13 @@
 ---
 ms.date: 12/11/2018
-contributor: JKeithB, SydneyhSmith
-keywords: 库,powershell,cmdlet,psgallery
 title: 具有兼容 PowerShell 版本或操作系统的包
-ms.openlocfilehash: fce1383fa604a555a40b050ce92c5cc45ca7054c
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: 本文介绍了如何按与特定平台或版本的兼容性搜索 PowerShell 库。
+ms.openlocfilehash: 9806c09c85febfd74bb69adf3d294fb4f559ff23
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691447"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661249"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>具有兼容 PowerShell 版本或操作系统的包
 
@@ -32,18 +31,17 @@ ms.locfileid: "83691447"
 
 使用标记“PSEdition_Desktop”和标记“PSEdition_Core”筛选 PowerShell 库中的包。
 
-### <a name="use-tagspsedition_core-to-search-items-compatible-with-powershell-core-edition"></a>使用标记“PSEdition_Core”搜索兼容 PowerShell 核心版本的项。
+### <a name="use-tagspsedition_core-to-search-items-compatible-with-powershell-core-edition"></a>使用标记“PSEdition_Core”搜索兼容 PowerShell 核心版本的项
 
 ![在结果中搜索兼容 Core PSEdition 的项](media/searching-by-compatibility/searchresultswithpseditions.PNG)
 
-### <a name="use-tagspsedition_desktop-to-search-items-compatible-with-powershell-desktop-edition"></a>使用标记“PSEdition_Desktop”搜索兼容 PowerShell Desktop Edition 的项。
+### <a name="use-tagspsedition_desktop-to-search-items-compatible-with-powershell-desktop-edition"></a>使用标记“PSEdition_Desktop”搜索兼容 PowerShell 桌面版本的项
 
 ![在结果中搜索兼容 Desktop PSEdition 的项](media/searching-by-compatibility/searchresultswithpseditionsdesktop.PNG)
 
 ### <a name="search-for-packages-to-find-compatible-editions-using-powershell"></a>使用 PowerShell 搜索包以查找兼容版本
-可以指定标记以针对 PowerShell 版本和操作系统进行筛选。
-可使用 `Find-Package` cmdlet，指定 `-Tag` 参数来指定作为目标的版本（和操作系统）。
-类似于下面这样：
+
+可以指定标记以针对 PowerShell 版本和操作系统进行筛选。 可使用 `Find-Package` cmdlet，指定 `-Tag` 参数来指定作为目标的版本（和操作系统）。 类似于下面这样：
 
 ```powershell
 # Find modules compatible with PowerShell Core:

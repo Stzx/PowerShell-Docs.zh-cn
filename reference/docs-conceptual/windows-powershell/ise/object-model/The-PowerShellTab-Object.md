@@ -1,13 +1,13 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell,cmdlet
 title: PowerShellTab 对象
-ms.openlocfilehash: 55e3678a8285f0ec7e8131d98c87478216c26f37
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: PowerShellTab 对象代表 Windows PowerShell 运行时环境。
+ms.openlocfilehash: ac89875e408a41a92d7e3d1a83a849466296c3c6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809553"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663397"
 ---
 # <a name="the-powershelltab-object"></a>PowerShellTab 对象
 
@@ -45,7 +45,7 @@ $psISE.PowerShellTabs[1].Invoke({dir})
 
 **\[useNewScope\]** -  可选的布尔值，默认值为 `$true`，如果设置为 `$true`，则会新建作用域以在其中运行命令。 它不会修改该命令指定的 PowerShell 选项卡的运行时环境。
 
-**\[millisecondsTimeout\]** - 可选整数，默认值为 **500**。
+**\[millisecondsTimeout\]** - 可选整数，默认值为 **500** 。
 如果在指定时间内未完成命令，则该命令将生成 **TimeoutException** 并显示消息“操作已超时。”
 
 ```powershell
@@ -109,7 +109,7 @@ $secondTab.CanInvoke
 
 ### <a name="consolepane"></a>ConsolePane
 
-在 Windows PowerShell ISE 3.0 和更高版本中受支持，但不存在于早期版本中。 在 Windows PowerShell ISE 2.0 中，这命名为 **CommandPane**。
+在 Windows PowerShell ISE 3.0 和更高版本中受支持，但不存在于早期版本中。 在 Windows PowerShell ISE 2.0 中，这命名为 **CommandPane** 。
 
 获取“控制台”窗格 [editor](The-ISEEditor-Object.md) 对象的只读属性。
 
@@ -169,7 +169,7 @@ $psISE.CurrentPowerShellTab.output.clear()
 
 在 Windows PowerShell ISE 2.0 和更高版本中受支持。
 
-只读属性，可获取当前提示文本。 注意：Prompt 函数可以被用户的配置文件覆盖  。 如果结果不止一个简单的字符串，则此属性不会返回任何内容。
+只读属性，可获取当前提示文本。 注意：Prompt 函数可以被用户&trade;的配置文件覆盖。 如果结果不止一个简单的字符串，则此属性不会返回任何内容。
 
 ```powershell
 # Gets the current prompt text.

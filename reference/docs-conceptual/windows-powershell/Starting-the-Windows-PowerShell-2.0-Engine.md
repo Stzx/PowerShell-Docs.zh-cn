@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 使用 Windows PowerShell 2.0 引擎
-ms.openlocfilehash: c5ac92159d63e5669643908016186ed32dfb46db
-ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
+description: Windows PowerShell 2.0 引擎仅在当前脚本或主机程序无法运行时使用，因为必须在进行修改后，为 Windows PowerShell 2.0 编写并通过 CLR 2.0 编译的主机程序才能运行。
+ms.openlocfilehash: 214b87b7314f31974801bb07f98ddea3b68008f0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216016"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664001"
 ---
 # <a name="using-the-windows-powershell-20-engine"></a>使用 Windows PowerShell 2.0 引擎
 
@@ -72,7 +73,7 @@ PowerShell.exe -Version 2
 
 ## <a name="how-to-start-a-background-job-with-the-windows-powershell-20-engine"></a>如何使用 Windows PowerShell 2.0 引擎启动后台作业
 
-若要使用 Windows PowerShell 2.0 引擎启动后台作业，请使用 [Start-Job][] cmdlet 的**PSVersion** 参数。
+若要使用 Windows PowerShell 2.0 引擎启动后台作业，请使用 [Start-Job][] cmdlet 的 **PSVersion** 参数。
 
 下面的命令使用 Windows PowerShell 2.0 引擎启动后台作业
 

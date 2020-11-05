@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,安装程序
 title: 软件清单日志记录 (SIL)
-ms.openlocfilehash: b12cfc4ae1e505bbc4d47596bed9352ce53a98f2
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 5.x 添加了软件清单日志记录功能，可用于在中心位置收集有关安装的软件的信息，以便更轻松地进行管理和审核。
+ms.openlocfilehash: 85e261782a3df5fe5561a80529ba699d686a8779
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808463"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646619"
 ---
 # <a name="software-inventory-logging-sil"></a>软件清单日志记录 (SIL)
 

@@ -1,15 +1,13 @@
 ---
 ms.date: 06/10/2020
-ms.topic: conceptual
-keywords: wmf,powershell,安装程序
-contributor: keithb
 title: 安装和配置 WMF 5.1
-ms.openlocfilehash: 9e0b4b6ed387b0a0d7fcf62a913677986d70de92
-ms.sourcegitcommit: 4a283fe5419f47102e6c1de7060880a934842ee9
+description: 本文介绍如何安装 WMF 5.1 及其先决条件。
+ms.openlocfilehash: 0e076bfab684b6c83d62d236eea3bbd7ab2ad411
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84671387"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660834"
 ---
 # <a name="install-and-configure-wmf-51"></a>安装和配置 WMF 5.1
 
@@ -50,7 +48,7 @@ ms.locfileid: "84671387"
 若要在 Windows Server 2008 R2 SP1 或 Windows 7 SP1 上安装 WMF 5.1，必须先安装以下各项：
 
 - 必须安装最新 Service Pack。
-- **不得**安装 WMF 3.0。 安装 WMF 5.1 来替代 WMF 3.0 会导致 PSModulePath (`$env:PSModulePath`) 丢失，进而可能会导致其他应用无法正常运行。 安装 WMF 5.1 前，要么必须先卸载 WMF 3.0，要么必须先保存 PSModulePath，然后在 WMF 5.1 安装完成后进行手动还原。
+- **不得** 安装 WMF 3.0。 安装 WMF 5.1 来替代 WMF 3.0 会导致 PSModulePath (`$env:PSModulePath`) 丢失，进而可能会导致其他应用无法正常运行。 安装 WMF 5.1 前，要么必须先卸载 WMF 3.0，要么必须先保存 PSModulePath，然后在 WMF 5.1 安装完成后进行手动还原。
 - WMF 5.1 中至少需要[.NET Framework 4.5.2](https://www.microsoft.com/download/details.aspx?id=42642)。 可按照下载位置的说明安装 Microsoft .NET Framework 4.5.2。
 
 ### <a name="installing-wmf-51-on-windows-server-2008-r2-and-windows-7"></a>在 Windows Server 2008 R2 和 Windows 7 上安装 WMF 5.1
@@ -65,8 +63,8 @@ ms.locfileid: "84671387"
 
    `Install-WMF5.1.ps1` 采用以下参数，以简化在 Windows Server 2008 R2 和 Windows 7 上自动执行安装：
 
-   - **AcceptEula**：如果包含此参数，将会自动接受但不显示 EULA。
-   - **AllowRestart**：只有在指定 AcceptEula 后，才能使用此参数。 如果包含此参数，并且在安装 WMF 5.1 后需要重启，将在安装完成后不发出提示就立即重启计算机。
+   - **AcceptEula** ：如果包含此参数，将会自动接受但不显示 EULA。
+   - **AllowRestart** ：只有在指定 AcceptEula 后，才能使用此参数。 如果包含此参数，并且在安装 WMF 5.1 后需要重启，将在安装完成后不发出提示就立即重启计算机。
 
 ## <a name="winrm-dependency"></a>WinRM 依赖关系
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: 库,powershell,cmdlet,psgallery
 title: PowerShell 库入门
-ms.openlocfilehash: bae0af144e6f520142e7eaea3dd0e1039976dae4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍如何开始使用 PowerShell 库和 PowerShellGet cmdlet
+ms.openlocfilehash: 02d84c64e39245b2a16c03029982796a74301bd6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81219687"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661417"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>PowerShell 库入门
 
@@ -19,7 +18,7 @@ PowerShell 库是一个包存储库，包含脚本、模块以及可供下载和
 
 ## <a name="discovering-packages-from-the-powershell-gallery"></a>从 PowerShell 库中发现包
 
-可通过使用 PowerShell 库[主页](https://www.powershellgallery.com)上的“搜索”  控件或浏览[程序包页](https://www.powershellgallery.com/packages)中的“模块和脚本”来查找 PowerShell 库中的包。 还可以使用 `-Repository PSGallery` 运行 [Find-Module][]、[Find-DscResource] 和 [Find-Script][] cmdlet（具体视包类型而定），来查找 PowerShell 库中的包。
+可通过使用 PowerShell 库[主页](https://www.powershellgallery.com)上的“搜索”控件或浏览[程序包页](https://www.powershellgallery.com/packages)中的“模块和脚本”来查找 PowerShell 库中的包。 还可以使用 `-Repository PSGallery` 运行 [Find-Module][]、[Find-DscResource] 和 [Find-Script][] cmdlet（具体视包类型而定），来查找 PowerShell 库中的包。
 
 可使用以下参数筛选库中的结果：
 
@@ -34,15 +33,15 @@ PowerShell 库是一个包存储库，包含脚本、模块以及可供下载和
 - Command
 - 筛选器
 
-如果只想发现库中的特定 DSC 资源，可运行 [Find-DscResource][] cmdlet。 Find-DscResource 会返回库中 DSC 资源的相关数据。 由于 DSC 资源始终作为模块的部分进行传递，所以仍需运行 [Install-Module][] 来安装这些 DSC 资源。
+如果只想发现库中的特定 DSC 资源，可运行 [Find-DscResource][] cmdlet。 Find-DscResource 会返回库中 DSC 资源的相关数据。 由于 DSC 资源始终作为模块的一部分进行传递，因此仍需要运行 Install-Module[][] 来安装这些 DSC 资源。
 
 ## <a name="learning-about-packages-in-the-powershell-gallery"></a>了解 PowerShell 库中的包
 
 找到感兴趣的包后，你可能想要了解更多有关信息。 可检查库中该包的特定页来了解详细信息。 在该页上可查看该包中上载的所有元数据。 此元数据由包作者提供，Microsoft 不会对其进行验证。 包的所有者紧密关联到用于发布该包的 PowerShell 库帐户，比“作者”字段更可信。
 
-如果发现发布的包不可信，请单击该包页面上的“报告滥用行为”  。
+如果发现发布的包不可信，请单击该包页面上的“报告滥用行为”。
 
-如果运行 [Find-Module][] 或 [Find-Script][]，则可在返回的 PSGetModuleInfo 对象中查看该数据。 例如，运行 `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member` 会返回库中 PSReadLine 模块的相关数据。
+如果运行的是 Find-Module[][] 或 Find-Script[][]，可以在返回的 PSGetModuleInfo 对象中查看此数据。 例如，运行 `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member` 会返回库中 PSReadLine 模块的相关数据。
 
 ## <a name="downloading-packages-from-the-powershell-gallery"></a>从 PowerShell 库下载包
 
@@ -54,37 +53,37 @@ PowerShell 库是一个包存储库，包含脚本、模块以及可供下载和
 
 其中一些包由 Microsoft 编写，另一些包由 PowerShell 社区编写。 Microsoft 建议安装前检查库中包的内容和代码。
 
-如果发现发布的包不可信，请单击该包页面上的“报告滥用行为”  。
+如果发现发布的包不可信，请单击该包页面上的“报告滥用行为”。
 
 ### <a name="install"></a>安装
 
 若要安装库中的包以供使用，请运行 [Install-Module][] 或 [Install-Script][] cmdlet，具体视包类型而定。
 
-默认情况下，[Install-Module][] 将模块安装到 `$env:ProgramFiles\WindowsPowerShell\Modules`。
+默认情况下，Install-Module[][] 将模块安装到 `$env:ProgramFiles\WindowsPowerShell\Modules`。
 此操作需要管理员帐户。 如果添加 `-Scope CurrentUser` 参数，模块将安装到 `$env:USERPROFILE\Documents\WindowsPowerShell\Modules`。
 
-默认情况下，[Install-Script][] 将脚本安装到 `$env:ProgramFiles\WindowsPowerShell\Scripts`。
+默认情况下，Install-Script[][] 将脚本安装到 `$env:ProgramFiles\WindowsPowerShell\Scripts`。
 此操作需要管理员帐户。 如果添加 `-Scope CurrentUser` 参数，脚本将安装到 `$env:USERPROFILE\Documents\WindowsPowerShell\Scripts`。
 
 默认情况下，[Install-Module][] 和 [Install-Script][] 安装最新版包。 若要安装旧版包，请添加 `-RequiredVersion` 参数。
 
 ### <a name="deploy"></a>部署
 
-若要将包从 PowerShell 库部署到 Azure 自动化，请单击“Azure 自动化”  ，然后单击包详细信息页上的“部署到 Azure 自动化”  。 这会将你重定向到 Azure 管理门户，可使用 Azure 帐户凭据登录该门户。 请注意，部署具有依赖关系的包会将所有依赖关系部署到 Azure 自动化。 通过将 AzureAutomationNotSupported  标记添加到包元数据可禁用“部署到 Azure 自动化”按钮。
+若要将包从 PowerShell 库部署到 Azure 自动化，请单击“Azure 自动化”，然后单击包详细信息页上的“部署到 Azure 自动化”。 这会将你重定向到 Azure 管理门户，可使用 Azure 帐户凭据登录该门户。 请注意，部署具有依赖关系的包会将所有依赖关系部署到 Azure 自动化。 通过将 AzureAutomationNotSupported 标记添加到包元数据可禁用“部署到 Azure 自动化”按钮。
 
 若要了解有关 Azure 自动化的详细信息，请参阅 [Azure 自动化](/azure/automation)文档。
 
 ## <a name="updating-packages-from-the-powershell-gallery"></a>从 PowerShell 库更新包
 
-若要更新从 PowerShell 库安装的包，请运行 [Update-Module][] 或 [Update-Script][] cmdlet。 如果不使用其他任何参数运行，[Update-Module][] 会尝试更新所有通过运行 [Install-Module][] 来安装的模块。 若要选择性地更新模块，请添加 `-Name` 参数。
+若要更新从 PowerShell 库安装的包，请运行 Update-Module[][] 或 Update-Script[][] cmdlet。 如果不使用其他任何参数运行，Update-Module[][] 会尝试更新所有通过运行 Install-Module[][] 来安装的模块。 若要选择性地更新模块，请添加 `-Name` 参数。
 
-同样，如果不使用其他任何参数运行，[Update-Script][] 也会尝试更新所有通过运行 [Install-Script][] 来安装的脚本。 若要选择性地更新脚本，请添加 `-Name` 参数。
+同样，如果不使用其他任何参数运行，Update-Script[][] 也会尝试更新所有通过运行 Install-Script[][] 来安装的脚本。 若要选择性地更新脚本，请添加 `-Name` 参数。
 
 ## <a name="list-packages-that-you-have-installed-from-the-powershell-gallery"></a>列出从 PowerShell 库安装的包
 
-若要确定已安装 PowerShell 库中的哪些模块，请运行 [Get-InstalledModule][] cmdlet。 该命令会列出系统上所有已直接从 PowerShell 库安装的模块。
+若要查找从 PowerShell 库中安装的模块，请运行 [Get-InstalledModule][] cmdlet。 该命令会列出系统上所有已直接从 PowerShell 库安装的模块。
 
-同样，若要确定已安装 PowerShell 库中的哪些脚本，请运行 [Get-InstalledScript][] cmdlet。 此命令会列出系统上所有已直接从 PowerShell 库安装的脚本。
+同样，若要查找从 PowerShell 库已安装的脚本，请运行 [Get-InstalledScript][] cmdlet。 此命令会列出系统上所有已直接从 PowerShell 库安装的脚本。
 
 ## <a name="network-access-to-the-powershell-gallery"></a>对 PowerShell 库的网络访问
 

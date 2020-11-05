@@ -2,20 +2,20 @@
 ms.date: 01/17/2019
 keywords: dsc,powershell,配置,安装程序
 title: 重新启动节点
-ms.openlocfilehash: 22c63fab9b6646f522f8531b46a43a94ff883552
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 许多配置设置可能需要重新启动计算机才能使配置更改完成。 本文介绍了如何在配置中管理重新启动。
+ms.openlocfilehash: d2b0f77c34ebcb006821da1f4f8d7c4b046f7a95
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954024"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645112"
 ---
 # <a name="reboot-a-node"></a>重新启动节点
 
 > [!NOTE]
-> 本主题讨论如何重新启动节点。 若要使重新启动成功，需要正确配置 ActionAfterReboot  和 RebootNodeIfNeeded  LCM 设置。
-> 若要了解本地配置管理器设置，请参阅[配置本地配置管理器](../managing-nodes/metaConfig.md)或[配置本地配置管理器 (v4)](../managing-nodes/metaConfig4.md)。
+> 本主题讨论如何重新启动节点。 若要使重新启动成功，需要正确配置 ActionAfterReboot 和 RebootNodeIfNeeded LCM 设置。 若要了解本地配置管理器设置，请参阅[配置本地配置管理器](../managing-nodes/metaConfig.md)或[配置本地配置管理器 (v4)](../managing-nodes/metaConfig4.md)。
 
-可以使用 `$global:DSCMachineStatus` 标志，从资源中重新启动节点。 在 `Set-TargetResource` 函数中将此标志设置为 `1` 会强制 LCM 在当前资源的 Set 方法之后直接重新启动节点。 如果使用此标志，[ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) DSC 资源模块中的 **PendingReboot** 资源会检测 DSC 外部是否有挂起的重启。
+可以使用 `$global:DSCMachineStatus` 标志，从资源中重新启动节点。 在 `Set-TargetResource` 函数中将此标志设置为 `1` 会强制 LCM 在当前资源的 Set 方法之后直接重新启动节点。 如果使用此标志， [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) DSC 资源模块中的 **PendingReboot** 资源会检测 DSC 外部是否有挂起的重启。
 
 [配置](configurations.md)可能会执行需要重新启动节点的步骤。 这可能包括诸如以下这类情况：
 
@@ -47,7 +47,7 @@ PendingReboot [String] #ResourceName
 
 ## <a name="properties"></a>属性
 
-| properties | 说明 |
+| Property | 说明 |
 | --- | --- |
 | 名称| 必需参数，对配置中资源的每个实例必须唯一。|
 | SkipComponentBasedServicing | 跳过由基于组件的服务组件触发的重新启动。 |
@@ -56,12 +56,11 @@ PendingReboot [String] #ResourceName
 | SkipCcmClientSDK | 跳过由 ConfigMgr 客户端触发的重新启动。 |
 | SkipComputerRename | 跳过由计算机重命名触发的重新启动。 |
 | PSDSCRunAsCredential | 在 v5 中受支持。 以指定用户身份执行资源。 |
-| DependsOn | 指示必须先运行其他资源的配置，再配置此资源。 例如，如果你想要首先运行 ID 为 **ResourceName**、类型为 **ResourceType** 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 有关详细信息，请参阅[使用 DependsOn](resource-depends-on.md)|
+| DependsOn | 指示必须先运行其他资源的配置，再配置此资源。 例如，如果你想要首先运行 ID 为 **ResourceName** 、类型为 **ResourceType** 的资源配置脚本块，则使用此属性的语法为 `DependsOn = "[ResourceType]ResourceName"`。 有关详细信息，请参阅[使用 DependsOn](resource-depends-on.md)|
 
 ## <a name="example"></a>示例
 
-下面的示例使用 [xExchange](https://github.com/PowerShell/xExchange) 资源安装 Microsoft Exchange。
-在整个安装过程中，**PendingReboot** 资源用于重启节点。
+下面的示例使用 [xExchange](https://github.com/PowerShell/xExchange) 资源安装 Microsoft Exchange。 在整个安装过程中， **PendingReboot** 资源用于重启节点。
 
 > [!NOTE]
 > 此示例需要有权向林中添加 Exchange 服务器的帐户的凭据。 有关在 DSC 中使用凭据的详细信息，请参阅[在 DSC 中处理凭据](../configurations/configDataCredentials.md)

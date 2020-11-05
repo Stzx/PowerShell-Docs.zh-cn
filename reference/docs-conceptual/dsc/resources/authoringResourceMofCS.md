@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: 在 C# 中创作 DSC 资源
-ms.openlocfilehash: 4652d5d99c32685e124f2cd1b718f973380ab16a
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 本文演示如何创建 DSC 资源作为在 C# 中编写的 cmdlet。
+ms.openlocfilehash: 61c4d1e332a22f97a89cd740e03235ddfdcfabd2
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217502"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667158"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>在 C 中创作 DSC 资源\#
 
@@ -29,9 +30,9 @@ ms.locfileid: "86217502"
 [ClassVersion("1.0.0"), FriendlyName("xDemoFile")]
 class MSFT_XDemoFile : OMI_BaseResource
 {
-                [Key, Description("path")] String Path;
-                [Write, Description("Should the file be present"), ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
-                [Write, Description("Contentof file.")] String Content;
+     [Key, Description("path")] String Path;
+     [Write, Description("Should the file be present"), ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
+     [Write, Description("Contentof file.")] String Content;
 };
 ```
 
@@ -41,10 +42,10 @@ class MSFT_XDemoFile : OMI_BaseResource
 
 1. 打开 Visual Studio。
 1. 创建 C# 项目并命名。
-1. 从可用的项目模板中选择**类库**。
+1. 从可用的项目模板中选择 **类库** 。
 1. 单击“确定”  。
 1. 将 System.Automation.Management.dll 的程序集引用添加到项目。
-1. 更改程序集名称，使其与资源名称一致。 在本示例中，程序集应该被命名为 **MSFT_XDemoFile**。
+1. 更改程序集名称，使其与资源名称一致。 在本示例中，程序集应该被命名为 **MSFT_XDemoFile** 。
 
 ### <a name="writing-the-cmdlet-code"></a>编写 cmdlet 代码
 
@@ -68,8 +69,9 @@ namespace cSharpDSCResourceExample
         public string Path { get; set; }
 
         /// <summary>
-        /// Implement the logic to return the current state of the resource as a hashtable with keys being the resource properties
-        /// and the values are the corresponding current value on the machine.
+        /// Implement the logic to return the current state of the resource as a hashtable with
+        /// keys being the resource properties and the values are the corresponding current
+        /// value on the machine.
         /// </summary>
         protected override void ProcessRecord()
         {

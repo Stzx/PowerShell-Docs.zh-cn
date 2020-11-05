@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 打包资源并将其上传到拉取服务器
-ms.openlocfilehash: d0e070b7aa43acbbbf087729d53f06dbc7e7734a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 本文介绍了如何将资源上传到拉取服务器，以便可以通过由 DSC 管理的节点上的配置下载这些资源。
+ms.openlocfilehash: a19d04346a0ae546cfcaf70701fde870d3839f65
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782882"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661695"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>打包资源并将其上传到拉取服务器
 

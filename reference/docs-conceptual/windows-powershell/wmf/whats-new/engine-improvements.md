@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,安装程序
 title: WMF 5.1 中的 PowerShell 引擎改进
-ms.openlocfilehash: cccfcf8872ac60e0902669bcc797d0ed250317ba
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 本文列出了 Windows PowerShell 5.1 中的性能改进
+ms.openlocfilehash: 34a4ed1ae4b00f5763848deaf2edad895e70c59a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808933"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655858"
 ---
 # <a name="powershell-engine-improvements"></a>PowerShell 引擎改进
 

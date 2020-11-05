@@ -2,12 +2,13 @@
 ms.date: 06/22/2020
 keywords: dsc,powershell,配置,服务,设置
 title: 编写、编译和应用配置
-ms.openlocfilehash: 9acb2db882795d7150326fadb2964deb1105b2cc
-ms.sourcegitcommit: 7eea0885dd7ac90ab36e5664501438a292217f7f
+description: 本练习演示创建和应用 DSC 配置的完整过程。 在以下示例中，你将学习如何编写和应用一个非常简单的配置
+ms.openlocfilehash: f173fe0dc6cd73e2b49bb8c44a9ee1a53eab475f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295669"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645037"
 ---
 # <a name="write-compile-and-apply-a-configuration"></a>编写、编译和应用配置
 
@@ -63,13 +64,13 @@ Configuration HelloWorld {
 
 将文件保存为“HelloWorld.ps1”。
 
-定义配置类似于定义函数。 **节点**块指定要配置的目标节点，在本示例中为 `localhost`。
+定义配置类似于定义函数。 **节点** 块指定要配置的目标节点，在本示例中为 `localhost`。
 
 配置会调用一个[资源](../resources/resources.md)（`File` 资源）。 资源负责确保目标节点处于由配置定义的状态。
 
 ## <a name="compile-the-configuration"></a>编译配置
 
-对于要应用于节点的 DSC 配置，必须首先将其编译为 MOF 文件。 与函数类似，运行配置会为 `Node` 块定义的每个节点编译一个 `.mof` 文件。 若要运行配置，需要使用点将 `HelloWorld.ps1` 脚本的来源获取到当前作用域内。 有关详细信息，请参阅 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)。
+对于要应用于节点的 DSC 配置，必须首先将其编译为 MOF 文件。 与函数类似，运行配置会为 `Node` 块定义的每个节点编译一个 `.mof` 文件。 若要运行配置，需要使用点将 `HelloWorld.ps1` 脚本的来源获取到当前作用域内。 有关详细信息，请参阅 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)。
 
 <!-- markdownlint-disable MD038 -->
 通过在 `. `（点、空格）后键入用于存储 `HelloWorld.ps1` 脚本的路径，来使用点获取其来源。 随后可以通过调用配置（类似于函数）来运行它。 还可以调用脚本底部的配置函数，以便无需使用点获取来源。

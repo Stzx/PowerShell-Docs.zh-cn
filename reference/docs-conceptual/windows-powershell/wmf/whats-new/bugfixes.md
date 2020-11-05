@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,安装程序
 title: WMF 5.1 中的 Bug 修复
-ms.openlocfilehash: 8edf295eb6304dc04de2fa5d3792b1c2fc4b01f3
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 本文列出了在 WMF 5.1 版本中修复的 bug。
+ms.openlocfilehash: 2673860852ecd6e0b6582f6f69076f8c463eeccc
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809303"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660765"
 ---
 # <a name="bug-fixes-in-wmf-51"></a>WMF 5.1 中的 Bug 修复
 

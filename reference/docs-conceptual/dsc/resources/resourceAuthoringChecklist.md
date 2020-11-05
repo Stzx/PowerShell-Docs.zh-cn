@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: 资源创作清单
-ms.openlocfilehash: f21e2e8563880e0c10cf50b044e9c56ca09fe0fa
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 本文包含在创作新 DSC 资源时应使用的最佳实践的清单。
+ms.openlocfilehash: 5b618511f730c80104620c84e693c13ae4f536ac
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217638"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656344"
 ---
 # <a name="resource-authoring-checklist"></a>资源创作清单
 

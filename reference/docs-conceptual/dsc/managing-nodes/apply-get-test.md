@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 应用、获取并测试节点上的配置
-ms.openlocfilehash: 41f8d2d75d3dd9621de615e7999c2690cb8ce44a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本指南将演示如何处理目标节点上的配置。
+ms.openlocfilehash: 6bc9262bc0e2ce8eea7b85bd46ecc0c0a691276d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953834"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92651018"
 ---
 # <a name="apply-get-and-test-configurations-on-a-node"></a>应用、获取并测试节点上的配置
 
@@ -38,14 +39,14 @@ Sample -OutputPath "C:\Temp\"
 
 编译此配置将产生两个“.mof”文件。
 
-```output
+```Output
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
 -a----       11/27/2018   7:29 AM     2.13KB localhost.mof
 -a----       11/27/2018   7:29 AM     2.13KB server02.mof
 ```
 
-若要应用配置，请使用 [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet。 参数 `-Path` 指定“.mof”文件所在的目录。 如果未指定 `-Computername`，`Start-DSCConfiguration` 将尝试将每个配置应用于由“.mof”文件（\<computername \>.mof）的名称指定的计算机名称。 将 `-Verbose` 指定为 `Start-DSCConfiguration`，以查看更详细的输出。
+若要应用配置，请使用 [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet。 参数 `-Path` 指定“.mof”文件所在的目录。 如果未指定 `-Computername`，`Start-DSCConfiguration` 将尝试将每个配置应用于由“.mof”文件 (`<computername>.mof`) 的名称指定的计算机名称。 将 `-Verbose` 指定为 `Start-DSCConfiguration`，以查看更详细的输出。
 
 ```powershell
 Start-DSCConfiguration -Path C:\Temp\ -Verbose
@@ -53,7 +54,7 @@ Start-DSCConfiguration -Path C:\Temp\ -Verbose
 
 如果未指定 `-Wait`，你将看到创建了一个作业。 创建的作业将为每个由 `Start-DSCConfiguration` 处理的“.mof”文件提供一个 ChildJob。
 
-```output
+```Output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 45     Job45           Configuratio... Running       True            localhost,server02   Start-DSCConfiguration...
@@ -72,7 +73,7 @@ $job = Get-Job
 $job.ChildJobs
 ```
 
-```output
+```Output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 49     Job49           Configuratio... Completed     True            localhost            Start-DSCConfiguration...
@@ -86,8 +87,9 @@ Id     Name            PSJobTypeName   State         HasMoreData     Location   
 $job.ChildJobs[0].Verbose
 ```
 
-```output
-Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+```Output
+Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,
+'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
 An LCM method call arrived from computer SERVER01 with user sid S-1-5-21-124525095-708259637-1543119021-1282804.
 [SERVER01]: LCM:  [ Start  Set      ]
 [SERVER01]: LCM:  [ Start  Resource ]  [[File]SampleFile]
@@ -109,19 +111,20 @@ Start-DSCConfiguration -UseExisting -Verbose -Wait
 
 ## <a name="test-a-configuration"></a>测试配置
 
-可以使用 [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) 测试当前应用的配置。 如果节点兼容，`Test-DSCConfiguration` 将返回 `True`；如果不兼容，则返回 `False`。
+可以使用 [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) 测试当前应用的配置。
+如果节点兼容，`Test-DSCConfiguration` 将返回 `True`；如果不兼容，则返回 `False`。
 
 ```powershell
 Test-DSCConfiguration
 ```
 
-从 PowerShell 5.0 开始，添加了 `-Detailed` 参数，该参数返回一个对象，其中包含 ResourcesInDesiredState  和 ResourcesNotInDesiredState  的集合
+从 PowerShell 5.0 开始，添加了 `-Detailed` 参数，该参数返回一个对象，其中包含 ResourcesInDesiredState 和 ResourcesNotInDesiredState 的集合
 
 ```powershell
 Test-DSCConfiguration -Detailed
 ```
 
-从 PowerShell 5.0 开始，可以在不应用配置的情况下对其进行测试。 `-ReferenceConfiguration` 参数接受要对其测试节点的“.mof”文件的路径。 没有对节点执行任何设置  操作。 在 PowerShell 4.0 中，有一些解决方法可在不应用配置的情况下对其进行测试，但在这里不予讨论。
+从 PowerShell 5.0 开始，可以在不应用配置的情况下对其进行测试。 `-ReferenceConfiguration` 参数接受要对其测试节点的“.mof”文件的路径。 没有对节点执行任何设置操作。 在 PowerShell 4.0 中，有一些解决方法可在不应用配置的情况下对其进行测试，但在这里不予讨论。
 
 ## <a name="get-configuration-values"></a>获取配置值
 
@@ -133,7 +136,7 @@ Get-DSCConfiguration
 
 如果应用成功，示例配置的输出将如下所示。
 
-```output
+```Output
 ConfigurationName    : Sample
 DependsOn            :
 ModuleName           : PSDesiredStateConfiguration
@@ -162,13 +165,13 @@ CimClassName         : MSFT_FileDirectoryConfiguration
 
 ## <a name="get-configuration-status"></a>获取配置状态
 
-从 PowerShell 5.0 开始，借助 [Get-DSCConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus) cmdlet，用户可查看节点的已应用配置的历史记录。 PowerShell DSC 跟踪在推送  或拉取  模式下应用的最后 {{N}} 个配置。 这包括 LCM 执行的任何一致性  检查。 默认情况下，`Get-DSCConfigurationStatus` 只显示最后一个历史记录条目。
+从 PowerShell 5.0 开始，借助 [Get-DSCConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus) cmdlet，用户可查看节点的已应用配置的历史记录。 PowerShell DSC 跟踪在推送或拉取模式下应用的最后 {{N}} 个配置。 这包括 LCM 执行的任何一致性检查。 默认情况下，`Get-DSCConfigurationStatus` 只显示最后一个历史记录条目。
 
 ```powershell
 Get-DSCConfigurationStatus
 ```
 
-```output
+```Output
 Status     StartDate                 Type            Mode  RebootRequested      NumberOfResources
 ------     ---------                 ----            ----  ---------------      -----------------
 Success    11/27/2018 7:18:40 AM     Consistency     PUSH  False                1
@@ -183,7 +186,7 @@ Success    11/27/2018 7:18:40 AM     Consistency     PUSH  False                
 Get-DSCConfigurationStatus -All
 ```
 
-```output
+```Output
 Status     StartDate                 Type            Mode  RebootRequested      NumberOfResources
 ------     ---------                 ----            ----  ---------------      -----------------
 Success    11/27/2018 7:18:40 AM     Consistency     PUSH  False                1
@@ -200,7 +203,7 @@ Success    11/27/2018 6:03:44 AM     Consistency     PUSH  False                
 
 ## <a name="manage-configuration-documents"></a>管理配置文档
 
-LCM 通过处理配置文档  来管理节点配置。 这些“.mof”文件驻留在“C:\Windows\System32\Configuration”目录中。
+LCM 通过处理配置文档来管理节点配置。 这些“.mof”文件位于 `C:\Windows\System32\Configuration` 目录中。
 
 从 PowerShell 5.0 开始，借助 [Remove-DSCConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)用户可删除“.mof”文件来停止未来的一致性检查，或删除应用时出现错误的配置。 `-Stage` 参数允许用户指定要删除的“.mof”文件。
 

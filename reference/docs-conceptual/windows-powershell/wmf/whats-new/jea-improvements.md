@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,安装程序
 title: 对 Just Enough Administration (JEA) 的改进
-ms.openlocfilehash: 9bb45ad2ddd459b99fc58610dfd8145992093624
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: JEA 是 WMF 5.0 中的新功能，可通过 PowerShell 远程处理实现基于角色的管理。 通过允许非管理员以管理员身份运行特定的命令、脚本和可执行文件，它扩展了现有受约束的终结点基础结构。
+ms.openlocfilehash: f255d0ecbd4bbd9a5ade4b6e19f066cc007481fb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808913"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654019"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>对 Just Enough Administration (JEA) 的改进
 
@@ -65,7 +65,7 @@ RunAsVirtualAccount = $false
 
 ## <a name="conditional-access-policies"></a>条件访问策略
 
-JEA 可很好地限制用户在连接到系统进行管理时可执行的操作；但如果你还想限制用户可使用 JEA 的*时间*，该如何操作？ 我们已向会话配置文件 (.pssc) 添加了配置选项，使你能够指定用户为建立 JEA 会话而必须归属的安全组。 如果你的环境中有实时 (JIT) 系统且希望你的用户在访问高权限 JEA 终结点前提升其权限，那么这将特别有用。
+JEA 可很好地限制用户在连接到系统进行管理时可执行的操作；但如果你还想限制用户可使用 JEA 的 *时间* ，该如何操作？ 我们已向会话配置文件 (.pssc) 添加了配置选项，使你能够指定用户为建立 JEA 会话而必须归属的安全组。 如果你的环境中有实时 (JIT) 系统且希望你的用户在访问高权限 JEA 终结点前提升其权限，那么这将特别有用。
 
 通过 PSSC 文件中的新 *RequiredGroups* 字段，你可指定用于确定用户是否可连接到 JEA 的逻辑。 它包括指定使用“And”和“Or”密钥来构造规则的哈希表（可选择嵌套）。 以下是如何使用此字段的一些示例：
 

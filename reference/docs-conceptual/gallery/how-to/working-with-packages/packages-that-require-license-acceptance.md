@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: Farehar
-keywords: 库, powershell, psgallery
 title: 需要接受许可证
-ms.openlocfilehash: 4b293ea693062cf9717fa4ca913c3eb9abaf7014
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 如何在“项目详细信息”页上查看包许可证
+ms.openlocfilehash: 0d8a9ed671f7993726bc3fa41d11159b366e5a28
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278632"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662295"
 ---
 # <a name="require-license-acceptance"></a>需要接受许可证
 

@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 description: 本文档介绍了一些最佳做法，以帮助工程师部署 DSC 拉取服务器。
 keywords: dsc,powershell,配置,安装程序
 title: 请求服务器最佳做法
-ms.openlocfilehash: 99009fd73ea08ca4ac42832a055e914a3ce6dbcf
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.openlocfilehash: 0021baa219a0936405eccf2cc7741e042f8bf09f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90846943"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664333"
 ---
 # <a name="pull-server-best-practices"></a>请求服务器最佳做法
 
 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> 请求服务器（Windows 功能 DSC-Service）是 Windows Server 的一个受支持组件，不过目前没有提供新功能的计划**。 建议开始将托管客户端转换至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)（包括 Windows Server 上的请求服务器以外的功能）或[此处](pullserver.md#community-solutions-for-pull-service)列出的社区解决方案之一。
+> 请求服务器（Windows 功能 DSC-Service）是 Windows Server 的一个受支持组件，不过目前没有提供新功能的计划。 建议开始将托管客户端转换至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)（包括 Windows Server 上的请求服务器以外的功能）或[此处](pullserver.md#community-solutions-for-pull-service)列出的社区解决方案之一。
 
 摘要：本文档旨在包括用于帮助为解决方案进行准备的工程师的过程和可扩展性。 详细信息应提供由客户确定，然后由产品团队验证的最佳做法，以确保建议面向未来并且可视为是稳定的。
 
@@ -72,9 +72,9 @@ Windows Server 2012 R2 包括一种名为 DSC 服务的功能。 DSC 服务功�
 
 ### <a name="dsc-resource"></a>DSC 资源
 
-可以通过使用 DSC 配置脚本设置服务来简化请求服务器部署。 本文档包含可以用于部署生产准备就绪服务器节点的配置脚本。 若要使用配置脚本，需要一个未包含在 Windows Server 中的 DSC 模块。 所需模块名称是 **xPSDesiredStateConfiguration**，其中包括 DSC 资源 **xDscWebService**。 可以在[此处](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d)下载 xPSDesiredStateConfiguration 模块。
+可以通过使用 DSC 配置脚本设置服务来简化请求服务器部署。 本文档包含可以用于部署生产准备就绪服务器节点的配置脚本。 若要使用配置脚本，需要一个未包含在 Windows Server 中的 DSC 模块。 所需模块名称是 **xPSDesiredStateConfiguration** ，其中包括 DSC 资源 **xDscWebService** 。 可以在[此处](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d)下载 xPSDesiredStateConfiguration 模块。
 
-使用 PowerShellGet**** 模块中的 `Install-Module` cmdlet。
+使用 PowerShellGet 模块中的 `Install-Module` cmdlet。
 
 ```powershell
 Install-Module xPSDesiredStateConfiguration
@@ -119,8 +119,7 @@ Install-Module xPSDesiredStateConfiguration
 
 DNS CNAME 使你可以创建别名以引用主机 (A) 记录。 附加名称记录的用途是在将来需要更改时提高灵活性。 CNAME 可以帮助隔离客户端配置，以便对服务器环境进行的更改（如替换请求服务器或添加其他请求服务器）无需对客户端配置进行对应更改。
 
-为 DNS 记录选择名称时，请记住解决方案体系结构。
-如果使用负载平衡，则用于在 HTTPS 上保护流量安全的证书需要共享与 DNS 记录相同的名称。
+为 DNS 记录选择名称时，请记住解决方案体系结构。 如果使用负载平衡，则用于在 HTTPS 上保护流量安全的证书需要共享与 DNS 记录相同的名称。
 
 |       方案        |                                                                                         最佳做法
 |:--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -142,7 +141,7 @@ DNS CNAME 使你可以创建别名以引用主机 (A) 记录。 附加名称记�
 当前大多数组织都要求网络流量（特别是包含诸如如何配置服务器这类敏感数据的流量）在传输过程必须进行验证和/或加密。
 虽然可以使用 HTTP（采用明文方便进行客户端请求）部署请求服务器，不过最佳做法是使用 HTTPS 保护流量安全。 可以使用 DSC 资源 **xPSDesiredStateConfiguration** 中的一组参数将服务配置为使用 HTTPS。
 
-保护请求服务器的 HTTPS 流量安全的证书要求与保护任何其他 HTTPS 网站并无不同。 Windows Server 证书服务中的 **Web 服务器**模板满足所需功能。
+保护请求服务器的 HTTPS 流量安全的证书要求与保护任何其他 HTTPS 网站并无不同。 Windows Server 证书服务中的 **Web 服务器** 模板满足所需功能。
 
 规划任务
 
@@ -212,7 +211,7 @@ New-DscChecksum -ConfigurationPath .\ -OutPath .\
 - **对每台服务器分配 Guid** — 提供一种措施来保证分别控制每台服务器配置。 这提供了更新方面的精度级别，十分适合于包含少量服务器的环境。
 - **对每个服务器角色分配 Guid** — 执行相同功能的所有服务器（如 Web 服务器）都使用相同 GUID 引用所需配置数据。 请注意，如果有许多服务器共享相同 GUID，则它们都会在配置更改时同时更新。
 
-  GUID 是应视为敏感数据的信息，因为它可以由具有恶意企图的人员用于获取有关如何在环境中部署和配置服务器的情报。 有关详细信息，请参阅[在 PowerShell Desired State Configuration 拉取模式下安全地分配 Guid](https://blogs.msdn.microsoft.com/powershell/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/)。
+  GUID 是应视为敏感数据的信息，因为它可以由具有恶意企图的人员用于获取有关如何在环境中部署和配置服务器的情报。 有关详细信息，请参阅[在 PowerShell Desired State Configuration 拉取模式下安全地分配 Guid](https://devblogs.microsoft.com/powershell/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/)。
 
 规划任务
 
@@ -537,7 +536,7 @@ Update-DscConfiguration –Wait -Verbose
 
 在包含 OData Web 服务的请求服务器部署过程中，会存储数据文件以创建信息。 文件的类型取决于操作系统，如下所述。
 
-- **Windows Server 2012**：文件类型始终为 .mdb
-- **Windows Server 2012 R2**：文件类型默认为 .edb，除非在配置中指定了 .mdb
+- Windows Server 2012 - 文件类型始终为 `.mdb`
+- Windows Server 2012 R2 - 文件类型默认为 `.edb`，除非在配置中指定了 `.mdb`
 
 在用于安装请求服务器的[高级示例脚本](https://github.com/mgreenegit/Whitepapers/blob/Dev/PullServerCPIG.md#installation-and-configuration-scripts)中，还会找到有关如何自动控制 web.config 文件设置以防止文件类型所导致的任何可能错误的示例。

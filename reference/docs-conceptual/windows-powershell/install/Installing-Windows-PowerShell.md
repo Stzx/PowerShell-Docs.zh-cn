@@ -1,13 +1,13 @@
 ---
 ms.date: 08/09/2017
-keywords: powershell, cmdlet, 下载, 安装, 设置, windows 10, windows 8.1, windows 8.0, windows 7
 title: 安装 Windows PowerShell
-ms.openlocfilehash: 26675eb0b213818eaa72e148f0814545ee9f960e
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: 本文介绍了如何在各种版本的 Windows 上安装 Windows PowerShell。
+ms.openlocfilehash: 04e6d791e6895dd50825c58c905ff9cf8fa86ca8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236214"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663983"
 ---
 # <a name="installing-windows-powershell"></a>安装 Windows PowerShell
 
@@ -17,7 +17,7 @@ ms.locfileid: "89236214"
 
 ## <a name="finding-powershell-in-windows-10-81-80-and-7"></a>在 Windows 10、8.1、8.0 和 7 中查找 PowerShell
 
-有时在 Windows 中查找 PowerShell 控制台或 ISE（集成脚本环境）并非易事，因为其位置会随不同的 Windows 版本而发生移动。
+有时在 Windows 中查找 PowerShell 控制台或集成脚本环境 (ISE) 并非易事，因为其位置会随不同的 Windows 版本而发生移动。
 
 以下表格应有助于在使用的 Windows 版本中查找 PowerShell。 此处列出的所有版本均为发布时的原始版本，没有进行任何更新。
 

@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: ISE 对象模型层次结构
-ms.openlocfilehash: 1ec5810fc5e7b765c2a08af83bce0415dd61a54b
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 本文介绍了属于 Windows PowerShell ISE 一部分的对象的层次结构。
+ms.openlocfilehash: 00980cda72f05bc6ccb398079b129de13a98f783
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809733"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658302"
 ---
 # <a name="the-ise-object-model-hierarchy"></a>ISE 对象模型层次结构
 
-本主题介绍了属于 Windows PowerShell 集成脚本环境 (ISE) 一部分的对象的层次结构。 在 Windows PowerShell 3.0、4.0 和 5.1 中包含 Windows PowerShell ISE。 单击一个对象，使你转到定义对象的类的参考文档。
+本文介绍了属于 Windows PowerShell 集成脚本环境 (ISE) 一部分的对象的层次结构。 在 Windows PowerShell 3.0、4.0 和 5.1 中包含 Windows PowerShell ISE。 单击一个对象，使你转到定义对象的类的参考文档。
 
 ## <a name="psise-object"></a>$psISE 对象
 

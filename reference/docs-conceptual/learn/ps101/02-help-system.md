@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 8325a32ad8ec137781300e9d46cab52705f0805a
-ms.sourcegitcommit: eaac7af89171379df2e20464ebee9fc7e7d7674a
+ms.openlocfilehash: 98876cf324b367fd5bb3c3462cb90ea6d7c7d5b9
+ms.sourcegitcommit: 0942a6de384f4a1c624e89b1889434a30d22f4d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89493651"
+ms.lasthandoff: 11/01/2020
+ms.locfileid: "93143307"
 ---
 # <a name="chapter-2---the-help-system"></a>第 2 章 - 帮助系统
 

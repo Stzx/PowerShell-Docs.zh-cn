@@ -1,15 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB, SydneyhSmith
-keywords: 库,powershell,cmdlet,psgallery
-description: 面向发行者的指南
+description: 本文介绍了一些推荐步骤，以确保发布到 PowerShell 库的包被广泛采用，并为用户提供高价值包。
 title: PowerShell 库发布指南和最佳做法
-ms.openlocfilehash: c58b23b0021e0745ee690a78f7e42c821d59cdb0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: 949340aeba36df26c68f92422b8c11869ed3bf11
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777853"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656155"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 库发布指南和最佳做法
 
@@ -52,7 +50,7 @@ ms.locfileid: "87777853"
 - 已更正或修复文档中的所有错误。
 - 已查看并在必要时解决所有警告。
 
-强烈建议从 PowerShell 库下载包的用户运行 **PSScriptAnalyzer**，并评估所有错误和警告。 如果用户看到 PSScriptAnalyzer  报告的错误，他们很有可能会与包所有者进行联系。 如果包有充分理由保留标记为错误的代码，请将相应信息添加到文档中，以免多次回答同一问题。
+强烈建议从 PowerShell 库下载包的用户运行 **PSScriptAnalyzer** ，并评估所有错误和警告。 如果用户看到 PSScriptAnalyzer  报告的错误，他们很有可能会与包所有者进行联系。 如果包有充分理由保留标记为错误的代码，请将相应信息添加到文档中，以免多次回答同一问题。
 
 ## <a name="include-documentation-and-examples"></a>添加文档和示例
 
@@ -85,10 +83,9 @@ Example: RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="
 
 及时响应反馈的包所有者会受到社区的高度重视。 请务必及时响应提供建设性反馈的用户，因为他们对包非常感兴趣并尝试帮助改进包。
 
-PowerShell 库支持以下两种反馈方法：
+PowerShell 库支持以下一种反馈方法：
 
 - 联系人所有者：这样，用户可以向包所有者发送电子邮件。 作为包所有者，请务必监视用于 PowerShell 库包的电子邮件地址，并及时响应所提出的问题。 这种方法有一个缺点，就是只有用户和所有者才能看到通信，因此所有者可能需要多次回答同一问题。
-- 评论：包网页的底部有“评论”  字段。 此系统的优点是，其他用户可以看到评论和响应，这样就减少了必须回答每个问题的次数。 强烈建议包所有者关注对每个包发表的评论。 若要详细了解如何执行此操作，请参阅[通过社交媒体或发表评论提供反馈](../how-to/working-with-packages/social-media-feedback.md)。
 
 建设性地响应反馈的所有者将受到社区的重视。 使用报表中的机会来请求详细信息。 如果需要，请提供一种解决方法，或确定更新是否解决了问题。
 

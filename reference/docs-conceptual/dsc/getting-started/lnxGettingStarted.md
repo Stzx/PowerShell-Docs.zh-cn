@@ -2,16 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux 的 Desired State Configuration (DSC) 入门
-ms.openlocfilehash: 64657dda04fa2df97fa2ad7c7a5c2d15b66a270a
-ms.sourcegitcommit: 4bb44f183dcbfa8dced57f075812e02d3b45fd70
+description: 本主题说明如何开始使用适用于 Linux 的 PowerShell Desired State Configuration (DSC)。
+ms.openlocfilehash: 826707654a297306c39d4dfcfd3941f56b7cf91d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301329"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92651116"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>适用于 Linux 的 Desired State Configuration (DSC) 入门
 
-本主题说明如何开始使用适用于 Linux 的 PowerShell Desired State Configuration (DSC)。 有关 DSC 的常规信息，请参阅 [Windows PowerShell Desired State Configuration 入门](../overview/overview.md)。
+本主题说明如何开始使用适用于 Linux 的 PowerShell Desired State Configuration (DSC)。
+有关 DSC 的常规信息，请参阅 [Windows PowerShell Desired State Configuration 入门](../overview/overview.md)。
 
 ## <a name="supported-linux-operation-system-versions"></a>支持的 Linux 操作系统版本
 
@@ -43,7 +45,7 @@ ms.locfileid: "86301329"
 
 ### <a name="installing-dsc"></a>安装 DSC
 
-适用于 Linux 的 DSC 可在[此处](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294)下载。
+适用于 Linux 的 DSC 可从存储库中的 [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294) 存储库下载。
 
 若要安装 DSC，请安装适用于 Linux 系统（.rpm 或.deb）和 OpenSSL 版本（ssl_098 或 ssl_100）以及体系结构 (x64/x86) 的程序包。 RPM 程序包适用于 CentOS、Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Oracle Linux。 DEB 程序包适用于 Debian GNU/Linux 和 Ubuntu Server。 ssl_098 程序包适用于安装了 OpenSSL 0.9.8 的计算机，而 ssl_100 程序包适用于安装了 OpenSSL 1.0 的计算机。
 
@@ -83,7 +85,7 @@ ms.locfileid: "86301329"
 
         Node  "linuxhost.contoso.com"
         {
-            nxFile ExampleFile 
+            nxFile ExampleFile
             {
                 DestinationPath = "/tmp/example"
                 Contents = "hello world `n"
@@ -115,10 +117,7 @@ $Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Aut
 ```
 
 > [!NOTE]
-> 对于“推送”模式，用户凭据必须为 Linux 计算机上的根用户。
-> 适用于 Linux 的 DSC 仅支持 SSL/TLS 连接，使用 `New-CimSession` 时必须将 –UseSSL 参数设置为 $true。
-> 在 `/etc/opt/omi/conf/omiserver.conf` 文件中通过 pemfile 和 keyfile 属性指定（DSC 的）OMI 使用的 SSL 证书。
-> 如果 [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) cmdlet 运行于的 Windows 计算机不信任此证书，你可以通过以下 CIMSession 选项选择忽略证书验证：`-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
+> 对于“推送”模式，用户凭据必须为 Linux 计算机上的根用户。 适用于 Linux 的 DSC 仅支持 SSL/TLS 连接，使用 `New-CimSession` 时必须将 –UseSSL 参数设置为 $true。 在 `/etc/opt/omi/conf/omiserver.conf` 文件中通过 pemfile 和 keyfile 属性指定（DSC 的）OMI 使用的 SSL 证书。 如果 [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) cmdlet 运行于的 Windows 计算机不信任此证书，你可以通过以下 CIMSession 选项选择忽略证书验证：`-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
 
 运行以下命令以将 DSC 配置推送到 Linux 节点。
 
@@ -134,45 +133,45 @@ $Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Aut
 
 - GetDscConfiguration.py
 
-返回应用于此计算机的当前配置。 与使用 Windows PowerShell cmdlet `Get-DscConfiguration` cmdlet 类似。
+  返回应用于此计算机的当前配置。 与使用 Windows PowerShell cmdlet `Get-DscConfiguration` cmdlet 类似。
 
-`# sudo ./GetDscConfiguration.py`
+  `# sudo ./GetDscConfiguration.py`
 
 - GetDscLocalConfigurationManager.py
 
-返回应用于此计算机的当前元配置。 与 cmdlet [Get-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) cmdlet 类似。
+  返回应用于此计算机的当前元配置。 与 cmdlet [Get-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) cmdlet 类似。
 
-`# sudo ./GetDscLocalConfigurationManager.py`
+  `# sudo ./GetDscLocalConfigurationManager.py`
 
 - InstallModule.py
 
-安装自定义 DSC 资源模块。 需要包含模块共享对象库和架构 MOF 文件的 .zip 文件的路径。
+  安装自定义 DSC 资源模块。 需要包含模块共享对象库和架构 MOF 文件的 .zip 文件的路径。
 
-`# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
+ `# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
 
 - RemoveModule.py
 
-删除自定义 DSC 资源模块。 需要待删除模块的名称。
+  删除自定义 DSC 资源模块。 需要待删除模块的名称。
 
-`# sudo ./RemoveModule.py cnx_Resource`
+  `# sudo ./RemoveModule.py cnx_Resource`
 
 - StartDscLocalConfigurationManager.py
 
-将配置 MOF 文件应用于计算机。 与 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet 类似。 需要待应用的配置 MOF 的路径。
+  将配置 MOF 文件应用于计算机。 与 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet 类似。 需要待应用的配置 MOF 的路径。
 
-`# sudo ./StartDscLocalConfigurationManager.py –configurationmof /tmp/localhost.mof`
+  `# sudo ./StartDscLocalConfigurationManager.py –configurationmof /tmp/localhost.mof`
 
 - SetDscLocalConfigurationManager.py
 
-将元配置 MOF 文件应用于计算机。 与 [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) cmdlet 类似。 需要待应用的元配置 MOF 的路径。
+  将元配置 MOF 文件应用于计算机。 与 [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) cmdlet 类似。 需要待应用的元配置 MOF 的路径。
 
-`# sudo ./SetDscLocalConfigurationManager.py –configurationmof /tmp/localhost.meta.mof`
+  `# sudo ./SetDscLocalConfigurationManager.py –configurationmof /tmp/localhost.meta.mof`
 
 ## <a name="powershell-desired-state-configuration-for-linux-log-files"></a>适用于 Linux 的 PowerShell Desired State Configuration 日志文件
 
 为适用于 Linux 的.DSC 生成了以下日志文件。
 
-|日志文件|Directory|说明|
-|---|---|---|
-|**omiserver.log**|`/var/opt/omi/log`|与 OMI CIM 服务器操作相关的消息。|
-|**dsc.log**|`/var/opt/omi/log`|与本地配置管理器 (LCM) 操作和 DSC 资源操作相关的消息。|
+|     日志文件      |     Directory      |                                               说明                                                |
+| ----------------- | ------------------ | -------------------------------------------------------------------------------------------------------- |
+| **omiserver.log** | `/var/opt/omi/log` | 与 OMI CIM 服务器操作相关的消息。                                                |
+| **dsc.log**       | `/var/opt/omi/log` | 与本地配置管理器 (LCM) 操作和 DSC 资源操作相关的消息。 |

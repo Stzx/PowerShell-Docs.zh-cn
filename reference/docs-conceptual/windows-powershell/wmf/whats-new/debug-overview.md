@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,安装程序
 title: PowerShell 脚本调试中的改进
-ms.openlocfilehash: f1771a451ba671da2371fcfc95374e6131573ddc
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 5.0 向 Windows PoowerShell 添加了新的调试功能。
+ms.openlocfilehash: 5703343e1b85024931638e8b04a09f7208ea123c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808943"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646734"
 ---
 # <a name="improvements-in-powershell-script-debugging"></a>PowerShell 脚本调试中的改进
 
@@ -19,7 +20,7 @@ PowerShell 控制台和 PowerShell ISE 现在可以中断调试器，而运行�
 
 在控制台中，按 <kbd>Ctrl</kbd>+<kbd>Break</kbd>。
 
-在 ISE 中，按 <kbd>Ctrl</kbd>+<kbd>B</kbd>，或使用“调试”->“全部中断”  菜单命令。
+在 ISE 中，按 <kbd>Ctrl</kbd>+<kbd>B</kbd>，或使用“调试”->“全部中断”菜单命令。
 
 ## <a name="remote-debugging-and-remote-file-editing-in-powershell-ise"></a>PowerShell ISE 中的远程调试和远程文件编辑
 

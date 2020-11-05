@@ -2,18 +2,19 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,配置,安装程序
 title: DSC 故障排除
-ms.openlocfilehash: 83e59b9f7148b52071d4782522ca7642027d795a
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: 本文介绍有关常见错误的故障排除说明。
+ms.openlocfilehash: 2ac86689fa2695add247995bfb91c0ea85e22d60
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692306"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656243"
 ---
 # <a name="troubleshooting-dsc"></a>DSC 故障排除
 
-适用于：_Windows PowerShell 4.0 和 Windows PowerShell 5.0_
+> 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
-本主题介绍出现问题时 DSC 故障排除的方法。
+本文介绍有关常见错误的故障排除说明。
 
 ## <a name="winrm-dependency"></a>WinRM 依赖关系
 
@@ -82,12 +83,12 @@ PSComputerName        :
 
 ## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>脚本不运行：使用 DSC 日志来诊断脚本错误
 
-与所有 Windows 软件一样，DSC 将错误和事件记录在[日志](/windows/desktop/EventLog/about-event-logging)中，可以通过[事件查看器](https://support.microsoft.com/hub/4338813/windows-help)查看。
-检查这些日志可以帮助你了解某一特定操作失败的原因，以及如何防止将来出现故障。 编写配置脚本可能会很棘手，因此，为了在创作时更轻松地跟踪错误，请在 DSC Analytic 事件日志中使用 DSC Log 资源跟踪配置的进度。
+与所有 Windows 软件一样，DSC 将错误和事件记录在[日志](/windows/desktop/EventLog/about-event-logging)中，可以通过[事件查看器](https://support.microsoft.com/hub/4338813/windows-help)查看。 检查这些日志可以帮助你了解某一特定操作失败的原因，以及如何防止将来出现故障。
+编写配置脚本可能会很棘手，因此，为了在创作时更轻松地跟踪错误，请在 DSC Analytic 事件日志中使用 DSC Log 资源跟踪配置的进度。
 
 ## <a name="where-are-dsc-event-logs"></a>DSC 事件日志在哪里？
 
-在事件查看器中，DSC 事件位于：**Applications and Services Logs/Microsoft/Windows/Desired State Configuration**
+在事件查看器中，DSC 事件位于： **Applications and Services Logs/Microsoft/Windows/Desired State Configuration**
 
 也可以运行相应的 PowerShell cmdlet ([Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)) 以查看事件日志：
 
@@ -101,8 +102,9 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-如上所示，DSC 的主日志名称为 Microsoft->Windows->DSC（为简洁起见，此处未显示 Windows 下的其他日志名称）。 将主名称追加到通道名称，以创建完整的日志名称。 DSC 引擎主要写入三种类型的日志：[运行、分析和调试日志](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11))。 分析和调试日志默认处于关闭状态，因此你应该在事件查看器中启用它们。 若要进行此操作，请在 Windows PowerShell 中输入 Show-EventLog 以打开事件查看器，或依次单击“开始”、“控制面板”、“管理工具”以及“事件查看器”。   
-在事件查看器中的“查看”菜单上，单击“显示分析和调试日志”。  分析通道的日志名称为 **Microsoft-Windows-Dsc/Analytic**，而调试通道为 **Microsoft-Windows-Dsc/Debug**。 你还可以通过 [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) 实用程序启用日志，如下面的示例中所示。
+如上所示，DSC 的主日志名称为 Microsoft->Windows->DSC（为简洁起见，此处未显示 Windows 下的其他日志名称）。 将主名称追加到通道名称，以创建完整的日志名称。 DSC 引擎主要写入三种类型的日志：[运行、分析和调试日志](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11))。
+分析和调试日志默认处于关闭状态，因此你应该在事件查看器中启用它们。
+若要进行此操作，请在 Windows PowerShell 中输入 Show-EventLog 以打开事件查看器，或依次单击“开始”、“控制面板”、“管理工具”以及“事件查看器”。    在事件查看器中的“查看”菜单上，单击“显示分析和调试日志”。  分析通道的日志名称为 **Microsoft-Windows-Dsc/Analytic** ，而调试通道为 **Microsoft-Windows-Dsc/Debug** 。 你还可以通过 [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) 实用程序启用日志，如下面的示例中所示。
 
 ```powershell
 wevtutil.exe set-log "Microsoft-Windows-Dsc/Analytic" /q:true /e:true
@@ -254,8 +256,8 @@ PS C:\> $myFailedEvent.Message
 
 Job {5BCA8BE7-5BB6-11E3-BF41-00155D553612} :
 DSC Engine Error :
- Error Message Current configuration does not exist. Execute Start-DscConfiguration command with -Path pa
-rameter to specify a configuration file and create a current configuration first.
+ Error Message Current configuration does not exist. Execute Start-DscConfiguration command with
+ -Path parameter to specify a configuration file and create a current configuration first.
 Error Code : 1
 ```
 
@@ -471,7 +473,7 @@ SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32
 
 若要在不重启的情况下成功回收配置并清除缓存，必须停止并重新启动主机进程。 可按实例逐一进行此操作，在这些实例中标识、停止和重新启动该进程。 或者，你可以使用 `DebugMode` 来重新加载 PowerShell DSC 资源，如下所示。
 
-若要确定承载 DSC 引擎的进程并按实例逐一停止它们，你可以列出承载 DSC 引擎的 WmiPrvSE 的进程 ID。 然后，若要更新提供程序，请使用以下命令停止 WmiPrvSE 进程，并再次运行 **Start-DscConfiguration**。
+若要确定承载 DSC 引擎的进程并按实例逐一停止它们，你可以列出承载 DSC 引擎的 WmiPrvSE 的进程 ID。 然后，若要更新提供程序，请使用以下命令停止 WmiPrvSE 进程，并再次运行 **Start-DscConfiguration** 。
 
 ```powershell
 ###
@@ -489,7 +491,7 @@ Get-Process -Id $dscProcessID | Stop-Process
 
 ## <a name="using-debugmode"></a>使用 DebugMode
 
-可将 DSC 本地配置管理器 (LCM) 配置为使用 `DebugMode`，以便在重新启动主机进程时始终清除缓存。 当设置为 **TRUE**，它将使引擎始终重新加载 PowerShell DSC 资源。 编写完资源后，可将其设置回 **FALSE**，引擎将恢复到其缓存模块的行为。
+可将 DSC 本地配置管理器 (LCM) 配置为使用 `DebugMode`，以便在重新启动主机进程时始终清除缓存。 当设置为 **TRUE** ，它将使引擎始终重新加载 PowerShell DSC 资源。 编写完资源后，可将其设置回 **FALSE** ，引擎将恢复到其缓存模块的行为。
 
 下列演示表明了 `DebugMode` 可以如何自动刷新缓存。 首先，让我们看一下默认配置：
 
@@ -602,7 +604,7 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-此脚本将生成一个随机数，并相应地更新提供程序代码。 将 `DebugMode` 设置为 false 后，文件“$env:SystemDrive\OutputFromTestProviderDebugMode.txt”的内容未发生更改。
+此脚本将生成一个随机数，并相应地更新提供程序代码。 将 `DebugMode` 设置为 false 时，从不更改文件 `$env:SystemDrive\OutputFromTestProviderDebugMode.txt` 的内容。
 
 现在，在配置脚本中将 `DebugMode` 设置为“ForceModuleImport”：
 
@@ -633,16 +635,15 @@ onlyProperty                            PSComputerName
 
 将元配置应用于服务器以将其注册到 Windows 拉取服务器实例时，可能遇到以下错误。
 
-```PowerShell
-Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server 
+```
+Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server
 https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned unexpected response code InternalServerError. .
     + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
     + FullyQualifiedErrorId : RegisterDscAgentUnsuccessful,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
     + PSComputerName        : <computername>
 ```
 
-当服务器上用于加密流量的证书公用名称 (CN) 不同于节点用于解析 URL 的 DNS 名称时，可能发生此情况。
-更新 Windows 拉取服务器实例，使用名称正确的证书。
+当服务器上用于加密流量的证书公用名称 (CN) 不同于节点用于解析 URL 的 DNS 名称时，可能发生此情况。 更新 Windows 拉取服务器实例，使用名称正确的证书。
 
 ## <a name="error-when-running-sysprep-after-applying-a-dsc-configuration"></a>在应用 DSC 配置后应用 Sysprep 时出错
 
@@ -652,7 +653,7 @@ https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned une
 SYSPRP LaunchDll:Failure occurred while executing 'DscCore.dll,SysPrep_Cleanup', returned error code 0x2
 ```
 
-不支持在使用 Windows PowerShell Desired State Configuration 配置后通用化服务器。  转而，请在完成 Windows 设置的通用化阶段后将配置应用于 Windows。
+不支持在使用 Windows PowerShell Desired State Configuration 配置后通用化服务器。 转而，请在完成 Windows 设置的通用化阶段后将配置应用于 Windows。
 
 ## <a name="see-also"></a>另请参阅
 

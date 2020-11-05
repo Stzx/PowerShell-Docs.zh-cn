@@ -2,12 +2,13 @@
 ms.date: 07/23/2020
 keywords: dsc,powershell,配置,安装程序
 title: DSC 资源
-ms.openlocfilehash: 6ab831c9d423c6189951b43bfab92f800366ceca
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: DSC 资源为 DSC 配置提供构建基块。 资源公开可配置的属性（架构），并包含由 LCM 用于应用配置的 PowerShell 脚本函数。
+ms.openlocfilehash: 1634db84deff8de3b33c941ad738dc21cf3017ac
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777922"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658439"
 ---
 # <a name="dsc-resources"></a>DSC 资源
 
@@ -19,11 +20,10 @@ Desired State Configuration (DSC) 资源为 DSC 配置提供构建基块。 资�
 
 资源的建模对象可以是一般的文件或 Windows 进程，也可以是具体的 IIS 服务器设置。 资源等组被组合成为 DSC 模块，模块将全部所需文件组织成为一个可移植结构，该结构包含标志资源既定用途的元数据。
 
-每个资源都具有用于确定使用[配置](../configurations/configurations.md)中的资源所需的语法的 *架构。
-可以按以下方式定义资源的架构：
+每个资源都具有用于确定使用[配置](../configurations/configurations.md)中的资源所需的语法的 *架构。 可以按以下方式定义资源的架构：
 
 - `Schema.Mof` 文件：大多数资源使用[托管对象格式](/windows/desktop/wmisdk/managed-object-format--mof-)定义它们在 `schema.mof` 文件中的架构。
-- `<Resource Name>.schema.psm1` 文件：[复合资源](../configurations/compositeConfigs.md)使用[参数块](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters)定义其在 `<ResourceName>.schema.psm1` 文件中的架构。
+- `<Resource Name>.schema.psm1` 文件：[复合资源](../configurations/compositeConfigs.md)使用[参数块](/powershell/module/microsoft.powershell.core/about/about_functions#functions-with-parameters)定义其在 `<ResourceName>.schema.psm1` 文件中的架构。
 - `<Resource Name>.psm1` 文件：基于类的 DSC 资源定义它们在类定义中的架构。 语法项表示为类属性。 有关详细信息，请参阅 [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc)。
 
 若要检索 DSC 资源的语法，请将 [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet 与 Syntax 参数一起使用。 此用法类似于将 [Get-Command](/powershell/module/microsoft.powershell.core/get-command) 与 Syntax 参数一起使用以获取 cmdlet 语法。 所看到的输出将显示用于指定资源的资源块的模板。
@@ -66,11 +66,13 @@ Service [String] #ResourceName
 ```powershell
 Configuration TestConfig
 {
-    # It is best practice to always directly import resources, even if the resource is a built-in resource.
+    # It is best practice to always directly import resources, even if the
+    # resource is a built-in resource.
     Import-DSCResource -Name Service
     Node localhost
     {
-        # The name of this resource block, can be anything you choose, as long as it is of type [String] as indicated by the schema.
+        # The name of this resource block, can be anything you choose, as l
+        # ong as it is of type [String] as indicated by the schema.
         Service "Spooler:Running"
         {
             Name = "Spooler"
@@ -85,18 +87,21 @@ Configuration TestConfig
 ```powershell
 Configuration TestConfig
 {
-    # It is best practice to always directly import resources, even if the resource is a built-in resource.
+    # It is best practice to always directly import resources, even if the
+    # resource is a built-in resource.
     Import-DSCResource -Name Service
     Node localhost
     {
-        # The name of this resource block, can be anything you choose, as long as it is of type [String] as indicated by the schema.
+        # The name of this resource block, can be anything you choose, as
+        # long as it is of type [String] as indicated by the schema.
         Service "Spooler:Running"
         {
             Name = "Spooler"
             State = "Running"
         }
 
-        # To configure a second service resource block, add another Service resource block and use a unique name.
+        # To configure a second service resource block, add another Service
+        # resource block and use a unique name.
         Service "DHCP:Running"
         {
             Name = "DHCP"

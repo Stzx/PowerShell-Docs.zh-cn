@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: ISEMenuItemCollection 对象
-ms.openlocfilehash: 39e8547c9b19ba323d4b224a46eda416542b2807
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: ISEMenuItemCollection 对象是 ISEMenuItem 对象的集合。
+ms.openlocfilehash: cd86768d13b1326a8f35c44f0391ab60669cee4f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809583"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655991"
 ---
 # <a name="the-isemenuitemcollection-object"></a>ISEMenuItemCollection 对象
 
-**ISEMenuItemCollection** 对象是 **ISEMenuItem** 对象的集合。 它是 **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 类的实例。 一个示例是用于在 Windows PowerShell® 集成脚本环境 (ISE) 中自定义“加载项”菜单的 `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` 对象。
+**ISEMenuItemCollection** 对象是 **ISEMenuItem** 对象的集合。 它是 **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 类的实例。 一个示例是用于在 Windows PowerShell&reg; 集成脚本环境 (ISE) 中自定义“加载项”菜单的 `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` 对象。
 
 ## <a name="method"></a>方法
 

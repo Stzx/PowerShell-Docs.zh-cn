@@ -2,18 +2,20 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,配置,安装程序
 title: 使用 MOF 编写自定义 DSC 资源
-ms.openlocfilehash: ba857fa504bfd84accfd7f260b1fff1228db40ba
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 本文将在 MOF 文件中定义 DSC 自定义资源的架构，并在 PowerShell 脚本文件中实现资源。
+ms.openlocfilehash: e79a37699c468b2c55c307c96f1c193a2c1595b3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217519"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667175"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>使用 MOF 编写自定义 DSC 资源
 
 > 适用于：Windows PowerShell 4.0 和 Windows PowerShell 5.0
 
-在本主题中，我们将在 MOF 文件中定义 Windows PowerShell Desired State Configuration (DSC) 自定义资源的架构，并在 Windows PowerShell 脚本文件中实现资源。 此自定义资源被用于创建和维护网站。
+在本文中，我们将在 MOF 文件中定义 Windows PowerShell Desired State Configuration (DSC) 自定义资源的架构，并在 Windows PowerShell 脚本文件中实现资源。
+此自定义资源被用于创建和维护网站。
 
 ## <a name="creating-the-mof-schema"></a>创建 MOF 架构
 
@@ -68,8 +70,7 @@ class Demo_IISWebsite : OMI_BaseResource
 
 ### <a name="writing-the-resource-script"></a>编写资源脚本
 
-资源脚本实现资源的逻辑。 在此模块中必须包含三个分别名为 `Get-TargetResource`、`Set-TargetResource` 和 `Test-TargetResource` 的函数。 三个函数采用的参数集都必须与你为资源创建的 MOF 架构中定义的属性集一致。 在本文档中，这组属性被称为“资源属性”。 将这三个函数保存在名为 `<ResourceName>.psm1` 的文件中。
-在下面的示例中，函数存储在名为 `Demo_IISWebsite.psm1` 的文件中。
+资源脚本实现资源的逻辑。 在此模块中必须包含三个分别名为 `Get-TargetResource`、`Set-TargetResource` 和 `Test-TargetResource` 的函数。 三个函数采用的参数集都必须与你为资源创建的 MOF 架构中定义的属性集一致。 在本文档中，这组属性被称为“资源属性”。 将这三个函数保存在名为 `<ResourceName>.psm1` 的文件中。 在下面的示例中，函数存储在名为 `Demo_IISWebsite.psm1` 的文件中。
 
 > [!NOTE]
 > 在资源上多次运行相同的配置脚本时，你应该不会收到错误报告，并且资源的状态应该与运行一次脚本的状态相同。 要达到此目的，请确保 `Get-TargetResource` 和 `Test-TargetResource` 函数没有改变资源，并且确保在具有相同参数值的序列中多次调用 `Set-TargetResource` 函数始终等效于调用其一次。
@@ -77,7 +78,8 @@ class Demo_IISWebsite : OMI_BaseResource
 在 `Get-TargetResource` 函数的实现中，使用作为参数而提供的键资源属性值来检查指定资源实例的状态。 此函数必须返回列举了所有作为键的资源属性的哈希表，并返回这些属性的实际值作为对应值。 以下代码是一个示例。
 
 ```powershell
-# DSC uses the Get-TargetResource function to fetch the status of the resource instance specified in the parameters for the target machine
+# DSC uses the Get-TargetResource function to fetch the status of the resource instance
+# specified in the parameters for the target machine
 function Get-TargetResource
 {
     param
@@ -105,8 +107,11 @@ function Get-TargetResource
 
         $getTargetResourceResult = $null;
 
-        <# Insert logic that uses the mandatory parameter values to get the website and assign it to a variable called $Website #>
-        <# Set $ensureResult to "Present" if the requested website exists and to "Absent" otherwise #>
+        <#
+          Insert logic that uses the mandatory parameter values to get the website and
+          assign it to a variable called $Website
+          Set $ensureResult to "Present" if the requested website exists and to "Absent" otherwise
+        #>
 
         # Add all Website properties to the hash table
         # This simple example assumes that $Website is not null
@@ -161,10 +166,14 @@ function Set-TargetResource
         [string[]]$Protocol
     )
 
-    <# If Ensure is set to "Present" and the website specified in the mandatory input parameters does not exist, then create it using the specified parameter values #>
-    <# Else, if Ensure is set to "Present" and the website does exist, then update its properties to match the values provided in the non-mandatory parameter values #>
-    <# Else, if Ensure is set to "Absent" and the website does not exist, then do nothing #>
-    <# Else, if Ensure is set to "Absent" and the website does exist, then delete the website #>
+    <#
+        If Ensure is set to "Present" and the website specified in the mandatory input parameters
+          does not exist, then create it using the specified parameter values
+        Else, if Ensure is set to "Present" and the website does exist, then update its properties
+          to match the values provided in the non-mandatory parameter values
+        Else, if Ensure is set to "Absent" and the website does not exist, then do nothing
+        Else, if Ensure is set to "Absent" and the website does exist, then delete the website
+    #>
 }
 ```
 
@@ -208,18 +217,19 @@ function Test-TargetResource
     # Get the current state
     $currentState = Get-TargetResource -Ensure $Ensure -Name $Name -PhysicalPath $PhysicalPath -State $State -ApplicationPool $ApplicationPool -BindingInfo $BindingInfo -Protocol $Protocol
 
-    #Write-Verbose "Use this cmdlet to deliver information about command processing."
+    # Write-Verbose "Use this cmdlet to deliver information about command processing."
 
-    #Write-Debug "Use this cmdlet to write debug information while troubleshooting."
+    # Write-Debug "Use this cmdlet to write debug information while troubleshooting."
 
-    #Include logic to
+    # Include logic to
     $result = [System.Boolean]
-    #Add logic to test whether the website is present and its status matches the supplied parameter values. If it does, return true. If it does not, return false.
+    # Add logic to test whether the website is present and its status matches the supplied
+    # parameter values. If it does, return true. If it does not, return false.
     $result
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > 为方便调试，请在上述三个函数的实现中使用 `Write-Verbose` cmdlet。 此 cmdlet 将文本写入详细消息流。 默认情况下，不显示详细消息流，但你可以通过更改 **$VerbosePreference** 变量的值或通过在 DSC cmdlets = new 中使用 **Verbose** 参数来显示该流。
 
 ### <a name="creating-the-module-manifest"></a>创建模块清单
@@ -281,7 +291,7 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 ## <a name="supporting-psdscrunascredential"></a>支持 PsDscRunAsCredential
 
 > [!Note]
-> PsDscRunAsCredential**** 在 PowerShell 5.0 及更高版本中受支持。
+> PsDscRunAsCredential 在 PowerShell 5.0 及更高版本中受支持。
 
 可以在 [DSC 配置](../configurations/configurations.md)资源块中使用 PsDscRunAsCredential 属性，以指定应使用指定的一组凭据运行资源。 有关详细信息，请参阅[使用用户凭据运行 DSC](../configurations/runAsUser.md)。
 

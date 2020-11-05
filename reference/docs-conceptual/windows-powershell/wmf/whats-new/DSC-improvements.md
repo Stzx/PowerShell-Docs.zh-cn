@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,安装程序
 title: WMF 5.1 中的 DSC 改进
-ms.openlocfilehash: 445d0f7bb54c6b21b6af26c4174f3d6422caf6dd
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 本文列出了包含在 WMF 5.1 中的 Desired State Configuration (DSC) 改进
+ms.openlocfilehash: 564cf0e8321b6b2b2e5d856acd4d3644d6566100
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771543"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667202"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>WMF 5.1 中的 Desired State Configuration (DSC) 改进
 
@@ -227,7 +226,7 @@ Configuration WebApplication
 }
 ```
 
-在早期版本中，如果试图确保已安装“Web-Server”角色，由于 WindowsFeature FE_IIS 和 WindowsFeature Worker_IIS 实例之间的冲突，将造成编译失败。 请注意，这两个配置中所配置的*所有*属性完全相同。 由于这两个资源中的*所有*属性完全相同，现在这将使成功编译。
+在早期版本中，如果试图确保已安装“Web-Server”角色，由于 WindowsFeature FE_IIS 和 WindowsFeature Worker_IIS 实例之间的冲突，将造成编译失败。 请注意，这两个配置中所配置的 *所有* 属性完全相同。 由于这两个资源中的 *所有* 属性完全相同，现在这将使成功编译。
 
 如果两个资源的任何属性之间有所不同，则不会将他们视为相同且编译将失败。
 

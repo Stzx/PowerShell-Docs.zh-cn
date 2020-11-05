@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,资源,库,安装程序
 title: 向配置添加参数
-ms.openlocfilehash: 9dd9f2be58c13840be2b24e7e21a0d4af79b67cc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC 配置可以参数化，以便基于用户输入进行更多动态配置。
+ms.openlocfilehash: aea230d34994a7b20076559c44990abe554d5395
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80263146"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656817"
 ---
 # <a name="add-parameters-to-a-configuration"></a>向配置添加参数
 
@@ -47,7 +48,7 @@ Configuration TestConfig
 ## <a name="adding-your-own-parameters-to-configurations"></a>将自己的参数添加到配置中
 
 除了内置参数，还可以向配置添加自己的参数。
-参数块直接进入配置声明，就像函数一样。 配置参数块应位于任何节点  声明之外，并且位于任何导入  语句之上。 通过添加参数，可以使配置更加可靠和动态。
+参数块直接进入配置声明，就像函数一样。 配置参数块应位于任何节点声明之外，并且位于任何导入语句之上。 通过添加参数，可以使配置更加可靠和动态。
 
 ```powershell
 Configuration TestConfig
@@ -96,7 +97,7 @@ Configuration TestConfig
 {
     param
     (
-        [String]
+        [String[]]
         $ComputerName="localhost"
     )
 
@@ -119,7 +120,7 @@ TestConfig -ComputerName "server01", "server02", "server03"
 ## <a name="advanced-parameters-in-configurations"></a>配置中的高级参数
 
 除了 `-ComputerName` 参数之外，还可以为服务名称和状态添加参数。
-下面的示例添加一个带有 `-ServiceName` 参数的参数块，并使用它动态定义 Service  资源块。 它还添加一个 `-State` 参数来动态定义 Service 资源块中的状态。
+下面的示例添加一个带有 `-ServiceName` 参数的参数块，并使用它动态定义 Service 资源块。 它还添加一个 `-State` 参数来动态定义 Service 资源块中的状态。
 
 ```powershell
 Configuration TestConfig
@@ -170,7 +171,7 @@ $ServiceName="Spooler"
 $ServiceName
 ```
 
-可以为每个 `parameter` 属性指定自变量，以控制已定义参数的各个方面。 下面的示例使 `$ServiceName` 成为强制  参数。
+可以为每个 `parameter` 属性指定自变量，以控制已定义参数的各个方面。 下面的示例使 `$ServiceName` 成为强制参数。
 
 ```powershell
 [parameter(Mandatory)]
@@ -178,7 +179,7 @@ $ServiceName
 $ServiceName
 ```
 
-对于 `$State` 参数，我们希望阻止用户指定预定义集之外的值（如 Running、Stopped），`ValidationSet*` 属性将阻止用户指定预定义集之外的值（如 Running、Stopped）。 下面的示例将 `ValidationSet` 属性添加到 `$State` 参数。 由于我们不希望使 `$State` 成为强制  参数，因此需要为它添加一个默认值。
+对于 `$State` 参数，我们希望阻止用户指定预定义集之外的值（如 Running、Stopped），`ValidationSet*` 属性将阻止用户指定预定义集之外的值（如 Running、Stopped）。 下面的示例将 `ValidationSet` 属性添加到 `$State` 参数。 由于我们不希望使 `$State` 成为强制参数，因此需要为它添加一个默认值。
 
 ```powershell
 [ValidateSet("Running", "Stopped")]
@@ -228,7 +229,7 @@ Configuration TestConfig
 
 ## <a name="see-also"></a>另请参阅
 
-- [编写 DSC 配置的帮助](configHelp.md)
+- [为 DSC 配置编写帮助](configHelp.md)
 - [动态配置](flow-control-in-configurations.md)
 - [在配置中使用配置数据](configData.md)
 - [分离配置和环境数据](separatingEnvData.md)

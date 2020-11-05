@@ -1,21 +1,19 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: 库,powershell,cmdlet,psgallery
 title: 筛选搜索结果
-ms.openlocfilehash: 51f8d243cb9b1f4ff7413eec8839697299e8dd52
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: 本文介绍用于筛选 PowerShell 库中的内容的用户界面。
+ms.openlocfilehash: cc375f3ddb35c95ed134776500bd326bc3db6b1a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691466"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661399"
 ---
 # <a name="filtering-search-results"></a>筛选搜索结果
 
 [“包”选项卡](https://www.powershellgallery.com/packages)显示 PowerShell 库中所有可用的包。
 
-可通过多种方法筛选、排序和搜索这些包。
-若要查看某个特定包的详细信息，请单击该包。
+可通过多种方法筛选、排序和搜索这些包。 若要查看某个特定包的详细信息，请单击该包。
 
 ## <a name="filter-by"></a>筛选依据
 
@@ -38,15 +36,10 @@ ms.locfileid: "83691466"
   - 角色功能
   - 工作流
 
-若要仅查看 PowerShell 库中的模块，请选中“包类型”中的“模块”。
-同样，若要仅查看 PowerShell 库中的脚本，请选中“包类型”中的“脚本”。
+若要仅查看 PowerShell 库中的模块，请选中“包类型”中的“模块”。 同样，若要仅查看 PowerShell 库中的脚本，请选中“包类型”中的“脚本”。
 
 > [!NOTE]
-> 筛选器为包含式。
-> 示例：如果选中“Cmdlet”和/或“函数”，将显示包含 cmdlet 和函数的包。
-> 如果未选中任何一个，则不会显示包。
-> 同样，如果选择了所有类别，将仅显示包含这些类别之一的包。
-> 不会显示不属于任何这些类别的包。 
+> 筛选器为包含式。 示例：如果选中“Cmdlet”和/或“函数”，将显示包含 cmdlet 和函数的包。 如果未选中任何一个，则不会显示包。 同样，如果选择了所有类别，将仅显示包含这些类别之一的包。 不会显示不属于任何这些类别的包。 
 
 ## <a name="sort-by"></a>排序依据
 

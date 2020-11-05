@@ -2,12 +2,12 @@
 title: 了解 VS Code 和 PowerShell 中的文件编码
 description: 在 VS Code 和 PowerShell 中配置文件编码
 ms.date: 02/28/2019
-ms.openlocfilehash: a4b13bcfbe5cffc4e015a37a5fd64fbb8b91f949
-ms.sourcegitcommit: 01a1c253f48b61c943f6d6aca4e603118014015f
+ms.openlocfilehash: afad189ff20a4e73d25f15c48d6c4982b18f29a3
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87900006"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142542"
 ---
 # <a name="understanding-file-encoding-in-vs-code-and-powershell"></a>了解 VS Code 和 PowerShell 中的文件编码
 
@@ -15,7 +15,7 @@ ms.locfileid: "87900006"
 
 ## <a name="what-is-file-encoding-and-why-is-it-important"></a>什么是文件编码以及它为什么很重要？
 
-VS Code 管理人员向缓冲区中输入字符串与对文件系统读取/写入字节块之间的接口。 当 VS Code 保存文件时，它会使用文本编码来确定每个字符变为哪些字节。
+VS Code 管理人员向缓冲区中输入字符串与对文件系统读取/写入字节块之间的接口。 当 VS Code 保存文件时，它会使用文本编码来确定每个字符变为哪些字节。 有关详细信息，请参阅 [about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding)。
 
 同样，当 PowerShell 运行脚本时，必须将文件中的字节转换为字符以将文件重新构造为 PowerShell 程序。 由于 VS Code 写入文件，而 PowerShell 读取文件，因此它们需要使用相同的编码系统。 分析 PowerShell 脚本的这一过程是：字节   -> 字符   -> 标记   -> 抽象语法树   -> 执行  。
 
@@ -41,27 +41,27 @@ VS Code 和 PowerShell 都使用合理的默认编码配置进行安装。 但�
 
 ### <a name="how-to-tell-when-you-have-encoding-issues"></a>如何判断出现了编码问题
 
-编码错误通常表现为脚本中的分析错误。 如果在脚本中发现奇怪的字符序列，则这可能是问题所在。 在以下示例中，短划线 (`–`) 显示为字符 `â€"`：
+编码错误通常表现为脚本中的分析错误。 如果在脚本中发现奇怪的字符序列，则这可能是问题所在。 在以下示例中，短划线 (`–`) 显示为字符 `â&euro;"`：
 
 ```Output
 Send-MailMessage : A positional parameter cannot be found that accepts argument 'Testing FuseMail SMTP...'.
 At C:\Users\<User>\<OneDrive>\Development\PowerShell\Scripts\Send-EmailUsingSmtpRelay.ps1:6 char:1
-+ Send-MailMessage â€"From $from â€"To $recipient1 â€"Subject $subject  ...
++ Send-MailMessage â&euro;"From $from â&euro;"To $recipient1 â&euro;"Subject $subject  ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidArgument: (:) [Send-MailMessage], ParameterBindingException
     + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SendMailMessage
 ```
 
-发生此问题的原因是 VS Code 将采用 UTF-8 的字符 `–` 编码为字节 `0xE2 0x80 0x93`。 当这些字节解码为 Windows-1252 时，它们会被解释为字符 `â€"`。
+发生此问题的原因是 VS Code 将采用 UTF-8 的字符 `–` 编码为字节 `0xE2 0x80 0x93`。 当这些字节解码为 Windows-1252 时，它们会被解释为字符 `â&euro;"`。
 
 可能会看到的一些奇怪字符序列包括：
 
 <!-- markdownlint-disable MD038 -->
-- `â€"`（而不是 `–`）
-- `â€"`（而不是 `—`）
+- `â&euro;"`（而不是 `–`）
+- `â&euro;"`（而不是 `—`）
 - `Ã„2`（而不是 `Ä`）
-- `Â`（而不是 ` `（不间断空格））
-- `Ã©`（而不是 `é`）
+- `Â`（而不是 ` `（不间断空格））
+- `Ã&copy;`（而不是 `é`）
 <!-- markdownlint-enable MD038 -->
 
 此便捷[参考](https://www.i18nqa.com/debug/utf8-debug.html)列出了指示 UTF-8/Windows-1252 编码问题的常见模式。
@@ -88,7 +88,7 @@ Unicode 编码也具有字节顺序标记 (BOM) 的概念。 BOM 在文本开头
 
 BOM 是可选的，其采用在 Linux 领域中并不普遍，因为到处都在使用可靠的 UTF-8 约定。 大多数 Linux 应用程序假设文本输入采用 UTF-8 进行编码。 虽然许多 Linux 应用程序可识别并正确处理 BOM，不过有一些应用程序无法这样做，从而导致使用这些应用程序操作的文本中出现异常。
 
-**因此**：
+**因此** ：
 
 - 如果主要使用 Windows 应用程序和 Windows PowerShell，则应优先使用诸如具有 BOM 的 UTF-8 或 UTF-16 这类编码。
 - 如果跨平台工作，则应优先使用具有 BOM 的 UTF-8。
@@ -131,6 +131,8 @@ VS Code 的默认编码是不具有 BOM 的 UTF-8。
     "files.autoGuessEncoding": true
 }
 ```
+
+你可能还要考虑为 Visual Studio Code 安装 [Gremlins 跟踪器][]。 此扩展显示某些很容易损坏的 Unicode 字符，因为它们不可见或看起来像其他普通字符。
 
 ## <a name="configuring-powershell"></a>配置 PowerShell
 
@@ -254,6 +256,7 @@ ISE 应遵循 BOM，但也可以使用反射来[设置编码](https://bensonxion
 
 有其他几篇有关在 PowerShell 中编码和配置编码的很好的文章值得一读：
 
+- [about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding)
 - [@mklement0] 的 [StackOverflow 上的 PowerShell 编码摘要](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
 - 以前在 VS Code-PowerShell 上创建的针对编码问题的问题：
   - [#1308](https://github.com/PowerShell/VSCode-powershell/issues/1308)
@@ -273,3 +276,4 @@ ISE 应遵循 BOM，但也可以使用反射来[设置编码](https://bensonxion
 [UTF-16]: https://wikipedia.org/wiki/UTF-16
 [语言服务器协议]: https://microsoft.github.io/language-server-protocol/
 [VS Code 的编码]: https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support
+[Gremlins 跟踪器]: https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins

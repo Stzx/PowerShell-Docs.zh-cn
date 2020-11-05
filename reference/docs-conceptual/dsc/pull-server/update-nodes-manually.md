@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 从拉取服务器更新节点
-ms.openlocfilehash: fa59a2f6574db2dbc96621be4326f1d5a55e5de9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文介绍了如何从拉取服务器更新 DSC 托管节点
+ms.openlocfilehash: 7256a0e1fdfaa8e56150c4f7299640bc95b82cee
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500660"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656761"
 ---
 # <a name="update-nodes-from-a-pull-server"></a>从拉取服务器更新节点
 

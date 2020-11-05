@@ -1,14 +1,13 @@
 ---
 ms.date: 09/19/2019
-contributor: manikb
-keywords: 库,powershell,cmdlet,psget
 title: 安装 PowerShellGet
-ms.openlocfilehash: 4a10699be9ff2b64e5848c6749bdd3dedf55e3c7
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
+description: 本文介绍了如何在各种版本的 PowerShell 中安装 PowerShellGet 模块。
+ms.openlocfilehash: 06ec331446849784bb8464912fbce0e5a940823f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162505"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662146"
 ---
 # <a name="installing-powershellget"></a>安装 PowerShellGet
 
@@ -44,7 +43,7 @@ Exit
 
 ### <a name="for-computers-running-powershell-30-or-powershell-40"></a>对于运行 PowerShell 3.0 或 PowerShell 4.0 的计算机
 
-这些说明适用于已安装 **PackageManagement 预览版**或未安装任何版本的 **PowerShellGet** 的计算机。
+这些说明适用于已安装 **PackageManagement 预览版** 或未安装任何版本的 **PowerShellGet** 的计算机。
 
 两组指令都使用 `Save-Module` cmdlet。 `Save-Module` 从已注册的存储库下载并保存模块和所有依赖项。 模块的最新版本已保存到本地计算机上的指定路径，但尚未安装。 要在 PowerShell 3.0 或 4.0 中安装模块，请将已保存模块的文件夹复制到 `$env:ProgramFiles\WindowsPowerShell\Modules`。
 
@@ -56,7 +55,7 @@ Exit
 #### <a name="preparatory-step-on-computers-running-powershell-30"></a>运行 PowerShell 3.0 的计算机上的准备步骤
 
 以下各节将介绍如何在目录 `$env:ProgramFiles\WindowsPowerShell\Modules` 中安装模块。
-在 PowerShell 3.0 中，默认情况下此目录未在 `$env:PSModulePath` 中列出，因此你需要添加它，才能自动加载模块。 
+在 PowerShell 3.0 中，默认情况下此目录未在 `$env:PSModulePath` 中列出，因此你需要添加它，才能自动加载模块。
 
 打开提升的 PowerShell 会话并运行以下命令（在未来的会话中将生效）：
 
@@ -70,11 +69,11 @@ Exit
 
 #### <a name="computers-with-the-packagemanagement-preview-installed"></a>安装了 PackageManagement 预览版的计算机
 
-> [!NOTE] 
+> [!NOTE]
 > PackageManagement 预览版是一个可下载的组件，可使 PowerShellGet 用于 PowerShell 版本 3 和 4，但现在不再可用。
 > 若要测试是否已在指定计算机上安装该组件，请运行 `Get-Module -ListAvailable PowerShellGet`。
 
-1. 从 PowerShell 会话中，使用 `Save-Module` 下载当前版本的 PowerShellGet。 已下载两个文件夹：**PowerShellGet** 和 **PackageManagement**。 每个文件夹包含一个带有版本号的子文件夹。
+1. 从 PowerShell 会话中，使用 `Save-Module` 下载当前版本的 PowerShellGet。 已下载两个文件夹： **PowerShellGet** 和 **PackageManagement** 。 每个文件夹包含一个带有版本号的子文件夹。
 
    ```powershell
    Save-Module -Name PowerShellGet -Path C:\LocalFolder -Repository PSGallery
@@ -85,7 +84,7 @@ Exit
 1. 使用提升的权限重新打开 PowerShell 控制台，并运行以下命令。
 
    ```powershell
-   'PowerShellGet', 'PackageManagement' | % { 
+   'PowerShellGet', 'PackageManagement' | % {
      $targetDir = "$env:ProgramFiles\WindowsPowerShell\Modules\$_"
      Remove-Item $targetDir\* -Recurse -Force
      Copy-Item C:\LocalFolder\$_\*\* $targetDir\ -Recurse -Force
@@ -96,14 +95,14 @@ Exit
 
 对于未安装任何版本的 PowerShellGet 的计算机（使用 `Get-Module -ListAvailable PowerShellGet` 测试），需要使用安装了 PowerShellGet 的计算机来下载模块 。
 
-1. 在安装了 **PowerShellGet** 的计算机上，使用 `Save-Module` 下载 **PowerShellGet** 的最新版本。 已下载两个文件夹：**PowerShellGet** 和 **PackageManagement**。 每个文件夹包含一个带有版本号的子文件夹。
+1. 在安装了 **PowerShellGet** 的计算机上，使用 `Save-Module` 下载 **PowerShellGet** 的最新版本。 已下载两个文件夹： **PowerShellGet** 和 **PackageManagement** 。 每个文件夹包含一个带有版本号的子文件夹。
 
    ```powershell
    Save-Module -Name PowerShellGet -Path C:\LocalFolder -Repository PSGallery
    ```
 
 1. 将 PowerShellGet 和 PackageManagement 文件夹中相应的 `<version>` 子文件夹分别复制到未安装 PowerShellGet 的计算机的 `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` 和 `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\` 文件夹中，这需要提升的会话  。
-   
+
 1. 例如，如果你可以访问其他计算机上的下载文件夹（如 `ws1`），请通过 UNC 路径（如 `\\ws1\C$\LocalFolder`）从目标计算机打开具有提升权限的 PowerShell 控制台并运行以下命令：
 
    ```powershell

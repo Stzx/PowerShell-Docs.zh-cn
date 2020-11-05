@@ -1,16 +1,15 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: 库,powershell,cmdlet,psgallery
 title: PowerShell 库常见问题解答
-ms.openlocfilehash: 29f930cf552abec8acbbf02f5570c6ac0a14066d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 有关 PowerShell 库的常见问题解答
+ms.openlocfilehash: 045db04d49e0c65f807fef254a17bf20bb877ff6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777816"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654155"
 ---
-# <a name="frequently-asked-questions"></a>常见问题
+# <a name="frequently-asked-questions-about-the-powershell-gallery"></a>有关 PowerShell 库的常见问题解答
 
 ## <a name="what-is-a-powershell-module"></a>什么是 PowerShell 模块？
 
@@ -34,14 +33,14 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 在库中注册后，使用 [Publish-Module][] 或 [Publish-Script][] cmdlet 将包发布到库中。 有关如何运行这些 cmdlet 的详细信息，请访问“发布”选项卡，或阅读 [Publish-Module][] 和 [Publish-Script][] 文档。
 
-安装或保存包无需注册或登录到库。****
+安装或保存包无需注册或登录到库。
 
 ## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>尝试将项发布到 PowerShell 库时，出现“无法处理请求。 ‘指定的 API 密钥无效或无权限访问指定的包。’。 远程服务器返回错误：(403) 已禁止。” 错误。 这是什么意思？
 
 出现该错误的原因可能如下：
 
-- 指定的 API 密钥无效。**** 请确保帐户中指定了有效的 API 密钥。 若要获取 API 密钥，请查看个人资料页。
-- 指定的包名称不属于你。**** 如果已确认 API 密钥正确无误，则可能是因为已存在一个具有与你尝试使用的名称相同的包。 该包可能被其所有者取消列出，在这种情况下，该包不会出现在任何搜索结果中。 若要确定具有相同名称的包已经存在，请打开浏览器并导航至该包的详细信息页：`https://www.powershellgallery.com/packages/<packageName>`。 例如，直接导航至 `https://www.powershellgallery.com/packages/pester` 将进入 Pester 模块的详细信息页上，无论其列出与否。 如果具有冲突名称的包已经存在且被取消列出，则可以执行以下操作：
+- 指定的 API 密钥无效。 请确保帐户中指定了有效的 API 密钥。 若要获取 API 密钥，请查看个人资料页。
+- 指定的包名称不属于你。 如果已确认 API 密钥正确无误，则可能是因为已存在一个具有与你尝试使用的名称相同的包。 该包可能被其所有者取消列出，在这种情况下，该包不会出现在任何搜索结果中。 若要确定具有相同名称的包已经存在，请打开浏览器并导航至该包的详细信息页：`https://www.powershellgallery.com/packages/<packageName>`。 例如，直接导航至 `https://www.powershellgallery.com/packages/pester` 将进入 Pester 模块的详细信息页上，无论其列出与否。 如果具有冲突名称的包已经存在且被取消列出，则可以执行以下操作：
   - 选择其他包名称。
   - 联系现有包的所有者。
 
@@ -56,7 +55,7 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>将模块发布到 PowerShell 库中有什么要求？
 
-任何种类的 PowerShell 模块（脚本模块、二进制模块或清单模块）都可发布到库中。 若要发布模块，PowerShellGet 需要了解该模块的版本、说明、作者和许可方式等信息。 从模块清单** (.psd1) 文件或 [Publish-Module][] cmdlet 的 **LicenseUri** 参数的值的部分发布过程中读取此信息。 所有发布到库中的模块必须具有模块清单。 清单中包含以下信息的任何模块都可发布到库中：
+任何种类的 PowerShell 模块（脚本模块、二进制模块或清单模块）都可发布到库中。 若要发布模块，PowerShellGet 需要了解该模块的版本、说明、作者和许可方式等信息。 从模块清单 (.psd1) 文件或 [Publish-Module][] cmdlet 的 **LicenseUri** 参数的值的部分发布过程中读取此信息。 所有发布到库中的模块必须具有模块清单。 清单中包含以下信息的任何模块都可发布到库中：
 
 - 版本
 - 说明
@@ -65,7 +64,7 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>如何创建格式正确的模块清单？
 
-创建模块清单最简单的方法是运行 [New-ModuleManifest][] cmdlet。 PowerShell 5.0 或更高版本中，New-ModuleManifest 会生成格式正确的模块清单，其中包含 **ProjectUri**、**LicenseUri**、**Tags** 等有用元数据的空白字段。 只需填写空值，或使用生成的清单作为正确格式的示例。
+创建模块清单最简单的方法是运行 [New-ModuleManifest][] cmdlet。 PowerShell 5.0 或更高版本中，New-ModuleManifest 会生成格式正确的模块清单，其中包含 **ProjectUri** 、 **LicenseUri** 、 **Tags** 等有用元数据的空白字段。 只需填写空值，或使用生成的清单作为正确格式的示例。
 
 若要验证是否已正确填写所有必需的元数据字段，请使用 [Test-ModuleManifest][] cmdlet。
 
@@ -73,7 +72,7 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 ## <a name="what-are-the-requirements-to-publish-a-script-to-the-gallery"></a>将脚本发布到库中有什么要求？
 
-任何种类的 PowerShell 脚本（脚本或工作流）都可发布到库中。 若要发布脚本，PowerShellGet 需要了解该脚本的版本、说明、作者和许可方式等信息。 从脚本文件的 PSScriptInfo 部分** 或 [Publish-Script][] cmdlet 的 **LicenseUri** 参数的值的部分发布过程中读取此信息。 所有发布到库中的脚本必须具有元数据信息。 PSScriptInfo 部分中包括以下信息的任何脚本都可发布到库中：
+任何种类的 PowerShell 脚本（脚本或工作流）都可发布到库中。 若要发布脚本，PowerShellGet 需要了解该脚本的版本、说明、作者和许可方式等信息。 从脚本文件的 PSScriptInfo 部分或 [Publish-Script][] cmdlet 的 **LicenseUri** 参数的值的部分发布过程中读取此信息。 所有发布到库中的脚本必须具有元数据信息。 PSScriptInfo 部分中包括以下信息的任何脚本都可发布到库中：
 
 - 版本
 - 说明
@@ -94,7 +93,7 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>如何创建格式正确的脚本文件？
 
-创建格式正确的脚本文件最简单的方法是运行 [New-ScriptFileInfo][] cmdlet。 PowerShell 5.0 中，New-ScriptFileInfo 会生成格式正确的脚本文件，其中包含 **ProjectUri**、**LicenseUri**、**Tags** 等有用元数据的空白字段。 只需填写空值，或使用生成的脚本文件作为正确格式的示例。
+创建格式正确的脚本文件最简单的方法是运行 [New-ScriptFileInfo][] cmdlet。 PowerShell 5.0 中，New-ScriptFileInfo 会生成格式正确的脚本文件，其中包含 **ProjectUri** 、 **LicenseUri** 、 **Tags** 等有用元数据的空白字段。 只需填写空值，或使用生成的脚本文件作为正确格式的示例。
 
 若要验证是否已正确填写所有必需的元数据字段，请使用 [Test-ScriptFileInfo][] cmdlet。
 
@@ -145,9 +144,9 @@ PowerShellGet 使用 NuGet 提供程序支持基于 NuGet 的存储库，例如 
 
 通常，建议选取最新版本的 PowerShellGet 模块（请注意其需要.NET 4.5）。
 
-**PowerShellGet** 模块需要 **PowerShell 3.0 或更高版本**。
+**PowerShellGet** 模块需要 **PowerShell 3.0 或更高版本** 。
 
-因此，**PowerShellGet** 需要以下操作系统之一：
+因此， **PowerShellGet** 需要以下操作系统之一：
 
 - Windows 10
 - Windows 8.1 专业版

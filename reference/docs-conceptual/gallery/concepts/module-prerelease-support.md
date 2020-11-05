@@ -1,14 +1,13 @@
 ---
 ms.date: 09/26/2017
-contributor: keithb
-keywords: 库,powershell,cmdlet,psget
 title: 预发行模块版本
-ms.openlocfilehash: eced067dd21082de0db653daf3b838217154f1dd
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShellGet 模块支持使用语义化版本控制将 1.0.0 以上的版本的模块标记为预发行版。
+ms.openlocfilehash: f794722f0a89f98f8f445ecd45dad9d3d2d7f3cb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328138"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661524"
 ---
 # <a name="prerelease-module-versions"></a>预发行模块版本
 

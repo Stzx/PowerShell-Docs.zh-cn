@@ -2,28 +2,30 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,配置,安装程序
 title: 使用 DSC 报表服务器
-ms.openlocfilehash: 1ccd4f96b782b41b7d7c953735cb41b3ba3d2bce
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 可将节点的本地配置管理器 (LCM) 配置为向拉取服务器发送有关其配置状态的报表，然后即可查询该服务器以检索此数据。
+ms.openlocfilehash: 58ff1684bbe1d23fa68296aa56dd94ba6bc5b148
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953574"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92653713"
 ---
 # <a name="using-a-dsc-report-server"></a>使用 DSC 报表服务器
 
 适用于：Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> 请求服务器（Windows 功能 DSC-Service）是 Windows Server 的一个受支持组件，不过目前没有提供新功能的计划  。 建议开始将托管客户端转换至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)（包括 Windows Server 上的请求服务器以外的功能）或[此处](pullserver.md#community-solutions-for-pull-service)列出的社区解决方案之一。
+> 请求服务器（Windows 功能 DSC-Service）是 Windows Server 的一个受支持组件，不过目前没有提供新功能的计划。 建议开始将托管客户端转换至 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)（包括 Windows Server 上的请求服务器以外的功能）或[此处](pullserver.md#community-solutions-for-pull-service)列出的社区解决方案之一。
 >
 > [!NOTE]
 > 本主题中描述的报表服务器在 PowerShell 4.0 中不可用。
 
-可将节点的本地配置管理器 (LCM) 配置为向请求服务器发送有关其配置状态的报表，然后即可查询该服务器以检索此数据。 每当节点检查和应用配置时，它都会将报表发送到报表服务器。 这些报表存储在服务器上的数据库中，可通过调用报告 Web 服务进行检索。 每个报表中包含所应用的配置、配置是否成功、所使用的资源、引发的所有错误以及开始时间和结束时间等信息。
+可将节点的本地配置管理器 (LCM) 配置为向拉取服务器发送有关其配置状态的报表，然后即可查询该服务器以检索此数据。 每当节点检查和应用配置时，它都会将报表发送到报表服务器。 这些报表存储在服务器上的数据库中，可通过调用报告 Web 服务进行检索。
+每个报表中包含所应用的配置、配置是否成功、所使用的资源、引发的所有错误以及开始时间和结束时间等信息。
 
 ## <a name="configuring-a-node-to-send-reports"></a>将节点配置为发送报表
 
-使用节点上 LCM 配置中的 **ReportServerWeb** 块可指示节点将报表发送到服务器（若要了解如何配置 LCM，请参阅[配置本地配置管理器](../managing-nodes/metaConfig.md)）。 必须将节点向其发送报表的服务器设置为 Web 请求服务器（不能将报表发送到 SMB 共享）。 有关设置请求服务器的信息，请参阅[设置 DSC 请求服务器](pullServer.md)。 报表服务器可以是节点从中请求配置和获取资源的同一服务，也可以是不同服务。
+使用节点上 LCM 配置中的 **ReportServerWeb** 块可指示节点将报表发送到服务器（若要了解如何配置 LCM，请参阅 [配置本地配置管理器](../managing-nodes/metaConfig.md)）。 必须将节点向其发送报表的服务器设置为 Web 请求服务器（不能将报表发送到 SMB 共享）。 有关设置请求服务器的信息，请参阅[设置 DSC 请求服务器](pullServer.md)。 报表服务器可以是节点从中请求配置和获取资源的同一服务，也可以是不同服务。
 
 在 **ReportServerWeb** 块中，指定请求服务的 URL 和服务器已知的注册密钥。
 
@@ -94,11 +96,14 @@ PullClientConfig
 ```
 
 > [!NOTE]
-> 在设置请求服务器时可以将 Web 服务命名为任何所需形式，但是 ServerURL  属性必须与服务名称匹配。
+> 在设置请求服务器时可以将 Web 服务命名为任何所需形式，但是 ServerURL 属性必须与服务名称匹配。
 
 ## <a name="getting-report-data"></a>获取报表数据
 
-发送到请求服务器的报表将被输入该服务器上的数据库。 通过调用 Web 服务即可使用这些报表。 若要检索特定节点的报表，请通过以下形式向报表 Web 服务发送 HTTP 请求：`http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports`
+发送到请求服务器的报表将被输入该服务器上的数据库。 通过调用 Web 服务即可使用这些报表。 若要检索特定节点的报表，请通过以下形式向报表 Web 服务发送 HTTP 请求：
+
+`http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports`
+
 其中 `MyNodeAgentId` 是你想要获取其报表的节点的 AgentId。 可通过在节点上调用 [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) 来获取相应节点的 AgentID。
 
 报表将返回为 JSON 对象数组。
@@ -110,7 +115,7 @@ function GetReport
 {
     param
     (
-        $AgentId = "$((glcm).AgentId)", 
+        $AgentId = "$((glcm).AgentId)",
         $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc"
     )
 
@@ -173,7 +178,7 @@ $reportsByStartTime = $reports | Sort-Object {$_."StartTime" -as [DateTime] } -D
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
-请注意，**StatusData** 属性是具有多个属性的对象。 这是大部分报表数据所在的位置。 让我们来看看最新报表的 **StatusData** 属性的各个字段：
+请注意， **StatusData** 属性是具有多个属性的对象。 这是大部分报表数据所在的位置。 让我们来看看最新报表的 **StatusData** 属性的各个字段：
 
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
@@ -233,7 +238,7 @@ ConfigurationName : Sample_ArchiveFirewall
 InDesiredState    : True
 ```
 
-请注意，这些示例旨在让你了解如何使用报表数据。 有关在 PowerShell 中使用 JSON 的介绍，请参阅 [Playing with JSON and PowerShell（使用 JSON 和 PowerShell）](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/)。
+请注意，这些示例旨在让你了解如何使用报表数据。 有关在 PowerShell 中使用 JSON 的介绍，请参阅 [Playing with JSON and PowerShell（使用 JSON 和 PowerShell）](https://devblogs.microsoft.com/scripting/playing-with-json-and-powershell/)。
 
 ## <a name="see-also"></a>另请参阅
 

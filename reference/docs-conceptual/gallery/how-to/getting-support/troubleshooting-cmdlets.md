@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: manikb
-keywords: 库,powershell,cmdlet,psget
 title: cmdlet 故障排除
-ms.openlocfilehash: d87c680472c2588efbfe8b3c4d6f2dbee6883a0c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文提供了有关使用 PowerShell 库排查错误的信息和步骤
+ms.openlocfilehash: db9e58c185c6f3bca26ff3639af85fa2dba48909
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "72352107"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661056"
 ---
 # <a name="troubleshooting-cmdlets"></a>cmdlet 故障排除
 

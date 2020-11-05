@@ -1,14 +1,13 @@
 ---
 ms.date: 06/09/2017
-schema: 2.0.0
-keywords: powershell
 title: 影响 PowerShell 库 UI 的包清单值
-ms.openlocfilehash: d5e0b85a635c4090f8ccb814277a1a6dd6a951e2
-ms.sourcegitcommit: 1695df0d241c0390cac71a7401e61198fc6ff756
+description: 本文介绍 PowerShell 库使用的模块清单中的值。
+ms.openlocfilehash: c59f65e72874a8a4ef946c954e1e8f12aad62b29
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91772297"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664140"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>影响 PowerShell 库 UI 的包清单值
 

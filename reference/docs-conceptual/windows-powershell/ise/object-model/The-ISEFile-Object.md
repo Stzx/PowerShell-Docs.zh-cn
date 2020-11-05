@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: ISEFile 对象
-ms.openlocfilehash: 1069e46aa586b8df2050129194a909b90f77b745
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: ISEFile 对象表示 Windows PowerShell ISE 中的文件。
+ms.openlocfilehash: 0de19c45bde7e5629d5721635150d3b0915aaa7d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809883"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662128"
 ---
 # <a name="the-isefile-object"></a>ISEFile 对象
 
-**ISEFile** 对象，表示 Windows PowerShell® 集成脚本环境 (ISE) 中的文件。 它是 Microsoft.PowerShell.Host.ISE.ISEFile  类的实例。 本主题列出其成员方法和成员属性。 `$psISE.CurrentFile` 和 PowerShell 选项卡中的文件集合中的文件是 \*\***Microsoft.PowerShell.Host.ISE.ISEFile** 类的所有实例。
+ISEFile 对象表示 Windows PowerShell&reg; 集成脚本环境 (ISE) 中的文件。 它是 Microsoft.PowerShell.Host.ISE.ISEFile  类的实例。 本主题列出其成员方法和成员属性。 `$psISE.CurrentFile` 和 PowerShell 选项卡中的文件集合中的文件是 \*\***Microsoft.PowerShell.Host.ISE.ISEFile** 类的所有实例。
 
 ## <a name="methods"></a>方法
 
@@ -21,11 +21,11 @@ ms.locfileid: "83809883"
 
 将该文件保存到磁盘。
 
-**\[saveEncoding\]** - 可选 [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx)，用于已保存文件的可选字符编码参数。 默认值是 **UTF8**。
+**\[saveEncoding\]** - 可选 [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx)，用于已保存文件的可选字符编码参数。 默认值是 **UTF8** 。
 
 ### <a name="exceptions"></a>例外
 
-- **System.IO.IOException**：无法保存该文件。
+- **System.IO.IOException** ：无法保存该文件。
 
 ```powershell
 # Save the file using the default encoding (UTF8)
@@ -47,13 +47,13 @@ $myfile.Encoding
 
 **filename** - 字符串要用于保存该文件的名称。
 
-**\[saveEncoding\]** - 可选 [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx)，用于已保存文件的可选字符编码参数。 默认值是 **UTF8**。
+**\[saveEncoding\]** - 可选 [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx)，用于已保存文件的可选字符编码参数。 默认值是 **UTF8** 。
 
 ### <a name="exceptions"></a>例外
 
-- **System.ArgumentNullException**：**filename** 参数为 null。
-- **System.ArgumentException**：**filename** 参数为空。
-- **System.IO.IOException**：无法保存该文件。
+- **System.ArgumentNullException** ： **filename** 参数为 null。
+- **System.ArgumentException** ： **filename** 参数为空。
+- **System.IO.IOException** ：无法保存该文件。
 
 ```powershell
 # Save the file with a full path and name.

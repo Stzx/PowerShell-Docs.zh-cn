@@ -2,36 +2,37 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,资源,库,安装程序
 title: 安装其他 DSC 资源
-ms.openlocfilehash: 7a6a935349358e11a77d2f00c0bf88e0ad18c097
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 本文列出了包含在 PSDesiredStateConfiguration 模块中的 DSC 资源。 还介绍了如何查找和安装 PowerShell 库中的资源。
+ms.openlocfilehash: e75561ed539e06716c9a103f905b9d1e4f3e71d3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417797"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645125"
 ---
 # <a name="install-additional-dsc-resources"></a>安装其他 DSC 资源
 
-PowerShell 包括 Desired State Configuration (DSC) 的多个现成资源。  PSDesiredStateConfiguration 模块包含特定 PowerShell 实例上可用的所有 OOB DSC 资源。
+PowerShell 包括 Desired State Configuration (DSC) 的多个现成资源。 PSDesiredStateConfiguration 模块包含特定 PowerShell 实例上可用的所有 OOB DSC 资源。
 
 这是包含在 PowerShell 4.0 中的 OOB 资源的列表以及资源功能的说明。
 
 > [!NOTE]
 > 此列表不完整，因为每个 PowerShell 版本都会增加 OOB 资源的数量。
 
-|资源  |说明  |
-|---------|---------|
-|**File**|控制文件和目录的状态。 将文件从“源”  复制到“目标”  ，然后在通过比较日期、校验和以及哈希确认“源”  发生更改时更新这些文件。|
-|**存档**|在指定位置解压缩存档。 使用指定校验和验证存档  。|
-|**环境**|管理环境变量。|
-|**分组**|管理本地组并控制组成员身份。|
-|**日志**|将消息写入 `Microsoft-Windows-Desired State Configuration/Analytic` 事件日志。|
-|**包**|使用 Arguments  、LogPath  、ReturnCode  和其他设置安装或卸载包。|
-|**注册表**|管理注册表项和值。|
-|**脚本**|可用于设计自己的 [get-test-set](../resources/get-test-set.md) 脚本块。|
-|**服务**|配置 Windows 服务。|
-|**用户** |管理本地用户和属性。|
-|**WindowsFeature**|管理角色和功能。|
-|**WindowsProcess**|配置 Windows 进程。|
+|      资源      |                                                                                       说明                                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **File**           | 控制文件和目录的状态。 将文件从“源”复制到“目标”，然后在通过比较日期、校验和以及哈希确认“源”发生更改时更新这些文件。 |
+| **存档**        | 在指定位置解压缩存档。 使用指定校验和验证存档。                                                                                         |
+| **环境**    | 管理环境变量。                                                                                                                                                           |
+| **组**          | 管理本地组并控制组成员身份。                                                                                                                                      |
+| **日志**            | 将消息写入 `Microsoft-Windows-Desired State Configuration/Analytic` 事件日志。                                                                                               |
+| **包**        | 使用 Arguments、LogPath、ReturnCode 和其他设置安装或卸载包。                                                                                        |
+| **注册表**       | 管理注册表项和值。                                                                                                                                                        |
+| **脚本**         | 可用于设计自己的 [get-test-set](../resources/get-test-set.md) 脚本块。                                                                                                |
+| **服务**        | 配置 Windows 服务。                                                                                                                                                             |
+| **User**           | 管理本地用户和属性。                                                                                                                                                      |
+| **WindowsFeature** | 管理角色和功能。                                                                                                                                                              |
+| **WindowsProcess** | 配置 Windows 进程。                                                                                                                                                            |
 
 OOB 资源可为常见操作提供良好起点。 如果 OOB 资源不能满足你的需求，则可以写入自己的[自定义资源](../resources/authoringResource.md)。 在写入自定义资源以解决问题之前，应在已通过 Microsoft 和 PowerShell 社区创建的大量 DSC 资源中查找。
 
@@ -39,11 +40,11 @@ OOB 资源可为常见操作提供良好起点。 如果 OOB 资源不能满足�
 
 ## <a name="installing-powershellget"></a>安装 PowerShellGet
 
-若要确定是否已获得 PowerShell  ，或者若要获取安装它的帮助，请参阅以下指南：[安装 PowerShellGet](/powershell/scripting/gallery/installing-psget)。
+若要确定是否已获得 PowerShell，或者若要获取安装它的帮助，请参阅以下指南：[安装 PowerShellGet](/powershell/scripting/gallery/installing-psget)。
 
 ## <a name="finding-dsc-resources-using-powershellget"></a>使用 PowerShellGet 查找 DSC 资源
 
-在系统上安装 PowerShellGet  后，可以找到并安装 [PowerShell 库](https://www.powershellgallery.com/)中托管的 DSC 资源。
+在系统上安装 PowerShellGet 后，可以找到并安装 [PowerShell 库](https://www.powershellgallery.com/)中托管的 DSC 资源。
 
 首先，使用 [Find-DSCResource](/powershell/module/powershellget/find-dscresource) cmdlet 查找 DSC 资源。 首次运行 `Find-DSCResource` 时，你会看到安装“NuGet 提供程序”的提示。
 
@@ -51,11 +52,11 @@ OOB 资源可为常见操作提供良好起点。 如果 OOB 资源不能满足�
 PS> Find-DSCResource
 
 NuGet provider is required to continue
-PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The
-NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
-'C:\Users\xAdministrator\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider
- by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to
-install and import the NuGet provider now?
+PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based
+repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies'
+or 'C:\Users\xAdministrator\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install
+the NuGet provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201
+-Force'. Do you want PowerShellGet to install and import the NuGet provider now?
 [Y] Yes  [N] No  [?] Help (default is "Y"):
 ```
 
@@ -104,7 +105,7 @@ TimeZone                            6.0.0.0    ComputerManagementDsc            
 
 ## <a name="installing-dsc-resources-using-powershellget"></a>使用 PowerShellGet 安装 DSC 资源
 
-若要安装 DSC 资源，请使用 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet，指定搜索结果中“模块”  名称下显示的模块名称。
+若要安装 DSC 资源，请使用 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet，指定搜索结果中“模块”名称下显示的模块名称。
 
 “TimeZone”资源存在于“ComputerManagementDSC”模块中，因此这是此示例安装的模块。
 
@@ -115,9 +116,9 @@ TimeZone                            6.0.0.0    ComputerManagementDsc            
 PS> Install-Module -Name ComputerManagementDSC
 
 Untrusted repository
-You are installing the modules from an untrusted repository. If you trust this repository, change its
-InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
-'PSGallery'?
+You are installing the modules from an untrusted repository. If you trust this repository, change
+its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to
+install the modules from 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 

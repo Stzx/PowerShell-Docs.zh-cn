@@ -2,17 +2,17 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 使用 Import-DSCResource
-ms.openlocfilehash: 0fa11755558510b986ac24df120579ea15a43689
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: Import-DSCResource 是只能在配置脚本块内使用的动态关键字。 它用于导入配置中所需的资源模块。
+ms.openlocfilehash: f6dcad2c56848ec25eb79332c96fe6b0d438fe95
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786707"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658515"
 ---
 # <a name="using-import-dscresource"></a>使用 Import-DSCResource
 
-`Import-DScResource` 是只能在配置脚本块内使用的动态关键字。 用于导入配置中所需的任何资源的 `Import-DSCResource` 关键字。
-`$pshome` 下的资源是自动导入的，但显式导入[配置](Configurations.md)中使用的所有资源仍被视为是最佳做法。
+`Import-DSCResource` 是只能在配置脚本块内使用的动态关键，用于导入配置中所需的任何资源。 `$PSHOME` 下的资源是自动导入的，但显式导入[配置](Configurations.md)中使用的所有资源仍被视为是最佳做法。
 
 `Import-DSCResource` 的语法如下所示。 按名称指定模块时，要求在新行中列出每个模块。
 

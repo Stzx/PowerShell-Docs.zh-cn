@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: 库,powershell,cmdlet,psgallery
-title: 库中的“文件列表”功能
-ms.openlocfilehash: 5f372c943c73fa8e1014657394e40eaedef5d045
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+title: 如何使用库中的“文件列表”功能
+description: 如何使用库中的“文件列表”功能
+ms.openlocfilehash: 45e39cb3f2620228be9ad16c2bb697f23642195d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328238"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662275"
 ---
 # <a name="filelist-feature-in-the-gallery"></a>库中的“文件列表”功能
 
@@ -18,6 +17,7 @@ ms.locfileid: "71328238"
 
 ## <a name="where-to-find-filelist"></a>在哪里可以找到“文件列表”
 
-在每个单独的包页面上，可以找到“文件列表”部分和“显示”  链接。 单击“显示”，你将找到该包中包含的项的完整列表。
+在每个单独的包页面上，可以找到“文件列表”部分和“显示”  链接。
+单击“显示”，你将找到该包中包含的项的完整列表。
 
 每个受支持的文件类型显示为超链接，单击该超链接将转到新页面，其中以 PowerShell 语法突出显示了文件内容。 如果单击屏幕顶部显示的包的标题或版本，你将转回到包详细信息页面。

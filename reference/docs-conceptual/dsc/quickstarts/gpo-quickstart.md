@@ -2,12 +2,13 @@
 ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,配置,安装程序
 title: 快速入门 - 将组策略转换为 DSC
-ms.openlocfilehash: 852710f261ea1d57228c05d4093c1d78584e0ca5
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: 本快速入门演示了将 Windows 组策略转换为 DSC 配置所需的步骤。
+ms.openlocfilehash: b67f6dd2cf6c91d90fa6ac5b6367f9efc7f40ee0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236231"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644685"
 ---
 # <a name="quickstart-convert-group-policy-into-dsc"></a>快速入门：将组策略转换为 DSC
 
@@ -16,7 +17,7 @@ ms.locfileid: "89236231"
 可从组策略或 Azure 安全中心基线生成 DSC 配置。 [BaselineManagement](https://www.powershellgallery.com/packages/BaselineManagement) 模块包含以下用于完成此任务的命令。
 
 - `ConvertFrom-GPO` - 转换组策略，存储为文件。 还可指定一个目录，它包含多个要合并为一个配置的策略。
-  - 要在环境中导出组策略，请使用 [Backup-GPO](/powershell/module/grouppolicy/backup-gpo?view=win10-ps) cmdlet，或按照[将 GPO 导出到文件](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file)中的说明进行操作。
+  - 要在环境中导出组策略，请使用 [Backup-GPO](/powershell/module/grouppolicy/backup-gpo) cmdlet，或按照[将 GPO 导出到文件](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file)中的说明进行操作。
 - `ConvertFrom-SCM` - 转换安全合规性管理器基线，存储为 `.xml` 文件。
 - `ConvertFrom-ASC` - 转换 Azure 安全中心基线，存储为 `.json` 文件。
 - `Merge-GPOs` - 转换应用于目标计算机的组策略。

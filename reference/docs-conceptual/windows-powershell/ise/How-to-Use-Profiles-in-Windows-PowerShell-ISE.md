@@ -1,17 +1,17 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,cmdlet
 title: 如何在 Windows PowerShell ISE 中使用配置文件
-ms.openlocfilehash: da7dc2f234ad0c2968fbb213e9e57da875f456e4
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 本文介绍如何在 Windows PowerShell ISE 中使用配置文件。
+ms.openlocfilehash: e677a4aaa3b2b8b76f289b0797aaa75c80c2b370
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808813"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663744"
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>如何在 Windows PowerShell ISE 中使用配置文件
 
-本主题说明如何使用 Windows PowerShell® 集成脚本环境 (ISE) 中的配置文件。 建议在执行此部分中的任务前，先查看 [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles)，或在控制台窗格中键入“`Get-Help about_Profiles`”并按 Enter<kbd></kbd>。
+本文介绍如何使用 Windows PowerShell&reg; 集成脚本环境 (ISE) 中的配置文件。 建议在执行此部分中的任务前，先查看 [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles)，或在控制台窗格中键入“`Get-Help about_Profiles`”并按 Enter<kbd></kbd>。
 
 配置文件是当你启动新的会话时自动运行的 Windows PowerShell ISE 脚本。
 你可以为 Windows PowerShell ISE 创建一个或多个 Windows PowerShell ISE 配置文件，并使用它们向 Windows PowerShell 或 Windows PowerShell ISE 环境添加配置，从而通过提供你所需要的变量、别名、函数、颜色和字体首选项做好准备，以供你使用。 配置文件会对你所启动的每个 Windows PowerShell ISE 会话产生影响。
@@ -72,7 +72,7 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 
 ## <a name="to-edit-a-profile"></a>编辑配置文件
 
-1. 若要打开配置文件，请使用指定你想要编辑的配置文件的变量运行 `psEdit` 命令。 例如，若要打开“当前用户，Windows PowerShell ISE”配置文件，键入：`psEdit $PROFILE`
+1. 若要打开配置文件，请使用指定你想要编辑的配置文件的变量运行 `psEdit` 命令。 例如，若要打开“当前用户，Windows PowerShell ISE”配置文件，请键入：`psEdit $PROFILE`
 
 2. 将某些项添加到你的配置文件。 以下是帮助你入门的一些示例：
 

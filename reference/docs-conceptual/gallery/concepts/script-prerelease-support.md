@@ -1,14 +1,14 @@
 ---
 ms.date: 10/17/2017
-contributor: keithb
-keywords: 库,powershell,cmdlet,psget
 title: 预发行版脚本
-ms.openlocfilehash: c0198c2f575d2c004949ccebab49d93ce54716be
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShellGet 模块支持使用语义化版本控制将 1.0.0 以上的版本的脚本标记为预发行版。
+ms.openlocfilehash: e9873a69148fd80553e566b31c7455a4ecaee5ce
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328478"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661474"
+---
 ---
 # <a name="prerelease-versions-of-scripts"></a>预发行版脚本
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: 库,powershell,cmdlet,psgallery,psget
 title: PowerShell 库
-ms.openlocfilehash: e489d2dd4db087b53eb07d2a8793c8f586c9b210
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell 库是 PowerShell 模块、脚本和 DSC 资源的中心存储库。
+ms.openlocfilehash: 1aa3d351e71211259cac4e6d6f0ebd68c0df6ff1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500558"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662110"
 ---
 # <a name="the-powershell-gallery"></a>PowerShell 库
 
@@ -25,17 +24,17 @@ PowerShellGet 模块包含用于发现、安装、更新和发布包含来自 [P
 
 有关如何在库中使用 PowerShellGet 命令的详细信息，请参阅[入门](getting-started.md)页面。 你也可运行 *Update-Help -Module PowerShellGet* 安装这些命令的本地帮助。
 
-## <a name="supported-operating-systems"></a>受支持的操作系统
+## <a name="supported-operating-systems"></a>支持的操作系统
 
-**PowerShellGet** 模块需要 **PowerShell 3.0 或更高版本**。
+**PowerShellGet** 模块需要 **PowerShell 3.0 或更高版本** 。
 
-PowerShellGet  需要 .NET Framework 4.5 或更高版本。 你可从[此处](https://msdn.microsoft.com/library/5a4x27ek.aspx)安装 .NET Framework 4.5 或更高版本。
+PowerShellGet 需要 .NET Framework 4.5 或更高版本。 你可从[此处](https://msdn.microsoft.com/library/5a4x27ek.aspx)安装 .NET Framework 4.5 或更高版本。
 
-由于 PowerShell Core  是跨平台的，这意味着它可以在 Windows、Linux 和 MacOS 上工作，这也使得 PowerShellGet  在这些系统上均可用。 有关 PowerShell Core  支持的完整系统列表，请参阅[安装 PowerShell](/powershell/scripting/install/installing-powershell)。
+由于 PowerShell Core 是跨平台的，这意味着它可以在 Windows、Linux 和 MacOS 上工作，这也使得 PowerShellGet 在这些系统上均可用。 有关 PowerShell Core 支持的完整系统列表，请参阅[安装 PowerShell](/powershell/scripting/install/installing-powershell)。
 
 许多托管在库中的模块都支持不同的操作系统并具有附加要求。
 有关详细信息，请参阅模块文档。
 
-## <a name="got-a-question-have-feedback"></a>遇到问题？ 有反馈？
+## <a name="got-a-question-have-feedback"></a>遇到问题？ 想提供反馈？
 
 可在[入门](getting-started.md)页面找到有关 PowerShell 库和 PowerShellGet 的详细信息。 请使用 [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell) 提供反馈和报告问题。
