@@ -2,26 +2,27 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,配置,安装程序
 title: 编写 DSC 配置的帮助
-ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 可在 DSC 配置中使用基于注释的帮助。 用户可以使用 `-?` 参数调用配置或使用 Get-Help cmdlet 来访问帮助内容。
+ms.openlocfilehash: 01c4f43253f4d4d8421ea3e0dfca797776acd426
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954134"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658631"
 ---
-# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="baf6f-103">编写 DSC 配置的帮助</span><span class="sxs-lookup"><span data-stu-id="baf6f-103">Writing help for DSC configurations</span></span>
+# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="f3d12-105">编写 DSC 配置的帮助</span><span class="sxs-lookup"><span data-stu-id="f3d12-105">Writing help for DSC configurations</span></span>
 
-><span data-ttu-id="baf6f-104">适用于：Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="baf6f-104">Applies To: Windows PowerShell 5.0</span></span>
+> <span data-ttu-id="f3d12-106">适用于：Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="f3d12-106">Applies To: Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="baf6f-105">可在 DSC 配置中使用基于注释的帮助。</span><span class="sxs-lookup"><span data-stu-id="baf6f-105">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="baf6f-106">若要访问帮助内容，用户可以使用 `-?` 调用配置或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。</span><span class="sxs-lookup"><span data-stu-id="baf6f-106">Users can access the help by calling the **Configuration** with `-?`, or by using the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet.</span></span> <span data-ttu-id="baf6f-107">将基于注释的帮助直接置于 `Configuration` 关键字上方。</span><span class="sxs-lookup"><span data-stu-id="baf6f-107">Place your Comment-based help directly above the `Configuration` keyword.</span></span>
-<span data-ttu-id="baf6f-108">可以将参数帮助置于注释块的同一行中，或直接放置在参数声明上方，或同时放置在两个位置，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="baf6f-108">You can place parameter help in-line with your comment block, directly above the parameter declaration, or both as in the example below.</span></span>
+<span data-ttu-id="f3d12-107">可在 DSC 配置中使用基于注释的帮助。</span><span class="sxs-lookup"><span data-stu-id="f3d12-107">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="f3d12-108">若要访问帮助内容，用户可以使用 `-?` 调用配置或使用 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet。</span><span class="sxs-lookup"><span data-stu-id="f3d12-108">Users can access the help by calling the **Configuration** with `-?`, or by using the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet.</span></span> <span data-ttu-id="f3d12-109">将基于注释的帮助直接置于 `Configuration` 关键字上方。</span><span class="sxs-lookup"><span data-stu-id="f3d12-109">Place your Comment-based help directly above the `Configuration` keyword.</span></span> <span data-ttu-id="f3d12-110">可以将参数帮助置于注释块的同一行中，或直接放置在参数声明上方，或同时放置在两个位置，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="f3d12-110">You can place parameter help in-line with your comment block, directly above the parameter declaration, or both as in the example below.</span></span>
 
-<span data-ttu-id="baf6f-109">若要详细了解基于 PowerShell 注释的帮助内容，请参阅 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)。</span><span class="sxs-lookup"><span data-stu-id="baf6f-109">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).</span></span>
+<span data-ttu-id="f3d12-111">若要详细了解基于 PowerShell 注释的帮助内容，请参阅 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)。</span><span class="sxs-lookup"><span data-stu-id="f3d12-111">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="baf6f-110">PowerShell 开发环境（如 VSCode 和 ISE）也具有可用于自动插入注释块模板的代码片段。</span><span class="sxs-lookup"><span data-stu-id="baf6f-110">PowerShell development environments, like VSCode and the ISE, also have snippets to allow you to automatically insert comment block templates.</span></span>
+> <span data-ttu-id="f3d12-112">PowerShell 开发环境（如 VS Code 和 ISE）也具有可用于自动插入注释块模板的代码片段。</span><span class="sxs-lookup"><span data-stu-id="f3d12-112">PowerShell development environments, like VS Code and the ISE, also have snippets to allow you to automatically insert comment block templates.</span></span>
 
-<span data-ttu-id="baf6f-111">下面的示例演示了一个脚本，它包含一个配置以及有关该配置的基于注释的帮助。</span><span class="sxs-lookup"><span data-stu-id="baf6f-111">The following example shows a script that contains a configuration and comment-based help for it.</span></span> <span data-ttu-id="baf6f-112">此示例显示带有参数的配置。</span><span class="sxs-lookup"><span data-stu-id="baf6f-112">This example shows a Configuration with parameters.</span></span> <span data-ttu-id="baf6f-113">若要了解有关在配置中使用参数的详细信息，请参阅[将参数添加到配置中](add-parameters-to-a-configuration.md)。</span><span class="sxs-lookup"><span data-stu-id="baf6f-113">To learn more about using parameters in your Configurations, see [Add Parameters to your Configurations](add-parameters-to-a-configuration.md).</span></span>
+<span data-ttu-id="f3d12-113">下面的示例演示了一个脚本，它包含一个配置以及有关该配置的基于注释的帮助。</span><span class="sxs-lookup"><span data-stu-id="f3d12-113">The following example shows a script that contains a configuration and comment-based help for it.</span></span>
+<span data-ttu-id="f3d12-114">此示例显示带有参数的配置。</span><span class="sxs-lookup"><span data-stu-id="f3d12-114">This example shows a Configuration with parameters.</span></span> <span data-ttu-id="f3d12-115">若要了解有关在配置中使用参数的详细信息，请参阅[将参数添加到配置中](add-parameters-to-a-configuration.md)。</span><span class="sxs-lookup"><span data-stu-id="f3d12-115">To learn more about using parameters in your Configurations, see [Add Parameters to your Configurations](add-parameters-to-a-configuration.md).</span></span>
 
 ```powershell
 <#
@@ -30,26 +31,32 @@ A brief description of the function or script. This keyword can be used only onc
 
 
 .DESCRIPTION
-A detailed description of the function or script. This keyword can be used only once for each configuration.
-
+A detailed description of the function or script. This keyword can be used only once for each
+configuration.
 
 .PARAMETER ComputerName
-The description of a parameter. Add a .PARAMETER keyword for each parameter in the function or script syntax.
+The description of a parameter. Add a .PARAMETER keyword for each parameter in the function or
+script syntax.
 
-Type the parameter name on the same line as the .PARAMETER keyword. Type the parameter description on the lines following the .PARAMETER keyword.
-Windows PowerShell interprets all text between the .PARAMETER line and the next keyword or the end of the comment block as part of the parameter description.
-The description can include paragraph breaks.
+Type the parameter name on the same line as the .PARAMETER keyword. Type the parameter description
+on the lines following the .PARAMETER keyword. Windows PowerShell interprets all text between the
+.PARAMETER line and the next keyword or the end of the comment block as part of the parameter
+description. The description can include paragraph breaks.
 
-The Parameter keywords can appear in any order in the comment block, but the function or script syntax determines the order in which the parameters
-(and their descriptions) appear in help topic. To change the order, change the syntax.
+The Parameter keywords can appear in any order in the comment block, but the function or script
+syntax determines the order in which the parameters (and their descriptions) appear in help topic.
+To change the order, change the syntax.
 
 .EXAMPLE
 HelpSample -ComputerName localhost
 
-A sample command that uses the function or script, optionally followed by sample output and a description. Repeat this keyword for each example.
-PowerShell automatically prefaces the first line with a PowerShell prompt. Additional lines are treated as output and description. The example can contain spaces, newlines and PowerShell code.
+A sample command that uses the function or script, optionally followed by sample output and a
+description. Repeat this keyword for each example. PowerShell automatically prefaces the first line
+with a PowerShell prompt. Additional lines are treated as output and description. The example can
+contain spaces, newlines and PowerShell code.
 
 If you have multiple examples, there is no need to number them. PowerShell will number the examples in help text.
+
 .EXAMPLE
 HelpSample -FilePath "C:\output.txt"
 
@@ -75,15 +82,15 @@ configuration HelpSample1
 }
 ```
 
-## <a name="viewing-configuration-help"></a><span data-ttu-id="baf6f-114">查看配置帮助</span><span class="sxs-lookup"><span data-stu-id="baf6f-114">Viewing configuration help</span></span>
+## <a name="viewing-configuration-help"></a><span data-ttu-id="f3d12-116">查看配置帮助</span><span class="sxs-lookup"><span data-stu-id="f3d12-116">Viewing configuration help</span></span>
 
-<span data-ttu-id="baf6f-115">若要查看有关配置的帮助，请使用带有函数名称的 `Get-Help` cmdlet，或键入后跟 `-?` 的函数名称。</span><span class="sxs-lookup"><span data-stu-id="baf6f-115">To view the help for a configuration, use the `Get-Help` cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="baf6f-116">下面展示了在传递给 `Get-Help` 的上一个配置的输出。</span><span class="sxs-lookup"><span data-stu-id="baf6f-116">The following is the output of the previous Configuration passed to `Get-Help`.</span></span>
+<span data-ttu-id="f3d12-117">若要查看有关配置的帮助，请使用带有函数名称的 `Get-Help` cmdlet，或键入后跟 `-?` 的函数名称。</span><span class="sxs-lookup"><span data-stu-id="f3d12-117">To view the help for a configuration, use the `Get-Help` cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="f3d12-118">下面展示了在传递给 `Get-Help` 的上一个配置的输出。</span><span class="sxs-lookup"><span data-stu-id="f3d12-118">The following is the output of the previous Configuration passed to `Get-Help`.</span></span>
 
 ```powershell
 Get-Help HelpSample1 -Detailed
 ```
 
-```output
+```Output
 NAME
     HelpSample1
 
@@ -92,7 +99,9 @@ SYNOPSIS
 
 
 SYNTAX
-    HelpSample1 [[-InstanceName] <String>] [[-DependsOn] <String[]>] [[-PsDscRunAsCredential] <PSCredential>] [[-OutputPath] <String>] [[-ConfigurationData] <Hashtable>] [[-ComputerName] <String>] [[-FilePath] <String>] [<CommonParameters>]
+    HelpSample1 [[-InstanceName] <String>] [[-DependsOn] <String[]>] [[-PsDscRunAsCredential] <PSCredential>]
+      [[-OutputPath] <String>] [[-ConfigurationData] <Hashtable>] [[-ComputerName] <String>] [[-FilePath] <String>]
+      [<CommonParameters>]
 
 
 DESCRIPTION
@@ -111,14 +120,17 @@ PARAMETERS
     -ConfigurationData <Hashtable>
 
     -ComputerName <String>
-        The description of a parameter. Add a .PARAMETER keyword for each parameter in the function or script syntax.
+        The description of a parameter. Add a .PARAMETER keyword for each parameter in the function
+        or script syntax.
 
-        Type the parameter name on the same line as the .PARAMETER keyword. Type the parameter description on the lines following the .PARAMETER keyword.
-        Windows PowerShell interprets all text between the .PARAMETER line and the next keyword or the end of the comment block as part of the parameter description.
-        The description can include paragraph breaks.
+        Type the parameter name on the same line as the .PARAMETER keyword. Type the parameter
+        description on the lines following the .PARAMETER keyword. Windows PowerShell interprets all
+        text between the .PARAMETER line and the next keyword or the end of the comment block as
+        part of the parameter description. The description can include paragraph breaks.
 
-        The Parameter keywords can appear in any order in the comment block, but the function or script syntax determines the order in which the parameters
-        (and their descriptions) appear in help topic. To change the order, change the syntax.
+        The Parameter keywords can appear in any order in the comment block, but the function or
+        script syntax determines the order in which the parameters (and their descriptions) appear
+        in help topic. To change the order, change the syntax.
 
     -FilePath <String>
         Provide a PARAMETER section for each parameter that your script or function accepts.
@@ -133,12 +145,13 @@ PARAMETERS
 
     PS C:\>HelpSample -ComputerName localhost
 
-    A sample command that uses the function or script, optionally followed by sample output and a description. Repeat this keyword for each example.
-    PowerShell automatically prefaces the first line with a PowerShell prompt. Additional lines are treated as output and description. The example can contain spaces, newlines and PowerShell code.
+    A sample command that uses the function or script, optionally followed by sample output and a
+    description. Repeat this keyword for each example. PowerShell automatically prefaces the first
+    line with a PowerShell prompt. Additional lines are treated as output and description. The
+    example can contain spaces, newlines and PowerShell code.
 
-    If you have multiple examples, there is no need to number them. PowerShell will number the examples in help text.
-
-
+    If you have multiple examples, there is no need to number them. PowerShell will number the
+    examples in help text.
 
 
     -------------------------- EXAMPLE 2 --------------------------
@@ -148,8 +161,6 @@ PARAMETERS
     This example will be labeled "EXAMPLE 2" when help is displayed to the user.
 
 
-
-
 REMARKS
     To see the examples, type: "get-help HelpSample1 -examples".
     For more information, type: "get-help HelpSample1 -detailed".
@@ -157,10 +168,10 @@ REMARKS
 ```
 
 > [!NOTE]
-> <span data-ttu-id="baf6f-117">PowerShell 会自动为你生成语法字段和参数属性。</span><span class="sxs-lookup"><span data-stu-id="baf6f-117">Syntax fields and parameter attributes are automatically generated for you by PowerShell.</span></span>
+> <span data-ttu-id="f3d12-119">PowerShell 会自动为你生成语法字段和参数属性。</span><span class="sxs-lookup"><span data-stu-id="f3d12-119">Syntax fields and parameter attributes are automatically generated for you by PowerShell.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="baf6f-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="baf6f-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3d12-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f3d12-120">See Also</span></span>
 
-- [<span data-ttu-id="baf6f-119">DSC 配置</span><span class="sxs-lookup"><span data-stu-id="baf6f-119">DSC Configurations</span></span>](configurations.md)
-- [<span data-ttu-id="baf6f-120">编写、编译和应用配置</span><span class="sxs-lookup"><span data-stu-id="baf6f-120">Write, Compile, and Apply a Configuration</span></span>](write-compile-apply-configuration.md)
-- [<span data-ttu-id="baf6f-121">向配置添加参数</span><span class="sxs-lookup"><span data-stu-id="baf6f-121">Add Parameters to a Configuration</span></span>](add-parameters-to-a-configuration.md)
+- [<span data-ttu-id="f3d12-121">DSC 配置</span><span class="sxs-lookup"><span data-stu-id="f3d12-121">DSC Configurations</span></span>](configurations.md)
+- [<span data-ttu-id="f3d12-122">编写、编译和应用配置</span><span class="sxs-lookup"><span data-stu-id="f3d12-122">Write, Compile, and Apply a Configuration</span></span>](write-compile-apply-configuration.md)
+- [<span data-ttu-id="f3d12-123">向配置添加参数</span><span class="sxs-lookup"><span data-stu-id="f3d12-123">Add Parameters to a Configuration</span></span>](add-parameters-to-a-configuration.md)
