@@ -5,12 +5,12 @@ ms.date: 04/12/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_numeric_literals?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 关于数字文本
-ms.openlocfilehash: 8e26e8c67b1acadc75a67cd51bd6adb07fb7daf3
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: f9d23a37c06c8285c23328ea8ddcebf8d6caae9e
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93199676"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354722"
 ---
 # <a name="about-numeric-literals"></a>关于数字文本
 
@@ -175,7 +175,7 @@ PowerShell 支持以下类型加速器：
 在二进制和十六进制文本上指定无符号后缀将忽略符号位。 例如， `0xFFFFFFFF` 返回 `-1` ，但 `0xFFFFFFFFu` 返回 `[uint]::MaxValue` 4294967295 的。
 
 使用将文本作为前缀 `0` 将绕过此，并被视为无符号。
-例如：`0b011111111`。 当使用范围中的文本时，这可能是必需 `[bigint]` 的，因为 `u` 和 `n` 后缀不能组合在一起。
+例如： `0b011111111`。 当使用范围中的文本时，这可能是必需 `[bigint]` 的，因为 `u` 和 `n` 后缀不能组合在一起。
 
 还可以使用前缀来否定二进制和十六进制文本 `-` 。 这可能会导致正数，因为允许使用符号位。
 
@@ -291,4 +291,4 @@ PS> 111111111111111111111111111111111111111111111111111111n
 还 `[ulong]::MaxValue` `[decimal]::MaxValue` 应使用小数点后缀表示和之间的值 `D` 以保持准确性。 如果没有此后缀，则这些值将 `[Double]` 使用实际分析模式进行分析。
 
 <!-- reference links -->
-[bigint]: /dotnet/api/system.numerics.biginteger?view=netcore-2.2
+[bigint]: /dotnet/api/system.numerics.biginteger

@@ -5,12 +5,12 @@ ms.date: 04/12/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_numeric_literals?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 关于数字文本
-ms.openlocfilehash: 25518b80f87c90c59829bb575b059f0efcadd566
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 19ed71c2571a6cd343adf622a8cf71d6e5589aff
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93200458"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354977"
 ---
 # <a name="about-numeric-literals"></a>关于数字文本
 
@@ -179,7 +179,7 @@ PowerShell 支持以下类型加速器：
 PowerShell 7.1 将此解释为 `-1` `[int16]` 类型。
 
 使用将文本作为前缀 `0` 将绕过此，并被视为无符号。
-例如：`0b011111111`。 当使用范围中的文本时，这可能是必需 `[bigint]` 的，因为 `u` 和 `n` 后缀不能组合在一起。
+例如： `0b011111111`。 当使用范围中的文本时，这可能是必需 `[bigint]` 的，因为 `u` 和 `n` 后缀不能组合在一起。
 
 还可以使用前缀来否定二进制和十六进制文本 `-` 。 这可能会导致正数，因为允许使用符号位。
 
@@ -295,4 +295,4 @@ PS> 111111111111111111111111111111111111111111111111111111n
 还 `[ulong]::MaxValue` `[decimal]::MaxValue` 应使用小数点后缀表示和之间的值 `D` 以保持准确性。 如果没有此后缀，则这些值将 `[Double]` 使用实际分析模式进行分析。
 
 <!-- reference links -->
-[bigint]: /dotnet/api/system.numerics.biginteger?view=netcore-2.2
+[bigint]: /dotnet/api/system.numerics.biginteger

@@ -2,16 +2,16 @@
 description: 说明 PowerShell 中的作用域的概念，并演示如何设置和更改元素的作用域。
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 03/13/2020
+ms.date: 11/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_scopes?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_scopes
-ms.openlocfilehash: 3e165867be5887ae15890f795531b5a3048c4550
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 15c3d606ec13166e137bbcd633269dbf03ab7817
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93199731"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354842"
 ---
 # <a name="about-scopes"></a>关于范围
 
@@ -36,22 +36,26 @@ PowerShell 通过限制可以读取和更改变量、别名、函数和 PowerShe
 
 PowerShell 支持以下作用域：
 
-- 全局： PowerShell 启动时生效的作用域。 在全局作用域（例如自动变量和首选项变量）中创建了 PowerShell 启动时出现的变量和函数。 PowerShell 配置文件中的变量、别名和函数也是在全局范围内创建的。
+- 全局： PowerShell 启动或创建新会话或运行空间时生效的作用域。 在全局作用域（例如自动变量和首选项变量）中创建了 PowerShell 启动时出现的变量和函数。 PowerShell 配置文件中的变量、别名和函数也是在全局范围内创建的。 全局范围是会话中的根父范围。
 
 - Local：当前范围。 本地作用域可以是全局作用域或任何其他作用域。
 
 - 脚本：运行脚本文件时创建的作用域。 只有脚本中的命令在脚本作用域中运行。 对于脚本中的命令，脚本范围为本地范围。
 
 > [!NOTE]
-> **私有** 不是范围。 它是一个 [选项](#private-option) ，用于更改项的定义范围之外的项的可见性。
+> **私有** 不是范围。 它是一个 [选项](#private-option) ，它更改项的范围之外的项的可见性。
 
 ## <a name="parent-and-child-scopes"></a>父范围和子范围
 
-可以通过运行脚本或函数、创建会话或启动 PowerShell 的新实例来创建新的作用域。 创建新作用域时，结果是 (原始作用域) 的父作用域和 () 的作用域中创建的子作用域。
-
-在 PowerShell 中，所有作用域都是全局作用域的子作用域，但你可以创建多个作用域和多个递归作用域。
+可以通过调用脚本或函数来创建新的子作用域。 调用范围为父范围。 被调用的脚本或函数是子作用域。
+您调用的函数或脚本可以调用其他函数，从而创建子范围的层次结构，该层次结构的根作用域是全局作用域。
 
 除非显式将项设置为私有，否则父范围中的项可用于子范围。 但是，在子范围内创建和更改的项不影响父范围，除非你在创建项时显式指定范围。
+
+> [!NOTE]
+> 模块中的函数不在调用作用域的子范围中运行。
+> 模块具有其自己的会话状态，该状态链接到全局范围。
+> 所有模块代码都在具有自身根作用域的特定于模块的范围层次结构中运行。
 
 ## <a name="inheritance"></a>继承
 

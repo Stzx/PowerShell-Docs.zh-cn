@@ -3,12 +3,12 @@ ms.date: 09/07/2018
 ms.topic: reference
 title: PowerShell 命令的已批准谓词
 description: PowerShell 命令的已批准谓词
-ms.openlocfilehash: 237355ba9729cfe16c335b39f19ab20e40999457
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: fc1ff989ae86862e0f9cc24d8bcba2ff02ef68cc
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92655828"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355096"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>PowerShell 命令的已批准谓词
 
@@ -18,13 +18,7 @@ PowerShell 对 cmdlet 的名称及其派生的 .NET 类使用谓词-名词对。
 > [!NOTE]
 > PowerShell 使用“谓词”一词来描述某个表示动作的单词，即使该词并不是英语中的标准谓词。 例如，“New”一词是有效的 PowerShell 谓词名称，因为它表示某个动作，而该词在英语中并不是谓词。
 
-<!--
-01234567890123456789012345678901234567890123456789012345678901234567890123456789
--->
-
-每个已批准谓词都定义了相应的别名前缀。
-我们会对使用该谓词的命令使用别名中的这一别名前缀。
-例如，`Import` 的别名前缀为 `ip`，相应地，`Import-Module` 的别名为 `ipmo`。  这是一种建议，并不是规则；特别是对于模仿其他环境中的常见命令的命令别名，无需遵守该建议。
+每个已批准谓词都定义了相应的别名前缀。 我们会对使用该谓词的命令使用别名中的这一别名前缀。 例如，`Import` 的别名前缀为 `ip`，相应地，`Import-Module` 的别名为 `ipmo`。 这是一种建议，并不是规则；特别是对于模仿其他环境中的常见命令的命令别名，无需遵守该建议。
 
 ## <a name="verb-naming-recommendations"></a>谓词命名建议
 
@@ -35,13 +29,13 @@ PowerShell 对 cmdlet 的名称及其派生的 .NET 类使用谓词-名词对。
 - 请勿使用已批准谓词的同义词。 例如，始终使用 `Remove`，切勿使用 `Delete` 或 `Eliminate`。
 - 仅使用本主题中列出的每个谓词的形式。 例如，使用 `Get`，不要使用 `Getting` 或 `Gets`。
 - 请勿使用以下预留谓词或别名。 在特殊情况下，PowerShell 语言或其少数 cmdlet 会使用这些谓词。
-    - ForEach (foreach)
-    - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f)：以指定的形式或布局排列对象
-    - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp)：排列或关联一种或多种资源
-    - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (pi)
-    - Sort (sr)
-    - Tee (te)
-    - Where (wh)
+  - ForEach (foreach)
+  - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f)：以指定的形式或布局排列对象
+  - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp)：排列或关联一种或多种资源
+  - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (pi)
+  - Sort (sr)
+  - Tee (te)
+  - Where (wh)
 
 可以使用 `Get-Verb` cmdlet 获取谓词的完整列表。
 
@@ -174,7 +168,7 @@ PowerShell 使用 [System.Management.Automation.VerbsLifeCycle](/dotnet/api/Syst
 |[Approve](/dotnet/api/System.Management.Automation.VerbsLifecycle.Approve) (ap)|确认或同意资源或进程的状态。||
 |[Assert](/dotnet/api/System.Management.Automation.VerbsLifecycle.Assert) (as)|确认资源的状态。|Certify|
 |[Build](/dotnet/api/System.Management.Automation.VerbsLifecycle.Build) (bd)|根据某一组输入文件（通常是源代码或声明性文件）创建项目（通常是二进制文件或文档）。该谓词是在 PowerShell 6 中添加的。||
-|[Complete](/dotnet/api/system.management.automation.host.buffercelltype?view=powershellsdk-1.1.0) (cp)|结束操作。||
+|[Complete](/dotnet/api/system.management.automation.host.buffercelltype) (cp)|结束操作。||
 |[Confirm](/dotnet/api/System.Management.Automation.VerbsLifecycle.Confirm) (cn)|确认、证实或验证资源或进程的状态。|Acknowledge、Agree、Certify、Validate、Verify|
 |[Deny](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deny) (dn)|拒绝、反对、阻止或抵制资源或进程的状态。|Block、Object、Refuse、Reject|
 |[Deploy](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deploy) (dp)|将应用程序、网站或解决方案发送到远程目标，以便解决方案的使用者可以在部署完成后对其进行访问。 该谓词是在 PowerShell 6 中添加的。||

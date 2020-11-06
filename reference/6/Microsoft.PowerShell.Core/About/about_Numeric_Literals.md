@@ -5,12 +5,12 @@ ms.date: 04/09/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_numeric_literals?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 关于数字文本
-ms.openlocfilehash: 62f00ae9f3643724808146134fd03b6f01c29bce
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: dc1a55dbec1f0de99e06011645e6884b37480233
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93200602"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354820"
 ---
 # <a name="about-numeric-literals"></a>关于数字文本
 
@@ -210,4 +210,4 @@ Int32
 前两个示例在不将文本值括在括号中的情况下工作，因为 PowerShell 分析器可以确定数字文本的结束位置和 **GetType** 方法的启动位置。
 
 <!-- reference links -->
-[bigint]: /dotnet/api/system.numerics.biginteger?view=netcore-2.2
+[bigint]: /dotnet/api/system.numerics.biginteger

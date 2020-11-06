@@ -1,23 +1,22 @@
 ---
-description: PowerShell 记录来自引擎、提供程序和 cmdlet 的内部操作。
+description: PowerShell 将引擎、提供程序和 cmdlet 的内部操作记录到 Windows 事件日志中。
 keywords: powershell
 Locale: en-US
 ms.date: 03/30/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Logging-Windows
-ms.openlocfilehash: 62fa0592d931f5f675661f4d41ee01df6b89dc06
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: b36c45e0e8192a292dab88615cdd23f877068774
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93199978"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354773"
 ---
 # <a name="about-logging-windows"></a>关于日志记录窗口
 
 ## <a name="short-description"></a>简短说明
-
-PowerShell 记录来自引擎、提供程序和 cmdlet 的内部操作。
+PowerShell 将引擎、提供程序和 cmdlet 的内部操作记录到 Windows 事件日志中。
 
 ## <a name="long-description"></a>长说明
 
@@ -32,14 +31,14 @@ PowerShell 记录有关 PowerShell 操作的详细信息，例如启动和停止
 
 启用脚本块日志记录时，PowerShell 会将以下事件记录到 `PowerShellCore/Operational` 日志中：
 
-|字段| 值|
-|-|-|
-|EventId|`4104` / `0x1008`|
-|通道|`Operational`|
-|Level|`Verbose`|
-|操作码|`Create`|
-|任务|`CommandStart`|
-|关键字|`Runspace`|
+|  字段  |       值       |
+| ------- | ----------------- |
+| EventId | `4104` / `0x1008` |
+| Channel | `Operational`     |
+| 级别   | `Verbose`         |
+| 操作码  | `Create`          |
+| 任务    | `CommandStart`    |
+| 关键字 | `Runspace`        |
 
 ### <a name="registering-the-powershell-event-provider-on-windows"></a>在 Windows 上注册 PowerShell 事件提供程序
 
