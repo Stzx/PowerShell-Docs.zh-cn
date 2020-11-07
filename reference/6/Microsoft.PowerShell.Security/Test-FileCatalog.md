@@ -7,39 +7,36 @@ ms.date: 11/02/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/test-filecatalog?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-FileCatalog
-ms.openlocfilehash: 072e0b4420613f2de356b35e741a558501c05e1c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 007b4e3e186e6902b42bada02a4b18a6738914a6
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198649"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344773"
 ---
-# <span data-ttu-id="9cd3e-103">Test-FileCatalog</span><span class="sxs-lookup"><span data-stu-id="9cd3e-103">Test-FileCatalog</span></span>
+# <span data-ttu-id="72187-103">Test-FileCatalog</span><span class="sxs-lookup"><span data-stu-id="72187-103">Test-FileCatalog</span></span>
 
-## <span data-ttu-id="9cd3e-104">摘要</span><span class="sxs-lookup"><span data-stu-id="9cd3e-104">SYNOPSIS</span></span>
-<span data-ttu-id="9cd3e-105">`Test-FileCatalog` 验证)  ( 的目录文件中包含的哈希是否与实际文件的哈希值相匹配，以便验证其真实性。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-105">`Test-FileCatalog` validates whether the hashes contained in a catalog file (.cat) matches the hashes of the actual files in order to validate their authenticity.</span></span>
+## <span data-ttu-id="72187-104">摘要</span><span class="sxs-lookup"><span data-stu-id="72187-104">SYNOPSIS</span></span>
+<span data-ttu-id="72187-105">`Test-FileCatalog` 验证)  ( 的目录文件中包含的哈希是否与实际文件的哈希值相匹配，以便验证其真实性。</span><span class="sxs-lookup"><span data-stu-id="72187-105">`Test-FileCatalog` validates whether the hashes contained in a catalog file (.cat) matches the hashes of the actual files in order to validate their authenticity.</span></span>
 
-<span data-ttu-id="9cd3e-106">此 cmdlet 仅在 Windows 上受支持。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-106">This cmdlet is only supported on Windows.</span></span>
+<span data-ttu-id="72187-106">此 cmdlet 仅在 Windows 上受支持。</span><span class="sxs-lookup"><span data-stu-id="72187-106">This cmdlet is only supported on Windows.</span></span>
 
-## <span data-ttu-id="9cd3e-107">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="9cd3e-107">SYNTAX</span></span>
+## <span data-ttu-id="72187-107">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="72187-107">SYNTAX</span></span>
 
 ```
 Test-FileCatalog [-Detailed] [-FilesToSkip <String[]>] [-CatalogFilePath] <String> [[-Path] <String[]>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="9cd3e-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="9cd3e-108">DESCRIPTION</span></span>
+## <span data-ttu-id="72187-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="72187-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="9cd3e-109">`Test-FileCatalog` 通过将目录文件)  ( 的文件哈希与磁盘上实际文件的哈希进行比较来验证文件的真实性。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-109">`Test-FileCatalog` validates the authenticity of files by comparing the file hashes of a catalog file (.cat) with the hashes of actual files on disk.</span></span>
-<span data-ttu-id="9cd3e-110">如果它检测到任何不匹配，它将以 ValidationFailed 的形式返回状态。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-110">If it detects any mismatches, it returns the status as ValidationFailed.</span></span> <span data-ttu-id="9cd3e-111">用户可通过使用 -Detailed 参数检索所有这些信息。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-111">Users can retrieve all this information by using the -Detailed parameter.</span></span>
-<span data-ttu-id="9cd3e-112">它还在签名属性中显示目录的签名状态，该状态等效于对 `Get-AuthenticodeSignature` 目录文件调用 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-112">It also displays signing status of catalog in Signature property which is equivalent to calling `Get-AuthenticodeSignature` cmdlet on the catalog file.</span></span>
-<span data-ttu-id="9cd3e-113">用户也可以使用 -FilesToSkip 参数在验证过程中跳过任何文件。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-113">Users can also skip any file during validation by using the -FilesToSkip parameter.</span></span>
+<span data-ttu-id="72187-109">`Test-FileCatalog` 通过将目录文件)  ( 的文件哈希与磁盘上实际文件的哈希进行比较来验证文件的真实性。</span><span class="sxs-lookup"><span data-stu-id="72187-109">`Test-FileCatalog` validates the authenticity of files by comparing the file hashes of a catalog file (.cat) with the hashes of actual files on disk.</span></span> <span data-ttu-id="72187-110">如果它检测到任何不匹配，它将以 ValidationFailed 的形式返回状态。</span><span class="sxs-lookup"><span data-stu-id="72187-110">If it detects any mismatches, it returns the status as ValidationFailed.</span></span> <span data-ttu-id="72187-111">用户可通过使用 -Detailed 参数检索所有这些信息。</span><span class="sxs-lookup"><span data-stu-id="72187-111">Users can retrieve all this information by using the -Detailed parameter.</span></span> <span data-ttu-id="72187-112">它还在签名属性中显示目录的签名状态，该状态等效于对 `Get-AuthenticodeSignature` 目录文件调用 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="72187-112">It also displays signing status of catalog in Signature property which is equivalent to calling `Get-AuthenticodeSignature` cmdlet on the catalog file.</span></span> <span data-ttu-id="72187-113">用户也可以使用 -FilesToSkip 参数在验证过程中跳过任何文件。</span><span class="sxs-lookup"><span data-stu-id="72187-113">Users can also skip any file during validation by using the -FilesToSkip parameter.</span></span>
 
-<span data-ttu-id="9cd3e-114">此 cmdlet 仅在 Windows 上受支持。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-114">This cmdlet is only supported on Windows.</span></span>
+<span data-ttu-id="72187-114">此 cmdlet 仅在 Windows 上受支持。</span><span class="sxs-lookup"><span data-stu-id="72187-114">This cmdlet is only supported on Windows.</span></span>
 
-## <span data-ttu-id="9cd3e-115">示例</span><span class="sxs-lookup"><span data-stu-id="9cd3e-115">EXAMPLES</span></span>
+## <span data-ttu-id="72187-115">示例</span><span class="sxs-lookup"><span data-stu-id="72187-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="9cd3e-116">示例1：创建和验证文件目录</span><span class="sxs-lookup"><span data-stu-id="9cd3e-116">Example 1: Create and validate a file catalog</span></span>
+### <span data-ttu-id="72187-116">示例1：创建和验证文件目录</span><span class="sxs-lookup"><span data-stu-id="72187-116">Example 1: Create and validate a file catalog</span></span>
 
 ```powershell
 New-FileCatalog -Path $PSHOME\Modules\Microsoft.PowerShell.Utility -CatalogFilePath \temp\Microsoft.PowerShell.Utility.cat -CatalogVersion 2.0
@@ -51,7 +48,7 @@ Test-FileCatalog -CatalogFilePath \temp\Microsoft.PowerShell.Utility.cat -Path "
 Valid
 ```
 
-### <span data-ttu-id="9cd3e-117">示例2：使用详细输出验证文件目录</span><span class="sxs-lookup"><span data-stu-id="9cd3e-117">Example 2: Validate a file catalog with detailed output</span></span>
+### <span data-ttu-id="72187-117">示例2：使用详细输出验证文件目录</span><span class="sxs-lookup"><span data-stu-id="72187-117">Example 2: Validate a file catalog with detailed output</span></span>
 
 ```powershell
 Test-FileCatalog -CatalogFilePath \temp\Microsoft.PowerShell.Utility.cat -Path "$PSHome\Modules\Microsoft.PowerShell.Utility\"
@@ -69,11 +66,11 @@ PathItems     : {[Microsoft.PowerShell.Utility.psd1,
 Signature     : System.Management.Automation.Signature
 ```
 
-## <span data-ttu-id="9cd3e-118">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="9cd3e-118">PARAMETERS</span></span>
+## <span data-ttu-id="72187-118">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="72187-118">PARAMETERS</span></span>
 
-### <span data-ttu-id="9cd3e-119">-CatalogFilePath</span><span class="sxs-lookup"><span data-stu-id="9cd3e-119">-CatalogFilePath</span></span>
+### <span data-ttu-id="72187-119">-CatalogFilePath</span><span class="sxs-lookup"><span data-stu-id="72187-119">-CatalogFilePath</span></span>
 
-<span data-ttu-id="9cd3e-120">目录文件的路径 ( .cat) ，其中包含要用于验证的哈希值。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-120">A path to a catalog file (.cat) that contains the hashes to be used for validation.</span></span>
+<span data-ttu-id="72187-120">目录文件的路径 ( .cat) ，其中包含要用于验证的哈希值。</span><span class="sxs-lookup"><span data-stu-id="72187-120">A path to a catalog file (.cat) that contains the hashes to be used for validation.</span></span>
 
 ```yaml
 Type: System.String
@@ -87,9 +84,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd3e-121">-Confirm</span><span class="sxs-lookup"><span data-stu-id="9cd3e-121">-Confirm</span></span>
+### <span data-ttu-id="72187-121">-Confirm</span><span class="sxs-lookup"><span data-stu-id="72187-121">-Confirm</span></span>
 
-<span data-ttu-id="9cd3e-122">提示你在运行 cmdlet 之前进行确认。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-122">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="72187-122">提示你在运行 cmdlet 之前进行确认。</span><span class="sxs-lookup"><span data-stu-id="72187-122">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -103,9 +100,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd3e-123">-Detailed</span><span class="sxs-lookup"><span data-stu-id="9cd3e-123">-Detailed</span></span>
+### <span data-ttu-id="72187-123">-Detailed</span><span class="sxs-lookup"><span data-stu-id="72187-123">-Detailed</span></span>
 
-<span data-ttu-id="9cd3e-124">返回更详细的信息 `CatalogInformation` ，其中包含经过测试的文件、其预期/实际哈希以及目录文件（如果已签名）的 Authenticode 签名。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-124">Returns more information a more detailed `CatalogInformation` object that contains the files tested, their expected/actual hashes, and an Authenticode signature of the catalog file if it's signed.</span></span>
+<span data-ttu-id="72187-124">返回更详细的信息 `CatalogInformation` ，其中包含经过测试的文件、其预期/实际哈希以及目录文件（如果已签名）的 Authenticode 签名。</span><span class="sxs-lookup"><span data-stu-id="72187-124">Returns more information a more detailed `CatalogInformation` object that contains the files tested, their expected/actual hashes, and an Authenticode signature of the catalog file if it's signed.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -119,9 +116,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd3e-125">-FilesToSkip</span><span class="sxs-lookup"><span data-stu-id="9cd3e-125">-FilesToSkip</span></span>
+### <span data-ttu-id="72187-125">-FilesToSkip</span><span class="sxs-lookup"><span data-stu-id="72187-125">-FilesToSkip</span></span>
 
-<span data-ttu-id="9cd3e-126">不应在验证过程中测试的路径的数组。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-126">An array of paths that should not be tested as part of the validation.</span></span>
+<span data-ttu-id="72187-126">不应在验证过程中测试的路径的数组。</span><span class="sxs-lookup"><span data-stu-id="72187-126">An array of paths that should not be tested as part of the validation.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -135,9 +132,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd3e-127">-Path</span><span class="sxs-lookup"><span data-stu-id="9cd3e-127">-Path</span></span>
+### <span data-ttu-id="72187-127">-Path</span><span class="sxs-lookup"><span data-stu-id="72187-127">-Path</span></span>
 
-<span data-ttu-id="9cd3e-128">应该针对目录文件验证的一个或一组文件。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-128">A folder or array of files that should be validated against the catalog file.</span></span>
+<span data-ttu-id="72187-128">应该针对目录文件验证的一个或一组文件。</span><span class="sxs-lookup"><span data-stu-id="72187-128">A folder or array of files that should be validated against the catalog file.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -151,10 +148,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd3e-129">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="9cd3e-129">-WhatIf</span></span>
+### <span data-ttu-id="72187-129">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="72187-129">-WhatIf</span></span>
 
-<span data-ttu-id="9cd3e-130">显示运行该 cmdlet 时会发生什么情况。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-130">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="9cd3e-131">此 cmdlet 未运行。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-131">The cmdlet is not run.</span></span>
+<span data-ttu-id="72187-130">显示运行该 cmdlet 时会发生什么情况。</span><span class="sxs-lookup"><span data-stu-id="72187-130">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="72187-131">此 cmdlet 未运行。</span><span class="sxs-lookup"><span data-stu-id="72187-131">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -168,30 +164,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9cd3e-132">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="9cd3e-132">CommonParameters</span></span>
+### <span data-ttu-id="72187-132">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="72187-132">CommonParameters</span></span>
 
-<span data-ttu-id="9cd3e-133">此 cmdlet 支持通用参数： `-Debug` 、 `-ErrorAction` 、 `-ErrorVariable` 、、、、、、、 `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` `-PipelineVariable` `-Verbose` `-WarningAction` 和 `-WarningVariable` 。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-133">This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`.</span></span> <span data-ttu-id="9cd3e-134">有关详细信息，请参阅 [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md)。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-134">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
+<span data-ttu-id="72187-133">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="72187-133">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="72187-134">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="72187-134">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="9cd3e-135">输入</span><span class="sxs-lookup"><span data-stu-id="9cd3e-135">INPUTS</span></span>
+## <span data-ttu-id="72187-135">输入</span><span class="sxs-lookup"><span data-stu-id="72187-135">INPUTS</span></span>
 
-### <span data-ttu-id="9cd3e-136">DirectoryInfo []，System.string []</span><span class="sxs-lookup"><span data-stu-id="9cd3e-136">System.IO.DirectoryInfo[], System.String[]</span></span>
+### <span data-ttu-id="72187-136">DirectoryInfo []，System.string []</span><span class="sxs-lookup"><span data-stu-id="72187-136">System.IO.DirectoryInfo[], System.String[]</span></span>
 
-<span data-ttu-id="9cd3e-137">管道接受一个字符串或 `DirectoryInfo` 对象的数组，这些字符串或对象表示需要验证的文件的路径。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-137">The pipeline accepts an array of strings or `DirectoryInfo` objects that represent paths to the files that need to be validated.</span></span>
+<span data-ttu-id="72187-137">管道接受一个字符串或 `DirectoryInfo` 对象的数组，这些字符串或对象表示需要验证的文件的路径。</span><span class="sxs-lookup"><span data-stu-id="72187-137">The pipeline accepts an array of strings or `DirectoryInfo` objects that represent paths to the files that need to be validated.</span></span>
 
-## <span data-ttu-id="9cd3e-138">输出</span><span class="sxs-lookup"><span data-stu-id="9cd3e-138">OUTPUTS</span></span>
+## <span data-ttu-id="72187-138">输出</span><span class="sxs-lookup"><span data-stu-id="72187-138">OUTPUTS</span></span>
 
-### <span data-ttu-id="9cd3e-139">System.web. CatalogValidationStatus</span><span class="sxs-lookup"><span data-stu-id="9cd3e-139">System.Management.Automation.CatalogValidationStatus</span></span>
+### <span data-ttu-id="72187-139">System.web. CatalogValidationStatus</span><span class="sxs-lookup"><span data-stu-id="72187-139">System.Management.Automation.CatalogValidationStatus</span></span>
 
-<span data-ttu-id="9cd3e-140">包含或的值的默认返回类型 `Valid` `ValidationFailed` 。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-140">The default return type containing a value of either `Valid` or `ValidationFailed`.</span></span>
+<span data-ttu-id="72187-140">包含或的值的默认返回类型 `Valid` `ValidationFailed` 。</span><span class="sxs-lookup"><span data-stu-id="72187-140">The default return type containing a value of either `Valid` or `ValidationFailed`.</span></span>
 
-### <span data-ttu-id="9cd3e-141">System.web. CatalogInformation</span><span class="sxs-lookup"><span data-stu-id="9cd3e-141">System.Management.Automation.CatalogInformation</span></span>
+### <span data-ttu-id="72187-141">System.web. CatalogInformation</span><span class="sxs-lookup"><span data-stu-id="72187-141">System.Management.Automation.CatalogInformation</span></span>
 
-<span data-ttu-id="9cd3e-142">当使用时返回更详细的对象 `-Detailed` ，该对象可用于分析可能已通过或可能未通过验证的特定文件，这是预期的哈希值与发现的，以及在目录中使用的算法。</span><span class="sxs-lookup"><span data-stu-id="9cd3e-142">A more detailed object returned when using `-Detailed` which can be used to analyze specific files that may or may not have passed validation, which hashes were expected vs. found, and the algorithm used in the catalog.</span></span>
+<span data-ttu-id="72187-142">当使用时返回更详细的对象 `-Detailed` ，该对象可用于分析可能已通过或可能未通过验证的特定文件，这是预期的哈希值与发现的，以及在目录中使用的算法。</span><span class="sxs-lookup"><span data-stu-id="72187-142">A more detailed object returned when using `-Detailed` which can be used to analyze specific files that may or may not have passed validation, which hashes were expected vs. found, and the algorithm used in the catalog.</span></span>
 
-## <span data-ttu-id="9cd3e-143">注释</span><span class="sxs-lookup"><span data-stu-id="9cd3e-143">NOTES</span></span>
+## <span data-ttu-id="72187-143">注释</span><span class="sxs-lookup"><span data-stu-id="72187-143">NOTES</span></span>
 
-## <span data-ttu-id="9cd3e-144">相关链接</span><span class="sxs-lookup"><span data-stu-id="9cd3e-144">RELATED LINKS</span></span>
+<span data-ttu-id="72187-144">此 cmdlet 仅在 Windows 平台上可用。</span><span class="sxs-lookup"><span data-stu-id="72187-144">This cmdlet is only available on Windows platforms.</span></span>
 
-[<span data-ttu-id="9cd3e-145">New-FileCatalog</span><span class="sxs-lookup"><span data-stu-id="9cd3e-145">New-FileCatalog</span></span>](New-FileCatalog.md)
+## <span data-ttu-id="72187-145">相关链接</span><span class="sxs-lookup"><span data-stu-id="72187-145">RELATED LINKS</span></span>
 
-[<span data-ttu-id="9cd3e-146">立即</span><span class="sxs-lookup"><span data-stu-id="9cd3e-146">PowerShellGet</span></span>](/powershell/module/PowerShellGet)
+[<span data-ttu-id="72187-146">New-FileCatalog</span><span class="sxs-lookup"><span data-stu-id="72187-146">New-FileCatalog</span></span>](New-FileCatalog.md)
+
+[<span data-ttu-id="72187-147">立即</span><span class="sxs-lookup"><span data-stu-id="72187-147">PowerShellGet</span></span>](/powershell/module/PowerShellGet)
