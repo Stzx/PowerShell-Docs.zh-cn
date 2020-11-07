@@ -7,54 +7,54 @@ ms.date: 02/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-cmsmessage?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CmsMessage
-ms.openlocfilehash: b90059cd735e26eceb66d211533abbe25894d0ec
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: bbb4fe84a1c41afa6d16f4b127475b3405c7f81d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93196882"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347085"
 ---
-# <span data-ttu-id="97653-103">Get-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="97653-103">Get-CmsMessage</span></span>
+# <span data-ttu-id="97ce3-103">Get-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="97ce3-103">Get-CmsMessage</span></span>
 
-## <span data-ttu-id="97653-104">摘要</span><span class="sxs-lookup"><span data-stu-id="97653-104">SYNOPSIS</span></span>
-<span data-ttu-id="97653-105">获取已使用加密消息语法格式进行加密的内容。</span><span class="sxs-lookup"><span data-stu-id="97653-105">Gets content that has been encrypted by using the Cryptographic Message Syntax format.</span></span>
+## <span data-ttu-id="97ce3-104">摘要</span><span class="sxs-lookup"><span data-stu-id="97ce3-104">SYNOPSIS</span></span>
+<span data-ttu-id="97ce3-105">获取已使用加密消息语法格式进行加密的内容。</span><span class="sxs-lookup"><span data-stu-id="97ce3-105">Gets content that has been encrypted by using the Cryptographic Message Syntax format.</span></span>
 
-## <span data-ttu-id="97653-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="97653-106">SYNTAX</span></span>
+## <span data-ttu-id="97ce3-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="97ce3-106">SYNTAX</span></span>
 
-### <span data-ttu-id="97653-107">ByContent</span><span class="sxs-lookup"><span data-stu-id="97653-107">ByContent</span></span>
+### <span data-ttu-id="97ce3-107">ByContent</span><span class="sxs-lookup"><span data-stu-id="97ce3-107">ByContent</span></span>
 
 ```
 Get-CmsMessage [-Content] <String> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="97653-108">ByPath</span><span class="sxs-lookup"><span data-stu-id="97653-108">ByPath</span></span>
+### <span data-ttu-id="97ce3-108">ByPath</span><span class="sxs-lookup"><span data-stu-id="97ce3-108">ByPath</span></span>
 
 ```
 Get-CmsMessage [-Path] <String> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="97653-109">ByLiteralPath</span><span class="sxs-lookup"><span data-stu-id="97653-109">ByLiteralPath</span></span>
+### <span data-ttu-id="97ce3-109">ByLiteralPath</span><span class="sxs-lookup"><span data-stu-id="97ce3-109">ByLiteralPath</span></span>
 
 ```
 Get-CmsMessage [-LiteralPath] <String> [<CommonParameters>]
 ```
 
-## <span data-ttu-id="97653-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="97653-110">DESCRIPTION</span></span>
+## <span data-ttu-id="97ce3-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="97ce3-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="97653-111">该 `Get-CmsMessage` cmdlet 将获取已使用加密消息语法 (CMS) 格式进行加密的内容。</span><span class="sxs-lookup"><span data-stu-id="97653-111">The `Get-CmsMessage` cmdlet gets content that has been encrypted using the Cryptographic Message Syntax (CMS) format.</span></span>
+<span data-ttu-id="97ce3-111">该 `Get-CmsMessage` cmdlet 将获取已使用加密消息语法 (CMS) 格式进行加密的内容。</span><span class="sxs-lookup"><span data-stu-id="97ce3-111">The `Get-CmsMessage` cmdlet gets content that has been encrypted using the Cryptographic Message Syntax (CMS) format.</span></span>
 
-<span data-ttu-id="97653-112">CMS cmdlet 支持使用 IETF 格式对内容进行加密和解密，如 [RFC5652](https://tools.ietf.org/html/rfc5652)所述。</span><span class="sxs-lookup"><span data-stu-id="97653-112">The CMS cmdlets support encryption and decryption of content using the IETF format for cryptographically protecting messages, as documented by [RFC5652](https://tools.ietf.org/html/rfc5652).</span></span>
+<span data-ttu-id="97ce3-112">CMS cmdlet 支持使用 IETF 格式对内容进行加密和解密，如 [RFC5652](https://tools.ietf.org/html/rfc5652)所述。</span><span class="sxs-lookup"><span data-stu-id="97ce3-112">The CMS cmdlets support encryption and decryption of content using the IETF format for cryptographically protecting messages, as documented by [RFC5652](https://tools.ietf.org/html/rfc5652).</span></span>
 
-<span data-ttu-id="97653-113">CMS 加密标准采用公钥加密系统，其中用来加密内容的密匙（公匙）和用来解密内容的密匙（私匙）是分离的。</span><span class="sxs-lookup"><span data-stu-id="97653-113">The CMS encryption standard uses public key cryptography, where the keys used to encrypt content (the public key) and the keys used to decrypt content (the private key) are separate.</span></span> <span data-ttu-id="97653-114">公匙可以广泛共享，它不是敏感数据。</span><span class="sxs-lookup"><span data-stu-id="97653-114">Your public key can be shared widely, and is not sensitive data.</span></span> <span data-ttu-id="97653-115">如果用此公匙加密了任何内容，只有你的私匙可以解密它。</span><span class="sxs-lookup"><span data-stu-id="97653-115">If any content is encrypted with this public key, only your private key can decrypt it.</span></span> <span data-ttu-id="97653-116">有关详细信息，请参阅 [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography)（公钥加密）。</span><span class="sxs-lookup"><span data-stu-id="97653-116">For more information, see [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography).</span></span>
+<span data-ttu-id="97ce3-113">CMS 加密标准采用公钥加密系统，其中用来加密内容的密匙（公匙）和用来解密内容的密匙（私匙）是分离的。</span><span class="sxs-lookup"><span data-stu-id="97ce3-113">The CMS encryption standard uses public key cryptography, where the keys used to encrypt content (the public key) and the keys used to decrypt content (the private key) are separate.</span></span> <span data-ttu-id="97ce3-114">公匙可以广泛共享，它不是敏感数据。</span><span class="sxs-lookup"><span data-stu-id="97ce3-114">Your public key can be shared widely, and is not sensitive data.</span></span> <span data-ttu-id="97ce3-115">如果用此公匙加密了任何内容，只有你的私匙可以解密它。</span><span class="sxs-lookup"><span data-stu-id="97ce3-115">If any content is encrypted with this public key, only your private key can decrypt it.</span></span> <span data-ttu-id="97ce3-116">有关详细信息，请参阅 [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography)（公钥加密）。</span><span class="sxs-lookup"><span data-stu-id="97ce3-116">For more information, see [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography).</span></span>
 
-<span data-ttu-id="97653-117">`Get-CmsMessage` 获取已加密为 CMS 格式的内容。</span><span class="sxs-lookup"><span data-stu-id="97653-117">`Get-CmsMessage` gets content that has been encrypted in CMS format.</span></span> <span data-ttu-id="97653-118">它不会对内容进行解密或取消保护。</span><span class="sxs-lookup"><span data-stu-id="97653-118">It does not decrypt or unprotect content.</span></span> <span data-ttu-id="97653-119">可以运行此 cmdlet 来获取通过运行 cmdlet 加密的内容 `Protect-CmsMessage` 。</span><span class="sxs-lookup"><span data-stu-id="97653-119">You can run this cmdlet to get content that you have encrypted by running the `Protect-CmsMessage` cmdlet.</span></span> <span data-ttu-id="97653-120">可以指定要解密为字符串的内容或旁通到加密内容。</span><span class="sxs-lookup"><span data-stu-id="97653-120">You can specify content that you want to decrypt as a string, or by path to the encrypted content.</span></span> <span data-ttu-id="97653-121">你可以通过管道将结果传递给 `Get-CmsMessage` `Unprotect-CmsMessage` ，以便解密内容，前提是你有用于加密内容的文档加密证书的相关信息。</span><span class="sxs-lookup"><span data-stu-id="97653-121">You can pipe the results of `Get-CmsMessage` to `Unprotect-CmsMessage` to decrypt the content, provided that you have information about the document encryption certificate that was used to encrypt the content.</span></span>
+<span data-ttu-id="97ce3-117">`Get-CmsMessage` 获取已加密为 CMS 格式的内容。</span><span class="sxs-lookup"><span data-stu-id="97ce3-117">`Get-CmsMessage` gets content that has been encrypted in CMS format.</span></span> <span data-ttu-id="97ce3-118">它不会对内容进行解密或取消保护。</span><span class="sxs-lookup"><span data-stu-id="97ce3-118">It does not decrypt or unprotect content.</span></span> <span data-ttu-id="97ce3-119">可以运行此 cmdlet 来获取通过运行 cmdlet 加密的内容 `Protect-CmsMessage` 。</span><span class="sxs-lookup"><span data-stu-id="97ce3-119">You can run this cmdlet to get content that you have encrypted by running the `Protect-CmsMessage` cmdlet.</span></span> <span data-ttu-id="97ce3-120">可以指定要解密为字符串的内容或旁通到加密内容。</span><span class="sxs-lookup"><span data-stu-id="97ce3-120">You can specify content that you want to decrypt as a string, or by path to the encrypted content.</span></span> <span data-ttu-id="97ce3-121">你可以通过管道将结果传递给 `Get-CmsMessage` `Unprotect-CmsMessage` ，以便解密内容，前提是你有用于加密内容的文档加密证书的相关信息。</span><span class="sxs-lookup"><span data-stu-id="97ce3-121">You can pipe the results of `Get-CmsMessage` to `Unprotect-CmsMessage` to decrypt the content, provided that you have information about the document encryption certificate that was used to encrypt the content.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="97653-122">此 cmdlet 仅在 Windows 上可用。</span><span class="sxs-lookup"><span data-stu-id="97653-122">This cmdlet is only available on Windows.</span></span>
+> <span data-ttu-id="97ce3-122">此 cmdlet 仅在 Windows 上可用。</span><span class="sxs-lookup"><span data-stu-id="97ce3-122">This cmdlet is only available on Windows.</span></span>
 
-## <span data-ttu-id="97653-123">示例</span><span class="sxs-lookup"><span data-stu-id="97653-123">EXAMPLES</span></span>
+## <span data-ttu-id="97ce3-123">示例</span><span class="sxs-lookup"><span data-stu-id="97ce3-123">EXAMPLES</span></span>
 
-### <span data-ttu-id="97653-124">示例 1：获取加密的内容</span><span class="sxs-lookup"><span data-stu-id="97653-124">Example 1: Get encrypted content</span></span>
+### <span data-ttu-id="97ce3-124">示例 1：获取加密的内容</span><span class="sxs-lookup"><span data-stu-id="97ce3-124">Example 1: Get encrypted content</span></span>
 
 ```powershell
 $Msg = Get-CmsMessage -Path "C:\Users\Test\Documents\PowerShell\Future_Plans.txt"
@@ -74,9 +74,9 @@ KMnBoD1dkb/FzSWAEBaL8xkFwCu0e1AtDj7nSJc=
 -----END CMS-----
 ```
 
-<span data-ttu-id="97653-125">此命令获取位于 C:\Users\Test\Documents\PowerShell\Future_Plans.txt 的加密内容。</span><span class="sxs-lookup"><span data-stu-id="97653-125">This command gets encrypted content located at C:\Users\Test\Documents\PowerShell\Future_Plans.txt.</span></span>
+<span data-ttu-id="97ce3-125">此命令获取位于 C:\Users\Test\Documents\PowerShell\Future_Plans.txt 的加密内容。</span><span class="sxs-lookup"><span data-stu-id="97ce3-125">This command gets encrypted content located at C:\Users\Test\Documents\PowerShell\Future_Plans.txt.</span></span>
 
-### <span data-ttu-id="97653-126">示例 2：通过管道将加密内容传递到 Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="97653-126">Example 2: Pipe encrypted content to Unprotect-CmsMessage</span></span>
+### <span data-ttu-id="97ce3-126">示例 2：通过管道将加密内容传递到 Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="97ce3-126">Example 2: Pipe encrypted content to Unprotect-CmsMessage</span></span>
 
 ```powershell
 $Msg = Get-CmsMessage -Path "C:\Users\Test\Documents\PowerShell\Future_Plans.txt"
@@ -87,13 +87,13 @@ $Msg | Unprotect-CmsMessage -To "cn=youralias@emailaddress.com"
 Try the new Break All command
 ```
 
-<span data-ttu-id="97653-127">此命令通过管道将 `Get-CmsMessage` 示例1中的 cmdlet 结果 `Unprotect-CmsMessage` 传递给，以便对消息进行解密并以纯文本形式进行读取。</span><span class="sxs-lookup"><span data-stu-id="97653-127">This command pipes the results of the `Get-CmsMessage` cmdlet from Example 1 to `Unprotect-CmsMessage`, to decrypt the message and read it in plain text.</span></span> <span data-ttu-id="97653-128">在此例中，To  参数的值是加密证书的主题行的值。</span><span class="sxs-lookup"><span data-stu-id="97653-128">In this case, the value of the **To** parameter is the value of the encrypting certificate's Subject line.</span></span> <span data-ttu-id="97653-129">解密后的消息“尝试新的 Break All 命令”是结果。</span><span class="sxs-lookup"><span data-stu-id="97653-129">The decrypted message, "Try the new Break All command," is the result.</span></span>
+<span data-ttu-id="97ce3-127">此命令通过管道将 `Get-CmsMessage` 示例1中的 cmdlet 结果 `Unprotect-CmsMessage` 传递给，以便对消息进行解密并以纯文本形式进行读取。</span><span class="sxs-lookup"><span data-stu-id="97ce3-127">This command pipes the results of the `Get-CmsMessage` cmdlet from Example 1 to `Unprotect-CmsMessage`, to decrypt the message and read it in plain text.</span></span> <span data-ttu-id="97ce3-128">在此例中，To 参数的值是加密证书的主题行的值。</span><span class="sxs-lookup"><span data-stu-id="97ce3-128">In this case, the value of the **To** parameter is the value of the encrypting certificate's Subject line.</span></span> <span data-ttu-id="97ce3-129">解密后的消息“尝试新的 Break All 命令”是结果。</span><span class="sxs-lookup"><span data-stu-id="97ce3-129">The decrypted message, "Try the new Break All command," is the result.</span></span>
 
-## <span data-ttu-id="97653-130">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="97653-130">PARAMETERS</span></span>
+## <span data-ttu-id="97ce3-130">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="97ce3-130">PARAMETERS</span></span>
 
-### <span data-ttu-id="97653-131">-Content</span><span class="sxs-lookup"><span data-stu-id="97653-131">-Content</span></span>
+### <span data-ttu-id="97ce3-131">-Content</span><span class="sxs-lookup"><span data-stu-id="97ce3-131">-Content</span></span>
 
-<span data-ttu-id="97653-132">指定加密字符串或包含加密字符串的变量。</span><span class="sxs-lookup"><span data-stu-id="97653-132">Specifies an encrypted string, or a variable containing an encrypted string.</span></span>
+<span data-ttu-id="97ce3-132">指定加密字符串或包含加密字符串的变量。</span><span class="sxs-lookup"><span data-stu-id="97ce3-132">Specifies an encrypted string, or a variable containing an encrypted string.</span></span>
 
 ```yaml
 Type: System.String
@@ -107,10 +107,10 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97653-133">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="97653-133">-LiteralPath</span></span>
+### <span data-ttu-id="97ce3-133">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="97ce3-133">-LiteralPath</span></span>
 
-<span data-ttu-id="97653-134">指定要获取的加密内容的路径。</span><span class="sxs-lookup"><span data-stu-id="97653-134">Specifies the path to encrypted content that you want to get.</span></span> <span data-ttu-id="97653-135">不同于 **Path** ， **LiteralPath** 的值严格按照所键入的形式使用。</span><span class="sxs-lookup"><span data-stu-id="97653-135">Unlike **Path** , the value of **LiteralPath** is used exactly as it is typed.</span></span> <span data-ttu-id="97653-136">不会将任何字符解释为通配字符。</span><span class="sxs-lookup"><span data-stu-id="97653-136">No characters are interpreted as wildcard characters.</span></span> <span data-ttu-id="97653-137">如果路径包括转义符，请将每个路径括在单引号中。</span><span class="sxs-lookup"><span data-stu-id="97653-137">If the path includes escape characters, enclose each one in single quotation marks.</span></span>
-<span data-ttu-id="97653-138">单引号告诉 PowerShell 不要将包含的字符解释为转义符。</span><span class="sxs-lookup"><span data-stu-id="97653-138">Single quotation marks tell PowerShell not to interpret enclosed characters as escape characters.</span></span>
+<span data-ttu-id="97ce3-134">指定要获取的加密内容的路径。</span><span class="sxs-lookup"><span data-stu-id="97ce3-134">Specifies the path to encrypted content that you want to get.</span></span> <span data-ttu-id="97ce3-135">不同于 **Path** ， **LiteralPath** 的值严格按照所键入的形式使用。</span><span class="sxs-lookup"><span data-stu-id="97ce3-135">Unlike **Path** , the value of **LiteralPath** is used exactly as it is typed.</span></span> <span data-ttu-id="97ce3-136">不会将任何字符解释为通配字符。</span><span class="sxs-lookup"><span data-stu-id="97ce3-136">No characters are interpreted as wildcard characters.</span></span> <span data-ttu-id="97ce3-137">如果路径包括转义符，请将每个路径括在单引号中。</span><span class="sxs-lookup"><span data-stu-id="97ce3-137">If the path includes escape characters, enclose each one in single quotation marks.</span></span>
+<span data-ttu-id="97ce3-138">单引号告诉 PowerShell 不要将包含的字符解释为转义符。</span><span class="sxs-lookup"><span data-stu-id="97ce3-138">Single quotation marks tell PowerShell not to interpret enclosed characters as escape characters.</span></span>
 
 ```yaml
 Type: System.String
@@ -124,9 +124,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97653-139">-Path</span><span class="sxs-lookup"><span data-stu-id="97653-139">-Path</span></span>
+### <span data-ttu-id="97ce3-139">-Path</span><span class="sxs-lookup"><span data-stu-id="97ce3-139">-Path</span></span>
 
-<span data-ttu-id="97653-140">指定要解密的加密内容的路径。</span><span class="sxs-lookup"><span data-stu-id="97653-140">Specifies the path to encrypted content that you want to decrypt.</span></span>
+<span data-ttu-id="97ce3-140">指定要解密的加密内容的路径。</span><span class="sxs-lookup"><span data-stu-id="97ce3-140">Specifies the path to encrypted content that you want to decrypt.</span></span>
 
 ```yaml
 Type: System.String
@@ -140,20 +140,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97653-141">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="97653-141">CommonParameters</span></span>
+### <span data-ttu-id="97ce3-141">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="97ce3-141">CommonParameters</span></span>
 
-<span data-ttu-id="97653-142">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="97653-142">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="97653-143">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="97653-143">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="97ce3-142">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="97ce3-142">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="97ce3-143">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="97ce3-143">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="97653-144">输入</span><span class="sxs-lookup"><span data-stu-id="97653-144">INPUTS</span></span>
+## <span data-ttu-id="97ce3-144">输入</span><span class="sxs-lookup"><span data-stu-id="97ce3-144">INPUTS</span></span>
 
-## <span data-ttu-id="97653-145">输出</span><span class="sxs-lookup"><span data-stu-id="97653-145">OUTPUTS</span></span>
+## <span data-ttu-id="97ce3-145">输出</span><span class="sxs-lookup"><span data-stu-id="97ce3-145">OUTPUTS</span></span>
 
-## <span data-ttu-id="97653-146">注释</span><span class="sxs-lookup"><span data-stu-id="97653-146">NOTES</span></span>
+## <span data-ttu-id="97ce3-146">注释</span><span class="sxs-lookup"><span data-stu-id="97ce3-146">NOTES</span></span>
 
-## <span data-ttu-id="97653-147">相关链接</span><span class="sxs-lookup"><span data-stu-id="97653-147">RELATED LINKS</span></span>
+<span data-ttu-id="97ce3-147">此 cmdlet 仅在 Windows 平台上可用。</span><span class="sxs-lookup"><span data-stu-id="97ce3-147">This cmdlet is only available on Windows platforms.</span></span>
 
-[<span data-ttu-id="97653-148">about_Providers</span><span class="sxs-lookup"><span data-stu-id="97653-148">about_Providers</span></span>](../Microsoft.PowerShell.Core/About/about_Providers.md)
+## <span data-ttu-id="97ce3-148">相关链接</span><span class="sxs-lookup"><span data-stu-id="97ce3-148">RELATED LINKS</span></span>
 
-[<span data-ttu-id="97653-149">Protect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="97653-149">Protect-CmsMessage</span></span>](Protect-CmsMessage.md)
+[<span data-ttu-id="97ce3-149">about_Providers</span><span class="sxs-lookup"><span data-stu-id="97ce3-149">about_Providers</span></span>](../Microsoft.PowerShell.Core/About/about_Providers.md)
 
-[<span data-ttu-id="97653-150">Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="97653-150">Unprotect-CmsMessage</span></span>](Unprotect-CmsMessage.md)
+[<span data-ttu-id="97ce3-150">Protect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="97ce3-150">Protect-CmsMessage</span></span>](Protect-CmsMessage.md)
+
+[<span data-ttu-id="97ce3-151">Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="97ce3-151">Unprotect-CmsMessage</span></span>](Unprotect-CmsMessage.md)

@@ -7,21 +7,21 @@ ms.date: 04/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-authenticodesignature?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AuthenticodeSignature
-ms.openlocfilehash: b246e316c209cd66602967d3ad41b03758057192
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 66ecd756eccbe60003304419da64d65b6c55dd01
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197237"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347731"
 ---
-# <span data-ttu-id="424e8-103">Set-AuthenticodeSignature</span><span class="sxs-lookup"><span data-stu-id="424e8-103">Set-AuthenticodeSignature</span></span>
+# <span data-ttu-id="16c22-103">Set-AuthenticodeSignature</span><span class="sxs-lookup"><span data-stu-id="16c22-103">Set-AuthenticodeSignature</span></span>
 
-## <span data-ttu-id="424e8-104">摘要</span><span class="sxs-lookup"><span data-stu-id="424e8-104">SYNOPSIS</span></span>
-<span data-ttu-id="424e8-105">将 [Authenticode](/windows-hardware/drivers/install/authenticode) 签名添加到 PowerShell 脚本或其他文件中。</span><span class="sxs-lookup"><span data-stu-id="424e8-105">Adds an [Authenticode](/windows-hardware/drivers/install/authenticode) signature to a PowerShell script or other file.</span></span>
+## <span data-ttu-id="16c22-104">摘要</span><span class="sxs-lookup"><span data-stu-id="16c22-104">SYNOPSIS</span></span>
+<span data-ttu-id="16c22-105">将 [Authenticode](/windows-hardware/drivers/install/authenticode) 签名添加到 PowerShell 脚本或其他文件中。</span><span class="sxs-lookup"><span data-stu-id="16c22-105">Adds an [Authenticode](/windows-hardware/drivers/install/authenticode) signature to a PowerShell script or other file.</span></span>
 
-## <span data-ttu-id="424e8-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="424e8-106">SYNTAX</span></span>
+## <span data-ttu-id="16c22-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="16c22-106">SYNTAX</span></span>
 
-### <span data-ttu-id="424e8-107">ByPath（默认值）</span><span class="sxs-lookup"><span data-stu-id="424e8-107">ByPath (Default)</span></span>
+### <span data-ttu-id="16c22-107">ByPath（默认值）</span><span class="sxs-lookup"><span data-stu-id="16c22-107">ByPath (Default)</span></span>
 
 ```
 Set-AuthenticodeSignature [-Certificate] <X509Certificate2> [-IncludeChain <String>]
@@ -29,7 +29,7 @@ Set-AuthenticodeSignature [-Certificate] <X509Certificate2> [-IncludeChain <Stri
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="424e8-108">ByLiteralPath</span><span class="sxs-lookup"><span data-stu-id="424e8-108">ByLiteralPath</span></span>
+### <span data-ttu-id="16c22-108">ByLiteralPath</span><span class="sxs-lookup"><span data-stu-id="16c22-108">ByLiteralPath</span></span>
 
 ```
 Set-AuthenticodeSignature [-Certificate] <X509Certificate2> [-IncludeChain <String>]
@@ -37,7 +37,7 @@ Set-AuthenticodeSignature [-Certificate] <X509Certificate2> [-IncludeChain <Stri
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="424e8-109">ByContent</span><span class="sxs-lookup"><span data-stu-id="424e8-109">ByContent</span></span>
+### <span data-ttu-id="16c22-109">ByContent</span><span class="sxs-lookup"><span data-stu-id="16c22-109">ByContent</span></span>
 
 ```
 Set-AuthenticodeSignature [-Certificate] <X509Certificate2> [-IncludeChain <String>]
@@ -45,63 +45,63 @@ Set-AuthenticodeSignature [-Certificate] <X509Certificate2> [-IncludeChain <Stri
  -Content <Byte[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="424e8-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="424e8-110">DESCRIPTION</span></span>
+## <span data-ttu-id="16c22-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="16c22-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="424e8-111">`Set-AuthenticodeSignature`Cmdlet 将验证码签名添加到支持主题界面包 (SIP) 的任何文件。</span><span class="sxs-lookup"><span data-stu-id="424e8-111">The `Set-AuthenticodeSignature` cmdlet adds an Authenticode signature to any file that supports Subject Interface Package (SIP).</span></span>
+<span data-ttu-id="16c22-111">`Set-AuthenticodeSignature`Cmdlet 将验证码签名添加到支持主题界面包 (SIP) 的任何文件。</span><span class="sxs-lookup"><span data-stu-id="16c22-111">The `Set-AuthenticodeSignature` cmdlet adds an Authenticode signature to any file that supports Subject Interface Package (SIP).</span></span>
 
-<span data-ttu-id="424e8-112">在 PowerShell 脚本文件中，该签名采用文本块的形式，它指示在脚本中执行的说明的结束。</span><span class="sxs-lookup"><span data-stu-id="424e8-112">In a PowerShell script file, the signature takes the form of a block of text that indicates the end of the instructions that are executed in the script.</span></span> <span data-ttu-id="424e8-113">如果在此 cmdlet 运行时文件中有签名，则该签名被删除。</span><span class="sxs-lookup"><span data-stu-id="424e8-113">If there is a signature in the file when this cmdlet runs, that signature is removed.</span></span>
+<span data-ttu-id="16c22-112">在 PowerShell 脚本文件中，该签名采用文本块的形式，它指示在脚本中执行的说明的结束。</span><span class="sxs-lookup"><span data-stu-id="16c22-112">In a PowerShell script file, the signature takes the form of a block of text that indicates the end of the instructions that are executed in the script.</span></span> <span data-ttu-id="16c22-113">如果在此 cmdlet 运行时文件中有签名，则该签名被删除。</span><span class="sxs-lookup"><span data-stu-id="16c22-113">If there is a signature in the file when this cmdlet runs, that signature is removed.</span></span>
 
-## <span data-ttu-id="424e8-114">示例</span><span class="sxs-lookup"><span data-stu-id="424e8-114">EXAMPLES</span></span>
+## <span data-ttu-id="16c22-114">示例</span><span class="sxs-lookup"><span data-stu-id="16c22-114">EXAMPLES</span></span>
 
-### <span data-ttu-id="424e8-115">示例 1-使用本地证书存储中的证书对脚本进行签名</span><span class="sxs-lookup"><span data-stu-id="424e8-115">Example 1 - Sign a script using a certificate from the local certificate store</span></span>
+### <span data-ttu-id="16c22-115">示例 1-使用本地证书存储中的证书对脚本进行签名</span><span class="sxs-lookup"><span data-stu-id="16c22-115">Example 1 - Sign a script using a certificate from the local certificate store</span></span>
 
-<span data-ttu-id="424e8-116">这些命令从 PowerShell 证书提供程序检索代码签名证书，并使用它对 PowerShell 脚本进行签名。</span><span class="sxs-lookup"><span data-stu-id="424e8-116">These commands retrieve a code-signing certificate from the PowerShell certificate provider and use it to sign a PowerShell script.</span></span>
+<span data-ttu-id="16c22-116">这些命令从 PowerShell 证书提供程序检索代码签名证书，并使用它对 PowerShell 脚本进行签名。</span><span class="sxs-lookup"><span data-stu-id="16c22-116">These commands retrieve a code-signing certificate from the PowerShell certificate provider and use it to sign a PowerShell script.</span></span>
 
 ```powershell
 $cert=Get-ChildItem -Path Cert:\CurrentUser\My -CodeSigningCert
 Set-AuthenticodeSignature -FilePath PsTestInternet2.ps1 -Certificate $cert
 ```
 
-<span data-ttu-id="424e8-117">第一个命令使用 `Get-ChildItem` cmdlet 和 PowerShell 证书提供程序来获取 `Cert:\CurrentUser\My` 证书存储区中的证书。</span><span class="sxs-lookup"><span data-stu-id="424e8-117">The first command uses the `Get-ChildItem` cmdlet and the PowerShell certificate provider to get the certificates in the `Cert:\CurrentUser\My` subdirectory of the certificate store.</span></span> <span data-ttu-id="424e8-118">`Cert:`驱动器是由证书提供程序公开的驱动器。</span><span class="sxs-lookup"><span data-stu-id="424e8-118">The `Cert:` drive is the drive exposed by the certificate provider.</span></span> <span data-ttu-id="424e8-119">仅证书提供程序支持的 **CodeSigningCert** 参数将检索到的证书限制为具有代码签名颁发机构的证书。</span><span class="sxs-lookup"><span data-stu-id="424e8-119">The **CodeSigningCert** parameter, which is supported only by the certificate provider, limits the certificates retrieved to those with code-signing authority.</span></span> <span data-ttu-id="424e8-120">该命令将结果存储在 `$cert` 变量中。</span><span class="sxs-lookup"><span data-stu-id="424e8-120">The command stores the result in the `$cert` variable.</span></span>
+<span data-ttu-id="16c22-117">第一个命令使用 `Get-ChildItem` cmdlet 和 PowerShell 证书提供程序来获取 `Cert:\CurrentUser\My` 证书存储区中的证书。</span><span class="sxs-lookup"><span data-stu-id="16c22-117">The first command uses the `Get-ChildItem` cmdlet and the PowerShell certificate provider to get the certificates in the `Cert:\CurrentUser\My` subdirectory of the certificate store.</span></span> <span data-ttu-id="16c22-118">`Cert:`驱动器是由证书提供程序公开的驱动器。</span><span class="sxs-lookup"><span data-stu-id="16c22-118">The `Cert:` drive is the drive exposed by the certificate provider.</span></span> <span data-ttu-id="16c22-119">仅证书提供程序支持的 **CodeSigningCert** 参数将检索到的证书限制为具有代码签名颁发机构的证书。</span><span class="sxs-lookup"><span data-stu-id="16c22-119">The **CodeSigningCert** parameter, which is supported only by the certificate provider, limits the certificates retrieved to those with code-signing authority.</span></span> <span data-ttu-id="16c22-120">该命令将结果存储在 `$cert` 变量中。</span><span class="sxs-lookup"><span data-stu-id="16c22-120">The command stores the result in the `$cert` variable.</span></span>
 
-<span data-ttu-id="424e8-121">第二个命令使用 `Set-AuthenticodeSignature` cmdlet 对脚本进行签名 `PSTestInternet2.ps1` 。</span><span class="sxs-lookup"><span data-stu-id="424e8-121">The second command uses the `Set-AuthenticodeSignature` cmdlet to sign the `PSTestInternet2.ps1` script.</span></span> <span data-ttu-id="424e8-122">它使用 **FilePath** 参数来指定脚本的名称，并使用 **certificate** 参数来指定在变量中存储证书 `$cert` 。</span><span class="sxs-lookup"><span data-stu-id="424e8-122">It uses the **FilePath** parameter to specify the name of the script and the **Certificate** parameter to specify that the certificate is stored in the `$cert` variable.</span></span>
+<span data-ttu-id="16c22-121">第二个命令使用 `Set-AuthenticodeSignature` cmdlet 对脚本进行签名 `PSTestInternet2.ps1` 。</span><span class="sxs-lookup"><span data-stu-id="16c22-121">The second command uses the `Set-AuthenticodeSignature` cmdlet to sign the `PSTestInternet2.ps1` script.</span></span> <span data-ttu-id="16c22-122">它使用 **FilePath** 参数来指定脚本的名称，并使用 **certificate** 参数来指定在变量中存储证书 `$cert` 。</span><span class="sxs-lookup"><span data-stu-id="16c22-122">It uses the **FilePath** parameter to specify the name of the script and the **Certificate** parameter to specify that the certificate is stored in the `$cert` variable.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="424e8-123">使用 **CodeSigningCert** 参数 `Get-ChildItem` 只返回具有代码签名颁发机构并包含私钥的证书。</span><span class="sxs-lookup"><span data-stu-id="424e8-123">Using the **CodeSigningCert** parameter with `Get-ChildItem` only returns certificates that have code-signing authority and contain a private key.</span></span> <span data-ttu-id="424e8-124">如果没有私钥，则不能使用证书进行签名。</span><span class="sxs-lookup"><span data-stu-id="424e8-124">If there is no private key, the certificates cannot be used for signing.</span></span>
+> <span data-ttu-id="16c22-123">使用 **CodeSigningCert** 参数 `Get-ChildItem` 只返回具有代码签名颁发机构并包含私钥的证书。</span><span class="sxs-lookup"><span data-stu-id="16c22-123">Using the **CodeSigningCert** parameter with `Get-ChildItem` only returns certificates that have code-signing authority and contain a private key.</span></span> <span data-ttu-id="16c22-124">如果没有私钥，则不能使用证书进行签名。</span><span class="sxs-lookup"><span data-stu-id="16c22-124">If there is no private key, the certificates cannot be used for signing.</span></span>
 
-### <span data-ttu-id="424e8-125">示例 2-使用 PFX 文件中的证书对脚本进行签名</span><span class="sxs-lookup"><span data-stu-id="424e8-125">Example 2 - Sign a script using a certificate from a PFX file</span></span>
+### <span data-ttu-id="16c22-125">示例 2-使用 PFX 文件中的证书对脚本进行签名</span><span class="sxs-lookup"><span data-stu-id="16c22-125">Example 2 - Sign a script using a certificate from a PFX file</span></span>
 
-<span data-ttu-id="424e8-126">这些命令使用 `Get-PfxCertificate` cmdlet 加载代码签名证书。</span><span class="sxs-lookup"><span data-stu-id="424e8-126">These commands use the `Get-PfxCertificate` cmdlet to load a code signing certificate.</span></span> <span data-ttu-id="424e8-127">然后，使用它对 PowerShell 脚本进行签名。</span><span class="sxs-lookup"><span data-stu-id="424e8-127">Then, use it to sign a PowerShell script.</span></span>
+<span data-ttu-id="16c22-126">这些命令使用 `Get-PfxCertificate` cmdlet 加载代码签名证书。</span><span class="sxs-lookup"><span data-stu-id="16c22-126">These commands use the `Get-PfxCertificate` cmdlet to load a code signing certificate.</span></span> <span data-ttu-id="16c22-127">然后，使用它对 PowerShell 脚本进行签名。</span><span class="sxs-lookup"><span data-stu-id="16c22-127">Then, use it to sign a PowerShell script.</span></span>
 
 ```powershell
 $cert = Get-PfxCertificate -FilePath C:\Test\Mysign.pfx
 Set-AuthenticodeSignature -FilePath ServerProps.ps1 -Certificate $cert
 ```
 
-<span data-ttu-id="424e8-128">第一个命令使用 `Get-PfxCertificate` cmdlet 将 C:\Test\MySign.pfx 证书加载到 `$cert` 变量中。</span><span class="sxs-lookup"><span data-stu-id="424e8-128">The first command uses the `Get-PfxCertificate` cmdlet to load the C:\Test\MySign.pfx certificate into the `$cert` variable.</span></span>
+<span data-ttu-id="16c22-128">第一个命令使用 `Get-PfxCertificate` cmdlet 将 C:\Test\MySign.pfx 证书加载到 `$cert` 变量中。</span><span class="sxs-lookup"><span data-stu-id="16c22-128">The first command uses the `Get-PfxCertificate` cmdlet to load the C:\Test\MySign.pfx certificate into the `$cert` variable.</span></span>
 
-<span data-ttu-id="424e8-129">第二个命令使用 `Set-AuthenticodeSignature` 对脚本进行签名。</span><span class="sxs-lookup"><span data-stu-id="424e8-129">The second command uses `Set-AuthenticodeSignature` to sign the script.</span></span> <span data-ttu-id="424e8-130">的 **FilePath** 参数 `Set-AuthenticodeSignature` 指定要签名的脚本文件的路径， **Cert** 参数将 `$cert` 包含证书的变量传递到 `Set-AuthenticodeSignature` 。</span><span class="sxs-lookup"><span data-stu-id="424e8-130">The **FilePath** parameter of `Set-AuthenticodeSignature` specifies the path to the script file being signed and the **Cert** parameter passes the `$cert` variable containing the certificate to `Set-AuthenticodeSignature`.</span></span>
+<span data-ttu-id="16c22-129">第二个命令使用 `Set-AuthenticodeSignature` 对脚本进行签名。</span><span class="sxs-lookup"><span data-stu-id="16c22-129">The second command uses `Set-AuthenticodeSignature` to sign the script.</span></span> <span data-ttu-id="16c22-130">的 **FilePath** 参数 `Set-AuthenticodeSignature` 指定要签名的脚本文件的路径， **Cert** 参数将 `$cert` 包含证书的变量传递到 `Set-AuthenticodeSignature` 。</span><span class="sxs-lookup"><span data-stu-id="16c22-130">The **FilePath** parameter of `Set-AuthenticodeSignature` specifies the path to the script file being signed and the **Cert** parameter passes the `$cert` variable containing the certificate to `Set-AuthenticodeSignature`.</span></span>
 
-<span data-ttu-id="424e8-131">如果证书文件受密码保护，则 PowerShell 会提示输入密码。</span><span class="sxs-lookup"><span data-stu-id="424e8-131">If the certificate file is password protected, PowerShell prompts you for the password.</span></span>
+<span data-ttu-id="16c22-131">如果证书文件受密码保护，则 PowerShell 会提示输入密码。</span><span class="sxs-lookup"><span data-stu-id="16c22-131">If the certificate file is password protected, PowerShell prompts you for the password.</span></span>
 
-### <span data-ttu-id="424e8-132">示例 3-添加包含根证书颁发机构的签名</span><span class="sxs-lookup"><span data-stu-id="424e8-132">Example 3 - Add a signature that includes the root authority</span></span>
+### <span data-ttu-id="16c22-132">示例 3-添加包含根证书颁发机构的签名</span><span class="sxs-lookup"><span data-stu-id="16c22-132">Example 3 - Add a signature that includes the root authority</span></span>
 
-<span data-ttu-id="424e8-133">此命令添加数字签名，它包括信任链中的根证书颁发机构，并由第三方时间戳服务器对其进行签名。</span><span class="sxs-lookup"><span data-stu-id="424e8-133">This command adds a digital signature that includes the root authority in the trust chain, and it is signed by a third-party timestamp server.</span></span>
+<span data-ttu-id="16c22-133">此命令添加数字签名，它包括信任链中的根证书颁发机构，并由第三方时间戳服务器对其进行签名。</span><span class="sxs-lookup"><span data-stu-id="16c22-133">This command adds a digital signature that includes the root authority in the trust chain, and it is signed by a third-party timestamp server.</span></span>
 
 ```powershell
 Set-AuthenticodeSignature -FilePath c:\scripts\Remodel.ps1 -Certificate $cert -IncludeChain All -TimestampServer "http://timestamp.fabrikam.com/scripts/timstamper.dll"
 ```
 
-<span data-ttu-id="424e8-134">该命令使用 **FilePath** 参数来指定要签名的脚本，并使用 **Certificate** 参数来指定在变量中保存的证书 `$cert` 。</span><span class="sxs-lookup"><span data-stu-id="424e8-134">The command uses the **FilePath** parameter to specify the script being signed and the **Certificate** parameter to specify the certificate that is saved in the `$cert` variable.</span></span> <span data-ttu-id="424e8-135">它使用 **IncludeChain** 参数来包括信任链中的所有签名，包括根证书颁发机构。</span><span class="sxs-lookup"><span data-stu-id="424e8-135">It uses the **IncludeChain** parameter to include all of the signatures in the trust chain, including the root authority.</span></span> <span data-ttu-id="424e8-136">它还使用 **TimeStampServer** 参数将时间戳添加到签名。</span><span class="sxs-lookup"><span data-stu-id="424e8-136">It also uses the **TimeStampServer** parameter to add a timestamp to the signature.</span></span>
-<span data-ttu-id="424e8-137">这会阻止脚本在证书过期时失败。</span><span class="sxs-lookup"><span data-stu-id="424e8-137">This prevents the script from failing when the certificate expires.</span></span>
+<span data-ttu-id="16c22-134">该命令使用 **FilePath** 参数来指定要签名的脚本，并使用 **Certificate** 参数来指定在变量中保存的证书 `$cert` 。</span><span class="sxs-lookup"><span data-stu-id="16c22-134">The command uses the **FilePath** parameter to specify the script being signed and the **Certificate** parameter to specify the certificate that is saved in the `$cert` variable.</span></span> <span data-ttu-id="16c22-135">它使用 **IncludeChain** 参数来包括信任链中的所有签名，包括根证书颁发机构。</span><span class="sxs-lookup"><span data-stu-id="16c22-135">It uses the **IncludeChain** parameter to include all of the signatures in the trust chain, including the root authority.</span></span> <span data-ttu-id="16c22-136">它还使用 **TimeStampServer** 参数将时间戳添加到签名。</span><span class="sxs-lookup"><span data-stu-id="16c22-136">It also uses the **TimeStampServer** parameter to add a timestamp to the signature.</span></span>
+<span data-ttu-id="16c22-137">这会阻止脚本在证书过期时失败。</span><span class="sxs-lookup"><span data-stu-id="16c22-137">This prevents the script from failing when the certificate expires.</span></span>
 
-## <span data-ttu-id="424e8-138">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="424e8-138">PARAMETERS</span></span>
+## <span data-ttu-id="16c22-138">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="16c22-138">PARAMETERS</span></span>
 
-### <span data-ttu-id="424e8-139">-Certificate</span><span class="sxs-lookup"><span data-stu-id="424e8-139">-Certificate</span></span>
+### <span data-ttu-id="16c22-139">-Certificate</span><span class="sxs-lookup"><span data-stu-id="16c22-139">-Certificate</span></span>
 
-<span data-ttu-id="424e8-140">指定将用来对脚本或文件进行签名的证书。</span><span class="sxs-lookup"><span data-stu-id="424e8-140">Specifies the certificate that will be used to sign the script or file.</span></span> <span data-ttu-id="424e8-141">输入存储对象的变量，该对象表示证书或获取证书的表达式。</span><span class="sxs-lookup"><span data-stu-id="424e8-141">Enter a variable that stores an object representing the certificate or an expression that gets the certificate.</span></span>
+<span data-ttu-id="16c22-140">指定将用来对脚本或文件进行签名的证书。</span><span class="sxs-lookup"><span data-stu-id="16c22-140">Specifies the certificate that will be used to sign the script or file.</span></span> <span data-ttu-id="16c22-141">输入存储对象的变量，该对象表示证书或获取证书的表达式。</span><span class="sxs-lookup"><span data-stu-id="16c22-141">Enter a variable that stores an object representing the certificate or an expression that gets the certificate.</span></span>
 
-<span data-ttu-id="424e8-142">若要查找证书，请使用 `Get-PfxCertificate` 或使用 `Get-ChildItem` 证书驱动器中的 cmdlet `Cert:` 。</span><span class="sxs-lookup"><span data-stu-id="424e8-142">To find a certificate, use `Get-PfxCertificate` or use the `Get-ChildItem` cmdlet in the Certificate `Cert:` drive.</span></span> <span data-ttu-id="424e8-143">如果证书无效或没有 `code-signing` 权限，则该命令将失败。</span><span class="sxs-lookup"><span data-stu-id="424e8-143">If the certificate is not valid or does not have `code-signing` authority, the command fails.</span></span>
+<span data-ttu-id="16c22-142">若要查找证书，请使用 `Get-PfxCertificate` 或使用 `Get-ChildItem` 证书驱动器中的 cmdlet `Cert:` 。</span><span class="sxs-lookup"><span data-stu-id="16c22-142">To find a certificate, use `Get-PfxCertificate` or use the `Get-ChildItem` cmdlet in the Certificate `Cert:` drive.</span></span> <span data-ttu-id="16c22-143">如果证书无效或没有 `code-signing` 权限，则该命令将失败。</span><span class="sxs-lookup"><span data-stu-id="16c22-143">If the certificate is not valid or does not have `code-signing` authority, the command fails.</span></span>
 
 ```yaml
 Type: System.Security.Cryptography.X509Certificates.X509Certificate2
@@ -115,9 +115,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-144">-FilePath</span><span class="sxs-lookup"><span data-stu-id="424e8-144">-FilePath</span></span>
+### <span data-ttu-id="16c22-144">-FilePath</span><span class="sxs-lookup"><span data-stu-id="16c22-144">-FilePath</span></span>
 
-<span data-ttu-id="424e8-145">指定正进行签名的文件的路径。</span><span class="sxs-lookup"><span data-stu-id="424e8-145">Specifies the path to a file that is being signed.</span></span>
+<span data-ttu-id="16c22-145">指定正进行签名的文件的路径。</span><span class="sxs-lookup"><span data-stu-id="16c22-145">Specifies the path to a file that is being signed.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -131,9 +131,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-146">-Force</span><span class="sxs-lookup"><span data-stu-id="424e8-146">-Force</span></span>
+### <span data-ttu-id="16c22-146">-Force</span><span class="sxs-lookup"><span data-stu-id="16c22-146">-Force</span></span>
 
-<span data-ttu-id="424e8-147">允许该 cmdlet 将签名追加到只读文件。</span><span class="sxs-lookup"><span data-stu-id="424e8-147">Allows the cmdlet to append a signature to a read-only file.</span></span> <span data-ttu-id="424e8-148">即使使用 **Force** 参数，该 cmdlet 也无法覆盖安全限制。</span><span class="sxs-lookup"><span data-stu-id="424e8-148">Even using the **Force** parameter, the cmdlet cannot override security restrictions.</span></span>
+<span data-ttu-id="16c22-147">允许该 cmdlet 将签名追加到只读文件。</span><span class="sxs-lookup"><span data-stu-id="16c22-147">Allows the cmdlet to append a signature to a read-only file.</span></span> <span data-ttu-id="16c22-148">即使使用 **Force** 参数，该 cmdlet 也无法覆盖安全限制。</span><span class="sxs-lookup"><span data-stu-id="16c22-148">Even using the **Force** parameter, the cmdlet cannot override security restrictions.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -147,13 +147,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-149">-HashAlgorithm</span><span class="sxs-lookup"><span data-stu-id="424e8-149">-HashAlgorithm</span></span>
+### <span data-ttu-id="16c22-149">-HashAlgorithm</span><span class="sxs-lookup"><span data-stu-id="16c22-149">-HashAlgorithm</span></span>
 
-<span data-ttu-id="424e8-150">指定 Windows 用来计算文件的数字签名的哈希算法。</span><span class="sxs-lookup"><span data-stu-id="424e8-150">Specifies the hashing algorithm that Windows uses to compute the digital signature for the file.</span></span>
+<span data-ttu-id="16c22-150">指定 Windows 用来计算文件的数字签名的哈希算法。</span><span class="sxs-lookup"><span data-stu-id="16c22-150">Specifies the hashing algorithm that Windows uses to compute the digital signature for the file.</span></span>
 
-<span data-ttu-id="424e8-151">对于 PowerShell 3.0，默认值为 SHA256，它是 Windows 默认哈希算法。</span><span class="sxs-lookup"><span data-stu-id="424e8-151">For PowerShell 3.0, the default is SHA256, which is the Windows default hashing algorithm.</span></span> <span data-ttu-id="424e8-152">对于 PowerShell 2.0，默认值为 SHA1。</span><span class="sxs-lookup"><span data-stu-id="424e8-152">For PowerShell 2.0, the default is SHA1.</span></span> <span data-ttu-id="424e8-153">使用不同的哈希算法进行签名的文件可能无法在其他系统上识别。</span><span class="sxs-lookup"><span data-stu-id="424e8-153">Files that are signed with a different hashing algorithm might not be recognized on other systems.</span></span> <span data-ttu-id="424e8-154">支持哪些算法取决于操作系统的版本。</span><span class="sxs-lookup"><span data-stu-id="424e8-154">Which algorithms are supported depends on the version of the operating system.</span></span>
+<span data-ttu-id="16c22-151">对于 PowerShell 3.0，默认值为 SHA256，它是 Windows 默认哈希算法。</span><span class="sxs-lookup"><span data-stu-id="16c22-151">For PowerShell 3.0, the default is SHA256, which is the Windows default hashing algorithm.</span></span> <span data-ttu-id="16c22-152">对于 PowerShell 2.0，默认值为 SHA1。</span><span class="sxs-lookup"><span data-stu-id="16c22-152">For PowerShell 2.0, the default is SHA1.</span></span> <span data-ttu-id="16c22-153">使用不同的哈希算法进行签名的文件可能无法在其他系统上识别。</span><span class="sxs-lookup"><span data-stu-id="16c22-153">Files that are signed with a different hashing algorithm might not be recognized on other systems.</span></span> <span data-ttu-id="16c22-154">支持哪些算法取决于操作系统的版本。</span><span class="sxs-lookup"><span data-stu-id="16c22-154">Which algorithms are supported depends on the version of the operating system.</span></span>
 
-<span data-ttu-id="424e8-155">有关可能值的列表，请参阅 [HashAlgorithmName 结构](/dotnet/api/system.security.cryptography.hashalgorithmname?view=netframework-4.7.2#properties)。</span><span class="sxs-lookup"><span data-stu-id="424e8-155">For a list of possible values, see [HashAlgorithmName Struct](/dotnet/api/system.security.cryptography.hashalgorithmname?view=netframework-4.7.2#properties).</span></span>
+<span data-ttu-id="16c22-155">有关可能值的列表，请参阅 [HashAlgorithmName 结构](/dotnet/api/system.security.cryptography.hashalgorithmname?view=netframework-4.7.2#properties)。</span><span class="sxs-lookup"><span data-stu-id="16c22-155">For a list of possible values, see [HashAlgorithmName Struct](/dotnet/api/system.security.cryptography.hashalgorithmname?view=netframework-4.7.2#properties).</span></span>
 
 ```yaml
 Type: System.String
@@ -167,16 +167,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-156">-IncludeChain</span><span class="sxs-lookup"><span data-stu-id="424e8-156">-IncludeChain</span></span>
+### <span data-ttu-id="16c22-156">-IncludeChain</span><span class="sxs-lookup"><span data-stu-id="16c22-156">-IncludeChain</span></span>
 
-<span data-ttu-id="424e8-157">确定证书信任链中的哪些证书包含在数字签名中。</span><span class="sxs-lookup"><span data-stu-id="424e8-157">Determines which certificates in the certificate trust chain are included in the digital signature.</span></span>
-<span data-ttu-id="424e8-158">默认值为 **NotRoot** 。</span><span class="sxs-lookup"><span data-stu-id="424e8-158">**NotRoot** is the default.</span></span>
+<span data-ttu-id="16c22-157">确定证书信任链中的哪些证书包含在数字签名中。</span><span class="sxs-lookup"><span data-stu-id="16c22-157">Determines which certificates in the certificate trust chain are included in the digital signature.</span></span>
+<span data-ttu-id="16c22-158">默认值为 **NotRoot** 。</span><span class="sxs-lookup"><span data-stu-id="16c22-158">**NotRoot** is the default.</span></span>
 
-<span data-ttu-id="424e8-159">有效值是：</span><span class="sxs-lookup"><span data-stu-id="424e8-159">Valid values are:</span></span>
+<span data-ttu-id="16c22-159">有效值是：</span><span class="sxs-lookup"><span data-stu-id="16c22-159">Valid values are:</span></span>
 
-- <span data-ttu-id="424e8-160">签名者：仅包括签名者的证书。</span><span class="sxs-lookup"><span data-stu-id="424e8-160">Signer: Includes only the signer's certificate.</span></span>
-- <span data-ttu-id="424e8-161">NotRoot：包括证书链中的所有证书，根颁发机构除外。</span><span class="sxs-lookup"><span data-stu-id="424e8-161">NotRoot: Includes all of the certificates in the certificate chain, except for the root authority.</span></span>
-- <span data-ttu-id="424e8-162">所有：包括证书链中的所有证书。</span><span class="sxs-lookup"><span data-stu-id="424e8-162">All: Includes all the certificates in the certificate chain.</span></span>
+- <span data-ttu-id="16c22-160">签名者：仅包括签名者的证书。</span><span class="sxs-lookup"><span data-stu-id="16c22-160">Signer: Includes only the signer's certificate.</span></span>
+- <span data-ttu-id="16c22-161">NotRoot：包括证书链中的所有证书，根颁发机构除外。</span><span class="sxs-lookup"><span data-stu-id="16c22-161">NotRoot: Includes all of the certificates in the certificate chain, except for the root authority.</span></span>
+- <span data-ttu-id="16c22-162">所有：包括证书链中的所有证书。</span><span class="sxs-lookup"><span data-stu-id="16c22-162">All: Includes all the certificates in the certificate chain.</span></span>
 
 ```yaml
 Type: System.String
@@ -190,11 +190,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-163">-TimestampServer</span><span class="sxs-lookup"><span data-stu-id="424e8-163">-TimestampServer</span></span>
+### <span data-ttu-id="16c22-163">-TimestampServer</span><span class="sxs-lookup"><span data-stu-id="16c22-163">-TimestampServer</span></span>
 
-<span data-ttu-id="424e8-164">使用指定的时间戳服务器将时间戳添加到签名。</span><span class="sxs-lookup"><span data-stu-id="424e8-164">Uses the specified time stamp server to add a time stamp to the signature.</span></span> <span data-ttu-id="424e8-165">以字符串的形式键入时间戳服务器的 URL。</span><span class="sxs-lookup"><span data-stu-id="424e8-165">Type the URL of the time stamp server as a string.</span></span>
+<span data-ttu-id="16c22-164">使用指定的时间戳服务器将时间戳添加到签名。</span><span class="sxs-lookup"><span data-stu-id="16c22-164">Uses the specified time stamp server to add a time stamp to the signature.</span></span> <span data-ttu-id="16c22-165">以字符串的形式键入时间戳服务器的 URL。</span><span class="sxs-lookup"><span data-stu-id="16c22-165">Type the URL of the time stamp server as a string.</span></span>
 
-<span data-ttu-id="424e8-166">时间戳表示将证书添加到文件的确切时间。</span><span class="sxs-lookup"><span data-stu-id="424e8-166">The time stamp represents the exact time that the certificate was added to the file.</span></span> <span data-ttu-id="424e8-167">如果证书过期，时间戳可阻止脚本失败，因为用户和程序可以验证在签名时证书有效。</span><span class="sxs-lookup"><span data-stu-id="424e8-167">A time stamp prevents the script from failing if the certificate expires because users and programs can verify that the certificate was valid at the time of signing.</span></span>
+<span data-ttu-id="16c22-166">时间戳表示将证书添加到文件的确切时间。</span><span class="sxs-lookup"><span data-stu-id="16c22-166">The time stamp represents the exact time that the certificate was added to the file.</span></span> <span data-ttu-id="16c22-167">如果证书过期，时间戳可阻止脚本失败，因为用户和程序可以验证在签名时证书有效。</span><span class="sxs-lookup"><span data-stu-id="16c22-167">A time stamp prevents the script from failing if the certificate expires because users and programs can verify that the certificate was valid at the time of signing.</span></span>
 
 ```yaml
 Type: System.String
@@ -208,9 +208,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-168">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="424e8-168">-LiteralPath</span></span>
+### <span data-ttu-id="16c22-168">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="16c22-168">-LiteralPath</span></span>
 
-<span data-ttu-id="424e8-169">指定正进行签名的文件的路径。</span><span class="sxs-lookup"><span data-stu-id="424e8-169">Specifies the path to a file that is being signed.</span></span> <span data-ttu-id="424e8-170">与 **FilePath** 不同， **LiteralPath** 参数的值严格按照所键入的形式使用。</span><span class="sxs-lookup"><span data-stu-id="424e8-170">Unlike **FilePath** , the value of the **LiteralPath** parameter is used exactly as it is typed.</span></span> <span data-ttu-id="424e8-171">不会将任何字符解释为通配符。</span><span class="sxs-lookup"><span data-stu-id="424e8-171">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="424e8-172">如果路径包括转义符，请将其括在单引号中。</span><span class="sxs-lookup"><span data-stu-id="424e8-172">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="424e8-173">单引号指示 PowerShell 不要将任何字符解释为转义序列。</span><span class="sxs-lookup"><span data-stu-id="424e8-173">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
+<span data-ttu-id="16c22-169">指定正进行签名的文件的路径。</span><span class="sxs-lookup"><span data-stu-id="16c22-169">Specifies the path to a file that is being signed.</span></span> <span data-ttu-id="16c22-170">与 **FilePath** 不同， **LiteralPath** 参数的值严格按照所键入的形式使用。</span><span class="sxs-lookup"><span data-stu-id="16c22-170">Unlike **FilePath** , the value of the **LiteralPath** parameter is used exactly as it is typed.</span></span> <span data-ttu-id="16c22-171">不会将任何字符解释为通配符。</span><span class="sxs-lookup"><span data-stu-id="16c22-171">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="16c22-172">如果路径包括转义符，请将其括在单引号中。</span><span class="sxs-lookup"><span data-stu-id="16c22-172">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="16c22-173">单引号指示 PowerShell 不要将任何字符解释为转义序列。</span><span class="sxs-lookup"><span data-stu-id="16c22-173">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -224,9 +224,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-174">-SourcePathOrExtension</span><span class="sxs-lookup"><span data-stu-id="424e8-174">-SourcePathOrExtension</span></span>
+### <span data-ttu-id="16c22-174">-SourcePathOrExtension</span><span class="sxs-lookup"><span data-stu-id="16c22-174">-SourcePathOrExtension</span></span>
 
-<span data-ttu-id="424e8-175">要添加数字签名的内容的文件或文件类型的路径。</span><span class="sxs-lookup"><span data-stu-id="424e8-175">Path to the file or file type of the content for which the digital signature is added.</span></span> <span data-ttu-id="424e8-176">此参数用于将文件内容作为字节数组传递的 **内容** 。</span><span class="sxs-lookup"><span data-stu-id="424e8-176">This parameter is used with **Content** where file content is passed as a byte array.</span></span>
+<span data-ttu-id="16c22-175">要添加数字签名的内容的文件或文件类型的路径。</span><span class="sxs-lookup"><span data-stu-id="16c22-175">Path to the file or file type of the content for which the digital signature is added.</span></span> <span data-ttu-id="16c22-176">此参数用于将文件内容作为字节数组传递的 **内容** 。</span><span class="sxs-lookup"><span data-stu-id="16c22-176">This parameter is used with **Content** where file content is passed as a byte array.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -240,9 +240,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-177">-Content</span><span class="sxs-lookup"><span data-stu-id="424e8-177">-Content</span></span>
+### <span data-ttu-id="16c22-177">-Content</span><span class="sxs-lookup"><span data-stu-id="16c22-177">-Content</span></span>
 
-<span data-ttu-id="424e8-178">文件内容作为为其添加数字签名的字节数组。</span><span class="sxs-lookup"><span data-stu-id="424e8-178">Contents of a file as a byte array for which the digital signature is added.</span></span> <span data-ttu-id="424e8-179">此参数必须与 **SourcePathOrExtension** 参数一起使用。</span><span class="sxs-lookup"><span data-stu-id="424e8-179">This parameter must be used with **SourcePathOrExtension** parameter.</span></span> <span data-ttu-id="424e8-180">文件的内容必须采用 Unicode 格式 (UTF-16LE) 格式。</span><span class="sxs-lookup"><span data-stu-id="424e8-180">The contents of the file must be in Unicode (UTF-16LE) format.</span></span>
+<span data-ttu-id="16c22-178">文件内容作为为其添加数字签名的字节数组。</span><span class="sxs-lookup"><span data-stu-id="16c22-178">Contents of a file as a byte array for which the digital signature is added.</span></span> <span data-ttu-id="16c22-179">此参数必须与 **SourcePathOrExtension** 参数一起使用。</span><span class="sxs-lookup"><span data-stu-id="16c22-179">This parameter must be used with **SourcePathOrExtension** parameter.</span></span> <span data-ttu-id="16c22-180">文件的内容必须采用 Unicode 格式 (UTF-16LE) 格式。</span><span class="sxs-lookup"><span data-stu-id="16c22-180">The contents of the file must be in Unicode (UTF-16LE) format.</span></span>
 
 ```yaml
 Type: System.Byte[]
@@ -256,9 +256,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-181">-Confirm</span><span class="sxs-lookup"><span data-stu-id="424e8-181">-Confirm</span></span>
+### <span data-ttu-id="16c22-181">-Confirm</span><span class="sxs-lookup"><span data-stu-id="16c22-181">-Confirm</span></span>
 
-<span data-ttu-id="424e8-182">提示你在运行 cmdlet 之前进行确认。</span><span class="sxs-lookup"><span data-stu-id="424e8-182">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="16c22-182">提示你在运行 cmdlet 之前进行确认。</span><span class="sxs-lookup"><span data-stu-id="16c22-182">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -272,9 +272,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-183">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="424e8-183">-WhatIf</span></span>
+### <span data-ttu-id="16c22-183">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="16c22-183">-WhatIf</span></span>
 
-<span data-ttu-id="424e8-184">显示运行该 cmdlet 时会发生什么情况。</span><span class="sxs-lookup"><span data-stu-id="424e8-184">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="424e8-185">此 cmdlet 未运行。</span><span class="sxs-lookup"><span data-stu-id="424e8-185">The cmdlet is not run.</span></span>
+<span data-ttu-id="16c22-184">显示运行该 cmdlet 时会发生什么情况。</span><span class="sxs-lookup"><span data-stu-id="16c22-184">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="16c22-185">此 cmdlet 未运行。</span><span class="sxs-lookup"><span data-stu-id="16c22-185">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -288,32 +288,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="424e8-186">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="424e8-186">CommonParameters</span></span>
+### <span data-ttu-id="16c22-186">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="16c22-186">CommonParameters</span></span>
 
-<span data-ttu-id="424e8-187">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="424e8-187">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="424e8-188">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="424e8-188">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="16c22-187">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="16c22-187">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="16c22-188">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="16c22-188">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="424e8-189">输入</span><span class="sxs-lookup"><span data-stu-id="424e8-189">INPUTS</span></span>
+## <span data-ttu-id="16c22-189">输入</span><span class="sxs-lookup"><span data-stu-id="16c22-189">INPUTS</span></span>
 
-### <span data-ttu-id="424e8-190">System.String</span><span class="sxs-lookup"><span data-stu-id="424e8-190">System.String</span></span>
+### <span data-ttu-id="16c22-190">System.String</span><span class="sxs-lookup"><span data-stu-id="16c22-190">System.String</span></span>
 
-<span data-ttu-id="424e8-191">可以通过管道将包含文件路径的字符串传递给 `Set-AuthenticodeSignature` 。</span><span class="sxs-lookup"><span data-stu-id="424e8-191">You can pipe a string that contains the file path to `Set-AuthenticodeSignature`.</span></span>
+<span data-ttu-id="16c22-191">可以通过管道将包含文件路径的字符串传递给 `Set-AuthenticodeSignature` 。</span><span class="sxs-lookup"><span data-stu-id="16c22-191">You can pipe a string that contains the file path to `Set-AuthenticodeSignature`.</span></span>
 
-## <span data-ttu-id="424e8-192">输出</span><span class="sxs-lookup"><span data-stu-id="424e8-192">OUTPUTS</span></span>
+## <span data-ttu-id="16c22-192">输出</span><span class="sxs-lookup"><span data-stu-id="16c22-192">OUTPUTS</span></span>
 
-### <span data-ttu-id="424e8-193">System.Management.Automation.Signature</span><span class="sxs-lookup"><span data-stu-id="424e8-193">System.Management.Automation.Signature</span></span>
+### <span data-ttu-id="16c22-193">System.Management.Automation.Signature</span><span class="sxs-lookup"><span data-stu-id="16c22-193">System.Management.Automation.Signature</span></span>
 
-## <span data-ttu-id="424e8-194">注释</span><span class="sxs-lookup"><span data-stu-id="424e8-194">NOTES</span></span>
+## <span data-ttu-id="16c22-194">注释</span><span class="sxs-lookup"><span data-stu-id="16c22-194">NOTES</span></span>
 
-## <span data-ttu-id="424e8-195">相关链接</span><span class="sxs-lookup"><span data-stu-id="424e8-195">RELATED LINKS</span></span>
+<span data-ttu-id="16c22-195">此 cmdlet 仅在 Windows 平台上可用。</span><span class="sxs-lookup"><span data-stu-id="16c22-195">This cmdlet is only available on Windows platforms.</span></span>
 
-[<span data-ttu-id="424e8-196">Get-AuthenticodeSignature</span><span class="sxs-lookup"><span data-stu-id="424e8-196">Get-AuthenticodeSignature</span></span>](Get-AuthenticodeSignature.md)
+## <span data-ttu-id="16c22-196">相关链接</span><span class="sxs-lookup"><span data-stu-id="16c22-196">RELATED LINKS</span></span>
 
-[<span data-ttu-id="424e8-197">Get-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="424e8-197">Get-ExecutionPolicy</span></span>](Get-ExecutionPolicy.md)
+[<span data-ttu-id="16c22-197">Get-AuthenticodeSignature</span><span class="sxs-lookup"><span data-stu-id="16c22-197">Get-AuthenticodeSignature</span></span>](Get-AuthenticodeSignature.md)
 
-[<span data-ttu-id="424e8-198">Get-PfxCertificate</span><span class="sxs-lookup"><span data-stu-id="424e8-198">Get-PfxCertificate</span></span>](Get-PfxCertificate.md)
+[<span data-ttu-id="16c22-198">Get-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="16c22-198">Get-ExecutionPolicy</span></span>](Get-ExecutionPolicy.md)
 
-[<span data-ttu-id="424e8-199">Set-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="424e8-199">Set-ExecutionPolicy</span></span>](Set-ExecutionPolicy.md)
+[<span data-ttu-id="16c22-199">Get-PfxCertificate</span><span class="sxs-lookup"><span data-stu-id="16c22-199">Get-PfxCertificate</span></span>](Get-PfxCertificate.md)
 
-[<span data-ttu-id="424e8-200">about_Execution_Policies</span><span class="sxs-lookup"><span data-stu-id="424e8-200">about_Execution_Policies</span></span>](../Microsoft.PowerShell.Core/About/about_Execution_Policies.md)
+[<span data-ttu-id="16c22-200">Set-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="16c22-200">Set-ExecutionPolicy</span></span>](Set-ExecutionPolicy.md)
 
-[<span data-ttu-id="424e8-201">about_Signing</span><span class="sxs-lookup"><span data-stu-id="424e8-201">about_Signing</span></span>](../Microsoft.PowerShell.Core/About/about_Signing.md)
+[<span data-ttu-id="16c22-201">about_Execution_Policies</span><span class="sxs-lookup"><span data-stu-id="16c22-201">about_Execution_Policies</span></span>](../Microsoft.PowerShell.Core/About/about_Execution_Policies.md)
+
+[<span data-ttu-id="16c22-202">about_Signing</span><span class="sxs-lookup"><span data-stu-id="16c22-202">about_Signing</span></span>](../Microsoft.PowerShell.Core/About/about_Signing.md)
