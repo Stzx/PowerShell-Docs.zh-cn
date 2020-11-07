@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-Service
-ms.openlocfilehash: 5ad6fb4d39b604834bb77935b14686e088bb61f2
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: fee113e20b178c2b86b8f95cd3147f991aed8efe
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197397"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346626"
 ---
 # Restart-Service
 
@@ -44,9 +44,7 @@ Restart-Service [-Force] [-PassThru] -DisplayName <String[]> [-Include <String[]
 
 ## DESCRIPTION
 
-**重新启动服务** Cmdlet 向 Windows 服务控制器发送一条停止消息，然后将一条消息发送到指定的服务。
-如果一项服务已经停止，则它将启动而不通知你已发生了错误。
-可以通过服务名称或显示名称来指定服务，也可以使用 *InputObject* 参数传递一个对象，该对象表示要重新启动的每个服务。
+`Restart-Service`Cmdlet 向 Windows 服务控制器发送一条停止消息，然后将一条消息发送到指定的服务。 如果一项服务已经停止，则它将启动而不通知你已发生了错误。 可以通过服务名称或显示名称来指定服务，也可以使用 **InputObject** 参数传递一个对象，该对象表示要重新启动的每个服务。
 
 ## 示例
 
@@ -74,18 +72,15 @@ PS C:\> Get-Service -Name "net*" | Where-Object {$_.Status -eq "Stopped"} | Rest
 
 此命令启动计算机上所有停止的网络服务。
 
-此命令使用 Get-Service cmdlet 获取表示服务名称以 net 开头的服务的对象。
-管道运算符 (|) 将 services 对象发送到 Where-Object cmdlet，该 cmdlet 只选择状态为 "已停止" 的服务。
-另一个管道运算符将选定的服务发送到 **Restart** 。
+此命令使用 `Get-Service` cmdlet 来获取对象，这些对象表示服务名称以 "net" 开头的服务。 管道运算符 (`|`) 将服务对象发送给 `Where-Object` cmdlet，后者仅选择状态为 "已停止" 的服务。 另一个管道运算符将选定的服务发送到 `Restart-Service` 。
 
-在实际操作中，你将使用 *WhatIf* 参数来确定该命令的影响，然后再运行该命令。
+在实际操作中，你将使用 **WhatIf** 参数来确定该命令的影响，然后再运行该命令。
 
 ## PARAMETERS
 
 ### -DisplayName
 
-指定要重新启动的服务的显示名称。
-允许使用通配符。
+指定要重新启动的服务的显示名称。 允许使用通配符。
 
 ```yaml
 Type: System.String[]
@@ -101,10 +96,7 @@ Accept wildcard characters: True
 
 ### -Exclude
 
-指定此 cmdlet 省略的服务。
-此参数值使 *Name* 参数有效。
-输入名称元素或模式，例如 "s *"。
-允许使用通配符。
+指定此 cmdlet 省略的服务。 此参数值使 **Name** 参数有效。 输入名称元素或模式，例如 "s *"。 允许使用通配符。
 
 ```yaml
 Type: System.String[]
@@ -136,10 +128,7 @@ Accept wildcard characters: False
 
 ### -Include
 
-指定此 cmdlet 重新启动的服务。
-此参数值使 *Name* 参数有效。
-输入名称元素或模式，例如 "s *"。
-允许使用通配符。
+指定此 cmdlet 重新启动的服务。 此参数值使 **Name** 参数有效。 输入名称元素或模式，例如 "s *"。 允许使用通配符。
 
 ```yaml
 Type: System.String[]
@@ -155,8 +144,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-指定表示要重新启动的服务的 **ServiceController** 对象。
-输入一个包含对象的变量，或键入可获取对象的命令或表达式。
+指定表示要重新启动的服务的 **ServiceController** 对象。 输入一个包含对象的变量，或键入可获取对象的命令或表达式。
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -188,8 +176,7 @@ Accept wildcard characters: True
 
 ### -PassThru
 
-返回一个表示服务的对象。
-默认情况下，此 cmdlet 将不产生任何输出。
+返回一个表示服务的对象。 默认情况下，此 cmdlet 将不产生任何输出。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -221,8 +208,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-显示运行该 cmdlet 时会发生什么情况。
-此 cmdlet 未运行。
+显示运行该 cmdlet 时会发生什么情况。 此 cmdlet 未运行。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -250,13 +236,15 @@ Accept wildcard characters: False
 
 ### 无、System.ServiceProcess.ServiceController
 
-如果指定 *PassThru* 参数，则此 cmdlet 将生成表示重新启动的服务的 **system.serviceprocess. ServiceController** 对象。
-否则，此 cmdlet 将不生成任何输出。
+如果指定 **PassThru** 参数，则此 cmdlet 将生成表示重新启动的服务的 **system.serviceprocess. ServiceController** 对象。 否则，此 cmdlet 将不生成任何输出。
 
 ## 注释
 
-* **重新启动-** 仅当当前用户有权执行此操作时，服务才能控制服务。 如果某个命令不能正常工作，则可能你不具有所需的权限。
-* 若要在系统中查找服务名称并显示服务名称，请键入 " **获取服务** "。 服务名称显示在 " **名称** " 列中，显示名称显示在 **DisplayName** 列中。
+此 cmdlet 仅在 Windows 平台上可用。
+
+- `Restart-Service` 仅当当前用户有权执行此操作时，才能控制服务。 如果某个命令不能正常工作，则可能你不具有所需的权限。
+- 若要在系统中查找服务名称并显示服务名称，请键入 `Get-Service` ""。
+  服务名称显示在 " **名称** " 列中，显示名称显示在 **DisplayName** 列中。
 
 ## 相关链接
 
@@ -275,4 +263,3 @@ Accept wildcard characters: False
 [Suspend-Service](Suspend-Service.md)
 
 [Remove-Service](Remove-Service.md)
-

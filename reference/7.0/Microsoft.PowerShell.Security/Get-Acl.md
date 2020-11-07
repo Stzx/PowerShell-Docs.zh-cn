@@ -7,12 +7,12 @@ ms.date: 03/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-acl?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Acl
-ms.openlocfilehash: cb38b327920fc56817c5c8ec73f548ffba8bdd7a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: d9adce420ff8904fa40c7689a8b2ab5a3b5e945f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197297"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347204"
 ---
 # Get-Acl
 
@@ -91,7 +91,7 @@ Get-Acl C:\Windows\s*.log -Audit | ForEach-Object { $_.Audit.Count }
 Get-Acl -Path HKLM:\System\CurrentControlSet\Control | Format-List
 ```
 
-Path  参数指定 Control 子项。 管道运算符 (`|`) 传递指向命令的安全描述符 `Get-Acl` `Format-List` ，该命令将安全描述符的属性设置为列表格式，使其易于读取。
+Path 参数指定 Control 子项。 管道运算符 (`|`) 传递指向命令的安全描述符 `Get-Acl` `Format-List` ，该命令将安全描述符的属性设置为列表格式，使其易于读取。
 
 ### 示例 5-使用 **InputObject** 获取 ACL
 
@@ -240,6 +240,8 @@ Accept wildcard characters: False
 `Get-Acl` 返回一个对象，该对象表示其获取的 Acl。 对象类型取决于 ACL 类型。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 默认情况下，会 `Get-Acl` 显示资源的 PowerShell 路径 (`<provider>::<resource-path>`) 、资源的所有者和 "访问权限"、"自定义" 访问控制列表中的访问控制项的列表 (数组)  (资源的 "DACL) "。 DACL 列表由资源所有者控制。
 

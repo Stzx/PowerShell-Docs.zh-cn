@@ -7,12 +7,12 @@ ms.date: 6/17/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-computer?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-Computer
-ms.openlocfilehash: ce9e19140cb0bb8fd9172fa7ca7929fb696f9c65
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 623b7bb0084c7fe7822509081d141ddcccf0057a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93199038"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347323"
 ---
 # Restart-Computer
 
@@ -320,11 +320,13 @@ Accept wildcard characters: False
 
 ## 输出
 
-### 无
+### None
 
 `Restart-Computer` 不会生成任何输出。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 - `Restart-Computer` 仅适用于运行 Windows 的计算机，需要 WinRM 和 WMI 关闭系统，包括本地系统。
 - `Restart-Computer`使用 Windows Management Instrumentation (WMI) [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem)类的[Win32Shutdown 方法](/windows/desktop/CIMWin32Prov/win32shutdown-method-in-class-win32-operatingsystem)。 此方法需要为用于重新启动计算机的用户帐户启用 **SeShutdownPrivilege** 特权。

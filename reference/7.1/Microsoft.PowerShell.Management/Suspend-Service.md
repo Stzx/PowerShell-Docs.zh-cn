@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/suspend-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-Service
-ms.openlocfilehash: 8455592f6b919da04603470262c134593f74877c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: c68b9f5d145c190cc786ee5da7a98e0fc6170ead
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197476"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347544"
 ---
 # Suspend-Service
 
@@ -44,9 +44,7 @@ Suspend-Service [-PassThru] -DisplayName <String[]> [-Include <String[]>] [-Excl
 
 ## DESCRIPTION
 
-对于每个指定的服务， **挂服务** Cmdlet 向 Windows 服务控制器发送一条挂起消息。
-挂起时，服务仍在运行，但其操作将停止，直到恢复，如使用 Resume-Service cmdlet。
-可以通过服务名称或显示名称来指定服务，也可以使用 *InputObject* 参数传递一个服务对象来表示要挂起的服务。
+该 `Suspend-Service` cmdlet 将为每个指定的服务向 Windows 服务控制器发送一条挂起消息。 挂起时，服务仍在运行，但其操作将停止，直到恢复，如使用 `Resume-Service` cmdlet。 可以通过服务名称或显示名称来指定服务，也可以使用 **InputObject** 参数传递一个服务对象来表示要挂起的服务。
 
 ## 示例
 
@@ -64,8 +62,7 @@ PS C:\> Suspend-Service -DisplayName "Telnet"
 PS C:\> Suspend-Service -Name lanman* -WhatIf
 ```
 
-此命令会告诉你挂起服务名称以 lanman 开头的服务后会发生的情况。
-若要挂起服务，请在不带 *WhatIf* 参数的情况下重新运行该命令。
+此命令会告诉你挂起服务名称以 lanman 开头的服务后会发生的情况。 若要挂起服务，请在不带 **WhatIf** 参数的情况下重新运行该命令。
 
 ### 示例3：获取和暂停服务
 
@@ -73,8 +70,7 @@ PS C:\> Suspend-Service -Name lanman* -WhatIf
 PS C:\> Get-Service schedule | Suspend-Service
 ```
 
-此命令使用 **get-help** cmdlet 来获取一个对象，该对象表示计算机上的任务计划程序 (计划) 服务。
-管道运算符 (|) 将结果传递给 **挂起** 服务，这会挂起服务。
+此命令使用 `Get-Service` cmdlet 来获取一个对象，该对象表示计算机上的任务计划程序 (计划) 服务。 管道运算符 (`|`) 将结果传递给 `Suspend-Service` ，这会挂起服务。
 
 ### 示例4：挂起所有可挂起的服务
 
@@ -82,18 +78,13 @@ PS C:\> Get-Service schedule | Suspend-Service
 PS C:\> Get-Service | Where-Object {$_.CanPauseAndContinue -eq "True"} | Suspend-Service -Confirm
 ```
 
-此命令挂起计算机上所有可挂起的服务。
-它使用 **Get 服务** 获取代表计算机上的服务的对象。
-管道运算符将结果传递给 Where-Object cmdlet，该 cmdlet 只选择 **CanPauseAndContinue** 属性值为 $True 的服务。
-另一个管道运算符将结果传递给 **挂起的服务** 。
-*Confirm* 参数会提示您进行确认，然后再挂起每个服务。
+此命令挂起计算机上所有可挂起的服务。 它使用 `Get-Service` 来获取表示计算机上的服务的对象。 管道运算符将结果传递给 `Where-Object` cmdlet，后者只选择值 `$True` 为的 **CanPauseAndContinue** 属性的服务。 另一个管道运算符将结果传递给 `Suspend-Service` 。 **Confirm** 参数会提示您进行确认，然后再挂起每个服务。
 
 ## PARAMETERS
 
 ### -DisplayName
 
-指定要挂起的服务的显示名称。
-允许使用通配符。
+指定要挂起的服务的显示名称。 允许使用通配符。
 
 ```yaml
 Type: System.String[]
@@ -109,10 +100,7 @@ Accept wildcard characters: True
 
 ### -Exclude
 
-指定要从指定服务中省略的服务。
-此参数值使 *Name* 参数有效。
-请输入名称元素或模式，例如“s*”。
-允许使用通配符。
+指定要从指定服务中省略的服务。 此参数值使 **Name** 参数有效。 请输入名称元素或模式，例如“s*”。 允许使用通配符。
 
 ```yaml
 Type: System.String[]
@@ -128,10 +116,7 @@ Accept wildcard characters: True
 
 ### -Include
 
-指定要挂起的服务。
-此参数值使 *Name* 参数有效。
-请输入名称元素或模式，例如“s*”。
-允许使用通配符。
+指定要挂起的服务。 此参数值使 **Name** 参数有效。 请输入名称元素或模式，例如“s*”。 允许使用通配符。
 
 ```yaml
 Type: System.String[]
@@ -147,8 +132,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-指定表示要挂起的服务的 **ServiceController** 对象。
-输入一个包含对象的变量，或键入可获取对象的命令或表达式。
+指定表示要挂起的服务的 **ServiceController** 对象。 输入一个包含对象的变量，或键入可获取对象的命令或表达式。
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -164,11 +148,9 @@ Accept wildcard characters: False
 
 ### -Name
 
-指定要挂起的服务的服务名称。
-允许使用通配符。
+指定要挂起的服务的服务名称。 允许使用通配符。
 
-参数名为可选项。
-您可以使用 *Name* 或其 *别名，也* 可以省略参数名称。
+参数名为可选项。 您可以使用 **Name** 或其 **别名，也** 可以省略参数名称。
 
 ```yaml
 Type: System.String[]
@@ -184,8 +166,7 @@ Accept wildcard characters: True
 
 ### -PassThru
 
-返回一个代表你所处理的项目的对象。
-默认情况下，此 cmdlet 将不产生任何输出。
+返回一个代表你所处理的项目的对象。 默认情况下，此 cmdlet 将不产生任何输出。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -246,14 +227,16 @@ Accept wildcard characters: False
 
 ### 无、System.ServiceProcess.ServiceController
 
-如果指定 *PassThru* 参数，则此 cmdlet 将生成表示该服务的 **ServiceController** 对象。
-否则，此 cmdlet 将不生成任何输出。
+如果指定 **PassThru** 参数，则此 cmdlet 将生成表示该服务的 **ServiceController** 对象。 否则，此 cmdlet 将不生成任何输出。
 
 ## 注释
 
-* **挂起-** 只有在当前用户有权执行此操作的情况下，服务才能控制服务。 如果某个命令不能正常工作，则可能你不具有所需的权限。
-* **挂起-服务** 只能挂起支持被挂起和恢复的服务。 若要确定是否可以挂起特定服务，请将 Get-Service cmdlet 与 **CanPauseAndContinue** 属性一起使用。 例如，`Get-Service wmi | Format-List Name, CanPauseAndContinue`。 若要查找计算机上可以挂起的所有服务，请键入 `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}` 。
-* 若要在系统中查找服务名称并显示服务名称，请键入 **get-help** 。 服务名称显示在 " **名称** " 列中，显示名称显示在 **DisplayName** 列中。
+此 cmdlet 仅在 Windows 平台上可用。
+
+- `Suspend-Service` 仅当当前用户有权执行此操作时，才能控制服务。 如果某个命令不能正常工作，则可能你不具有所需的权限。
+- `Suspend-Service` 只能挂起支持被挂起和恢复的服务。 若要确定是否可以挂起特定服务，请将 `Get-Service` cmdlet 与 **CanPauseAndContinue** 属性一起使用。 例如，`Get-Service wmi | Format-List Name, CanPauseAndContinue` 。 若要查找计算机上可以挂起的所有服务，请键入 `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}` 。
+- 若要查找服务名称并显示系统中的服务名称，请键入 `Get-Service`。
+  服务名称显示在 " **名称** " 列中，显示名称显示在 **DisplayName** 列中。
 
 ## 相关链接
 
@@ -272,4 +255,3 @@ Accept wildcard characters: False
 [Stop-Service](Stop-Service.md)
 
 [Remove-Service](Remove-Service.md)
-

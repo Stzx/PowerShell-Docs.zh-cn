@@ -7,12 +7,12 @@ ms.date: 02/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-cmsmessage?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CmsMessage
-ms.openlocfilehash: b90059cd735e26eceb66d211533abbe25894d0ec
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: bbb4fe84a1c41afa6d16f4b127475b3405c7f81d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93196882"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347085"
 ---
 # Get-CmsMessage
 
@@ -87,7 +87,7 @@ $Msg | Unprotect-CmsMessage -To "cn=youralias@emailaddress.com"
 Try the new Break All command
 ```
 
-此命令通过管道将 `Get-CmsMessage` 示例1中的 cmdlet 结果 `Unprotect-CmsMessage` 传递给，以便对消息进行解密并以纯文本形式进行读取。 在此例中，To  参数的值是加密证书的主题行的值。 解密后的消息“尝试新的 Break All 命令”是结果。
+此命令通过管道将 `Get-CmsMessage` 示例1中的 cmdlet 结果 `Unprotect-CmsMessage` 传递给，以便对消息进行解密并以纯文本形式进行读取。 在此例中，To 参数的值是加密证书的主题行的值。 解密后的消息“尝试新的 Break All 命令”是结果。
 
 ## PARAMETERS
 
@@ -149,6 +149,8 @@ Accept wildcard characters: False
 ## 输出
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 ## 相关链接
 

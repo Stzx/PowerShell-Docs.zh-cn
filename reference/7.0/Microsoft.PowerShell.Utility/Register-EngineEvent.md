@@ -7,12 +7,12 @@ ms.date: 02/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/register-engineevent?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-EngineEvent
-ms.openlocfilehash: 26a8ef5bfb9fd520fabc836ca1e5da40558e0e8a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: cff52e9a321428cde31977f6d91e2d1047faa2ee
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197006"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346847"
 ---
 # Register-EngineEvent
 
@@ -60,7 +60,7 @@ Register-EngineEvent -SourceIdentifier PowerShell.Exiting -SupportEvent -Action 
 }
 ```
 
-添加 SupportEvent  参数以隐藏事件订阅。 PowerShell 退出时，在这种情况下，退出会话中的命令历史记录将导出用户目录中的 XML 文件 `$Home` 。
+添加 SupportEvent 参数以隐藏事件订阅。 PowerShell 退出时，在这种情况下，退出会话中的命令历史记录将导出用户目录中的 XML 文件 `$Home` 。
 
 ### 示例3：创建并订阅用户定义的事件
 
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将输入传递给 `Register-EngineEvent` 。
 
@@ -256,6 +256,8 @@ Accept wildcard characters: False
 如果使用 **Action** 参数，则将 `Register-EngineEvent` 返回 **PSEventJob** 对象。 否则，将不生成任何输出。
 
 ## 注释
+
+Linux 或 macOS 平台上没有可用的事件源。
 
 事件、事件订阅和事件队列仅存在于当前会话中。 如果关闭当前会话，将丢弃事件队列并取消事件订阅。
 

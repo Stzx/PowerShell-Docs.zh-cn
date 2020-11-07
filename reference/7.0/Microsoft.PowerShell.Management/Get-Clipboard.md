@@ -7,12 +7,12 @@ ms.date: 09/21/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-clipboard?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Clipboard
-ms.openlocfilehash: 9da33bcf0bc1142859d547debedfb242819041aa
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: ed56dc5655f640dae1d80c66850581ff12dbb7ee
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239628"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347595"
 ---
 # Get-Clipboard
 
@@ -30,7 +30,7 @@ Get-Clipboard [-Raw] [<CommonParameters>]
 `Get-Clipboard`Cmdlet 将剪贴板的内容作为文本获取。 多行文本作为字符串数组返回，类似于 `Get-Content` 。
 
 > [!NOTE]
-> 在 Linux 上，此 cmdlet 要求 `xclip` 实用工具在路径中。
+> 在 Linux 上，此 cmdlet 要求 `xclip` 实用工具在路径中。 MacOS 上不支持此 cmdlet。
 
 ## 示例
 
@@ -79,4 +79,3 @@ Accept wildcard characters: False
 ## 相关链接
 
 [Set-Clipboard](Set-Clipboard.md)
-

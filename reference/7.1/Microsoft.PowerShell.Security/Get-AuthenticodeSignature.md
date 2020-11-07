@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-authenticodesignature?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AuthenticodeSignature
-ms.openlocfilehash: fa3ea8f965ea8089defa5fde7b88b18f00cd83bc
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 44608ba9fa2324f9d6d381801876c831ed8b3db8
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198811"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347289"
 ---
 # Get-AuthenticodeSignature
 
@@ -59,7 +59,7 @@ Get-AuthenticodeSignature -FilePath "C:\Test\NewScript.ps1"
 Get-AuthenticodeSignature test.ps1, test1.ps1, sign-file.ps1, makexml.ps1
 ```
 
-此命令获取有关命令行中列出的四个文件的 Authenticode 签名的信息。 在此示例中，省略了 FilePath  参数（可选）的名称。
+此命令获取有关命令行中列出的四个文件的 Authenticode 签名的信息。 在此示例中，省略了 FilePath 参数（可选）的名称。
 
 ### 示例 3：仅获取多个文件的有效 Authenticode 签名
 
@@ -167,6 +167,8 @@ Accept wildcard characters: False
 
 ## 注释
 
+此 cmdlet 仅在 Windows 平台上可用。
+
 有关 PowerShell 中 Authenticode 签名的信息，请参阅 [about_Signing](../Microsoft.PowerShell.Core/About/about_Signing.md)。
 
 ## 相关链接
@@ -180,4 +182,3 @@ Accept wildcard characters: False
 [about_Execution_Policies](../Microsoft.PowerShell.Core/About/about_Execution_Policies.md)
 
 [about_Signing](../Microsoft.PowerShell.Core/About/about_Signing.md)
-

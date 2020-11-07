@@ -7,12 +7,12 @@ ms.date: 01/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disable-psremoting?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-PSRemoting
-ms.openlocfilehash: 82db14f6819a003f4f51a35844a9fcce7a146f03
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f2f9fb5ac13413b1ace74a995db9c3e78ac22d41
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198873"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347000"
 ---
 # Disable-PSRemoting
 
@@ -463,17 +463,19 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将任何对象传递给此 cmdlet。
 
 ## 输出
 
-### 无
+### None
 
 此 cmdlet 将不生成任何输出。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 - 禁用会话配置不会撤消由或 cmdlet 进行的所有更改 `Enable-PSRemoting` `Enable-PSSessionConfiguration` 。 你可能需要手动撤消以下更改。
 
@@ -502,4 +504,3 @@ Accept wildcard characters: False
 [Unregister-PSSessionConfiguration](Unregister-PSSessionConfiguration.md)
 
 [WSMan 提供程序](../Microsoft.WsMan.Management/About/about_WSMan_Provider.md)
-

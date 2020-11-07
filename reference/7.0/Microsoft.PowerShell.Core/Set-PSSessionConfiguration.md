@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/set-pssessionconfiguration?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PSSessionConfiguration
-ms.openlocfilehash: c1d0d0bc2452e7f05fd47574dedeb4a1b9686fad
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 72ee8c7eebf7d74920fd0d39e3a508841e57b7c5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93199096"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347493"
 ---
 # Set-PSSessionConfiguration
 
@@ -621,7 +621,7 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将输入传递给此 cmdlet。
 
@@ -630,6 +630,8 @@ Accept wildcard characters: False
 ### WSManConfigLeafElement。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 若要运行此 cmdlet，请使用 "以管理员身份运行" 选项启动 PowerShell。
 
