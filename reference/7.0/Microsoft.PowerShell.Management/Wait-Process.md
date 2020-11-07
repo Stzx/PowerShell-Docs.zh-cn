@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/wait-process?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Wait-Process
-ms.openlocfilehash: 07986e4c7e8ead25e99ffc67ff8f9ffa2241af9b
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 1325b1e604bc450f0aaec3ec4e99afa281aa1d91
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93196865"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346168"
 ---
 # Wait-Process
 
@@ -65,7 +65,7 @@ PS C:\> Wait-Process -Id $nid
 第二个命令使用 Stop-Process cmdlet 停止具有存储在 $nid 中的 ID 的进程。
 
 第三个命令使用 **Wait-Process** 等待 Notepad 进程停止。
-它使用  参数标识该进程。
+它使用 **Wait-Process** 的 ID 参数标识该进程。
 
 ### 示例 2：指定进程
 
@@ -79,7 +79,7 @@ PS C:\> Wait-Process -InputObject $p
 这些命令演示了为 **Wait-Process** 指定进程的三种不同方法。
 第一个命令获取 Notepad 进程并将它存储在 $p 变量中。
 
-第二个命令使用 Id  参数，第三个命令使用 Name  参数，第四个命令使用 InputObject  参数。
+第二个命令使用 Id 参数，第三个命令使用 Name 参数，第四个命令使用 InputObject 参数。
 
 这些命令的结果相同，因此可以互换。
 
@@ -177,15 +177,15 @@ Accept wildcard characters: False
 
 ## 输出
 
-### 无
+### None
 
 此 cmdlet 将不生成任何输出。
 
 ## 注释
 
-* 此 cmdlet 使用 System.Diagnostics.Process 类的 **WaitForExit** 方法。 有关该方法的详细信息，请参阅 Microsoft .NET Framework SDK。
+只有 Windows 平台支持 cmdlet。
 
-*
+此 cmdlet 使用 WaitForExit 类的 **WaitForExit** 方法 **。**
 
 ## 相关链接
 

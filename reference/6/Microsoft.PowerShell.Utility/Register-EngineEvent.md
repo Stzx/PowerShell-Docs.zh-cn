@@ -7,12 +7,12 @@ ms.date: 02/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/register-engineevent?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-EngineEvent
-ms.openlocfilehash: 005e495ff5f532cc947edf894a67c078e524a72c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 35218a3860db9746b99ec441e122fcd5e2370f72
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198443"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344756"
 ---
 # Register-EngineEvent
 
@@ -44,7 +44,9 @@ Register-EngineEvent [-SourceIdentifier] <String> [[-Action] <ScriptBlock>] [-Me
 
 ```powershell
 $S = New-PSSession -ComputerName "Server01, Server02"
-Invoke-Command -Session $S { Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Forward }
+Invoke-Command -Session $S {
+Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Forward
+}
 ```
 
 `New-PSSession` 在每台远程计算机上创建用户管理的会话 (PSSession) 。 `Invoke-Command` Cmdlet `Register-EngineEvent` 在远程会话中运行命令。
@@ -60,7 +62,7 @@ Register-EngineEvent -SourceIdentifier PowerShell.Exiting -SupportEvent -Action 
 }
 ```
 
-添加 SupportEvent  参数以隐藏事件订阅。 PowerShell 退出时，在这种情况下，退出会话中的命令历史记录将导出用户目录中的 XML 文件 `$Home` 。
+添加 SupportEvent 参数以隐藏事件订阅。 PowerShell 退出时，在这种情况下，退出会话中的命令历史记录将导出用户目录中的 XML 文件 `$Home` 。
 
 ### 示例3：创建并订阅用户定义的事件
 
@@ -245,7 +247,7 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将输入传递给 `Register-EngineEvent` 。
 
@@ -256,6 +258,8 @@ Accept wildcard characters: False
 如果使用 **Action** 参数，则将 `Register-EngineEvent` 返回 **PSEventJob** 对象。 否则，将不生成任何输出。
 
 ## 注释
+
+Linux 或 macOS 平台上没有可用的事件源。
 
 事件、事件订阅和事件队列仅存在于当前会话中。 如果关闭当前会话，将丢弃事件队列并取消事件订阅。
 

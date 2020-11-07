@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 04a2d18b9d663f612e8819c1d81bbfe490f4931a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: aadb0d53ad180ba1e88d31e5d008c6090ae0c9b3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197717"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345215"
 ---
 # New-Service
 
@@ -167,8 +167,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-指定服务的名称。
-此参数是必需的。
+指定服务的名称。 此参数是必需的。
 
 ```yaml
 Type: System.String
@@ -226,8 +225,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-显示运行该 cmdlet 时会发生什么情况。
-此 cmdlet 未运行。
+显示运行该 cmdlet 时会发生什么情况。 此 cmdlet 未运行。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -247,7 +245,7 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将输入传递给此 cmdlet。
 
@@ -259,7 +257,9 @@ Accept wildcard characters: False
 
 ## 注释
 
-若要在 Windows Vista 和更高版本的 Windows 操作系统上运行此 cmdlet，请使用 "以管理员身份运行" 选项启动 PowerShell。
+此 cmdlet 仅在 Windows 平台上可用。
+
+若要运行此 cmdlet，请使用 "以 **管理员身份运行** " 选项启动 PowerShell。
 
 ## 相关链接
 

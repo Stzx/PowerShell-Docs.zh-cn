@@ -7,12 +7,12 @@ ms.date: 10/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-gridview?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-GridView
-ms.openlocfilehash: 22e6a8de2b52039e0a23cab135f81ff74bdf929a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 840aa38ff17ceaf7dc65ca838da020c3d8c27952
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198773"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344382"
 ---
 # Out-GridView
 
@@ -148,7 +148,7 @@ pwsh -Command "Get-Service | Out-GridView -Wait"
 
 指定 cmdlet 接受作为输入的对象 `Out-GridView` 。
 
-使用 **InputObject** 参数将对象集合发送到时 `Out-GridView` ， `Out-GridView` 会将该集合视为一个集合对象，并显示一个表示该集合的行。 若要显示集合中的每个对象，请使用管道运算符 (|要将对象发送到 `Out-GridView` 的) 。
+使用 **InputObject** 参数将对象集合发送到时 `Out-GridView` ， `Out-GridView` 会将该集合视为一个集合对象，并显示一个表示该集合的行。 若要显示集合中的每个对象，请使用管道运算符 (`|`) 将对象发送到 `Out-GridView` 。
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -250,11 +250,13 @@ Accept wildcard characters: False
 
 ## 输出
 
-### 无
+### None
 
 通常，不 `Out-GridView` 返回任何对象。 当使用 **PassThru** 参数时，表示所选行的对象将返回到管道中。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 你不能使用远程命令在另一台计算机上打开网格视图窗口。
 

@@ -7,12 +7,12 @@ ms.date: 03/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/register-pssessionconfiguration?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-PSSessionConfiguration
-ms.openlocfilehash: e3b8a075b42d7d612aed1acd6c8c71452d842cb6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 028e28e071bf6e19f2d0aef72b4eec45da6c45b7
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198687"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345878"
 ---
 # Register-PSSessionConfiguration
 
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 
 默认情况下，当你运行 `Register-PSSessionConfiguration` 命令时，系统将提示你重新启动 **WinRM** 服务以使新的会话配置生效。 在重新启动 **WinRM** 服务之前，新的会话配置不会生效。
 
-若要在无提示的情况下重启  参数。 若要手动重新启动 **WinRM** 服务，请使用 `Restart-Service` cmdlet。
+若要在无提示的情况下重启 **WinRM** 服务，请指定 Force 参数。 若要手动重新启动 **WinRM** 服务，请使用 `Restart-Service` cmdlet。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -632,7 +632,7 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将输入传递给此 cmdlet。
 
@@ -641,6 +641,8 @@ Accept wildcard characters: False
 ### WSManConfigContainerElement。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 若要运行此 cmdlet，必须使用 "以 **管理员身份运行** " 选项启动 PowerShell。
 
@@ -669,4 +671,3 @@ Accept wildcard characters: False
 [about_Session_Configurations](About/about_Session_Configurations.md)
 
 [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md)
-

@@ -7,12 +7,12 @@ ms.date: 10/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Service
-ms.openlocfilehash: 8c10e9e97c3371e8de46ed76e4c8a1195bc21513
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 425b5e56286c22b6595954916d8aa66eec807d83
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198191"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345249"
 ---
 # Get-Service
 
@@ -297,6 +297,8 @@ Accept wildcard characters: True
 此 cmdlet 将返回表示计算机上的服务的对象。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 从 PowerShell 6.0 开始，将以下属性添加到 **ServiceController** 对象： **UserName** 、 **Description** 、 **DelayedAutoStart** 、 **BinaryPathName** 和 **StartupType** 。
 

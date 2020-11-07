@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-Command
-ms.openlocfilehash: 976a9ba6047d79bc1ac6225896c7285702daf38a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e6995da1e9ff2a1678c5703b79223481533bc9a5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93196971"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346150"
 ---
 # Show-Command
 
@@ -40,7 +40,7 @@ Show-Command [[-Name] <String>] [-Height <Double>] [-Width <Double>] [-NoCommonP
 
 在 PowerShell 集成脚本环境中 (ISE) ， `Show-Command` 默认情况下会显示窗口的一个变体。 有关使用此命令窗口的信息，请参阅 PowerShell ISE 帮助主题。
 
-此 cmdlet 已在 PowerShell 7 中引入。 
+此 cmdlet 已在 PowerShell 7 中引入。
 
 由于此 cmdlet 需要用户界面，因此它在 Windows Server Core 或 Windows Nano Server 上不起作用。 此 cmdlet 仅适用于支持 Windows 桌面的 Windows 系统。
 
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将输入传递给 `Show-Command` 。
 
@@ -271,6 +271,8 @@ Accept wildcard characters: False
 当使用 **PassThru** 参数时，将 `Show-Command` 返回命令字符串。 使用 **ErrorPopup** 参数时，将 `Show-Command` (任何对象) 返回命令输出。 否则，不 `Show-Command` 会生成任何输出。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 `Show-Command` 在远程会话中不起作用。
 

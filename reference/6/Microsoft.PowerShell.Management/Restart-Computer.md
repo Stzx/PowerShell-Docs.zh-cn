@@ -7,12 +7,12 @@ ms.date: 6/17/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-computer?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-Computer
-ms.openlocfilehash: f55e69dab0075c3ca759c1408a7276fc6fbc8888
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 2d5df7926ab65f45a4d56d84b1f25919bcdb8c41
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93199084"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345198"
 ---
 # Restart-Computer
 
@@ -320,14 +320,16 @@ Accept wildcard characters: False
 
 ## 输出
 
-### 无
+### None
 
 `Restart-Computer` 不会生成任何输出。
 
 ## 注释
 
+此 cmdlet 仅在 Windows 平台上可用。
+
 - `Restart-Computer` 仅适用于运行 Windows 的计算机，需要 WinRM 和 WMI 关闭系统，包括本地系统。
-- `Restart-Computer`使用 Windows Management Instrumentation (WMI) [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem)类的[Win32Shutdown 方法](/windows/desktop/CIMWin32Prov/win32shutdown-method-in-class-win32-operatingsystem)。  此方法需要为用于重新启动计算机的用户帐户启用 **SeShutdownPrivilege** 特权。
+- `Restart-Computer`使用 Windows Management Instrumentation (WMI) [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem)类的[Win32Shutdown 方法](/windows/desktop/CIMWin32Prov/win32shutdown-method-in-class-win32-operatingsystem)。 此方法需要为用于重新启动计算机的用户帐户启用 **SeShutdownPrivilege** 特权。
 
 ## 相关链接
 

@@ -7,12 +7,12 @@ ms.date: 5/1/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Computer
-ms.openlocfilehash: e2d4f321609a386c6795949a4a706323b4889f69
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 54624058b57b88b820391cc5afba638aa39ff873
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198456"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345225"
 ---
 # Rename-Computer
 
@@ -269,10 +269,9 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
-此 cmdlet 不具有按值获取输入的参数。
-但是，你可以通过管道将对象的 **ComputerName** 和 **NewName** 属性的值传递给此 cmdlet。
+此 cmdlet 不具有按值获取输入的参数。 但是，你可以通过管道将对象的 **ComputerName** 和 **NewName** 属性的值传递给此 cmdlet。
 
 ## 输出
 
@@ -282,6 +281,8 @@ Accept wildcard characters: False
 否则，将不返回任何输出。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 ## 相关链接
 

@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Service
-ms.openlocfilehash: 9881dccb78aab973cc6031e28308bbdd27b4da57
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: cf9c44fecde650ab0b4747aea5910da49638f297
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198899"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344314"
 ---
 # Set-Service
 
@@ -419,6 +419,8 @@ Accept wildcard characters: False
 
 ## 注释
 
+此 cmdlet 仅在 Windows 平台上可用。
+
 `Set-Service` 需要提升的权限。 使用 "以 **管理员身份运行** " 选项。
 
 `Set-Service` 仅当当前用户有权管理服务时，才能控制服务。 如果某个命令不能正常工作，则可能没有所需的权限。
@@ -442,4 +444,3 @@ Accept wildcard characters: False
 [Suspend-Service](Suspend-Service.md)
 
 [Remove-Service](Remove-Service.md)
-
