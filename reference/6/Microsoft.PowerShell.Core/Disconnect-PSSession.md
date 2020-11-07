@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-PSSession
-ms.openlocfilehash: c0eed3d571cfb243c3f0ba4d0a4b7ddfaf4f04fb
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 41f278541d1375697ccb95504b7d7b1d28027786
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93199050"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344059"
 ---
 # Disconnect-PSSession
 
@@ -443,6 +443,8 @@ Accept wildcard characters: False
 `Disconnect-PSSession` 返回一个对象，该对象表示其已断开连接的会话。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 - `Disconnect-PSSession`仅当本地计算机和远程计算机运行 PowerShell 3.0 或更高版本时，此 cmdlet 才有效。
 - 如果在 `Disconnect-PSSession` 断开连接的会话上使用 cmdlet，则该命令对该会话不起作用，并且不会生成错误。

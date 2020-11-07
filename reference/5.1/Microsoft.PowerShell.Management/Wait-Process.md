@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/wait-process?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Wait-Process
-ms.openlocfilehash: 38e225a1973022f82a40694cfad89b94d050509e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6fe942f98183a3b185adf5781699bf41d03db920
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198012"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343347"
 ---
 # Wait-Process
 
@@ -40,11 +40,10 @@ Wait-Process [[-Timeout] <Int32>] -InputObject <Process[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Wait-Process** cmdlet 等到一个或多个运行的进程停止后再接受输入。
-在 Windows PowerShell 控制台中，此 cmdlet 禁止显示命令提示符，直到进程停止。
-可以通过进程名称或进程 ID (PID) 来指定进程，也可以通过管道将进程对象传递给 **Wait-Process** 。
 
-**Wait-Process** 仅对在本地计算机上运行的进程有效。
+`Wait-Process`Cmdlet 将等待一个或多个正在运行的进程在接受输入之前停止。 在 PowerShell 控制台中，此 cmdlet 禁止显示命令提示符，直到进程停止。 可以通过进程名称或进程 ID 指定进程 (PID) ，或将进程对象传递给 `Wait-Process` 。
+
+`Wait-Process` 仅适用于在本地计算机上运行的进程。
 
 ## 示例
 
@@ -58,13 +57,11 @@ PS C:\> Wait-Process -Id $nid
 
 此示例停止 Notepad 进程，然后等到该进程停止后，再继续下一个命令。
 
-第一个命令使用 **Get-Process** cmdlet 获取 Notepad 进程的 ID。
-它将 ID 存储在 $nid 变量中。
+第一个命令使用 `Get-Process` cmdlet 来获取记事本进程的 ID。 它将 ID 存储在 `$nid` 变量中。
 
-第二个命令使用 Stop-Process cmdlet 停止具有存储在 $nid 中的 ID 的进程。
+第二个命令使用 `Stop-Process` cmdlet 来停止具有存储在中的 ID 的进程 `$nid` 。
 
-第三个命令使用 **Wait-Process** 等待 Notepad 进程停止。
-它使用  参数标识该进程。
+第三个命令使用 `Wait-Process` 等待，直到记事本进程停止。 它使用的 **Id** 参数 `Wait-Process` 标识该进程。
 
 ### 示例 2：指定进程
 
@@ -75,10 +72,9 @@ PS C:\> Wait-Process -Name "notepad"
 PS C:\> Wait-Process -InputObject $p
 ```
 
-这些命令演示了为 **Wait-Process** 指定进程的三种不同方法。
-第一个命令获取 Notepad 进程并将它存储在 $p 变量中。
+这些命令显示了三种指定进程的不同方法 `Wait-Process` 。 第一个命令获取记事本进程，并将其存储在 `$p` 变量中。
 
-第二个命令使用 Id  参数，第三个命令使用 Name  参数，第四个命令使用 InputObject  参数。
+第二个命令使用 Id 参数，第三个命令使用 Name 参数，第四个命令使用 InputObject 参数。
 
 这些命令的结果相同，因此可以互换。
 
@@ -88,14 +84,13 @@ PS C:\> Wait-Process -InputObject $p
 PS C:\> Wait-Process -Name outlook, winword -Timeout 30
 ```
 
-此命令用 30 秒的时间等待 Outlook 和 Winword 进程停止。
-如果这两个进程均未停止，则该 cmdlet 会显示非终止错误以及命令提示符。
+此命令用 30 秒的时间等待 Outlook 和 Winword 进程停止。 如果这两个进程均未停止，则该 cmdlet 会显示非终止错误以及命令提示符。
 
 ## PARAMETERS
 
 ### -Id
-指定进程的进程 ID。
-若要指定多个 ID，请使用逗号分隔 ID。
+
+指定进程的进程 ID。 若要指定多个 ID，请使用逗号分隔 ID。
 若要查找进程的 PID，请键入 `Get-Process`。
 
 ```yaml
@@ -111,8 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-通过提交进程对象来指定进程。
-输入包含进程对象的变量，或键入获取进程对象的命令或表达式（如 Get-Process cmdlet）。
+
+通过提交进程对象来指定进程。 输入包含进程对象的变量，或键入获取进程对象的命令或表达式（如 `Get-Process` cmdlet）。
 
 ```yaml
 Type: System.Diagnostics.Process[]
@@ -127,9 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-指定进程的进程名称。
-若要指定多个名称，请使用逗号分隔这些名称。
-不支持通配符。
+
+指定进程的进程名称。 若要指定多个名称，请使用逗号分隔这些名称。 不支持通配符。
 
 ```yaml
 Type: System.String[]
@@ -144,9 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
+
 指定此 cmdlet 等待指定进程停止的最长时间，以秒为单位。
-当此时间间隔到期时，该命令会显示一个非终止错误（列出仍在运行的进程）并结束等待。
-默认情况下没有任何超时。
+当此时间间隔到期时，该命令会显示一个非终止错误（列出仍在运行的进程）并结束等待。 默认情况下没有任何超时。
 
 ```yaml
 Type: System.Int32
@@ -161,23 +155,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。 有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。
 
 ## 输入
 
 ### System.Diagnostics.Process
+
 可以将进程对象通过管道传递给此 cmdlet。
 
 ## 输出
 
-### 无
+### None
+
 此 cmdlet 将不生成任何输出。
 
 ## 注释
 
-* 此 cmdlet 使用 System.Diagnostics.Process 类的 **WaitForExit** 方法。 有关该方法的详细信息，请参阅 Microsoft .NET Framework SDK。
-
-*
+此 cmdlet 使用 WaitForExit 类的 **WaitForExit** 方法 **。**
 
 ## 相关链接
 

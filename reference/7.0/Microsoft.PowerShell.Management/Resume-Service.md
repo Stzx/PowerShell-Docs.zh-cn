@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/resume-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resume-Service
-ms.openlocfilehash: a799326c943b09b5b9c0f9cecfdae3b64e6af409
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 2d627625dec5afe6397a3fb346716adfd3fdb31c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197242"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342903"
 ---
 # Resume-Service
 
@@ -44,10 +44,7 @@ Resume-Service [-PassThru] -DisplayName <String[]> [-Include <String[]>] [-Exclu
 
 ## DESCRIPTION
 
-对于每个指定的服务， **Resume Service** cmdlet 都向 Windows 服务控制器发送一条恢复消息。
-如果服务已挂起，则会恢复。
-如果当前正在运行，则忽略该消息。
-你可以通过服务名称或显示名称来指定服务，也可以使用 *InputObject* 参数传递表示要恢复的服务的服务对象。
+`Resume-Service`Cmdlet 为每个指定的服务向 Windows 服务控制器发送一条恢复消息。 如果服务已挂起，则会恢复。 如果当前正在运行，则忽略该消息。 你可以通过服务名称或显示名称来指定服务，也可以使用 **InputObject** 参数传递表示要恢复的服务的服务对象。
 
 ## 示例
 
@@ -57,9 +54,7 @@ Resume-Service [-PassThru] -DisplayName <String[]> [-Include <String[]>] [-Exclu
 PS C:\> Resume-Service "sens"
 ```
 
-此命令在本地计算机上恢复系统事件通知服务。
-服务名称在命令中由 sens 表示。
-该命令使用 *name* 参数来指定服务的服务名称，但该命令省略了参数名称，因为参数名称是可选的。
+此命令在本地计算机上恢复系统事件通知服务。 服务名称在命令中由 sens 表示。 该命令使用 **name** 参数来指定服务的服务名称，但该命令省略了参数名称，因为参数名称是可选的。
 
 ### 示例2：恢复所有挂起的服务
 
@@ -67,12 +62,9 @@ PS C:\> Resume-Service "sens"
 PS C:\> Get-Service | Where-Object {$_.Status -eq "Paused"} | Resume-Service
 ```
 
-此命令恢复计算机上所有挂起的服务。
-Get-Service cmdlet 命令获取计算机上的所有服务。
-管道运算符 (|) 将结果传递给 Where-Object cmdlet，该 cmdlet 选择 **状态** 属性为 "已暂停" 的服务。
-下一个管道运算符将结果发送到 **Resume 服务** ，后者将恢复暂停的服务。
+此命令恢复计算机上所有挂起的服务。 `Get-Service`Cmdlet 命令获取计算机上的所有服务。 管道运算符 (`|`) 将结果传递给 `Where-Object` cmdlet，后者选择 **状态** 属性为 "已暂停" 的服务。 下一个管道运算符将结果发送到 `Resume-Service` ，后者将恢复暂停的服务。
 
-在实际操作中，你将使用 *WhatIf* 参数来确定该命令的影响，然后再运行该命令。
+在实际操作中，你将使用 **WhatIf** 参数来确定该命令的影响，然后再运行该命令。
 
 ## PARAMETERS
 
@@ -95,10 +87,7 @@ Accept wildcard characters: True
 
 ### -Exclude
 
-指定此 cmdlet 省略的服务。
-此参数值使 *Name* 参数有效。
-输入名称元素或模式，例如 "s *"。
-允许使用通配符。
+指定此 cmdlet 省略的服务。 此参数值使 **Name** 参数有效。 输入名称元素或模式，例如 "s *"。 允许使用通配符。
 
 ```yaml
 Type: System.String[]
@@ -114,10 +103,7 @@ Accept wildcard characters: True
 
 ### -Include
 
-指定要恢复的服务。
-此参数的值限定 *Name* 参数。
-输入名称元素或模式，例如 "s *"。
-允许使用通配符。
+指定要恢复的服务。 此参数的值限定 **Name** 参数。 输入名称元素或模式，例如 "s *"。 允许使用通配符。
 
 ```yaml
 Type: System.String[]
@@ -133,8 +119,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-指定表示要恢复的服务的 **ServiceController** 对象。
-输入一个包含对象的变量，或键入可获取对象的命令或表达式。
+指定表示要恢复的服务的 **ServiceController** 对象。 输入一个包含对象的变量，或键入可获取对象的命令或表达式。
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -166,8 +151,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-返回一个表示服务的对象。
-默认情况下，此 cmdlet 将不产生任何输出。
+返回一个表示服务的对象。 默认情况下，此 cmdlet 将不产生任何输出。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -199,8 +183,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-显示运行该 cmdlet 时会发生什么情况。
-此 cmdlet 未运行。
+显示运行该 cmdlet 时会发生什么情况。 此 cmdlet 未运行。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -228,14 +211,16 @@ Accept wildcard characters: False
 
 ### 无、System.ServiceProcess.ServiceController
 
-如果指定 *PassThru* 参数，则此 cmdlet 将生成表示已恢复服务的 **ServiceController** 对象。
-否则，此 cmdlet 将不生成任何输出。
+如果指定 **PassThru** 参数，则此 cmdlet 将生成表示已恢复服务的 **ServiceController** 对象。 否则，此 cmdlet 将不生成任何输出。
 
 ## 注释
 
-* 已暂停的服务的状态为 "已暂停"。 当服务恢复后，其状态为 "正在运行"。
-* **Resume-** 仅当当前用户有权执行此操作时，服务才能控制服务。 如果某个命令不能正常工作，则可能你不具有所需的权限。
-* 若要查找服务名称并显示系统中的服务名称，请键入 `Get-Service`。 服务名称显示在 " **名称** " 列中，显示名称显示在 **DisplayName** 列中。
+此 cmdlet 仅在 Windows 平台上可用。
+
+- 已暂停的服务的状态为 "已暂停"。 当服务恢复后，其状态为 "正在运行"。
+- `Resume-Service` 仅当当前用户有权执行此操作时，才能控制服务。 如果某个命令不能正常工作，则可能你不具有所需的权限。
+- 若要查找服务名称并显示系统中的服务名称，请键入 `Get-Service`。
+  服务名称显示在 " **名称** " 列中，显示名称显示在 **DisplayName** 列中。
 
 ## 相关链接
 

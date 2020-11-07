@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-acl?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Acl
-ms.openlocfilehash: 3c8f26884ac0eda1ece799bbd49a7863b6d2239c
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 56a9625a42062cf787f0c92aaa319a0a344b5919
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197238"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342529"
 ---
 # Set-Acl
 
@@ -135,11 +135,9 @@ Set-Acl -Path "C:\Pets\Dog.txt" -AclObject $NewAcl
 
 第一个命令使用 `Get-Acl` cmdlet 来获取 Dog.txt 文件的安全描述符。
 
-创建后一种变量，为 **BUILTIN\Administrators** 组授予对 Dog.txt 文件的完全控制权。 `$identity`设置为[用户帐户](/dotnet/api/system.security.accesscontrol.filesystemaccessrule.-ctor)名称的变量。
-`$fileSystemRights`将变量设置为 FullControl，可以是指定与访问规则关联的操作的类型的[FileSystemRights](/dotnet/api/system.security.accesscontrol.filesystemrights)值之一。 `$type`设置为 "允许" 的变量指定是允许还是拒绝该操作。 `$fileSystemAccessRuleArgumentList`变量是在生成新的 **FileSystemAccessRule** 对象时传递的参数列表。 然后，创建一个新的 **FileSystemAccessRule** 对象，并将 **FileSystemAccessRule** 对象传递到 **SetAccessRule ( # B1** 方法，添加新的访问规则。
+创建后一种变量，为 **BUILTIN\Administrators** 组授予对 Dog.txt 文件的完全控制权。 `$identity`设置为[用户帐户](/dotnet/api/system.security.accesscontrol.filesystemaccessrule.-ctor)名称的变量。 `$fileSystemRights`将变量设置为 FullControl，可以是指定与访问规则关联的操作的类型的[FileSystemRights](/dotnet/api/system.security.accesscontrol.filesystemrights)值之一。 `$type`设置为 "允许" 的变量指定是允许还是拒绝该操作。 `$fileSystemAccessRuleArgumentList`变量是在生成新的 **FileSystemAccessRule** 对象时传递的参数列表。 然后，创建一个新的 **FileSystemAccessRule** 对象，并将 **FileSystemAccessRule** 对象传递到 **SetAccessRule ( # B1** 方法，添加新的访问规则。
 
-最后一个命令使用将 `Set-Acl` 的安全描述符应用到 Dog.txt。
-命令完成后， **BUILTIN\Administrators** 组将对 Dog.txt 具有完全控制。
+最后一个命令使用将 `Set-Acl` 的安全描述符应用到 Dog.txt。 命令完成后， **BUILTIN\Administrators** 组将对 Dog.txt 具有完全控制。
 
 ## PARAMETERS
 
@@ -349,13 +347,13 @@ Accept wildcard characters: False
 
 ### System.Security.AccessControl.FileSecurity
 
-默认情况下，不 `Set-Acl` 会生成任何输出。
-但是，如果使用 **Passthru** 参数，则它会生成一个安全对象。
-安全对象的类型取决于项的类型。
+默认情况下，不 `Set-Acl` 会生成任何输出。 但是，如果使用 **Passthru** 参数，则它会生成一个安全对象。 安全对象的类型取决于项的类型。
 
 ## 注释
 
- `Set-Acl`PowerShell 文件系统和注册表提供程序支持 cmdlet。 因此，可以使用它来更改文件、目录和注册表项的安全描述符。
+此 cmdlet 仅在 Windows 平台上可用。
+
+`Set-Acl`PowerShell 文件系统和注册表提供程序支持 cmdlet。 因此，可以使用它来更改文件、目录和注册表项的安全描述符。
 
 ## 相关链接
 

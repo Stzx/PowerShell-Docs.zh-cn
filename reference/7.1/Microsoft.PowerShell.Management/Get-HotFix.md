@@ -7,12 +7,12 @@ ms.date: 05/20/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-hotfix?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-HotFix
-ms.openlocfilehash: e73382da05268af278b280d69cbea0687304fb5e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 15aca668be08324f17a2a737214ede309370adf1
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198902"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342121"
 ---
 # Get-HotFix
 
@@ -183,6 +183,8 @@ Accept wildcard characters: False
 `Get-HotFix` 返回表示计算机上的修补程序的对象。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 **Win32_QuickFixEngineering** [WMI 类](/windows/desktop/WmiSdk/retrieving-a-class)表示系统范围较小的更新，通常称为 "快速修补工程"， (QFE) update，应用于当前操作系统。 此类仅返回由基于组件的服务所提供的更新 (CBS) 。 注册表中未列出这些更新。 **Win32_QuickFixEngineering** 未返回 MICROSOFT WINDOWS INSTALLER (MSI) 或 [Windows 更新](https://update.microsoft.com)站点提供的更新。 有关详细信息，请参阅 [Win32_QuickFixEngineering 类](/windows/desktop/CIMWin32Prov/win32-quickfixengineering)。
 

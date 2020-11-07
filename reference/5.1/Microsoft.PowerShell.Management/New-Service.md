@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 3249ce91a63417f2790997d37e2420c6fcb374d8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5647f9bfa909cba9740e7be17f262b6be0e5c8e9
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198081"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342920"
 ---
 # New-Service
 
@@ -177,8 +177,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-指定服务的名称。
-此参数是必需的。
+指定服务的名称。 此参数是必需的。
 
 ```yaml
 Type: System.String
@@ -236,8 +235,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-显示运行该 cmdlet 时会发生什么情况。
-此 cmdlet 未运行。
+显示运行该 cmdlet 时会发生什么情况。 此 cmdlet 未运行。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -257,7 +255,7 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将输入传递给此 cmdlet。
 
@@ -269,7 +267,7 @@ Accept wildcard characters: False
 
 ## 注释
 
-若要在 Windows Vista 和更高版本的 Windows 操作系统上运行此 cmdlet，请使用 "以管理员身份运行" 选项启动 PowerShell。
+若要运行此 cmdlet，请使用 "以 **管理员身份运行** " 选项启动 PowerShell。
 
 若要删除服务，请使用 Sc.exe，或使用 `Get-CimInstance` cmdlet 获取表示该服务的 **Win32_Service** 对象，然后使用 **delete** 方法删除该服务。 返回的对象 `Get-Service` 没有删除方法。
 

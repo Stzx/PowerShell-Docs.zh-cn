@@ -7,12 +7,12 @@ ms.date: 06/24/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionconfigurationfile?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionConfigurationFile
-ms.openlocfilehash: 1045c22cdaadb9fe1a45ec01ea86d5d8a276b05a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e393916f00e3670cd1ed3b5772bf165c43cc3a2f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198533"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343940"
 ---
 # New-PSSessionConfigurationFile
 
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -公司名称
 
-指定创建了会话配置或配置文件的公司。 默认值是“未知”  。 此参数的值在会话配置文件中可见，但是它不是会话配置对象的属性。
+指定创建了会话配置或配置文件的公司。 默认值是“未知”。 此参数的值在会话配置文件中可见，但是它不是会话配置对象的属性。
 
 ```yaml
 Type: System.String
@@ -940,17 +940,19 @@ Accept wildcard characters: True
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将任何对象传递给此 cmdlet。
 
 ## 输出
 
-### 无
+### None
 
 此 cmdlet 将不生成任何输出。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 - 诸如 **VisibleCmdlets** 和 **VisibleProviders** 的参数不会将项导入到会话中。 而会从导入到会话中的项中进行选择。 例如，如果 **VisibleProviders** 参数的值是证书提供程序，但 **ModulesToImport** 参数未指定包含证书提供程序的 **模块，** 则该证书提供程序在会话中不可见。
 - `New-PSSessionConfigurationFile` 创建会话配置文件 **，该文件在 path 参数中** 指定的路径中具有 .pssc 文件扩展名。 使用会话配置文件创建会话配置时，该 `Register-PSSessionConfiguration` cmdlet 会复制配置文件，并将该文件的活动副本保存在目录的 **SessionConfig** 子目录中 `$PSHOME` 。

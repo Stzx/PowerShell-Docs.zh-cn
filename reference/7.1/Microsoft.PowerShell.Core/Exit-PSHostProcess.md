@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 11/06/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/exit-pshostprocess?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Exit-PSHostProcess
-ms.openlocfilehash: b7e2bf7cff84e92f4c174ef01861ee5c0a822bea
-ms.sourcegitcommit: 2e497178126b2b33a169ff04c31e251e0b59e89b
+ms.openlocfilehash: 368d29b7cdcbe2725399da0896eed87ddb372236
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "93196765"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342138"
 ---
 # Exit-PSHostProcess
 
@@ -27,7 +27,7 @@ Exit-PSHostProcess [<CommonParameters>]
 
 ## DESCRIPTION
 
-**Enter-pshostprocess** cmdlet 会关闭一个交互式会话，其中包含通过运行 Enter-PSHostProcess cmdlet 打开的本地进程。 完成调试或排查进程内运行的脚本时，可以从进程内运行 **enter-pshostprocess** cmdlet。
+`Exit-PSHostProcess`Cmdlet 可通过运行 cmdlet 来关闭与已打开的本地进程的交互式会话 `Enter-PSHostProcess` 。 `Exit-PSHostProcess`完成调试或排查进程内运行的脚本时，可以从进程中运行 cmdlet。 从 PowerShell 6.2 开始，非 Windows 平台上支持此 cmdlet。
 
 ## 示例
 
@@ -38,8 +38,8 @@ Exit-PSHostProcess [<CommonParameters>]
 PS>
 ```
 
-在此示例中，你一直在活动进程中，调试在进程的运行空间中运行的脚本，如 Enter-pshostprocess 中所述。 键入 **exit** 命令退出调试程序后，请运行 **enter-pshostprocess** cmdlet 以关闭与此进程的交互式会话。
-Cmdlet 可在进程中关闭会话，并返回到 PS C： \\ \> prompt。
+在此示例中，你一直在活动进程中，调试在进程的运行空间中运行的脚本，如中所述 `Enter-PSHostProcess` 。 键入 `exit` 命令退出调试程序后，运行 `Exit-PSHostProcess` cmdlet 以关闭与此进程的交互式会话。
+Cmdlet 可在进程中关闭会话，并返回到 `PS C:\>` 提示符。
 
 ## PARAMETERS
 

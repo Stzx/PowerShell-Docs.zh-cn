@@ -7,17 +7,16 @@ ms.date: 11/02/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/test-filecatalog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-FileCatalog
-ms.openlocfilehash: 128405fdbcf0c1d059287191850ffdca53278ec1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 8f5e11fca51bf92386c19a77fa9a66503b2d47a5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197980"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343236"
 ---
 # Test-FileCatalog
 
 ## 摘要
-
 `Test-FileCatalog` 验证)  ( 的目录文件中包含的哈希是否与实际文件的哈希值相匹配，以便验证其真实性。
 
 此 cmdlet 仅在 Windows 上受支持。
@@ -31,10 +30,7 @@ Test-FileCatalog [-Detailed] [-FilesToSkip <String[]>] [-CatalogFilePath] <Strin
 
 ## DESCRIPTION
 
-`Test-FileCatalog` 通过将目录文件)  ( 的文件哈希与磁盘上实际文件的哈希进行比较来验证文件的真实性。
-如果它检测到任何不匹配，它将以 ValidationFailed 的形式返回状态。 用户可通过使用 -Detailed 参数检索所有这些信息。
-它还在签名属性中显示目录的签名状态，该状态等效于对 `Get-AuthenticodeSignature` 目录文件调用 cmdlet。
-用户也可以使用 -FilesToSkip 参数在验证过程中跳过任何文件。
+`Test-FileCatalog` 通过将目录文件)  ( 的文件哈希与磁盘上实际文件的哈希进行比较来验证文件的真实性。 如果它检测到任何不匹配，它将以 ValidationFailed 的形式返回状态。 用户可通过使用 -Detailed 参数检索所有这些信息。 它还在签名属性中显示目录的签名状态，该状态等效于对 `Get-AuthenticodeSignature` 目录文件调用 cmdlet。 用户也可以使用 -FilesToSkip 参数在验证过程中跳过任何文件。
 
 此 cmdlet 仅在 Windows 上受支持。
 
@@ -154,8 +150,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-显示运行该 cmdlet 时会发生什么情况。
-此 cmdlet 未运行。
+显示运行该 cmdlet 时会发生什么情况。 此 cmdlet 未运行。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

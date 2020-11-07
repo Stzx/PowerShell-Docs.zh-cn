@@ -7,12 +7,12 @@ ms.date: 07/16/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-PSRemoting
-ms.openlocfilehash: 2e05348e3741b84b8ad40bcb6ad542a54354176f
-ms.sourcegitcommit: 0e0f45d0d8deb8c9088a4f4a32218edde052b686
+ms.openlocfilehash: 6dd0b6a997551aba0df2da666eb21dddeb2e1fcf
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "93198936"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344076"
 ---
 # Enable-PSRemoting
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 
 ## 输入
 
-### 无
+### None
 
 不能通过管道将输入传递给此 cmdlet。
 
@@ -267,6 +267,8 @@ Accept wildcard characters: False
 此 cmdlet 将返回描述其结果的字符串。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 在 Windows 操作系统的服务器版本上， `Enable-PSRemoting` 为允许远程访问的专用和域网络创建防火墙规则，并为公用网络创建防火墙规则，该规则仅允许来自同一本地子网中的计算机的远程访问。
 

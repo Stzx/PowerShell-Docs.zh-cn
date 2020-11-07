@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-computerinfo?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ComputerInfo
-ms.openlocfilehash: 55e7831112d6385b6d449123973ca4b877faa7fd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d0bf17b4bdc169661cf4cde878739287d8be668b
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198516"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343977"
 ---
 # Get-ComputerInfo
 
@@ -79,5 +79,7 @@ Accept wildcard characters: True
 ### ComputerInfo。
 
 ## 注释
+
+此 cmdlet 仅在 Windows 平台上可用。
 
 ## 相关链接

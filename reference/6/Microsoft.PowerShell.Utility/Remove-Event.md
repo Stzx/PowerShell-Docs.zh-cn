@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/remove-event?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Event
-ms.openlocfilehash: cf7236d31ccd248701a0464c84e94d0d910cc26f
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: fb5c6761427ea3c79075a18e551bfa7b39f72dc3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198444"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343413"
 ---
 # Remove-Event
 
@@ -34,10 +34,10 @@ Remove-Event [-EventIdentifier] <Int32> [-WhatIf] [-Confirm] [<CommonParameters>
 ```
 
 ## DESCRIPTION
-**删除事件** cmdlet 从当前会话中的事件队列中删除事件。
 
-此 cmdlet 仅删除当前位于队列中的事件。
-若要取消事件注册或取消订阅，请使用 Unregister-Event cmdlet。
+`Remove-Event`Cmdlet 从当前会话中的事件队列中删除事件。
+
+此 cmdlet 仅删除当前位于队列中的事件。 若要取消事件注册或取消订阅，请使用 `Unregister-Event` cmdlet。
 
 ## 示例
 
@@ -68,8 +68,8 @@ PS C:\> Get-Event | Remove-Event
 ## PARAMETERS
 
 ### -EventIdentifier
-指定 cmdlet 删除的事件标识符。
-每个命令中都需要 *EventIdentifier* 或 *SourceIdentifier* 参数。
+
+指定 cmdlet 删除的事件标识符。 每个命令中都需要 **EventIdentifier** 或 **SourceIdentifier** 参数。
 
 ```yaml
 Type: System.Int32
@@ -84,9 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceIdentifier
-指定此 cmdlet 从中删除事件的源标识符。
-不允许使用通配符。
-每个命令中都需要 *EventIdentifier* 或 *SourceIdentifier* 参数。
+
+指定此 cmdlet 从中删除事件的源标识符。 不允许使用通配符。 每个命令中都需要 **EventIdentifier** 或 **SourceIdentifier** 参数。
 
 ```yaml
 Type: System.String
@@ -101,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 提示你在运行 cmdlet 之前进行确认。
 
 ```yaml
@@ -116,8 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-显示运行该 cmdlet 时会发生什么情况。
-此 cmdlet 未运行。
+
+显示运行该 cmdlet 时会发生什么情况。 此 cmdlet 未运行。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -132,23 +132,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。 有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。
 
 ## 输入
 
 ### System.Management.Automation.PSEventArgs
-可以通过管道将 Get-Event 的事件传递给 **删除事件** 。
+
+可以通过管道将事件传递 `Get-Event` 给 `Remove-Event` 。
 
 ## 输出
 
-### 无
+### None
+
 该 cmdlet 不生成任何输出。
 
 ## 注释
 
-* 事件、事件订阅和事件队列仅存在于当前会话中。 如果关闭当前会话，将丢弃事件队列并取消事件订阅。
+Linux 或 macOS 平台上没有可用的事件源。
 
-*
+事件、事件订阅和事件队列仅存在于当前会话中。 如果关闭当前会话，将丢弃事件队列并取消事件订阅。
 
 ## 相关链接
 
