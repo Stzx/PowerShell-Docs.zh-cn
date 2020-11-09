@@ -3,12 +3,12 @@ title: 关于 switch 语句的各项须知内容
 description: PowerShell 中的 switch 语句提供了其他语言没有的功能。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 685a5691599408a0d54ca99bf383bcd7702322a6
-ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
+ms.openlocfilehash: c2e77aa5fb36d04fec1bc86f751291205120c729
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86469712"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355113"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>关于 switch 语句的各项须知内容
 
@@ -657,9 +657,14 @@ Show-Animation
 
 当 `switch` 处理其值时，将创建枚举器并称其为 `$switch`。 这是由 PowerShell 创建的自动变量，你可以直接对其进行操作。
 
-这一点是 [/u/frmadsen](https://www.reddit.com/user/frmadsen) 向我指出的
+```powershell
+$a = 1, 2, 3, 4
 
-<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="8f6edbf1-abc6-4513-971e-ccd1d202889d" data-embed-created="2018-12-25T22:05:33.986Z"><a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">要掌握 PowerShell 我（IT 学生）应该学些什么？</a>讨论中的<a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">评论</a>。</div><script async src="https://www.redditstatic.com/comment-embed.js"></script>
+switch($a) {
+    1 { [void]$switch.MoveNext(); $switch.Current }
+    3 { [void]$switch.MoveNext(); $switch.Current }
+}
+```
 
 这会为你提供以下结果：
 

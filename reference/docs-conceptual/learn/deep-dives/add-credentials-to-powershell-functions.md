@@ -3,12 +3,12 @@ title: 向 PowerShell 函数添加凭据支持
 description: 如何向 PowerShell 脚本、函数和 cmdlet 添加凭据参数。
 ms.date: 10/29/2020
 ms.custom: contributor-JoshDuffney
-ms.openlocfilehash: fb85d47121dc106ae04742254f418e2c727f6157
-ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
+ms.openlocfilehash: 3e4a3f41ccbca1cf97f2e96fd60f22d89be7bc5a
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93143139"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354620"
 ---
 # <a name="add-credential-support-to-powershell-functions"></a>向 PowerShell 函数添加凭据支持
 
@@ -292,7 +292,7 @@ Get-AllSQLDatabases -SQLServer SQL01 -Credential $Credential
 [BetterCredentials]: https://www.powershellgallery.com/packages/BetterCredentials/
 [Azure Key Vault]: https://azure.microsoft.com/services/key-vault/
 [保管库项目]: https://www.vaultproject.io/
-[展开高级函数内的参数]: http://duffney.io/Splatting-Parameters-Within-AdvancedFunctions
+[展开高级函数内的参数]: https://duffney.io/Splatting-Parameters-Within-AdvancedFunctions
 [使用 Windows 上的 Jenkins 和 PowerShell 实现自动化 - 第 2 部分]: https://hodgkins.io/automating-with-jenkins-and-powershell-on-windows-part-2
 [PSCredential]: /dotnet/api/system.management.automation.pscredential
 [The Pester Book]: https://leanpub.com/the-pester-book

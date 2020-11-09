@@ -3,12 +3,12 @@ title: 关于哈希表的各项须知内容
 description: 哈希表在 PowerShell 中非常重要，因此最好对它们进行全面深入的了解。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
-ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
+ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85353815"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354416"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>关于哈希表的各项须知内容
 
@@ -966,7 +966,7 @@ function Get-DeepClone
 [如果性能很重要，请对其进行测试]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [展开]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [pscustomobject]: everything-about-pscustomobject.md
-[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8
+[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8&preserve-view=true
 [PSBoundParameters]: https://tommymaynard.com/the-psboundparameters-automatic-variable-2016/
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
 [自动默认值]: https://www.simple-talk.com/sysadmin/PowerShell/PowerShell-time-saver-automatic-defaults/

@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1 中的新增内容
 description: PowerShell Core 6.1 中发布的新功能和更改
 ms.date: 09/13/2018
-ms.openlocfilehash: 16159059285f89c2ddd85b506b0920f0aa8748ae
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.openlocfilehash: 4ff70be239197c7a4f64019d2aab42433f82f36c
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90846909"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354654"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1 中的新增内容
 
@@ -19,16 +19,16 @@ ms.locfileid: "90846909"
 
 ## <a name="net-core-21"></a>.NET Core 2.1
 
-在[于 5 月发布](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/)后，PowerShell Core 6.1 已移动至 .NET Core 2.1，从而对 PowerShell 进行了很多改进，其中包括：
+在[于 5 月发布](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/)后，PowerShell Core 6.1 已移动至 .NET Core 2.1，从而对 PowerShell 进行了很多改进，其中包括：
 
 - 性能改进（参见[下方](#performance-improvements)）
 - Alpine Linux 支持（预览版）
 - [.NET 全局工具支持](/dotnet/core/tools/global-tools) - 即将在 PowerShell 中推出
-- [`Span<T>`](/dotnet/api/system.span-1?view=netcore-2.1)
+- [`Span<T>`](/dotnet/api/system.span-1)
 
 ## <a name="windows-compatibility-pack-for-net-core"></a>.NET Core 的 Windows 兼容包
 
-在 Windows 上，.NET 团队发布了 [.NET Core 的 Windows 兼容包](https://blogs.msdn.microsoft.com/dotnet/2017/11/16/announcing-the-windows-compatibility-pack-for-net-core/)，这是一组程序集，可将大量已删除的 API 重新添加至 Windows 上的 .NET Core。
+在 Windows 上，.NET 团队发布了 [.NET Core 的 Windows 兼容包](https://devblogs.microsoft.com/dotnet/announcing-the-windows-compatibility-pack-for-net-core/)，这是一组程序集，可将大量已删除的 API 重新添加至 Windows 上的 .NET Core。
 
 我们已将 Windows 兼容包添加到 PowerShell Core 6.1 版本中，让使用这些 API 的任何模块或脚本都能处于可用状态。
 
@@ -36,7 +36,7 @@ Windows兼容包使 PowerShell Core 能使用 Windows 10 2018 年 10 月更新�
 
 ## <a name="support-for-application-allow-lists"></a>对应用程序允许列表的支持
 
-PowerShell Core 6.1 与支持 [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 和 [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 应用程序允许列表的 Windows PowerShell 5.1 具有奇偶一致性。 根据应用程序允许列表，可使用 PowerShell [受限语言模式](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)精确地控制允许执行的二进制文件。
+PowerShell Core 6.1 与支持 [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 和 [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 应用程序允许列表的 Windows PowerShell 5.1 具有奇偶一致性。 根据应用程序允许列表，可使用 PowerShell [受限语言模式](https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/)精确地控制允许执行的二进制文件。
 
 ## <a name="performance-improvements"></a>性能改进
 
