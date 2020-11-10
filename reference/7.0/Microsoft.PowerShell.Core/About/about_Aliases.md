@@ -6,12 +6,12 @@ ms.date: 11/27/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Aliases
-ms.openlocfilehash: 409e6b01f32c5a6f60ac4b450ff08998caf1084a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: e160f1e11ec94142b04aca1dfc27eb24c4148f9b
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93200214"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390739"
 ---
 # <a name="about-aliases"></a>关于别名
 
@@ -171,7 +171,7 @@ Get-Help about_Functions
 
 ## <a name="alias-objects"></a>别名对象
 
-PowerShell 别名由作为 System.management.automation.aliasinfo 类的实例的对象表示。 有关此类对象的详细信息，请参阅 Microsoft Developer Network (MSDN) 库中的 [System.management.automation.aliasinfo 类][aliasinfo] 。
+PowerShell 别名由作为 System.management.automation.aliasinfo 类的实例的对象表示。 有关此类对象的详细信息，请参阅 PowerShell SDK 中的 [System.management.automation.aliasinfo 类][aliasinfo] 。
 
 若要查看 alias 对象的属性和方法，请获取别名。
 然后，将它们传递给 Get-Member cmdlet。 例如：

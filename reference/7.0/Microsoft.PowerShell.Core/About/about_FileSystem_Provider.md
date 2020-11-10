@@ -6,16 +6,17 @@ ms.date: 06/18/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: FileSystem 提供程序
-ms.openlocfilehash: 50ce68e97937326e9dd7030145ffd417be15ed6b
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: fad55a7fb7651dbb006e1765c513bf2546a73891
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93200389"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390824"
 ---
 # <a name="filesystem-provider"></a>FileSystem 提供程序
 
 ## <a name="provider-name"></a>提供程序名称
+
 FileSystem
 
 ## <a name="drives"></a>驱动器
@@ -210,7 +211,7 @@ $e[0]
 Get-Acl -Path test.txt | Format-List -Property *
 ```
 
-有关此对象的详细信息，请通过管道将命令传递给 [Get Member](xref:Microsoft.PowerShell.Utility.Get-Member) cmdlet。 或者，请参阅 MSDN 中的 "[FileSecurity](/dotnet/api/system.security.accesscontrol.filesecurity) 类" (Microsoft 开发人员网络) 库。
+有关此对象的详细信息，请通过管道将命令传递给 [Get Member](xref:Microsoft.PowerShell.Utility.Get-Member) cmdlet。 或者，请参阅 [FileSecurity](/dotnet/api/system.security.accesscontrol.filesecurity) 类。
 
 ### <a name="modify-the-acl-for-a-file"></a>修改文件的 ACL
 
@@ -404,7 +405,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 - **Hidden**
 - **正常**
 - **NotContentIndexed**
-- **断开**
+- **Offline**
 - **ReadOnly**
 - **ReparsePoint**
 - **SparseFile**
@@ -563,6 +564,6 @@ Get-Help Get-ChildItem
 Get-Help Get-ChildItem -Path c:
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [about_Providers](../About/about_Providers.md)

@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Module
-ms.openlocfilehash: c850dede193906492520a5c277519f29589fcfdf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 63f7bb9b9ed411fa9a440974e19b63d572481d8d
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198854"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390943"
 ---
 # Get-Module
 
@@ -51,38 +51,24 @@ Get-Module [[-Name] <String[]>] [-FullyQualifiedName <ModuleSpecification[]>] [-
 
 ## DESCRIPTION
 
-该 `Get-Module` cmdlet 将获取已导入或可导入到 powershell 会话中的 powershell 模块。
-返回的 module 对象 `Get-Module` 包含有关模块的重要信息。
-还可以通过管道将模块对象传递给其他 cmdlet，如 `Import-Module` 和 `Remove-Module` cmdlet。
+该 `Get-Module` cmdlet 将获取已导入或可导入到 powershell 会话中的 powershell 模块。 返回的 module 对象 `Get-Module` 包含有关模块的重要信息。 还可以通过管道将模块对象传递给其他 cmdlet，如 `Import-Module` 和 `Remove-Module` cmdlet。
 
-如果没有参数， `Get-Module` 将获取已导入到当前会话中的模块。
-若要获取所有已安装的模块，请指定 **ListAvailable** 参数。
+如果没有参数， `Get-Module` 将获取已导入到当前会话中的模块。 若要获取所有已安装的模块，请指定 **ListAvailable** 参数。
 
-`Get-Module` 获取模块，但不导入它们。
-从 Windows PowerShell 3.0 开始，当你使用模块中的命令时，将自动导入模块，但命令不会 `Get-Module` 触发自动导入。
-你还可以使用 cmdlet 将模块导入到会话中 `Import-Module` 。
+`Get-Module` 获取模块，但不导入它们。 从 Windows PowerShell 3.0 开始，当你使用模块中的命令时，将自动导入模块，但命令不会 `Get-Module` 触发自动导入。 你还可以使用 cmdlet 将模块导入到会话中 `Import-Module` 。
 
-从 Windows PowerShell 3.0 开始，可以从远程会话中获取模块，然后将其导入到本地会话中。
-此策略使用 PowerShell 的隐式远程处理功能，等效于使用 `Import-PSSession` cmdlet。
-当你在从另一个会话导入的模块中使用命令时，这些命令将在远程会话中隐式运行。 此功能使你可以从本地会话管理远程计算机。
+从 Windows PowerShell 3.0 开始，可以从远程会话中获取模块，然后将其导入到本地会话中。 此策略使用 PowerShell 的隐式远程处理功能，等效于使用 `Import-PSSession` cmdlet。 当你在从另一个会话导入的模块中使用命令时，这些命令将在远程会话中隐式运行。 此功能使你可以从本地会话管理远程计算机。
 
-此外，从 Windows PowerShell 3.0 开始，你可以使用 `Get-Module` 和 `Import-Module` 来获取和导入通用信息模型 (CIM) 模块，其中 Cmdlet 在 CMDLET 定义 XML (CDXML) 文件中定义。
-此功能允许你使用在非托管代码程序集中实现的 cmdlet，如用 c + + 编写的程序集。
+此外，从 Windows PowerShell 3.0 开始，你可以使用 `Get-Module` 和 `Import-Module` 来获取和导入通用信息模型 (CIM) 模块，其中 Cmdlet 在 CMDLET 定义 XML (CDXML) 文件中定义。 此功能允许你使用在非托管代码程序集中实现的 cmdlet，如用 c + + 编写的程序集。
 
 借助这些新功能， `Get-Module` 和 `Import-Module` cmdlet 成为管理异类企业的主要工具，包括运行 Windows 操作系统的计算机和运行其他操作系统的计算机。
 
-若要管理运行启用了 PowerShell 和 PowerShell 远程处理的 Windows 操作系统的远程计算机，请在远程计算机上创建 **PSSession** ，然后使用的 **Pssession** 参数 `Get-Module` 获取 **pssession** 中的 PowerShell 模块。
-在导入模块，然后在当前会话中使用导入的命令时，命令将在远程计算机上的 **PSSession** 中隐式运行。
-你可以将此策略用于管理远程计算机。
+若要管理运行启用了 PowerShell 和 PowerShell 远程处理的 Windows 操作系统的远程计算机，请在远程计算机上创建 **PSSession** ，然后使用的 **Pssession** 参数 `Get-Module` 获取 **pssession** 中的 PowerShell 模块。 在导入模块，然后在当前会话中使用导入的命令时，命令将在远程计算机上的 **PSSession** 中隐式运行。 你可以将此策略用于管理远程计算机。
 
 你可以使用类似的策略来管理未启用 PowerShell 远程处理的计算机。
 其中包括未运行 Windows 操作系统的计算机，以及安装了 PowerShell 但未启用 PowerShell 远程处理的计算机。
 
-首先，在远程计算机上创建 CIM 会话。
-CIM 会话是指与远程计算机上的 WMI) Windows Management Instrumentation (的连接。
-然后，使用的 **CIMSession** 参数 `Get-Module` 从 cim 会话中获取 cim 模块。
-使用 cmdlet 导入 CIM 模块， `Import-Module` 然后运行导入的命令时，命令将在远程计算机上隐式运行。
-你可以将此 WMI 和 CIM 策略用于管理远程计算机。
+首先，在远程计算机上创建 CIM 会话。 CIM 会话是指与远程计算机上的 WMI) Windows Management Instrumentation (的连接。 然后，使用的 **CIMSession** 参数 `Get-Module` 从 cim 会话中获取 cim 模块。 使用 cmdlet 导入 CIM 模块， `Import-Module` 然后运行导入的命令时，命令将在远程计算机上隐式运行。 你可以将此 WMI 和 CIM 策略用于管理远程计算机。
 
 ## 示例
 
@@ -102,8 +88,7 @@ Get-Module -ListAvailable
 
 此命令将获取已安装在计算机上的且可导入当前会话的模块。
 
-`Get-Module` 查找 **$env:P smodulepath** 环境变量指定的路径中的可用模块。
-有关 **PSModulePath** 的详细信息，请参阅 [about_Modules](About/about_Modules.md) 和 [about_Environment_Variables](About/about_Environment_Variables.md)。
+`Get-Module` 查找 **$env:P smodulepath** 环境变量指定的路径中的可用模块。 有关 **PSModulePath** 的详细信息，请参阅 [about_Modules](About/about_Modules.md) 和 [about_Environment_Variables](About/about_Environment_Variables.md)。
 
 ### 示例3：获取所有导出的文件
 
@@ -117,7 +102,7 @@ Get-Module -ListAvailable -All
 
 ```powershell
 $FullyQualifedName = @{ModuleName="Microsoft.PowerShell.Management";ModuleVersion="3.1.0.0"}
-  Get-Module -FullyQualifiedName $FullyQualifedName | Format-Table -Property Name,Version
+Get-Module -FullyQualifiedName $FullyQualifedName | Format-Table -Property Name,Version
 ```
 
 ```Output
@@ -126,8 +111,7 @@ Name                             Version
 Microsoft.PowerShell.Management  3.1.0.0
 ```
 
-此命令通过使用 **FullyQualifiedName** 参数指定模块的完全限定名称来 **获取该模块。**
-然后，该命令通过管道将结果传递 `Format-Table` 给 cmdlet，以将结果的格式设置为表，并将其 **名称** 和 **版本** 作为列标题。
+此命令通过使用 **FullyQualifiedName** 参数指定模块的完全限定名称来 **获取该模块。** 然后，该命令通过管道将结果传递 `Format-Table` 给 cmdlet，以将结果的格式设置为表，并将其 **名称** 和 **版本** 作为列标题。
 
 ### 示例5：获取模块的属性
 
@@ -178,11 +162,9 @@ SessionState
 Version
 ```
 
-此命令获取返回的 **PSModuleInfo** 对象的属性 `Get-Module` 。
-每个模块文件都有一个对应对象。
+此命令获取返回的 **PSModuleInfo** 对象的属性 `Get-Module` 。 每个模块文件都有一个对应对象。
 
-可以使用属性来对模块对象进行格式设置和筛选。
-有关属性的详细信息，请参阅 [PSModuleInfo properties](/dotnet/api/system.management.automation.psmoduleinfo)。
+可以使用属性来对模块对象进行格式设置和筛选。 有关属性的详细信息，请参阅 [PSModuleInfo properties](/dotnet/api/system.management.automation.psmoduleinfo)。
 
 输出包含 Windows PowerShell 3.0 中引入的新属性（如 **Author** 和 **公司名称** ）。
 
@@ -227,11 +209,9 @@ BitsTransfer   Manifest C:\Windows\system32\WindowsPowerShell\v1.0\Modules\BitsT
 
 ### 示例7：显示模块清单的内容
 
-这些命令显示 PowerShell **BitsTransfer** 模块的模块清单的内容。
+这些命令显示 Windows PowerShell **BitsTransfer** 模块的模块清单的内容。
 
-模块不需要具有清单文件。
-如果它们具有清单文件，则需要清单文件才能包含版本号。
-但是，清单文件通常可提供有关模块、模块要求和模块内容的有用信息。
+模块不需要具有清单文件。 如果它们具有清单文件，则需要清单文件才能包含版本号。 但是，清单文件通常可提供有关模块、模块要求和模块内容的有用信息。
 
 ```powershell
 # First command
@@ -277,9 +257,7 @@ d----        12/16/2008  12:36 PM            en-US
 -a---        12/16/2008  12:20 AM     108544 Microsoft.BackgroundIntelligentTransfer.Management.Interop.dll
 ```
 
-此命令将列出模块的目录中的文件。
-这是另一种用于在导入模块之前确定模块中的内容的方法。
-某些模块可能具有帮助文件或描述该模板的自述文件。
+此命令将列出模块的目录中的文件。 这是另一种用于在导入模块之前确定模块中的内容的方法。 某些模块可能具有帮助文件或描述该模板的自述文件。
 
 ### 示例9：获取安装在计算机上的模块
 
@@ -293,12 +271,9 @@ Get-Module -PSSession $s -ListAvailable
 
 第一个命令使用 `New-PSSession` cmdlet 在 Server01 计算机上创建 **PSSession** 。 该命令将 **PSSession** 保存在 $s 的变量中。
 
-第二个命令使用的 **pssession** 和 **ListAvailable** 参数 `Get-Module` 来获取 $s 变量的 **pssession** 中的模块。
+第二个命令使用的 **pssession** 和 **ListAvailable** 参数 `Get-Module` 来获取该变量的 **pssession** 中的模块 `$s` 。
 
-如果通过管道将模块从其他会话传递到 `Import-Module` cmdlet，请 `Import-Module` 使用隐式远程处理功能将模块导入到当前会话中。
-这等效于使用 `Import-PSSession` cmdlet。
-可以在当前会话中使用模块中的 cmdlet，但使用这些 cmdlet 的命令实际在远程会话中运行。
-有关详细信息，请参阅 [`Import-Module`](Import-Module.md) 和 [`Import-PSSession`](../Microsoft.PowerShell.Utility/Import-PSSession.md)。
+如果通过管道将模块从其他会话传递到 `Import-Module` cmdlet，请 `Import-Module` 使用隐式远程处理功能将模块导入到当前会话中。 这等效于使用 `Import-PSSession` cmdlet。 可以在当前会话中使用模块中的 cmdlet，但使用这些 cmdlet 的命令实际在远程会话中运行。 有关详细信息，请参阅 [`Import-Module`](Import-Module.md) 和 [`Import-PSSession`](../Microsoft.PowerShell.Utility/Import-PSSession.md)。
 
 ### 示例10：管理未运行 Windows 操作系统的计算机
 
@@ -340,8 +315,7 @@ Number Friendly Name              OperationalStatus          Total Size Partitio
 
 ### -All
 
-指示此 cmdlet 获取每个模块文件夹中的所有模块（包括嵌套模块、清单 ( psd1) 文件、脚本模块 () 文件）和二进制模块 ( 文件。
-如果没有此参数， `Get-Module` 则仅获取每个模块文件夹中的默认模块。
+指示此 cmdlet 获取每个模块文件夹中的所有模块（包括嵌套模块、清单 ( psd1) 文件、脚本模块 () 文件）和二进制模块 ( 文件。 如果没有此参数， `Get-Module` 则仅获取每个模块文件夹中的默认模块。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -357,8 +331,7 @@ Accept wildcard characters: False
 
 ### -CimNamespace
 
-指定可公开 CIM 模块的备用 CIM 提供程序的命名空间。
-默认值是模块发现 WMI 提供程序的命名空间。
+指定可公开 CIM 模块的备用 CIM 提供程序的命名空间。 默认值是模块发现 WMI 提供程序的命名空间。
 
 使用此参数从未运行 Windows 操作系统的计算机和设备获取 CIM 模块。
 
@@ -378,8 +351,7 @@ Accept wildcard characters: False
 
 ### -CimResourceUri
 
-指定 CIM 模块的备用位置。
-默认值是远程计算机上模块发现 WMI 提供程序的资源 URI。
+指定 CIM 模块的备用位置。 默认值是远程计算机上模块发现 WMI 提供程序的资源 URI。
 
 使用此参数从未运行 Windows 操作系统的计算机和设备获取 CIM 模块。
 
@@ -399,16 +371,13 @@ Accept wildcard characters: False
 
 ### -CimSession
 
-指定远程计算机上的 CIM 会话。
-输入包含 CIM 会话的变量或获取 CIM 会话的命令（如 [CimSession](/powershell/module/cimcmdlets/get-cimsession) 命令）。
+指定远程计算机上的 CIM 会话。 输入包含 CIM 会话的变量或获取 CIM 会话的命令（如 [CimSession](/powershell/module/cimcmdlets/get-cimsession) 命令）。
 
-`Get-Module` 使用 CIM 会话连接从远程计算机获取模块。
-使用 cmdlet 导入模块 `Import-Module` 并在当前会话中使用导入模块中的命令时，命令实际上在远程计算机上运行。
+`Get-Module` 使用 CIM 会话连接从远程计算机获取模块。 使用 cmdlet 导入模块 `Import-Module` 并在当前会话中使用导入模块中的命令时，命令实际上在远程计算机上运行。
 
 你可以使用此参数从未运行 Windows 操作系统的计算机和设备中获取模块，并使用具有 PowerShell 但未启用 PowerShell 远程处理的计算机。
 
-**CimSession** 参数可获取 **CIMSession** 中的所有模块。
-但是，你只能导入基于 CIM 和基于 Cmdlet 定义 XML (CDXML) 的模块。
+**CimSession** 参数可获取 **CIMSession** 中的所有模块。 但是，你只能导入基于 CIM 和基于 Cmdlet 定义 XML (CDXML) 的模块。
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession
@@ -424,16 +393,14 @@ Accept wildcard characters: False
 
 ### -FullyQualifiedName
 
-以 **ModuleSpecification** 对象的形式指定模块的名称。
-此类对象在 ModuleSpecification 构造函数的 "备注" 部分中进行了介绍， [ (哈希表 ](https://msdn.microsoft.com/library/jj136290) 在 MSDN library 中) 。
-例如， **FullyQualifiedName** 参数接受以下格式指定的模块名称：
+指定名称以 **ModuleSpecification** 对象的形式指定的模块。 请参阅 ModuleSpecification 构造函数的 "备注" 部分 [ (哈希表) ](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_)。
 
-- @ {ModuleName = "ModuleName";ModuleVersion = "version_number"}
-- @ {ModuleName = "ModuleName";ModuleVersion = "version_number";Guid = "GUID"}
+例如， **FullyQualifiedModule** 参数接受以下任何一种格式指定的模块名称：
 
-**ModuleName** 和 **ModuleVersion** 是必需的，但 **Guid** 是可选的。
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
-不能在与 **Name** 参数相同的命令中指定 **FullyQualifiedName** 参数。
+**ModuleName** 和 **ModuleVersion** 是必需的，但 **Guid** 是可选的。 不能在与 **Module** 参数相同的命令中指定 **FullyQualifiedModule** 参数。 这两个参数是互斥的。
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ModuleSpecification[]
@@ -449,10 +416,7 @@ Accept wildcard characters: False
 
 ### -ListAvailable
 
-指示此 cmdlet 获取所有已安装的模块。
-`Get-Module` 获取 **PSModulePath** 环境变量中列出的路径中的模块。
-如果没有此参数，则 `Get-Module` 仅获取在 **PSModulePath** 环境变量中列出的、在当前会话中加载的模块。
-**ListAvailable** 不会返回未在 **PSModulePath** 环境变量中找到的模块的相关信息，即使在当前会话中加载了这些模块也是如此。
+指示此 cmdlet 获取所有已安装的模块。 `Get-Module` 获取 **PSModulePath** 环境变量中列出的路径中的模块。 如果没有此参数，则 `Get-Module` 仅获取在 **PSModulePath** 环境变量中列出的、在当前会话中加载的模块。 **ListAvailable** 不会返回未在 **PSModulePath** 环境变量中找到的模块的相关信息，即使在当前会话中加载了这些模块也是如此。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -468,10 +432,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-指定此 cmdlet 获取的模块的名称或名称模式。
-允许使用通配符。
-还可以通过管道将名称传递给 `Get-Module` 。
-不能在与 **Name** 参数相同的命令中指定 **FullyQualifiedName** 参数。
+指定此 cmdlet 获取的模块的名称或名称模式。 允许使用通配符。 还可以通过管道将名称传递给 `Get-Module` 。 不能在与 **Name** 参数相同的命令中指定 **FullyQualifiedName** 参数。
 
 **名称** 不能接受模块 GUID 作为值。
 若要通过指定 GUID 来返回模块，请改用 **FullyQualifiedName** 。
@@ -488,10 +449,37 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: True
 ```
 
+### -PSEdition
+
+获取支持指定的 PowerShell 版本的模块。
+
+此参数的可接受值为：
+
+- 桌面
+- 核心版
+
+Get-Module cmdlet 检查 **PSModuleInfo** 对象的 **CompatiblePSEditions** 属性中是否存在指定的值，并仅返回已设置了该属性的模块。
+
+> [!NOTE]
+>
+> - **桌面版：** 以 .NET Framework 为基础构建，提供与面向在完整功能 Windows 版本（如服务器核心和 Windows 桌面）上运行的 PowerShell 版本的脚本和模块的兼容性。
+> - **核心版：** 以 .NET Core 为基础构建，提供与面向在缩减功能 Windows 版本（如 Nano Server 和 Windows IoT）上运行的 PowerShell 版本的脚本和模块的兼容性。
+
+```yaml
+Type: System.String
+Parameter Sets: PsSession, Available
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PSSession
 
-获取 ( **PSSession** ) 的指定用户管理的 PowerShell 会话中的模块。
-输入包含会话的变量、获取会话的命令（如 `Get-PSSession` 命令）或创建会话的命令（如 `New-PSSession` 命令）。
+获取 ( **PSSession** ) 的指定用户管理的 PowerShell 会话中的模块。 输入包含会话的变量、获取会话的命令（如 `Get-PSSession` 命令）或创建会话的命令（如 `New-PSSession` 命令）。
 
 如果会话连接到远程计算机，则必须指定 **ListAvailable** 参数。
 
@@ -513,9 +501,7 @@ Accept wildcard characters: False
 
 ### -刷新
 
-指示此 cmdlet 刷新已安装命令的缓存。
-命令缓存是在会话启动时创建的。
-它使 `Get-Command` cmdlet 能够从未导入到会话中的模块中获取命令。
+指示此 cmdlet 刷新已安装命令的缓存。 命令缓存是在会话启动时创建的。 它使 `Get-Command` cmdlet 能够从未导入到会话中的模块中获取命令。
 
 此参数旨在用于开发和测试方案，在这些方案中，模块的内容自会话启动后已发生更改。
 
@@ -535,40 +521,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PSEdition
-
-获取支持指定的 PowerShell 版本的模块。
-
-此参数的可接受值为：
-
-- 桌面型
-- 核心
-
-Get-Module cmdlet 检查 **PSModuleInfo** 对象的 **CompatiblePSEditions** 属性中是否存在指定的值，并仅返回已设置了该属性的模块。
-
-> [!NOTE]
->
-> - **桌面版：** 基于 .NET Framework 构建在大多数 Windows 版本上都适用于 Windows PowerShell 5.1 和更高版本。
-> - **核心版：** 构建在 .NET Core 基础之上，适用于 PowerShell Core 6.0 及更高版本，以及针对 Windows IoT 和 Windows Nanoserver 构建的 Windows PowerShell 5.1 的某些版本。 > 可以通过变量找到当前 PowerShell 会话的版本 `$PSEdition` 。
-
-```yaml
-Type: System.String
-Parameter Sets: Available, PsSession
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SkipEditionCheck
 
 跳过对字段的检查 `CompatiblePSEditions` 。
 
-默认情况下，Get-Module 将忽略 `%windir%\System32\WindowsPowerShell\v1.0\Modules` 未 `Core` 在字段中指定的目录中的模块 `CompatiblePSEditions` 。
-设置此开关时，不会 `Core` 包含模块，因此将返回 Windows PowerShell 模块路径下与 PowerShell Core 不兼容的模块。
+默认情况下，Get-Module 将忽略 `%windir%\System32\WindowsPowerShell\v1.0\Modules` 未 `Core` 在字段中指定的目录中的模块 `CompatiblePSEditions` 。 设置此开关时，不会 `Core` 包含模块，因此将返回 Windows PowerShell 模块路径下与 PowerShell Core 不兼容的模块。
 
 在 macOS 和 Linux 上，此参数不执行任何操作。
 
@@ -609,7 +566,7 @@ Accept wildcard characters: False
 首次使用时自动导入模块，你可以使用 `Import-Module` cmdlet 将其导入。
 - 从 Windows PowerShell 3.0 开始，随 PowerShell 一起安装的核心命令打包在模块中。 在 Windows PowerShell 2.0 和在 PowerShell 的更高版本中创建旧样式会话的主机程序中，核心命令打包在 ( **PSSnapins** ) 的管理单元中。 **Microsoft.PowerShell.Core** 是例外情况，它始终是一个管理单元。 远程会话（如 cmdlet 启动的会话） `New-PSSession` 是包含核心管理单元的旧样式会话。
 
-  有关 **CreateDefault2** 方法的详细信息，请参阅 MSDN library 中的 [CreateDefault2 方法](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2) 。
+  有关 **CreateDefault2** 方法的详细信息，请参阅 [CreateDefault2 方法](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2)。
 
 - `Get-Module` 仅在存储在 **PSModulePath** 环境变量的值中的位置获取模块 ($Env:P smodulepath) 。 您可以使用该 cmdlet 的 **Path** 参数将 `Import-Module` 模块导入其他位置，但不能使用 `Get-Module` cmdlet 来获取它们。
 - 此外，从 PowerShell 3.0 开始，新的属性已添加到返回的对象，以便在 `Get-Module` 导入模块之前更容易了解模块。 导入之前会填充所有属性。 其中包括列出模块导出的命令的 **ExportedCommands** 、 **ExportedCmdlets** 和 **ExportedFunctions** 属性。
@@ -643,4 +600,3 @@ Accept wildcard characters: False
 [Remove-Module](Remove-Module.md)
 
 [about_PowerShell_Editions](About/about_PowerShell_Editions.md)
-

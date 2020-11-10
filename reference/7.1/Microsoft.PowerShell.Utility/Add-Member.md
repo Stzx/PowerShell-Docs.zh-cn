@@ -7,12 +7,12 @@ ms.date: 4/26/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/add-member?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Member
-ms.openlocfilehash: 1c07d79af1516becff86a0706906fa6ddfe03ab8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f6cc98f31d42f3468fd864782fb7252b064302b8
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198895"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389464"
 ---
 # Add-Member
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 - ScriptMethod
 - CodeMethod
 
-有关这些值的信息，请参阅 MSDN 库中的 [PSMemberTypes 枚举](/dotnet/api/system.management.automation.psmembertypes) 。
+有关这些值的信息，请参阅 PowerShell SDK 中的 [PSMemberTypes 枚举](/dotnet/api/system.management.automation.psmembertypes) 。
 
 并非所有对象都具有每种类型的成员。
 如果指定了对象不具有的成员类型，则 PowerShell 将返回错误。
