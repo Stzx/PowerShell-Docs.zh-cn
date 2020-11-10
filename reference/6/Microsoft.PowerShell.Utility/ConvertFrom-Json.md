@@ -7,40 +7,40 @@ ms.date: 10/19/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertFrom-Json
-ms.openlocfilehash: 50372f0b938a1f8b051ec799ecfa94498b72dbc5
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 0cf439651d3382ce5abf3e5de4812df92cb8492d
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93200600"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389838"
 ---
-# <span data-ttu-id="a8e0b-103">ConvertFrom-Json</span><span class="sxs-lookup"><span data-stu-id="a8e0b-103">ConvertFrom-Json</span></span>
+# <span data-ttu-id="dad2d-103">ConvertFrom-Json</span><span class="sxs-lookup"><span data-stu-id="dad2d-103">ConvertFrom-Json</span></span>
 
-## <span data-ttu-id="a8e0b-104">摘要</span><span class="sxs-lookup"><span data-stu-id="a8e0b-104">SYNOPSIS</span></span>
-<span data-ttu-id="a8e0b-105">将 JSON 格式的字符串转换为自定义对象或哈希表。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-105">Converts a JSON-formatted string to a custom object or a hash table.</span></span>
+## <span data-ttu-id="dad2d-104">摘要</span><span class="sxs-lookup"><span data-stu-id="dad2d-104">SYNOPSIS</span></span>
+<span data-ttu-id="dad2d-105">将 JSON 格式的字符串转换为自定义对象或哈希表。</span><span class="sxs-lookup"><span data-stu-id="dad2d-105">Converts a JSON-formatted string to a custom object or a hash table.</span></span>
 
-## <span data-ttu-id="a8e0b-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="a8e0b-106">SYNTAX</span></span>
+## <span data-ttu-id="dad2d-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="dad2d-106">SYNTAX</span></span>
 
 ```
 ConvertFrom-Json [-InputObject] <String> [-AsHashtable] [-Depth <Int32>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="a8e0b-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="a8e0b-107">DESCRIPTION</span></span>
+## <span data-ttu-id="dad2d-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="dad2d-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="a8e0b-108">`ConvertFrom-Json`Cmdlet 将 JavaScript 对象表示法 (json) 格式的字符串转换为自定义 **PSCustomObject** 对象，该对象具有 JSON 字符串中每个字段的属性。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-108">The `ConvertFrom-Json` cmdlet converts a JavaScript Object Notation (JSON) formatted string to a custom **PSCustomObject** object that has a property for each field in the JSON string.</span></span> <span data-ttu-id="a8e0b-109">JSON 通常可供网站使用，以提供对象的文本表示形式。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-109">JSON is commonly used by web sites to provide a textual representation of objects.</span></span> <span data-ttu-id="a8e0b-110">JSON 标准不禁止使用 **PSCustomObject** 禁止使用。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-110">The JSON standard does not prohibit usage that is prohibited with a **PSCustomObject** .</span></span> <span data-ttu-id="a8e0b-111">例如，如果 JSON 字符串包含重复的键，则此 cmdlet 仅使用最后一个密钥。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-111">For example, if the JSON string contains duplicate keys, only the last key is used by this cmdlet.</span></span> <span data-ttu-id="a8e0b-112">请参阅下面的其他示例。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-112">See other examples below.</span></span>
+<span data-ttu-id="dad2d-108">`ConvertFrom-Json`Cmdlet 将 JavaScript 对象表示法 (json) 格式的字符串转换为自定义 **PSCustomObject** 对象，该对象具有 JSON 字符串中每个字段的属性。</span><span class="sxs-lookup"><span data-stu-id="dad2d-108">The `ConvertFrom-Json` cmdlet converts a JavaScript Object Notation (JSON) formatted string to a custom **PSCustomObject** object that has a property for each field in the JSON string.</span></span> <span data-ttu-id="dad2d-109">JSON 通常可供网站使用，以提供对象的文本表示形式。</span><span class="sxs-lookup"><span data-stu-id="dad2d-109">JSON is commonly used by web sites to provide a textual representation of objects.</span></span> <span data-ttu-id="dad2d-110">JSON 标准不禁止使用 **PSCustomObject** 禁止使用。</span><span class="sxs-lookup"><span data-stu-id="dad2d-110">The JSON standard does not prohibit usage that is prohibited with a **PSCustomObject**.</span></span> <span data-ttu-id="dad2d-111">例如，如果 JSON 字符串包含重复的键，则此 cmdlet 仅使用最后一个密钥。</span><span class="sxs-lookup"><span data-stu-id="dad2d-111">For example, if the JSON string contains duplicate keys, only the last key is used by this cmdlet.</span></span> <span data-ttu-id="dad2d-112">请参阅下面的其他示例。</span><span class="sxs-lookup"><span data-stu-id="dad2d-112">See other examples below.</span></span>
 
-<span data-ttu-id="a8e0b-113">若要从任何对象生成 JSON 字符串，请使用 `ConvertTo-Json` cmdlet。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-113">To generate a JSON string from any object, use the `ConvertTo-Json` cmdlet.</span></span>
+<span data-ttu-id="dad2d-113">若要从任何对象生成 JSON 字符串，请使用 `ConvertTo-Json` cmdlet。</span><span class="sxs-lookup"><span data-stu-id="dad2d-113">To generate a JSON string from any object, use the `ConvertTo-Json` cmdlet.</span></span>
 
-<span data-ttu-id="a8e0b-114">此 cmdlet 是在 PowerShell 3.0 中引入的。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-114">This cmdlet was introduced in PowerShell 3.0.</span></span>
+<span data-ttu-id="dad2d-114">此 cmdlet 是在 PowerShell 3.0 中引入的。</span><span class="sxs-lookup"><span data-stu-id="dad2d-114">This cmdlet was introduced in PowerShell 3.0.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a8e0b-115">从 PowerShell 6 开始，此 cmdlet 支持包含注释的 JSON。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-115">Beginning with PowerShell 6, this cmdlet supports JSON with comments.</span></span> <span data-ttu-id="a8e0b-116">接受的注释以两个正斜杠开始 (`//`) 。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-116">Accepted comments are started with two forward slashes (`//`).</span></span> <span data-ttu-id="a8e0b-117">注释不会在数据中表示出来，并且可以在文件中写入，而不会损坏数据，也不会引发错误，就像在 PowerShell 5.1 中那样。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-117">The comment will not be represented in the data and can be written in the file without corrupting the data or throwing an error as it did in PowerShell 5.1.</span></span>
+> <span data-ttu-id="dad2d-115">从 PowerShell 6 开始，此 cmdlet 支持包含注释的 JSON。</span><span class="sxs-lookup"><span data-stu-id="dad2d-115">Beginning with PowerShell 6, this cmdlet supports JSON with comments.</span></span> <span data-ttu-id="dad2d-116">接受的注释以两个正斜杠开始 (`//`) 。</span><span class="sxs-lookup"><span data-stu-id="dad2d-116">Accepted comments are started with two forward slashes (`//`).</span></span> <span data-ttu-id="dad2d-117">注释不会在数据中表示出来，并且可以在文件中写入，而不会损坏数据，也不会引发错误，就像在 PowerShell 5.1 中那样。</span><span class="sxs-lookup"><span data-stu-id="dad2d-117">The comment will not be represented in the data and can be written in the file without corrupting the data or throwing an error as it did in PowerShell 5.1.</span></span>
 
-## <span data-ttu-id="a8e0b-118">示例</span><span class="sxs-lookup"><span data-stu-id="a8e0b-118">EXAMPLES</span></span>
+## <span data-ttu-id="dad2d-118">示例</span><span class="sxs-lookup"><span data-stu-id="dad2d-118">EXAMPLES</span></span>
 
-### <span data-ttu-id="a8e0b-119">示例1：将 DateTime 对象转换为 JSON 对象</span><span class="sxs-lookup"><span data-stu-id="a8e0b-119">Example 1: Convert a DateTime object to a JSON object</span></span>
+### <span data-ttu-id="dad2d-119">示例1：将 DateTime 对象转换为 JSON 对象</span><span class="sxs-lookup"><span data-stu-id="dad2d-119">Example 1: Convert a DateTime object to a JSON object</span></span>
 
-<span data-ttu-id="a8e0b-120">此命令使用 `ConvertTo-Json` 和 `ConvertFrom-Json` Cmdlet 将 **DateTime** 对象从 cmdlet 转换为 JSON 对象，然后将其转换 `Get-Date` 为 **PSCustomObject** 。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-120">This command uses the `ConvertTo-Json` and `ConvertFrom-Json` cmdlets to convert a **DateTime** object from the `Get-Date` cmdlet to a JSON object then to a **PSCustomObject** .</span></span>
+<span data-ttu-id="dad2d-120">此命令使用 `ConvertTo-Json` 和 `ConvertFrom-Json` Cmdlet 将 **DateTime** 对象从 cmdlet 转换为 JSON 对象，然后将其转换 `Get-Date` 为 **PSCustomObject** 。</span><span class="sxs-lookup"><span data-stu-id="dad2d-120">This command uses the `ConvertTo-Json` and `ConvertFrom-Json` cmdlets to convert a **DateTime** object from the `Get-Date` cmdlet to a JSON object then to a **PSCustomObject**.</span></span>
 
 ```powershell
 Get-Date | Select-Object -Property * | ConvertTo-Json | ConvertFrom-Json
@@ -64,11 +64,11 @@ TimeOfDay   : @{Ticks=723914009002; Days=0; Hours=20; Milliseconds=400; Minutes=
 Year        : 2012
 ```
 
-<span data-ttu-id="a8e0b-121">该示例使用 `Select-Object` cmdlet 来获取 **DateTime** 对象的所有属性。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-121">The example uses the `Select-Object` cmdlet to get all of the properties of the **DateTime** object.</span></span> <span data-ttu-id="a8e0b-122">它使用 `ConvertTo-Json` cmdlet 将 **DateTime** 对象转换为设置为 json 对象格式的字符串，并使用 `ConvertFrom-Json` cmdlet 将 JSON 格式的字符串转换为 **PSCustomObject** 对象。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-122">It uses the `ConvertTo-Json` cmdlet to convert the **DateTime** object to a string formatted as a JSON object and the `ConvertFrom-Json` cmdlet to convert the JSON-formatted string to a **PSCustomObject** object.</span></span>
+<span data-ttu-id="dad2d-121">该示例使用 `Select-Object` cmdlet 来获取 **DateTime** 对象的所有属性。</span><span class="sxs-lookup"><span data-stu-id="dad2d-121">The example uses the `Select-Object` cmdlet to get all of the properties of the **DateTime** object.</span></span> <span data-ttu-id="dad2d-122">它使用 `ConvertTo-Json` cmdlet 将 **DateTime** 对象转换为设置为 json 对象格式的字符串，并使用 `ConvertFrom-Json` cmdlet 将 JSON 格式的字符串转换为 **PSCustomObject** 对象。</span><span class="sxs-lookup"><span data-stu-id="dad2d-122">It uses the `ConvertTo-Json` cmdlet to convert the **DateTime** object to a string formatted as a JSON object and the `ConvertFrom-Json` cmdlet to convert the JSON-formatted string to a **PSCustomObject** object.</span></span>
 
-### <span data-ttu-id="a8e0b-123">示例2：从 web 服务获取 JSON 字符串，并将其转换为 PowerShell 对象</span><span class="sxs-lookup"><span data-stu-id="a8e0b-123">Example 2: Get JSON strings from a web service and convert them to PowerShell objects</span></span>
+### <span data-ttu-id="dad2d-123">示例2：从 web 服务获取 JSON 字符串，并将其转换为 PowerShell 对象</span><span class="sxs-lookup"><span data-stu-id="dad2d-123">Example 2: Get JSON strings from a web service and convert them to PowerShell objects</span></span>
 
-<span data-ttu-id="a8e0b-124">此命令使用 `Invoke-WebRequest` cmdlet 从 web 服务获取 json 字符串，然后使用 `ConvertFrom-Json` CMDLET 将 json 内容转换为可在 PowerShell 中管理的对象。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-124">This command uses the `Invoke-WebRequest` cmdlet to get JSON strings from a web service and then it uses the `ConvertFrom-Json` cmdlet to convert JSON content to objects that can be managed in PowerShell.</span></span>
+<span data-ttu-id="dad2d-124">此命令使用 `Invoke-WebRequest` cmdlet 从 web 服务获取 json 字符串，然后使用 `ConvertFrom-Json` CMDLET 将 json 内容转换为可在 PowerShell 中管理的对象。</span><span class="sxs-lookup"><span data-stu-id="dad2d-124">This command uses the `Invoke-WebRequest` cmdlet to get JSON strings from a web service and then it uses the `ConvertFrom-Json` cmdlet to convert JSON content to objects that can be managed in PowerShell.</span></span>
 
 ```powershell
 # Ensures that Invoke-WebRequest uses TLS 1.2
@@ -76,37 +76,37 @@ Year        : 2012
 $j = Invoke-WebRequest 'https://api.github.com/repos/PowerShell/PowerShell/issues' | ConvertFrom-Json
 ```
 
-<span data-ttu-id="a8e0b-125">你还可以使用 `Invoke-RestMethod` cmdlet，它会自动将 JSON 内容转换为对象。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-125">You can also use the `Invoke-RestMethod` cmdlet, which automatically converts JSON content to objects.</span></span>
+<span data-ttu-id="dad2d-125">你还可以使用 `Invoke-RestMethod` cmdlet，它会自动将 JSON 内容转换为对象。</span><span class="sxs-lookup"><span data-stu-id="dad2d-125">You can also use the `Invoke-RestMethod` cmdlet, which automatically converts JSON content to objects.</span></span>
 
-### <span data-ttu-id="a8e0b-126">示例3：将 JSON 字符串转换为自定义对象</span><span class="sxs-lookup"><span data-stu-id="a8e0b-126">Example 3: Convert a JSON string to a custom object</span></span>
+### <span data-ttu-id="dad2d-126">示例3：将 JSON 字符串转换为自定义对象</span><span class="sxs-lookup"><span data-stu-id="dad2d-126">Example 3: Convert a JSON string to a custom object</span></span>
 
-<span data-ttu-id="a8e0b-127">此示例演示如何使用 `ConvertFrom-Json` cmdlet 将 JSON 文件转换为 PowerShell 自定义对象。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-127">This example shows how to use the `ConvertFrom-Json` cmdlet to convert a JSON file to a PowerShell custom object.</span></span>
+<span data-ttu-id="dad2d-127">此示例演示如何使用 `ConvertFrom-Json` cmdlet 将 JSON 文件转换为 PowerShell 自定义对象。</span><span class="sxs-lookup"><span data-stu-id="dad2d-127">This example shows how to use the `ConvertFrom-Json` cmdlet to convert a JSON file to a PowerShell custom object.</span></span>
 
 ```powershell
 Get-Content JsonFile.JSON | ConvertFrom-Json
 ```
 
-<span data-ttu-id="a8e0b-128">该命令使用 Get-Content cmdlet 获取 JSON 文件中的字符串。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-128">The command uses Get-Content cmdlet to get the strings in a JSON file.</span></span> <span data-ttu-id="a8e0b-129">然后，它使用管道运算符将分隔的字符串发送到 `ConvertFrom-Json` cmdlet，该 cmdlet 会将其转换为自定义对象。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-129">Then it uses the pipeline operator to send the delimited string to the `ConvertFrom-Json` cmdlet, which converts it to a custom object.</span></span>
+<span data-ttu-id="dad2d-128">该命令使用 Get-Content cmdlet 获取 JSON 文件中的字符串。</span><span class="sxs-lookup"><span data-stu-id="dad2d-128">The command uses Get-Content cmdlet to get the strings in a JSON file.</span></span> <span data-ttu-id="dad2d-129">然后，它使用管道运算符将分隔的字符串发送到 `ConvertFrom-Json` cmdlet，该 cmdlet 会将其转换为自定义对象。</span><span class="sxs-lookup"><span data-stu-id="dad2d-129">Then it uses the pipeline operator to send the delimited string to the `ConvertFrom-Json` cmdlet, which converts it to a custom object.</span></span>
 
-### <span data-ttu-id="a8e0b-130">示例4：将 JSON 字符串转换为哈希表</span><span class="sxs-lookup"><span data-stu-id="a8e0b-130">Example 4: Convert a JSON string to a hash table</span></span>
+### <span data-ttu-id="dad2d-130">示例4：将 JSON 字符串转换为哈希表</span><span class="sxs-lookup"><span data-stu-id="dad2d-130">Example 4: Convert a JSON string to a hash table</span></span>
 
-<span data-ttu-id="a8e0b-131">此命令显示一个示例，在该示例中， `-AsHashtable` 开关可以克服命令的限制。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-131">This command shows an example where the `-AsHashtable` switch can overcome limitations of the command.</span></span>
+<span data-ttu-id="dad2d-131">此命令显示一个示例，在该示例中， `-AsHashtable` 开关可以克服命令的限制。</span><span class="sxs-lookup"><span data-stu-id="dad2d-131">This command shows an example where the `-AsHashtable` switch can overcome limitations of the command.</span></span>
 
 ```powershell
 '{ "key":"value1", "Key":"value2" }' | ConvertFrom-Json -AsHashtable
 ```
 
-<span data-ttu-id="a8e0b-132">JSON 字符串包含两个键值对，键仅在大小写方面存在差异。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-132">The JSON string contains two key value pairs with keys that differ only in casing.</span></span> <span data-ttu-id="a8e0b-133">如果不使用开关，则该命令将引发错误。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-133">Without the switch, the command would have thrown an error.</span></span>
+<span data-ttu-id="dad2d-132">JSON 字符串包含两个键值对，键仅在大小写方面存在差异。</span><span class="sxs-lookup"><span data-stu-id="dad2d-132">The JSON string contains two key value pairs with keys that differ only in casing.</span></span> <span data-ttu-id="dad2d-133">如果不使用开关，则该命令将引发错误。</span><span class="sxs-lookup"><span data-stu-id="dad2d-133">Without the switch, the command would have thrown an error.</span></span>
 
-## <span data-ttu-id="a8e0b-134">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="a8e0b-134">PARAMETERS</span></span>
+## <span data-ttu-id="dad2d-134">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="dad2d-134">PARAMETERS</span></span>
 
-### <span data-ttu-id="a8e0b-135">-AsHashtable</span><span class="sxs-lookup"><span data-stu-id="a8e0b-135">-AsHashtable</span></span>
+### <span data-ttu-id="dad2d-135">-AsHashtable</span><span class="sxs-lookup"><span data-stu-id="dad2d-135">-AsHashtable</span></span>
 
-<span data-ttu-id="a8e0b-136">将 JSON 转换为哈希表对象。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-136">Converts the JSON to a hash table object.</span></span> <span data-ttu-id="a8e0b-137">此开关是在 PowerShell 6.0 中引入的。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-137">This switch was introduced in PowerShell 6.0.</span></span> <span data-ttu-id="a8e0b-138">在某些情况下，它可以克服 cmdlet 的某些限制 `ConvertFrom-Json` 。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-138">There are several scenarios where it can overcome some limitations of the `ConvertFrom-Json` cmdlet.</span></span>
+<span data-ttu-id="dad2d-136">将 JSON 转换为哈希表对象。</span><span class="sxs-lookup"><span data-stu-id="dad2d-136">Converts the JSON to a hash table object.</span></span> <span data-ttu-id="dad2d-137">此开关是在 PowerShell 6.0 中引入的。</span><span class="sxs-lookup"><span data-stu-id="dad2d-137">This switch was introduced in PowerShell 6.0.</span></span> <span data-ttu-id="dad2d-138">在某些情况下，它可以克服 cmdlet 的某些限制 `ConvertFrom-Json` 。</span><span class="sxs-lookup"><span data-stu-id="dad2d-138">There are several scenarios where it can overcome some limitations of the `ConvertFrom-Json` cmdlet.</span></span>
 
-- <span data-ttu-id="a8e0b-139">如果 JSON 包含具有仅大小写不同的键的列表。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-139">If the JSON contains a list with keys that only differ in casing.</span></span> <span data-ttu-id="a8e0b-140">如果没有交换机，这些密钥将被视为相同的键，因此仅使用最后一个键。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-140">Without the switch, those keys would be seen as identical keys and therefore only the last one would get used.</span></span>
-- <span data-ttu-id="a8e0b-141">如果 JSON 包含空字符串，则为。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-141">If the JSON contains a key that is an empty string.</span></span> <span data-ttu-id="a8e0b-142">如果不使用开关，该 cmdlet 将引发错误，因为不 `PSCustomObject` 允许这样做，但哈希表会这样做。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-142">Without the switch, the cmdlet would throw an error since a `PSCustomObject` does not allow for that but a hash table does.</span></span> <span data-ttu-id="a8e0b-143">这种情况的一个示例用例是 `project.lock.json` 文件。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-143">An example use case where this can occurs are `project.lock.json` files.</span></span>
-- <span data-ttu-id="a8e0b-144">对于某些数据结构，可以更快地处理哈希表。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-144">Hash tables can be processed faster for certain data structures.</span></span>
+- <span data-ttu-id="dad2d-139">如果 JSON 包含具有仅大小写不同的键的列表。</span><span class="sxs-lookup"><span data-stu-id="dad2d-139">If the JSON contains a list with keys that only differ in casing.</span></span> <span data-ttu-id="dad2d-140">如果没有交换机，这些密钥将被视为相同的键，因此仅使用最后一个键。</span><span class="sxs-lookup"><span data-stu-id="dad2d-140">Without the switch, those keys would be seen as identical keys and therefore only the last one would get used.</span></span>
+- <span data-ttu-id="dad2d-141">如果 JSON 包含空字符串，则为。</span><span class="sxs-lookup"><span data-stu-id="dad2d-141">If the JSON contains a key that is an empty string.</span></span> <span data-ttu-id="dad2d-142">如果不使用开关，该 cmdlet 将引发错误，因为不 `PSCustomObject` 允许这样做，但哈希表会这样做。</span><span class="sxs-lookup"><span data-stu-id="dad2d-142">Without the switch, the cmdlet would throw an error since a `PSCustomObject` does not allow for that but a hash table does.</span></span> <span data-ttu-id="dad2d-143">这种情况的一个示例用例是 `project.lock.json` 文件。</span><span class="sxs-lookup"><span data-stu-id="dad2d-143">An example use case where this can occurs are `project.lock.json` files.</span></span>
+- <span data-ttu-id="dad2d-144">对于某些数据结构，可以更快地处理哈希表。</span><span class="sxs-lookup"><span data-stu-id="dad2d-144">Hash tables can be processed faster for certain data structures.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -120,11 +120,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a8e0b-145">-Depth</span><span class="sxs-lookup"><span data-stu-id="a8e0b-145">-Depth</span></span>
+### <span data-ttu-id="dad2d-145">-Depth</span><span class="sxs-lookup"><span data-stu-id="dad2d-145">-Depth</span></span>
 
-<span data-ttu-id="a8e0b-146">获取或设置允许 JSON 输入具有的最大深度。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-146">Gets or sets the maximum depth the JSON input is allowed to have.</span></span> <span data-ttu-id="a8e0b-147">默认情况下，它是1024。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-147">By default, it is 1024.</span></span>
+<span data-ttu-id="dad2d-146">获取或设置允许 JSON 输入具有的最大深度。</span><span class="sxs-lookup"><span data-stu-id="dad2d-146">Gets or sets the maximum depth the JSON input is allowed to have.</span></span> <span data-ttu-id="dad2d-147">默认情况下，它是1024。</span><span class="sxs-lookup"><span data-stu-id="dad2d-147">By default, it is 1024.</span></span>
 
-<span data-ttu-id="a8e0b-148">此参数是在 PowerShell 6.2 中引入的。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-148">This parameter was introduced in PowerShell 6.2.</span></span>
+<span data-ttu-id="dad2d-148">此参数是在 PowerShell 6.2 中引入的。</span><span class="sxs-lookup"><span data-stu-id="dad2d-148">This parameter was introduced in PowerShell 6.2.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -138,11 +138,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a8e0b-149">-InputObject</span><span class="sxs-lookup"><span data-stu-id="a8e0b-149">-InputObject</span></span>
+### <span data-ttu-id="dad2d-149">-InputObject</span><span class="sxs-lookup"><span data-stu-id="dad2d-149">-InputObject</span></span>
 
-<span data-ttu-id="a8e0b-150">指定要转换为 JSON 对象的 JSON 字符串。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-150">Specifies the JSON strings to convert to JSON objects.</span></span> <span data-ttu-id="a8e0b-151">输入一个包含字符串的变量，或键入可获取字符串的命令或表达式。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-151">Enter a variable that contains the string, or type a command or expression that gets the string.</span></span> <span data-ttu-id="a8e0b-152">还可以通过管道将字符串传递给 `ConvertFrom-Json` 。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-152">You can also pipe a string to `ConvertFrom-Json`.</span></span>
+<span data-ttu-id="dad2d-150">指定要转换为 JSON 对象的 JSON 字符串。</span><span class="sxs-lookup"><span data-stu-id="dad2d-150">Specifies the JSON strings to convert to JSON objects.</span></span> <span data-ttu-id="dad2d-151">输入一个包含字符串的变量，或键入可获取字符串的命令或表达式。</span><span class="sxs-lookup"><span data-stu-id="dad2d-151">Enter a variable that contains the string, or type a command or expression that gets the string.</span></span> <span data-ttu-id="dad2d-152">还可以通过管道将字符串传递给 `ConvertFrom-Json` 。</span><span class="sxs-lookup"><span data-stu-id="dad2d-152">You can also pipe a string to `ConvertFrom-Json`.</span></span>
 
-<span data-ttu-id="a8e0b-153">**InputObject** 参数是必需的，但其值可以是空字符串。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-153">The **InputObject** parameter is required, but its value can be an empty string.</span></span> <span data-ttu-id="a8e0b-154">当输入对象为空字符串时，不 `ConvertFrom-Json` 会生成任何输出。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-154">When the input object is an empty string, `ConvertFrom-Json` does not generate any output.</span></span> <span data-ttu-id="a8e0b-155">**InputObject** 值不能为 `$null` 。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-155">The **InputObject** value cannot be `$null`.</span></span>
+<span data-ttu-id="dad2d-153">**InputObject** 参数是必需的，但其值可以是空字符串。</span><span class="sxs-lookup"><span data-stu-id="dad2d-153">The **InputObject** parameter is required, but its value can be an empty string.</span></span> <span data-ttu-id="dad2d-154">当输入对象为空字符串时，不 `ConvertFrom-Json` 会生成任何输出。</span><span class="sxs-lookup"><span data-stu-id="dad2d-154">When the input object is an empty string, `ConvertFrom-Json` does not generate any output.</span></span> <span data-ttu-id="dad2d-155">**InputObject** 值不能为 `$null` 。</span><span class="sxs-lookup"><span data-stu-id="dad2d-155">The **InputObject** value cannot be `$null`.</span></span>
 
 ```yaml
 Type: System.String
@@ -156,38 +156,38 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a8e0b-156">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="a8e0b-156">CommonParameters</span></span>
+### <span data-ttu-id="dad2d-156">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="dad2d-156">CommonParameters</span></span>
 
-<span data-ttu-id="a8e0b-157">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-157">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="a8e0b-158">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-158">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="dad2d-157">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="dad2d-157">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="dad2d-158">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="dad2d-158">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="a8e0b-159">输入</span><span class="sxs-lookup"><span data-stu-id="a8e0b-159">INPUTS</span></span>
+## <span data-ttu-id="dad2d-159">输入</span><span class="sxs-lookup"><span data-stu-id="dad2d-159">INPUTS</span></span>
 
-### <span data-ttu-id="a8e0b-160">System.String</span><span class="sxs-lookup"><span data-stu-id="a8e0b-160">System.String</span></span>
+### <span data-ttu-id="dad2d-160">System.String</span><span class="sxs-lookup"><span data-stu-id="dad2d-160">System.String</span></span>
 
-<span data-ttu-id="a8e0b-161">可以通过管道将 JSON 字符串传递给 `ConvertFrom-Json` 。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-161">You can pipe a JSON string to `ConvertFrom-Json`.</span></span>
+<span data-ttu-id="dad2d-161">可以通过管道将 JSON 字符串传递给 `ConvertFrom-Json` 。</span><span class="sxs-lookup"><span data-stu-id="dad2d-161">You can pipe a JSON string to `ConvertFrom-Json`.</span></span>
 
-## <span data-ttu-id="a8e0b-162">输出</span><span class="sxs-lookup"><span data-stu-id="a8e0b-162">OUTPUTS</span></span>
+## <span data-ttu-id="dad2d-162">输出</span><span class="sxs-lookup"><span data-stu-id="dad2d-162">OUTPUTS</span></span>
 
-### <span data-ttu-id="a8e0b-163">PSCustomObject</span><span class="sxs-lookup"><span data-stu-id="a8e0b-163">PSCustomObject</span></span>
+### <span data-ttu-id="dad2d-163">PSCustomObject</span><span class="sxs-lookup"><span data-stu-id="dad2d-163">PSCustomObject</span></span>
 
-### <span data-ttu-id="a8e0b-164">System.Collections.Hashtable</span><span class="sxs-lookup"><span data-stu-id="a8e0b-164">System.Collections.Hashtable</span></span>
+### <span data-ttu-id="dad2d-164">System.Collections.Hashtable</span><span class="sxs-lookup"><span data-stu-id="dad2d-164">System.Collections.Hashtable</span></span>
 
-## <span data-ttu-id="a8e0b-165">注释</span><span class="sxs-lookup"><span data-stu-id="a8e0b-165">NOTES</span></span>
+## <span data-ttu-id="dad2d-165">注释</span><span class="sxs-lookup"><span data-stu-id="dad2d-165">NOTES</span></span>
 
-<span data-ttu-id="a8e0b-166">此 cmdlet 是使用 [newtonsoft.json Json.NET](https://www.newtonsoft.com/json)实现的。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-166">This cmdlet is implemented using [Newtonsoft Json.NET](https://www.newtonsoft.com/json).</span></span>
+<span data-ttu-id="dad2d-166">此 cmdlet 是使用 [newtonsoft.json Json.NET](https://www.newtonsoft.com/json)实现的。</span><span class="sxs-lookup"><span data-stu-id="dad2d-166">This cmdlet is implemented using [Newtonsoft Json.NET](https://www.newtonsoft.com/json).</span></span>
 
-<span data-ttu-id="a8e0b-167">从 PowerShell 6 开始， `ConvertTo-Json` 尝试将格式化为时间戳的字符串转换为 **DateTime** 值。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-167">Beginning in PowerShell 6, `ConvertTo-Json` attempts to convert strings formatted as timestamps to **DateTime** values.</span></span> <span data-ttu-id="a8e0b-168">转换后的值是 `[datetime]` 具有属性设置的实例， `Kind` 如下所示：</span><span class="sxs-lookup"><span data-stu-id="a8e0b-168">The converted value is a `[datetime]` instance with a `Kind` property set as follows:</span></span>
+<span data-ttu-id="dad2d-167">从 PowerShell 6 开始， `ConvertTo-Json` 尝试将格式化为时间戳的字符串转换为 **DateTime** 值。</span><span class="sxs-lookup"><span data-stu-id="dad2d-167">Beginning in PowerShell 6, `ConvertTo-Json` attempts to convert strings formatted as timestamps to **DateTime** values.</span></span> <span data-ttu-id="dad2d-168">转换后的值是 `[datetime]` 具有属性设置的实例， `Kind` 如下所示：</span><span class="sxs-lookup"><span data-stu-id="dad2d-168">The converted value is a `[datetime]` instance with a `Kind` property set as follows:</span></span>
 
-- <span data-ttu-id="a8e0b-169">`Unspecified`如果输入字符串中没有时区信息，则为。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-169">`Unspecified`, if there is no time zone information in the input string.</span></span>
-- <span data-ttu-id="a8e0b-170">`Utc`如果时区信息为后缀，则为 `Z` 。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-170">`Utc`, if the time zone information is a trailing `Z`.</span></span>
-- <span data-ttu-id="a8e0b-171">`Local`如果将时区信息指定为与类似的尾随 UTC _偏移量_ ，则为 `+02:00` 。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-171">`Local`, if the time zone information is given as a trailing UTC _offset_ like `+02:00`.</span></span> <span data-ttu-id="a8e0b-172">偏移量正确转换为调用方配置的时区。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-172">The offset is properly converted to the caller's configured time zone.</span></span> <span data-ttu-id="a8e0b-173">默认输出格式不表示原始时区偏移量。</span><span class="sxs-lookup"><span data-stu-id="a8e0b-173">The default output formatting does not indicate the original time zone offset.</span></span>
+- <span data-ttu-id="dad2d-169">`Unspecified`如果输入字符串中没有时区信息，则为。</span><span class="sxs-lookup"><span data-stu-id="dad2d-169">`Unspecified`, if there is no time zone information in the input string.</span></span>
+- <span data-ttu-id="dad2d-170">`Utc`如果时区信息为后缀，则为 `Z` 。</span><span class="sxs-lookup"><span data-stu-id="dad2d-170">`Utc`, if the time zone information is a trailing `Z`.</span></span>
+- <span data-ttu-id="dad2d-171">`Local`如果将时区信息指定为与类似的尾随 UTC _偏移量_ ，则为 `+02:00` 。</span><span class="sxs-lookup"><span data-stu-id="dad2d-171">`Local`, if the time zone information is given as a trailing UTC _offset_ like `+02:00`.</span></span> <span data-ttu-id="dad2d-172">偏移量正确转换为调用方配置的时区。</span><span class="sxs-lookup"><span data-stu-id="dad2d-172">The offset is properly converted to the caller's configured time zone.</span></span> <span data-ttu-id="dad2d-173">默认输出格式不表示原始时区偏移量。</span><span class="sxs-lookup"><span data-stu-id="dad2d-173">The default output formatting does not indicate the original time zone offset.</span></span>
 
-## <span data-ttu-id="a8e0b-174">相关链接</span><span class="sxs-lookup"><span data-stu-id="a8e0b-174">RELATED LINKS</span></span>
+## <span data-ttu-id="dad2d-174">相关链接</span><span class="sxs-lookup"><span data-stu-id="dad2d-174">RELATED LINKS</span></span>
 
-<span data-ttu-id="a8e0b-175">[JavaScript 和 .NET 中的 JavaScript 对象表示法 (JSON) 简介](/previous-versions/dotnet/articles/bb299886(v=msdn.10))</span><span class="sxs-lookup"><span data-stu-id="a8e0b-175">[An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET](/previous-versions/dotnet/articles/bb299886(v=msdn.10))</span></span>
+<span data-ttu-id="dad2d-175">[JavaScript 和 .NET 中的 JavaScript 对象表示法 (JSON) 简介](/previous-versions/dotnet/articles/bb299886(v=msdn.10))</span><span class="sxs-lookup"><span data-stu-id="dad2d-175">[An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET](/previous-versions/dotnet/articles/bb299886(v=msdn.10))</span></span>
 
-[<span data-ttu-id="a8e0b-176">ConvertTo-Json</span><span class="sxs-lookup"><span data-stu-id="a8e0b-176">ConvertTo-Json</span></span>](ConvertTo-Json.md)
+[<span data-ttu-id="dad2d-176">ConvertTo-Json</span><span class="sxs-lookup"><span data-stu-id="dad2d-176">ConvertTo-Json</span></span>](ConvertTo-Json.md)
 
-[<span data-ttu-id="a8e0b-177">Invoke-WebRequest</span><span class="sxs-lookup"><span data-stu-id="a8e0b-177">Invoke-WebRequest</span></span>](Invoke-WebRequest.md)
+[<span data-ttu-id="dad2d-177">Invoke-WebRequest</span><span class="sxs-lookup"><span data-stu-id="dad2d-177">Invoke-WebRequest</span></span>](Invoke-WebRequest.md)
 
-[<span data-ttu-id="a8e0b-178">Invoke-RestMethod</span><span class="sxs-lookup"><span data-stu-id="a8e0b-178">Invoke-RestMethod</span></span>](Invoke-RestMethod.md)
+[<span data-ttu-id="dad2d-178">Invoke-RestMethod</span><span class="sxs-lookup"><span data-stu-id="dad2d-178">Invoke-RestMethod</span></span>](Invoke-RestMethod.md)
