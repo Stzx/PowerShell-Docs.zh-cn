@@ -6,12 +6,12 @@ ms.date: 11/28/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Hash_Tables
-ms.openlocfilehash: ecc4cbb02522766b04414c30c65d4d6acde3bb8a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: c48eace3f0b63014e0121d3cbc7a48966d5bcbef
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93199823"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387543"
 ---
 # <a name="about-hash-tables"></a>关于哈希表
 
@@ -245,20 +245,20 @@ Remove(Key)
 $hash.Remove("Time")
 ```
 
-可以在 PowerShell 中使用哈希表对象的所有属性和方法，包括 Contains、Clear、Clone 和 CopyTo。 有关哈希表对象的详细信息，请参阅 MSDN 上的 "系统集合"。
+可以在 PowerShell 中使用哈希表对象的所有属性和方法，包括 Contains、Clear、Clone 和 CopyTo。 有关哈希表对象的详细信息，请参阅 [system.object](/dotnet/api/system.collections.hashtable)。
 
 ### <a name="object-types-in-hashtables"></a>哈希表中的对象类型
 
 哈希表中的键和值可具有任何 .NET 对象类型，而单个哈希表可以具有多个类型的键和值。
 
-下面的语句创建进程名称字符串的哈希表和进程对象值，并将其保存在 \$ p 变量中。
+下面的语句创建进程名称字符串的哈希表和进程对象值，并将其保存在 `$p` 变量中。
 
 ```powershell
 $p = @{"PowerShell" = (Get-Process PowerShell);
 "Notepad" = (Get-Process notepad)}
 ```
 
-可以在 p 中显示哈希表 \$ ，并使用键名属性来显示值。
+您可以在中显示哈希表 `$p` ，并使用键名属性来显示这些值。
 
 ```powershell
 C:\PS> $p
@@ -279,7 +279,7 @@ C:\PS> $p.keys | foreach {$p.$_.handles}
 251
 ```
 
-哈希表中的键还可以是任意 .NET 类型。 下面的语句将键/值对添加到 p 变量中的哈希表 \$ 。 密钥是表示 WinRM 服务的服务对象，值是该服务的当前状态。
+哈希表中的键还可以是任意 .NET 类型。 下面的语句将一个键/值对添加到变量中的哈希表 `$p` 。 密钥是表示 WinRM 服务的服务对象，值是该服务的当前状态。
 
 ```powershell
 C:\PS> $p = $p + @{(Get-Service WinRM) = ((Get-Service WinRM).Status)}
@@ -308,7 +308,7 @@ C:\PS> $p.keys | foreach {$_.name}
 winrm
 ```
 
-哈希表中的键和值也可以是哈希表对象。 下面的语句将键/值对添加到 p 变量中的哈希表， \$ 其中键是字符串 Hash2，值是具有三个键/值对的哈希表。
+哈希表中的键和值也可以是哈希表对象。 下面的语句将键/值对添加到哈希表中的哈希表中，该 `$p` 变量中的键是字符串 Hash2，而值是具有三个键/值对的哈希表。
 
 ```powershell
 C:\PS> $p = $p + @{"Hash2"= @{a=1; b=2; c=3}}
@@ -344,7 +344,7 @@ C:\PS> $p.Hash2.b
 
 尽管不能对哈希表进行排序，但可以使用哈希表的 GetEnumerator 方法枚举键和值，然后使用 Sort-Object cmdlet 对要显示的枚举值进行排序。
 
-例如，以下命令枚举 p 变量的哈希表中的键和值 \$ ，然后按字母顺序对键进行排序。
+例如，以下命令枚举变量的哈希表中的键和值 `$p` ，然后按字母顺序对键进行排序。
 
 ```powershell
 C:\PS> $p.GetEnumerator() | Sort-Object -Property key

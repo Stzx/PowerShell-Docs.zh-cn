@@ -7,12 +7,12 @@ ms.date: 02/07/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionOption
-ms.openlocfilehash: 10f086c3fc2090681f669d481eb880d81ea9d245
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 07879656c2c92ee366b68ce34815a9fbdff9cb83
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198532"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387458"
 ---
 # New-PSSessionOption
 
@@ -532,7 +532,7 @@ Accept wildcard characters: False
 
 默认值为 None。
 
-有关此参数的值的信息，请参阅 [对 system.management.automation.remoting.proxyaccesstype 枚举](/dotnet/api/system.management.automation.remoting.proxyaccesstype?redirectedfrom=MSDN&view=powershellsdk-1.1.0)。
+有关此参数的值的信息，请参阅 [对 system.management.automation.remoting.proxyaccesstype 枚举](/dotnet/api/system.management.automation.remoting.proxyaccesstype)。
 
 ```yaml
 Type: System.Management.Automation.Remoting.ProxyAccessType
@@ -551,7 +551,7 @@ Accept wildcard characters: False
 
 指定用于代理解析的身份验证方法。 此参数可接受的值为： " **基本** "、" **摘要** " 和 " **协商** "。 默认值为 " **协商** "。
 
-有关此参数的值的详细信息，请参阅 [System.management.automation.runspaces.authenticationmechanism 枚举](/dotnet/api/system.management.automation.runspaces.authenticationmechanism?redirectedfrom=MSDN&view=powershellsdk-1.1.0)。
+有关此参数的值的详细信息，请参阅 [System.management.automation.runspaces.authenticationmechanism 枚举](/dotnet/api/system.management.automation.runspaces.authenticationmechanism)。
 
 ```yaml
 Type: System.Management.Automation.Runspaces.AuthenticationMechanism

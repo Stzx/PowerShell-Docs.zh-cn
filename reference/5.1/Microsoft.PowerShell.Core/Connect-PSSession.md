@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/connect-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Connect-PSSession
-ms.openlocfilehash: 8aff8a2b3962b3bf09d158247c06b36f99eaf527
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 3352055e9c77dd944ffd66fa5db9863166ad7e95
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94342512"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388801"
 ---
 # Connect-PSSession
 
@@ -213,7 +213,6 @@ Id Name            ComputerName    State         ConfigurationName     Availabil
 使用 **ConnectionURI** 参数时，远程目标将返回一个指令，以重定向到不同的 URI。 默认情况下，PowerShell 不会重定向连接，但你可以使用此参数允许它重定向连接。
 
 你也可以通过更改 **MaximumConnectionRedirectionCount** 会话选项值，限制重定向连接的次数。 使用 cmdlet 的 **MaximumRedirection** 参数 `New-PSSessionOption` 或设置 **$PSSessionOption** 首选项变量的 **MaximumConnectionRedirectionCount** 属性。 默认值为 5。
-默认值为 5。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -252,7 +251,7 @@ Accept wildcard characters: False
 指定用于对命令中的用户凭据进行身份验证的机制，以便重新连接到断开连接的会话。 此参数的可接受值为：
 
 - 默认
-- 基本
+- Basic
 - Credssp
 - 摘要
 - Kerberos
@@ -261,7 +260,7 @@ Accept wildcard characters: False
 
 默认值为 Default。
 
-有关此参数的值的详细信息，请参阅 MSDN 库中的 [System.management.automation.runspaces.authenticationmechanism 枚举](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) 。
+有关此参数的值的详细信息，请参阅 [System.management.automation.runspaces.authenticationmechanism 枚举](/dotnet/api/system.management.automation.runspaces.authenticationmechanism)。
 
 > [!CAUTION]
 > 在凭据安全支持提供程序 (CredSSP) 身份验证中，用户凭据传递到远程计算机中以进行验证，这种验证用于要求对多个资源（例如访问远程网络共享）进行验证的命令。 此机制增加了远程操作的安全风险。 如果远程计算机的安全受到威胁，则传递给该计算机的凭据可用于控制网络会话。
@@ -611,9 +610,9 @@ Accept wildcard characters: False
 
   **Availability** 的 None 值指示可连接会话。 值为 "忙碌" 指示你无法连接到 **PSSession** ，因为它已连接到另一个会话。
 
-  有关会话 **状态** 属性的值的详细信息，请参阅 MSDN library 中的 [RunspaceState 枚举](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate) 。
+  有关会话的 **State** 属性的值的详细信息，请参阅 [RunspaceState 枚举](/dotnet/api/system.management.automation.runspaces.runspacestate)。
 
-  有关会话的 **可用性** 属性值的详细信息，请参阅 MSDN 库中的 [runspacestate 枚举](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability) 。
+  有关会话的 **可用性** 属性值的详细信息，请参阅 [runspacestate 枚举](/dotnet/api/system.management.automation.runspaces.runspaceavailability)。
 
 - 当你连接到 **pssession** 时，你无法更改 **PSSession** 的空闲超时值。 的 **SessionOption** 参数 `Connect-PSSession` 采用具有 **IdleTimeout** 值的 **SessionOption** 对象。 但是，在 **IdleTimeout** **SessionOption** **IdleTimeout** `$PSSessionOption` 连接到 **PSSession** 时，将忽略 SessionOption 对象的 idletimeout 值和该变量的 idletimeout 值。
 

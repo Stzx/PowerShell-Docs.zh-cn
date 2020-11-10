@@ -6,12 +6,12 @@ ms.date: 07/23/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_desiredstateconfiguration?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_DesiredStateConfiguration
-ms.openlocfilehash: 2f043104c67078b98355b3e54171a8993e534837
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 5d088934ffc953ad19be401bce72f6287f0fde07
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93200652"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387016"
 ---
 # <a name="about_desiredstateconfiguration"></a>about_DesiredStateConfiguration
 
@@ -27,12 +27,12 @@ DSC 提供了一组 PowerShell 语言扩展、新的 cmdlet 和资源，你可�
 
 PowerShell 4.0 中引入了 DSC。
 
-有关 DSC 的详细信息，请参阅 TechNet 库中的 [PowerShell Desired State Configuration 概述](/powershell/scripting/dsc/overview/overview) 。
+有关 DSC 的详细信息，请参阅 [PowerShell Desired State Configuration 概述](/powershell/scripting/dsc/overview/overview)。
 
 ## <a name="developing-dsc-resources-with-classes"></a>用类开发 DSC 资源
 
 从 PowerShell 5.0 开始，可以使用类开发 DSC 资源。
-有关详细信息，请参阅 Microsoft TechNet 上的 [about_Classes](about_Classes.md)和 [使用 PowerShell 类编写自定义 DSC 资源](/previous-versions//dn948461(v=technet.10)) 。
+有关详细信息，请参阅 [about_Classes](about_Classes.md)和 [使用 PowerShell 类编写自定义 DSC 资源](/powershell/scripting/dsc/resources/authoringresourceclass)。
 
 ## <a name="using-dsc"></a>使用 DSC
 
@@ -109,9 +109,9 @@ Test-DscConfiguration -CimSession $session
 |环境           |{Name，DependsOn，请确保，Path ...}                 |
 |组                 |{DependsOn，Credential，，"Description ...}" |
 |日志                   |{Message，DependsOn，PsDscRunAsCredential}         |
-|包               |{Name、Path、ProductId、Arguments ...}              |
+|程序包               |{Name、Path、ProductId、Arguments ...}              |
 |注册表              |{Key，ValueName，DependsOn，请确保 ...}             |
-|脚本                |{GetScript，SetScript，TestScript，Credential ...}  |
+|Script                |{GetScript，SetScript，TestScript，Credential ...}  |
 |服务               |{Name，与 builtinaccount，Credential，依存关系 ...}|
 |用户                  |{UserName、DependsOn、Description、Disabled ...}    |
 |WaitForAll            |{NodeName，Context.resourcename，DependsOn，PsDscRunAsC ...}|

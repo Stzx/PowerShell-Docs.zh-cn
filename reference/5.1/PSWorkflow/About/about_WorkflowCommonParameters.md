@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psworkflow/about/about_workflowcommonparameters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_WorkflowCommonParameters
-ms.openlocfilehash: 386200475c1dab9735921edd60abbde20ee354c4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: c371666d4f58386848e7ef715b7c804dc1e8f28e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93199894"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387781"
 ---
 # <a name="about-workflowcommonparameters"></a>关于 WorkflowCommonParameters
 
@@ -79,7 +79,7 @@ WinRM 服务使用应用程序名称来选择为连接请求提供服务的侦�
 
 默认值为 **Default** 。
 
-有关此参数的值的信息，请参阅 `System.Management.Automation.Runspaces.AuthenticationMechanism` MSDN 中枚举的说明。
+有关此参数的值的信息，请参阅 `System.Management.Automation.Runspaces.AuthenticationMechanism` POWERSHELL SDK 中枚举的说明。
 
 > [!WARNING]
 > 在凭据安全服务提供程序 (CredSSP) 身份验证中，用户凭据传递到远程计算机中以进行验证，这种验证用于要求对多个资源（例如访问远程网络共享）进行验证的命令。 此机制增加了远程操作的安全风险。 如果远程计算机的安全受到威胁，则传递给该计算机的凭据可用于控制网络会话。
@@ -95,7 +95,7 @@ WinRM 服务使用应用程序名称来选择为连接请求提供服务的侦�
 |---------|---------|
 |**不变** | 身份验证级别与前一个命令相同。 |
 |**默认** | Windows 身份验证。 |
-|无  | 没有 COM 身份验证。   |
+|**无** | 没有 COM 身份验证。   |
 |**“连接”** | 连接级的 COM 身份验证。|
 |**调用** | 调用级的 COM 身份验证。   |
 |**数据包** | 数据包级的 COM 身份验证。|
@@ -143,7 +143,7 @@ WinRM 服务使用应用程序名称来选择为连接请求提供服务的侦�
 
 `<Transport>://<ComputerName>:<Port>/<ApplicationName>`
 
-默认值是 `http://localhost:5985/WSMAN`。
+默认值为 `http://localhost:5985/WSMAN`。
 
 如果未指定 `PSConnectionURI` ，则可以使用 `PSUseSSL` 、 `PSComputerName` 、 `PSPort` 和 `PSApplicationName` 参数指定 `PSConnectionURI` 值。
 

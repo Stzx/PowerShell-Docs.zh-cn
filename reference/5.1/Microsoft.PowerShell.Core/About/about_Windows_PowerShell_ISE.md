@@ -6,12 +6,12 @@ ms.date: 01/03/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_windows_powershell_ise?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Windows_PowerShell_ISE
-ms.openlocfilehash: ec99dec9ea5012b41c10a56a688b23a6fa2c9dd8
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: ff543024d7c62c70217eeaf3ded192a5a24c4757
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93200222"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388835"
 ---
 # <a name="about-windows-powershell-ise"></a>关于 Windows PowerShell ISE
 
@@ -121,7 +121,7 @@ Windows PowerShell ISE 是一项可选的 Windows 功能，默认情况下在 Wi
 由于 Windows PowerShell ISE 需要用户界面，因此它在 Windows Server 的 Server Core 安装上不起作用。 但是，如果添加了 Windows PowerShell ISE 功能，则安装将自动使用 GUI 转换为服务器。
 
 Windows PowerShell ISE 基于 Windows Presentation Foundation (WPF) 构建而成。
-如果 Windows PowerShell ISE 的图形元素无法在您的系统上正确呈现，则可以通过在您的系统上添加或调整 "禁用 WPF 硬件加速" 图形呈现设置来解决此问题。 有关详细信息，请参阅 MSDN library 中的 [图形呈现注册表设置](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings) 。
+如果 Windows PowerShell ISE 的图形元素无法在您的系统上正确呈现，则可以通过在您的系统上添加或调整 "禁用 WPF 硬件加速" 图形呈现设置来解决此问题。 有关详细信息，请参阅[图形呈现注册表设置](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings)。
 
 ## <a name="see-also"></a>另请参阅
 

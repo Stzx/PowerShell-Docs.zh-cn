@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Computer
-ms.openlocfilehash: c1527c04d795206b8de968daf62456837627a098
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e3d1c5c071a334bddbfbc547ef2cc07e9e5c90aa
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198335"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388342"
 ---
 # Add-Computer
 
@@ -40,8 +40,7 @@ Add-Computer [-ComputerName <String[]>] [-LocalCredential <PSCredential>] [-Cred
 
 ## DESCRIPTION
 
-`Add-Computer`Cmdlet 将本地计算机或远程计算机添加到域或工作组中，或将它们从一个域移到另一个域。
-它还为添加到域中的无帐户计算机创建域帐户。
+`Add-Computer`Cmdlet 将本地计算机或远程计算机添加到域或工作组中，或将它们从一个域移到另一个域。 它还为添加到域中的无帐户计算机创建域帐户。
 
 可以使用此 cmdlet 的参数来指定组织单位 (OU) 和域控制器，或执行不安全的加入。
 
@@ -90,10 +89,7 @@ Add-Computer -DomainName Domain02 -OUPath "OU=testOU,DC=domain,DC=Domain,DC=com"
 Add-Computer -ComputerName Server01 -LocalCredential Server01\Admin01 -DomainName Domain02 -Credential Domain02\Admin02 -Restart -Force
 ```
 
-此命令将 Server01 计算机添加到 Domain02 域中。
-它使用 **LocalCredential** 参数指定有权连接到 Server01 计算机的用户帐户。
-它使用 **Credential** 参数指定有权将计算机加入到域中的用户帐户。
-它使用 **Restart** 参数在加入操作完成后重新启动计算机，并使用 **Force** 参数取消用户确认消息。
+此命令将 Server01 计算机添加到 Domain02 域中。 它使用 **LocalCredential** 参数指定有权连接到 Server01 计算机的用户帐户。 它使用 **Credential** 参数指定有权将计算机加入到域中的用户帐户。 它使用 **Restart** 参数在加入操作完成后重新启动计算机，并使用 **Force** 参数取消用户确认消息。
 
 ### 示例6：将一组计算机移到新域
 
@@ -103,9 +99,7 @@ Add-Computer -ComputerName Server01, Server02, localhost -DomainName Domain02 -L
 
 此命令将 Server01 和 Server02 计算机以及本地计算机从 Domain01 移至 Domain02。
 
-它使用 **LocalCredential** 参数指定有权连接到这三台受影响的计算机的用户帐户。
-它使用 **UnjoinDomainCredential** 参数指定有权将计算机退出 Domain01 域的用户帐户，并使用 **Credential** 参数指定有权将计算机加入到 Domain02 域的用户帐户。
-它使用 **Restart** 参数在移动操作完成后重新启动所有三台计算机。
+它使用 **LocalCredential** 参数指定有权连接到这三台受影响的计算机的用户帐户。 它使用 **UnjoinDomainCredential** 参数指定有权将计算机退出 Domain01 域的用户帐户，并使用 **Credential** 参数指定有权将计算机加入到 Domain02 域的用户帐户。 它使用 **Restart** 参数在移动操作完成后重新启动所有三台计算机。
 
 ### 示例7：将计算机移到新域并更改计算机的名称
 
@@ -115,8 +109,7 @@ Add-Computer -ComputerName Server01 -DomainName Domain02 -NewName Server044 -Cre
 
 此命令将 Server01 计算机移至 Domain02 并将计算机名称更改为 Server044。
 
-该命令使用当前用户的凭据连接到 Server01 计算机并将其从其当前域中退出。
-它使用 **Credential** 参数指定有权将计算机加入到 Domain02 域的用户帐户。
+该命令使用当前用户的凭据连接到 Server01 计算机并将其从其当前域中退出。 它使用 **Credential** 参数指定有权将计算机加入到 Domain02 域中的用户帐户。
 
 ### 示例8：将文件中列出的计算机添加到新域
 
@@ -124,9 +117,7 @@ Add-Computer -ComputerName Server01 -DomainName Domain02 -NewName Server044 -Cre
 Add-Computer -ComputerName (Get-Content Servers.txt) -DomainName Domain02 -Credential Domain02\Admin02 -Options Win9xUpgrade  -Restart
 ```
 
-此命令将 Servers.txt 文件中列出的计算机添加到 Domain02 域。
-它使用 **Options** 参数来指定 **Win9xUpgrade** 选项。
-**Restart** 参数将在加入操作完成后重新启动所有新添加的计算机。
+此命令将 Servers.txt 文件中列出的计算机添加到 Domain02 域。 它使用 **Options** 参数来指定 **Win9xUpgrade** 选项。 **Restart** 参数将在加入操作完成后重新启动所有新添加的计算机。
 
 ### 示例9：使用预定义的计算机凭据将计算机添加到域
 
@@ -144,8 +135,7 @@ $joinCred = New-Object pscredential -ArgumentList ([pscustomobject]@{
 Add-Computer -Domain "Domain03" -Options UnsecuredJoin,PasswordPass -Credential $joinCred
 ```
 
-此命令组合使用现有的已加入域的计算机在域中创建一个具有预定义名称和临时联接密码的新计算机帐户。
-然后，单独使用具有预定义名称的计算机仅使用计算机名称和临时联接密码加入域。
+此命令组合使用现有的已加入域的计算机在域中创建一个具有预定义名称和临时联接密码的新计算机帐户。 然后，单独使用具有预定义名称的计算机仅使用计算机名称和临时联接密码加入域。
 预定义的密码仅用于支持联接操作，并且在计算机完成联接后被替换为普通计算机帐户过程的一部分。
 
 ## PARAMETERS
@@ -155,11 +145,9 @@ Add-Computer -Domain "Domain03" -Options UnsecuredJoin,PasswordPass -Credential 
 指定要添加到域或工作组中的计算机。
 默认为本地计算机。
 
-键入每台远程计算机的 NetBIOS 名称、Internet 协议 (IP) 地址或完全限定的域名。
-若要指定本地计算机，请键入该计算机名称、句点 (.) 或“localhost”。
+键入每台远程计算机的 NetBIOS 名称、Internet 协议 (IP) 地址或完全限定的域名。 若要指定本地计算机，请键入计算机名、点 (`.`) 或 "localhost"。
 
-此参数不依赖于 Windows PowerShell 远程处理。
-**ComputerName** `Add-Computer` 即使你的计算机未配置为运行远程命令，你也可以使用 ComputerName 参数。
+此参数不依赖于 Windows PowerShell 远程处理。 **ComputerName** `Add-Computer` 即使你的计算机未配置为运行远程命令，你也可以使用 ComputerName 参数。
 
 此参数是在 Windows PowerShell 3.0 中引入的。
 
@@ -180,11 +168,9 @@ Accept wildcard characters: False
 指定有权将计算机加入新域的用户帐户。
 默认为当前用户。
 
-键入用户名，如“User01”或“Domain01\User01”；或输入 **PSCredential** 对象，如 `Get-Credential` cmdlet 生成的一个 PSCredential 对象。
-如果键入用户名，则将提示你输入密码。
+键入用户名，如“User01”或“Domain01\User01”；或输入 **PSCredential** 对象，如 `Get-Credential` cmdlet 生成的一个 PSCredential 对象。 如果键入用户名，则将提示你输入密码。
 
-若要指定有权将计算机从其当前域中删除的用户帐户，请使用 **UnjoinDomainCredential** 参数。
-若要指定有权连接到远程计算机的用户帐户，请使用 **LocalCredential** 参数。
+若要指定有权将计算机从其当前域中删除的用户帐户，请使用 **UnjoinDomainCredential** 参数。 若要指定有权连接到远程计算机的用户帐户，请使用 **LocalCredential** 参数。
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -200,8 +186,7 @@ Accept wildcard characters: False
 
 ### -DomainName
 
-指定要向其中添加计算机的域。
-在将计算机添加到域时需要使用此参数。
+指定要向其中添加计算机的域。 在将计算机添加到域时需要使用此参数。
 
 ```yaml
 Type: System.String
@@ -217,8 +202,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-取消用户确认提示。
-如果没有此参数， `Add-Computer` 则要求你确认是否添加了每台计算机。
+取消用户确认提示。 如果没有此参数， `Add-Computer` 则要求你确认是否添加了每台计算机。
 
 此参数是在 Windows PowerShell 3.0 中引入的。
 
@@ -236,14 +220,11 @@ Accept wildcard characters: False
 
 ### -LocalCredential
 
-指定有权连接到由 **ComputerName** 参数指定的计算机的用户帐户。
-默认为当前用户。
+指定有权连接到由 **ComputerName** 参数指定的计算机的用户帐户。 默认为当前用户。
 
-键入用户名，如“User01”或“Domain01\User01”；或输入 **PSCredential** 对象，如 `Get-Credential` cmdlet 生成的一个 PSCredential 对象。
-如果键入用户名，则将提示你输入密码。
+键入用户名，如“User01”或“Domain01\User01”；或输入 **PSCredential** 对象，如 `Get-Credential` cmdlet 生成的一个 PSCredential 对象。 如果键入用户名，则将提示你输入密码。
 
-若要指定有权将计算机添加到新域的用户帐户，请使用 **Credential** 参数。
-若要指定有权将计算机从其当前域中删除的用户帐户，请使用 **UnjoinDomainCredential** 参数。
+若要指定有权将计算机添加到新域的用户帐户，请使用 **Credential** 参数。 若要指定有权将计算机从其当前域中删除的用户帐户，请使用 **UnjoinDomainCredential** 参数。
 
 此参数是在 Windows PowerShell 3.0 中引入的。
 
@@ -261,8 +242,7 @@ Accept wildcard characters: False
 
 ### -NewName
 
-在新域中指定计算机的新名称。
-此参数仅在一台计算机被添加或移动时有效。
+在新域中指定计算机的新名称。 此参数仅在一台计算机被添加或移动时有效。
 
 此参数是在 Windows PowerShell 3.0 中引入的。
 
@@ -280,8 +260,7 @@ Accept wildcard characters: False
 
 ### -Options
 
-指定用于 **添加计算机** 加入操作的高级选项。
-在逗号分隔的字符串中输入一个或多个值。
+指定用于 **添加计算机** 加入操作的高级选项。 在逗号分隔的字符串中输入一个或多个值。
 
 此参数的可接受值为：
 
@@ -297,7 +276,8 @@ Accept wildcard characters: False
 
 - **JoinReadOnly** ：使用现有计算机帐户将计算机加入到只读域控制器。 必须将计算机帐户添加到密码复制策略的允许列表中，并且必须在加入操作之前将帐户密码复制到只读域控制器。
 
-- **InstallInvoke** ：设置 **JoinDomainOrWorkgroup** 方法的 **FJoinOptions** 参数的 create (0x2) 并删除 (0x4) 标志。 有关 **JoinDomainOrWorkgroup** 方法的详细信息，请参阅 MSDN library 中的 [Win32_ComputerSystem 类的 JoinDomainOrWorkgroup 方法](https://msdn.microsoft.com/library/aa392154) 。 有关这些选项的详细信息，请参阅 MSDN library 中的 [NetJoinDomain 函数](https://msdn.microsoft.com/library/aa370433) 。
+- **InstallInvoke** ：设置 **JoinDomainOrWorkgroup** 方法的 **FJoinOptions** 参数的 create (0x2) 并删除 (0x4) 标志。 有关 **JoinDomainOrWorkgroup** 方法的详细信息，请参阅 [Win32_ComputerSystem 类的 JoinDomainOrWorkgroup 方法](/windows/win32/cimwin32prov/joindomainorworkgroup-method-in-class-win32-computersystem)。
+  有关这些选项的详细信息，请参阅 [NetJoinDomain 函数](/windows/win32/api/lmjoin/nf-lmjoin-netjoindomain)。
 
 已在 Windows PowerShell 3.0 中引入了此参数。
 
@@ -316,9 +296,7 @@ Accept wildcard characters: False
 
 ### -OUPath
 
-为域帐户指定组织单位 (OU)。
-在引号中输入 OU 的完全可分辨名称。
-默认值为域中计算机对象的默认 OU。
+为域帐户指定组织单位 (OU)。 在引号中输入 OU 的完全可分辨名称。 默认值为域中计算机对象的默认 OU。
 
 ```yaml
 Type: System.String
@@ -334,8 +312,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-返回一个代表你所处理的项目的对象。
-默认情况下，此 cmdlet 将不产生任何输出。
+返回一个代表你所处理的项目的对象。 默认情况下，此 cmdlet 将不产生任何输出。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -351,8 +328,7 @@ Accept wildcard characters: False
 
 ### -Restart
 
-重启已添加到域或工作组中的计算机。
-若要更改生效，通常需要重新启动。
+重启已添加到域或工作组中的计算机。 若要更改生效，通常需要重新启动。
 
 此参数是在 Windows PowerShell 3.0 中引入的。
 
@@ -370,9 +346,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-指定向域中添加计算机的域控制器的名称。
-以 DomainName\ComputerName 格式输入该名称。
-默认情况下，将不指定域控制器。
+指定向域中添加计算机的域控制器的名称。 以 DomainName\ComputerName 格式输入该名称。 默认情况下，将不指定域控制器。
 
 ```yaml
 Type: System.String
@@ -388,15 +362,11 @@ Accept wildcard characters: False
 
 ### -UnjoinDomainCredential
 
-指定有权将计算机从其当前域中删除的用户帐户。
-默认为当前用户。
+指定有权将计算机从其当前域中删除的用户帐户。 默认为当前用户。
 
-键入用户名，如“User01”或“Domain01\User01”；或输入 **PSCredential** 对象，如 `Get-Credential` cmdlet 生成的一个 PSCredential 对象。
-如果键入用户名，则将提示你输入密码。
+键入用户名，如“User01”或“Domain01\User01”；或输入 **PSCredential** 对象，如 `Get-Credential` cmdlet 生成的一个 PSCredential 对象。 如果键入用户名，则将提示你输入密码。
 
-在将计算机移动到不同的域中时使用此参数。
-若要指定有权加入新域的用户帐户，请使用 **Credential** 参数。
-若要指定有权连接到远程计算机的用户帐户，请使用 **LocalCredential** 参数。
+在将计算机移动到不同的域中时使用此参数。 若要指定有权加入新域的用户帐户，请使用 **Credential** 参数。 若要指定有权连接到远程计算机的用户帐户，请使用 **LocalCredential** 参数。
 
 此参数是在 Windows PowerShell 3.0 中引入的。
 
@@ -430,8 +400,7 @@ Accept wildcard characters: False
 
 ### -WorkgroupName
 
-指定要将计算机添加到的工作组的名称。
-默认值为“WORKGROUP”。
+指定要将计算机添加到的工作组的名称。 默认值为“WORKGROUP”。
 
 ```yaml
 Type: System.String

@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PSSession
-ms.openlocfilehash: 9d4b683764677288b73ebf801cebbf0aedd8898c
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: cee14ce93af87d33b4d9d9665c3ef5aaa2aec1d5
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93199042"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387441"
 ---
 # Get-PSSession
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 此参数的可接受值为：
 
 - 默认
-- 基本
+- Basic
 - Credssp
 - 摘要
 - Kerberos
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 
 默认值为 Default。
 
-有关此参数的值的详细信息，请参阅 MSDN 库中的 [System.management.automation.runspaces.authenticationmechanism 枚举](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) 。
+有关此参数的值的详细信息，请参阅 [System.management.automation.runspaces.authenticationmechanism 枚举](/dotnet/api/system.management.automation.runspaces.authenticationmechanism)。
 
 注意：在凭据安全支持提供程序 (CredSSP) 身份验证中，用户凭据传递到远程计算机中以进行验证，这种验证用于要求对多个资源（例如访问远程网络共享）进行验证的命令。 此机制增加了远程操作的安全风险。 如果远程计算机的安全受到威胁，则传递给该计算机的凭据可用于控制网络会话。
 
@@ -693,9 +693,9 @@ Accept wildcard characters: False
 
 **Availability** 的 **None** 值指示可连接到 PSSession。 值为 " **忙碌** " 指示你无法连接到 **PSSession** ，因为它已连接到另一个会话。
 
-有关会话的 **State** 属性的值的详细信息，请参阅 [RunspaceState 枚举](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate)。
+有关会话的 **State** 属性的值的详细信息，请参阅 [RunspaceState 枚举](/dotnet/api/system.management.automation.runspaces.runspacestate)。
 
-有关会话的 **可用性** 属性值的详细信息，请参阅 [runspacestate 枚举](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability)。
+有关会话的 **可用性** 属性值的详细信息，请参阅 [runspacestate 枚举](/dotnet/api/system.management.automation.runspaces.runspaceavailability)。
 
 ## 相关链接
 

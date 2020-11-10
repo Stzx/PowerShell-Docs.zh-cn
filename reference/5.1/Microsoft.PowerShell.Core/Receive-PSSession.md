@@ -7,12 +7,12 @@ Module Name: Microsoft.PowerShell.Core
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: 39501e0992ba10ae3638dd5178f2913001b5cd32
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: a1492c1c334feb4df5635b5bfaf435c0815f80ab
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93198983"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388580"
 ---
 # Receive-PSSession
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 指定用于对命令中的用户凭据进行身份验证的机制，以便重新连接到断开连接的会话。 此参数的可接受值为：
 
 - 默认
-- 基本
+- Basic
 - Credssp
 - 摘要
 - Kerberos
@@ -787,7 +787,7 @@ Accept wildcard characters: False
 - **State** 属性的值是相对于当前会话的。 如果值为 "已断开连接"，则意味着 **PSSession** 未连接到当前会话。 但是，它并不意味着 **PSSession** 会与所有会话断开连接。 它可能连接到另一个会话。
   若要确定是否可以连接或重新连接到该会话，请使用 **Availability** 属性。
 - **Availability** 的 None 值指示可连接会话。 值为 "忙碌" 表示无法连接到 **PSSession** ，因为它已连接到另一个会话。
-- 有关会话 **状态** 属性的值的详细信息，请参阅 MSDN library 中的 [RunspaceState](/dotnet/api/system.management.automation.runspaces.runspacestate) 。
+- 有关会话 **状态** 属性的值的详细信息，请参阅 [RunspaceState](/dotnet/api/system.management.automation.runspaces.runspacestate)。
 - 有关会话的 **可用性** 属性值的详细信息，请参阅 [runspacestate](/dotnet/api/system.management.automation.runspaces.runspaceavailability)。
 
 ## 相关链接

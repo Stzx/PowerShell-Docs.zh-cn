@@ -6,12 +6,12 @@ ms.date: 04/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_methods?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Methods
-ms.openlocfilehash: 45a57efdf16779cfed0df627976270871068ed1f
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 1acbe79deefbc21c4ce42bfc651eeb04ac189879
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93199806"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387604"
 ---
 # <a name="about-methods"></a>关于方法
 
@@ -81,7 +81,7 @@ this is rock science
 
 ### <a name="learning-about-methods"></a>了解方法
 
-若要查找对象的方法的定义，请在 MSDN 中的对象类型中转到 "帮助" 主题，并查找其 "方法" 页。 例如，下面的页描述[进程对象的处理方法。](/dotnet/api/system.diagnostics.process#methods)
+若要查找对象的方法的定义，请参阅对象类型的 "帮助" 主题，并查找其 "方法" 页。 例如，下面的页描述[进程对象的处理方法。](/dotnet/api/system.diagnostics.process#methods)
 
 若要确定方法的参数，请查看方法定义，它类似于 PowerShell cmdlet 的语法关系图。
 

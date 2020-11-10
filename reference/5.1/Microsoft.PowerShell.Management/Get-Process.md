@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-process?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Process
-ms.openlocfilehash: 6b22e8d4f843d0611083c253027222f4d4cd7282
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d1a576ce9c718561718bac5fee065983a057d458
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198282"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388291"
 ---
 # Get-Process
 
@@ -62,11 +62,9 @@ Get-Process -InputObject <Process[]> [-ComputerName <String[]>] [-Module] [-File
 
 `Get-Process`Cmdlet 将获取本地或远程计算机上的进程。
 
-如果没有参数，此 cmdlet 将获取本地计算机上的所有进程。
-还可以通过进程名称或进程 ID (PID) 指定特定进程，或将进程对象通过管道传递给此 cmdlet。
+如果没有参数，此 cmdlet 将获取本地计算机上的所有进程。 还可以通过进程名称或进程 ID (PID) 指定特定进程，或将进程对象通过管道传递给此 cmdlet。
 
-默认情况下，此 cmdlet 将返回一个进程对象，该对象包含有关进程的详细信息，并支持使你能够启动和停止进程的方法。
-你还可以使用 cmdlet 的参数 `Get-Process` 来获取进程中运行的程序的文件版本信息，并获取进程加载的模块。
+默认情况下，此 cmdlet 将返回一个进程对象，该对象包含有关进程的详细信息，并支持使你能够启动和停止进程的方法。 你还可以使用 cmdlet 的参数 `Get-Process` 来获取进程中运行的程序的文件版本信息，并获取进程加载的模块。
 
 ## 示例
 
@@ -76,8 +74,7 @@ Get-Process -InputObject <Process[]> [-ComputerName <String[]>] [-Module] [-File
 Get-Process
 ```
 
-此命令将获取在本地计算机上运行的所有活动进程的列表。
-有关每列的定义，请参阅 [注释](#notes) 部分。
+此命令将获取在本地计算机上运行的所有活动进程的列表。 有关每列的定义，请参阅 [注释](#notes) 部分。
 
 ### 示例2：获取有关一个或多个进程的所有可用数据
 
@@ -85,12 +82,9 @@ Get-Process
 Get-Process winword, explorer | Format-List *
 ```
 
-此命令获取计算机上的有关 Winword 和 Explorer 进程的所有可用的数据。
-它使用 **Name** 参数来指定进程，但它省略了可选的参数名称。
-管道运算符将 `|` 数据传递给 `Format-List` cmdlet，后者显示 `*` Winword 和资源管理器进程对象的所有可用属性。
+此命令获取计算机上的有关 Winword 和 Explorer 进程的所有可用的数据。 它使用 **Name** 参数来指定进程，但它省略了可选的参数名称。 管道运算符将 `|` 数据传递给 `Format-List` cmdlet，后者显示 `*` Winword 和资源管理器进程对象的所有可用属性。
 
-也可通过其进程 ID 来标识这些进程。
-例如：`Get-Process -Id 664, 2060`。
+也可通过其进程 ID 来标识这些进程。 例如：`Get-Process -Id 664, 2060`。
 
 ### 示例3：获取工作集大于指定大小的所有进程
 
@@ -98,13 +92,9 @@ Get-Process winword, explorer | Format-List *
 Get-Process | Where-Object {$_.WorkingSet -gt 20000000}
 ```
 
-此命令获取所有工作集大于 20 MB 的进程。
-它使用 `Get-Process`  cmdlet 来获取所有正在运行的进程。
-管道运算符将 `|` 进程对象传递给 `Where-Object` cmdlet，该 cmdlet 只选择其值大于20000000字节的工作集属性的对象。 **WorkingSet**
+此命令获取所有工作集大于 20 MB 的进程。 它使用 `Get-Process` cmdlet 来获取所有正在运行的进程。 管道运算符将 `|` 进程对象传递给 `Where-Object` cmdlet，该 cmdlet 只选择其值大于20000000字节的工作集属性的对象。 **WorkingSet**
 
-集 **是进程** 对象的许多属性之一。
-若要查看所有属性，请键入 `Get-Process | Get-Member` 。
-默认情况下，所有数量属性的值以字节为单位，尽管默认显示以千字节和兆字节为单位列出这些值。
+集 **是进程** 对象的许多属性之一。 若要查看所有属性，请键入 `Get-Process | Get-Member` 。 默认情况下，所有数量属性的值以字节为单位，尽管默认显示以千字节和兆字节为单位列出这些值。
 
 ### 示例4：根据优先级列出计算机上的进程
 
@@ -113,8 +103,7 @@ $A = Get-Process
 $A | Get-Process | Format-Table -View priority
 ```
 
-这些命令基于其优先级类在计算机上列出进程。
-第一个命令获取计算机上的所有进程，然后将其存储在 `$A` 变量中。
+这些命令基于其优先级类在计算机上列出进程。 第一个命令获取计算机上的所有进程，然后将其存储在 `$A` 变量中。
 
 第二个命令将存储在变量中的 **进程** 对象通过管道传递 `$A` 给 `Get-Process` cmdlet，然后传递给 `Format-Table` cmdlet，后者使用 **优先级** 视图设置进程的格式。
 
@@ -140,12 +129,11 @@ NPM(K) PM(K) WS(K) VM(M) CPU(s)   Id MachineName ProcessName
     27 54572 54520   576 5.52   4428 localhost   powershell
 ```
 
-此示例从本地计算机和远程计算机 (S1) 中检索进程。
-检索到的进程将通过管道传递给 `Format-Table` 将 **MachineName** 属性添加到标准 `Get-Process` 输出显示的命令。
+此示例从本地计算机和远程计算机 (S1) 中检索进程。 检索到的进程将通过管道传递给 `Format-Table` 将 **MachineName** 属性添加到标准 `Get-Process` 输出显示的命令。
 
 ### 示例6：获取进程的版本信息
 
-```
+```powershell
 Get-Process powershell -FileVersionInfo
 ```
 
@@ -173,7 +161,7 @@ Get-Process SQL* -Module
 ### 示例8：查找进程的所有者
 
 ```powershell
-PS C:\> Get-Process powershell -IncludeUserName
+Get-Process pwsh -IncludeUserName
 ```
 
 ```Output
@@ -203,17 +191,14 @@ ReturnValue      : 0
 User             : user01
 ```
 
-第一个命令演示如何查找进程的所有者。
-**: Includeusername** 参数需要提升的用户权限 (以管理员身份运行) 。
-输出显示所有者为 Domain01\user01。
+第一个命令演示如何查找进程的所有者。 **: Includeusername** 参数需要提升的用户权限 (以管理员身份运行) 。 输出显示所有者为 Domain01\user01。
 
 第二个和第三个命令是查找进程的所有者的另一种方法。
 
 第二个命令使用 `Get-WmiObject` 来获取 PowerShell 进程。
-此命令将其保存在 $p 变量中。
+它将其保存在 `$p` 变量中。
 
-第三个命令使用 GetOwner 方法来获取 $p 中的进程的所有者。
-输出显示所有者为 Domain01\user01。
+第三个命令使用 GetOwner 方法来获取中进程的所有者 `$p` 。 输出显示所有者为 Domain01\user01。
 
 ### 示例9：使用自动变量标识托管当前会话的进程
 
@@ -238,8 +223,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 396      26        56488      57236   575     3.90   5888 powershell
 ```
 
-这些命令演示如何使用 `$PID` 自动变量来标识承载当前 PowerShell 会话的进程。
-可以使用此方法将宿主进程与可能要停止或关闭的其他 PowerShell 进程区分开来。
+这些命令演示如何使用 `$PID` 自动变量来标识承载当前 PowerShell 会话的进程。 可以使用此方法将宿主进程与可能要停止或关闭的其他 PowerShell 进程区分开来。
 
 第一个命令获取当前会话中的所有 PowerShell 进程。
 
@@ -253,21 +237,17 @@ Get-Process | Where-Object {$_.mainWindowTitle} | Format-Table Id, Name, mainWin
 
 此命令获取具有主窗口标题的所有进程，并在表中显示这些进程及其进程 ID 和进程名称。
 
-**MainWindowTitle** 属性只是返回的 **进程** 对象的许多有用属性之一 `Get-Process` 。
-若要查看所有属性，请通过管道将命令结果传递 `Get-Process` 给 `Get-Member` cmdlet `Get-Process | Get-Member` 。
+**MainWindowTitle** 属性只是返回的 **进程** 对象的许多有用属性之一 `Get-Process` 。 若要查看所有属性，请通过管道将命令结果传递 `Get-Process` 给 `Get-Member` cmdlet `Get-Process | Get-Member` 。
 
 ## PARAMETERS
 
 ### -ComputerName
 
-指定此 cmdlet 为其获取活动进程的计算机。
-默认为本地计算机。
+指定此 cmdlet 为其获取活动进程的计算机。 默认为本地计算机。
 
-键入一台或多台计算机 (FQDN) 的 NetBIOS 名称、IP 地址或完全限定的域名。
-若要指定本地计算机，请键入该计算机名称、句点 (.) 或 localhost。
+键入一台或多台计算机 (FQDN) 的 NetBIOS 名称、IP 地址或完全限定的域名。 若要指定本地计算机，请键入该计算机名称、句点 (.) 或 localhost。
 
-此参数不依赖于 Windows PowerShell 远程处理。
-即使你的计算机未配置为运行远程命令，你也可以使用此 cmdlet 的 **ComputerName** 参数。
+此参数不依赖于 Windows PowerShell 远程处理。 即使你的计算机未配置为运行远程命令，你也可以使用此 cmdlet 的 **ComputerName** 参数。
 
 ```yaml
 Type: System.String[]
@@ -291,9 +271,7 @@ Accept wildcard characters: False
 
 若要获取远程计算机上某个进程的文件版本信息，请使用 `Invoke-Command` cmdlet。
 
-使用此参数等效于获取每个进程对象的 **Mainmodule.fileversioninfo FileVersionInfo** 属性。
-使用此参数时，将 `Get-Process` 返回 **FileVersionInfo** 对象 **FileVersionInfo** ，而不是进程对象。
-因此，不能通过管道将命令输出传递到需要进程对象的 cmdlet，例如 `Stop-Process` 。
+使用此参数等效于获取每个进程对象的 **Mainmodule.fileversioninfo FileVersionInfo** 属性。 使用此参数时，将 `Get-Process` 返回 **FileVersionInfo** 对象 **FileVersionInfo** ，而不是进程对象。 因此，不能通过管道将命令输出传递到需要进程对象的 cmdlet，例如 `Stop-Process` 。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -309,9 +287,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-通过进程 ID (PID) 指定一个或多个进程。
-若要指定多个 ID，请使用逗号分隔 ID。
-若要查找进程的 PID，请键入 `Get-Process`。
+通过进程 ID (PID) 指定一个或多个进程。 若要指定多个 ID，请使用逗号分隔 ID。 若要查找进程的 PID，请键入 `Get-Process`。
 
 ```yaml
 Type: System.Int32[]
@@ -343,8 +319,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-指定一个或多个进程对象。
-输入一个包含对象的变量，或键入可获取对象的命令或表达式。
+指定一个或多个进程对象。 输入一个包含对象的变量，或键入可获取对象的命令或表达式。
 
 ```yaml
 Type: System.Diagnostics.Process[]
@@ -362,13 +337,11 @@ Accept wildcard characters: False
 
 指示此 cmdlet 获取由进程加载的模块。
 
-在 Windows Vista 和更高版本的 Windows 上，必须使用 "以管理员身份运行" 选项打开 PowerShell，才能对你不具有所有权的进程使用此参数。
+在 Windows Vista 和更高版本的 Windows 上，必须使用 "以 **管理员身份运行** " 选项打开 PowerShell，才能对你不具有所有权的进程使用此参数。
 
 若要获取远程计算机上由进程加载的模块，请使用 `Invoke-Command` cmdlet。
 
-此参数等效于获取每个进程对象的 **模块** 属性。
-使用此参数时，此 cmdlet 将返回 **system.diagnostics.processmodule** 对象 **system.diagnostics.processmodule** ，而不是进程对象。
-因此，不能通过管道将命令输出传递到需要进程对象的 cmdlet，例如 `Stop-Process` 。
+此参数等效于获取每个进程对象的 **模块** 属性。 使用此参数时，此 cmdlet 将返回 **system.diagnostics.processmodule** 对象 **system.diagnostics.processmodule** ，而不是进程对象。 因此，不能通过管道将命令输出传递到需要进程对象的 cmdlet，例如 `Stop-Process` 。
 
 在同一命令中同时使用 *Module* 和 **FileVersionInfo** 参数时，此 Cmdlet 将返回一个 **FileVersionInfo** 对象，其中包含有关所有模块的文件版本的信息。
 
@@ -386,9 +359,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-通过进程名称指定一个或多个进程。
-可以键入多个进程名称（以逗号分隔），并可以使用通配符。
-参数名（“Name”）为可选项。
+通过进程名称指定一个或多个进程。 可以键入多个进程名称（以逗号分隔），并可以使用通配符。 参数名（“Name”）为可选项。
 
 ```yaml
 Type: System.String[]
@@ -416,16 +387,14 @@ Accept wildcard characters: True
 
 ### "FileVersionInfo"、"System.diagnostics.processmodule" 和 "
 
-默认情况下，此 cmdlet 将返回一个 **system.object** 对象。
-如果使用 **FileVersionInfo** 参数，它将返回 **FileVersionInfo** 对象。
-如果使用 **Module** 参数（不带 **FileVersionInfo** 参数），则它将返回 **system.diagnostics.processmodule** 对象。
+默认情况下，此 cmdlet 将返回一个 **system.object** 对象。 如果使用 **FileVersionInfo** 参数，它将返回 **FileVersionInfo** 对象。 如果使用 **Module** 参数（不带 **FileVersionInfo** 参数），则它将返回 **system.diagnostics.processmodule** 对象。
 
 ## 注释
 
 - 还可以通过其内置别名、ps 和 gps 来引用此 cmdlet。 有关详细信息，请参阅 [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md)。
 - 在运行64位版本的 Windows 的计算机上，64位版本的 PowerShell 仅获取64位进程模块，而版本的 PowerShell 32 的版本仅适用于32位进程模块。
 - 可以在 PowerShell 中使用 Windows Management Instrumentation (WMI) Win32_Process 对象的属性和方法。 有关信息，请参阅 `Get-WmiObject` 和 WMI SDK。
-- 进程的默认显示为包括以下列的表。 有关进程对象的所有属性的说明，请参阅 MSDN library 中的 [进程属性](/dotnet/api/system.diagnostics.process) 。
+- 进程的默认显示为包括以下列的表。 有关进程对象的所有属性的说明，请参阅 [处理属性](/dotnet/api/system.diagnostics.process)。
   - Handles：进程打开的句柄数。
   - NPM (K) ：进程正在使用的非分页内存量（kb）。
   - PM (K) ：进程正在使用的可分页内存量（kb）。
@@ -435,8 +404,7 @@ Accept wildcard characters: True
     虚拟内存包括磁盘上分页文件中的存储。
   - CPU () ：进程使用的处理器时间，以秒为单位。
   - ID：进程的进程 ID (PID) 。
-  - ProcessName：进程的名称。
-    有关与进程相关的概念的解释，请参阅帮助和支持中心中的词汇表以及任务管理器帮助。
+  - ProcessName：进程的名称。 有关与进程相关的概念的解释，请参阅帮助和支持中心中的词汇表以及任务管理器帮助。
 - 你还可以使用中提供的进程的内置替代视图 `Format-Table` ，例如 **StartTime** 和 **Priority** ，还可以设计你自己的视图。
 
 ## 相关链接

@@ -6,12 +6,12 @@ ms.date: 2/27/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Functions
-ms.openlocfilehash: f033bc36bf67a9d01e3f238645b83df7d75c6963
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: e028ba5f29568c9eb962ee482087ac69a42e84b1
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93200117"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94386881"
 ---
 # <a name="about-functions"></a>关于 Functions
 
@@ -486,9 +486,9 @@ Get-Help Get-MyDisks
 
   若要将函数与基于 XML 的帮助主题相关联，请使用 `.ExternalHelp` 基于注释的帮助关键字。 如果没有此关键字，则找 `Get-Help` 不到函数帮助主题，并且对的调用将 `Get-Help` 仅返回自动生成的帮助。
 
-  有关关键字的详细信息 `ExternalHelp` ，请参阅 [about_Comment_Based_Help](about_Comment_Based_Help.md)。 有关基于 XML 的帮助的详细信息，请参阅 MSDN library 中的 how [To Write Cmdlet help （如何编写 Cmdlet 帮助](https://go.microsoft.com/fwlink/?LinkID=123415) ）。
+  有关关键字的详细信息 `ExternalHelp` ，请参阅 [about_Comment_Based_Help](about_Comment_Based_Help.md)。 有关基于 XML 的帮助的详细信息，请参阅 [如何编写 Cmdlet 帮助](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 

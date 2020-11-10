@@ -6,12 +6,12 @@ ms.date: 01/03/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pssnapins?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PSSnapins
-ms.openlocfilehash: cc22f8de0b9d8a55dcfa12f3b47f3852d891e67b
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 494b3275e4fe8a3aacdc358317950542962957cf
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93200096"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388886"
 ---
 # <a name="about-pssnapins"></a>关于 PSSnapins
 
@@ -57,7 +57,7 @@ Get-Command -Module <snap-in_name>
 
 Windows PowerShell 管理单元是用编译到 .dll 文件的 .NET Framework 语言编写的程序。 若要在管理单元中使用提供程序和 cmdlet，必须先注册管理单元 (将其添加到注册表) 。
 
-大多数管理单元都包含一个安装程序， (为您注册 .dll 文件的 .exe 或 .msi 文件) 。 但是，如果您接收到作为 .dll 文件的管理单元，则可以将其注册到您的系统上。 有关详细信息，请参阅 MSDN library 中的 " [如何注册 cmdlet、提供程序和主机应用程序](https://go.microsoft.com/fwlink/?LinkID=143619) "。
+大多数管理单元都包含一个安装程序， (为您注册 .dll 文件的 .exe 或 .msi 文件) 。 但是，如果您接收到作为 .dll 文件的管理单元，则可以将其注册到您的系统上。 有关详细信息，请参阅 [如何注册 cmdlet、提供程序和主机应用程序](/previous-versions//ms714644(v=vs.85))。
 
 若要获取系统上所有已注册的管理单元，或验证是否注册了管理单元，请键入：
 

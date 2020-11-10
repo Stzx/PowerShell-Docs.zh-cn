@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/add-pssnapin?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-PSSnapin
-ms.openlocfilehash: 5adba912d91369250ee9891ee2bb2ca0f8cba796
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: a21c2974fd66a9b02929752ae487c8995579b8a7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197461"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388818"
 ---
 # Add-PSSnapin
 
@@ -136,15 +136,15 @@ Accept wildcard characters: False
 
 ## 注释
 
-* 从 Windows PowerShell 3.0 开始，将与 Windows PowerShell 一起安装的核心命令打包在模块中。 在 Windows PowerShell 2.0 和在更高版本的 Windows PowerShell 中创建旧样式会话的主机程序中，核心命令打包在 (PSSnapins) 的管理单元中。 **Microsoft.PowerShell.Core** 是例外情况，它始终是一个管理单元。 此外，远程会话（如 New-PSSession cmdlet 启动的会话）是包括核心管理单元的旧样式会话。
+- 从 Windows PowerShell 3.0 开始，将与 Windows PowerShell 一起安装的核心命令打包在模块中。 在 Windows PowerShell 2.0 和在更高版本的 Windows PowerShell 中创建旧样式会话的主机程序中，核心命令打包在 (PSSnapins) 的管理单元中。 **Microsoft.PowerShell.Core** 是例外情况，它始终是一个管理单元。 此外，远程会话（如 New-PSSession cmdlet 启动的会话）是包括核心管理单元的旧样式会话。
 
-  有关 **CreateDefault2** 方法的详细信息，请参阅 MSDN library 中的 [CreateDefault2 方法](https://msdn.microsoft.com/library/system.management.automation.runspaces.initialsessionstate.createdefault2) 。
+  有关 **CreateDefault2** 方法的详细信息，请参阅 [CreateDefault2 方法](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2#System_Management_Automation_Runspaces_InitialSessionState_CreateDefault2)。
 
-* 有关管理单元的详细信息，请参阅 [about_PSSnapins](About/about_PSSnapins.md) 和 [如何创建 Windows PowerShell 管理单元](/powershell/scripting/developer/cmdlet/how-to-create-a-windows-powershell-snap-in)。
-* `Add-PSSnapin` 仅将管理单元添加到当前会话。 若要将管理单元添加到所有 Windows PowerShell 会话中，请将该管理单元添加到你的 Windows PowerShell 配置文件中。 有关详细信息，请参阅 about_Profiles。
-* 你可以添加已使用 Microsoft .NET Framework 安装实用工具注册的任何管理单元。 有关详细信息，请参阅 [如何注册 cmdlet、提供程序和主机应用程序](/previous-versions//ms714644(v=vs.85))。
-* 若要获取在你的计算机上注册的管理单元的列表，请键入 `Get-PSSnapin -Registered` 。
-* 在添加管理单元之前， `Add-PSSnapin` 检查管理单元的版本，以验证它是否与 Windows PowerShell 的当前版本兼容。 如果管理单元未通过版本检查，则 Windows PowerShell 将报告错误。
+- 有关管理单元的详细信息，请参阅 [about_PSSnapins](About/about_PSSnapins.md) 和 [如何创建 Windows PowerShell 管理单元](/powershell/scripting/developer/cmdlet/how-to-create-a-windows-powershell-snap-in)。
+- `Add-PSSnapin` 仅将管理单元添加到当前会话。 若要将管理单元添加到所有 Windows PowerShell 会话中，请将该管理单元添加到你的 Windows PowerShell 配置文件中。 有关详细信息，请参阅 about_Profiles。
+- 你可以添加已使用 Microsoft .NET Framework 安装实用工具注册的任何管理单元。 有关详细信息，请参阅 [如何注册 cmdlet、提供程序和主机应用程序](/previous-versions//ms714644(v=vs.85))。
+- 若要获取在你的计算机上注册的管理单元的列表，请键入 `Get-PSSnapin -Registered` 。
+- 在添加管理单元之前， `Add-PSSnapin` 检查管理单元的版本，以验证它是否与 Windows PowerShell 的当前版本兼容。 如果管理单元未通过版本检查，则 Windows PowerShell 将报告错误。
 
 ## 相关链接
 

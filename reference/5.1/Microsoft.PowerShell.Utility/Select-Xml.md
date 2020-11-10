@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/select-xml?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Select-Xml
-ms.openlocfilehash: eb5684ed281b3ba05629528bb12b44577f8c050a
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 7e3d02dedb9f7809a8f8e1c657987fef8ec38fa9
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93198968"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387985"
 ---
 # Select-Xml
 
@@ -27,7 +27,7 @@ ms.locfileid: "93198968"
 Select-Xml [-Xml] <XmlNode[]> [-XPath] <String> [-Namespace <Hashtable>] [<CommonParameters>]
 ```
 
-### `Path`
+### 路径
 
 ```
 Select-Xml [-Path] <String[]> [-XPath] <String> [-Namespace <Hashtable>] [<CommonParameters>]
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 
 ## 注释
 
-* XPath 是一种标准语言，它可以识别 XML 文档的各个部分。 有关 XPath 语言的详细信息，请参阅 MSDN library 中的[事件选择](https://msdn.microsoft.com/library/aa385231)的 " [XPath 参考](https://msdn.microsoft.com/library/ms256115)" 和 "选择筛选器" 部分。
+XPath 是一种标准语言，它可以识别 XML 文档的各个部分。 有关 XPath 语言的详细信息，请参阅 " [Xpath 参考](/dotnet/standard/data/xml/select-nodes-using-xpath-navigation) " 和 " [事件选择](/previous-versions//aa385231(v=vs.85))" 的 "选择筛选器" 部分。
 
 ## 相关链接
 

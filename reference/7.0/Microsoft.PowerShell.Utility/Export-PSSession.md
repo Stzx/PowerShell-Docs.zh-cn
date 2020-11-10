@@ -7,12 +7,12 @@ ms.date: 04/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: ff1b709b363684e27a1f4eb8fdeada2d5ae1d588
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 5aa9b9967ec6a79a569c9f0e7ca93db9e9e4d5b6
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197189"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387033"
 ---
 # Export-PSSession
 
@@ -213,7 +213,7 @@ Accept wildcard characters: True
 - ExternalScript. Path 环境变量中列出的路径中的所有 ps1 文件 (`$env:path`) 。
 - Filter 和 Function。 所有 PowerShell 函数。
 - 脚本。 当前会话中的脚本块。
-- Workflow. PowerShell 工作流。 有关详细信息，请参阅 [about_Workflows](/powershell/module/psworkflow/about/about_workflows?view=powershell-5.1)。
+- Workflow. PowerShell 工作流。 有关详细信息，请参阅 [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows)。
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 
 ### -Encoding
 
-指定目标文件的编码类型。 默认值是 `utf8NoBOM`。
+指定目标文件的编码类型。 默认值为 `utf8NoBOM`。
 
 此参数可接受的值如下所示：
 
@@ -243,7 +243,6 @@ Accept wildcard characters: False
 - `utf8BOM`：以 UTF-8 格式编码 (BOM) 
 - `utf8NoBOM`：以 UTF-8 格式编码，而不包含字节顺序标记 (BOM) 
 - `utf32`：以32格式编码。
-
 
 从 PowerShell 6.2 开始， **Encoding** 参数还允许已注册代码页的数字 id (如 `-Encoding 1251` (如) 所注册代码页的) 或字符串名称 `-Encoding "windows-1251"` 。 有关详细信息，请参阅 .NET 文档中的[编码。](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2)
 
@@ -300,16 +299,14 @@ Accept wildcard characters: False
 
 ### -FullyQualifiedModule
 
-指定名称以 **ModuleSpecification** 对象的形式指定的模块。
-请参阅 ModuleSpecification 构造函数的 "备注" 部分 [ (哈希表) ](https://msdn.microsoft.com/library/jj136290)。
+指定名称以 **ModuleSpecification** 对象的形式指定的模块。 请参阅 ModuleSpecification 构造函数的 "备注" 部分 [ (哈希表) ](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_)。
 
 例如， **FullyQualifiedModule** 参数接受以下任何一种格式指定的模块名称：
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
-
-**ModuleName** 和 **ModuleVersion** 是必需的，但 **Guid** 是可选的。 不能在与 **Module** 参数相同的命令中指定 **FullyQualifiedModule** 参数;这两个参数是互斥的。
+**ModuleName** 和 **ModuleVersion** 是必需的，但 **Guid** 是可选的。 不能在与 **Module** 参数相同的命令中指定 **FullyQualifiedModule** 参数。 这两个参数是互斥的。
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ModuleSpecification[]

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/stop-job?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Job
-ms.openlocfilehash: 5b023efa2c1545da574f447b8542bfbfe9b5d861
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 56dc7462e2625768db8b52370d3b7d38c8defafe
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198719"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387254"
 ---
 # Stop-Job
 
@@ -59,19 +59,13 @@ Stop-Job [-PassThru] [-Filter] <Hashtable> [-WhatIf] [-Confirm] [<CommonParamete
 
 ## DESCRIPTION
 
-**停止作业** cmdlet 将停止正在进行的 PowerShell 后台作业。
-可以使用此 cmdlet 停止所有作业，或者基于作业的名称、ID、实例 ID 或状态停止所选作业，或者通过将作业对象传递到 **停止作业** 来停止这些作业。
+`Stop-Job`Cmdlet 可停止正在进行的 PowerShell 后台作业。 您可以使用此 cmdlet 停止所有作业，或者基于作业的名称、ID、实例 ID 或状态停止所选作业，或者通过将作业对象传递到来停止这些作业 `Stop-Job` 。
 
-可以使用 **Stop-Job** 停止后台作业，例如通过使用 Start-Job cmdlet 或任何 cmdlet 的 *AsJob* 参数。
-停止后台作业时，PowerShell 将完成该作业队列中挂起的所有任务，然后结束该作业。
-提交此命令后，将不会有新任务添加到队列。
+你可以使用 `Stop-Job` 来停止后台作业，如使用 `Start-Job` cmdlet 或任何 Cmdlet 的 **AsJob** 参数启动的作业。 停止后台作业时，PowerShell 将完成该作业队列中挂起的所有任务，然后结束该作业。 提交此命令后，将不会有新任务添加到队列。
 
-此 cmdlet 不删除后台作业。
-若要删除作业，请使用 Remove-Job cmdlet。
+此 cmdlet 不删除后台作业。 若要删除作业，请使用 `Remove-Job` cmdlet。
 
-从 Windows PowerShell 3.0 开始， **停止作业** 还将停止自定义作业类型，例如工作流作业和计划作业的实例。
-若要使 **停止作业** 停止具有自定义作业类型的作业，请在运行 **停止作业** 命令之前将支持自定义作业类型的模块导入到会话中，方法是使用 Import-Module cmdlet 或使用或在模块中获取 cmdlet。
-有关特定的自定义作业类型的信息，请参阅自定义作业类型功能的文档。
+从 Windows PowerShell 3.0 开始， `Stop-Job` 还将停止自定义作业类型，例如工作流作业和计划作业的实例。 若要启用 `Stop-Job` 以停止具有自定义作业类型的作业，请在运行命令之前将支持自定义作业类型的模块导入到会话中，方法 `Stop-Job` 是使用 `Import-Module` cmdlet 或通过使用或在模块中获取 cmdlet。 有关特定的自定义作业类型的信息，请参阅自定义作业类型功能的文档。
 
 ## 示例
 
@@ -83,25 +77,18 @@ $j = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-EventL
 Invoke-Command -Session $s -ScriptBlock { Stop-job -Job $Using:j }
 ```
 
-此示例显示了如何使用 **Stop-Job** cmdlet 停止在远程计算机上运行的作业。
+此示例演示如何使用 `Stop-Job` cmdlet 停止在远程计算机上运行的作业。
 
-由于作业是通过使用 Invoke-Command cmdlet 以远程方式 **运行的，** 作业对象存储在远程计算机上。
-必须使用另一个 **调用命令** 命令远程运行 **停止作业** 命令。
-有关远程后台作业的详细信息，请参阅 about_Remote_Jobs。
+由于该作业是通过使用 `Invoke-Command` cmdlet 远程运行命令来启动的 `Start-Job` ，因此该作业对象存储在远程计算机上。 您必须使用另一个 `Invoke-Command` 命令来 `Stop-Job` 远程运行命令。 有关远程后台作业的详细信息，请参阅 about_Remote_Jobs。
 
-第一个命令在 Server01 计算机上创建 ( **PSSession** ) 的 PowerShell 会话，然后将该会话对象存储在 $s 变量中。
-该命令使用某个域管理员的凭据。
+第一个命令在 Server01 计算机上创建 ( **PSSession** ) 的 PowerShell 会话，然后将该会话对象存储在 `$s` 变量中。 该命令使用某个域管理员的凭据。
 
-第二个命令使用 **Invoke-Command** cmdlet 在该会话中运行 **Start-Job** 命令。
-作业中的此命令将获取系统事件日志中的所有事件。
-生成的作业对象存储在 $j 变量中。
+第二个命令使用 `Invoke-Command` cmdlet `Start-Job` 在会话中运行命令。 作业中的此命令将获取系统事件日志中的所有事件。 生成的作业对象存储在变量中 `$j` 。
 
-第三个命令停止作业。
-它使用 Server01 **cmdlet 在上的** **PSSession** 中运行 **停止作业** 命令。
-由于作业对象存储在本地计算机上的变量 $j 中，因此该命令将使用 Using 作用域修饰符来将 $j 标识为局部变量。
+第三个命令停止作业。 它使用 `Invoke-Command` cmdlet 在 `Stop-Job` Server01 上的 **PSSession** 中运行命令。 由于作业对象存储在 `$j` 本地计算机上的变量中，因此该命令将使用 Using 作用域修饰符来标识 `$j` 为局部变量。
 有关 Using 作用域修饰符的详细信息，请参阅 [about_Remote_Variables](about/about_Remote_Variables.md)。
 
-命令完成后，作业将停止，$s 中的 **PSSession** 可供使用。
+命令完成后，作业将停止，中的 **PSSession** 可供 `$s` 使用。
 
 ### 示例2：停止后台作业
 
@@ -157,12 +144,9 @@ Stop-Job -InstanceId e3bbfed1-9c53-401a-a2c3-a8db34336adf
 
 这些命令显示了如何根据作业的实例 ID 来停止作业。
 
-第一个命令使用 Get-Job cmdlet 获取当前会话中的作业。
-该命令使用管道运算符 (|) 将作业发送到 Format-Table 命令，此命令显示每个作业的指定属性的表。
-该表包括每个作业的实例 ID。
-它使用计算属性来显示作业状态。
+第一个命令使用 `Get-Job` cmdlet 来获取当前会话中的作业。 该命令使用管道运算符 (`|`) 将作业发送到 `Format-Table` 命令，该命令显示每个作业的指定属性的表。 该表包括每个作业的实例 ID。 它使用计算属性来显示作业状态。
 
-第二个命令使用带有 *InstanceID* 参数的 **停止作业** 命令来停止所选作业。
+第二个命令使用 `Stop-Job` 带有 **InstanceID** 参数的命令停止选定的作业。
 
 ### 示例7：停止远程计算机上的作业
 
@@ -177,20 +161,16 @@ Id    Name    State      HasMoreData     Location         Command
 5     Job5    Stopped    True            user01-tablet    get-eventlog system
 ```
 
-此示例显示了如何使用 **Stop-Job** cmdlet 停止在远程计算机上运行的作业。
+此示例演示如何使用 `Stop-Job` cmdlet 停止在远程计算机上运行的作业。
 
-由于作业是使用 **Command** Cmdlet 的 *AsJob* 参数启动的，因此作业对象位于本地计算机上，即使作业运行在远程计算机上也是如此。
-因此，你可以使用本地 **停止作业** 命令来停止作业。
+由于作业是使用 cmdlet 的 **AsJob** 参数启动的，因此 `Invoke-Command` 作业对象位于本地计算机上，即使作业运行在远程计算机上也是如此。 因此，你可以使用本地 `Stop-Job` 命令来停止作业。
 
-第一个命令使用 **Invoke-Command** cmdlet 在 Server01 计算机上启动后台作业。
-该命令使用 *AsJob* 参数将远程命令作为后台作业运行。
+第一个命令使用 `Invoke-Command` cmdlet 在 Server01 计算机上启动后台作业。 该命令使用 **AsJob** 参数将远程命令作为后台作业运行。
 
-此命令返回一个作业对象，该对象是 **启动作业** cmdlet 返回的相同作业对象。
-该命令将作业对象保存在 $j 变量中。
+此命令返回一个作业对象，该对象是 cmdlet 返回的相同作业对象 `Start-Job` 。
+该命令将作业对象保存在 `$j` 变量中。
 
-第二个命令使用管道运算符将 $j 变量中的作业发送到 Stop-Job。
-该命令使用 *PassThru* 参数来指示 **Stop-Job** 返回作业对象。
-作业对象显示确认作业的状态为 "已停止"。
+第二个命令使用管道运算符将变量中的作业发送 `$j` 到 `Stop-Job` 。 该命令使用 **PassThru** 参数来指示 `Stop-Job` 返回作业对象。 作业对象显示确认作业的状态为 "已停止"。
 
 有关远程后台作业的详细信息，请参阅 about_Remote_Jobs。
 
@@ -198,13 +178,10 @@ Id    Name    State      HasMoreData     Location         Command
 
 ### -Filter
 
-指定条件的哈希表。
-此 cmdlet 将停止满足所有条件的作业。
+指定条件的哈希表。 此 cmdlet 将停止满足所有条件的作业。
 输入一个哈希表，其中的键为作业属性，其中的值为作业属性值。
 
-此参数仅适用于自定义作业类型，例如工作流作业和计划作业。
-它不适用于标准后台作业，如使用 **Start-Job** cmdlet 创建的作业。
-有关支持此参数的信息，请参阅作业类型的帮助主题。
+此参数仅适用于自定义作业类型，例如工作流作业和计划作业。 它不适用于标准后台作业，如使用 cmdlet 创建的作业 `Start-Job` 。 有关支持此参数的信息，请参阅作业类型的帮助主题。
 
 已在 Windows PowerShell 3.0 中引入了此参数。
 
@@ -222,13 +199,9 @@ Accept wildcard characters: False
 
 ### -Id
 
-指定此 cmdlet 停止的作业的 Id。
-默认值为当前会话中的所有作业。
+指定此 cmdlet 停止的作业的 Id。 默认值为当前会话中的所有作业。
 
-ID 是一个整数，用于唯一标识当前会话中的作业。
-它比实例 ID 更容易记住和键入，但它仅在当前会话中是唯一的。
-你可以键入一个或多个 Id （以逗号分隔）。
-若要查找作业的 ID，请键入 `Get-Job` 。
+ID 是一个整数，用于唯一标识当前会话中的作业。 它比实例 ID 更容易记住和键入，但它仅在当前会话中是唯一的。 你可以键入一个或多个 Id （以逗号分隔）。 若要查找作业的 ID，请键入 `Get-Job` 。
 
 ```yaml
 Type: System.Int32[]
@@ -244,11 +217,9 @@ Accept wildcard characters: False
 
 ### -InstanceId
 
-指定此 cmdlet 停止的作业的实例 Id。
-默认值为所有作业。
+指定此 cmdlet 停止的作业的实例 Id。 默认值为所有作业。
 
-实例 ID 是一个 GUID，用于在计算机上唯一标识作业。
-若要查找某个作业的实例 ID，请使用 Get-Job。
+实例 ID 是一个 GUID，用于在计算机上唯一标识作业。 若要查找作业的实例 ID，请使用 `Get-Job` 。
 
 ```yaml
 Type: System.Guid[]
@@ -264,10 +235,7 @@ Accept wildcard characters: False
 
 ### -Job
 
-指定此 cmdlet 停止的作业。
-请输入一个包含作业的变量，或一个可获取作业的命令。
-你还可以使用管道运算符将作业提交到 **停止作业** cmdlet。
-默认情况下， **停止作业** 将删除当前会话中启动的所有作业。
+指定此 cmdlet 停止的作业。 请输入一个包含作业的变量，或一个可获取作业的命令。 你还可以使用管道运算符将作业提交到 `Stop-Job` cmdlet。 默认情况下， `Stop-Job` 删除在当前会话中启动的所有作业。
 
 ```yaml
 Type: System.Management.Automation.Job[]
@@ -283,11 +251,9 @@ Accept wildcard characters: False
 
 ### -Name
 
-指定此 cmdlet 停止的作业的友好名称。
-以逗号分隔的列表形式输入作业名称，或使用通配符 (*) 来输入作业名称模式。
-默认情况下， **停止作业** 将停止在当前会话中创建的所有作业。
+指定此 cmdlet 停止的作业的友好名称。 以逗号分隔的列表形式输入作业名称，或使用通配符 (*) 来输入作业名称模式。 默认情况下， `Stop-Job` 停止在当前会话中创建的所有作业。
 
-由于不能保证友好名称是唯一的，因此在按名称停止作业时，请使用 *WhatIf* 和 *Confirm* 参数。
+由于不能保证友好名称是唯一的，因此在按名称停止作业时，请使用 **WhatIf** 和 **Confirm** 参数。
 
 ```yaml
 Type: System.String[]
@@ -303,8 +269,7 @@ Accept wildcard characters: True
 
 ### -PassThru
 
-返回一个代表你所处理的项目的对象。
-默认情况下，此 cmdlet 将不产生任何输出。
+返回一个代表你所处理的项目的对象。 默认情况下，此 cmdlet 将不产生任何输出。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -320,9 +285,7 @@ Accept wildcard characters: False
 
 ### -State
 
-指定作业状态。
-此 cmdlet 仅停止处于指定状态的作业。
-此参数的可接受值为：
+指定作业状态。 此 cmdlet 仅停止处于指定状态的作业。 此参数的可接受值为：
 
 - NotStarted
 - 正在运行
@@ -335,7 +298,7 @@ Accept wildcard characters: False
 - 正在暂停
 - 正在停止
 
-有关作业状态的详细信息，请参阅 MSDN 库中的 [JobState 枚举](https://msdn.microsoft.com/library/system.management.automation.jobstate) 。
+有关作业状态的详细信息，请参阅 [JobState 枚举](/dotnet/api/system.management.automation.jobstate)。
 
 ```yaml
 Type: System.Management.Automation.JobState
@@ -397,8 +360,7 @@ Accept wildcard characters: False
 
 ### PSRemotingJob （无）
 
-如果指定 *PassThru* 参数，则此 cmdlet 将返回一个作业对象。
-否则，此 cmdlet 将不生成任何输出。
+如果指定 **PassThru** 参数，则此 cmdlet 将返回一个作业对象。 否则，此 cmdlet 将不生成任何输出。
 
 ## 注释
 

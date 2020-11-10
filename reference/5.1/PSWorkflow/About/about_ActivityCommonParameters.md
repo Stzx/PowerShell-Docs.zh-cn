@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psworkflow/about/about_activitycommonparameters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_ActivityCommonParameters
-ms.openlocfilehash: b745bf17e4ae26156042ecdc25211830177bc692
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 93fdcdb9c5afe0b73e843baf2474ec7d3f96a6cf
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93199909"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387798"
 ---
 # <a name="about-activitycommonparameters"></a>关于 ActivityCommonParameters
 
@@ -150,7 +150,7 @@ WinRM 服务使用应用程序名称来选择为连接请求提供服务的侦�
 
 指定在连接到目标计算机时用于对用户的凭据进行身份验证的机制。 有效值为 Default、Basic、Credssp、Digest、Kerberos、Negotiate 和 NegotiateWithImplicitCredential。 默认值为 Default。 此活动通用参数也是工作流通用参数。
 
-有关此参数的值的信息，请参阅 MSDN 中 **System.Management.Automation.Runspaces.AuthenticationMechanism** 枚举的说明。
+有关此参数的值的信息，请参阅 PowerShell SDK 中的 **system.management.automation.runspaces.authenticationmechanism** 枚举的说明。
 
 > [!WARNING]
 > 在凭据安全服务提供程序 (CredSSP) 身份验证中，用户凭据传递到远程计算机中以进行验证，这种验证用于要求对多个资源（例如访问远程网络共享）进行验证的命令。 此机制增加了远程操作的安全风险。 如果远程计算机的安全受到威胁，则传递给该计算机的凭据可用于控制网络会话。
@@ -198,7 +198,7 @@ WinRM 服务使用应用程序名称来选择为连接请求提供服务的侦�
 <Transport>://<ComputerName>:<Port>/<ApplicationName>
 ```
 
-默认值是 `http://localhost:5985/WSMAN`。
+默认值为 `http://localhost:5985/WSMAN`。
 
 如果未指定 PSConnectionURI，则可以使用 PSUseSSL、PSComputerName、PSPort 和 PSApplicationName 参数来指定 PSConnectionURI 值。
 
