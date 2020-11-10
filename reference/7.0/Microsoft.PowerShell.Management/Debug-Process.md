@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/debug-process?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Debug-Process
-ms.openlocfilehash: 9d2b9ce8d9aa0a1e75c0af0f2ed57aca41ec7791
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 7a439cc3f15b319f5f56709260035ffa8fc03c12
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93196851"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391368"
 ---
 # Debug-Process
 
@@ -41,11 +41,10 @@ Debug-Process -InputObject <Process[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## DESCRIPTION
 
-**Debug-Process** cmdlet 将调试程序附加到在本地计算机上运行的一个或多个进程。
+`Debug-Process`Cmdlet 可将调试程序附加到本地计算机上的一个或多个正在运行的进程。
 可以通过进程名称或进程 ID (PID) 来指定进程，也可以将进程对象通过管道传送给此 cmdlet。
 
-此 cmdlet 将附加当前为该进程注册的调试程序。
-使用此 cmdlet 之前，请先验证调试程序是否已下载并正确配置。
+此 cmdlet 将附加当前为该进程注册的调试程序。 使用此 cmdlet 之前，请先验证调试程序是否已下载并正确配置。
 
 ## 示例
 
@@ -87,10 +86,9 @@ PS C:\> Debug-Process -Id 1132, 2028
 PS C:\> Get-Process "Windows PowerShell" | Debug-Process
 ```
 
-此命令将调试程序附加到计算机上的 PowerShell 进程。
-它使用 **get-help** cmdlet 获取计算机上的 PowerShell 进程，并使用管道运算符 (|) 将进程发送到 **Debug-Process** cmdlet。
+此命令将调试程序附加到计算机上的 PowerShell 进程。 它使用 `Get-Process` cmdlet 获取计算机上的 PowerShell 进程，并使用管道操作员 (`|`) 将进程发送到 `Debug-Process` cmdlet。
 
-若要指定特定的 PowerShell 进程，请使用 **Get-Process** 的 ID 参数。
+若要指定特定的 PowerShell 进程，请使用的 ID 参数 `Get-Process` 。
 
 ### 示例 6：将调试程序附加到本地计算机上的当前进程
 
@@ -100,10 +98,9 @@ PS C:\> $PID | Debug-Process
 
 此命令将调试程序附加到计算机上的当前 PowerShell 进程。
 
-该命令使用 $PID 自动变量，其中包含当前 PowerShell 进程的进程 ID。
-然后，它使用管道运算符 (|) 将进程 ID 发送给 **Debug-Process** cmdlet。
+该命令使用 `$PID` 自动变量，其中包含当前 PowerShell 进程的进程 ID。 然后，它使用管道运算符 (`|`) 将进程 ID 发送到 `Debug-Process` cmdlet。
 
-有关 $PID 自动变量的详细信息，请参阅 about_Automatic_Variables。
+有关自动变量的详细信息 `$PID` ，请参阅 about_Automatic_Variables。
 
 ### 示例7：将调试程序附加到使用 InputObject 参数的进程
 
@@ -114,17 +111,15 @@ PS C:\> Debug-Process -InputObject $P
 
 此命令将调试程序附加到本地计算机上的 PowerShell 进程。
 
-第一个命令使用 **get-help** cmdlet 来获取计算机上的 PowerShell 进程。
-它将生成的进程对象保存在名为 $P 的变量中。
+第一个命令使用 `Get-Process` cmdlet 来获取计算机上的 PowerShell 进程。 它将生成的进程对象保存在变量中 `$P` 。
 
-第二个命令使用  参数提交 $P 变量中的进程对象。
+第二个命令使用 cmdlet 的 **InputObject** 参数 `Debug-Process` 来提交变量中的进程对象 `$P` 。
 
 ## PARAMETERS
 
 ### -Id
 
-指定要调试的进程的进程 ID。
-Id  参数名为可选项。
+指定要调试的进程的进程 ID。 Id 参数名为可选项。
 
 要查找进程的进程 ID，请键入 `Get-Process`。
 
@@ -142,9 +137,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-指定表示要调试的进程的进程对象。
-输入一个包含进程对象的变量，或输入一个获取进程对象的命令（如 Get-Process cmdlet）。
-还可以将进程对象通过管道传送给此 cmdlet。
+指定表示要调试的进程的进程对象。 输入包含进程对象的变量或获取进程对象的命令（如 `Get-Process` cmdlet）。 还可以将进程对象通过管道传送给此 cmdlet。
 
 ```yaml
 Type: System.Diagnostics.Process[]
@@ -160,9 +153,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-指定要调试的进程的名称。
-如果存在多个同名进程，则此 cmdlet 会将调试程序附加到所有该名称的进程。
-*Name* 参数是可选的。
+指定要调试的进程的名称。 如果存在多个同名进程，则此 cmdlet 会将调试程序附加到所有该名称的进程。 **Name** 参数是可选的。
 
 ```yaml
 Type: System.String[]
@@ -194,8 +185,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-显示运行该 cmdlet 时会发生什么情况。
-此 cmdlet 未运行。
+显示运行该 cmdlet 时会发生什么情况。 此 cmdlet 未运行。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -227,7 +217,7 @@ Accept wildcard characters: False
 
 ## 注释
 
-* 此 cmdlet 使用 Windows Management Instrumentation (WMI) Win32_Process 类的 AttachDebugger 方法。 有关此方法的详细信息，请参阅 MSDN library 中的 [AttachDebugger 方法](https://go.microsoft.com/fwlink/?LinkId=143640) 。
+此 cmdlet 使用 Windows Management Instrumentation (WMI) Win32_Process 类的 AttachDebugger 方法。 有关此方法的详细信息，请参阅 MSDN library 中的 [AttachDebugger 方法](https://go.microsoft.com/fwlink/?LinkId=143640) 。
 
 ## 相关链接
 
