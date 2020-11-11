@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: f46b14e44c32ce31b4da1a14580fe03564bf9946
-ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
+ms.openlocfilehash: d94024926a8ff8c33df08b4a8b58e9f8b0430f9b
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91899262"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239878"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开放源代码行为准则
+
+> 更新时间：2020/11/02
 
 此项目采用了 [Microsoft 开放源代码行为准则](https://opensource.microsoft.com/codeofconduct/)。 有关详细信息，请参阅[行为准则常见问题](https://opensource.microsoft.com/codeofconduct/faq/)，或如果有任何其他问题或意见，请与 [opencode@microsoft.com](mailto:opencode@microsoft.com) 联系。
 

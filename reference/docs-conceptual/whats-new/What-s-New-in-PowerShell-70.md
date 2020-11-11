@@ -2,12 +2,12 @@
 title: PowerShell 7.0 中的新增功能
 description: PowerShell 7.0 中发布的新功能和更改
 ms.date: 03/04/2020
-ms.openlocfilehash: d52b536efd9d7a1f8e6b01a58952f08ca49016b1
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
+ms.openlocfilehash: 3a5a1aaa0bd9dd1e0df7d6f5e6021678ed21dce4
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162454"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355266"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0 中的新增功能
 
@@ -42,14 +42,14 @@ PowerShell 7 当前支持 x64 上的以下操作系统，包括：
 
 此外，PowerShell 7.0 支持 ARM32 和 ARM64 版的 Debian、Ubuntu 和 ARM64 Alpine Linux。
 
-查看首选操作系统 [Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7)、[macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7) 或 [Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7) 的安装说明。
+查看首选操作系统 [Windows](/powershell/scripting/install/installing-powershell-core-on-windows)、[macOS](/powershell/scripting/install/installing-powershell-core-on-macos) 或 [Linux](/powershell/scripting/install/installing-powershell-core-on-linux) 的安装说明。
 
 虽然没有得到正式支持，但社区还提供了 [Arch](https://aur.archlinux.org/packages/powershell/) 和 Kali Linux 的包。
 
 > [!NOTE]
-> Debian 10 和 CentOS 8 目前不支持 WinRM 远程处理。 有关设置基于 SSH 的远程处理的详细信息，请参阅[通过 SSH 进行 PowerShell 远程处理](/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7)。
+> Debian 10 和 CentOS 8 目前不支持 WinRM 远程处理。 有关设置基于 SSH 的远程处理的详细信息，请参阅[通过 SSH 进行 PowerShell 远程处理](/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core)。
 
-有关支持的操作系统和支持生命周期的最新信息，请参阅 [PowerShell 支持生命周期](/powershell/scripting/powershell-support-lifecycle?view=powershell-7)。
+有关支持的操作系统和支持生命周期的最新信息，请参阅 [PowerShell 支持生命周期](/powershell/scripting/powershell-support-lifecycle)。
 
 ## <a name="running-powershell-7"></a>运行 PowerShell 7
 
@@ -72,7 +72,7 @@ PowerShell 7 安装程序包会升级之前版本的 PowerShell Core 6.x：
 
 PowerShell 7.0 标记了转移到 .NET Core 3.1 的过程，从而大大改进了现有 Windows PowerShell 模块向后兼容性。 其中包括 Windows 上需要 GUI 功能（如 `Out-GridView` 和 `Show-Command`）的许多模块以及作为 Windows 的一部分提供的许多角色管理模块。
 
-对于 Windows，新开关参数 UseWindowsPowerShell 将添加到 `Import-Module`。 此开关会在 PowerShell 7 中创建一个代理模块，该模块使用本地 Windows PowerShell 进程隐式运行该模块中包含的任何 cmdlet。 有关 [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7) 的详细信息。
+对于 Windows，新开关参数 UseWindowsPowerShell 将添加到 `Import-Module`。 此开关会在 PowerShell 7 中创建一个代理模块，该模块使用本地 Windows PowerShell 进程隐式运行该模块中包含的任何 cmdlet。 有关 [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7&preserve-view=true) 的详细信息。
 
 有关哪些 Microsoft 模块适用于 PowerShell 7.0 的详细信息，请参阅[模块兼容性表](https://aka.ms/PSModuleCompat)。
 
@@ -102,7 +102,7 @@ Parallel 参数指定为每个输入日志名称并行运行的脚本块。
 
 使用 `$_` 变量来表示脚本块中的当前输入对象。 使用 `$using:` 范围将变量引用传递给正在运行的脚本块。
 
-有关 [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7) 的详细信息。
+有关 [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7&preserve-view=true) 的详细信息。
 
 ## <a name="ternary-operator"></a>三元运算符
 
@@ -126,7 +126,7 @@ $message = (Test-Path $path) ? "Path exists" : "Path not found"
 
 在此示例中，如果路径存在，则显示“路径存在”。 如果路径不存在，则显示“找不到路径”。
 
-有关[关于假设情况](/powershell/module/microsoft.powershell.core/about/about_if?view=powershell-7)的详细信息。
+有关[关于假设情况](/powershell/module/microsoft.powershell.core/about/about_if)的详细信息。
 
 ## <a name="pipeline-chain-operators"></a>管道链运算符
 
@@ -179,7 +179,7 @@ Write-Error 'Bad'
 Second
 ```
 
-有关[关于管道链运算符](/powershell/module/microsoft.powershell.core/about/about_pipeline_chain_operators?view=powershell-7)的详细信息。
+有关[关于管道链运算符](/powershell/module/microsoft.powershell.core/about/about_pipeline_chain_operators?view=powershell-7&preserve-view=true)的详细信息。
 
 ## <a name="null-coalescing-assignment-and-conditional-operators"></a>Null 合并运算符、赋值运算符和条件运算符
 
@@ -226,7 +226,7 @@ $todaysDate ??= (Get-Date).ToShortDateString()
 ### <a name="null-conditional-member-access-operators--and--experimental"></a>Null 条件成员访问运算符 ?. 和 ?[]（实验性）
 
 > [!NOTE]
-> 这是名为 PSNullConditionalOperators 的实验性功能。 了解[关于实验性功能](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7)的详细信息。
+> 这是名为 PSNullConditionalOperators 的实验性功能。 有关详细信息，请参阅[使用实验性功能](/powershell/scripting/learn/experimental-features)。
 
 仅当操作数的计算结果为非 null，null 条件运算符才允许对其操作数进程成员访问 `?.` 或元素访问 `?[]`；否则，将返回 null。
 
@@ -263,7 +263,7 @@ $a = $null
 ${a}?[0]
 ```
 
-有关 [About_Operators](/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7) 的详细信息。
+有关 [About_Operators](/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&preserve-view=true) 的详细信息。
 
 ## <a name="new-view-conciseview-and-cmdlet-get-error"></a>新视图 ConciseView 和 cmdlet Get-Error
 
@@ -311,7 +311,7 @@ $Error | Get-Error
 Get-Error -Newest 3 # Displays the lst three errors that occurred in the session
 ```
 
-有关 [Get-Error](/powershell/module/microsoft.powershell.utility/get-error?view=powershell-7) 的详细信息。
+有关 [Get-Error](/powershell/module/microsoft.powershell.utility/get-error?view=powershell-7&preserve-view=true) 的详细信息。
 
 ## <a name="new-version-notification"></a>新版本通知
 
@@ -346,12 +346,12 @@ $Env:POWERSHELL_UPDATECHECK = 'LTS'
 $Env:POWERSHELL_UPDATECHECK = 'Default'
 ```
 
-有关[关于更新通知](/powershell/module/microsoft.powershell.core/about/about_update_notifications?view=powershell-7)的详细信息。
+有关[关于更新通知](/powershell/module/microsoft.powershell.core/about/about_update_notifications)的详细信息。
 
 ## <a name="new-dsc-resource-support-with-invoke-dscresource-experimental"></a>使用 Invoke-DSCResource 的新 DSC 资源支持（实验性）
 
 > [!NOTE]
-> 这是名为 PSDesiredStateConfiguration.InvokeDscResource 的实验性功能。 了解[关于实验性功能](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7)的详细信息。
+> 这是名为 PSDesiredStateConfiguration.InvokeDscResource 的实验性功能。 有关详细信息，请参阅[使用实验性功能](/powershell/scripting/learn/experimental-features)。
 
 `Invoke-DscResource` cmdlet 运行指定的 PowerShell 所需状态配置 (DSC) 资源的方法。
 
@@ -366,7 +366,7 @@ Invoke-DscResource -Name WindowsProcess -Method Set -ModuleName PSDesiredStateCo
 }
 ```
 
-有关 [Invoke-DSCResource](/powershell/module/psdesiredstateconfiguration/invoke-dscresource?view=powershell-7) 的详细信息。
+有关 [Invoke-DSCResource](/powershell/module/psdesiredstateconfiguration/invoke-dscresource?view=powershell-7&preserve-view=true) 的详细信息。
 
 ## <a name="breaking-changes-and-improvements"></a>重大更改和改进
 

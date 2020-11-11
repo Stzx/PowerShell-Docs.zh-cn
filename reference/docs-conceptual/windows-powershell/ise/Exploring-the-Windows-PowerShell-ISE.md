@@ -2,30 +2,28 @@
 ms.date: 01/02/2020
 title: 探究 Windows PowerShell ISE
 description: 本文概述了 Windows PowerShell ISE 的功能
-ms.openlocfilehash: f389ac60da13141329d81baf08e9100b144022c3
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.topic: landing-page
+ms.custom: ISE-F1-page
+ms.openlocfilehash: 4ef3f471f11c2f1de818491a193fcf34201cb04a
+ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92663822"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93296359"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>探究 Windows PowerShell ISE
 
-可以使用 Windows PowerShell&reg; 集成脚本环境 (ISE) 来创建、运行及调试命令和脚本。 Windows PowerShell ISE 包含菜单栏、Windows PowerShell 选项卡、工具栏、脚本选项卡、脚本窗格、控制台窗格、状态栏、文字大小滑块和区分上下文的帮助。
-
-> [!NOTE]
-> 以 Windows PowerShell ISE 3.0 开头的命令和输出窗格已合并为单一的控制台窗格。
+可以使用 Windows PowerShell 集成脚本环境 (ISE) 来创建、运行及调试命令和脚本。 Windows PowerShell ISE 包含菜单栏、Windows PowerShell 选项卡、工具栏、脚本选项卡、脚本窗格、控制台窗格、状态栏、文字大小滑块和区分上下文的帮助。
 
 ## <a name="menu-bar"></a>菜单栏
 
 菜单栏包含“ **文件** ”、“ **编辑** ”、“ **视图** ”、“ **工具** ”、“ **调试** ”、“ **加载项** ”和“ **帮助** ”菜单。 菜单上的按钮允许执行与编写和运行脚本以及在 Windows PowerShell ISE 中运行命令相关的任务。 此外，可以运行使用 [ISE 对象模型层次结构](object-model/The-ISE-Object-Model-Hierarchy.md)的脚本，将[加载项工具](object-model/The-ISEAddOnTool-Object.md)置于菜单栏中。
 
-> [!NOTE]
-> 在 Windows PowerShell ISE 2.0 中，不存在“ **工具** ”和“ **加载项** ”菜单。
-
 ## <a name="windows-powershell-tabs"></a>Windows PowerShell 选项卡
 
 Windows PowerShell 选项卡是 Windows PowerShell 脚本可在其中运行的环境。 可以在 Windows PowerShell ISE 中打开新的 Windows PowerShell 选项卡以在本地计算机或远程计算机上创建单独的环境。 最多可同时打开八个 PowerShell 选项卡。
+
+有关详细信息，请参阅[如何在 Windows PowerShell ISE 中创建 PowerShell 选项卡](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)。
 
 ## <a name="toolbar"></a>工具栏
 
@@ -59,15 +57,17 @@ Windows PowerShell 选项卡是 Windows PowerShell 脚本可在其中运行的�
 
 ## <a name="script-pane"></a>脚本窗格
 
-允许创建和运行脚本。 可以在脚本窗格中打开、编辑和运行现有脚本。
+允许创建和运行脚本。 可以在脚本窗格中打开、编辑和运行现有脚本。 有关详细信息，请参阅[如何在 Windows PowerShell ISE 中编写和运行脚本](How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)。
 
-## <a name="output-pane"></a>输出窗格
+## <a name="console-pane"></a>控制台窗格
 
-显示已运行的命令和脚本的结果。 还可以在输出窗格中复制和清除内容。
+显示已运行的命令和脚本的结果。 可在控制台窗格中运行命令。 你也可以在控制台窗格中复制和清除内容。
 
-## <a name="command-pane"></a>命令窗格
+有关详细信息，请参阅以下文章：
 
-允许编写命令。 可以在命令窗格中运行单行命令或多行命令。 按 <kbd>SHIFT</kbd>+<kbd>ENTER</kbd> 以输入多行命令的每一行，并在输入最后一行后按 <kbd>ENTER</kbd> 以执行该多行命令。 命令窗格顶部显示的提示将展示当前工作目录的路径。
+- [如何在 Windows PowerShell ISE 中使用控制台窗格](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
+- [如何在 Windows PowerShell ISE 中调试脚本](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
+- [如何在脚本窗格和控制台窗格中使用 Tab 自动补全](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
 
 ## <a name="status-bar"></a>状态栏
 
@@ -79,9 +79,11 @@ Windows PowerShell 选项卡是 Windows PowerShell 脚本可在其中运行的�
 
 ## <a name="help"></a>帮助
 
-可在 Web 上的 TechNet 库中找到有关 Windows PowerShell ISE 的帮助。 可以通过单击“帮助”菜单上的“Windows PowerShell ISE 帮助”打开帮助，或通过在任意位置（光标在脚本窗格或控制台窗格中的 cmdlet 名称上时除外）按 <kbd>F1</kbd> 键打开帮助。
-从“帮助”菜单还可以运行 `Update-Help` cmdlet 和显示命令窗口，该命令窗口可显示某个 cmdlet 的所有参数并允许你在易于使用的窗体中填写参数，从而帮助你构造命令。
+可在 Web 上的 TechNet 库中找到有关 Windows PowerShell ISE 的帮助。 可以通过单击“帮助”菜单上的“Windows PowerShell ISE 帮助”打开帮助，或通过在任意位置（光标在脚本窗格或控制台窗格中的 cmdlet 名称上时除外）按 <kbd>F1</kbd> 键打开帮助。 从“帮助”菜单还可以运行 `Update-Help` cmdlet 和显示命令窗口，该命令窗口可显示某个 cmdlet 的所有参数并允许你在易于使用的窗体中填写参数，从而帮助你构造命令。
 
 ## <a name="see-also"></a>另请参阅
 
 - [Windows PowerShell ISE 简介](Introducing-the-Windows-PowerShell-ISE.md)
+- [如何在 Windows PowerShell ISE 中使用配置文件](How-to-Use-Profiles-in-Windows-PowerShell-ISE.md)
+- [Windows PowerShell ISE 中的辅助功能](Accessibility-in-Windows-PowerShell-ISE.md)
+- [Windows PowerShell ISE 的键盘快捷方式](Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.md)

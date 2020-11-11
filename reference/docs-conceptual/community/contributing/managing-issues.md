@@ -1,14 +1,14 @@
 ---
 title: 如何管理问题
-description: 本文介绍 PowerShell-Docs 团队如何管理拉取请求。
+description: 本文介绍 PowerShell-Docs 团队如何管理问题。
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 018200f1a9384f1ea956c9b27a7605db21f2da9e
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 56f0ea5b4c5c700db8fdd0b16e3ce1c4040a43dc
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692527"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354586"
 ---
 # <a name="how-we-manage-issues"></a>如何管理问题
 

@@ -3,22 +3,23 @@ ms.date: 02/03/2020
 keywords: powershell, 核心
 title: 模块和 cmdlet 发行历史记录
 description: 本文列出了 PowerShell 的各种版本包含的模块和 cmdlet。
-ms.openlocfilehash: cefd84c5d3785d19670ee649f5af951d5975912c
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 43ea0cde106e9f0aafe9c18726589f931724b35f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501654"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342852"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>模块和 cmdlet 发行历史记录
 
 本文列出了 PowerShell 的各种版本包含的模块和 cmdlet。 这是发行说明中信息的摘要。 如需了解更多详情，请参阅发行说明：
 
-- [PowerShell Core 6.2 的最近更新](what-s-new-in-powershell-core-62.md)
-- [PowerShell Core 6.1 的最近更新](what-s-new-in-powershell-core-61.md)
-- [PowerShell Core 6.0 的最近更新](what-s-new-in-powershell-core-60.md)
-- [PowerShell Core 6.0 的重大变更](breaking-changes-ps6.md)
-- [PowerShell Core 6.0 的已知问题](known-issues-ps6.md)
+- [PowerShell 7.0 中的新增功能](what-s-new-in-powershell-70.md)
+- [PowerShell 6.2 中的新增功能](what-s-new-in-powershell-core-62.md)
+- [PowerShell 6.1 中的新增功能](what-s-new-in-powershell-core-61.md)
+- [PowerShell 6.0 中的新增功能](what-s-new-in-powershell-core-60.md)
+- [PowerShell 6.0 的中断性变更](breaking-changes-ps6.md)
+- [PowerShell 6.0 的已知问题](known-issues-ps6.md)
 
 本文正在编写中。 请帮助我们不断更新此信息。
 
@@ -216,7 +217,7 @@ ms.locfileid: "92501654"
 | Enable-ComputerRestore        | &check; |         |         |         | 仅限 Windows                     |
 | Get-ChildItem                 | &check; | &check; | &check; | &check; |                                  |
 | Get-Clipboard                 | &check; |         | &check; | &check; | 在 macOS 上不受支持           |
-| Get-ComputerInfo              | &check; | &check; | &check; | &check; |                                  |
+| Get-ComputerInfo              | &check; | &check; | &check; | &check; | 仅限 Windows                     |
 | Get-ComputerRestorePoint      | &check; |         |         |         | 仅限 Windows                     |
 | Get-Content                   | &check; | &check; | &check; | &check; |                                  |
 | Get-ControlPanelItem          | &check; |         |         |         | 仅限 Windows                     |
@@ -230,7 +231,7 @@ ms.locfileid: "92501654"
 | Get-PSDrive                   | &check; | &check; | &check; | &check; |                                  |
 | Get-PSProvider                | &check; | &check; | &check; | &check; |                                  |
 | Get-Service                   | &check; | &check; | &check; | &check; | 仅限 Windows                     |
-| Get-TimeZone                  | &check; | &check; | &check; | &check; |                                  |
+| Get-TimeZone                  | &check; | &check; | &check; | &check; | 仅限 Windows                     |
 | Get-Transaction               | &check; |         |         |         | 仅限 Windows                     |
 | Get-WmiObject                 | &check; |         |         |         | 仅限 Windows                     |
 | Invoke-Item                   | &check; | &check; | &check; | &check; |                                  |
@@ -255,7 +256,7 @@ ms.locfileid: "92501654"
 | Remove-PSDrive                | &check; | &check; | &check; | &check; |                                  |
 | Remove-Service                |         | &check; | &check; | &check; | 仅限 Windows                     |
 | Remove-WmiObject              | &check; |         |         |         | 仅限 Windows                     |
-| Rename-Computer               | &check; | &check; | &check; | &check; |                                  |
+| Rename-Computer               | &check; | &check; | &check; | &check; | 仅限 Windows                     |
 | Rename-Item                   | &check; | &check; | &check; | &check; |                                  |
 | Rename-ItemProperty           | &check; | &check; | &check; | &check; |                                  |
 | Reset-ComputerMachinePassword | &check; |         |         |         | 仅限 Windows                     |
@@ -270,7 +271,7 @@ ms.locfileid: "92501654"
 | Set-ItemProperty              | &check; | &check; | &check; | &check; |                                  |
 | Set-Location                  | &check; | &check; | &check; | &check; |                                  |
 | Set-Service                   | &check; | &check; | &check; | &check; | 仅限 Windows                     |
-| Set-TimeZone                  | &check; | &check; | &check; | &check; |                                  |
+| Set-TimeZone                  | &check; | &check; | &check; | &check; | 仅限 Windows                     |
 | Set-WmiInstance               | &check; |         |         |         | 仅限 Windows                     |
 | Show-ControlPanelItem         | &check; |         |         |         | 仅限 Windows                     |
 | Show-EventLog                 | &check; |         |         |         | 仅限 Windows                     |
@@ -334,7 +335,7 @@ ms.locfileid: "92501654"
 | ConvertFrom-Csv           | &check; | &check; | &check; | &check; |                                           |
 | ConvertFrom-Json          | &check; | &check; | &check; | &check; |                                           |
 | ConvertFrom-Markdown      |         |   6.1   | &check; | &check; |                                           |
-| ConvertFrom-SddlString    | &check; | &check; | &check; | &check; |                                           |
+| ConvertFrom-SddlString    | &check; | &check; | &check; | &check; | 仅限 Windows                              |
 | ConvertFrom-String        | &check; |         |         |         |                                           |
 | ConvertFrom-StringData    | &check; | &check; | &check; | &check; |                                           |
 | Convert-String            | &check; |         |         |         |                                           |
@@ -379,7 +380,7 @@ ms.locfileid: "92501654"
 | Get-Unique                | &check; | &check; | &check; | &check; |                                           |
 | Get-Uptime                |         | &check; | &check; | &check; |                                           |
 | Get-Variable              | &check; | &check; | &check; | &check; |                                           |
-| Get-Verb                  |         | &check; | &check; | &check; |                                           |
+| Get-Verb                  |         | &check; | &check; | &check; | 已从 Microsoft.PowerShelll.Core 移动     |
 | Group-Object              | &check; | &check; | &check; | &check; |                                           |
 | Import-Alias              | &check; | &check; | &check; | &check; |                                           |
 | Import-Clixml             | &check; | &check; | &check; | &check; |                                           |
@@ -402,7 +403,7 @@ ms.locfileid: "92501654"
 | New-Variable              | &check; | &check; | &check; | &check; |                                           |
 | Out-File                  | &check; | &check; | &check; | &check; |                                           |
 | Out-GridView              | &check; |         | &check; | &check; | 仅限 Windows                              |
-| Out-printer               | &check; |         | &check; | &check; |                                           |
+| Out-printer               | &check; |         | &check; | &check; | 仅限 Windows                              |
 | Out-String                | &check; | &check; | &check; | &check; |                                           |
 | Read-Host                 | &check; | &check; | &check; | &check; |                                           |
 | Register-EngineEvent      | &check; | &check; | &check; | &check; | Linux/macOS 上没有可用的事件源 |
@@ -422,7 +423,7 @@ ms.locfileid: "92501654"
 | Set-PSBreakpoint          | &check; | &check; | &check; | &check; |                                           |
 | Set-TraceSource           | &check; | &check; | &check; | &check; |                                           |
 | Set-Variable              | &check; | &check; | &check; | &check; |                                           |
-| Show-Command              | &check; |         | &check; | &check; |                                           |
+| Show-Command              | &check; |         | &check; | &check; | 仅限 Windows                              |
 | Show-Markdown             |         |   6.1   | &check; | &check; |                                           |
 | Sort-Object               | &check; | &check; | &check; | &check; |                                           |
 | Start-Sleep               | &check; | &check; | &check; | &check; |                                           |

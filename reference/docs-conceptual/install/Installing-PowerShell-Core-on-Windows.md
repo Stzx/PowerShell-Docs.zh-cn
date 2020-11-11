@@ -2,12 +2,12 @@
 title: 在 Windows 上安装 PowerShell
 description: 介绍如何在 Windows 上安装 PowerShell
 ms.date: 10/30/2020
-ms.openlocfilehash: 1b341b496cef34a2a98afeac9d24f0a51e8dbda0
-ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
+ms.openlocfilehash: 825c9066d0a4e4734b9255514520b32f0876ecea
+ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93142780"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93296382"
 ---
 # <a name="installing-powershell-on-windows"></a>在 Windows 上安装 PowerShell
 
@@ -24,7 +24,7 @@ Windows 7 SP1、Server 2008 R2 及更高版本支持最新版 PowerShell。
 
 ## <a name="download-the-installer-package"></a>下载安装程序包
 
-若要在 Windows 上安装 PowerShell，请从 GitHub[“发布”][releases]页下载安装包。 向下滚动到“版本”页的“资产”  部分。 由于“资产”  部分可能处于折叠状态，因此可能需要单击展开它。
+若要在 Windows 上安装 PowerShell，请从 GitHub 下载[最新][]安装包。 你也可以在[版本][]页上找到最新的预览版。 向下滚动到“版本”页的“资产”  部分。 由于“资产”  部分可能处于折叠状态，因此可能需要单击展开它。
 
 ## <a name="installing-the-msi-package"></a><a id="msi" />安装 MSI 包
 
@@ -83,7 +83,7 @@ msiexec.exe /package PowerShell-7.0.3-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_ME
 > [!NOTE]
 > 目前并未正式支持 MSIX 包。 我们将继续构建此包，但仅会将其用于内部测试。
 
-要在 Windows 10 客户端上手动安装 MSIX 包，请从 GitHub [版本][releases]页面下载 MSIX 包。 向下滚动到要安装的版本的“资产”部分。  “资产”部分可能处于折叠状态，因此可能需要单击使其展开。
+要在 Windows 10 客户端上手动安装 MSIX 包，请从 GitHub [版本][版本]页下载 MSIX 包。 向下滚动到要安装的版本的“资产”部分。  “资产”部分可能处于折叠状态，因此可能需要单击使其展开。
 
 MSIX 文件类似于 - `PowerShell-<version>-win-<os-arch>.msix`
 
@@ -95,7 +95,7 @@ Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />安装 ZIP 包
 
-提供有 PowerShell 二进制 ZIP 存档，从而支持高级部署方案。 从[版本][releases]页下载以下 ZIP 存档之一。
+提供有 PowerShell 二进制 ZIP 存档，从而支持高级部署方案。 从[版本][版本]页下载以下 ZIP 存档之一。
 
 - PowerShell-7.0.3-win-x64.zip
 - PowerShell-7.0.3-win-x86.zip
@@ -267,7 +267,8 @@ Microsoft 支持本文档中的安装方法。 其他源可能会提供其他安
 
 <!-- link references -->
 
-[releases]: https://github.com/PowerShell/PowerShell/releases
+[版本]: https://github.com/PowerShell/PowerShell/releases
+[latest]: https://github.com/PowerShell/PowerShell/releases/latest
 [ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
