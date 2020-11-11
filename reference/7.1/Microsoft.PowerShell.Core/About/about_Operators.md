@@ -6,12 +6,12 @@ ms.date: 10/28/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: a917afc1499af96f834496c22e5634826c5aeb73
-ms.sourcegitcommit: c1e4739f5d52282fb05a8cff92b0f5d10e2edac1
+ms.openlocfilehash: a9c589aacfc64495ece2d461687d97f95d885353
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93200753"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483190"
 ---
 # <a name="about-operators"></a>关于运算符
 
@@ -85,7 +85,7 @@ PowerShell 支持多种类型的运算符来帮助您操作值。
 
 #### <a name="grouping-operator--"></a>分组运算符 `( )`
 
-与其他语言一样， `(...)` 用于重写表达式中的运算符优先级。 例如：`(1 + 2) / 3`
+与其他语言一样， `(...)` 用于重写表达式中的运算符优先级。 例如： `(1 + 2) / 3`
 
 但是，在 PowerShell 中还有其他行为。
 
@@ -117,6 +117,11 @@ Folder list: Program Files, Program Files (x86), Users, Windows
 ```powershell
 @(Get-CimInstance win32_logicalDisk)
 ```
+
+#### <a name="hash-table-literal-syntax-"></a>哈希表文本语法 `@{}`
+
+与 array 子表达式类似，此语法用于声明哈希表。
+有关详细信息，请参阅 [about_Hash_Tables](about_Hash_Tables.md)。
 
 #### <a name="call-operator-"></a>Call 运算符 `&`
 
@@ -535,6 +540,11 @@ ${a}?[0]
 $a = $null
 ${a}?[0]
 ```
+
+> [!NOTE]
+> 由于 PowerShell 允许 `?` 作为变量名称的一部分，因此使用这些运算符需要变量名称的形式规范。 因此，使用 `{}` 将变量名称括起来（如 `${a}`）或 `?` 是变量名称 `${a?}` 的一部分时需要形式规范。
+>
+> 的变量名语法 `${<name>}` 不应与 `$()` 子表达式运算符混淆。 有关详细信息，请参阅 [about_Variables](about_Variables.md#Variable-names-that-include-special-characters)的变量名称部分。
 
 ## <a name="see-also"></a>另请参阅
 
