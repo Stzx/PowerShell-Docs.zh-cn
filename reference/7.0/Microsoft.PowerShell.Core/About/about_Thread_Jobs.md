@@ -2,16 +2,16 @@
 description: 提供有关基于 PowerShell 线程的作业的信息。 线程作业是一种后台作业，它在当前会话进程中的单独线程中运行命令或表达式。
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/16/2020
+ms.date: 11/11/2020
 online version: 1.0.0
 schema: 2.0.0
 title: about_Thread_Jobs
-ms.openlocfilehash: 973d0ddf18b63cd7462817cf68f7c5d7466f4724
-ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
+ms.openlocfilehash: ba6251a195d3efdebd427b3f705386336b069211
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "93200591"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524631"
 ---
 # <a name="about-thread-jobs"></a>关于线程作业
 
@@ -21,31 +21,40 @@ ms.locfileid: "93200591"
 
 ## <a name="long-description"></a>长说明
 
-本文介绍如何在本地计算机上的 PowerShell 中运行线程作业。
-有关在本地计算机上运行后台作业的信息，请参阅 [about_Jobs](about_Jobs.md)。
+PowerShell 通过作业并发运行命令和脚本。 PowerShell 提供三种作业类型来支持并发。
 
-使用 cmdlet 启动线程作业 `Start-ThreadJob` 。 此 cmdlet 在 PowerShell 随附的 **ThreadJob** 模块中提供。
-`Start-ThreadJob` 返回一个作业对象，该对象封装正在运行的命令或脚本，可与所有 PowerShell 作业操作 cmdlet 一起使用。
+- `RemoteJob` -命令和脚本在远程会话中运行。 有关信息，请参阅 [about_Remote_Jobs](about_Remote_Jobs.md)。
+- `BackgroundJob` -命令和脚本在本地计算机上的单独进程中运行。 有关详细信息，请参阅 [about_Jobs](about_Jobs.md)。
+- `PSTaskJob` 或 `ThreadJob` -命令和脚本在本地计算机上的同一进程内的单独线程中运行。
 
-## <a name="the-job-cmdlets"></a>作业 cmdlet
+基于线程的作业不像远程和后台作业那样可靠，因为它们在不同线程上的同一进程中运行。 如果一个作业发生了导致进程崩溃的严重错误，则会终止该进程中的所有其他作业。
 
-|Cmdlet           |说明                                            |
-|-----------------|-------------------------------------------------------|
-|`Start-ThreadJob`|在本地计算机上启动线程作业。               |
-|`Get-Job`        |获取在当前会话中启动的作业。|
-|`Receive-Job`    |获取作业的结果。                              |
-|`Stop-Job`       |停止正在运行的作业。                                   |
-|`Wait-Job`       |禁止显示命令提示符，直到其中一个或所有作业都为|
-|                 |完成.                                              |
-|`Remove-Job`     |删除作业。                                         |
+但是，基于线程的作业需要更少的开销。 它们不使用远程层或序列化。 结果对象作为对当前会话中活动对象的引用返回。 如果没有此开销，基于线程的作业运行速度更快，使用的资源比其他作业类型少。
 
-## <a name="how-to-start-a-thread-job-on-the-local-computer"></a>如何在本地计算机上启动线程作业
+> [!IMPORTANT]
+> 创建作业的父会话还会监视作业状态和收集管道数据。 作业到达完成状态后，父进程终止了作业子进程。 如果终止了父会话，则所有正在运行的子作业都将与其子进程一起终止。
 
-若要在本地计算机上启动线程作业，请使用 `Start-ThreadJob` cmdlet。
+可通过两种方法解决此问题：
 
-若要编写 `Start-ThreadJob` 命令，请将该命令或脚本括在大括号中， (`{ }`) 。
+1. 用于 `Invoke-Command` 创建在断开连接的会话中运行的作业。 有关详细信息，请参阅 [about_Remote_Jobs](about_Remote_Jobs.md)。
+1. 使用 `Start-Process` 创建新进程，而不是作业。 有关详细信息，请参阅 [开始处理](xref:Microsoft.PowerShell.Management.Start-Process)。
 
-下面的命令启动在 `Get-Process` 本地计算机上运行命令的线程作业。
+## <a name="how-to-start-and-manage-thread-based-jobs"></a>如何启动和管理基于线程的作业
+
+可以通过两种方法启动基于线程的作业：
+
+- `Start-ThreadJob` -从 **ThreadJob** 模块
+- `ForEach-Object -Parallel -AsJob` -已在 PowerShell 7.0 中添加并行功能
+
+使用 [about_Jobs](about_Jobs.md)中所述的相同 **作业** cmdlet 来管理基于线程的作业。
+
+### <a name="using-start-threadjob"></a>使用 `Start-ThreadJob`
+
+**ThreadJob** 模块首次随附于 PowerShell 6。 还可以从 Windows PowerShell 5.1 PowerShell 库安装。
+
+若要在本地计算机上启动线程作业，请使用 `Start-ThreadJob` 带有括在大括号中的命令或脚本的 cmdlet (`{ }`) 。
+
+下面的示例启动一个 `Get-Process` 在本地计算机上运行命令的线程作业。
 
 ```powershell
 Start-ThreadJob -ScriptBlock { Get-Process }
@@ -53,7 +62,11 @@ Start-ThreadJob -ScriptBlock { Get-Process }
 
 该 `Start-ThreadJob` 命令将返回一个 `ThreadJob` 对象，该对象表示正在运行的作业。 作业对象包含有关作业的有用信息，包括作业的当前运行状态。 它在生成结果时收集作业的结果。
 
-若要将 `ForEach-Object -Parallel` 命令、管道数据写入命令，并将该命令或脚本括在大括号中， (`{}`) 。 使用 `-AsJob` 参数开关，以便返回一个作业对象。
+### <a name="using-foreach-object--parallel--asjob"></a>使用 `ForEach-Object -Parallel -AsJob`
+
+PowerShell 7.0 向 cmdlet 添加了一个新参数集 `ForEach-Object` 。 新参数允许你将并行线程中的脚本块作为 PowerShell 作业运行。
+
+可以通过管道将数据传递给 `ForEach-Object -Parallel` 。 数据将传递到并行运行的脚本块。 `-AsJob`参数为每个并行线程创建作业对象。
 
 下面的命令启动一个作业，该作业包含向命令传递的每个输入值的子作业。 每个子作业都将 `Write-Output` 使用一个管道输入值作为参数来运行该命令。
 
@@ -91,26 +104,6 @@ Start-ThreadJob -ScriptBlock { Get-Process } | Wait-Job | Receive-Job
 
 由于每个子作业都是并行运行的，因此不保证生成的结果的顺序。
 
-## <a name="powershell-concurrency-and-jobs"></a>PowerShell 并发和作业
-
-PowerShell 并发运行命令，并通过作业编写脚本。 PowerShell 提供了三个基于作业的解决方案来支持并发。
-
-|作业            |说明                                                  |
-|---------------|-------------------------------------------------------------|
-|`RemoteJob`    |命令和脚本在远程计算机上运行。                 |
-|`BackgroundJob`|命令和脚本在本地的单独进程中运行    |
-|               |虚拟 CPU。                                                     |
-|`ThreadJob`    |命令和脚本在同一内的单独线程中运行  |
-|               |在本地计算机上进行处理。                                |
-
-每种类型的作业都有其优点和缺点。 在单独的计算机上或在单独的进程中远程运行脚本具有很好的隔离。 任何错误不会影响其他正在运行的作业或启动该作业的客户端。 但远程处理层增加了开销，包括对象序列化。 所有传递到远程会话的对象都必须进行序列化，然后在客户端与目标会话之间传递时进行反序列化。 对于大型复杂数据对象，序列化操作可以使用很多计算资源和内存资源。
-
-## <a name="powershell-thread-based-jobs"></a>基于 PowerShell 线程的作业
-
-基于线程的作业不像远程和后台作业那样可靠，因为它们在不同线程上的同一进程中运行。 如果一个作业发生了导致进程崩溃的严重错误，则该进程中的所有其他作业也会失败。
-
-但是，基于线程的作业的开销更少。 它们不需要使用远程层或序列化。 结果是基于线程的作业的运行速度要快得多，且使用的资源比其他作业类型要少得多。
-
 ## <a name="thread-job-performance"></a>线程作业性能
 
 与其他类型的作业相比，线程作业的权重更快且更轻。 但与作业正在进行的工作相比，它们的开销可能会很大。
@@ -127,23 +120,39 @@ PowerShell 在会话中运行命令和脚本。 会话中一次只能运行一�
 (Measure-Command {
     1..1000 | ForEach { Start-ThreadJob { Write-Output "Hello $using:_" } } | Receive-Job -Wait
 }).TotalMilliseconds
-10457.962
-
+36860.8226
 
 (Measure-Command {
     1..1000 | ForEach-Object { "Hello: $_" }
 }).TotalMilliseconds
-24.9277
+7.1975
 ```
 
-上面的第一个示例显示了一个 foreach 循环，该循环创建1000线程作业来编写简单的字符串。 由于作业开销，需要超过33秒钟才能完成。
+上面的第一个示例显示了一个 foreach 循环，该循环创建1000线程作业来编写简单的字符串。 由于作业开销，需要超过36秒钟才能完成。
 
-第二个示例运行 `ForEach` cmdlet 来执行相同的1000操作，并按顺序执行每个字符串写入，无需任何作业开销。 它只会在25毫秒内完成。
+第二个示例运行 `ForEach` cmdlet 来执行相同的1000操作。
+这次 `ForEach-Object` 在单个线程上按顺序运行，无需任何作业开销。 它只会在7毫秒内完成。
+
+在以下示例中，最多可为10个单独的系统日志收集5000个条目。 由于脚本涉及到读取多个日志，因此有必要并行执行操作。
 
 ```powershell
 $logNames.count
 10
 
+Measure-Command {
+    $logs = $logNames | ForEach-Object {
+        Get-WinEvent -LogName $_ -MaxEvents 5000 2>$null
+    }
+}
+
+TotalMilliseconds : 252398.4321 (4 minutes 12 seconds)
+$logs.Count
+50000
+```
+
+脚本在并行运行作业的一半时间内完成。
+
+```powershell
 Measure-Command {
     $logs = $logNames | ForEach {
         Start-ThreadJob {
@@ -157,23 +166,9 @@ $logs.Count
 50000
 ```
 
-在上面的示例中，最多可以为10个单独的系统日志收集5000个条目。 由于脚本涉及到读取多个日志，因此有必要并行执行操作。 并且作业的完成时间比脚本按顺序运行的时间快两倍。
-
-```powershell
-Measure-Command {
-    $logs = $logNames | ForEach-Object {
-        Get-WinEvent -LogName $_ -MaxEvents 5000 2>$null
-    }
-}
-
-TotalMilliseconds : 252398.4321 (4 minutes 12 seconds)
-$logs.Count
-50000
-```
-
 ## <a name="thread-jobs-and-variables"></a>线程作业和变量
 
-变量以各种方式传递到线程作业中。
+可以通过多种方法将值传递到基于线程的作业中。
 
 `Start-ThreadJob` 可以接受通过管道传递给脚本块的、通过关键字传递到脚本块的变量， `$using` 也可以通过 **ArgumentList** 参数传入。
 
@@ -186,9 +181,9 @@ Start-ThreadJob { Write-Output $using:msg } | Wait-Job | Receive-Job
 
 Start-ThreadJob { param ([string] $message) Write-Output $message } -ArgumentList @($msg) |
   Wait-Job | Receive-Job
+```
 
-`ForEach-Object -Parallel` accepts piped in variables, and variables passed
-directly to the script block via the `$using` keyword.
+`ForEach-Object -Parallel` 接受通过关键字直接传递到脚本块的变量和变量 `$using` 。
 
 ```powershell
 $msg = "Hello"
@@ -199,6 +194,8 @@ $msg | ForEach-Object -Parallel { Write-Output $_ } -AsJob | Wait-Job | Receive-
 ```
 
 由于线程作业在同一进程中运行，因此必须仔细对待传入作业的任何变量引用类型。 如果它不是线程安全对象，则绝不应将其分配给，并且永远不应在其上调用方法和属性。
+
+下面的示例将一个线程安全的 .NET `ConcurrentDictionary` 对象传递给所有子作业，以收集唯一命名的进程对象。 由于它是线程安全对象，因此可以安全地使用该对象，同时在进程中同时运行作业。
 
 ```powershell
 $threadSafeDictionary = [System.Collections.Concurrent.ConcurrentDictionary[string,object]]::new()
@@ -220,8 +217,6 @@ NPM(K)  PM(M)   WS(M) CPU(s)    Id SI ProcessName
 ------  -----   ----- ------    -- -- -----------
   112  108.25  124.43  69.75 16272  1 pwsh
 ```
-
-上面的示例将一个线程安全的 dotNet `ConcurrentDictionary` 对象传递给所有子作业，以收集唯一命名的进程对象。 由于它是线程安全对象，因此可以安全地使用该对象，同时在进程中同时运行作业。
 
 ## <a name="see-also"></a>另请参阅
 

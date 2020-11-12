@@ -2,20 +2,20 @@
 description: PSModulePath 环境变量包含一个文件夹位置列表，将在其中进行搜索以查找模块和资源。
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 04/13/2020
+ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_PSModulePath?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PSModulePath
-ms.openlocfilehash: 58aabc4f4821ce41782d3b9837eb67f19f6a07a9
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 580c7a1d61e481448e2f49f62fb7d089922e72b5
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93199941"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524784"
 ---
 # <a name="about-psmodulepath"></a>关于 PSModulePath
 
-`$env:PSModulePath`环境变量包含一个文件夹位置列表，将在其中进行搜索以查找模块和资源。
+`$env:PSModulePath`环境变量包含一个文件夹位置列表，将在其中进行搜索以查找模块和资源。 PowerShell 会以递归方式在每个文件夹中搜索模块 (`.psd1` 或 `.psm1`) 文件。
 
 默认情况下，分配到的有效位置 `$env:PSModulePath` 为：
 
@@ -131,8 +131,22 @@ PowerShell Core 6 将覆盖 `$env:PSModulePath` 。 未进行任何更改。
 
 PowerShell 7 启动将按原样继续，并添加 PowerShell Core 6 添加的继承路径。 由于 PS7 特定的路径带有前缀，因此不存在功能问题。
 
+## <a name="module-search-behavior"></a>模块搜索行为
+
+PowerShell 会以递归方式搜索 **PSModulePath** 中的每个文件夹 (`.psd1` 或 `.psm1`) 文件。 此搜索模式允许在不同的文件夹中安装相同模块的多个版本。 例如：
+
+```Output
+    Directory: C:\Program Files\WindowsPowerShell\Modules\PowerShellGet
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/14/2020  5:56 PM                1.0.0.1
+d----           9/13/2019  3:53 PM                2.1.2
+```
+
+默认情况下，当找到多个版本时，PowerShell 将加载模块的最高版本号。 若要加载特定版本，请使用 `Import-Module` With **FullyQualifiedName** 参数。 有关详细信息，请参阅 [import-module](xref:Microsoft.PowerShell.Core.Import-Module)。
+
 ## <a name="see-also"></a>另请参阅
 
 - [about_Modules](about_Modules.md)
 - [环境方法](/dotnet/api/system.environment)
-

@@ -2,16 +2,16 @@
 description: 提供有关 PowerShell 后台作业如何在后台运行命令或表达式，而不与当前会话交互的信息。
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/16/2020
+ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Jobs
-ms.openlocfilehash: 6668e8a060c2468a4c7d98f52c7d493e1751970b
-ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
+ms.openlocfilehash: 6ddb54bac62e7bc11a045874700acb3982a0093b
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "93200573"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524444"
 ---
 # <a name="about-jobs"></a>关于作业
 
@@ -20,21 +20,25 @@ ms.locfileid: "93200573"
 
 ## <a name="long-description"></a>长说明
 
-PowerShell 并发运行命令，并通过作业编写脚本。 PowerShell 提供了三个基于作业的解决方案来支持并发。
+PowerShell 通过作业并发运行命令和脚本。 PowerShell 提供三种作业类型来支持并发。
 
-|作业            |说明                                                  |
-|---------------|-------------------------------------------------------------|
-|`RemoteJob`    |命令和脚本在远程计算机上运行。                 |
-|`BackgroundJob`|命令和脚本在本地的单独进程中运行    |
-|               |虚拟 CPU。                                                     |
-|`ThreadJob`    |命令和脚本在同一内的单独线程中运行  |
-|               |在本地计算机上进行处理。                                |
+- `RemoteJob` -命令和脚本在远程会话上运行。 有关信息，请参阅 [about_Remote_Jobs](about_Remote_Jobs.md)。
+- `BackgroundJob` -命令和脚本在本地计算机上的单独进程中运行。
+- `PSTaskJob` 或 `ThreadJob` -命令和脚本在本地计算机上的同一进程内的单独线程中运行。 有关详细信息，请参阅 [about_Thread_Jobs](/powershell/module/ThreadJob/about_Thread_Jobs)。
 
-每种类型的作业都有其优点和缺点。 在单独的计算机上或在单独的进程中远程运行脚本具有很好的隔离。 任何错误不会影响其他正在运行的作业或启动该作业的客户端。 但远程处理层增加了开销，包括对象序列化。 所有传递到远程会话的对象都必须进行序列化，然后在客户端与目标会话之间传递时进行反序列化。 对于大型复杂数据对象，序列化操作可以使用很多计算资源和内存资源。
+在单独的计算机上或在单独的进程中远程运行脚本可提供强大的隔离。 远程作业中发生的任何错误都不会影响其他正在运行的作业或启动作业的父会话。 但是，远程处理层增加了开销，包括对象序列化。 所有对象都将进行序列化和反序列化，因为在父会话与远程 (作业) 会话之间传递它们。 大型复杂数据对象的序列化会消耗大量的计算和内存资源，并跨网络传输大量数据。
 
-本主题说明如何在本地计算机上的 PowerShell 中运行后台作业。 有关在远程计算机上运行后台作业的信息，请参阅 [about_Remote_Jobs](about_Remote_Jobs.md)。 有关线程作业的详细信息，请参阅 [about_Thread_Jobs](about_Thread_Jobs.md)。
+基于线程的作业不像远程和后台作业那样可靠，因为它们在不同线程上的同一进程中运行。 如果一个作业发生了导致进程崩溃的严重错误，则会终止该进程中的所有其他作业。
 
-启动后台作业时，命令提示符会立即返回，即使作业需要很长时间才能完成。 当该作业运行时，你可以继续在此会话中工作而不会发生中断。
+但是，基于线程的作业需要更少的开销。 它们不使用远程层或序列化。 结果对象作为对当前会话中活动对象的引用返回。 如果没有此开销，基于线程的作业运行速度更快，使用的资源比其他作业类型少。
+
+> [!IMPORTANT]
+> 创建作业的父会话还会监视作业状态和收集管道数据。 作业到达完成状态后，父进程终止了作业子进程。 如果终止了父会话，则所有正在运行的子作业都将与其子进程一起终止。
+
+有两种方法可解决此限制：
+
+1. 用于 `Invoke-Command` 创建在断开连接的会话中运行的作业。 有关详细信息，请参阅 [about_Remote_Jobs](about_Remote_Jobs.md)。
+1. 使用 `Start-Process` 创建新进程，而不是作业。 有关详细信息，请参阅 [开始处理](xref:Microsoft.PowerShell.Management.Start-Process)。
 
 ## <a name="the-job-cmdlets"></a>作业 cmdlet
 
@@ -64,92 +68,76 @@ PowerShell 并发运行命令，并通过作业编写脚本。 PowerShell 提供
 Start-Job -ScriptBlock {Get-Process}
 ```
 
+启动后台作业时，命令提示符会立即返回，即使作业需要很长时间才能完成。 当该作业运行时，你可以继续在此会话中工作而不会发生中断。
+
 `Start-Job`命令返回一个表示作业的对象。 作业对象包含有关该作业的有用信息，但是不包含作业结果。
 
-将作业对象保存在变量中，然后将其与其他作业 cmdlet 一起使用来管理后台作业。 下面的命令启动作业对象并将生成的作业对象保存在 `$job` 变量中。
+可以将作业对象保存在变量中，然后将其与其他 **作业** cmdlet 一起使用来管理后台作业。 下面的命令启动作业对象并将生成的作业对象保存在 `$job` 变量中。
 
 ```powershell
 $job = Start-Job -ScriptBlock {Get-Process}
 ```
 
-从 PowerShell 6.0 开始，可以在 `&` 管道的末尾使用 amersand () 来启动后台作业。 以下命令在功能上等效于上述命令。
+从 PowerShell 6.0 开始，可以使用 `&` 管道末尾 () 后台运算符来启动后台作业。 有关详细信息，请参阅 [背景运算符](about_Operators.md#background-operator-)。
+
+使用 background 运算符在功能上等效于 `Start-Job` 在上一示例中使用 cmdlet。
 
 ```powershell
 $job = Get-Process &
 ```
 
-与号 `&`)  (称为后台运算符。 有关详细信息，请参阅 [背景运算符](about_Operators.md#background-operator-)。
-
-你还可以使用 `Get-Job` cmdlet 来获取表示在当前会话中启动的作业的对象。 `Get-Job` 返回返回的同一作业对象 `Start-Job` 。
-
 ## <a name="getting-job-objects"></a>正在获取作业对象
 
-若要获取表示在当前会话中启动的后台作业的对象，请使用 `Get-Job` cmdlet。 如果没有参数，则 `Get-Job` 返回在当前会话中启动的所有作业。
-
-例如，以下命令将获取当前会话中的作业。
+`Get-Job`Cmdlet 返回对象，这些对象表示在当前会话中启动的后台作业。 如果没有参数，则 `Get-Job` 返回在当前会话中启动的所有作业。
 
 ```powershell
-PS C:> Get-Job
-
-Id  Name  PSJobTypeName State      HasMoreData  Location   Command
---  ----  ------------- -----      -----------  --------   -------
-1   Job1  BackgroundJob Running    True         localhost  Get-Process
-```
-
-你还可以将作业对象保存在变量中，并在后面的命令中使用它来表示作业。 以下命令获取 ID 为1的作业，并将其保存在 `$job` 变量中。
-
-```powershell
-$job = Get-Job -Id 1
+Get-Job
 ```
 
 作业对象包含作业的状态，该状态指示作业是否已完成。 已完成的作业的状态为 " **完成** " 或 " **失败** "。 作业也可能被 **阻止** 或 **正在运行** 。
 
-```powershell
-Get-Job
-
+```Output
 Id  Name  PSJobTypeName State      HasMoreData  Location   Command
 --  ----  ------------- -----      -----------  --------   -------
 1   Job1  BackgroundJob Complete   True         localhost  Get-Process
 ```
 
+可以将作业对象保存在变量中，并在后面的命令中使用它来表示作业。 以下命令获取 ID 为1的作业，并将其保存在 `$job` 变量中。
+
+```powershell
+$job = Get-Job -Id 1
+```
+
 ## <a name="getting-the-results-of-a-job"></a>获取作业的结果
 
-运行后台作业时，结果不会立即显示。 相反，该 `Start-Job` cmdlet 将返回表示该作业的作业对象，但该对象不包含结果。 若要获取后台作业的结果，请使用 `Receive-Job` cmdlet。
+运行后台作业时，结果不会立即显示。 若要获取后台作业的结果，请使用 `Receive-Job` cmdlet。
 
-以下命令使用 `Receive-Job` cmdlet 来获取作业的结果。 它使用保存在变量中的作业对象 `$job` 来标识作业。
+下面的示例 `Receive-Job` 使用变量中的作业对象获取作业的结果 `$job` 。
 
 ```powershell
 Receive-Job -Job $job
 ```
 
-`Receive-Job`Cmdlet 将返回作业的结果。
-
-```
+```Output
 Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)    Id ProcessName
 -------  ------    -----      ----- -----   ------    -- -----------
     103       4    11328       9692    56           1176 audiodg
     804      14    12228      14108   100   101.74  1740 CcmExec
     668       7     2672       6168   104    32.26   488 csrss
-# ...
+...
 ```
 
-您还可以将作业的结果保存在变量中。 以下命令将变量中的作业结果保存 `$job` 到 `$results` 变量中。
+可以将作业的结果保存在变量中。 以下命令将变量中的作业结果保存 `$job` 到 `$results` 变量中。
 
 ```powershell
 $results = Receive-Job -Job $job
 ```
 
-而且，你可以通过使用) 或 cmdlet (重定向运算符将作业的结果保存到文件中 `>` `Out-File` 。 以下命令使用重定向运算符将作业的结果保存到文件的变量中 `$job` `Results.txt` 。
-
-```powershell
-Receive-Job -Job $job > results.txt
-```
-
-## <a name="getting-and-keeping-partial-job-results"></a>获取并保留部分作业结果
+### <a name="getting-and-keeping-partial-job-results"></a>获取并保留部分作业结果
 
 `Receive-Job`Cmdlet 将获取后台作业的结果。 如果作业已完成，则 `Receive-Job` 获取所有作业结果。 如果作业仍在运行，将 `Receive-Job` 获取迄今为止生成的结果。 可以再次运行 `Receive-Job` 命令来获取剩余结果。
 
-`Receive-Job`返回结果时，默认情况下，它将从存储作业结果的缓存中删除这些结果。 如果运行另一个 `Receive-Job` 命令，则只会获得尚未收到的结果。
+默认情况下， `Receive-Job` 会从缓存中删除存储作业结果的结果。 再次运行时 `Receive-Job` ，只会获得首次运行后收到的新结果。
 
 以下命令显示在 `Receive-Job` 作业完成之前运行的命令的结果。
 
@@ -171,9 +159,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
   1121      25    28408      32940   174   430.14   3048 explorer
 ```
 
-若要阻止 `Receive-Job` 删除已返回的作业结果，请使用 **Keep** 参数。 因此，会 `Receive-Job` 返回在该时间之前生成的所有结果。
-
-以下命令显示对尚未完成的作业使用 **Keep** 参数的效果。
+使用 **Keep** 参数防止 `Receive-Job` 删除返回的作业结果。 以下命令显示对尚未完成的作业使用 **Keep** 参数的效果。
 
 ```powershell
 C:\PS> Receive-Job -Job $job -Keep
@@ -195,7 +181,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
    1121      25    28408      32940   174   430.14   3048 explorer
 ```
 
-## <a name="waiting-for-the-results"></a>正在等待结果
+### <a name="waiting-for-the-results"></a>正在等待结果
 
 如果运行需要很长时间才能完成的命令，则可以使用作业对象的属性来确定作业的完成时间。 以下命令使用 `Get-Job` 对象获取当前会话中的所有后台作业。
 
@@ -205,7 +191,7 @@ Get-Job
 
 结果将显示在表中。 作业的状态显示在 " **状态** " 列中。
 
-```
+```Output
 Id Name  PSJobTypeName State    HasMoreData Location  Command
 -- ----  ------------- -----    ----------- --------  -------
 1  Job1  BackgroundJob Complete True        localhost Get-Process
@@ -213,14 +199,11 @@ Id Name  PSJobTypeName State    HasMoreData Location  Command
 3  Job3  BackgroundJob Complete True        localhost dir -Path C:\* -Re...
 ```
 
-在这种情况下，"状态" 属性显示 "作业 2" 仍在运行。 如果你 `Receive-Job` 现在使用 cmdlet 来获取作业结果，结果将不完整。 可以重复使用此 `Receive-Job` cmdlet 来获取所有结果。 默认情况下，每次使用该方法时，只会获得尚未收到的结果，但你可以使用该 cmdlet 的 **Keep** 参数 `Receive-Job` 保留结果，即使已收到这些结果。
+在这种情况下，" **状态** " 属性显示 "作业 2" 仍在运行。 如果你 `Receive-Job` 现在使用 cmdlet 来获取作业结果，结果将不完整。 可以重复使用此 `Receive-Job` cmdlet 来获取所有结果。 使用 **State** 属性来确定作业的完成时间。
 
-您可以将部分结果写入文件，然后在其到达时追加新的结果，也可以稍后等待并检查作业的状态。
+你还可以使用该 cmdlet 的 **Wait** 参数 `Receive-Job` 。 如果使用此参数，则在作业完成并且所有结果都可用之前，cmdlet 不会返回命令提示符。
 
-你可以使用 cmdlet 的 **Wait** 参数 `Receive-Job` ，该参数在作业完成并且所有结果都可用之前，不会返回命令提示符。
-
-你还可以使用 `Wait-Job` cmdlet 等待作业的任何或所有结果。 `Wait-Job` 允许您等待特定作业、所有作业或任何作业完成。
-
+你还可以使用 `Wait-Job` cmdlet 等待作业的任何或所有结果。 `Wait-Job` 允许你等待一个或多个特定作业或所有作业。
 以下命令使用 `Wait-Job` cmdlet 等待 **ID** 为的作业
 10.
 
@@ -260,27 +243,28 @@ Remove-Job -Job $job
 
 ## <a name="investigating-a-failed-job"></a>调查失败的作业
 
-若要确定作业失败的原因，请使用作业对象的 **Reason** 属性。
+作业可能会因多种原因而失败。 作业对象包含 **Reason** 属性，其中包含有关失败原因的信息。
 
-下面的命令启动不包含所需凭据的作业。 它将作业对象保存在 `$job` 变量中。
+下面的示例启动一个作业，该作业没有所需的凭据。
 
 ```powershell
 $job = Start-Job -ScriptBlock {New-Item -Path HKLM:\Software\MyCompany}
+Get-Job $job
 
 Id Name  PSJobTypeName State  HasMoreData  Location  Command
 -- ----  ------------- -----  -----------  --------  -------
 1  Job1  BackgroundJob Failed False        localhost New-Item -Path HKLM:...
 ```
 
-以下命令使用 Reason 属性查找导致作业失败的错误。
+检查 **原因** 属性以找到导致作业失败的错误。
 
 ```powershell
 $job.ChildJobs[0].JobStateInfo.Reason
 ```
 
-在这种情况下，作业失败，因为远程计算机需要显式凭据才能运行该命令。 **Reason** 属性的值为：
+在这种情况下，作业失败，因为远程计算机需要显式凭据才能运行该命令。 **Reason** 属性包含以下消息：
 
-连接到远程服务器失败，出现以下错误消息： "访问被拒绝"。
+> 连接到远程服务器失败，出现以下错误消息： "访问被拒绝"。
 
 ## <a name="see-also"></a>另请参阅
 
