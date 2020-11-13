@@ -55,24 +55,26 @@
       items:
         - name: 概述
           href: learn/deep-dives/overview.md
-        - name: 关于数组的各项须知内容
-          href: learn/deep-dives/everything-about-arrays.md
-        - name: 关于哈希表的各项须知内容
-          href: learn/deep-dives/everything-about-hashtable.md
-        - name: 关于 PSCustomObject 的各项须知内容
-          href: learn/deep-dives/everything-about-pscustomobject.md
-        - name: 关于字符串替换的各项须知内容
-          href: learn/deep-dives/everything-about-string-substitutions.md
-        - name: 关于 if/then/else 的各项须知内容
-          href: learn/deep-dives/everything-about-if.md
-        - name: 关于 switch 的各项须知内容
-          href: learn/deep-dives/everything-about-switch.md
-        - name: 关于异常的各项须知内容
-          href: learn/deep-dives/everything-about-exceptions.md
-        - name: 关于 $null 的各项须知内容
-          href: learn/deep-dives/everything-about-null.md
-        - name: 关于 ShouldProcess 的各项须知内容
-          href: learn/deep-dives/everything-about-shouldprocess.md
+        - name: 关于…的各项须知内容
+          items:
+            - name: 关于数组的各项须知内容
+              href: learn/deep-dives/everything-about-arrays.md
+            - name: 关于哈希表的各项须知内容
+              href: learn/deep-dives/everything-about-hashtable.md
+            - name: 关于 PSCustomObject 的各项须知内容
+              href: learn/deep-dives/everything-about-pscustomobject.md
+            - name: 关于字符串替换的各项须知内容
+              href: learn/deep-dives/everything-about-string-substitutions.md
+            - name: 关于 if/then/else 的各项须知内容
+              href: learn/deep-dives/everything-about-if.md
+            - name: 关于 switch 的各项须知内容
+              href: learn/deep-dives/everything-about-switch.md
+            - name: 关于异常的各项须知内容
+              href: learn/deep-dives/everything-about-exceptions.md
+            - name: 关于 $null 的各项须知内容
+              href: learn/deep-dives/everything-about-null.md
+            - name: 关于 ShouldProcess 的各项须知内容
+              href: learn/deep-dives/everything-about-shouldprocess.md
         - name: 多线程处理时的写入进度
           href: learn/deep-dives/write-progress-across-multiple-threads.md
         - name: 向 PowerShell 函数添加凭据支持
@@ -120,6 +122,8 @@
   items:
     - name: PowerShell 7.x 中的新增功能
       items:
+        - name: PowerShell 7.1 中的新增功能
+          href: whats-new/what-s-new-in-powershell-71.md
         - name: PowerShell 7.0 中的新增功能
           href: whats-new/what-s-new-in-powershell-70.md
     - name: PowerShell Core 6.x 中的新增功能
