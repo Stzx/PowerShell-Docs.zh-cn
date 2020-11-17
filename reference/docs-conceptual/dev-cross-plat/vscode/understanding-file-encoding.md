@@ -186,8 +186,8 @@ finally
 可以更普遍地使用配置文件设置将 PowerShell 配置为使用给定编码。
 请参阅以下文章：
 
-- [@mklement0][有关 StackOverflow 上的 PowerShell 编码的解答](https://stackoverflow.com/a/40098904)。
-- [@rkeithhill][有关在 PowerShell 中处理无 BOM 式 UTF-8 输入的博客文章](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/)。
+- [@mklement0] [有关 StackOverflow 上的 PowerShell 编码的解答](https://stackoverflow.com/a/40098904)。
+- [@rkeithhill] [有关在 PowerShell 中处理无 BOM 式 UTF-8 输入的博客文章](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/)。
 
 无法强制 PowerShell 使用特定输入编码。 如果未提供 BOM，则在 Windows（区域设置为 en-US）上运行的 PowerShell 5.1 及更低版本默认使用 Windows-1252 编码。 其他区域设置可能使用不同的编码。 为了确保互操作性，最好使用具有 BOM 的 Unicode 格式保存脚本。
 
