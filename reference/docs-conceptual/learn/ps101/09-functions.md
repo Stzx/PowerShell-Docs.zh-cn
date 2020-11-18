@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: ca48f3020fa306f8a24328bd18648d5954c48a94
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: 9554c0b4d3932b7371201f7b08c8b9d26a567f5e
+ms.sourcegitcommit: e85e56d6614cbd30e01965a5cf03fb3f5ca78103
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438198"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94589120"
 ---
 # <a name="chapter-9---functions"></a>第 9 章 - 函数
 
@@ -22,7 +22,7 @@ ms.locfileid: "84438198"
 
 ## <a name="naming"></a>命名
 
-在 PowerShell 中命名函数时，使用包含批准的谓词和单数名词的 [帕斯卡拼写法][] 名称。 我还建议在名词前面加上前缀。 例如：`<ApprovedVerb>-<Prefix><SingularNoun>`。
+在 PowerShell 中命名函数时，结合使用[帕斯卡拼写法][]名称和已批准的谓词和单数名词。 我还建议在名词前面加上前缀。 例如：`<ApprovedVerb>-<Prefix><SingularNoun>`。
 
 PowerShell 中有一个批准的谓词的特定列表，可通过运行 `Get-Verb` 获取这些谓词。
 
@@ -793,4 +793,5 @@ function Get-MrAutoStoppedService {
 [about_Functions_Advanced]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced
 [about_Try_Catch_Finally]: /powershell/module/microsoft.powershell.core/about/about_try_catch_finally
 [about_Comment_Based_Help]: /powershell/module/microsoft.powershell.core/about/about_comment_based_help
-[视频：使用高级函数和脚本模块的 PowerShell 工具制作]： https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/) [帕斯卡拼写法]：/dotnet/standard/design-guidelines/capitalization-conventionss
+[视频：使用高级函数和脚本模块的 PowerShell 工具制作]: https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/
+[帕斯卡拼写法]: /dotnet/standard/design-guidelines/capitalization-conventions
