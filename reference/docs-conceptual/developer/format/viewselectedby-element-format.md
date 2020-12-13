@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的 ViewSelectedBy 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: c8704c1504c6e24c9cac6bc8bc25e92a0d9110cc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ViewSelectedBy Element (Format)
+description: ViewSelectedBy Element (Format)
+ms.openlocfilehash: ac3c7de299b3009a067a476a024c6a6fcb5dce02
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785007"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667702"
 ---
 # <a name="viewselectedby-element-format"></a>ViewSelectedBy Element (Format)
 
@@ -33,26 +35,26 @@ ViewDefinitions 元素 (格式) View 元素 (格式) ViewSelectedBy 元素 (格�
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[TypeName Element for ViewSelectedBy (Format)](./typename-element-for-viewselectedby-format.md)|可选元素。<br /><br /> 指定视图显示的 .NET 对象。|
 |[SelectionSetName Element for ViewSelectedBy (Format)](./selectionsetname-element-for-viewselectedby-format.md)|可选元素。<br /><br /> 指定视图显示的一组 .NET 对象。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View Element (Format)](./view-element-format.md)|定义一个视图，该视图显示一个或多个 .NET 对象。|
 
 ## <a name="remarks"></a>备注
 
-有关此元素在不同视图中的使用方式的详细信息，请参阅[表视图组件](./creating-a-table-view.md)、[列表视图](./creating-a-list-view.md)组件、[宽视图组件](./creating-a-wide-view.md)和[自定义控件组件](./creating-custom-controls.md)。
+有关此元素在不同视图中的使用方式的详细信息，请参阅 [表视图组件](./creating-a-table-view.md)、 [列表视图](./creating-a-list-view.md)组件、 [宽视图组件](./creating-a-wide-view.md)和 [自定义控件组件](./creating-custom-controls.md)。
 
-`SelectionSetName`当格式设置文件定义了由多个视图显示的一组对象时，使用元素。 有关如何定义和引用选择集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
+`SelectionSetName`当格式设置文件定义了由多个视图显示的一组对象时，使用元素。 有关如何定义和引用选择集的详细信息，请参阅 [定义对象集](./defining-selection-sets.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何为列表视图指定[Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController)对象。 表、宽视图和自定义视图使用相同的架构。
+下面的示例演示如何为列表视图指定 [Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 对象。 表、宽视图和自定义视图使用相同的架构。
 
 ```xml
 <View>

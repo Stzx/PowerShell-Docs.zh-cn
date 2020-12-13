@@ -1,12 +1,14 @@
 ---
-title: 用于 CustomControl for View (Format) 的 ExpressionBinding 的 EnumerateCollection 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 91505ca2661c6bfd0dcb2bbdb26a645d237a7fb9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EnumerateCollection Element for ExpressionBinding for CustomControl for View (Format)
+description: EnumerateCollection Element for ExpressionBinding for CustomControl for View (Format)
+ms.openlocfilehash: e1df19460afbe813d6a53b88664629662d4abb74
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773923"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667974"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format"></a>EnumerateCollection Element for ExpressionBinding for CustomControl for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87773923"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomItem 的 ExpressionBinding 元素 (格式) ](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|定义控件显示的数据。|
 

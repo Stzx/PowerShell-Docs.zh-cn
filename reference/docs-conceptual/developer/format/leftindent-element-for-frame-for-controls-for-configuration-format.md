@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的控件的框架的 LeftIndent 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: 8de21173780047cb8af6bb76ea51c092b38d30a9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: LeftIndent Element for Frame for Controls for Configuration (Format)
+description: LeftIndent Element for Frame for Controls for Configuration (Format)
+ms.openlocfilehash: 9a6b2832b8c06d4217e743a2a13958b883959b57
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783579"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667770"
 ---
 # <a name="leftindent-element-for-frame-for-controls-for-configuration-format"></a>LeftIndent Element for Frame for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87783579"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Frame Element for CustomItem for Controls for Configuration (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 

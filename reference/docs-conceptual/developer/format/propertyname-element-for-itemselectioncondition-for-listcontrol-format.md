@@ -1,12 +1,14 @@
 ---
-title: 用于 ListControl (Format) 的 ItemSelectionCondition 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 8bdbb05326f7ff5ccffa46215631a5c954080dc1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for ItemSelectionCondition for ListControl (Format)
+description: PropertyName Element for ItemSelectionCondition for ListControl (Format)
+ms.openlocfilehash: c515efe70afdb1c1186c0a07fe1f52dc49ad57b9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780859"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665985"
 ---
 # <a name="propertyname-element-for-itemselectioncondition-for-listcontrol-format"></a>PropertyName Element for ItemSelectionCondition for ListControl (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87780859"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ItemSelectionCondition Element for ListItem for ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)||
 
@@ -44,7 +46,7 @@ ms.locfileid: "87780859"
 
 ## <a name="remarks"></a>备注
 
-如果使用此元素，则在定义选择条件时，不能指定[ScriptBlock](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)元素。
+如果使用此元素，则在定义选择条件时，不能指定 [ScriptBlock](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md) 元素。
 
 ## <a name="see-also"></a>另请参阅
 

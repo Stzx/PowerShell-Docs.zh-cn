@@ -1,12 +1,14 @@
 ---
-title: ViewSelectedBy (Format) 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e9a391565c3e66041dd9a340455dccfce9ce929b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for ViewSelectedBy (Format)
+description: TypeName Element for ViewSelectedBy (Format)
+ms.openlocfilehash: 62edc2fe4b4c1c5f1b17dd2f8b0943f28ff5dfb7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780026"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667719"
 ---
 # <a name="typename-element-for-viewselectedby-format"></a>TypeName Element for ViewSelectedBy (Format)
 
@@ -44,11 +46,11 @@ ms.locfileid: "87780026"
 
 ## <a name="remarks"></a>备注
 
-有关此元素在不同视图中的使用方式的详细信息，请参阅[创建表视图](./creating-a-table-view.md)、[创建列表视图](./creating-a-list-view.md)、[创建宽视图](./creating-a-wide-view.md)和[自定义视图组件](./creating-custom-controls.md)。
+有关此元素在不同视图中的使用方式的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)、 [创建列表视图](./creating-a-list-view.md)、 [创建宽视图](./creating-a-wide-view.md)和 [自定义视图组件](./creating-custom-controls.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何为列表视图指定[Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController)对象。 表、宽视图和自定义视图使用相同的架构。
+下面的示例演示如何为列表视图指定 [Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 对象。 表、宽视图和自定义视图使用相同的架构。
 
 ```xml
 <View>

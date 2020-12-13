@@ -1,12 +1,14 @@
 ---
-title: ListControl (Format) 的 ListEntry 的 ListItems 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 03b89a3df2ab0498533d0c00f303f643e0039b25
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListItems Element for ListEntry for ListControl (Format)
+description: ListItems Element for ListEntry for ListControl (Format)
+ms.openlocfilehash: 1553c81bc559020223a3c1fea10336baf017c9a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781131"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666529"
 ---
 # <a name="listitems-element-for-listentry-for-listcontrol-format"></a>ListItems Element for ListEntry for ListControl (Format)
 
@@ -32,19 +34,19 @@ ms.locfileid: "87781131"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ListControl (格式的元素) ](./listitem-element-for-listitems-for-listcontrol-format.md)|必需的元素。<br /><br /> 定义其值由列表视图显示的属性或脚本。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ListEntry Element for ListControl (Format)](./listentry-element-for-listcontrol-format.md)|提供列表视图的定义。|
 
 ## <a name="remarks"></a>备注
 
-有关此类视图的详细信息，请参阅[创建列表视图](./creating-a-list-view.md)。
+有关此类视图的详细信息，请参阅 [创建列表视图](./creating-a-list-view.md)。
 
 ## <a name="example"></a>示例
 

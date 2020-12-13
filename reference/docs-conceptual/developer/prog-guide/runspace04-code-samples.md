@@ -1,19 +1,21 @@
 ---
-title: RunSpace04 代码示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9a9b7e02358cdf9018199046c938c699aff8681c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: RunSpace04 代码示例
+description: RunSpace04 代码示例
+ms.openlocfilehash: 2978d44be2459c337cd6194d967eee2940a507ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787053"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667498"
 ---
 # <a name="runspace04-code-samples"></a>RunSpace04 代码示例
 
-下面是使用[Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke)类来执行生成终止错误的脚本的运行空间的代码示例。 宿主应用程序负责捕获错误并解释错误记录。
+下面是使用 [Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) 类来执行生成终止错误的脚本的运行空间的代码示例。 宿主应用程序负责捕获错误并解释错误记录。
 
 > [!NOTE]
-> 你可以使用适用于 Windows Vista 的 Windows 软件开发工具包和 Microsoft .NET Framework 3.0 运行时组件，为此运行空间下载 VB.NET 源文件 (Runspace04) 。 有关下载说明，请参阅[如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
+> 你可以使用适用于 Windows Vista 的 Windows 软件开发工具包和 Microsoft .NET Framework 3.0 运行时组件，为此运行空间下载 VB.NET 源文件 (Runspace04) 。 有关下载说明，请参阅 [如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
 >
 > 下载的源文件在目录中提供 **\<PowerShell Samples>** 。
 

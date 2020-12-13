@@ -1,12 +1,14 @@
 ---
-title: 如何声明 Cmdlet 参数 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 97e86a1eb715f149a8383a1a4529c00da4f0eba8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何声明 Cmdlet 参数
+description: 如何声明 Cmdlet 参数
+ms.openlocfilehash: ed53f9788c9afb142b137e08966dff33551b9d0f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774382"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667090"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>如何声明 Cmdlet 参数
 
@@ -26,7 +28,7 @@ ms.locfileid: "87774382"
     private string userName;
     ```
 
-有关参数属性的详细信息，请参阅[参数属性声明](./parameter-attribute-declaration.md)。
+有关参数属性的详细信息，请参阅 [参数属性声明](./parameter-attribute-declaration.md)。
 
 ## <a name="how-to-declare-a-positional-parameter"></a>如何声明位置参数
 
@@ -42,7 +44,7 @@ ms.locfileid: "87774382"
     private string userName;
     ```
 
-有关参数属性的详细信息，请参阅[参数属性声明](./parameter-attribute-declaration.md)。
+有关参数属性的详细信息，请参阅 [参数属性声明](./parameter-attribute-declaration.md)。
 
 ## <a name="how-to-declare-a-mandatory-parameter"></a>如何声明必需参数
 
@@ -58,7 +60,7 @@ ms.locfileid: "87774382"
     private string userName;
     ```
 
-有关参数属性的详细信息，请参阅[参数属性声明](./parameter-attribute-declaration.md)。
+有关参数属性的详细信息，请参阅 [参数属性声明](./parameter-attribute-declaration.md)。
 
 ## <a name="how-to-declare-an-optional-parameter"></a>如何声明可选参数
 
@@ -76,7 +78,7 @@ ms.locfileid: "87774382"
 
 ## <a name="how-to-declare-a-switch-parameter"></a>如何声明开关参数
 
-- 将公共属性定义为[SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)类型，然后声明参数属性。
+- 将公共属性定义为 [SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)类型，然后声明参数属性。
 
     ```csharp
     [Parameter(Position = 1)]
@@ -88,7 +90,7 @@ ms.locfileid: "87774382"
     private bool goodbye;
     ```
 
-有关参数属性的详细信息，请参阅[参数属性声明](./parameter-attribute-declaration.md)。
+有关参数属性的详细信息，请参阅 [参数属性声明](./parameter-attribute-declaration.md)。
 
 ## <a name="how-to-declare-a-parameter-with-aliases"></a>如何使用别名声明参数
 
@@ -105,7 +107,7 @@ ms.locfileid: "87774382"
     private string userName;
     ```
 
-有关 Alias 特性的详细信息，请参阅[Alias 特性声明](./alias-attribute-declaration.md)。
+有关 Alias 特性的详细信息，请参阅 [Alias 特性声明](./alias-attribute-declaration.md)。
 
 ## <a name="see-also"></a>另请参阅
 

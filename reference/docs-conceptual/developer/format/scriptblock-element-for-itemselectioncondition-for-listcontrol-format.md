@@ -1,12 +1,14 @@
 ---
-title: ListControl 的 ItemSelectionCondition 的 ScriptBlock 元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 38dc952bfadd6aed24bae8cbef05adcd22e61dd4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for ItemSelectionCondition for ListControl (Format)
+description: ScriptBlock Element for ItemSelectionCondition for ListControl (Format)
+ms.openlocfilehash: 1e518f898e0e1e62ca64f9897b1323cc6dd89ae9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787625"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665049"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-listcontrol-format"></a>ScriptBlock Element for ItemSelectionCondition for ListControl (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87787625"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ItemSelectionCondition Element for ListItem for ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)|定义要使用此列表项必须存在的条件。|
 

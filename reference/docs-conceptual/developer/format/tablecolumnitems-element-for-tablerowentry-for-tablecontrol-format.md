@@ -1,12 +1,14 @@
 ---
-title: TableControl (Format) 的 TableRowEntry 的 TableColumnItems 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 661b938e8db0e68e10dc05f552e4f3a14608bc55
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableColumnItems Element for TableRowEntry for TableControl (Format)
+description: TableColumnItems Element for TableRowEntry for TableControl (Format)
+ms.openlocfilehash: 4d600a366d2be1c453f05b301bdf575351dd51c1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785143"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667753"
 ---
 # <a name="tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format"></a>TableColumnItems Element for TableRowEntry for TableControl (Format)
 
@@ -46,11 +48,11 @@ TableColumnItems>
 
 `TableColumnItem`行的每个列都需要一个元素。 第一项显示在第一列中，第二项显示在第二列，依此类推。
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示一个 `TableColumnItems` 元素，该元素定义了 system.exception [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process)对象的三个属性。
+下面的示例演示一个 `TableColumnItems` 元素，该元素定义了 system.exception [](/dotnet/api/System.Diagnostics.Process)对象的三个属性。
 
 ```xml
 <TableColumnItems>

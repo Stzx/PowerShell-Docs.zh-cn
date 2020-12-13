@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的框架的 RightIndent 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7a688997791dc901e81236c5d467425ad145eb33
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: RightIndent Element for Frame for Controls for View (Format)
+description: RightIndent Element for Frame for Controls for View (Format)
+ms.openlocfilehash: 6bd7e0239777e1015f34827e3bad75e5fd560fc0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780451"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665504"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-view-format"></a>RightIndent Element for Frame for Controls for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87780451"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Frame Element for CustomItem for Controls for View (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 

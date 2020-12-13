@@ -1,19 +1,21 @@
 ---
-title: 如何支持事务 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6fda27394091195b589afef5ee53c6d3bec4efc0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何支持事务
+description: 如何支持事务
+ms.openlocfilehash: 5691c246830dab9f4808801c04353ebfb2c3e981
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786605"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666954"
 ---
 # <a name="how-to-support-transactions"></a>如何支持事务
 
 此示例显示了向 cmdlet 添加对事务的支持的基本代码元素。
 
 > [!IMPORTANT]
-> 有关 Windows PowerShell 如何处理事务的详细信息，请参阅[关于事务][about_Transactions]。
+> 有关 Windows PowerShell 如何处理事务的详细信息，请参阅 [关于事务][about_Transactions]。
 
 ## <a name="to-support-transactions"></a>支持事务
 

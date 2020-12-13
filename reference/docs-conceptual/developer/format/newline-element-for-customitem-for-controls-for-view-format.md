@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的 CustomItem 的换行符元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e55e07ede3c394cabbda25aa1ec3bf03683c1c6b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: NewLine Element for CustomItem for Controls for View (Format)
+description: NewLine Element for CustomItem for Controls for View (Format)
+ms.openlocfilehash: 3b368f021fcbd2ecabf2032b951afe2979a3d027
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785653"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666427"
 ---
 # <a name="newline-element-for-customitem-for-controls-for-view-format"></a>NewLine Element for CustomItem for Controls for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87785653"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomItem Element for CustomEntry for Controls for View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)|定义控件显示的数据及其显示方式。|
 

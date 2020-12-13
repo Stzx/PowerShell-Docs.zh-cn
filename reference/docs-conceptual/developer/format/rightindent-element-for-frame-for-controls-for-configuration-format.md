@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的控件的框架的 RightIndent 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: edd299f4a39a8f2f55385b750b530de50ffff203
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: RightIndent Element for Frame for Controls for Configuration (Format)
+description: RightIndent Element for Frame for Controls for Configuration (Format)
+ms.openlocfilehash: 99a3653fb744df9b17bbc60b75d4d3932c672106
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772988"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665543"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-configuration-format"></a>RightIndent Element for Frame for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87772988"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Frame Element for CustomItem for Controls for Configuration (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 

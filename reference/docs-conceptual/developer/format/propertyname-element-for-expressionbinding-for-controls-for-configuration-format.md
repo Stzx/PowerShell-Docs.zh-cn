@@ -1,12 +1,14 @@
 ---
-title: 配置 (格式的控件的 ExpressionBinding 的 PropertyName 元素) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f4343eeb157a1e3fc94a43c610ca5bdc94a5f667
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for ExpressionBinding for Controls for Configuration (Format)
+description: PropertyName Element for ExpressionBinding for Controls for Configuration (Format)
+ms.openlocfilehash: 1deb49c92a9457d8e1032c1ce698d7d9488edd8e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780895"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666240"
 ---
 # <a name="propertyname-element-for-expressionbinding-for-controls-for-configuration-format"></a>PropertyName Element for ExpressionBinding for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87780895"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for Controls for Configuration (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|定义控件显示的数据。|
 

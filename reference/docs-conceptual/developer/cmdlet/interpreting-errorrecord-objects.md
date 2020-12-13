@@ -1,23 +1,25 @@
 ---
-title: 解释 ErrorRecord 对象 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 249fff7d14023806d75aeca40f4d9b7231e14311
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 解释 ErrorRecord 对象
+description: 解释 ErrorRecord 对象
+ms.openlocfilehash: 5a8556e0ba83e54dd197ed03665a119f0b565f2b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786588"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666869"
 ---
 # <a name="interpreting-errorrecord-objects"></a>解释 ErrorRecord 对象
 
-在大多数情况下， [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)对象表示命令或脚本生成的非终止错误。 终止错误还可以通过[Icontainserrorrecord](/dotnet/api/System.Management.Automation.IContainsErrorRecord)接口在 ErrorRecord 中指定其他信息。
+在大多数情况下， [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 对象表示命令或脚本生成的非终止错误。 终止错误还可以通过 [Icontainserrorrecord](/dotnet/api/System.Management.Automation.IContainsErrorRecord) 接口在 ErrorRecord 中指定其他信息。
 
-如果要在脚本或主机中编写错误处理程序来处理在命令或脚本执行期间发生的特定错误，则必须解释[ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)对象，以确定它是否表示你要处理的错误类。
+如果要在脚本或主机中编写错误处理程序来处理在命令或脚本执行期间发生的特定错误，则必须解释 [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 对象，以确定它是否表示你要处理的错误类。
 
 当 cmdlet 遇到终止或非终止错误时，它应创建描述错误情况的错误记录。 宿主应用程序必须调查这些错误记录，并执行任何可缓解错误的操作。 主机应用程序还必须调查错误记录中是否存在无法处理记录但能够继续的非终止错误，还必须调查错误记录以终止导致管道停止的错误。
 
 > [!NOTE]
-> 对于终止错误，该 cmdlet 将调用[Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)方法。 对于非终止错误，该 cmdlet 将调用[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)方法。。
+> 对于终止错误，该 cmdlet 将调用 [Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 方法。 对于非终止错误，该 cmdlet 将调用 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 方法。。
 
 ## <a name="error-record-design"></a>错误记录设计
 
@@ -37,7 +39,7 @@ ms.locfileid: "87786588"
 
 ### <a name="the-error-category"></a>错误类别
 
-错误记录的错误类别是由[Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory)枚举提供的预定义常量之一。 此信息可通过[ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)对象的[ErrorRecord. CategoryInfo](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo)属性获得。）的信息可供使用。
+错误记录的错误类别是由 [Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) 枚举提供的预定义常量之一。 此信息可通过[ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)对象的[ErrorRecord. CategoryInfo](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo)属性获得。）的信息可供使用。
 
 Cmdlet 可以指定 CloseError、OpenError、InvalidType、ReadError 和 WriteError 类别以及其他错误类别。 主机应用程序可以使用错误类别来捕获错误组。
 
@@ -53,7 +55,7 @@ Cmdlet 可以指定 CloseError、OpenError、InvalidType、ReadError 和 WriteEr
 
 ### <a name="the-fqid"></a>FQID
 
-FQID 是可用于标识错误的最具体的信息。 它是一个字符串，其中包含 cmdlet 定义的标识符、cmdlet 类的名称以及报告错误的源。 通常，错误记录类似于 Windows 事件日志的事件记录。 FQID 类似于以下元组，该元组标识事件记录的类： (*日志名称*、*源*、*事件 ID*) 。
+FQID 是可用于标识错误的最具体的信息。 它是一个字符串，其中包含 cmdlet 定义的标识符、cmdlet 类的名称以及报告错误的源。 通常，错误记录类似于 Windows 事件日志的事件记录。 FQID 类似于以下元组，该元组标识事件记录的类： (*日志名称*、 *源*、 *事件 ID*) 。
 
 FQID 设计为作为单个字符串被检查。 但是，在这种情况下，错误标识符旨在由主机应用程序进行分析。 下面的示例是一个格式正确的完全限定的错误标识符。
 

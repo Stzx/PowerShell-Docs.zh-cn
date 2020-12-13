@@ -1,16 +1,18 @@
 ---
-title: 如何支持作业 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7ae4e6c118965c73ba6b3d4d38b1bd3171d2b3da
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何支持作业
+description: 如何支持作业
+ms.openlocfilehash: d755093e941aa660032f8d283cb43ba5eeec8c4b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786622"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666971"
 ---
 # <a name="how-to-support-jobs"></a>如何支持作业
 
-此示例演示如何在编写 cmdlet 时支持作业。 如果希望用户将 cmdlet 作为后台作业运行，则必须包括以下过程中所述的代码。 有关后台作业的详细信息，请参阅[后台作业](./background-jobs.md)。
+此示例演示如何在编写 cmdlet 时支持作业。 如果希望用户将 cmdlet 作为后台作业运行，则必须包括以下过程中所述的代码。 有关后台作业的详细信息，请参阅 [后台作业](./background-jobs.md)。
 
 ## <a name="to-support-jobs"></a>支持作业
 
@@ -30,7 +32,7 @@ ms.locfileid: "87786622"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06AsJobParam](msh_samplesGetProc06#GetProc06AsJobParam)]  -->
 
-2. 创建一个派生自[system.object](/dotnet/api/System.Management.Automation.Job)类的对象。 此对象可以是自定义作业对象，也可以是 Windows PowerShell 提供的作业对象之一，如[Pseventjob](/dotnet/api/System.Management.Automation.PSEventJob)对象。
+2. 创建一个派生自 [system.object](/dotnet/api/System.Management.Automation.Job) 类的对象。 此对象可以是自定义作业对象，也可以是 Windows PowerShell 提供的作业对象之一，如 [Pseventjob](/dotnet/api/System.Management.Automation.PSEventJob) 对象。
 
     下面的示例演示一个自定义作业对象。
 
@@ -40,7 +42,7 @@ ms.locfileid: "87786622"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobObject](msh_samplesGetProc06#GetProc06JobObject)]  -->
 
-3. 在记录处理方法中，添加 `if` 语句以检测 cmdlet 是否应作为作业运行。 下面的代码使用[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法来实现。
+3. 在记录处理方法中，添加 `if` 语句以检测 cmdlet 是否应作为作业运行。 下面的代码使用 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法来实现。
 
     ```csharp
     protected override void ProcessRecord()
@@ -124,7 +126,7 @@ ms.locfileid: "87786622"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobClass](msh_samplesGetProc06#GetProc06JobClass)]  -->
 
-5. 如果该 cmdlet 执行工作，请调用[WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject)方法，以将进程对象返回到管道。 如果以作业的形式执行工作，请将子作业添加到作业。
+5. 如果该 cmdlet 执行工作，请调用 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 方法，以将进程对象返回到管道。 如果以作业的形式执行工作，请将子作业添加到作业。
 
     ```csharp
     void DoProcessLogic(bool asJob)
@@ -149,7 +151,7 @@ ms.locfileid: "87786622"
 
 ## <a name="example"></a>示例
 
-下面的示例代码演示了可在内部或通过使用后台作业检索进程的**Get Proc** cmdlet 的代码。
+下面的示例代码演示了可在内部或通过使用后台作业检索进程的 **Get Proc** cmdlet 的代码。
 
 ```csharp
 using System;

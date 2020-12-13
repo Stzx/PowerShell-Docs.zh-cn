@@ -1,12 +1,14 @@
 ---
-title: 用于 WideControl (Format) 的 WideItem 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7728f960a67faa99eaafb4a4934674e119b8af27
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for WideItem for WideControl (Format)
+description: PropertyName Element for WideItem for WideControl (Format)
+ms.openlocfilehash: 1d4d5eaf7708dfbd7997122fac156a36487538ea
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780468"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665611"
 ---
 # <a name="propertyname-element-for-wideitem-for-widecontrol-format"></a>PropertyName Element for WideItem for WideControl (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87780468"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[WideItem 元素 (格式) ](./wideitem-element-for-widecontrol-format.md)|定义其值在宽视图中显示的属性或脚本。|
 
@@ -44,11 +46,11 @@ ms.locfileid: "87780468"
 
 ## <a name="remarks"></a>备注
 
-有关宽视图组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+有关宽视图组件的详细信息，请参阅 [创建宽视图](./creating-a-wide-view.md)。
 
 ## <a name="example"></a>示例
 
-此示例显示了一个宽视图，其中[显示了 ProcessName 对象的](/dotnet/api/System.Diagnostics.Process)"" 属性的值。
+此示例显示了一个宽视图，其中 [显示了 ProcessName 对象的](/dotnet/api/System.Diagnostics.Process) "" 属性的值。
 
 ```xml
 View>

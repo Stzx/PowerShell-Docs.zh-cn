@@ -1,12 +1,14 @@
 ---
-title: EnumerableExpansion (Format) 的 SelectionCondition for EntrySelectedBy 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c0081cb724ccaf1c04241aafa177880d7c0e5dbe
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion (Format)
+description: PropertyName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion (Format)
+ms.openlocfilehash: 8e28118894661b50e90a5ccc86a36fbbe77e4b03
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783460"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665832"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format"></a>PropertyName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion (Format)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87783460"
 
 ## <a name="remarks"></a>备注
 
-选择条件必须指定至少一个要计算的属性名称或脚本，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+选择条件必须指定至少一个要计算的属性名称或脚本，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 

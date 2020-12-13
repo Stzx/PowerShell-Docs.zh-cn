@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的 CustomControl 的 CustomEntries 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2221d1bb94159697ff10466e4606d6d54e117e30
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomEntries Element for CustomControl for GroupBy (Format)
+description: CustomEntries Element for CustomControl for GroupBy (Format)
+ms.openlocfilehash: cde59d38b83930cb64a3a0040891783e4ab96723
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785942"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666784"
 ---
 # <a name="customentries-element-for-customcontrol-for-groupby-format"></a>CustomEntries Element for CustomControl for GroupBy (Format)
 
@@ -32,13 +34,13 @@ ms.locfileid: "87785942"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomEntry Element for CustomControl for GroupBy (Format)](./customentry-element-for-customcontrol-for-groupby-format.md)|必需的元素。<br /><br /> 提供控件的定义。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomControl Element for GroupBy (Format)](./customcontrol-element-for-groupby-format.md)|定义显示新组的自定义控件。|
 

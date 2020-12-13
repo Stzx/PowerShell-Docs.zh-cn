@@ -1,12 +1,14 @@
 ---
-title: 用于 CustomControl for View (Format) 的 ExpressionBinding 的 CustomControlName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6f1ffca045b7efcecb4dce4e788a8c508fa6ef08
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomControlName Element for ExpressionBinding for CustomControl for View (Format)
+description: CustomControlName Element for ExpressionBinding for CustomControl for View (Format)
+ms.openlocfilehash: 24b27428c07d7178f0069f6d0e5b7ffc555efe34
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783749"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666801"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format"></a>CustomControlName Element for ExpressionBinding for CustomControl for View (Format)
 

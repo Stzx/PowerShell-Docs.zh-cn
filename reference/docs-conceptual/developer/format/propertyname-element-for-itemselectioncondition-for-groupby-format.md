@@ -1,12 +1,14 @@
 ---
-title: 对于 GroupBy (Format) ，为 ItemSelectionCondition 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f6d671035bfd2ef6323b638fdd951bb020bd6548
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for ItemSelectionCondition for GroupBy (Format)
+description: PropertyName Element for ItemSelectionCondition for GroupBy (Format)
+ms.openlocfilehash: 9667a389ded33d0744f0f7f8d739635a8b21d98b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780876"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666104"
 ---
 # <a name="propertyname-element-for-itemselectioncondition-for-groupby-format"></a>PropertyName Element for ItemSelectionCondition for GroupBy (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87780876"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ItemSelectionCondition Element for ExpressionBinding for GroupBy (Format)](./itemselectioncondition-element-for-expressionbinding-for-groupby-format.md)|定义要使用此控件必须存在的条件。|
 
@@ -44,7 +46,7 @@ ms.locfileid: "87780876"
 
 ## <a name="remarks"></a>备注
 
-如果使用此元素，则在定义选择条件时，不能指定[ScriptBlock](./scriptblock-element-for-itemselectioncondition-for-groupby-format.md)元素。
+如果使用此元素，则在定义选择条件时，不能指定 [ScriptBlock](./scriptblock-element-for-itemselectioncondition-for-groupby-format.md) 元素。
 
 ## <a name="see-also"></a>另请参阅
 

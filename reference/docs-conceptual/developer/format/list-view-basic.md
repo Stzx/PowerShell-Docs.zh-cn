@@ -1,16 +1,18 @@
 ---
-title: 列表视图 (基本) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 74ff8f6eee0a9358c123455aa00736a11e7f085d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 列表视图 (Basic)
+description: 列表视图 (Basic)
+ms.openlocfilehash: d80ac9c6143b976d8bc13e2b184e4f5a2f8a37ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783545"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666631"
 ---
 # <a name="list-view-basic"></a>列表视图 (Basic)
 
-此示例演示如何实现显示 System.serviceprocess. Servicecontroller 的基本列表视图[？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)由[get-help](/powershell/module/microsoft.powershell.management/get-service) Cmdlet 返回的 Fullname 对象。 有关列表视图组件的详细信息，请参阅[创建列表视图](./creating-a-list-view.md)。
+此示例演示如何实现显示 System.serviceprocess. Servicecontroller 的基本列表视图 [？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 由 [get-help](/powershell/module/microsoft.powershell.management/get-service) Cmdlet 返回的 Fullname 对象。 有关列表视图组件的详细信息，请参阅 [创建列表视图](./creating-a-list-view.md)。
 
 ### <a name="to-load-this-formatting-file"></a>加载此格式设置文件
 
@@ -27,19 +29,19 @@ ms.locfileid: "87783545"
 
 此格式化文件演示了以下 XML 元素：
 
-- 视图的[名称](./name-element-for-view-format.md)元素。
+- 视图的 [名称](./name-element-for-view-format.md) 元素。
 
-- 定义视图要显示的对象的[ViewSelectedBy](./viewselectedby-element-format.md)元素。
+- 定义视图要显示的对象的 [ViewSelectedBy](./viewselectedby-element-format.md) 元素。
 
-- 定义视图显示的属性的[ListControl](./listcontrol-element-format.md)元素。
+- 定义视图显示的属性的 [ListControl](./listcontrol-element-format.md) 元素。
 
 - 定义在列表视图的行中显示的[内容的包含项元素。](./listitem-element-for-listitems-for-listcontrol-format.md)
 
-- 定义要显示的属性的[PropertyName](./propertyname-element-for-listitem-for-listcontrol-format.md)元素。
+- 定义要显示的属性的 [PropertyName](./propertyname-element-for-listitem-for-listcontrol-format.md) 元素。
 
 ## <a name="example"></a>示例
 
-下面的 XML 定义显示 System.serviceprocess. Servicecontroller 的四个属性的列表视图[。Displayproperty = Fullname](/dotnet/api/System.ServiceProcess.ServiceController)对象。 在每一行中，属性的名称后跟属性的值。
+下面的 XML 定义显示 System.serviceprocess. Servicecontroller 的四个属性的列表视图 [。Displayproperty = Fullname](/dotnet/api/System.ServiceProcess.ServiceController) 对象。 在每一行中，属性的名称后跟属性的值。
 
 ```xml
 <Configuration>
@@ -72,7 +74,7 @@ ms.locfileid: "87783545"
 </Configuration>
 ```
 
-下面的示例演示 Windows PowerShell 如何显示[system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)加载此格式化文件之后的 Fullname 对象。
+下面的示例演示 Windows PowerShell 如何显示 [system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 加载此格式化文件之后的 Fullname 对象。
 
 ```powershell
 Get-Service f*

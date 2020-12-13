@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的 Controls 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 26b7e73afd465b1be9632cd71a75e4be6cc4aeca
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Controls Element for View (Format)
+description: Controls Element for View (Format)
+ms.openlocfilehash: 0e41f9ad35a0c45b615251417198a47bc7feb760
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786163"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668059"
 ---
 # <a name="controls-element-for-view-format"></a>Controls Element for View (Format)
 
@@ -32,13 +34,13 @@ ms.locfileid: "87786163"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View (格式的控件控件元素) ](./control-element-for-controls-for-view-format.md)|定义视图可以使用的控件。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View Element (Format)](./view-element-format.md)|定义一个视图，该视图用于显示一个或多个 .NET 对象的成员。|
 

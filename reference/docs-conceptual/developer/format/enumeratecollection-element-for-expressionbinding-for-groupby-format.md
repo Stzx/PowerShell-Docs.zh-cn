@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的 ExpressionBinding 的 EnumerateCollection 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 414626dcd54ebeff608fe0908b9a45a1ad2d943f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EnumerateCollection Element for ExpressionBinding for GroupBy (Format)
+description: EnumerateCollection Element for ExpressionBinding for GroupBy (Format)
+ms.openlocfilehash: 7c8258df879a5386b1eae4b5ad4b6bd7f7d17b8e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774212"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667957"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-groupby-format"></a>EnumerateCollection Element for ExpressionBinding for GroupBy (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87774212"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)|定义控件显示的数据。|
 

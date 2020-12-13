@@ -1,21 +1,21 @@
 ---
-title: 如何验证参数模式 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidatePattern attribute, example
-ms.openlocfilehash: 35104e786d4b809a711d97fea52ae0e348dd5ca3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何验证参数模式
+description: 如何验证参数模式
+ms.openlocfilehash: ab5777c918a53c0a3900f87c52e7f14f9cb9b726
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782083"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666903"
 ---
 # <a name="how-to-validate-an-argument-pattern"></a>如何验证参数模式
 
 此示例演示如何指定一个验证规则，Windows PowerShell 运行时可使用该规则在运行 cmdlet 之前检查参数参数的字符模式。 可以通过声明 ValidatePattern 属性设置此验证规则。
 
 > [!NOTE]
-> 有关用于定义此属性的类的详细信息，请参阅[Validatepatternattribute](/dotnet/api/System.Management.Automation.ValidatePatternAttribute)。
+> 有关用于定义此属性的类的详细信息，请参阅 [Validatepatternattribute](/dotnet/api/System.Management.Automation.ValidatePatternAttribute)。
 
 ## <a name="to-validate-an-argument-pattern"></a>验证参数模式
 
@@ -33,7 +33,7 @@ ms.locfileid: "87782083"
     private int inputData;
     ```
 
-有关如何声明此特性的详细信息，请参阅[ValidatePattern 特性声明](./validatepattern-attribute-declaration.md)。
+有关如何声明此特性的详细信息，请参阅 [ValidatePattern 特性声明](./validatepattern-attribute-declaration.md)。
 
 ## <a name="see-also"></a>另请参阅
 

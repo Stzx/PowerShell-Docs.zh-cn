@@ -1,22 +1,24 @@
 ---
-title: 如何向提供程序帮助主题添加“另请参阅”部分
 ms.date: 09/12/2016
-ms.openlocfilehash: 54adf4bb941888583eb749b7b5322b27d84c7af7
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 如何向提供程序帮助主题添加“另请参阅”部分
+description: 如何向提供程序帮助主题添加“另请参阅”部分
+ms.openlocfilehash: df0b14ba84e04baf404081944ef62ef6745d74b2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893469"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667651"
 ---
 # <a name="how-to-add-a-see-also-section-to-a-provider-help-topic"></a>如何向提供程序帮助主题添加“另请参阅”部分
 
-本部分介绍如何填充提供程序帮助主题的 "**另请参阅**" 部分。
+本部分介绍如何填充提供程序帮助主题的 " **另请参阅** " 部分。
 
-"**另请参阅**" 部分包含与提供程序相关的主题列表，或可帮助用户更好地了解和使用该提供程序。 主题列表可以包含 Windows PowerShell 中的 cmdlet 帮助、提供程序帮助和概念（"关于"）帮助主题。 它还可以包括对书籍、纸张和联机主题的引用，包括当前提供程序帮助主题的联机版本。
+" **另请参阅** " 部分包含与提供程序相关的主题列表，或可帮助用户更好地了解和使用该提供程序。 主题列表可以包括 cmdlet 帮助、提供程序帮助和概念 ( "关于" ) Windows PowerShell 中的帮助主题。 它还可以包括对书籍、纸张和联机主题的引用，包括当前提供程序帮助主题的联机版本。
 
 请参阅联机主题，以纯文本形式提供 URI 或搜索词。 `Get-Help`Cmdlet 不会链接或重定向到列表中的任何主题。 此外， `Online` cmdlet 的参数不适 `Get-Help` 用于提供程序帮助。
 
-"**另请参见**" 部分从 `RelatedLinks` 元素及其包含的标记创建。
+" **另请参见** " 部分从 `RelatedLinks` 元素及其包含的标记创建。
 下面的 XML 演示如何添加标记。
 
 ### <a name="to-add-see-also-topics"></a>要添加的另请参阅主题
@@ -32,7 +34,7 @@ ms.locfileid: "86893469"
     </providerHelp>
     ```
 
-1. 对于 "**另请参见**" 部分中的每个主题，在 `RelatedLinks` 元素中添加一个 `navigationLink` 元素。 然后，在每个 `navigationLink` 元素中添加一个 `linkText` 元素和一个 `uri` 元素。 如果不使用 `uri` 元素，则可以将其添加为空元素（ \<uri/> ）。
+1. 对于 " **另请参见** " 部分中的每个主题，在 `RelatedLinks` 元素中添加一个 `navigationLink` 元素。 然后，在每个 `navigationLink` 元素中添加一个 `linkText` 元素和一个 `uri` 元素。 如果不使用 `uri` 元素，则可以将其作为空元素添加 (\<uri/>) 。
 
    例如：
 

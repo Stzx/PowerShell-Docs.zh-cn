@@ -1,12 +1,14 @@
 ---
-title: 如何从 Cmdlet 内调用 Cmdlet |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2d5b0788d3310d0dd7b311f86c497afe8eec9d11
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何从 Cmdlet 内部调用 Cmdlet
+description: 如何从 Cmdlet 内部调用 Cmdlet
+ms.openlocfilehash: d137ac895f66000329de76a2c16a74b02c0e82ca
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784140"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667039"
 ---
 # <a name="how-to-invoke-a-cmdlet-from-within-a-cmdlet"></a>如何从 Cmdlet 内部调用 Cmdlet
 
@@ -17,7 +19,7 @@ Get-Process -name [a-t]
 ```
 
 > [!IMPORTANT]
-> 你可以仅调用直接从[system.web](/dotnet/api/System.Management.Automation.Cmdlet)类派生的 cmdlet。 不能调用派生自[PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet)类的 cmdlet。
+> 你可以仅调用直接从 [system.web](/dotnet/api/System.Management.Automation.Cmdlet) 类派生的 cmdlet。 不能调用派生自 [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 类的 cmdlet。
 
 ## <a name="to-invoke-a-cmdlet-from-within-a-cmdlet"></a>从 cmdlet 内调用 cmdlet
 
@@ -29,7 +31,7 @@ Get-Process -name [a-t]
     using Microsoft.PowerShell.Commands;  // Windows PowerShell assembly.
     ```
 
-2. 在 cmdlet 的输入处理方法中，创建要调用的 cmdlet 的新实例。 在此示例中，将创建一个类型为[Getprocesscommand](/dotnet/api/Microsoft.PowerShell.Commands.GetProcessCommand)的对象，并在其中包含调用 cmdlet 时使用的参数的字符串。
+2. 在 cmdlet 的输入处理方法中，创建要调用的 cmdlet 的新实例。 在此示例中，将创建一个类型为 [Getprocesscommand](/dotnet/api/Microsoft.PowerShell.Commands.GetProcessCommand) 的对象，并在其中包含调用 cmdlet 时使用的参数的字符串。
 
     ```csharp
     GetProcessCommand gp = new GetProcessCommand();
@@ -48,7 +50,7 @@ Get-Process -name [a-t]
 
 ## <a name="example"></a>示例
 
-在此示例中， `Get-Process` cmdlet 是从 cmdlet 的[BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)方法中调用的。
+在此示例中， `Get-Process` cmdlet 是从 cmdlet 的 [BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 方法中调用的。
 
 ```csharp
 using System;

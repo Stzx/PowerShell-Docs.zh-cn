@@ -1,16 +1,18 @@
 ---
-title: 命名帮助文件
 ms.date: 09/12/2016
-ms.openlocfilehash: ea95e6d6c87e553ed11fe6e3f058fc9a1b3d03f8
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 命名帮助文件
+description: 命名帮助文件
+ms.openlocfilehash: b77af8f9b9510785a4198fed9da1263184a27b99
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893265"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667583"
 ---
 # <a name="naming-help-files"></a>命名帮助文件
 
-本主题说明如何命名基于 XML 的帮助文件，以便[get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet 可以找到它。 每个命令类型的名称要求不同。
+本主题说明如何命名基于 XML 的帮助文件，以便 [get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet 可以找到它。 每个命令类型的名称要求不同。
 
 ## <a name="cmdlet-help-files"></a>Cmdlet 帮助文件
 
@@ -36,7 +38,7 @@ ms.locfileid: "86893265"
 
 ## <a name="function-help-files"></a>函数帮助文件
 
-可以通过使用[基于注释的帮助](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)或 XML 帮助文件中介绍的方式记录函数。 在 XML 文件中记录函数时，该函数必须有一个 `.ExternalHelp` comment 关键字，该关键字将函数与 XML 文件相关联。 否则，此 `Get-Help` cmdlet 将无法找到帮助文件。
+可以通过使用 [基于注释的帮助](/powershell/module/microsoft.powershell.core/about/about_comment_based_help) 或 XML 帮助文件中介绍的方式记录函数。 在 XML 文件中记录函数时，该函数必须有一个 `.ExternalHelp` comment 关键字，该关键字将函数与 XML 文件相关联。 否则，此 `Get-Help` cmdlet 将无法找到帮助文件。
 
 函数帮助文件的名称没有技术要求。 但是，最佳做法是为定义该函数的脚本模块命名帮助文件。 例如，以下函数是在文件中定义的 `MyModule.psm1` 。
 
@@ -59,6 +61,6 @@ CIM 命令在 CDXML 文件中定义，这些文件可以作为嵌套模块包含
 
 `<ScriptModule>.psm1-help.xml`
 
-与其他脚本化命令不同，脚本工作流不需要 `.ExternalHelp` 使用 comment 关键字将它们与帮助文件相关联。 相反，PowerShell 会在特定于 XML 的帮助文件的模块目录的 UI 区域性特定子目录中搜索，并在所有文件中查找脚本工作流的帮助。 `.ExternalHelp`comment 关键字被忽略。
+与其他脚本化命令不同，脚本工作流不需要 `.ExternalHelp` 使用 comment 关键字将它们与帮助文件相关联。 相反，PowerShell 会在特定于 XML 的帮助文件的模块目录的 UI 区域性特定子目录中搜索，并在所有文件中查找脚本工作流的帮助。 `.ExternalHelp` comment 关键字被忽略。
 
 由于 `.ExternalHelp` 忽略了 comment 关键字，因此， `Get-Help` 仅当模块中包含脚本工作流时，cmdlet 才能找到这些脚本工作流的帮助。

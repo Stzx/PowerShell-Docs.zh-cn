@@ -1,12 +1,14 @@
 ---
-title: 对于 GroupBy (Format) ，为 CustomItem 的换行符元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c998c9a85238feaa8bc48fd3eb4f66b4f7f8d66
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: NewLine Element for CustomItem for GroupBy (Format)
+description: NewLine Element for CustomItem for GroupBy (Format)
+ms.openlocfilehash: 7068288e40bf4b7539290ab5deb5f8fe086c4c9e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783511"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666393"
 ---
 # <a name="newline-element-for-customitem-for-groupby-format"></a>NewLine Element for CustomItem for GroupBy (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87783511"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomItem Element for CustomEntry for GroupBy (Format)](./customitem-element-for-customentry-for-groupby-format.md)|定义自定义控件视图的控件。|
 

@@ -1,16 +1,18 @@
 ---
-title: 列表视图 (GroupBy) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7956d13e196454a3f6da185e9be74f9d3cb8ef63
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 列表视图 (GroupBy)
+description: 列表视图 (GroupBy)
+ms.openlocfilehash: e039c38d1e4e93f65a508fe60aaaf35c64ebe2ed
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773396"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666614"
 ---
 # <a name="list-view-groupby"></a>列表视图 (GroupBy)
 
-此示例演示如何实现将列表行分为多个组的列表视图。 此列表视图显示[system.serviceprocess. Servicecontroller 的属性？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)由[get-help](/powershell/module/Microsoft.PowerShell.Management/Get-Service) Cmdlet 返回的 Fullname 对象。 有关列表视图组件的详细信息，请参阅[创建列表视图](./creating-a-list-view.md)。
+此示例演示如何实现将列表行分为多个组的列表视图。 此列表视图显示 [system.serviceprocess. Servicecontroller 的属性？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 由 [get-help](/powershell/module/Microsoft.PowerShell.Management/Get-Service) Cmdlet 返回的 Fullname 对象。 有关列表视图组件的详细信息，请参阅 [创建列表视图](./creating-a-list-view.md)。
 
 ### <a name="to-load-this-formatting-file"></a>加载此格式设置文件
 
@@ -27,21 +29,21 @@ ms.locfileid: "87773396"
 
 此格式化文件演示了以下 XML 元素：
 
-- 视图的[名称](./name-element-for-view-format.md)元素。
+- 视图的 [名称](./name-element-for-view-format.md) 元素。
 
-- 定义视图要显示的对象的[ViewSelectedBy](./viewselectedby-element-format.md)元素。
+- 定义视图要显示的对象的 [ViewSelectedBy](./viewselectedby-element-format.md) 元素。
 
-- 定义新的对象组显示方式的[GroupBy](./viewselectedby-element-format.md)元素。
+- 定义新的对象组显示方式的 [GroupBy](./viewselectedby-element-format.md) 元素。
 
-- 定义视图显示的属性的[ListControl](./listcontrol-element-format.md)元素。
+- 定义视图显示的属性的 [ListControl](./listcontrol-element-format.md) 元素。
 
 - 定义在列表视图的行中显示的[内容的包含项元素。](./listitem-element-for-listitems-for-listcontrol-format.md)
 
-- 定义要显示的属性的[PropertyName](./propertyname-element-for-listitem-for-listcontrol-format.md)元素。
+- 定义要显示的属性的 [PropertyName](./propertyname-element-for-listitem-for-listcontrol-format.md) 元素。
 
 ## <a name="example"></a>示例
 
-下面的 XML 定义一个列表视图，当[system.serviceprocess](/dotnet/api/System.ServiceProcess.ServiceController.Status)属性的值发生更改时，它将启动一个新组。 每个组启动时，将显示自定义标签，其中包含属性的新值。
+下面的 XML 定义一个列表视图，当 [system.serviceprocess](/dotnet/api/System.ServiceProcess.ServiceController.Status) 属性的值发生更改时，它将启动一个新组。 每个组启动时，将显示自定义标签，其中包含属性的新值。
 
 ```xml
 <Configuration>
@@ -77,7 +79,7 @@ ms.locfileid: "87773396"
 </Configuration>
 ```
 
-下面的示例演示 Windows PowerShell 如何显示[system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)加载此格式化文件之后的 Fullname 对象。 Windows PowerShell 将自动添加组标签之前和之后添加的空白行。
+下面的示例演示 Windows PowerShell 如何显示 [system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 加载此格式化文件之后的 Fullname 对象。 Windows PowerShell 将自动添加组标签之前和之后添加的空白行。
 
 ```powershell
 Get-Service f*

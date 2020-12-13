@@ -1,12 +1,14 @@
 ---
-title: 如何替代输入处理方法 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b245dc56b78ce9b7f1dea80b5d4988057c2f125f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何替代输入处理方法
+description: 如何替代输入处理方法
+ms.openlocfilehash: 4e8d71a34a1480ce63435ac6cc5dce60d4219c03
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784106"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667005"
 ---
 # <a name="how-to-override-input-processing-methods"></a>如何替代输入处理方法
 
@@ -16,13 +18,13 @@ ms.locfileid: "87784106"
 
 - [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法用来处理传递给 Cmdlet 的对象。）。 Windows PowerShell 运行时为传递到 cmdlet 的每个对象调用此方法。
 
-- 使用的是一次后处理操作的 "[系统管理](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)程序" 方法。 Windows PowerShell 运行时只调用一次此方法。
+- 使用的是一次后处理操作的 " [系统管理](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 程序" 方法。 Windows PowerShell 运行时只调用一次此方法。
 
 ## <a name="to-override-the-beginprocessing-method"></a>重写 BeginProcessing 方法
 
-- 声明一个受保护的[BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)方法重写。
+- 声明一个受保护的 [BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 方法重写。
 
-下面的类打印示例消息。 若要使用此类，请更改 Cmdlet 属性中的动词和名词，更改类的名称以反映新的动词和名词，然后将所需的功能添加到[BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)方法的重写。
+下面的类打印示例消息。 若要使用此类，请更改 Cmdlet 属性中的动词和名词，更改类的名称以反映新的动词和名词，然后将所需的功能添加到 [BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 方法的重写。
 
 ```csharp
 [Cmdlet(VerbsDiagnostic.Test, "BeginProcessingClass")]
@@ -43,9 +45,9 @@ public class TestBeginProcessingClassTemplate : Cmdlet
 
 ## <a name="to-override-the-processrecord-method"></a>重写 ProcessRecord 方法
 
-- 声明一个受保护的[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法重写。
+- 声明一个受保护的 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法重写。
 
-下面的类打印示例消息。 若要使用此类，请更改 Cmdlet 属性中的动词和名词，更改类的名称以反映新的动词和名词，然后将所需的功能添加到[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法的重写。
+下面的类打印示例消息。 若要使用此类，请更改 Cmdlet 属性中的动词和名词，更改类的名称以反映新的动词和名词，然后将所需的功能添加到 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法的重写。
 
 ```csharp
 [Cmdlet(VerbsDiagnostic.Test, "ProcessRecordClass")]
@@ -67,7 +69,7 @@ public class TestProcessRecordClassTemplate : Cmdlet
 
 ## <a name="to-override-the-endprocessing-method"></a>重写 EndProcessing 方法
 
-- 声明一个受保护的[system.web](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)方法重写。
+- 声明一个受保护的 [system.web](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 方法重写。
 
 下面的类输出示例。 若要使用此类，请更改 Cmdlet 特性中的谓词和名词，更改类的名称以反映新的动词和名词，然后将所需的功能添加到重[写的](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)
 

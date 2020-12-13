@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的 CustomEntry 的 CustomItem 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 747ea14e7118be62ebee00e7d80af2dccb5c8353
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomItem Element for CustomEntry for Controls for View (Format)
+description: CustomItem Element for CustomEntry for Controls for View (Format)
+ms.openlocfilehash: 67bff97c27cfedf046b17eea438efcd66ae2ee4a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785840"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666750"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-view-format"></a>CustomItem Element for CustomEntry for Controls for View (Format)
 

@@ -1,12 +1,14 @@
 ---
-title: GroupBy (格式) 的 ScriptBlock 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e761e02a7910cd598449d564e827889162da9f25
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for GroupBy (Format)
+description: ScriptBlock Element for GroupBy (Format)
+ms.openlocfilehash: 117cbef93889046626741449886a1caaa39815cb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787676"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665241"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>ScriptBlock Element for GroupBy (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87787676"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[GroupBy Element for View (Format)](./groupby-element-for-view-format.md)|定义一组 .NET 对象的显示方式。|
 
@@ -46,7 +48,7 @@ ms.locfileid: "87787676"
 
 每当此脚本的值发生更改时，PowerShell 就会启动一个新组。
 
-如果指定此元素，则不能指定[PropertyName](propertyname-element-for-groupby-format.md)元素来启动新组。
+如果指定此元素，则不能指定 [PropertyName](propertyname-element-for-groupby-format.md) 元素来启动新组。
 
 ## <a name="see-also"></a>另请参阅
 

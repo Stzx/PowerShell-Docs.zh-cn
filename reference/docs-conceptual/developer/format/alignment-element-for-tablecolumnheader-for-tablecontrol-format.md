@@ -1,12 +1,14 @@
 ---
-title: TableControl 的 TableColumnHeader 的对齐元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1bf395b84af90d725c14b2f0ef569f72b5fcc613
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Alignment Element for TableColumnHeader for TableControl (Format)
+description: Alignment Element for TableColumnHeader for TableControl (Format)
+ms.openlocfilehash: cf8b90c12c28951283b5870186e2c88d427318a5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783919"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666818"
 ---
 # <a name="alignment-element-for-tablecolumnheader-for-tablecontrol-format"></a>Alignment Element for TableColumnHeader for TableControl (Format)
 
@@ -50,7 +52,7 @@ ms.locfileid: "87783919"
 
 ## <a name="remarks"></a>备注
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="example"></a>示例
 

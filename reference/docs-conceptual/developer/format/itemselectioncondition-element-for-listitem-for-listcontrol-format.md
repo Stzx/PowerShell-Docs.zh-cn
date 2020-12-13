@@ -1,12 +1,14 @@
 ---
-title: 用于 ListControl (Format) 的 ItemSelectionCondition 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f5c388928668e03b96923130fb5849f637548f12
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ItemSelectionCondition Element for ListItem for ListControl (Format)
+description: ItemSelectionCondition Element for ListItem for ListControl (Format)
+ms.openlocfilehash: 13d925da10c2386123983d52b109c03a0c3c63ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783613"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667804"
 ---
 # <a name="itemselectioncondition-element-for-listitem-for-listcontrol-format"></a>ItemSelectionCondition Element for ListItem for ListControl (Format)
 
@@ -33,14 +35,14 @@ ms.locfileid: "87783613"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[PropertyName Element for ItemSelectionCondition for ListControl (Format)](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md)|可选元素。<br /><br /> 指定触发条件的 .NET 属性。|
 |[ScriptBlock Element for ItemSelectionCondition for ListControl (Format)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)|可选元素。<br /><br /> 指定触发条件的脚本。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ListItem Element for ListItems for ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)|定义其值显示在列表视图的行中的属性或脚本。|
 

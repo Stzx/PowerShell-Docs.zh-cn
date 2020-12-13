@@ -1,12 +1,14 @@
 ---
-title: ListControl 的 ScriptBlock 元素) 的 (格式 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 249d3e36b4246b7baa410815122f8e30340f1862
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for ListItem for ListControl (Format)
+description: ScriptBlock Element for ListItem for ListControl (Format)
+ms.openlocfilehash: 0635ac2622cc203a2dc895873621901d956f87da
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785449"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664971"
 ---
 # <a name="scriptblock-element-for-listitem-for-listcontrol-format"></a>ScriptBlock Element for ListItem for ListControl (Format)
 
@@ -34,9 +36,9 @@ ms.locfileid: "87785449"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
-|[ (格式的) 元素元素](./listitem-element-for-listitems-for-listcontrol-format.md)|定义其值显示在列表视图的行中的属性或脚本。|
+|[ (格式的) 元素元素 ](./listitem-element-for-listitems-for-listcontrol-format.md)|定义其值显示在列表视图的行中的属性或脚本。|
 
 ## <a name="text-value"></a>文本值
 
@@ -44,9 +46,9 @@ ms.locfileid: "87785449"
 
 ## <a name="remarks"></a>备注
 
-如果指定此元素，则不能指定[PropertyName](./propertyname-element-for-listitem-for-listcontrol-format.md)元素。
+如果指定此元素，则不能指定 [PropertyName](./propertyname-element-for-listitem-for-listcontrol-format.md) 元素。
 
-有关在列表视图中指定脚本的详细信息，请参阅[列表视图](./creating-a-list-view.md)。
+有关在列表视图中指定脚本的详细信息，请参阅 [列表视图](./creating-a-list-view.md)。
 
 ## <a name="example"></a>示例
 

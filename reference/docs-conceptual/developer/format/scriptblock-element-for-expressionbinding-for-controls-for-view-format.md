@@ -1,12 +1,14 @@
 ---
-title: 用于 ExpressionBinding 的控件的 ScriptBlock 元素)  (格式的控件 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 42946ed9f3241912366192b2ab2fdfb8f8582d83
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for ExpressionBinding for Controls for View (Format)
+description: ScriptBlock Element for ExpressionBinding for Controls for View (Format)
+ms.openlocfilehash: a68d6ecd4a9e1ff1d614d32325e99831be88e516
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785483"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665288"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-controls-for-view-format"></a>ScriptBlock Element for ExpressionBinding for Controls for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87785483"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for Controls for View (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|定义控件显示的数据。|
 

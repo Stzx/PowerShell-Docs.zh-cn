@@ -1,12 +1,14 @@
 ---
-title: StopProcessSample02 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: bab32f5a2544905bd858bcecf5b0b2e2d127e642
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: StopProcessSample02 示例
+description: StopProcessSample02 示例
+ms.openlocfilehash: 96171413f9f04d12460d48ba91c2c927e1856fd1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786435"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666886"
 ---
 # <a name="stopprocesssample02-sample"></a>StopProcessSample02 示例
 
@@ -54,11 +56,11 @@ ms.locfileid: "87786435"
 
 - 使用 Parameter 特性声明 cmdlet 参数。
 
-- 写入详细消息。 有关用于编写详细消息的方法的详细信息，请参阅[WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose)。
+- 写入详细消息。 有关用于编写详细消息的方法的详细信息，请参阅 [WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose)。
 
-- 正在写入错误消息。 有关用于写入错误消息的方法的详细信息，请参阅[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)。
+- 正在写入错误消息。 有关用于写入错误消息的方法的详细信息，请参阅 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)。
 
-- 写入警告消息。 有关用于编写警告消息的方法的详细信息，请参阅[WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning)。
+- 写入警告消息。 有关用于编写警告消息的方法的详细信息，请参阅 [WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning)。
 
 ## <a name="example"></a>示例
 

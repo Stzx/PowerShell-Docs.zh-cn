@@ -1,16 +1,18 @@
 ---
-title: 列表视图 (标签) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: da45bd8dce7ac2149de6a34c11d5419d6cb4ddb0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 列表视图 (Label)
+description: 列表视图 (Label)
+ms.openlocfilehash: 2d341ae95d025e0f95b5d88b96afb846b62b092f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773379"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666682"
 ---
 # <a name="list-view-labels"></a>列表视图 (Label)
 
-此示例演示如何实现一个列表视图，以显示列表中每一行的自定义标签。 此列表视图显示[system.serviceprocess. Servicecontroller 的属性？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)由[get-help](/powershell/module/Microsoft.PowerShell.Management/Get-Service) Cmdlet 返回的 Fullname 对象。 有关列表视图组件的详细信息，请参阅[创建列表视图](./creating-a-list-view.md)。
+此示例演示如何实现一个列表视图，以显示列表中每一行的自定义标签。 此列表视图显示 [system.serviceprocess. Servicecontroller 的属性？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 由 [get-help](/powershell/module/Microsoft.PowerShell.Management/Get-Service) Cmdlet 返回的 Fullname 对象。 有关列表视图组件的详细信息，请参阅 [创建列表视图](./creating-a-list-view.md)。
 
 ### <a name="to-load-this-formatting-file"></a>加载此格式设置文件
 
@@ -27,17 +29,17 @@ ms.locfileid: "87773379"
 
 此格式化文件演示了以下 XML 元素：
 
-- 视图的[名称](./name-element-for-view-format.md)元素。
+- 视图的 [名称](./name-element-for-view-format.md) 元素。
 
-- 定义视图要显示的对象的[ViewSelectedBy](./viewselectedby-element-format.md)元素。
+- 定义视图要显示的对象的 [ViewSelectedBy](./viewselectedby-element-format.md) 元素。
 
-- 定义视图显示的属性的[ListControl](./listcontrol-element-format.md)元素。
+- 定义视图显示的属性的 [ListControl](./listcontrol-element-format.md) 元素。
 
 - 定义在列表视图的行中显示的[内容的包含项元素。](./listitem-element-for-listitems-for-listcontrol-format.md)
 
 - [标签](./label-element-for-listitem-for-listcontrol-format.md)元素，用于定义在列表视图的行中显示的内容。
 
-- 定义要显示的属性的[PropertyName](./propertyname-element-for-listitem-for-listcontrol-format.md)元素。
+- 定义要显示的属性的 [PropertyName](./propertyname-element-for-listitem-for-listcontrol-format.md) 元素。
 
 ## <a name="example"></a>示例
 
@@ -81,7 +83,7 @@ ms.locfileid: "87773379"
 </Configuration>
 ```
 
-下面的示例演示 Windows PowerShell 如何显示[system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)加载此格式化文件之后的 Fullname 对象。
+下面的示例演示 Windows PowerShell 如何显示 [system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 加载此格式化文件之后的 Fullname 对象。
 
 ```powershell
 Get-Service f*

@@ -1,12 +1,14 @@
 ---
-title: TableControl 的 AutoSize 元素)  (格式 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f29b3eb278fd9ff29d2f6f4fbd000513dcaeec7b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: AutoSize Element for TableControl (Format)
+description: AutoSize Element for TableControl (Format)
+ms.openlocfilehash: 39d2f6f10796266cb6e9f1613b68337fb489278a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783885"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668110"
 ---
 # <a name="autosize-element-for-tablecontrol-format"></a>AutoSize Element for TableControl (Format)
 
@@ -40,7 +42,7 @@ ViewDefinitions 元素 (格式) View 元素 (格式) TableControl (格式) AutoS
 
 ## <a name="remarks"></a>备注
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

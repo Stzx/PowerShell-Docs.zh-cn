@@ -1,12 +1,14 @@
 ---
-title: 用于 CustomControl 的 CustomItem for 的行元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 89fdcfaf8fdea44921ec6967e8e152d81fd63cc9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: NewLine Element for CustomItem for CustomControl for View (Format)
+description: NewLine Element for CustomItem for CustomControl for View (Format)
+ms.openlocfilehash: 0e51d4b70206d2c9823d4fb788fd30f47d24f848
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785636"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666410"
 ---
 # <a name="newline-element-for-customitem-for-customcontrol-for-view-format"></a>NewLine Element for CustomItem for CustomControl for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87785636"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View (格式的 CustomEntry 的 CustomItem 元素) ](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|定义自定义控件视图的控件。|
 

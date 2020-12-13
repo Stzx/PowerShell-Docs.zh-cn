@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e83ebd49e4f3087c817b3cc8772889dbe85113aa
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for GroupBy (Format)
+description: PropertyName Element for GroupBy (Format)
+ms.openlocfilehash: 44351c46ff2386f967644fef4f423b3858dc1619
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785602"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666138"
 ---
 # <a name="propertyname-element-for-groupby-format"></a>PropertyName Element for GroupBy (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87785602"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[GroupBy Element for View (Format)](./groupby-element-for-view-format.md)|定义一组 .NET 对象的显示方式。|
 
@@ -46,7 +48,7 @@ ms.locfileid: "87785602"
 
 每当此属性的值发生更改时，Windows PowerShell 就会启动一个新组。
 
-如果指定此元素，则不能指定[ScriptBlock](./scriptblock-element-for-groupby-format.md)元素来启动新组。
+如果指定此元素，则不能指定 [ScriptBlock](./scriptblock-element-for-groupby-format.md) 元素来启动新组。
 
 ## <a name="example"></a>示例
 
@@ -60,7 +62,7 @@ ms.locfileid: "87785602"
 
 ```
 
-有关包括此元素的完整格式化文件的示例，请参阅[ (GroupBy) 的宽视图](./wide-view-groupby.md)。
+有关包括此元素的完整格式化文件的示例，请参阅 [ (GroupBy) 的宽视图 ](./wide-view-groupby.md)。
 
 ## <a name="see-also"></a>另请参阅
 

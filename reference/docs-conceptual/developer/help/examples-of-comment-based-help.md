@@ -1,18 +1,20 @@
 ---
-title: 基于注释的帮助的示例
 ms.date: 09/12/2016
-ms.openlocfilehash: fe5d054c84952367a4e7c2d5d9e32551a4e5c3a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 基于注释的帮助的示例
+description: 基于注释的帮助的示例
+ms.openlocfilehash: 35fe9103a261483c56af629f620dbd6b3c642e68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772291"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667634"
 ---
 # <a name="examples-of-comment-based-help"></a>基于注释的帮助的示例
 
 本主题包括演示如何对脚本和函数使用基于注释的帮助的示例。
 
-## <a name="example-1-comment-based-help-for-a-function"></a>示例1：函数的基于注释的帮助
+## <a name="example-1-comment-based-help-for-a-function"></a>示例1：为函数 Comment-Based 帮助
 
  以下示例函数包含基于注释的帮助。
 
@@ -134,7 +136,7 @@ C:\PS> get-help add-extension -full
             Set-Item
 ```
 
-## <a name="example-2-comment-based-help-for-a-script"></a>示例2：针对脚本的基于注释的帮助
+## <a name="example-2-comment-based-help-for-a-script"></a>示例2：为脚本 Comment-Based 帮助
 
 以下示例函数包含基于注释的帮助。
 
@@ -275,7 +277,7 @@ function Add-Extension
     #>
 ```
 
-结果与示例1的结果相同。 `Get-Help`解释参数说明，就好像它们带有 `.Parameter` 关键字一样。
+结果与示例1的结果相同。 `Get-Help` 解释参数说明，就好像它们带有 `.Parameter` 关键字一样。
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>示例4：重定向到 XML 文件
 
@@ -304,7 +306,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>示例5：重定向到其他帮助主题
 
-下面的代码摘自 `Help` PowerShell 中内置函数的开头，该函数一次显示一个屏幕帮助文本。 由于 Get-help cmdlet 的帮助主题描述了 Help 函数，因此 Help 函数使用 `.ForwardHelpTargetName` 和 `.ForwardHelpCategory` 关键字将用户重定向到 get-help Cmdlet 的帮助主题。
+下面的代码摘自 `Help` PowerShell 中内置函数的开头，该函数一次显示一个屏幕帮助文本。 由于 Get-Help cmdlet 的帮助主题描述了 Help 函数，因此 Help 函数使用 `.ForwardHelpTargetName` 和 `.ForwardHelpCategory` 关键字将用户重定向到 Get-Help cmdlet 帮助主题。
 
 ```powershell
 function help

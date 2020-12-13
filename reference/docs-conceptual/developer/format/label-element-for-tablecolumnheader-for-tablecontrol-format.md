@@ -1,12 +1,14 @@
 ---
-title: 适用于 TableControl (Format) 的 TableColumnHeader 标签元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b7b1d6825d3bca0e36b230415d19c2ac48377a46
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Label Element for TableColumnHeader for TableControl (Format)
+description: Label Element for TableColumnHeader for TableControl (Format)
+ms.openlocfilehash: fe4c209903c04e683b44e2bdcbf381adb6874ace
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785738"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667787"
 ---
 # <a name="label-element-for-tablecolumnheader-for-tablecontrol-format"></a>Label Element for TableColumnHeader for TableControl (Format)
 
@@ -47,7 +49,7 @@ ms.locfileid: "87785738"
 
 如果未指定标签，则使用在行中显示其值的属性的名称。
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="example"></a>示例
 

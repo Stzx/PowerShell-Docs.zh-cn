@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的 ExpressionBinding 的 EnumerateCollection 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 72c4528b79569f5065ea87696d1a08e501219ede
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EnumerateCollection Element for ExpressionBinding for Controls for View (Format)
+description: EnumerateCollection Element for ExpressionBinding for Controls for View (Format)
+ms.openlocfilehash: c7b15ee701252b310f79d272452f6ffd1c62d268
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773940"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667991"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-controls-for-view-format"></a>EnumerateCollection Element for ExpressionBinding for Controls for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87773940"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for Controls for View (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|定义控件显示的数据。|
 

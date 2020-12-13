@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的 Name 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 670b089f850fa4b39b7b100ca1e1ce45b05ea72d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Name Element for View (Format)
+description: Name Element for View (Format)
+ms.openlocfilehash: 5781bcdf7a0e1eb5e9c7e97bb6acc0a383dc0262
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773226"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666446"
 ---
 # <a name="name-element-for-view-format"></a>Name Element for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87773226"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View Element (Format)](./view-element-format.md)|定义一个视图，该视图用于显示一个或多个 .NET 对象的成员。|
 
@@ -44,11 +46,11 @@ ms.locfileid: "87773226"
 
 ## <a name="remarks"></a>备注
 
-有关不同视图类型的详细信息，请参阅下列主题：[表视图](./creating-a-table-view.md)、[列表视图](./creating-a-list-view.md)、[宽视图](./creating-a-wide-view.md)和[自定义视图](./creating-custom-controls.md)。
+有关不同视图类型的详细信息，请参阅下列主题： [表视图](./creating-a-table-view.md)、 [列表视图](./creating-a-list-view.md)、 [宽视图](./creating-a-wide-view.md)和 [自定义视图](./creating-custom-controls.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示一个 `View` 元素，该元素定义[System.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController)对象的表视图。 视图的名称为 "service"。
+下面的示例演示一个 `View` 元素，该元素定义 [System.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 对象的表视图。 视图的名称为 "service"。
 
 ```xml
 <View>

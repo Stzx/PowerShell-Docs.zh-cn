@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 集 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9595c9ca09148de05c69d60a2ede5688c3db61b0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 集
+description: Cmdlet 集
+ms.openlocfilehash: b4bcb6548f9d64a8cc5e3fc3a66c671a5566001d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774807"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668229"
 ---
 # <a name="cmdlet-sets"></a>Cmdlet 集
 
@@ -20,13 +22,13 @@ ms.locfileid: "87774807"
 
 - 重写基类中的相应输入处理方法。
 
-- 在所有 cmdlet 类上声明[CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute)属性，但不要在基类上声明它。
+- 在所有 cmdlet 类上声明 [CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 属性，但不要在基类上声明它。
 
-- 实现一个名为[add-pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn)或[Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn)类，其名称和说明反映一组 cmdlet。
+- 实现一个名为 [add-pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) 或 [Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) 类，其名称和说明反映一组 cmdlet。
 
 ## <a name="example"></a>示例
 
-下面的示例演示了一个基类，该基类由从同一基类派生的 Get Proc 和 Stop Proc cmdlet 使用。
+下面的示例演示了从同一基类派生 Get-Proc 和 Stop-Proc cmdlet 使用的基类。
 
 ```csharp
 using System;

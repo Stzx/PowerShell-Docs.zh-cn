@@ -1,12 +1,14 @@
 ---
-title: ListItems for ListControl (Format) 的元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e72a887e8bd1f93bacb663e3079eeaec34bdfa51
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListItem Element for ListItems for ListControl (Format)
+description: ListItem Element for ListItems for ListControl (Format)
+ms.openlocfilehash: 999491b7851aa4fa21667ad376d7e9853500ca08
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785670"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666546"
 ---
 # <a name="listitem-element-for-listitems-for-listcontrol-format"></a>ListItem Element for ListItems for ListControl (Format)
 
@@ -30,9 +32,9 @@ ms.locfileid: "87785670"
 
 以下各节描述了元素的属性、子元素和父元素 `ListItem` 。 只能指定一个属性或脚本。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
-None
+无
 
 ### <a name="child-elements"></a>子元素
 
@@ -52,7 +54,7 @@ None
 
 ## <a name="remarks"></a>备注
 
-有关列表视图组件的详细信息，请参阅[创建列表视图](./creating-a-list-view.md)。
+有关列表视图组件的详细信息，请参阅 [创建列表视图](./creating-a-list-view.md)。
 
 ## <a name="example"></a>示例
 

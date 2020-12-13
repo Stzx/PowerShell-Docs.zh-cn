@@ -1,16 +1,18 @@
 ---
-title: 宽视图 (基本) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d92c29c33c5104b6186ae53ccf544be197d657b1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 宽视图 (Basic)
+description: 宽视图 (Basic)
+ms.openlocfilehash: bfc647da9b78fcd22aac83cf330e466b6759471c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772393"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667685"
 ---
 # <a name="wide-view-basic"></a>宽视图 (Basic)
 
-此示例演示如何实现显示[system.serviceprocess. Servicecontroller 的基本视图？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)该 cmdlet 返回的 Fullname 对象 `Get-Service` 。 有关宽视图组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+此示例演示如何实现显示 [system.serviceprocess. Servicecontroller 的基本视图？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 该 cmdlet 返回的 Fullname 对象 `Get-Service` 。 有关宽视图组件的详细信息，请参阅 [创建宽视图](./creating-a-wide-view.md)。
 
 ### <a name="to-load-this-formatting-file"></a>加载此格式设置文件
 
@@ -27,15 +29,15 @@ ms.locfileid: "87772393"
 
 此格式化文件演示了以下 XML 元素：
 
-- 视图的[名称](./name-element-for-view-format.md)元素。
+- 视图的 [名称](./name-element-for-view-format.md) 元素。
 
-- 定义视图要显示的对象的[ViewSelectedBy](./viewselectedby-element-format.md)元素。
+- 定义视图要显示的对象的 [ViewSelectedBy](./viewselectedby-element-format.md) 元素。
 
-- 定义视图显示的属性的[WideItem](./wideitem-element-for-widecontrol-format.md)元素。
+- 定义视图显示的属性的 [WideItem](./wideitem-element-for-widecontrol-format.md) 元素。
 
 ## <a name="example"></a>示例
 
-下面的 XML 定义显示[system.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController.ServiceName)属性值的宽视图。
+下面的 XML 定义显示 [system.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController.ServiceName) 属性值的宽视图。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -61,7 +63,7 @@ ms.locfileid: "87772393"
 </Configuration>
 ```
 
-下面的示例演示 Windows PowerShell 如何显示[system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)加载此格式化文件之后的 Fullname 对象。
+下面的示例演示 Windows PowerShell 如何显示 [system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 加载此格式化文件之后的 Fullname 对象。
 
 ```powershell
 Get-Service f*

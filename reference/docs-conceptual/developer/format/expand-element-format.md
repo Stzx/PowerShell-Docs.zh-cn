@@ -1,12 +1,14 @@
 ---
-title: " (格式) 展开元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: deee832254bb8a774ee2c1f5bd451d3ced1bd47a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Expand Element (Format)
+description: Expand Element (Format)
+ms.openlocfilehash: 518e132e3e74b921d4e51966fc60088a22ef63f1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783647"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667940"
 ---
 # <a name="expand-element-format"></a>Expand Element (Format)
 
@@ -50,7 +52,7 @@ ms.locfileid: "87783647"
 
 ## <a name="remarks"></a>备注
 
-此元素用于定义集合对象和集合中的对象的显示方式。 在这种情况下，集合对象引用支持**system.object**接口的任何对象。
+此元素用于定义集合对象和集合中的对象的显示方式。 在这种情况下，集合对象引用支持  **system.object** 接口的任何对象。
 
 默认行为是只显示集合中对象的属性。
 

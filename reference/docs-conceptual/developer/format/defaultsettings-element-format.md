@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的 DefaultSettings 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: 7da7948fc0814e38a8f3910596e223470ec27d75
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: DefaultSettings Element (Format)
+description: DefaultSettings Element (Format)
+ms.openlocfilehash: 1c2055b38a416fe2d75fa20c6c87e92d9eed4285
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787727"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666716"
 ---
 # <a name="defaultsettings-element-format"></a>DefaultSettings Element (Format)
 
@@ -36,7 +38,7 @@ ms.locfileid: "87787727"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[DisplayError Element (Format)](./displayerror-element-format.md)|可选元素。<br /><br /> 指定在显示一段数据的过程中出现错误时，显示字符串 #ERR。|
 |[EnumerableExpansions Element (Format)](./enumerableexpansions-element-format.md)|可选元素。<br /><br /> 定义 .NET 对象显示在视图中时的不同显示方式。|
@@ -46,7 +48,7 @@ ms.locfileid: "87787727"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[配置元素](./configuration-element-format.md)|表示格式设置文件的顶级元素。|
 

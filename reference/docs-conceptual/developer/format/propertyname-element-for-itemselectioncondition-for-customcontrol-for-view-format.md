@@ -1,12 +1,14 @@
 ---
-title: 用于 CustomControl 的 ItemSelectionCondition 的 PropertyName 元素) 的 View (格式 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 0131fa86be4be4daec1d9d24b50397fb8529f050
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for ItemSelectionCondition for CustomControl for View (Format)
+description: PropertyName Element for ItemSelectionCondition for CustomControl for View (Format)
+ms.openlocfilehash: 5687bb781ce2db27b875f829147ee8b436f04adc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785568"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666121"
 ---
 # <a name="propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format"></a>PropertyName Element for ItemSelectionCondition for CustomControl for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87785568"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomControl (格式的表达式绑定的 ItemSelectionCondition 元素) ](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)|定义要使用此控件必须存在的条件。|
 
@@ -44,7 +46,7 @@ ms.locfileid: "87785568"
 
 ## <a name="remarks"></a>备注
 
-如果使用此元素，则在定义选择条件时，不能指定[ScriptBlock](./scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md)元素。
+如果使用此元素，则在定义选择条件时，不能指定 [ScriptBlock](./scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) 元素。
 
 ## <a name="see-also"></a>另请参阅
 

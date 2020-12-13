@@ -1,12 +1,14 @@
 ---
-title: 设置显示的数据的格式 |Microsoft Docs
 ms.date: 09/12/2016
-ms.openlocfilehash: 97d23b3079b2779e518b6b6d2f2ac0c5e9d1f3a3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 设置显示数据的格式
+description: 设置显示数据的格式
+ms.openlocfilehash: 40f6b3b4fa36062ee0bad3f197ad159f571445c8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781505"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667855"
 ---
 # <a name="formatting-displayed-data"></a>设置显示数据的格式
 

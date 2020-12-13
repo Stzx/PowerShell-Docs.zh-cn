@@ -1,12 +1,14 @@
 ---
-title: 用于控件 (Format) 的控件的 CustomControl 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2020725bf6afb086901e14a976abbdc04366869c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomControl Element for Control for Controls for View (Format)
+description: CustomControl Element for Control for Controls for View (Format)
+ms.openlocfilehash: 141e44d80ab27861baac39d5a5ae1ff1f673e99b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786095"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668025"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-view-format"></a>CustomControl Element for Control for Controls for View (Format)
 
@@ -32,13 +34,13 @@ ms.locfileid: "87786095"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomEntries Element for CustomControl for Controls for View (Format)](./customentries-element-for-customcontrol-for-controls-for-view-format.md)|必需的元素。<br /><br /> 提供控件的定义。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View (格式的控件控件元素) ](./control-element-for-controls-for-view-format.md)|定义可供视图使用的控件以及用于引用控件的名称。|
 

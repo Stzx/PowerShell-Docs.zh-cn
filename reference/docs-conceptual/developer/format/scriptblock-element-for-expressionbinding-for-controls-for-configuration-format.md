@@ -1,12 +1,14 @@
 ---
-title: 用于 ExpressionBinding 的控件的 ScriptBlock 元素) 配置 (格式 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ea7df6f523ad0e1939f4d02b9fbdc9f72eb4bb9b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for ExpressionBinding for Controls for Configuration (Format)
+description: ScriptBlock Element for ExpressionBinding for Controls for Configuration (Format)
+ms.openlocfilehash: d984c28a47afe8a998effbb4205c95f3e74411ca
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785500"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665353"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-controls-for-configuration-format"></a>ScriptBlock Element for ExpressionBinding for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87785500"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for Controls for Configuration (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|定义公共控件显示的数据。|
 

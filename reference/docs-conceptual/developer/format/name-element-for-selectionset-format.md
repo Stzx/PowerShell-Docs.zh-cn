@@ -1,12 +1,14 @@
 ---
-title: SelectionSet (Format) 的 Name 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1fc33eeb87a6912ed6793629ab1969cd65b5f0c5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Name Element for SelectionSet (Format)
+description: Name Element for SelectionSet (Format)
+ms.openlocfilehash: 98c13be6ea352055231fbdb3a60f0eb508f661b8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773294"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666445"
 ---
 # <a name="name-element-for-selectionset-format"></a>Name Element for SelectionSet (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87773294"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[SelectionSet Element (Format)](./selectionset-element-format.md)|定义一组可由集名称引用的 .NET 对象。|
 
@@ -44,7 +46,7 @@ ms.locfileid: "87773294"
 
 ## <a name="remarks"></a>备注
 
-此处指定的名称用于 `SelectionSetName` 元素。 视图可以使用的选项集 (视图的视图定义可以具有多个定义) 或指定选择条件。 有关选择集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
+此处指定的名称用于 `SelectionSetName` 元素。 视图可以使用的选项集 (视图的视图定义可以具有多个定义) 或指定选择条件。 有关选择集的详细信息，请参阅 [定义对象集](./defining-selection-sets.md)。
 
 ## <a name="example"></a>示例
 

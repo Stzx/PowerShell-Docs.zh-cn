@@ -1,12 +1,14 @@
 ---
-title: 用于) 配置 (格式的控件的 CustomEntry 的 EntrySelectedBy 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e9467c8c2d80e46c0a47c31569efbddbabe25bb1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EntrySelectedBy Element for CustomEntry for Controls for Configuration (Format)
+description: EntrySelectedBy Element for CustomEntry for Controls for Configuration (Format)
+ms.openlocfilehash: fadcdb69ac71269ba2f2f80baf139bb363d4acba
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774263"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666665"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-configuration-format"></a>EntrySelectedBy Element for CustomEntry for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87774263"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[SelectionCondition Element for EntrySelectedBy for Controls for Configuration (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)|可选元素。<br /><br /> 定义要使用的公共控件定义必须存在的条件。|
 |[SelectionSetName Element for EntrySelectedBy for Controls for Configuration (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md)|可选元素。<br /><br /> 指定一组使用此公共控件定义的 .NET 类型。|
@@ -42,7 +44,7 @@ ms.locfileid: "87774263"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomEntry Element for CustomControl for Controls for Configuration (Format)](./customentry-element-for-customcontrol-for-controls-for-configuration-format.md)|提供公共控件的定义。|
 

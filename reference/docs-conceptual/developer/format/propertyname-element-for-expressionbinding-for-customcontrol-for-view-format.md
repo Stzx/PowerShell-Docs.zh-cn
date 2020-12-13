@@ -1,12 +1,14 @@
 ---
-title: 用于 CustomControl 的 ExpressionBinding 的 PropertyName 元素) 的 View (格式 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a4e835f19d88048441076d7fd0bbb1982fbf5ee7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for ExpressionBinding for CustomControl for View (Format)
+description: PropertyName Element for ExpressionBinding for CustomControl for View (Format)
+ms.openlocfilehash: c5bb3d22aef66c9c9810f053114bf1f85b070148
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773175"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666155"
 ---
 # <a name="propertyname-element-for-expressionbinding-for-customcontrol-for-view-format"></a>PropertyName Element for ExpressionBinding for CustomControl for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87773175"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for CustomControl for View (Format)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)|定义控件显示的数据。|
 

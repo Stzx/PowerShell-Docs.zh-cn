@@ -1,21 +1,21 @@
 ---
-title: 如何验证参数计数 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateCount attribute, example
-ms.openlocfilehash: e7c0eb364a6975cec089b984c2100d476631a12d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何验证参数计数
+description: 如何验证参数计数
+ms.openlocfilehash: 46a32d61138fb50bceea98171f76749c9d96734d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782117"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666937"
 ---
 # <a name="how-to-validate-an-argument-count"></a>如何验证参数计数
 
 此示例演示如何指定一个验证规则，Windows PowerShell 运行时可使用该规则检查参数数目 (在运行 cmdlet 之前参数接受的计数) 。 可以通过声明 ValidateCount 属性设置此验证规则。
 
 > [!NOTE]
-> 有关用于定义此属性的类的详细信息，请参阅[Validatecountattribute](/dotnet/api/System.Management.Automation.ValidateCountAttribute)。
+> 有关用于定义此属性的类的详细信息，请参阅 [Validatecountattribute](/dotnet/api/System.Management.Automation.ValidateCountAttribute)。
 
 ## <a name="to-validate-an-argument-count"></a>验证参数计数
 
@@ -33,7 +33,7 @@ ms.locfileid: "87782117"
     private string[] userNames;
     ```
 
-有关如何声明此特性的详细信息，请参阅[ValidateCount 特性声明](./validatecount-attribute-declaration.md)。
+有关如何声明此特性的详细信息，请参阅 [ValidateCount 特性声明](./validatecount-attribute-declaration.md)。
 
 ## <a name="see-also"></a>另请参阅
 

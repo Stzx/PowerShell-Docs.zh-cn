@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的 SelectionCondition 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 251fc129896cfa4a6255330e23854b014675ac5f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for SelectionCondition for Controls for View (Format)
+description: PropertyName Element for SelectionCondition for Controls for View (Format)
+ms.openlocfilehash: 7783e5a9b7f8ec3d3077d87778e9f77ffe858a7f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780808"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665866"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-controls-for-view-format"></a>PropertyName Element for SelectionCondition for Controls for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87780808"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[SelectionCondition Element for EntrySelectedBy for Controls for View (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)|定义要使用的控件定义必须存在的条件。|
 
@@ -44,7 +46,7 @@ ms.locfileid: "87780808"
 
 ## <a name="remarks"></a>备注
 
-选择条件必须指定至少一个属性名称或脚本，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+选择条件必须指定至少一个属性名称或脚本，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,16 +1,18 @@
 ---
-title: " (GroupBy) 的宽视图 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: e53714f0b4240b5fe7f62cccda83af1e5badd33c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 宽视图 (GroupBy)
+description: 宽视图 (GroupBy)
+ms.openlocfilehash: 807bea2a5d44c38e2c9977f792bea2fb9bca0fc3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784990"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667668"
 ---
 # <a name="wide-view-groupby"></a>宽视图 (GroupBy)
 
-此示例演示如何实现显示 System.serviceprocess. Servicecontroller 的组的宽视图[？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)该 cmdlet 返回的 Fullname 对象 `Get-Service` 。 有关宽视图组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+此示例演示如何实现显示 System.serviceprocess. Servicecontroller 的组的宽视图 [？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 该 cmdlet 返回的 Fullname 对象 `Get-Service` 。 有关宽视图组件的详细信息，请参阅 [创建宽视图](./creating-a-wide-view.md)。
 
 ### <a name="to-load-this-formatting-file"></a>加载此格式设置文件
 
@@ -27,17 +29,17 @@ ms.locfileid: "87784990"
 
 此格式化文件演示了以下 XML 元素：
 
-- 视图的[名称](./name-element-for-view-format.md)元素。
+- 视图的 [名称](./name-element-for-view-format.md) 元素。
 
-- 定义视图要显示的对象的[ViewSelectedBy](./viewselectedby-element-format.md)元素。
+- 定义视图要显示的对象的 [ViewSelectedBy](./viewselectedby-element-format.md) 元素。
 
-- 定义新组的显示时间的[GroupBy](./groupby-element-for-view-format.md)元素。
+- 定义新组的显示时间的 [GroupBy](./groupby-element-for-view-format.md) 元素。
 
-- 定义视图显示的属性的[WideItem](./wideitem-element-for-widecontrol-format.md)元素。
+- 定义视图显示的属性的 [WideItem](./wideitem-element-for-widecontrol-format.md) 元素。
 
 ## <a name="example"></a>示例
 
-下面的 XML 定义显示对象组的宽视图。 当[system.serviceprocess](/dotnet/api/System.ServiceProcess.ServiceController.ServiceType)属性的值发生更改时，将启动每个新组。
+下面的 XML 定义显示对象组的宽视图。 当 [system.serviceprocess](/dotnet/api/System.ServiceProcess.ServiceController.ServiceType) 属性的值发生更改时，将启动每个新组。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -67,7 +69,7 @@ ms.locfileid: "87784990"
 </Configuration>
 ```
 
-下面的示例演示 Windows PowerShell 如何显示[system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController)加载此格式化文件之后的 Fullname 对象。
+下面的示例演示 Windows PowerShell 如何显示 [system.serviceprocess. Servicecontroller？Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 加载此格式化文件之后的 Fullname 对象。
 
 ```powershell
 Get-Service f*

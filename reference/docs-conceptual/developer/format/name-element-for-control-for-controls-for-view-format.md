@@ -1,12 +1,14 @@
 ---
-title: 用于控件 (格式) 的控件的名称元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 109f3a40606dbe82322decf0c69d2367c75175f6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Name Element for Control for Controls for View (Format)
+description: Name Element for Control for Controls for View (Format)
+ms.openlocfilehash: 52b7170777a35596767c34f2d58106dfa6479567
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781080"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666478"
 ---
 # <a name="name-element-for-control-for-controls-for-view-format"></a>Name Element for Control for Controls for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87781080"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View (格式的控件控件元素) ](./control-element-for-controls-for-view-format.md)|定义可供视图使用的控件以及用于引用控件的名称。|
 
@@ -48,7 +50,7 @@ ms.locfileid: "87781080"
 
 - 创建表、列表、宽控件或自定义控件视图时，可通过以下元素指定控件： [view (Format 的 GroupBy 元素) ](./groupby-element-for-view-format.md)
 
-- 当创建可供视图使用的另一个控件时，可以通过以下元素指定此控件：用于[控件的 CustomItem 的 ExpressionBinding 元素 (格式) ](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+- 当创建可供视图使用的另一个控件时，可以通过以下元素指定此控件：用于 [控件的 CustomItem 的 ExpressionBinding 元素 (格式) ](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
 ## <a name="see-also"></a>另请参阅
 
