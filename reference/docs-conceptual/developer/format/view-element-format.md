@@ -1,20 +1,22 @@
 ---
-title: " (格式的 View 元素) |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: c0c6fa373cfca3a55a62f201e1eabc6a1e308ef7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View Element (Format)
+description: View Element (Format)
+ms.openlocfilehash: 6fed1304d94339cc90b6ae53e06483c08d937c12
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785024"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649746"
 ---
-# <a name="view-element-format"></a><span data-ttu-id="21405-102">View Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-102">View Element (Format)</span></span>
+# <a name="view-element-format"></a><span data-ttu-id="4cb12-103">View Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-103">View Element (Format)</span></span>
 
-<span data-ttu-id="21405-103">定义一个视图，该视图显示一个或多个 .NET 对象。</span><span class="sxs-lookup"><span data-stu-id="21405-103">Defines a view that displays one or more .NET objects.</span></span> <span data-ttu-id="21405-104">对于可在格式设置文件中定义的视图数没有限制。</span><span class="sxs-lookup"><span data-stu-id="21405-104">There is no limit to the number of views that can be defined in a formatting file.</span></span>
+<span data-ttu-id="4cb12-104">定义一个视图，该视图显示一个或多个 .NET 对象。</span><span class="sxs-lookup"><span data-stu-id="4cb12-104">Defines a view that displays one or more .NET objects.</span></span> <span data-ttu-id="4cb12-105">对于可在格式设置文件中定义的视图数没有限制。</span><span class="sxs-lookup"><span data-stu-id="4cb12-105">There is no limit to the number of views that can be defined in a formatting file.</span></span>
 
-<span data-ttu-id="21405-105">配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) </span><span class="sxs-lookup"><span data-stu-id="21405-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format)</span></span>
+<span data-ttu-id="4cb12-106">配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) </span><span class="sxs-lookup"><span data-stu-id="4cb12-106">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="21405-106">语法</span><span class="sxs-lookup"><span data-stu-id="21405-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="4cb12-107">语法</span><span class="sxs-lookup"><span data-stu-id="4cb12-107">Syntax</span></span>
 
 ```xml
 <View>
@@ -29,48 +31,48 @@ ms.locfileid: "87785024"
 </View>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="21405-107">特性和元素</span><span class="sxs-lookup"><span data-stu-id="21405-107">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="4cb12-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="4cb12-108">Attributes and Elements</span></span>
 
-<span data-ttu-id="21405-108">以下各节描述了元素的属性、子元素和父元素 `View` 。</span><span class="sxs-lookup"><span data-stu-id="21405-108">The following sections describe the attributes, child elements, and the parent element of the `View` element.</span></span> <span data-ttu-id="21405-109">您必须指定一个且仅有一个控件子元素，并且您必须指定视图的名称和使用视图的对象。</span><span class="sxs-lookup"><span data-stu-id="21405-109">You must specify one and only one of the control child elements, and you must specify the name of the view and the objects that use the view.</span></span> <span data-ttu-id="21405-110">定义自定义控件，如何对对象分组，并指定视图是否带外是可选的。</span><span class="sxs-lookup"><span data-stu-id="21405-110">Defining custom controls, how to group objects, and specifying if the view is out-of-band are optional.</span></span>
+<span data-ttu-id="4cb12-109">以下各节描述了元素的属性、子元素和父元素 `View` 。</span><span class="sxs-lookup"><span data-stu-id="4cb12-109">The following sections describe the attributes, child elements, and the parent element of the `View` element.</span></span> <span data-ttu-id="4cb12-110">您必须指定一个且仅有一个控件子元素，并且您必须指定视图的名称和使用视图的对象。</span><span class="sxs-lookup"><span data-stu-id="4cb12-110">You must specify one and only one of the control child elements, and you must specify the name of the view and the objects that use the view.</span></span> <span data-ttu-id="4cb12-111">定义自定义控件，如何对对象分组，并指定视图是否带外是可选的。</span><span class="sxs-lookup"><span data-stu-id="4cb12-111">Defining custom controls, how to group objects, and specifying if the view is out-of-band are optional.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="21405-111">特性</span><span class="sxs-lookup"><span data-stu-id="21405-111">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="4cb12-112">特性</span><span class="sxs-lookup"><span data-stu-id="4cb12-112">Attributes</span></span>
 
-<span data-ttu-id="21405-112">无。</span><span class="sxs-lookup"><span data-stu-id="21405-112">None.</span></span>
+<span data-ttu-id="4cb12-113">无。</span><span class="sxs-lookup"><span data-stu-id="4cb12-113">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="21405-113">子元素</span><span class="sxs-lookup"><span data-stu-id="21405-113">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="4cb12-114">子元素</span><span class="sxs-lookup"><span data-stu-id="4cb12-114">Child Elements</span></span>
 
-|<span data-ttu-id="21405-114">元素</span><span class="sxs-lookup"><span data-stu-id="21405-114">Element</span></span>|<span data-ttu-id="21405-115">描述</span><span class="sxs-lookup"><span data-stu-id="21405-115">Description</span></span>|
+|<span data-ttu-id="4cb12-115">元素</span><span class="sxs-lookup"><span data-stu-id="4cb12-115">Element</span></span>|<span data-ttu-id="4cb12-116">描述</span><span class="sxs-lookup"><span data-stu-id="4cb12-116">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="21405-116">Controls Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-116">Controls Element for View (Format)</span></span>](./controls-element-for-view-format.md)|<span data-ttu-id="21405-117">可选元素。</span><span class="sxs-lookup"><span data-stu-id="21405-117">Optional element.</span></span><br /><br /> <span data-ttu-id="21405-118">定义一组可从视图中的名称引用的控件。</span><span class="sxs-lookup"><span data-stu-id="21405-118">Defines a set of controls that can be referenced by their name from within the view.</span></span>|
-|[<span data-ttu-id="21405-119">CustomControl 元素 (格式) </span><span class="sxs-lookup"><span data-stu-id="21405-119">CustomControl Element (Format)</span></span>](./customcontrol-element-for-groupby-format.md)|<span data-ttu-id="21405-120">可选元素。</span><span class="sxs-lookup"><span data-stu-id="21405-120">Optional element.</span></span><br /><br /> <span data-ttu-id="21405-121">定义视图的自定义控件格式。</span><span class="sxs-lookup"><span data-stu-id="21405-121">Defines a custom control format for the view.</span></span>|
-|[<span data-ttu-id="21405-122">GroupBy Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-122">GroupBy Element for View (Format)</span></span>](./groupby-element-for-view-format.md)|<span data-ttu-id="21405-123">可选元素。</span><span class="sxs-lookup"><span data-stu-id="21405-123">Optional element.</span></span><br /><br /> <span data-ttu-id="21405-124">定义 .NET 对象成员的分组方式。</span><span class="sxs-lookup"><span data-stu-id="21405-124">Defines how the members of the .NET objects are grouped.</span></span>|
-|[<span data-ttu-id="21405-125">ListControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-125">ListControl Element (Format)</span></span>](./listcontrol-element-format.md)|<span data-ttu-id="21405-126">可选元素。</span><span class="sxs-lookup"><span data-stu-id="21405-126">Optional element.</span></span><br /><br /> <span data-ttu-id="21405-127">定义视图的列表格式。</span><span class="sxs-lookup"><span data-stu-id="21405-127">Defines a list format for the view.</span></span>|
-|[<span data-ttu-id="21405-128">Name Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-128">Name Element for View (Format)</span></span>](./name-element-for-view-format.md)|<span data-ttu-id="21405-129">必需的元素。</span><span class="sxs-lookup"><span data-stu-id="21405-129">Required element.</span></span><br /><br /> <span data-ttu-id="21405-130">指定用于引用视图的名称。</span><span class="sxs-lookup"><span data-stu-id="21405-130">Specifies the name used to reference the view.</span></span>|
-|[<span data-ttu-id="21405-131">TableControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-131">TableControl Element (Format)</span></span>](./tablecontrol-element-format.md)|<span data-ttu-id="21405-132">可选元素。</span><span class="sxs-lookup"><span data-stu-id="21405-132">Optional element.</span></span><br /><br /> <span data-ttu-id="21405-133">定义视图的表格格式。</span><span class="sxs-lookup"><span data-stu-id="21405-133">Defines a table format for the view.</span></span>|
-|[<span data-ttu-id="21405-134">View (格式的 ViewSelectedBy 元素) </span><span class="sxs-lookup"><span data-stu-id="21405-134">ViewSelectedBy Element for View (Format)</span></span>](./viewselectedby-element-format.md)|<span data-ttu-id="21405-135">必需的元素。</span><span class="sxs-lookup"><span data-stu-id="21405-135">Required element.</span></span><br /><br /> <span data-ttu-id="21405-136">定义此视图显示的 .NET 对象。</span><span class="sxs-lookup"><span data-stu-id="21405-136">Defines the .NET objects that this view displays.</span></span>|
-|[<span data-ttu-id="21405-137">WideControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-137">WideControl Element (Format)</span></span>](./widecontrol-element-format.md)|<span data-ttu-id="21405-138">可选元素。</span><span class="sxs-lookup"><span data-stu-id="21405-138">Optional element.</span></span><br /><br /> <span data-ttu-id="21405-139">定义视图的宽 (单个值) 列表格式。</span><span class="sxs-lookup"><span data-stu-id="21405-139">Defines a wide (single value) list format for the view.</span></span>|
+|[<span data-ttu-id="4cb12-117">Controls Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-117">Controls Element for View (Format)</span></span>](./controls-element-for-view-format.md)|<span data-ttu-id="4cb12-118">可选元素。</span><span class="sxs-lookup"><span data-stu-id="4cb12-118">Optional element.</span></span><br /><br /> <span data-ttu-id="4cb12-119">定义一组可从视图中的名称引用的控件。</span><span class="sxs-lookup"><span data-stu-id="4cb12-119">Defines a set of controls that can be referenced by their name from within the view.</span></span>|
+|[<span data-ttu-id="4cb12-120">CustomControl 元素 (格式) </span><span class="sxs-lookup"><span data-stu-id="4cb12-120">CustomControl Element (Format)</span></span>](./customcontrol-element-for-groupby-format.md)|<span data-ttu-id="4cb12-121">可选元素。</span><span class="sxs-lookup"><span data-stu-id="4cb12-121">Optional element.</span></span><br /><br /> <span data-ttu-id="4cb12-122">定义视图的自定义控件格式。</span><span class="sxs-lookup"><span data-stu-id="4cb12-122">Defines a custom control format for the view.</span></span>|
+|[<span data-ttu-id="4cb12-123">GroupBy Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-123">GroupBy Element for View (Format)</span></span>](./groupby-element-for-view-format.md)|<span data-ttu-id="4cb12-124">可选元素。</span><span class="sxs-lookup"><span data-stu-id="4cb12-124">Optional element.</span></span><br /><br /> <span data-ttu-id="4cb12-125">定义 .NET 对象成员的分组方式。</span><span class="sxs-lookup"><span data-stu-id="4cb12-125">Defines how the members of the .NET objects are grouped.</span></span>|
+|[<span data-ttu-id="4cb12-126">ListControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-126">ListControl Element (Format)</span></span>](./listcontrol-element-format.md)|<span data-ttu-id="4cb12-127">可选元素。</span><span class="sxs-lookup"><span data-stu-id="4cb12-127">Optional element.</span></span><br /><br /> <span data-ttu-id="4cb12-128">定义视图的列表格式。</span><span class="sxs-lookup"><span data-stu-id="4cb12-128">Defines a list format for the view.</span></span>|
+|[<span data-ttu-id="4cb12-129">Name Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-129">Name Element for View (Format)</span></span>](./name-element-for-view-format.md)|<span data-ttu-id="4cb12-130">必需的元素。</span><span class="sxs-lookup"><span data-stu-id="4cb12-130">Required element.</span></span><br /><br /> <span data-ttu-id="4cb12-131">指定用于引用视图的名称。</span><span class="sxs-lookup"><span data-stu-id="4cb12-131">Specifies the name used to reference the view.</span></span>|
+|[<span data-ttu-id="4cb12-132">TableControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-132">TableControl Element (Format)</span></span>](./tablecontrol-element-format.md)|<span data-ttu-id="4cb12-133">可选元素。</span><span class="sxs-lookup"><span data-stu-id="4cb12-133">Optional element.</span></span><br /><br /> <span data-ttu-id="4cb12-134">定义视图的表格格式。</span><span class="sxs-lookup"><span data-stu-id="4cb12-134">Defines a table format for the view.</span></span>|
+|[<span data-ttu-id="4cb12-135">View (格式的 ViewSelectedBy 元素) </span><span class="sxs-lookup"><span data-stu-id="4cb12-135">ViewSelectedBy Element for View (Format)</span></span>](./viewselectedby-element-format.md)|<span data-ttu-id="4cb12-136">必需的元素。</span><span class="sxs-lookup"><span data-stu-id="4cb12-136">Required element.</span></span><br /><br /> <span data-ttu-id="4cb12-137">定义此视图显示的 .NET 对象。</span><span class="sxs-lookup"><span data-stu-id="4cb12-137">Defines the .NET objects that this view displays.</span></span>|
+|[<span data-ttu-id="4cb12-138">WideControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-138">WideControl Element (Format)</span></span>](./widecontrol-element-format.md)|<span data-ttu-id="4cb12-139">可选元素。</span><span class="sxs-lookup"><span data-stu-id="4cb12-139">Optional element.</span></span><br /><br /> <span data-ttu-id="4cb12-140">定义视图的宽 (单个值) 列表格式。</span><span class="sxs-lookup"><span data-stu-id="4cb12-140">Defines a wide (single value) list format for the view.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="21405-140">父元素</span><span class="sxs-lookup"><span data-stu-id="21405-140">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="4cb12-141">父元素</span><span class="sxs-lookup"><span data-stu-id="4cb12-141">Parent Elements</span></span>
 
-|<span data-ttu-id="21405-141">元素</span><span class="sxs-lookup"><span data-stu-id="21405-141">Element</span></span>|<span data-ttu-id="21405-142">描述</span><span class="sxs-lookup"><span data-stu-id="21405-142">Description</span></span>|
+|<span data-ttu-id="4cb12-142">元素</span><span class="sxs-lookup"><span data-stu-id="4cb12-142">Element</span></span>|<span data-ttu-id="4cb12-143">描述</span><span class="sxs-lookup"><span data-stu-id="4cb12-143">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="21405-143">ViewDefinitions Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-143">ViewDefinitions Element (Format)</span></span>](./viewdefinitions-element-format.md)|<span data-ttu-id="21405-144">定义用于显示对象的视图。</span><span class="sxs-lookup"><span data-stu-id="21405-144">Defines the views used to display objects.</span></span>|
+|[<span data-ttu-id="4cb12-144">ViewDefinitions Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-144">ViewDefinitions Element (Format)</span></span>](./viewdefinitions-element-format.md)|<span data-ttu-id="4cb12-145">定义用于显示对象的视图。</span><span class="sxs-lookup"><span data-stu-id="4cb12-145">Defines the views used to display objects.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="21405-145">备注</span><span class="sxs-lookup"><span data-stu-id="21405-145">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="4cb12-146">备注</span><span class="sxs-lookup"><span data-stu-id="4cb12-146">Remarks</span></span>
 
-<span data-ttu-id="21405-146">有关不同视图和自定义控件的组件的详细信息，请参阅以下主题：</span><span class="sxs-lookup"><span data-stu-id="21405-146">For more information about the components of different views and custom controls, see the following topics:</span></span>
+<span data-ttu-id="4cb12-147">有关不同视图和自定义控件的组件的详细信息，请参阅以下主题：</span><span class="sxs-lookup"><span data-stu-id="4cb12-147">For more information about the components of different views and custom controls, see the following topics:</span></span>
 
-- [<span data-ttu-id="21405-147">表视图组件</span><span class="sxs-lookup"><span data-stu-id="21405-147">Table View Components</span></span>](./creating-a-table-view.md)
+- [<span data-ttu-id="4cb12-148">表视图组件</span><span class="sxs-lookup"><span data-stu-id="4cb12-148">Table View Components</span></span>](./creating-a-table-view.md)
 
-- [<span data-ttu-id="21405-148">列表视图组件</span><span class="sxs-lookup"><span data-stu-id="21405-148">List View Components</span></span>](./creating-a-list-view.md)
+- [<span data-ttu-id="4cb12-149">列表视图组件</span><span class="sxs-lookup"><span data-stu-id="4cb12-149">List View Components</span></span>](./creating-a-list-view.md)
 
-- [<span data-ttu-id="21405-149">宽视图组件</span><span class="sxs-lookup"><span data-stu-id="21405-149">Wide View Components</span></span>](./creating-a-wide-view.md)
+- [<span data-ttu-id="4cb12-150">宽视图组件</span><span class="sxs-lookup"><span data-stu-id="4cb12-150">Wide View Components</span></span>](./creating-a-wide-view.md)
 
-- [<span data-ttu-id="21405-150">自定义控件</span><span class="sxs-lookup"><span data-stu-id="21405-150">Custom Controls</span></span>](./creating-custom-controls.md)
+- [<span data-ttu-id="4cb12-151">自定义控件</span><span class="sxs-lookup"><span data-stu-id="4cb12-151">Custom Controls</span></span>](./creating-custom-controls.md)
 
-## <a name="example"></a><span data-ttu-id="21405-151">示例</span><span class="sxs-lookup"><span data-stu-id="21405-151">Example</span></span>
+## <a name="example"></a><span data-ttu-id="4cb12-152">示例</span><span class="sxs-lookup"><span data-stu-id="4cb12-152">Example</span></span>
 
-<span data-ttu-id="21405-152">此示例演示一个 `View` 元素，该元素定义[System.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController)对象的表视图。</span><span class="sxs-lookup"><span data-stu-id="21405-152">This example shows a `View` element that defines a table view for the [System.Serviceprocess.Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) object.</span></span>
+<span data-ttu-id="4cb12-153">此示例演示一个 `View` 元素，该元素定义 [System.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 对象的表视图。</span><span class="sxs-lookup"><span data-stu-id="4cb12-153">This example shows a `View` element that defines a table view for the [System.Serviceprocess.Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) object.</span></span>
 
 ```xml
 <ViewDefinitions>
@@ -85,24 +87,24 @@ ms.locfileid: "87785024"
 
 ```
 
-## <a name="see-also"></a><span data-ttu-id="21405-153">另请参阅</span><span class="sxs-lookup"><span data-stu-id="21405-153">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4cb12-154">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4cb12-154">See Also</span></span>
 
-[<span data-ttu-id="21405-154">ViewDefinitions Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-154">ViewDefinitions Element (Format)</span></span>](./viewdefinitions-element-format.md)
+[<span data-ttu-id="4cb12-155">ViewDefinitions Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-155">ViewDefinitions Element (Format)</span></span>](./viewdefinitions-element-format.md)
 
-[<span data-ttu-id="21405-155">Name Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-155">Name Element for View (Format)</span></span>](./name-element-for-view-format.md)
+[<span data-ttu-id="4cb12-156">Name Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-156">Name Element for View (Format)</span></span>](./name-element-for-view-format.md)
 
-[<span data-ttu-id="21405-156">ViewSelectedBy Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-156">ViewSelectedBy Element (Format)</span></span>](./viewselectedby-element-format.md)
+[<span data-ttu-id="4cb12-157">ViewSelectedBy Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-157">ViewSelectedBy Element (Format)</span></span>](./viewselectedby-element-format.md)
 
-[<span data-ttu-id="21405-157">Controls Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-157">Controls Element for View (Format)</span></span>](./controls-element-for-view-format.md)
+[<span data-ttu-id="4cb12-158">Controls Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-158">Controls Element for View (Format)</span></span>](./controls-element-for-view-format.md)
 
-[<span data-ttu-id="21405-158">GroupBy Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-158">GroupBy Element for View (Format)</span></span>](./groupby-element-for-view-format.md)
+[<span data-ttu-id="4cb12-159">GroupBy Element for View (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-159">GroupBy Element for View (Format)</span></span>](./groupby-element-for-view-format.md)
 
-[<span data-ttu-id="21405-159">TableControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-159">TableControl Element (Format)</span></span>](./tablecontrol-element-format.md)
+[<span data-ttu-id="4cb12-160">TableControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-160">TableControl Element (Format)</span></span>](./tablecontrol-element-format.md)
 
-[<span data-ttu-id="21405-160">ListControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-160">ListControl Element (Format)</span></span>](./listcontrol-element-format.md)
+[<span data-ttu-id="4cb12-161">ListControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-161">ListControl Element (Format)</span></span>](./listcontrol-element-format.md)
 
-[<span data-ttu-id="21405-161">WideControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="21405-161">WideControl Element (Format)</span></span>](./widecontrol-element-format.md)
+[<span data-ttu-id="4cb12-162">WideControl Element (Format)</span><span class="sxs-lookup"><span data-stu-id="4cb12-162">WideControl Element (Format)</span></span>](./widecontrol-element-format.md)
 
-[<span data-ttu-id="21405-162">CustomControl 元素 (格式) </span><span class="sxs-lookup"><span data-stu-id="21405-162">CustomControl Element (Format)</span></span>](./customcontrol-element-for-groupby-format.md)
+[<span data-ttu-id="4cb12-163">CustomControl 元素 (格式) </span><span class="sxs-lookup"><span data-stu-id="4cb12-163">CustomControl Element (Format)</span></span>](./customcontrol-element-for-groupby-format.md)
 
-[<span data-ttu-id="21405-163">编写 PowerShell 格式设置文件</span><span class="sxs-lookup"><span data-stu-id="21405-163">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="4cb12-164">编写 PowerShell 格式设置文件</span><span class="sxs-lookup"><span data-stu-id="4cb12-164">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
