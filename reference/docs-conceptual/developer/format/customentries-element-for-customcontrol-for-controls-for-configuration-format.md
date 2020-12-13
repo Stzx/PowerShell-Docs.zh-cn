@@ -1,12 +1,14 @@
 ---
-title: 用于) 配置 (格式的控件的 CustomControl 的 CustomEntries 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b1f494cf1a254d71362830ba9eb0f4905a2a484d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomEntries Element for CustomControl for Controls for Configuration (Format)
+description: CustomEntries Element for CustomControl for Controls for Configuration (Format)
+ms.openlocfilehash: 86c2b517d0d7075a355a3190a14e25d9dd4fe374
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785976"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655387"
 ---
 # <a name="customentries-element-for-customcontrol-for-controls-for-configuration-format"></a>CustomEntries Element for CustomControl for Controls for Configuration (Format)
 
@@ -33,13 +35,13 @@ ms.locfileid: "87785976"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomEntry Element for CustomControl for Controls for Configuration (Format)](./customentry-element-for-customcontrol-for-controls-for-configuration-format.md)|提供公共控件的定义。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[用于控制配置 (格式的 CustomControl 元素) ](./customcontrol-element-for-control-for-controls-for-configuration-format.md)|定义公共控件。|
 

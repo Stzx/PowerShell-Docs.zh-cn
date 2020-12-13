@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的 TableColumnHeader 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: 6296aea5c567663b1c3c0a2cf0a57b21aa5394de
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableColumnHeader Element (Format)
+description: TableColumnHeader Element (Format)
+ms.openlocfilehash: 30368512875b7c5c4cf3c686f3d09540dea1bd26
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785177"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651517"
 ---
 # <a name="tablecolumnheader-element-format"></a>TableColumnHeader Element (Format)
 
@@ -52,7 +54,7 @@ ms.locfileid: "87785177"
 
 表必须与元素具有相同数量的 `TableColumnHeader` 元素 `TableRowEntry` 。 列标题定义表顶部的文本的显示方式。 行条目定义在表的行中显示的数据。
 
-有关表视图的组件的详细信息，请参阅[表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [表视图](./creating-a-table-view.md)。
 
 ## <a name="example"></a>示例
 

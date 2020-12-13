@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的 WideControl 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: b6f19cf94dcb440eeaf53547db407287e5462520
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideControl Element (Format)
+description: WideControl Element (Format)
+ms.openlocfilehash: f88e1ce18f87e5e47de473298b3ecf070b71c192
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784973"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651276"
 ---
 # <a name="widecontrol-element-format"></a>WideControl Element (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87784973"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[AutoSize Element for WideControl (Format)](./autosize-element-for-widecontrol-format.md)|可选元素。<br /><br /> 指定是否根据数据大小调整列大小和列数。|
 |[ColumnNumber Element for WideControl (Format)](./columnnumber-element-for-widecontrol-format.md)|可选元素。<br /><br /> 指定宽视图中显示的列数。|
@@ -42,7 +44,7 @@ ms.locfileid: "87784973"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View Element (Format)](./view-element-format.md)|定义用于显示一个或多个 .NET 对象的视图。|
 
@@ -52,11 +54,11 @@ ms.locfileid: "87784973"
 
 在大多数情况下，每个宽视图只需要一个定义，但如果您希望使用同一视图显示不同的 .NET 对象，则可以有多个定义。 在这些情况下，可以为每个对象或一组对象提供单独的定义。
 
-有关宽视图组件的详细信息，请参阅[宽视图组件](./creating-a-wide-view.md)。
+有关宽视图组件的详细信息，请参阅 [宽视图组件](./creating-a-wide-view.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示一个 `WideControl` 元素，该元素用于显示[system.object](/dotnet/api/System.Diagnostics.Process)对象的属性。
+下面的示例演示一个 `WideControl` 元素，该元素用于显示 [system.object](/dotnet/api/System.Diagnostics.Process) 对象的属性。
 
 ```xml
 <View>
@@ -70,7 +72,7 @@ ms.locfileid: "87784973"
 </View>
 ```
 
-有关宽视图的完整示例，请参阅[宽视图 (基本) ](./wide-view-basic.md)。
+有关宽视图的完整示例，请参阅 [宽视图 (基本) ](./wide-view-basic.md)。
 
 ## <a name="see-also"></a>另请参阅
 

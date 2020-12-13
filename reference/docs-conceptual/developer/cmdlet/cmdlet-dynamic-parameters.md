@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 动态参数 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f44f71326d4711242c754c332a151dd997721595
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 动态参数
+description: Cmdlet 动态参数
+ms.openlocfilehash: b44dda2354e8b689e419c7bf4deefadfc4edcb07
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782355"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653427"
 ---
 # <a name="cmdlet-dynamic-parameters"></a>Cmdlet 动态参数
 
@@ -17,9 +19,9 @@ Cmdlet 可以定义在特殊条件下可用于用户的参数，如其他参数�
 
 ## <a name="dynamic-parameters-in-powershell-cmdlets"></a>PowerShell cmdlet 中的动态参数
 
-PowerShell 在其提供程序 cmdlet 中使用动态参数。 例如， `Get-Item` `Get-ChildItem` 当**Path**参数指定了**证书**提供程序路径时，和 Cmdlet 会在运行时添加**CodeSigningCert**参数。 如果**path**参数指定了不同提供程序的路径，则**CodeSigningCert**参数不可用。
+PowerShell 在其提供程序 cmdlet 中使用动态参数。 例如， `Get-Item` `Get-ChildItem` 当 **Path** 参数指定了 **证书** 提供程序路径时，和 Cmdlet 会在运行时添加 **CodeSigningCert** 参数。 如果 **path** 参数指定了不同提供程序的路径，则 **CodeSigningCert** 参数不可用。
 
-下面的示例演示如何在运行时在运行时添加**CodeSigningCert**参数 `Get-Item` 。
+下面的示例演示如何在运行时在运行时添加 **CodeSigningCert** 参数 `Get-Item` 。
 
 在此示例中，PowerShell 运行时添加了参数，且 cmdlet 成功。
 
@@ -32,7 +34,7 @@ Location   : CurrentUser
 StoreNames : {SmartCardRoot, UserDS, AuthRoot, CA...}
 ```
 
-在此示例中，指定了一个**FileSystem**驱动器并返回错误。 错误消息指示找不到**CodeSigningCert**参数。
+在此示例中，指定了一个 **FileSystem** 驱动器并返回错误。 错误消息指示找不到 **CodeSigningCert** 参数。
 
 ```powershell
 Get-Item -Path C:\ -CodeSigningCert
@@ -82,7 +84,7 @@ private SendGreetingCommandDynamicParameters context;
 
 ### <a name="class"></a>类
 
-定义要添加的动态参数的类。 此类必须包括每个参数的**参数**属性以及 cmdlet 所需的任何可选**别名**和**验证**属性。
+定义要添加的动态参数的类。 此类必须包括每个参数的 **参数** 属性以及 cmdlet 所需的任何可选 **别名** 和 **验证** 属性。
 
 例如：
 
@@ -100,7 +102,7 @@ public class SendGreetingCommandDynamicParameters
 }
 ```
 
-有关支持动态参数的 cmdlet 的完整示例，请参阅[如何声明动态参数](./how-to-declare-dynamic-parameters.md)。
+有关支持动态参数的 cmdlet 的完整示例，请参阅 [如何声明动态参数](./how-to-declare-dynamic-parameters.md)。
 
 ## <a name="see-also"></a>请参阅
 

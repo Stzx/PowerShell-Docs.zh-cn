@@ -1,12 +1,14 @@
 ---
-title: SelectionCondition for CustomControl 的 TypeName 元素 (Format) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 28409604b8905440890161f66981264748bc2c33
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for SelectionCondition for CustomControl for View (Format)
+description: TypeName Element for SelectionCondition for CustomControl for View (Format)
+ms.openlocfilehash: ab02c6921985dbe86e5adcbc6565c76f6617399a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785058"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651291"
 ---
 # <a name="typename-element-for-selectioncondition-for-customcontrol-for-view--format"></a>TypeName Element for SelectionCondition for CustomControl for View (Format)
 
@@ -37,7 +39,7 @@ ms.locfileid: "87785058"
 
 |元素|描述|
 |-------------|-----------------|
-|[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|定义要使用的控件定义必须存在的条件。|
+|[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 ](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|定义要使用的控件定义必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -47,6 +49,6 @@ ms.locfileid: "87785058"
 
 ## <a name="see-also"></a>另请参阅
 
-[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
+[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 ](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
 
 [编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

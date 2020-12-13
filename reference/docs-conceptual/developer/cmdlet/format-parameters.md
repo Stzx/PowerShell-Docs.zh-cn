@@ -1,12 +1,14 @@
 ---
-title: 格式参数 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c8e031f62aa8bcb0e9d5b900b2eace7187b1f3dd
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 格式参数
+description: 格式参数
+ms.openlocfilehash: 5f970683fedc71b208ff6becad761d94611a91a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784276"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652818"
 ---
 # <a name="format-parameters"></a>格式参数
 
@@ -19,7 +21,7 @@ ms.locfileid: "87784276"
 |**编码**<br>数据类型：关键字|实现此参数可指定支持的编码类型。 例如，可能的值可能是 ASCII、UTF8、Unicode、UTF7、BigEndianUnicode、Byte 和 String。|
 |**换**<br>数据类型： SwitchParameter|实现此参数，以便在指定参数时支持换行字符。|
 |**ShortName**<br>数据类型： SwitchParameter|实现此参数以便在指定参数时支持短名称。|
-|Width<br>数据类型： Int32|实现此参数，以便用户可以指定输出设备的宽度。|
+|Width <br>数据类型： Int32|实现此参数，以便用户可以指定输出设备的宽度。|
 |**包装**<br>数据类型： SwitchParameter|实现此参数以便在指定参数时支持文本换行。|
 ## <a name="see-also"></a>另请参阅
 

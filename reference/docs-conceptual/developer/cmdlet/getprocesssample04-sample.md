@@ -1,16 +1,18 @@
 ---
-title: GetProcessSample04 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4858c44302f7315625be02dd0dc1d335b9c3f158
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProcessSample04 示例
+description: GetProcessSample04 示例
+ms.openlocfilehash: 4b2b7f7ed5fd87711d0d7872caaf75d453de4832
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774416"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652724"
 ---
 # <a name="getprocesssample04-sample"></a>GetProcessSample04 示例
 
-此示例演示如何实现一个用于检索本地计算机上的进程的 cmdlet。 如果在检索过程中发生错误，则会生成非终止错误。 此 cmdlet 是 `Get-Process` Windows PowerShell 2.0 提供的简化版本的 cmdlet。
+此示例演示如何实现一个用于检索本地计算机上的进程的 cmdlet。 如果在检索进程时发生错误，则生成一个不可终止的错误。 此 cmdlet 是 `Get-Process` Windows PowerShell 2.0 提供的简化版本的 cmdlet。
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>如何使用 Visual Studio 生成示例。
 

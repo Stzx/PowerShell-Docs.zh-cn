@@ -1,12 +1,14 @@
 ---
-title: WideControl (Format) 的 WideEntries 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 74383b288c945008c1d7b5119363a166c04802ae
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideEntries Element for WideControl (Format)
+description: WideEntries Element for WideControl (Format)
+ms.openlocfilehash: 567b8acdd0d2e8d5daaef2c31b4fe4ce38c23a47
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785041"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651244"
 ---
 # <a name="wideentries-element-for-widecontrol-format"></a>WideEntries Element for WideControl (Format)
 
@@ -33,19 +35,19 @@ ms.locfileid: "87785041"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[WideEntry 元素 (格式) ](./wideentry-element-for-widecontrol-format.md)|提供宽视图的定义。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[WideControl Element (Format)](./widecontrol-element-format.md)|定义视图的宽 (单个值) 列表格式。|
 
 ## <a name="remarks"></a>备注
 
-宽视图是显示每个对象的单个属性值或脚本值的列表格式。 有关宽视图组件的详细信息，请参阅[宽视图组件](./creating-a-wide-view.md)。
+宽视图是显示每个对象的单个属性值或脚本值的列表格式。 有关宽视图组件的详细信息，请参阅 [宽视图组件](./creating-a-wide-view.md)。
 
 ## <a name="example"></a>示例
 
@@ -61,7 +63,7 @@ ms.locfileid: "87785041"
 </WideControl>
 ```
 
-有关宽视图的完整示例，请参阅[宽视图 (基本) ](./wide-view-basic.md)。
+有关宽视图的完整示例，请参阅 [宽视图 (基本) ](./wide-view-basic.md)。
 
 ## <a name="see-also"></a>另请参阅
 

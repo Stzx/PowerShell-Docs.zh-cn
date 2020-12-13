@@ -1,12 +1,14 @@
 ---
-title: ViewSelectedBy (Format) 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f6410b463bcb00d2758849c2f7e13cd839277e50
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionSetName Element for ViewSelectedBy (Format)
+description: SelectionSetName Element for ViewSelectedBy (Format)
+ms.openlocfilehash: a1a1816761715a138bcb3c2bd4cb9dbbb2f9cb92
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772597"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654908"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>SelectionSetName Element for ViewSelectedBy (Format)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87772597"
 
 ## <a name="remarks"></a>备注
 
-如果你有一组要通过使用单个名称引用的相关对象（例如通过继承相关的一组对象），则可以使用选择集。 有关定义和引用选项集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
+如果你有一组要通过使用单个名称引用的相关对象（例如通过继承相关的一组对象），则可以使用选择集。 有关定义和引用选项集的详细信息，请参阅 [定义对象集](./defining-selection-sets.md)。
 
 ## <a name="example"></a>示例
 

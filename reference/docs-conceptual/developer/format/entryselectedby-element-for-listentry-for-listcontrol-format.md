@@ -1,12 +1,14 @@
 ---
-title: ListControl (Format) 的 ListEntry 的 EntrySelectedBy 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d6ab1c08dd353da74d1a7d27c569d2fa86e083c3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EntrySelectedBy Element for ListEntry for ListControl (Format)
+description: EntrySelectedBy Element for ListEntry for ListControl (Format)
+ms.openlocfilehash: 1981c8fae65f494504d6cdd9f59337d555350b07
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774110"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652293"
 ---
 # <a name="entryselectedby-element-for-listentry-for-listcontrol-format"></a>EntrySelectedBy Element for ListEntry for ListControl (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87774110"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ListControl (格式的 EntrySelectedBy 的 SelectionCondition 元素) ](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|可选元素。<br /><br /> 定义要使用此列表视图定义必须存在的条件。|
 |[SelectionSetName Element for EntrySelectedBy for ListControl (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)|可选元素。<br /><br /> 指定一组使用此列表视图定义的 .NET 类型。|
@@ -42,7 +44,7 @@ ms.locfileid: "87774110"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ListEntry Element for ListControl (Format)](./listentry-element-for-listcontrol-format.md)|定义列表行的显示方式。|
 
@@ -50,9 +52,9 @@ ms.locfileid: "87774110"
 
 对于列表视图定义，必须至少指定一个类型、选择集或选择条件。 您可以使用的子元素数没有最大限制。
 
-选择条件用于定义要使用的定义必须存在的条件，例如当对象具有特定属性或特定属性值或脚本的计算结果为时 `true` 。 有关选择条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+选择条件用于定义要使用的定义必须存在的条件，例如当对象具有特定属性或特定属性值或脚本的计算结果为时 `true` 。 有关选择条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
-有关列表视图组件的详细信息，请参阅[创建列表视图](./creating-a-list-view.md)。
+有关列表视图组件的详细信息，请参阅 [创建列表视图](./creating-a-list-view.md)。
 
 ## <a name="example"></a>示例
 

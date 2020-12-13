@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的 CustomItem 的框架元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5ade36c183a026cb9001a2abbe91d31638a87108
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Frame Element for CustomItem for Controls for View (Format)
+description: Frame Element for CustomItem for Controls for View (Format)
+ms.openlocfilehash: 6f26e19a6894ac213b924108a56cb80f9ffd1143
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773447"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652199"
 ---
 # <a name="frame-element-for-customitem-for-controls-for-view-format"></a>Frame Element for CustomItem for Controls for View (Format)
 
@@ -36,33 +38,33 @@ ms.locfileid: "87773447"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |`CustomItem Element`|必需的元素|
-|[View (Format) 的控件的框架的 FirstLineHanging 元素](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定第一行向左移动的字符数。|
-|[View (Format) 的控件的框架的 FirstLineIndent 元素](./firstlineindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定第一行向右移动的字符数。|
-|[View (Format) 的控件的框架的 LeftIndent 元素](./leftindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定数据从左边距向外移动的字符数。|
-|[View (Format) 的控件的框架的 RightIndent 元素](./rightindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定数据从右边缘向外移动的字符数。|
+|[View (Format) 的控件的框架的 FirstLineHanging 元素 ](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定第一行向左移动的字符数。|
+|[View (Format) 的控件的框架的 FirstLineIndent 元素 ](./firstlineindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定第一行向右移动的字符数。|
+|[View (Format) 的控件的框架的 LeftIndent 元素 ](./leftindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定数据从左边距向外移动的字符数。|
+|[View (Format) 的控件的框架的 RightIndent 元素 ](./rightindent-element-for-frame-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定数据从右边缘向外移动的字符数。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomItem Element for CustomEntry for Controls for View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)|定义控件显示的数据及其显示方式。|
 
 ## <a name="remarks"></a>备注
 
-不能在同一元素中指定[FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)和[FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-view-format.md)元素 `Frame` 。
+不能在同一元素中指定 [FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-view-format.md) 和 [FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-view-format.md) 元素 `Frame` 。
 
 ## <a name="see-also"></a>另请参阅
 
-[View (Format) 的控件的框架的 FirstLineHanging 元素](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)
+[View (Format) 的控件的框架的 FirstLineHanging 元素 ](./firstlinehanging-element-for-frame-for-controls-for-view-format.md)
 
-[View (Format) 的控件的框架的 FirstLineIndent 元素](./firstlineindent-element-for-frame-for-controls-for-view-format.md)
+[View (Format) 的控件的框架的 FirstLineIndent 元素 ](./firstlineindent-element-for-frame-for-controls-for-view-format.md)
 
-[View (Format) 的控件的框架的 LeftIndent 元素](./leftindent-element-for-frame-for-controls-for-view-format.md)
+[View (Format) 的控件的框架的 LeftIndent 元素 ](./leftindent-element-for-frame-for-controls-for-view-format.md)
 
-[View (Format) 的控件的框架的 RightIndent 元素](./rightindent-element-for-frame-for-controls-for-view-format.md)
+[View (Format) 的控件的框架的 RightIndent 元素 ](./rightindent-element-for-frame-for-controls-for-view-format.md)
 
 [CustomItem Element for CustomEntry for Controls for View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)
 

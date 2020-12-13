@@ -1,21 +1,21 @@
 ---
-title: 如何验证参数集 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateSet attribute, example
-ms.openlocfilehash: 6173f1380583f5b27e2b188990a5ea041f447c57
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何验证参数集
+description: 如何验证参数集
+ms.openlocfilehash: 50ec0a48277893584d896e14ad6aa843682a28cc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781998"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650366"
 ---
 # <a name="how-to-validate-an-argument-set"></a>如何验证参数集
 
 此示例演示如何在运行 cmdlet 之前指定 Windows PowerShell 运行时可用于检查参数参数的验证规则。 此验证规则为参数参数提供了一组有效值。
 
 > [!NOTE]
-> 有关用于定义此属性的类的详细信息，请参阅[Validatesetattribute](/dotnet/api/System.Management.Automation.ValidateSetAttribute)。
+> 有关用于定义此属性的类的详细信息，请参阅 [Validatesetattribute](/dotnet/api/System.Management.Automation.ValidateSetAttribute)。
 
 ## <a name="to-validate-an-argument-set"></a>验证参数集
 
@@ -33,7 +33,7 @@ ms.locfileid: "87781998"
     private string userName;
     ```
 
-有关如何声明此特性的详细信息，请参阅[ValidateSet 特性声明](./validateset-attribute-declaration.md)。
+有关如何声明此特性的详细信息，请参阅 [ValidateSet 特性声明](./validateset-attribute-declaration.md)。
 
 ## <a name="see-also"></a>另请参阅
 

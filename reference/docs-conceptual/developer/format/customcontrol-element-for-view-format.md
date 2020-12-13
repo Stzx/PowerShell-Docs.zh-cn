@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的 CustomControl 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 660e8fd6531862790a2af7ab27a82e073c230693
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomControl Element for View (Format)
+description: CustomControl Element for View (Format)
+ms.openlocfilehash: 41352be55f0c03b2eaca0dbe2d7345e7cf804a7c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786044"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655474"
 ---
 # <a name="customcontrol-element-for-view-format"></a>CustomControl Element for View (Format)
 
@@ -32,13 +34,13 @@ ms.locfileid: "87786044"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomEntries Element for CustomControl for View (Format)](./customentries-element-for-customcontrol-for-view-format.md)|必需的元素。<br /><br /> 提供自定义控件视图的定义。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View Element (Format)](./view-element-format.md)|定义用于显示一个或多个 .NET 对象的视图。|
 

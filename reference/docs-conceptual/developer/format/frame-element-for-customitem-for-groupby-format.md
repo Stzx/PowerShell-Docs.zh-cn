@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的 CustomItem 的框架元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1568236ff7b6142f7e41be70a3ae5e28307cf790
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Frame Element for CustomItem for GroupBy (Format)
+description: Frame Element for CustomItem for GroupBy (Format)
+ms.openlocfilehash: 86b51766974ebfcae06583ade237a77c6db92866
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785755"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652170"
 ---
 # <a name="frame-element-for-customitem-for-groupby-format"></a>Frame Element for CustomItem for GroupBy (Format)
 
@@ -52,7 +54,7 @@ ms.locfileid: "87785755"
 
 ## <a name="remarks"></a>备注
 
-不能在同一元素中指定[FirstLineHanging](./firstlinehanging-element-for-frame-for-groupby-format.md)和[FirstLineIndent](./firstlineindent-element-for-frame-for-groupby-format.md)元素 `Frame` 。
+不能在同一元素中指定 [FirstLineHanging](./firstlinehanging-element-for-frame-for-groupby-format.md) 和 [FirstLineIndent](./firstlineindent-element-for-frame-for-groupby-format.md) 元素 `Frame` 。
 
 ## <a name="see-also"></a>另请参阅
 

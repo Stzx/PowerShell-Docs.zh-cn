@@ -1,12 +1,14 @@
 ---
-title: EnumerableExpansion (Format) 的 EntrySelectedBy 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 031bf10cfb1aed2c737fdd53fa4f20f025351d40
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EntrySelectedBy Element for EnumerableExpansion (Format)
+description: EntrySelectedBy Element for EnumerableExpansion (Format)
+ms.openlocfilehash: 8b2fff2d0b14d0622d0be2c5af3a95194c733a73
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783664"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652328"
 ---
 # <a name="entryselectedby-element-for-enumerableexpansion-format"></a>EntrySelectedBy Element for EnumerableExpansion (Format)
 
@@ -50,7 +52,7 @@ ms.locfileid: "87783664"
 
 必须为定义条目指定至少一个类型、选择集或选择条件。 您可以使用的子元素数没有最大限制。
 
-选择条件用于定义要使用的定义必须存在的条件，例如当对象具有特定属性或特定属性值或脚本的计算结果为时 `true` 。 有关选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+选择条件用于定义要使用的定义必须存在的条件，例如当对象具有特定属性或特定属性值或脚本的计算结果为时 `true` 。 有关选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 

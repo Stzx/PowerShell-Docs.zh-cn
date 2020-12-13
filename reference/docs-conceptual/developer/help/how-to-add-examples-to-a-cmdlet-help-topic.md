@@ -1,12 +1,14 @@
 ---
-title: 如何向 Cmdlet 帮助主题添加示例
 ms.date: 09/12/2016
-ms.openlocfilehash: 33a1726f9d52b5a368d5df7962cc17ba9c45246a
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 如何向 Cmdlet 帮助主题添加示例
+description: 如何向 Cmdlet 帮助主题添加示例
+ms.openlocfilehash: 6b72e29c93740b7953d9b68fc8e68c02eb2f4dee
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893435"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654716"
 ---
 # <a name="how-to-add-examples-to-a-cmdlet-help-topic"></a>如何向 Cmdlet 帮助主题添加示例
 
@@ -28,7 +30,7 @@ ms.locfileid: "86893435"
 
 ## <a name="adding-an-examples-node"></a>添加示例节点
 
-下面的 XML 演示如何**添加一个示例节点，** 其中包含一个**示例**节点。 为要包含在主题中的每个示例添加其他示例节点。
+下面的 XML 演示如何 **添加一个示例节点，** 其中包含一个 **示例** 节点。 为要包含在主题中的每个示例添加其他示例节点。
 
 ```xml
 <command:examples>
@@ -39,7 +41,7 @@ ms.locfileid: "86893435"
 
 ## <a name="adding-an-example-title"></a>添加示例标题
 
-下面的 XML 演示如何添加示例的**标题**。 **标题**用于设置除其他示例之外的示例。 PowerShell 使用包含连续示例编号的标准标头。
+下面的 XML 演示如何添加示例的 **标题** 。 **标题** 用于设置除其他示例之外的示例。 PowerShell 使用包含连续示例编号的标准标头。
 
 ```xml
 <command:examples>
@@ -51,7 +53,7 @@ ms.locfileid: "86893435"
 
 ## <a name="adding-preceding-characters"></a>添加前面的字符
 
-下面的 XML 演示如何添加字符，如 Windows PowerShell prompt，它们紧靠在示例命令之前（无需任何插入空格）。 PowerShell 使用 Windows PowerShell 提示符： `C:\PS>` 。
+下面的 XML 演示如何添加字符，如 Windows PowerShell prompt，该命令会在 (示例命令之前立即显示，而不会) 。 PowerShell 使用 Windows PowerShell 提示符： `C:\PS>` 。
 
 ```xml
 <command:examples>
@@ -66,7 +68,7 @@ ms.locfileid: "86893435"
 
 ## <a name="adding-the-command"></a>添加命令
 
-下面的 XML 演示如何添加示例的实际命令。 添加命令时，请键入 cmdlet 和参数的完整名称（不使用别名）。 同时，尽可能使用小写字符。
+下面的 XML 演示如何添加示例的实际命令。 添加命令时，请键入完整的名称， (不要使用 cmdlet 的别名) 和参数。 同时，尽可能使用小写字符。
 
 ```xml
 <command:examples>

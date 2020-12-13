@@ -1,16 +1,18 @@
 ---
-title: 如何添加 Cmdlet 说明
 ms.date: 09/13/2016
-ms.openlocfilehash: 2b98c4cefc3a55eccfeb7eba5a290e7d93a6088b
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 如何添加 Cmdlet 说明
+description: 如何添加 Cmdlet 说明
+ms.openlocfilehash: 08d21a281881678423bbe3c382279875ed2868db
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893231"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651222"
 ---
 # <a name="how-to-add-a-cmdlet-description"></a>如何添加 Cmdlet 说明
 
-本部分介绍如何添加在 cmdlet 帮助的 "**描述**" 部分中显示的内容。 在帮助文件中，此内容将添加到每个 cmdlet 的**命令**节点。
+本部分介绍如何添加在 cmdlet 帮助的 " **描述** " 部分中显示的内容。 在帮助文件中，此内容将添加到每个 cmdlet 的 **命令** 节点。
 
 > [!NOTE]
 > 若要获取帮助文件的完整视图，请打开 `dll-Help.xml` 位于 PowerShell 安装目录中的文件之一。 例如，该 `Microsoft.PowerShell.Commands.Management.dll-Help.xml` 文件包含多个 PowerShell cmdlet 的内容。

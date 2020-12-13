@@ -1,16 +1,14 @@
 ---
-title: 参数属性声明 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, Parameter
-- Parameter attribute, described
-- Parameter attribute
-ms.openlocfilehash: 55b157b93c3a42324d63e16ddfa8db1f0d38f82b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 参数属性声明
+description: 参数属性声明
+ms.openlocfilehash: bab48a94cb4b1e8501fb79c2f3ef71393fa2ee68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781845"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650352"
 ---
 # <a name="parameter-attribute-declaration"></a>参数属性声明
 
@@ -23,29 +21,29 @@ ms.locfileid: "87781845"
 [Parameter(Named Parameters...)]
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-`Mandatory` ([system.object](/dotnet/api/System.Boolean)) 可选的命名参数。 `True`指示 cmdlet 参数是必需的。 如果在调用 cmdlet 时未提供所需的参数，则 Windows PowerShell 会提示用户输入参数值。 默认值为 `false`。
+`Mandatory` ([system.object](/dotnet/api/System.Boolean)) 可选的命名参数。 `True` 指示 cmdlet 参数是必需的。 如果在调用 cmdlet 时未提供所需的参数，则 Windows PowerShell 会提示用户输入参数值。 默认值为 `false`。
 
 `ParameterSetName` ([system.string](/dotnet/api/System.String)) 可选的命名参数。 指定此 cmdlet 参数所属的参数集。 如果未指定参数集，则参数属于所有参数集。
 
 `Position` ([system.object](/dotnet/api/System.Int32)) 可选的命名参数。 指定参数在 Windows PowerShell 命令中的位置。
 
-`ValueFromPipeline` ([system.object](/dotnet/api/System.Boolean)) 可选的命名参数。 `True`指示 cmdlet 参数从管道对象获取其值。 如果 cmdlet 访问完整对象，而不仅仅是对象的属性，请指定此关键字。 默认值为 `false`。
+`ValueFromPipeline` ([system.object](/dotnet/api/System.Boolean)) 可选的命名参数。 `True` 指示 cmdlet 参数从管道对象获取其值。 如果 cmdlet 访问完整对象，而不仅仅是对象的属性，请指定此关键字。 默认值为 `false`。
 
-`ValueFromPipelineByPropertyName` ([system.object](/dotnet/api/System.Boolean)) 可选的命名参数。 `True`指示 cmdlet 参数从管道对象的属性中获取其值，该对象具有与此参数相同的名称或别名。 例如，如果该 cmdlet 具有 `Name` 参数并且管道对象还具有一个 `Name` 属性，则该属性的值将 `Name` 分配给该 cmdlet 的 `Name` 参数。 默认值为 `false`。
+`ValueFromPipelineByPropertyName` ([system.object](/dotnet/api/System.Boolean)) 可选的命名参数。 `True` 指示 cmdlet 参数从管道对象的属性中获取其值，该对象具有与此参数相同的名称或别名。 例如，如果该 cmdlet 具有 `Name` 参数并且管道对象还具有一个 `Name` 属性，则该属性的值将 `Name` 分配给该 cmdlet 的 `Name` 参数。 默认值为 `false`。
 
-`ValueFromRemainingArguments` ([system.object](/dotnet/api/System.Boolean)) 可选的命名参数。 `True`指示 cmdlet 参数接受传递到 cmdlet 的所有剩余参数。 默认值为 `false`。
+`ValueFromRemainingArguments` ([system.object](/dotnet/api/System.Boolean)) 可选的命名参数。 `True` 指示 cmdlet 参数接受传递到 cmdlet 的所有剩余参数。 默认值为 `false`。
 
-`HelpMessage`可选的命名参数。 指定参数的简短说明。 运行 cmdlet 时，Windows PowerShell 会显示此消息，未指定必需的参数。
+`HelpMessage` 可选的命名参数。 指定参数的简短说明。 运行 cmdlet 时，Windows PowerShell 会显示此消息，未指定必需的参数。
 
-`HelpMessageBaseName`可选的命名参数。指定资源标识符驻留的位置。 例如，此参数可以指定包含要本地化的帮助消息的资源程序集。
+`HelpMessageBaseName` 可选的命名参数。指定资源标识符驻留的位置。 例如，此参数可以指定包含要本地化的帮助消息的资源程序集。
 
-`HelpMessageResourceId`可选的命名参数。指定帮助消息的资源标识符。
+`HelpMessageResourceId` 可选的命名参数。指定帮助消息的资源标识符。
 
 ## <a name="remarks"></a>备注
 
-- 有关如何声明此属性的详细信息，请参阅[如何声明 Cmdlet 参数](./how-to-declare-cmdlet-parameters.md)。
+- 有关如何声明此属性的详细信息，请参阅 [如何声明 Cmdlet 参数](./how-to-declare-cmdlet-parameters.md)。
 
 - Cmdlet 可以有任意数量的参数。 但是，为了获得更好的用户体验，请限制参数的数目。
 
@@ -65,9 +63,9 @@ ms.locfileid: "87781845"
 
   - 可以定义多个参数 `ValueFromPipelineByPropertyName = true` 。
 
-- 有关参数名称的准则的详细信息，请参阅[Cmdlet 参数名称](standard-cmdlet-parameter-names-and-types.md)。
+- 有关参数名称的准则的详细信息，请参阅 [Cmdlet 参数名称](standard-cmdlet-parameter-names-and-types.md)。
 
-- 参数属性是由[Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute)类定义的。
+- 参数属性是由 [Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) 类定义的。
 
 ## <a name="see-also"></a>另请参阅
 

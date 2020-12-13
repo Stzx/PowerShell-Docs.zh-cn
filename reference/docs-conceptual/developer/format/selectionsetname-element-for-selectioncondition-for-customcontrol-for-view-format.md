@@ -1,12 +1,14 @@
 ---
-title: 用于 CustomControl for View (Format) 的 SelectionCondition 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c7fdd92475ba24d27e61371d1c6b54fa1a55647c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionSetName Element for SelectionCondition for CustomControl for View (Format)
+description: SelectionSetName Element for SelectionCondition for CustomControl for View (Format)
+ms.openlocfilehash: 839032048739e529057d7066fb3bc6aa2fbc5037
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787506"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651610"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>SelectionSetName Element for SelectionCondition for CustomControl for View (Format)
 
@@ -34,9 +36,9 @@ ms.locfileid: "87787506"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
-|[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|定义要使用的控件定义必须存在的条件。|
+|[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 ](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|定义要使用的控件定义必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -44,13 +46,13 @@ ms.locfileid: "87787506"
 
 ## <a name="remarks"></a>备注
 
-选择集是可由格式设置文件所定义的任何视图使用的常用 .NET 对象组。 有关创建和引用选项集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
+选择集是可由格式设置文件所定义的任何视图使用的常用 .NET 对象组。 有关创建和引用选项集的详细信息，请参阅 [定义对象集](./defining-selection-sets.md)。
 
-选择条件可以指定选择集或 .NET 类型，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+选择条件可以指定选择集或 .NET 类型，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
+[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 ](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
 
 [定义显示数据的条件](./defining-conditions-for-displaying-data.md)
 

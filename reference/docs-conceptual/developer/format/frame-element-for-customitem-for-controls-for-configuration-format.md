@@ -1,12 +1,14 @@
 ---
-title: " (Format) 的控件的 CustomItem 的框架元素Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: fa435b8d6b868d2d7c94b7926321d94edc2ec290
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Frame Element for CustomItem for Controls for Configuration (Format)
+description: Frame Element for CustomItem for Controls for Configuration (Format)
+ms.openlocfilehash: 85d095b9b0c25b68b2353bce56b85333aff91b98
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781471"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652245"
 ---
 # <a name="frame-element-for-customitem-for-controls-for-configuration-format"></a>Frame Element for CustomItem for Controls for Configuration (Format)
 
@@ -36,7 +38,7 @@ ms.locfileid: "87781471"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |`CustomItem Element`|必需的元素|
 |[FirstLineHanging Element for Frame for Controls for Configuration (Format)](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md)|可选元素。<br /><br /> 指定将第一行数据向左移动的字符数。|
@@ -46,13 +48,13 @@ ms.locfileid: "87781471"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[用于配置控件的 CustomEntry 的 CustomItem 元素](./customitem-element-for-customentry-for-controls-for-configuration-format.md)|定义控件显示的数据及其显示方式。|
 
 ## <a name="remarks"></a>备注
 
-不能在同一元素中指定[FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md)和[FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-configuration-format.md)元素 `Frame` 。
+不能在同一元素中指定 [FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md) 和 [FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-configuration-format.md) 元素 `Frame` 。
 
 ## <a name="see-also"></a>另请参阅
 

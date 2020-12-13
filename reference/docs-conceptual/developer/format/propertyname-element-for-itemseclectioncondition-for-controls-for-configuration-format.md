@@ -1,12 +1,14 @@
 ---
-title: 配置 (格式的控件的 ItemSeclectionCondition 的 PropertyName 元素) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 0e304af1dbe816753d6dcd1dd8149f950f2a0941
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for ItemSeclectionCondition for Controls for Configuration (Format)
+description: PropertyName Element for ItemSeclectionCondition for Controls for Configuration (Format)
+ms.openlocfilehash: 860683eb54b2a3579767640c1d3f0937897b8f8e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785585"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655129"
 ---
 # <a name="propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format"></a>PropertyName Element for ItemSeclectionCondition for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87785585"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ItemSelectionCondition Element for ExpressionBinding for Controls for Configuration (Format)](./itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md)|定义要使用此控件必须存在的条件。|
 
@@ -44,7 +46,7 @@ ms.locfileid: "87785585"
 
 ## <a name="remarks"></a>备注
 
-如果使用此元素，则在定义选择条件时，不能指定[ScriptBlock](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md)元素。
+如果使用此元素，则在定义选择条件时，不能指定 [ScriptBlock](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) 元素。
 
 ## <a name="see-also"></a>另请参阅
 

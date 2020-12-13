@@ -1,12 +1,14 @@
 ---
-title: ListControl (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 29626b181f21d168e1ebf973e01afeb411d9ef54
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionCondition Element for EntrySelectedBy for ListControl (Format)
+description: SelectionCondition Element for EntrySelectedBy for ListControl (Format)
+ms.openlocfilehash: e93499691dd0046265e43abd26497b2974546083
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772767"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655087"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>SelectionCondition Element for EntrySelectedBy for ListControl (Format)
 
@@ -56,9 +58,9 @@ lWhen 正在定义选择条件，以下要求适用：
 
 - 选择条件可以指定任意数量的 .NET 类型或选择集，但是不能同时指定两者。
 
-有关如何使用选择条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+有关如何使用选择条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
-有关列表视图的其他组件的详细信息，请参阅[创建列表视图](./creating-a-list-view.md)。
+有关列表视图的其他组件的详细信息，请参阅 [创建列表视图](./creating-a-list-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

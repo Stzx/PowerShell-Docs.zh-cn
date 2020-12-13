@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的 EntrySelectedBy 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 362f7844c09a52494387a62e329adfb309767427
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionSetName Element for EntrySelectedBy for GroupBy (Format)
+description: SelectionSetName Element for EntrySelectedBy for GroupBy (Format)
+ms.openlocfilehash: 7ebe5d884061243c8b4af196788187d84c15a92e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785279"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651848"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-groupby-format"></a>SelectionSetName Element for EntrySelectedBy for GroupBy (Format)
 
@@ -46,9 +48,9 @@ ms.locfileid: "87785279"
 
 每个自定义控件定义都必须定义至少一个类型名称、选择集或选择条件。
 
-当要定义在多个视图中使用的一组对象时，通常使用选择集。 例如，您可能希望为同一组对象创建表视图和列表视图。 有关定义选择集的详细信息，请参阅[定义选择集](./defining-selection-sets.md)。
+当要定义在多个视图中使用的一组对象时，通常使用选择集。 例如，您可能希望为同一组对象创建表视图和列表视图。 有关定义选择集的详细信息，请参阅 [定义选择集](./defining-selection-sets.md)。
 
-有关自定义控件视图组件的详细信息，请参阅[创建自定义控件](./creating-custom-controls.md)。
+有关自定义控件视图组件的详细信息，请参阅 [创建自定义控件](./creating-custom-controls.md)。
 
 ## <a name="see-also"></a>另请参阅
 

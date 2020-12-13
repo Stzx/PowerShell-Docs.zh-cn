@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的 GroupBy 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2f9071a3ebbc7cc2ccb7721dd518e82723e9cc4e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy Element for View (Format)
+description: GroupBy Element for View (Format)
+ms.openlocfilehash: d8ca93a3b2c1490928885579919c07f5eb274cd8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781420"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652105"
 ---
 # <a name="groupby-element-for-view-format"></a>GroupBy Element for View (Format)
 
@@ -36,7 +38,7 @@ ms.locfileid: "87781420"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomControl Element for GroupBy (Format)](./customcontrol-element-for-groupby-format.md)|可选元素。<br /><br /> 定义显示新组的自定义控件。|
 |[CustomControlName Element for GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)|可选元素。<br /><br /> 指定用于显示新组的控件的名称。|
@@ -46,7 +48,7 @@ ms.locfileid: "87781420"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View Element (Format)](./view-element-format.md)|定义一个视图，该视图显示一个或多个 .NET 对象。|
 

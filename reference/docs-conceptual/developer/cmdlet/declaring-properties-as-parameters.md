@@ -1,12 +1,14 @@
 ---
-title: 将属性声明为参数 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 63113f541df534b1f720ceb06e14b5031f2311b2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 将属性声明为参数
+description: 将属性声明为参数
+ms.openlocfilehash: ade7928e2ca277da8bbd1a5e04997bd1d05f1e5d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774637"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653159"
 ---
 # <a name="declaring-properties-as-parameters"></a>将属性声明为参数
 
@@ -34,9 +36,9 @@ private string userName;
 
 - 避免为所有自由格式的文本属性提供基本的字符串参数。
 
-- 可以将参数添加到任意数量的参数集。 有关参数集的详细信息，请参阅[Cmdlet 参数集](./cmdlet-parameter-sets.md)。
+- 可以将参数添加到任意数量的参数集。 有关参数集的详细信息，请参阅 [Cmdlet 参数集](./cmdlet-parameter-sets.md)。
 
-Windows PowerShell 还提供了一组自动可用于每个 cmdlet 的通用参数。 有关这些参数及其别名的详细信息，请参阅[Cmdlet 公用参数](./common-parameter-names.md)。
+Windows PowerShell 还提供了一组自动可用于每个 cmdlet 的通用参数。 有关这些参数及其别名的详细信息，请参阅 [Cmdlet 公用参数](./common-parameter-names.md)。
 
 ## <a name="see-also"></a>另请参阅
 

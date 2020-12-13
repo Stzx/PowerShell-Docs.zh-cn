@@ -1,12 +1,14 @@
 ---
-title: TableControl 的 TableColumnItem 的 ScriptBlock 元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 676d2462de077213a933eff632a4e3d23757b731
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for TableColumnItem for TableControl (Format)
+description: ScriptBlock Element for TableColumnItem for TableControl (Format)
+ms.openlocfilehash: 5928a67fc09ddc2dcace64635fee055c620b17d3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783426"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651953"
 ---
 # <a name="scriptblock-element-for-tablecolumnitem-for-tablecontrol-format"></a>ScriptBlock Element for TableColumnItem for TableControl (Format)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87783426"
 
 ## <a name="remarks"></a>备注
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

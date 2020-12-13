@@ -1,12 +1,14 @@
 ---
-title: 用于 EntrySelectedBy for EnumerableExpansion (Format) 的 SelectionCondition 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e18c74bb95c658f2c3e7b7454628f78d523f7609
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionSetName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion (Format)
+description: SelectionSetName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion (Format)
+ms.openlocfilehash: 0c9372113a79f75cfbda67acf869164fde894ee3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787489"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651587"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format"></a>SelectionSetName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87787489"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[SelectionCondition Element for EntrySelectedBy for EnumerableExpansion (Format)](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)|定义扩展此定义的集合对象时必须存在的条件。|
 
@@ -44,9 +46,9 @@ ms.locfileid: "87787489"
 
 ## <a name="remarks"></a>备注
 
-选择条件可以指定选择集或 .NET 类型，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+选择条件可以指定选择集或 .NET 类型，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
-选择集是可由格式设置文件所定义的任何视图使用的常用 .NET 对象组。 有关创建和引用选项集的详细信息，请参阅[定义选择集](./defining-selection-sets.md)。
+选择集是可由格式设置文件所定义的任何视图使用的常用 .NET 对象组。 有关创建和引用选项集的详细信息，请参阅 [定义选择集](./defining-selection-sets.md)。
 
 ## <a name="see-also"></a>另请参阅
 

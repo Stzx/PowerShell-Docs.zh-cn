@@ -1,12 +1,14 @@
 ---
-title: WideControl (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4115ad1ee8729ea4fc16bc19698018d2f4ed9be1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionCondition Element for EntrySelectedBy for WideControl (Format)
+description: SelectionCondition Element for EntrySelectedBy for WideControl (Format)
+ms.openlocfilehash: 8c51ca72edc6ad174dc289c61a8987e8f9495d19
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772699"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655104"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-widecontrol-format"></a>SelectionCondition Element for EntrySelectedBy for WideControl (Format)
 
@@ -58,9 +60,9 @@ ms.locfileid: "87772699"
 
 - 选择条件可以指定任意数量的 .NET 类型或选择集，但是不能同时指定两者。
 
-有关如何使用选择条件的详细信息，请参阅[定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
+有关如何使用选择条件的详细信息，请参阅 [定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
 
-有关大视图的其他组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+有关大视图的其他组件的详细信息，请参阅 [创建宽视图](./creating-a-wide-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

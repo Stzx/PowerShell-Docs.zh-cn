@@ -1,23 +1,20 @@
 ---
-title: 错误报告概念 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- non-terminating errors [PowerShell SDK]
-- errors [PowerShell SDK], described
-- terminating errors [PowerShell SDK]
-- errors [PowerShell SDK]
-ms.openlocfilehash: ff010bbe1a87daa351ec13ed249ffc899781a8c3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 错误报告概念
+description: 错误报告概念
+ms.openlocfilehash: 353e628c63667a2db010556b2ed9169809b742f4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774501"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653037"
 ---
 # <a name="error-reporting-concepts"></a>错误报告概念
 
-Windows PowerShell 提供了两种用于报告错误的机制：一种用于*终止错误*的机制，另一种机制用于*非终止错误*。 你的 cmdlet 正确报告错误，以便运行 cmdlet 的主机应用程序能够以适当的方式做出反应，这一点很重要。
+Windows PowerShell 提供了两种用于报告错误的机制：一种用于 *终止错误* 的机制，另一种机制用于 *非终止错误*。 你的 cmdlet 正确报告错误，以便运行 cmdlet 的主机应用程序能够以适当的方式做出反应，这一点很重要。
 
-当发生不是或不应允许 cmdlet 继续处理其输入对象的错误时，你的 cmdlet 应调用[Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)方法。 当 cmdlet 可以继续处理输入对象时，你的 cmdlet 应调用[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)方法来报告非终止错误。 这两种方法都提供了一个错误记录，主机应用程序可以使用这些错误记录来调查错误的原因。
+当发生不是或不应允许 cmdlet 继续处理其输入对象的错误时，你的 cmdlet 应调用 [Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 方法。 当 cmdlet 可以继续处理输入对象时，你的 cmdlet 应调用 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 方法来报告非终止错误。 这两种方法都提供了一个错误记录，主机应用程序可以使用这些错误记录来调查错误的原因。
 
 使用以下准则来确定错误是终止还是非终止错误。
 

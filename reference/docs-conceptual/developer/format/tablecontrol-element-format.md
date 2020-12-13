@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的 TableControl 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: 34e20006a7501650f2a22f71a3d7e999fb8b2337
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableControl Element (Format)
+description: TableControl Element (Format)
+ms.openlocfilehash: 93e05e22d61504d7781b6f3c07f9a3fd0b3c9e8a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785126"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651455"
 ---
 # <a name="tablecontrol-element-format"></a>TableControl Element (Format)
 
@@ -51,11 +53,11 @@ ViewDefinitions 元素 (格式) View 元素 (格式) TableControl 元素 (格式
 
 ## <a name="remarks"></a>备注
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="example"></a>示例
 
-此示例演示一个 `TableControl` 元素，该元素用于显示[System.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController)对象的属性。
+此示例演示一个 `TableControl` 元素，该元素用于显示 [System.serviceprocess. Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 对象的属性。
 
 ```xml
 <View>

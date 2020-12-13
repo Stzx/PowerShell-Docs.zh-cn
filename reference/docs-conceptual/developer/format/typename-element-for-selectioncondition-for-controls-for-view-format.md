@@ -1,12 +1,14 @@
 ---
-title: 视图 (格式的控件的 SelectionCondition 的 TypeName 元素) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4795c3af40cf60fb8e71185feced18c192b3a0aa
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for SelectionCondition for Controls for View (Format)
+description: TypeName Element for SelectionCondition for Controls for View (Format)
+ms.openlocfilehash: e70fc05667c27fa3b68f3c9a1802c1e3bba8b7ce
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780043"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651336"
 ---
 # <a name="typename-element-for-selectioncondition-for-controls-for-view-format"></a>TypeName Element for SelectionCondition for Controls for View (Format)
 

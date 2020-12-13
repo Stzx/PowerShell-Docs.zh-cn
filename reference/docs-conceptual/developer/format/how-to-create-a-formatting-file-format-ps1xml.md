@@ -1,12 +1,14 @@
 ---
-title: '如何创建格式化文件 ( # B0 xml) |Microsoft Docs'
 ms.date: 09/13/2016
-ms.openlocfilehash: abdbd4e15b0c4cb1dafcde087d24ed5792c86c3d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何创建格式设置文件 (.format.ps1xml)
+description: 如何创建格式设置文件 (.format.ps1xml)
+ms.openlocfilehash: 5bbc1ba40bfccf13636abc0f0751938aa724b761
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781250"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652006"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>如何创建格式设置文件 (.format.ps1xml)
 
@@ -33,7 +35,7 @@ ms.locfileid: "87781250"
 
    - `<ViewDefinitions></ViewDefinitions>`标记定义 `ViewDefinitions` 节点。 所有视图都在此节点中定义。
 
-3. 将该文件保存到 Windows PowerShell 安装文件夹、模块文件夹或模块文件夹的子文件夹。 保存文件时，请使用以下名称格式： `MyFile.format.ps1xml` 。 格式化文件必须使用 `.format.ps1xml` 扩展名。
+3. 将该文件保存到 Windows PowerShell 安装文件夹、模块文件夹或模块文件夹的子文件夹。 保存文件时，请使用以下名称格式：  `MyFile.format.ps1xml` 。 格式化文件必须使用 `.format.ps1xml` 扩展名。
 
    你现在可以将视图添加到格式设置文件。 对于可在格式设置文件中定义的视图数没有限制。 您可以为每个对象添加单个视图、同一个对象的多个视图或多个对象使用的单个视图。
 

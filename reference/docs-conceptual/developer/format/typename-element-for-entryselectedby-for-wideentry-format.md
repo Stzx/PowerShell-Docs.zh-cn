@@ -1,12 +1,14 @@
 ---
-title: EntrySelectedBy for WideEntry (Format) 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9af443067467f590df824b28636f57b807a4fc94
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for EntrySelectedBy for WideEntry (Format)
+description: TypeName Element for EntrySelectedBy for WideEntry (Format)
+ms.openlocfilehash: 2e0facd6ff7c6fec96dabf488449a8502429bcff
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780179"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654796"
 ---
 # <a name="typename-element-for-entryselectedby-for-wideentry-format"></a>TypeName Element for EntrySelectedBy for WideEntry (Format)
 
@@ -46,7 +48,7 @@ ms.locfileid: "87780179"
 
 每个宽条目都必须指定一个或多个 .NET 类型、选择集或必须为要使用的定义提供的选择条件。
 
-有关大视图的其他组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+有关大视图的其他组件的详细信息，请参阅 [创建宽视图](./creating-a-wide-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

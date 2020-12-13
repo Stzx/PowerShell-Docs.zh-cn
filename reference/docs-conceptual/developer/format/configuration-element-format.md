@@ -1,12 +1,14 @@
 ---
-title: 配置元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 90be02f8e27c0bd391e01da1a08ecd8eeb29b84c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration Element (Format)
+description: Configuration Element (Format)
+ms.openlocfilehash: 0524736d40dd7a7acb0b6fb61d1438b75672c240
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783834"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655687"
 ---
 # <a name="configuration-element-format"></a>Configuration Element (Format)
 
@@ -49,7 +51,7 @@ ms.locfileid: "87783834"
 
 ## <a name="remarks"></a>备注
 
-格式化文件定义对象的显示方式。 在大多数情况下，此根元素包含一个[ViewDefinitions](./viewdefinitions-element-format.md)元素，该元素定义格式设置文件的表、列表和宽视图。 除了视图定义以外，格式设置文件还可以定义这些视图可以使用的常用选择集、设置和控件。
+格式化文件定义对象的显示方式。 在大多数情况下，此根元素包含一个 [ViewDefinitions](./viewdefinitions-element-format.md) 元素，该元素定义格式设置文件的表、列表和宽视图。 除了视图定义以外，格式设置文件还可以定义这些视图可以使用的常用选择集、设置和控件。
 
 ## <a name="see-also"></a>另请参阅
 

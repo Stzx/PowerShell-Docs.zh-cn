@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的控件的框架的 FirstLineHanging 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: 6c0429a5caa5d20370acff72fa5707ed8cf7ad01
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: FirstLineHanging Element for Frame for Controls for Configuration (Format)
+description: FirstLineHanging Element for Frame for Controls for Configuration (Format)
+ms.openlocfilehash: 94d59ef7b54e036f76e38a3b06b769700443b9fb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773736"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655226"
 ---
 # <a name="firstlinehanging-element-for-frame-for-controls-for-configuration-format"></a>FirstLineHanging Element for Frame for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87773736"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Frame Element for CustomItem for Controls for Configuration (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 

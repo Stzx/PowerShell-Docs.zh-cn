@@ -1,12 +1,14 @@
 ---
-title: 扩展输出对象 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 48f4f2996159d84257ad72d499e3a796aeaa9116
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 扩展输出对象
+description: 扩展输出对象
+ms.openlocfilehash: 9fea476e3032002bd206609313581cc6373dfddc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784310"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652900"
 ---
 # <a name="extending-output-objects"></a>扩展输出对象
 
@@ -14,7 +16,7 @@ ms.locfileid: "87784310"
 
 ## <a name="extending-the-systemarray-object"></a>扩展 System.object 对象
 
-下面的示例演示 Windows PowerShell 如何在 Types.ps1xml 文件中扩展[system.object](/dotnet/api/System.Array)对象。 默认情况下， [system.object](/dotnet/api/System.Array)对象具有 `Length` 属性，该属性列出数组中对象的数量。 但是，由于名称 "length" 未清楚地描述属性，因此 Windows PowerShell 将添加 `Count` alias 属性，该属性显示与属性相同的值 `Length` 。 下面的 XML 将 `Count` 属性添加到[系统数组](/dotnet/api/System.Array)类型。
+下面的示例演示 Windows PowerShell 如何在 Types.ps1xml 文件中扩展 [system.object](/dotnet/api/System.Array) 对象。 默认情况下， [system.object](/dotnet/api/System.Array) 对象具有 `Length` 属性，该属性列出数组中对象的数量。 但是，由于名称 "length" 未清楚地描述属性，因此 Windows PowerShell 将添加 `Count` alias 属性，该属性显示与属性相同的值 `Length` 。 下面的 XML 将 `Count` 属性添加到 [系统数组](/dotnet/api/System.Array) 类型。
 
 ```xml
 <Type>
@@ -29,7 +31,7 @@ ms.locfileid: "87784310"
 
 ```
 
-若要查看此新的别名属性，请在任何数组上使用[Get 成员](/powershell/module/Microsoft.PowerShell.Utility/Get-Member)命令，如以下示例中所示。
+若要查看此新的别名属性，请在任何数组上使用 [Get 成员](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) 命令，如以下示例中所示。
 
 ```powershell
 Get-Member -InputObject (1,2,3,4)
@@ -74,20 +76,20 @@ PS> (1, 2, 3, 4).Length
 
 若要将自己的扩展类型添加到文件中，请为要扩展的每个对象添加类型元素。 以下主题提供了示例。
 
-- 有关添加属性和属性集的详细信息，请参阅[扩展属性](./extending-properties-for-objects.md)
+- 有关添加属性和属性集的详细信息，请参阅 [扩展属性](./extending-properties-for-objects.md)
 
-- 有关添加方法的详细信息，请参阅[扩展方法](./defining-default-methods-for-objects.md)。
+- 有关添加方法的详细信息，请参阅 [扩展方法](./defining-default-methods-for-objects.md)。
 
-- 有关添加成员集的详细信息，请参阅[扩展成员集](./defining-default-member-sets-for-objects.md)。
+- 有关添加成员集的详细信息，请参阅 [扩展成员集](./defining-default-member-sets-for-objects.md)。
 
 定义自己的扩展类型后，请使用以下方法之一来使扩展对象可用：
 
-- 若要使扩展类型文件可用于当前会话，请使用[update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet 添加新的文件。 如果你希望你的类型优先于其他类型文件中定义的类型 (包括 Types.ps1xml 文件) ，请使用 `PrependData` [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet 的参数。
-- 若要使扩展类型文件可供所有未来会话使用，请将类型文件添加到模块，导出当前会话，或将[update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData)命令添加到 Windows PowerShell 配置文件。
+- 若要使扩展类型文件可用于当前会话，请使用 [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet 添加新的文件。 如果你希望你的类型优先于其他类型文件中定义的类型 (包括 Types.ps1xml 文件) ，请使用 `PrependData` [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet 的参数。
+- 若要使扩展类型文件可供所有未来会话使用，请将类型文件添加到模块，导出当前会话，或将 [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) 命令添加到 Windows PowerShell 配置文件。
 
 ## <a name="signing-types-files"></a>签名类型文件
 
-应对类型文件进行数字签名以防止篡改，因为 XML 可以包含脚本块。 有关添加数字签名的详细信息，请参阅[about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing)
+应对类型文件进行数字签名以防止篡改，因为 XML 可以包含脚本块。 有关添加数字签名的详细信息，请参阅 [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing)
 
 ## <a name="see-also"></a>另请参阅
 

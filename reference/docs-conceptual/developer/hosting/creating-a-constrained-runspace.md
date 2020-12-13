@@ -1,20 +1,22 @@
 ---
-title: 创建受限的运行空间 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 创建受限运行空间
+description: 创建受限运行空间
+ms.openlocfilehash: 53fee3cc7d8625425bc6a73196aee9eee7f17ed6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779805"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651169"
 ---
 # <a name="creating-a-constrained-runspace"></a>创建受限运行空间
 
-出于性能或安全方面的考虑，可能需要限制可用于主机应用程序的 Windows PowerShell 命令。 为此，可以通过调用System.Management.Automation.Runspaces.Initialsessionstate 创建一个空的[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) [。Create *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) method，然后仅添加所需的命令。
+出于性能或安全方面的考虑，可能需要限制可用于主机应用程序的 Windows PowerShell 命令。 为此，可以通过调用System.Management.Automation.Runspaces.Initialsessionstate 创建一个空的 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) [ 。Create *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) method，然后仅添加所需的命令。
 
  使用仅加载您指定的命令的运行空间可显著提高性能。
 
- 你可以使用[Sessionstatecmdletentry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry)类的方法来定义初始会话状态的 cmdlet）。
+ 你可以使用 [Sessionstatecmdletentry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) 类的方法来定义初始会话状态的 cmdlet）。
 
  你还可以将命令设置为私有。 专用命令可由主机应用程序使用，但不能由应用程序的用户使用。
 
@@ -102,7 +104,7 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 
 ## <a name="making-commands-private"></a>使命令私有
 
- 你还可以通过将命令的[Commandinfo](/dotnet/api/System.Management.Automation.CommandInfo.Visibility)属性设置为 private，使其成为私有命令。 [SessionStateEntryVisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **私有**。 宿主应用程序和其他命令可以调用该命令，但应用程序的用户不能。 在下面的示例中， [get-childitem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem)命令是私有的。
+ 你还可以通过将命令的 [Commandinfo](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) 属性设置为 private，使其成为私有命令。 [SessionStateEntryVisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **私有**。 宿主应用程序和其他命令可以调用该命令，但应用程序的用户不能。 在下面的示例中， [get-childitem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) 命令是私有的。
 
 ```csharp
 defaultSessionState = InitialSessionState.CreateDefault();

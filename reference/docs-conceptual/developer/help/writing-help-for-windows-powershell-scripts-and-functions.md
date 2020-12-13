@@ -1,12 +1,14 @@
 ---
-title: 编写 PowerShell 脚本和函数的帮助
 ms.date: 09/13/2016
-ms.openlocfilehash: 381c501d87b7381075f89412f654c6121493856e
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 编写 PowerShell 脚本和函数的帮助
+description: 编写 PowerShell 脚本和函数的帮助
+ms.openlocfilehash: f72742e2a131f41ba8ffdcec4901c7c3ea1da1ad
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892908"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654638"
 ---
 # <a name="writing-help-for-powershell-scripts-and-functions"></a>编写 PowerShell 脚本和函数的帮助
 
@@ -21,9 +23,9 @@ PowerShell 脚本可以包括有关脚本的帮助主题，以及有关脚本中
 
 ### <a name="comment-based-help"></a>基于注释的帮助
 
-描述脚本或函数的帮助主题可作为脚本或函数中的一组注释实现。 为脚本编写基于注释的帮助和脚本中的函数时，请注意用于放置基于注释的帮助的规则。 此位置确定 cmdlet 是否将 `Get-Help` 帮助主题与脚本或函数关联。 有关编写基于注释的帮助主题的详细信息，请参阅[about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)。
+描述脚本或函数的帮助主题可作为脚本或函数中的一组注释实现。 为脚本编写基于注释的帮助和脚本中的函数时，请注意用于放置基于注释的帮助的规则。 此位置确定 cmdlet 是否将 `Get-Help` 帮助主题与脚本或函数关联。 有关编写基于注释的帮助主题的详细信息，请参阅 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)。
 
-### <a name="xml-based-command-help"></a>基于 XML 的命令帮助
+### <a name="xml-based-command-help"></a>XML-Based 命令帮助
 
 描述脚本或函数的帮助主题可以在使用 command help 架构的 XML 文件中实现。 若要将脚本或函数与 XML 文件相关联，请使用 `ExternalHelp` comment 关键字，后跟 xml 文件的路径和名称。
 
@@ -31,9 +33,9 @@ PowerShell 脚本可以包括有关脚本的帮助主题，以及有关脚本中
 
 ### <a name="online-help"></a>联机帮助
 
-你可以在 internet 上发布帮助主题，然后直接 `Get-Help` 打开这些主题。 有关编写基于注释的帮助主题的详细信息，请参阅[支持联机帮助](../module/supporting-online-help.md)。
+你可以在 internet 上发布帮助主题，然后直接 `Get-Help` 打开这些主题。 有关编写基于注释的帮助主题的详细信息，请参阅 [支持联机帮助](../module/supporting-online-help.md)。
 
-没有已建立的方法来编写脚本和函数的概念（"关于"）主题。
+没有建立用于编写概念 ( "关于" ) 脚本和函数主题的方法。
 但是，你可以在 "命令帮助" 主题的 "相关链接" 部分中，在 internet 上列出主题及其 Url。
 
 ## <a name="content-considerations-for-script-and-function-help"></a>脚本和函数帮助的内容注意事项
@@ -42,10 +44,10 @@ PowerShell 脚本可以包括有关脚本的帮助主题，以及有关脚本中
 
 - 在所有说明中，请将命令作为脚本或函数引用。 此信息可帮助用户了解和管理命令。
 
-  例如，下面的详细说明指出，新的主题命令是一个脚本。
+  例如，以下详细说明表明 New-Topic 命令是一个脚本。
   这会提醒用户他们在运行时需要指定路径和全名。
 
-  > "新的主题脚本为输入文件中的每个主题名称创建一个空白的概念主题 ..."
+  > "New-Topic 脚本为输入文件中的每个主题名称创建一个空白概念主题 ..."
 
   下面是一个函数的详细说明状态 `Disable-PSRemoting` 。 当会话中包含多个具有相同名称的命令时，此信息对用户特别有用，其中有些命令可能由优先级较高的命令隐藏。
 
@@ -58,7 +60,7 @@ PowerShell 脚本可以包括有关脚本的帮助主题，以及有关脚本中
 
 - 在函数帮助主题中，提醒用户此函数仅在当前会话中存在，若要在其他会话中使用它，需要添加它，或者将其添加到 PowerShell 配置文件。
 
-- `Get-Help`仅当脚本文件和帮助主题文件保存到正确的位置时，才显示脚本或函数的帮助主题。 因此，在脚本或函数帮助主题中包含用于安装 PowerShell 或保存或安装脚本或函数的说明并不有用。 相反，请在用于分发脚本或函数的文档中包含任何安装说明。
+- `Get-Help` 仅当脚本文件和帮助主题文件保存到正确的位置时，才显示脚本或函数的帮助主题。 因此，在脚本或函数帮助主题中包含用于安装 PowerShell 或保存或安装脚本或函数的说明并不有用。 相反，请在用于分发脚本或函数的文档中包含任何安装说明。
 
 ## <a name="see-also"></a>另请参阅
 

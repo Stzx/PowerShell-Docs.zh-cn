@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的 CustomEntry 的 EntrySelectedBy 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 75a0f42e7722b54791a873200a35c8fcbbd665b1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EntrySelectedBy Element for CustomEntry for GroupBy (Format)
+description: EntrySelectedBy Element for CustomEntry for GroupBy (Format)
+ms.openlocfilehash: 5af4abe081ca268699d281a1b586a584107b9a83
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774127"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652355"
 ---
 # <a name="entryselectedby-element-for-customentry-for-groupby-format"></a>EntrySelectedBy Element for CustomEntry for GroupBy (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87774127"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[SelectionCondition Element for EntrySelectedBy for GroupBy (Format)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)|可选元素。<br /><br /> 定义要使用此定义必须存在的条件。|
 |[SelectionSetName Element for EntrySelectedBy for GroupBy (Format)](./selectionsetname-element-for-entryselectedby-for-groupby-format.md)|可选元素。<br /><br /> 指定一组使用此控件定义的 .NET 类型。|
@@ -42,13 +44,13 @@ ms.locfileid: "87774127"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomEntry Element for CustomControl for GroupBy (Format)](./customentry-element-for-customcontrol-for-groupby-format.md)|提供控件的定义。|
 
 ## <a name="remarks"></a>备注
 
-选择条件用于定义要使用的定义必须存在的条件，例如当对象具有特定属性或特定属性值或脚本计算结果为时 `true` 。 有关选择条件的详细信息，请参阅[定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
+选择条件用于定义要使用的定义必须存在的条件，例如当对象具有特定属性或特定属性值或脚本计算结果为时 `true` 。 有关选择条件的详细信息，请参阅 [定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 

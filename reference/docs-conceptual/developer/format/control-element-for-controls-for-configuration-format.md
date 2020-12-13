@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的控件控件元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: 9447efac84cff3cc33468aeebc97a8bdd6137518
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Control Element for Controls for Configuration (Format)
+description: Control Element for Controls for Configuration (Format)
+ms.openlocfilehash: 43424de025cb89d81533e973abd7c39c09533747
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783817"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655658"
 ---
 # <a name="control-element-for-controls-for-configuration-format"></a>Control Element for Controls for Configuration (Format)
 

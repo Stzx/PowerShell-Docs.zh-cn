@@ -1,12 +1,14 @@
 ---
-title: 用于 CustomControl for View (Format) 的 CustomEntry 的 EntrySelectedBy 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4d4900cefb0d499397fc9dff7e037ce0a541f72f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EntrySelectedBy Element for CustomEntry for CustomControl for View (Format)
+description: EntrySelectedBy Element for CustomEntry for CustomControl for View (Format)
+ms.openlocfilehash: 4821f22560f35034f90d018e5a109004f331441f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783681"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655356"
 ---
 # <a name="entryselectedby-element-for-customentry-for-customcontrol-for-view-format"></a>EntrySelectedBy Element for CustomEntry for CustomControl for View (Format)
 
@@ -50,9 +52,9 @@ ms.locfileid: "87783681"
 
 您必须为某个条目指定至少一个类型、选择集或选择条件。 您可以使用的子元素数没有最大限制。
 
-选择条件用于定义要使用的项必须存在的条件，例如当对象具有特定属性或特定属性值或脚本计算结果为时 `true` 。 有关选择条件的详细信息，请参阅[定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
+选择条件用于定义要使用的项必须存在的条件，例如当对象具有特定属性或特定属性值或脚本计算结果为时 `true` 。 有关选择条件的详细信息，请参阅 [定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
 
-有关自定义控件视图组件的详细信息，请参阅[自定义控件视图](./creating-custom-controls.md)。
+有关自定义控件视图组件的详细信息，请参阅 [自定义控件视图](./creating-custom-controls.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,18 +1,14 @@
 ---
-title: Cmdlet 错误报告 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- error records [PowerShell], terminating
-- non-terminating errors [PowerShell]
-- error records [PowerShell]
-- terminating errors [PowerShell]
-- error records [PowerShell], non-terminating
-ms.openlocfilehash: 30b19914253db5f517f5ab76623b54aced0c0598
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 错误报告
+description: Cmdlet 错误报告
+ms.openlocfilehash: f06cf98183d56249080623895bd1f5a3e070cefd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784463"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653410"
 ---
 # <a name="cmdlet-error-reporting"></a>Cmdlet 错误报告
 
@@ -36,17 +32,17 @@ ms.locfileid: "87784463"
 
 ## <a name="reporting-nonterminating-errors"></a>报告非终止错误
 
-非终止错误的报告应始终在 BeginProcessing 方法、ProcessRecord 方法或[System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) [方法的](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)cmdlet 实现内完成，否则应始终在该 cmdlet 的实现中完成此操作的报告。 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法。 这些类型的错误通过调用[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)方法进行报告，后者会将错误记录发送到错误流。
+非终止错误的报告应始终在 BeginProcessing 方法、ProcessRecord 方法或[](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) [方法的](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)cmdlet 实现内完成，否则应始终在该 cmdlet 的实现中完成此操作的报告。 [](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法。 这些类型的错误通过调用 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 方法进行报告，后者会将错误记录发送到错误流。
 
 ## <a name="reporting-terminating-errors"></a>报告终止错误
 
-通过引发异常或通过调用[ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)方法来报告终止错误。 请注意，cmdlet 还可以捕获并重新引发异常（如**OutOfMemory**），但是，它们不需要重新引发异常，因为 PowerShell 运行时也会捕获它们。
+通过引发异常或通过调用 [ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 方法来报告终止错误。 请注意，cmdlet 还可以捕获并重新引发异常（如 **OutOfMemory**），但是，它们不需要重新引发异常，因为 PowerShell 运行时也会捕获它们。
 
 你还可以为特定于你的情况的问题定义自己的异常，或使用其错误记录向现有异常添加其他信息。
 
 ## <a name="error-records"></a>错误记录
 
-PowerShell 介绍了[ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)对象的非终止错误条件。 每个对象提供错误类别信息、可选的目标对象以及有关错误情况的详细信息。
+PowerShell 介绍了 [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 对象的非终止错误条件。 每个对象提供错误类别信息、可选的目标对象以及有关错误情况的详细信息。
 
 ### <a name="error-identifiers"></a>错误标识符
 
@@ -55,7 +51,7 @@ PowerShell 将此标识符与 cmdlet 标识符组合在一起，创建完全限�
 
 指定错误标识符时，应遵循以下准则：
 
-- 将不同的、高度特定的错误标识符分配给不同的代码路径。 调用[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)或[ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)的每个代码路径都应具有其自己的错误标识符的错误标识符。
+- 将不同的、高度特定的错误标识符分配给不同的代码路径。 调用 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 或 [ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 的每个代码路径都应具有其自己的错误标识符的错误标识符。
 
 - 错误标识符对于公共语言运行时应是唯一的 (CLR) 异常类型，用于终止和非终止错误。
 
@@ -73,9 +69,9 @@ PowerShell 将此标识符与 cmdlet 标识符组合在一起，创建完全限�
 
 错误类别用于对用户的错误进行分组。 PowerShell 定义这些类别和 cmdlet，并且 PowerShell 提供程序在生成错误记录时必须在它们之间进行选择。
 
-有关可用的错误类别的说明，请参阅[ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory)枚举。 通常，应尽可能避免使用**NoError**、 **UndefinedError**和**GenericError** 。
+有关可用的错误类别的说明，请参阅 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) 枚举。 通常，应尽可能避免使用 **NoError**、 **UndefinedError** 和 **GenericError** 。
 
-用户可以根据类别设置为 "CategoryView" 查看 `$ErrorView` 错误**CategoryView**。
+用户可以根据类别设置为 "CategoryView" 查看 `$ErrorView` 错误。
 
 ## <a name="see-also"></a>请参阅
 

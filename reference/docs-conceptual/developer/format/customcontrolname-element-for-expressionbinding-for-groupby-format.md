@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的 ExpressionBinding 的 CustomControlName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 06e612b25accf81467108ca48500943153efd575
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomControlName Element for ExpressionBinding for GroupBy (Format)
+description: CustomControlName Element for ExpressionBinding for GroupBy (Format)
+ms.openlocfilehash: bb7dbd449137628da1794628c5a7d7e10158dd46
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785993"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655439"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-groupby-format"></a>CustomControlName Element for ExpressionBinding for GroupBy (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87785993"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)|定义控件显示的数据。|
 

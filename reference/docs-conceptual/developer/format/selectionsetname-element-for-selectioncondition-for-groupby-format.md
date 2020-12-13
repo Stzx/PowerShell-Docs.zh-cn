@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的 SelectionCondition 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6d0263aa335287f20be5b94a8eb65696d06d82a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionSetName Element for SelectionCondition for GroupBy (Format)
+description: SelectionSetName Element for SelectionCondition for GroupBy (Format)
+ms.openlocfilehash: a4f28c1caba3790718b99f63659cb0cbed8def16
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772614"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654994"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-groupby-format"></a>SelectionSetName Element for SelectionCondition for GroupBy (Format)
 
@@ -44,9 +46,9 @@ ms.locfileid: "87772614"
 
 ## <a name="remarks"></a>备注
 
-选择集是可由格式设置文件所定义的任何视图使用的常用 .NET 对象组。 有关创建和引用选项集的详细信息，请参阅[定义选择集](./defining-selection-sets.md)。
+选择集是可由格式设置文件所定义的任何视图使用的常用 .NET 对象组。 有关创建和引用选项集的详细信息，请参阅 [定义选择集](./defining-selection-sets.md)。
 
-如果指定此元素，则不能指定[TypeName](./typename-element-for-selectioncondition-for-groupby-format.md)元素。 有关定义选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+如果指定此元素，则不能指定 [TypeName](./typename-element-for-selectioncondition-for-groupby-format.md) 元素。 有关定义选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 
