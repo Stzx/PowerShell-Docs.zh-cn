@@ -1,12 +1,14 @@
 ---
-title: 用于 CustomControl for View (Format) 的 CustomEntries 的 CustomEntry 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a13e83ec941bed80eaab02e40131054432fcce00
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomEntry Element for CustomEntries for CustomControl for View (Format)
+description: CustomEntry Element for CustomEntries for CustomControl for View (Format)
+ms.openlocfilehash: ff481f13e6f16267bdda4c3053faebc96d9a6d3a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785874"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646053"
 ---
 # <a name="customentry-element-for-customentries-for-customcontrol-for-view-format"></a>CustomEntry Element for CustomEntries for CustomControl for View (Format)
 

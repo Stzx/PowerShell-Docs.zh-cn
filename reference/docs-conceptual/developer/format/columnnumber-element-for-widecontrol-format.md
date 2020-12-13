@@ -1,12 +1,14 @@
 ---
-title: WideControl (Format) 的 ColumnNumber 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5f151bb0e629efcebe6295cdcae6cebcbbb1b39b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ColumnNumber Element for WideControl (Format)
+description: ColumnNumber Element for WideControl (Format)
+ms.openlocfilehash: 1ddbbfbd5b53065afcc6c1326d6abf1fadedc67b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783851"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648392"
 ---
 # <a name="columnnumber-element-for-widecontrol-format"></a>ColumnNumber Element for WideControl (Format)
 
@@ -46,9 +48,9 @@ ms.locfileid: "87783851"
 
 定义宽视图时，可以添加 `AutoSize` 元素或 `ColumnNumber` 元素，但不能同时添加这两个元素。
 
-有关宽视图组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+有关宽视图组件的详细信息，请参阅 [创建宽视图](./creating-a-wide-view.md)。
 
-有关宽视图的示例，请参阅[宽视图 (基本) ](./wide-view-basic.md)。
+有关宽视图的示例，请参阅 [宽视图 (基本) ](./wide-view-basic.md)。
 
 ## <a name="see-also"></a>另请参阅
 

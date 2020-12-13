@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的帧的 FirstLineIndent 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: def5b4e9ca98a15edbb36675ca506e886de567dc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: FirstLineIndent Element for Frame for GroupBy (Format)
+description: FirstLineIndent Element for Frame for GroupBy (Format)
+ms.openlocfilehash: 391a6f338e264fd9fdd1948ded74bf022cb114d1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781658"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645801"
 ---
 # <a name="firstlineindent-element-for-frame-for-groupby-format"></a>FirstLineIndent Element for Frame for GroupBy (Format)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87781658"
 
 ## <a name="remarks"></a>备注
 
-如果指定此元素，则不能指定[FirstLineHanging](./firstlinehanging-element-for-frame-for-groupby-format.md)元素。
+如果指定此元素，则不能指定 [FirstLineHanging](./firstlinehanging-element-for-frame-for-groupby-format.md) 元素。
 
 ## <a name="see-also"></a>另请参阅
 

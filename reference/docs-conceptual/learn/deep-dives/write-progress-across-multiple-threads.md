@@ -3,10 +3,10 @@ title: 在多线程处理时显示进度
 description: 如何跨多个具有 Foreach-Object -Parallel 的线程使用 Write-Progress
 ms.date: 08/02/2020
 ms.openlocfilehash: 909fc1bbdeded8845b1955e3384fb55db7173030
-ms.sourcegitcommit: 640646992955116def23d16dd12c221857d37b68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "89410836"
 ---
 # <a name="writing-progress-across-multiple-threads-with-foreach-parallel"></a>跨多个具有 Foreach Parallel 的线程写入进度

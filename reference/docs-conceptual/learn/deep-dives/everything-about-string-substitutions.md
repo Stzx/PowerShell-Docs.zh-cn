@@ -4,10 +4,10 @@ description: 使用字符串中的变量创建格式化文本的方法有很多�
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: 786526fb98dbf1b3ec7c5c6c985ac95b85a96259
-ms.sourcegitcommit: 4bb44f183dcbfa8dced57f075812e02d3b45fd70
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "86301312"
 ---
 # <a name="everything-you-wanted-to-know-about-variable-substitution-in-strings"></a>关于字符串中变量替换的各项须知内容

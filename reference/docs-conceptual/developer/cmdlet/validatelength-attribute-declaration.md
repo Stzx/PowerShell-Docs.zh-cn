@@ -1,16 +1,14 @@
 ---
-title: ValidateLength 特性声明 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateLength attribute, described
-- attributes, ValidateLength
-- ValidateLength attribute
-ms.openlocfilehash: 7145dde55e79eeea6e3ceb91dfc1c93043a8857c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ValidateLength 属性声明
+description: ValidateLength 属性声明
+ms.openlocfilehash: b35fe24c6fc44aaca6a39d819d6e3fc2d8a2cade
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786299"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646186"
 ---
 # <a name="validatelength-attribute-declaration"></a>ValidateLength 属性声明
 
@@ -30,7 +28,7 @@ ValidateLength 属性指定 cmdlet 参数参数的最小和最大字符数。 �
 
 ## <a name="remarks"></a>备注
 
-- 有关如何声明此属性的详细信息，请参阅[如何声明输入验证规则](./how-to-validate-parameter-input.md)。
+- 有关如何声明此属性的详细信息，请参阅 [如何声明输入验证规则](./how-to-validate-parameter-input.md)。
 
 - 如果未使用此属性，则相应的参数参数可以为任意长度。
 
@@ -42,7 +40,7 @@ ValidateLength 属性指定 cmdlet 参数参数的最小和最大字符数。 �
 
   - 如果参数不是字符串，则为。
 
-- ValidateLength 特性是由[Validatelengthattribute](/dotnet/api/System.Management.Automation.ValidateLengthAttribute)类定义的。
+- ValidateLength 特性是由 [Validatelengthattribute](/dotnet/api/System.Management.Automation.ValidateLengthAttribute) 类定义的。
 
 ## <a name="see-also"></a>另请参阅
 

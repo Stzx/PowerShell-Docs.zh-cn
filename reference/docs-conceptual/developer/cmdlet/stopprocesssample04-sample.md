@@ -1,12 +1,14 @@
 ---
-title: StopProcessSample04 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a256d29b9e0be878d805a82ddf5a538461d283d6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: StopProcessSample04 示例
+description: StopProcessSample04 示例
+ms.openlocfilehash: 65588b4d60034d1e6a1e17441a4a640caaacdce8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786418"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650128"
 ---
 # <a name="stopprocesssample04-sample"></a>StopProcessSample04 示例
 
@@ -60,7 +62,7 @@ ms.locfileid: "87786418"
 
 ## <a name="example"></a>示例
 
-下面的代码演示了用于声明参数集、指定默认参数集并可以接受输入对象的停止过程 cmdlet 的实现。
+下面的代码演示了声明参数集的 Stop-Proc cmdlet 的实现，指定了默认参数集，并可以接受输入对象。
 
 此示例显示了输入对象、如何声明参数集，以及如何指定要使用的默认参数集。
 

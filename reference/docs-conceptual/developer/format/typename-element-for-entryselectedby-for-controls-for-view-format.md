@@ -1,12 +1,14 @@
 ---
-title: 视图 (格式的控件的 EntrySelectedBy 的 TypeName 元素) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6eaa4f80a18c91ca351657fd40a8cac6f688c22f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for EntrySelectedBy for Controls for View (Format)
+description: TypeName Element for EntrySelectedBy for Controls for View (Format)
+ms.openlocfilehash: 03a70b0c6c71910932f1d032c94c602cef8ab964
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783324"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647890"
 ---
 # <a name="typename-element-for-entryselectedby-for-controls-for-view-format"></a>TypeName Element for EntrySelectedBy for Controls for View (Format)
 

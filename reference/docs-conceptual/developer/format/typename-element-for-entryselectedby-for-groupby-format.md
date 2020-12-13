@@ -1,12 +1,14 @@
 ---
-title: 对于 GroupBy (Format) ，为 EntrySelectedBy 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e62762cf142bd2d20b21ad8f4249285bd3679280
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for EntrySelectedBy for GroupBy (Format)
+description: TypeName Element for EntrySelectedBy for GroupBy (Format)
+ms.openlocfilehash: 07cc92e9c501aa0eb2d219e416851be0fcd80f47
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780257"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645706"
 ---
 # <a name="typename-element-for-entryselectedby-for-groupby-format"></a>TypeName Element for EntrySelectedBy for GroupBy (Format)
 
@@ -46,7 +48,7 @@ ms.locfileid: "87780257"
 
 每个控件定义都必须定义至少一个类型名称、选择集或选择条件。
 
-有关自定义控件视图组件的详细信息，请参阅[创建自定义控件](./creating-custom-controls.md)。
+有关自定义控件视图组件的详细信息，请参阅 [创建自定义控件](./creating-custom-controls.md)。
 
 ## <a name="see-also"></a>另请参阅
 

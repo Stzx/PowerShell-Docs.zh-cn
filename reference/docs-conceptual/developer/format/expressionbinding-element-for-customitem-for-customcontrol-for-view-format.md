@@ -1,12 +1,14 @@
 ---
-title: 用于 CustomControl for View (Format) 的 CustomItem 的 ExpressionBinding 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1885a2820c0cb250aa6fda80544f58d06136cfeb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ExpressionBinding Element for CustomItem for CustomControl for View (Format)
+description: ExpressionBinding Element for CustomItem for CustomControl for View (Format)
+ms.openlocfilehash: 8f4bfef4f6c65c6dabc7a776dda1083bac11fdf7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773787"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648185"
 ---
 # <a name="expressionbinding-element-for-customitem-for-customcontrol-for-view-format"></a>ExpressionBinding Element for CustomItem for CustomControl for View (Format)
 
@@ -37,18 +39,18 @@ ms.locfileid: "87773787"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |`CustomControl Element`|可选元素。<br /><br /> 定义此控件使用的控件。|
 |[CustomControlName Element for ExpressionBinding for CustomControl for View (Format)](./customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md)|可选元素。<br /><br /> 指定公共控件或视图控件的名称。|
 |[EnumerateCollection Element for ExpressionBinding for CustomControl for View (Format)](./enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format.md)|可选元素。<br /><br /> 指定显示集合的元素。|
-|[用于 CustomControl for View (Format) 的 ExpressionBinding 的 ItemSelectionCondition 元素](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)|可选元素。<br /><br /> 定义要使用此控件必须存在的条件。|
+|[用于 CustomControl for View (Format) 的 ExpressionBinding 的 ItemSelectionCondition 元素 ](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)|可选元素。<br /><br /> 定义要使用此控件必须存在的条件。|
 |[PropertyName Element for ExpressionBinding for CustomControl for View (Format)](./propertyname-element-for-expressionbinding-for-customcontrol-for-view-format.md)|可选元素。<br /><br /> 指定其值由控件显示的 .NET 属性。|
 |[用于 CustomCustomControl 的 ExpressionBinding 的 ScriptBlock 元素 (格式) ](./scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format.md)|可选元素。<br /><br /> 指定其值由控件显示的脚本。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomItem Element for CustomEntry for CustomControl for View (Format)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|定义自定义控件视图显示的数据及其显示方式。|
 
@@ -60,7 +62,7 @@ ms.locfileid: "87773787"
 
 [EnumerateCollection Element for ExpressionBinding for CustomControl for View (Format)](./enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format.md)
 
-[用于 CustomControl for View (Format) 的 ExpressionBinding 的 ItemSelectionCondition 元素](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)
+[用于 CustomControl for View (Format) 的 ExpressionBinding 的 ItemSelectionCondition 元素 ](./itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md)
 
 [PropertyName Element for ExpressionBinding for CustomControl for View (Format)](./propertyname-element-for-expressionbinding-for-customcontrol-for-view-format.md)
 

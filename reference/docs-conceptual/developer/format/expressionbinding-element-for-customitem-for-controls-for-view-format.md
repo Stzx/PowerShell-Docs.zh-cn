@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的 CustomItem 的 ExpressionBinding 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6760bf17be58411948ecb3437bf18bce40073954
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ExpressionBinding Element for CustomItem for Controls for View (Format)
+description: ExpressionBinding Element for CustomItem for Controls for View (Format)
+ms.openlocfilehash: da87bb26d21dcb051871e67997cc3fba7ce73c74
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773804"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649888"
 ---
 # <a name="expressionbinding-element-for-customitem-for-controls-for-view-format"></a>ExpressionBinding Element for CustomItem for Controls for View (Format)
 
@@ -37,7 +39,7 @@ ms.locfileid: "87773804"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |`CustomControl Element`|可选元素。<br /><br /> 定义此控件使用的控件。|
 |[CustomControlName Element for ExpressionBinding for Controls for View (Format)](./customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定公共控件或视图控件的名称。|
@@ -48,7 +50,7 @@ ms.locfileid: "87773804"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomItem Element for CustomEntry for Controls for View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)|定义控件显示的数据及其显示方式。|
 

@@ -4,10 +4,10 @@ description: PSCustomObject 是创建结构化数据的一种简单方法。
 ms.date: 10/05/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: ccbdcdae5ad38f555233dffbed7e8a6ec2b0726b
-ms.sourcegitcommit: 1695df0d241c0390cac71a7401e61198fc6ff756
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "91772314"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>关于 PSCustomObject 的各项须知内容

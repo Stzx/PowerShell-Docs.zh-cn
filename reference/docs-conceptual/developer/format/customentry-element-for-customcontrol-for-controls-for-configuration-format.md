@@ -1,12 +1,14 @@
 ---
-title: 用于) 配置 (格式的控件的 CustomControl 的 CustomEntry 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 8b9d18bbb1abce8135f4c27418ad54a1736eb5a6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomEntry Element for CustomControl for Controls for Configuration (Format)
+description: CustomEntry Element for CustomControl for Controls for Configuration (Format)
+ms.openlocfilehash: 3967be86a1d6c12c7215ef19d50bac9fafd5ad6d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785925"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648280"
 ---
 # <a name="customentry-element-for-customcontrol-for-controls-for-configuration-format"></a>CustomEntry Element for CustomControl for Controls for Configuration (Format)
 
@@ -34,14 +36,14 @@ ms.locfileid: "87785925"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[EntrySelectedBy Element for CustomEntry for Controls for Configuration (Format)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)|可选元素。<br /><br /> 定义使用公共控件定义的 .NET 类型或要使用此控件必须存在的条件。|
 |[用于配置控件的 CustomEntry 的 CustomItem 元素](./customitem-element-for-customentry-for-controls-for-configuration-format.md)|必需的元素。<br /><br /> 定义控件显示的数据及其显示方式。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[用于配置 (格式的 CustomControl 的 CustomEntries 元素) ](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)|提供公共控件的定义。|
 

@@ -1,12 +1,14 @@
 ---
-title: 用于) 配置 (格式的控件的 ExpressionBinding 的 ItemSelectionCondition 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 3bfd3efe916b4d88c024de8f959482cab515f777
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ItemSelectionCondition Element for ExpressionBinding for Controls for Configuration (Format)
+description: ItemSelectionCondition Element for ExpressionBinding for Controls for Configuration (Format)
+ms.openlocfilehash: 6bd3d386ba64b33a1744fcc9e602cf13404765a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781216"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648083"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format"></a>ItemSelectionCondition Element for ExpressionBinding for Controls for Configuration (Format)
 
@@ -33,14 +35,14 @@ ms.locfileid: "87781216"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[用于配置 (格式的控件的 ItemSelectionCondition 的 PropertyName 元素) ](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md)|可选元素。<br /><br /> 指定触发条件的 .NET 属性。|
 |[用于配置 (格式的控件的 ItemSelectionCondition 的 ScriptBlock 元素) ](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md)|可选元素。<br /><br /> 指定触发条件的脚本。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for Controls for Configuration (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|定义控件显示的数据。|
 

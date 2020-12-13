@@ -1,12 +1,14 @@
 ---
-title: 如何编写 PowerShell 脚本模块 |Microsoft Docs
 ms.date: 11/21/2019
-ms.openlocfilehash: dc387909a9e55df9f1846b02755e284c408f7dc6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何编写 PowerShell 脚本模块
+description: 如何编写 PowerShell 脚本模块
+ms.openlocfilehash: c44b09a915501fb10773ab11cf13136d5035ba69
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784888"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649148"
 ---
 # <a name="how-to-write-a-powershell-script-module"></a>如何编写 PowerShell 脚本模块
 
@@ -24,7 +26,7 @@ ms.locfileid: "87784888"
 
 1. 使用扩展名保存 PowerShell 脚本 `.psm1` 。 为脚本和保存脚本的目录使用相同的名称。
 
-   使用扩展名保存脚本 `.psm1` 意味着可以使用 module cmdlet，如[import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)。 模块 cmdlet 主要用于将代码导入和导出到其他用户的系统上。 另一种解决方案是在其他系统上加载代码，然后将代码点置于活动内存中，这不是一种可缩放的解决方案。 有关详细信息，请参阅[了解 Windows PowerShell 模块](./understanding-a-windows-powershell-module.md#module-cmdlets-and-variables)。
+   使用扩展名保存脚本 `.psm1` 意味着可以使用 module cmdlet，如 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)。 模块 cmdlet 主要用于将代码导入和导出到其他用户的系统上。 另一种解决方案是在其他系统上加载代码，然后将代码点置于活动内存中，这不是一种可缩放的解决方案。 有关详细信息，请参阅 [了解 Windows PowerShell 模块](./understanding-a-windows-powershell-module.md#module-cmdlets-and-variables)。
    默认情况下，当用户导入 `.psm1` 文件时，脚本中的所有函数都是可访问的，但变量不会。
 
    本文末尾提供了一个名为的示例 PowerShell 脚本 `Show-Calendar` 。
@@ -43,7 +45,7 @@ ms.locfileid: "87784888"
    }
    ```
 
-2. 若要控制用户对某些函数或变量的访问，请在脚本末尾调用[export-modulemember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) 。
+2. 若要控制用户对某些函数或变量的访问，请在脚本末尾调用 [export-modulemember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) 。
 
    本文底部的示例代码只有一个函数，该函数在默认情况下会公开。 但是，建议您显式调用要公开的函数，如以下代码所述：
 
@@ -53,7 +55,7 @@ ms.locfileid: "87784888"
    Export-ModuleMember -Function Show-Calendar
    ```
 
-   您可以使用模块清单来限制导入的内容。 有关详细信息，请参阅[导入 Powershell 模块](./importing-a-powershell-module.md)和[如何编写 powershell 模块清单](./how-to-write-a-powershell-module-manifest.md)。
+   您可以使用模块清单来限制导入的内容。 有关详细信息，请参阅 [导入 Powershell 模块](./importing-a-powershell-module.md) 和 [如何编写 powershell 模块清单](./how-to-write-a-powershell-module-manifest.md)。
 
 3. 如果你有自己的模块需要加载的模块，则可以使用 `Import-Module` 模块的顶部。
 
@@ -65,24 +67,24 @@ ms.locfileid: "87784888"
 
 4. 若要将模块描述到 PowerShell 帮助系统，可以在文件中使用标准帮助注释，也可以创建其他帮助文件。
 
-   本文底部的代码示例包含注释中的帮助信息。 你还可以编写包含其他帮助内容的扩展 XML 文件。 有关详细信息，请参阅[编写 Windows PowerShell 模块的帮助](./writing-help-for-windows-powershell-modules.md)。
+   本文底部的代码示例包含注释中的帮助信息。 你还可以编写包含其他帮助内容的扩展 XML 文件。 有关详细信息，请参阅 [编写 Windows PowerShell 模块的帮助](./writing-help-for-windows-powershell-modules.md)。
 
 5. 如果你有其他要随模块一起打包的模块、XML 文件或其他内容，则可以使用模块清单。
 
-   模块清单是一个文件，其中包含其他模块的名称、目录布局、版本控制编号、作者数据和其他信息片段。 PowerShell 使用模块清单文件来组织和部署解决方案。 有关详细信息，请参阅[如何编写 PowerShell 模块清单](./how-to-write-a-powershell-module-manifest.md)。
+   模块清单是一个文件，其中包含其他模块的名称、目录布局、版本控制编号、作者数据和其他信息片段。 PowerShell 使用模块清单文件来组织和部署解决方案。 有关详细信息，请参阅 [如何编写 PowerShell 模块清单](./how-to-write-a-powershell-module-manifest.md)。
 
 6. 若要安装并运行模块，请将模块保存到相应的 PowerShell 路径之一，并使用 `Import-Module` 。
 
    您可以在其中安装模块的路径位于 `$env:PSModulePath` 全局变量中。 例如，在系统上保存模块的公用路径为 `%SystemRoot%/users/<user>/Documents/PowerShell/Modules/<moduleName>` 。 请确保为模块创建一个与脚本模块同名的目录，即使它只是一个 `.psm1` 文件。 如果未将模块保存到其中一个路径，则必须在命令中指定模块的位置 `Import-Module` 。 否则，PowerShell 将找不到该模块。
 
-   从 PowerShell 3.0 开始，如果已将模块放置在一个 PowerShell 模块路径中，则无需显式导入它。 当用户调用函数时，将自动加载模块。 有关模块路径的详细信息，请参阅[导入 PowerShell 模块](./importing-a-powershell-module.md)和[修改 PSModulePath 安装路径](./modifying-the-psmodulepath-installation-path.md)。
+   从 PowerShell 3.0 开始，如果已将模块放置在一个 PowerShell 模块路径中，则无需显式导入它。 当用户调用函数时，将自动加载模块。 有关模块路径的详细信息，请参阅 [导入 PowerShell 模块](./importing-a-powershell-module.md) 和 [修改 PSModulePath 安装路径](./modifying-the-psmodulepath-installation-path.md)。
 
-7. 若要从当前 PowerShell 会话中的活动服务中删除模块，请使用[remove-module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module)。
+7. 若要从当前 PowerShell 会话中的活动服务中删除模块，请使用 [remove-module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module)。
 
    > [!NOTE]
-   > `Remove-Module`从当前 PowerShell 会话中删除模块，但不会卸载模块或删除模块的文件。
+   > `Remove-Module` 从当前 PowerShell 会话中删除模块，但不会卸载模块或删除模块的文件。
 
-## <a name="show-calendar-code-example"></a>显示日历代码示例
+## <a name="show-calendar-code-example"></a>Show-Calendar 代码示例
 
 下面的示例是一个脚本模块，其中包含一个名为的函数 `Show-Calendar` 。 此函数显示日历的直观表示形式。 该示例包含用于摘要、说明、参数值和代码的 PowerShell 帮助字符串。 导入模块后，该 `Export-ModuleMember` 命令将确保将 `Show-Calendar` 函数导出为模块成员。
 

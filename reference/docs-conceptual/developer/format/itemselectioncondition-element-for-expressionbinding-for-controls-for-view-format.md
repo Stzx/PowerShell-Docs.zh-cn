@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的 ExpressionBinding 的 ItemSelectionCondition 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e8e3ea64fd947fbb2b98c410ac08533f386c9505
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ItemSelectionCondition Element for ExpressionBinding for Controls for View (Format)
+description: ItemSelectionCondition Element for ExpressionBinding for Controls for View (Format)
+ms.openlocfilehash: adbe747bdb4f6c1d180e5b630247de0fd3d72b85
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781199"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648061"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format"></a>ItemSelectionCondition Element for ExpressionBinding for Controls for View (Format)
 
@@ -33,14 +35,14 @@ ms.locfileid: "87781199"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[PropertyName Element for ItemSelectionCondition for Controls for View (Format)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定触发条件的 .NET 属性。|
 |[ScriptBlock Element for ItemSelectionCondition for Controls for View (Format)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定触发条件的脚本。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for Controls for View (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|定义控件显示的数据。|
 

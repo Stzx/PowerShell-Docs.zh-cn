@@ -1,12 +1,14 @@
 ---
-title: WideControl 的 AutoSize 元素)  (格式 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 64e62142738916978b37eb1cd3a73536b0447099
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: AutoSize Element for WideControl (Format)
+description: AutoSize Element for WideControl (Format)
+ms.openlocfilehash: 42dfae337ba8805e1ddcff4269401afdb3e281f6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783868"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650008"
 ---
 # <a name="autosize-element-for-widecontrol-format"></a>AutoSize Element for WideControl (Format)
 
@@ -30,7 +32,7 @@ ms.locfileid: "87783868"
 
 ### <a name="child-elements"></a>子元素
 
-None
+无
 
 ### <a name="parent-elements"></a>父元素
 
@@ -40,11 +42,11 @@ None
 
 ## <a name="remarks"></a>备注
 
-定义宽视图时，可以添加 `AutoSize` 元素或[ColumnNumber](./columnnumber-element-for-widecontrol-format.md)元素，但不能同时添加这两个元素。
+定义宽视图时，可以添加 `AutoSize` 元素或 [ColumnNumber](./columnnumber-element-for-widecontrol-format.md) 元素，但不能同时添加这两个元素。
 
-有关宽视图组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+有关宽视图组件的详细信息，请参阅 [创建宽视图](./creating-a-wide-view.md)。
 
-有关宽视图的示例，请参阅[宽视图 (基本) ](./wide-view-basic.md)。
+有关宽视图的示例，请参阅 [宽视图 (基本) ](./wide-view-basic.md)。
 
 ## <a name="see-also"></a>另请参阅
 

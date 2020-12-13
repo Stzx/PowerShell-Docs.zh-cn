@@ -1,19 +1,21 @@
 ---
-title: 支持在 Cmdlet 参数中使用通配符
 ms.date: 08/26/2019
-ms.openlocfilehash: 062e3d50dddd0bc84e57f5254a93289acbabe38b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 支持在 Cmdlet 参数中使用通配符
+description: 支持在 Cmdlet 参数中使用通配符
+ms.openlocfilehash: 06693c62cd2613050bdeb9d6b12ad6e9597a9894
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786401"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646393"
 ---
 # <a name="supporting-wildcard-characters-in-cmdlet-parameters"></a>支持在 Cmdlet 参数中使用通配符
 
 通常，你必须将 cmdlet 设计为针对一组资源而不是针对单个资源运行。 例如，cmdlet 可能需要查找数据存储区中具有相同名称或扩展名的所有文件。 设计将对一组资源运行的 cmdlet 时，必须提供对通配符字符的支持。
 
 > [!NOTE]
-> 使用通配符*有时称为 "组合"。*
+> 使用通配符 *有时称为 "组合"。*
 
 ## <a name="windows-powershell-cmdlets-that-use-wildcards"></a>使用通配符的 Windows PowerShell Cmdlet
 
@@ -25,7 +27,7 @@ ms.locfileid: "87786401"
 
 Windows PowerShell 支持以下通配符。
 
-| 通配符 |                             说明                             |  示例   |     匹配      | 不匹配 |
+| 通配符 |                             描述                             |  示例   |     匹配      | 不匹配 |
 | -------- | ------------------------------------------------------------------- | ---------- | ---------------- | -------------- |
 | *        | 匹配零个或多个字符（从指定位置开始） | `a*`       | A、ag、Apple     |                |
 | ?        | 匹配指定位置的任何字符                     | `?n`       | ，在中，在       | 为名            |
@@ -36,7 +38,7 @@ Windows PowerShell 支持以下通配符。
 
 `Get-ChildItem c:\techdocs\[a-l]\*.txt`
 
-前面的命令使用范围通配符 `[a-l]` 指定文件名应以字符 "a" 到 "l" 开头，并使用 `*` 通配符作为文件名第一个字母和 **.txt**扩展名之间的任何字符的占位符。
+前面的命令使用范围通配符 `[a-l]` 指定文件名应以字符 "a" 到 "l" 开头，并使用 `*` 通配符作为文件名第一个字母和 **.txt** 扩展名之间的任何字符的占位符。
 
 下面的示例使用范围通配符模式，该模式不包括字母 "d"，但包含 "a" 到 "f" 的所有其他字母。
 

@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的 HideTableHeaders 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: 529a3ebbbc1be17131c17e537311c2c041326393
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: HideTableHeaders Element (Format)
+description: HideTableHeaders Element (Format)
+ms.openlocfilehash: fefd296757ba190151f1ce592e6609c5f3f070e2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781352"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648125"
 ---
 # <a name="hidetableheaders-element-format"></a>HideTableHeaders Element (Format)
 
@@ -34,7 +36,7 @@ ViewDefinitions 元素 (格式) View 元素 (格式) TableControl 元素 (格式
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[TableControl Element (Format)](./tablecontrol-element-format.md)|定义视图的表格格式。|
 
@@ -44,7 +46,7 @@ ViewDefinitions 元素 (格式) View 元素 (格式) TableControl 元素 (格式
 
 ## <a name="remarks"></a>备注
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,12 +1,14 @@
 ---
-title: EnumerableExpansion (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d5858145e092dc962174a776889a4f62db366d71
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionCondition Element for EntrySelectedBy for EnumerableExpansion (Format)
+description: SelectionCondition Element for EntrySelectedBy for EnumerableExpansion (Format)
+ms.openlocfilehash: 3ecf7fde99b9ee66a153eea416792f351ff62af3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785330"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647929"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format"></a>SelectionCondition Element for EntrySelectedBy for EnumerableExpansion (Format)
 
@@ -58,9 +60,9 @@ ms.locfileid: "87785330"
 
 - 选择条件可以指定任意数量的 .NET 类型或选择集，但是不能同时指定两者。
 
-有关如何使用选择条件的详细信息，请参阅[定义 Diplaying 数据的条件](./defining-conditions-for-displaying-data.md)。
+有关如何使用选择条件的详细信息，请参阅 [定义 Diplaying 数据的条件](./defining-conditions-for-displaying-data.md)。
 
-有关大视图的其他组件的详细信息，请参阅[宽视图](./creating-a-wide-view.md)。
+有关大视图的其他组件的详细信息，请参阅 [宽视图](./creating-a-wide-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

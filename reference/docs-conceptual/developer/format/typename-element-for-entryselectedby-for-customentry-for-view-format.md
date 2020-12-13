@@ -1,12 +1,14 @@
 ---
-title: EntrySelectedBy for CustomEntry 的 TypeName 元素 (Format) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f8dc2c808e6eb3d6a7873cdbddc936b95d94c541
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for EntrySelectedBy for CustomEntry for View (Format)
+description: TypeName Element for EntrySelectedBy for CustomEntry for View (Format)
+ms.openlocfilehash: 72bb88bccc2bbd62f7ed160b820cf9169cb69341
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785092"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645738"
 ---
 # <a name="typename-element-for-entryselectedby-for-customentry-for-view-format"></a>TypeName Element for EntrySelectedBy for CustomEntry for View (Format)
 
@@ -46,7 +48,7 @@ ms.locfileid: "87785092"
 
 每个自定义控件视图定义都必须定义至少一个类型名称、选择集或选择条件。
 
-有关自定义控件视图组件的详细信息，请参阅[创建自定义控件](./creating-custom-controls.md)。
+有关自定义控件视图组件的详细信息，请参阅 [创建自定义控件](./creating-custom-controls.md)。
 
 ## <a name="see-also"></a>另请参阅
 

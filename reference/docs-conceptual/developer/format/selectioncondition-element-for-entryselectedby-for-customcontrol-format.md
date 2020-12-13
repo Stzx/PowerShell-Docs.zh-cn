@@ -1,12 +1,14 @@
 ---
-title: CustomControl (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 52858dba5c7a5222b5410835f3374546ce8b88a2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionCondition Element for EntrySelectedBy for CustomControl (Format)
+description: SelectionCondition Element for EntrySelectedBy for CustomControl (Format)
+ms.openlocfilehash: 6d4cc5a2d5fef0445d586e320b3729d3a7044063
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785347"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649767"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-customcontrol-format"></a>SelectionCondition Element for EntrySelectedBy for CustomControl (Format)
 
@@ -56,7 +58,7 @@ ms.locfileid: "87785347"
 
 - 选择条件可以指定任意数量的 .NET 类型或选择集，但是不能同时指定两者。
 
-有关如何使用选择条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+有关如何使用选择条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 

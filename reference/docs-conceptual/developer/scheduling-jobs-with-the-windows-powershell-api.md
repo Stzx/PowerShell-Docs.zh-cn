@@ -1,12 +1,14 @@
 ---
-title: 使用 Windows PowerShell API 安排作业
 ms.date: 09/13/2016
-ms.openlocfilehash: 19962d3140b6e20164c378e63a317b888120e13b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 使用 Windows PowerShell API 安排作业
+description: 使用 Windows PowerShell API 安排作业
+ms.openlocfilehash: c42b3ea311a5db4dcb6e11bb587f01f3deefe49b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786724"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647146"
 ---
 # <a name="scheduling-jobs-with-the-windows-powershell-api"></a>使用 Windows PowerShell API 安排作业
 
@@ -30,7 +32,7 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 
 可以通过创建参数字典来定义 Windows PowerShell 作业。 支持以下参数。
 
-|参数名称|说明|
+|参数名称|描述|
 |---|---|
 |名称|作业的名称。|
 |ScriptBock|指定作业执行的操作的 Windows PowerShell 脚本块。|

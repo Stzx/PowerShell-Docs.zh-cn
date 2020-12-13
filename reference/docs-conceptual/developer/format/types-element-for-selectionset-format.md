@@ -1,12 +1,14 @@
 ---
-title: SelectionSet (Format) 的 Types 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9978daefb3e97ab131774ca4dff633dde6b4dfbf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Types Element for SelectionSet (Format)
+description: Types Element for SelectionSet (Format)
+ms.openlocfilehash: ff3c24e7f52f862dc416b88d50983196ce907012
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772512"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645456"
 ---
 # <a name="types-element-for-selectionset-format"></a>Types Element for SelectionSet (Format)
 
@@ -45,7 +47,7 @@ ms.locfileid: "87772512"
 
 ## <a name="remarks"></a>备注
 
-此元素定义的对象构成一个选项集，视图可使用该选项集，视图 (视图的定义可) 多个定义或指定选择条件。  有关选择集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
+此元素定义的对象构成一个选项集，视图可使用该选项集，视图 (视图的定义可) 多个定义或指定选择条件。  有关选择集的详细信息，请参阅 [定义对象集](./defining-selection-sets.md)。
 
 ## <a name="example"></a>示例
 

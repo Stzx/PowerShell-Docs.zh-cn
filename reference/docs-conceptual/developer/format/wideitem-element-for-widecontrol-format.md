@@ -1,12 +1,14 @@
 ---
-title: WideControl (Format) 的 WideItem 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6b2f7c97978c20350caeec894589c5995ae7ccc4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideItem Element for WideControl (Format)
+description: WideItem Element for WideControl (Format)
+ms.openlocfilehash: b9c416bbe3befcd689b8a2c0b72a8ff1301b9659
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779890"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647794"
 ---
 # <a name="wideitem-element-for-widecontrol-format"></a>WideItem Element for WideControl (Format)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87779890"
 
 ## <a name="remarks"></a>备注
 
-有关宽视图组件的详细信息，请参阅[宽视图](./creating-a-wide-view.md)。
+有关宽视图组件的详细信息，请参阅 [宽视图](./creating-a-wide-view.md)。
 
 ## <a name="example"></a>示例
 
@@ -62,7 +64,7 @@ ms.locfileid: "87779890"
 </WideEntry>
 ```
 
-有关宽视图的完整示例，请参阅[宽视图 (基本) ](./wide-view-basic.md)。
+有关宽视图的完整示例，请参阅 [宽视图 (基本) ](./wide-view-basic.md)。
 
 ## <a name="see-also"></a>另请参阅
 

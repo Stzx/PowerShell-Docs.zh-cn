@@ -1,12 +1,14 @@
 ---
-title: 用于配置 (格式) 的控件的 CustomItem 的换行符元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ff17484e368ad84d45935bf139e9a95bc293523e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: NewLine Element for CustomItem for Controls for Configuration (Format)
+description: NewLine Element for CustomItem for Controls for Configuration (Format)
+ms.openlocfilehash: 4f6912530b27979c8fd0b30b02e39c7d102d55bb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773209"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647942"
 ---
 # <a name="newline-element-for-customitem-for-controls-for-configuration-format"></a>NewLine Element for CustomItem for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87773209"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[用于配置控件的 CustomEntry 的 CustomItem 元素](./customitem-element-for-customentry-for-controls-for-configuration-format.md)|定义自定义控件视图的控件。|
 

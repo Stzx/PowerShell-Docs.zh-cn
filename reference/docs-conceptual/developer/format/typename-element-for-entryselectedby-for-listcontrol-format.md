@@ -1,12 +1,14 @@
 ---
-title: EntrySelectedBy for ListControl (Format) 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5e7b73db5aa597d96141454008c5c58b1827df24
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for EntrySelectedBy for ListControl (Format)
+description: TypeName Element for EntrySelectedBy for ListControl (Format)
+ms.openlocfilehash: 6fc5a2385fde3140abbc984e3da6a4dda483b2a8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780213"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645664"
 ---
 # <a name="typename-element-for-entryselectedby-for-listcontrol-format"></a>TypeName Element for EntrySelectedBy for ListControl (Format)
 
@@ -46,7 +48,7 @@ ms.locfileid: "87780213"
 
 每个列表项必须至少定义一个类型名称、选择集或选择条件。
 
-有关如何在列表视图中使用此元素的详细信息，请参阅[列表视图](./creating-a-list-view.md)。
+有关如何在列表视图中使用此元素的详细信息，请参阅 [列表视图](./creating-a-list-view.md)。
 
 ## <a name="example"></a>示例
 

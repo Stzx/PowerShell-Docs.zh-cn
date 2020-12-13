@@ -1,12 +1,14 @@
 ---
-title: 对于 GroupBy (Format) ，CustomItem 的文本元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 811dc3a6f83f93513bd8380a7c3b66a813fe7801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Text Element for CustomItem for GroupBy (Format)
+description: Text Element for CustomItem for GroupBy (Format)
+ms.openlocfilehash: 4c8158c9c8e77044732e473f57291194280f4e79
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783358"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649753"
 ---
 # <a name="text-element-for-customitem-for-groupby-format"></a>Text Element for CustomItem for GroupBy (Format)
 

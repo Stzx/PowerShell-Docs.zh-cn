@@ -1,12 +1,14 @@
 ---
-title: 输入筛选器参数 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ccaf6c4859d2a4f14866ec1252b999e90e1a830f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 输入筛选参数
+description: 输入筛选参数
+ms.openlocfilehash: 419ffea2afb4aa534a3e19ecdfce6d6af1da46a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784038"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648531"
 ---
 # <a name="input-filter-parameters"></a>输入筛选参数
 
@@ -16,7 +18,7 @@ Cmdlet 可以定义 `Filter` 、 `Include` 和参数， `Exclude` 以筛选该 c
 
 ## <a name="include-and-exclude-parameters"></a>包括和排除参数
 
-`Include`和 `Exclude` 参数标识传递到 cmdlet 的输入对象集中包含或排除的对象。 如果筛选器可以用标准通配符语言表示，请使用这些参数。  (有关通配符的详细信息，请参阅[在 Cmdlet 参数中支持通配符](./supporting-wildcard-characters-in-cmdlet-parameters.md)。 ) `Include` 参数包括名称与包含筛选器匹配的所有对象。 `Exclude`参数会排除名称与筛选器匹配的所有对象。
+`Include`和 `Exclude` 参数标识传递到 cmdlet 的输入对象集中包含或排除的对象。 如果筛选器可以用标准通配符语言表示，请使用这些参数。  (有关通配符的详细信息，请参阅 [在 Cmdlet 参数中支持通配符](./supporting-wildcard-characters-in-cmdlet-parameters.md)。 ) `Include` 参数包括名称与包含筛选器匹配的所有对象。 `Exclude`参数会排除名称与筛选器匹配的所有对象。
 
 ## <a name="filter-parameter"></a>筛选器参数
 

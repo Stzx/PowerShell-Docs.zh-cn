@@ -1,18 +1,20 @@
 ---
-title: 如何向提供程序帮助主题添加动态参数
 ms.date: 09/13/2016
-ms.openlocfilehash: ddf964292ee7bf477767a2ca17c717aef84bad51
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 如何向提供程序帮助主题添加动态参数
+description: 如何向提供程序帮助主题添加动态参数
+ms.openlocfilehash: 9542538cfacf5fb293ca8d1350b80fb250c71ac6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893452"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649640"
 ---
 # <a name="how-to-add-dynamic-parameters-to-a-provider-help-topic"></a>如何向提供程序帮助主题添加动态参数
 
-本部分介绍如何填充提供程序帮助主题的 "**动态参数**" 部分。
+本部分介绍如何填充提供程序帮助主题的 " **动态参数** " 部分。
 
-*动态参数*是仅在指定条件下可用的 cmdlet 或函数的参数。
+*动态参数* 是仅在指定条件下可用的 cmdlet 或函数的参数。
 
 提供程序帮助主题中记录的动态参数是在提供程序驱动器中使用 cmdlet 或函数时，提供程序添加到 cmdlet 或函数中的动态参数。
 
@@ -68,7 +70,7 @@ ms.locfileid: "86893452"
 
 1. 在每个 `DynamicParameter` 元素中，添加一个 `Type` 元素。 `Type`元素是 `Name` 包含动态参数值的 .net 类型的元素的容器。
 
-   例如，下面的 XML 显示动态参数的 .NET 类型 `Encoding` 为[FileSystemCmdletProviderEncoding](/dotnet/api/microsoft.powershell.commands.filesystemcmdletproviderencoding)枚举。
+   例如，下面的 XML 显示动态参数的 .NET 类型 `Encoding` 为 [FileSystemCmdletProviderEncoding](/dotnet/api/microsoft.powershell.commands.filesystemcmdletproviderencoding) 枚举。
 
     ```xml
     <DynamicParameters/>
@@ -82,7 +84,7 @@ ms.locfileid: "86893452"
     </DynamicParameters>
     ```
 
-1. 添加 `Description` 元素，该元素包含动态参数的简短说明。 编写说明时，请使用[如何添加参数信息](./how-to-add-parameter-information.md)中的所有 cmdlet 参数规定的准则。
+1. 添加 `Description` 元素，该元素包含动态参数的简短说明。 编写说明时，请使用 [如何添加参数信息](./how-to-add-parameter-information.md)中的所有 cmdlet 参数规定的准则。
 
    例如，下面的 XML 包含 `Encoding` 动态参数的说明。
 

@@ -1,18 +1,20 @@
 ---
-title: 基于注释的帮助关键字
 ms.date: 06/09/2020
-ms.openlocfilehash: fb737c19d7b7f4d003af3ba36bb396bac52d94e7
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 基于注释的帮助关键字
+description: 基于注释的帮助关键字
+ms.openlocfilehash: d87dde8700813767f6c09cfce70ed06c7964ebc7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893146"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645470"
 ---
 # <a name="comment-based-help-keywords"></a>基于注释的帮助关键字
 
 本主题列出并描述了基于注释的帮助中的关键字。
 
-## <a name="keywords-in-comment-based-help"></a>基于注释的帮助中的关键字
+## <a name="keywords-in-comment-based-help"></a>Comment-Based 帮助中的关键字
 
 下面是有效的基于注释的帮助关键字。 它们按其在帮助主题中通常出现的顺序列出，以及它们的预期用途。 这些关键字可以在基于注释的帮助中以任意顺序出现，它们不区分大小写。
 
@@ -27,7 +29,7 @@ ms.locfileid: "86893146"
 
 函数或脚本的详细说明。 每个主题中只能使用一次此关键字。
 
-## <a name="parameter-parameter-name"></a>.参数\<Parameter-Name>
+## <a name="parameter-parameter-name"></a>.参数 \<Parameter-Name>
 
 参数的说明。 可以 `.PARAMETER` 在函数或脚本中包含每个参数的关键字。
 
@@ -55,26 +57,26 @@ Cmdlet 返回的对象的 .NET Framework 类型。 还可以包括返回对象�
 
 相关主题的名称。 为每个相关主题重复此关键字。 此内容显示在帮助主题的 "相关链接" 部分中。
 
-`.LINK`关键字 content 还可以将统一资源标识符（URI）包含到同一个帮助主题的联机版本。 当你使用的参数时，将打开联机版本 `Online` `Get-Help` 。 URI 必须以 "http" 或 "https" 开头。
+`.LINK`关键字内容还可以包含统一资源标识符 (URI) 到同一帮助主题的联机版本。 当你使用的参数时，将打开联机版本 `Online` `Get-Help` 。 URI 必须以 "http" 或 "https" 开头。
 
 ## <a name="component"></a>.组件
 
 函数或脚本使用或与之相关的技术或功能的名称。
-的**组件**参数 `Get-Help` 使用此值来筛选返回的搜索结果 `Get-Help` 。
+的 **组件** 参数 `Get-Help` 使用此值来筛选返回的搜索结果 `Get-Help` 。
 
 ## <a name="role"></a>.职位
 
-帮助主题的用户角色的名称。 的**Role**参数 `Get-Help` 使用此值来筛选返回的搜索结果 `Get-Help` 。
+帮助主题的用户角色的名称。 的 **Role** 参数 `Get-Help` 使用此值来筛选返回的搜索结果 `Get-Help` 。
 
 ## <a name="functionality"></a>.性能
 
-描述函数的预期用途的关键字。 的**功能**参数 `Get-Help` 使用此值来筛选返回的搜索结果 `Get-Help` 。
+描述函数的预期用途的关键字。 的 **功能** 参数 `Get-Help` 使用此值来筛选返回的搜索结果 `Get-Help` 。
 
-## <a name="forwardhelptargetname-command-name"></a>.FORWARDHELPTARGETNAME\<Command-Name>
+## <a name="forwardhelptargetname-command-name"></a>.FORWARDHELPTARGETNAME \<Command-Name>
 
 重定向到指定命令的帮助主题。 您可以将用户重定向到任何帮助主题，包括函数、脚本、cmdlet 或提供程序的帮助主题。
 
-## <a name="forwardhelpcategory-category"></a>.FORWARDHELPCATEGORY\<Category>
+## <a name="forwardhelpcategory-category"></a>.FORWARDHELPCATEGORY \<Category>
 
 指定中的项的帮助类别 `.FORWARDHELPTARGETNAME` 。 当存在具有相同名称的命令时，请使用此关键字避免冲突。
 
@@ -93,11 +95,11 @@ Cmdlet 返回的对象的 .NET Framework 类型。 还可以包括返回对象�
 - 筛选器
 - 全部
 
-## <a name="remotehelprunspace-pssession-variable"></a>.REMOTEHELPRUNSPACE\<PSSession-variable>
+## <a name="remotehelprunspace-pssession-variable"></a>.REMOTEHELPRUNSPACE \<PSSession-variable>
 
 指定包含 "帮助" 主题的会话。 输入包含 PSSession 的变量。 Cmdlet 使用此关键字 `Export-PSSession` 查找导出的命令的帮助主题。
 
-## <a name="externalhelp-xml-help-file"></a>..EXTERNALHELP\<XML Help File>
+## <a name="externalhelp-xml-help-file"></a>..EXTERNALHELP \<XML Help File>
 
 为脚本或函数指定基于 XML 的帮助文件的路径和/或名称。
 
@@ -105,8 +107,8 @@ Cmdlet 返回的对象的 .NET Framework 类型。 还可以包括返回对象�
 
 `.EXTERNALHELP`关键字优先于所有其他基于注释的帮助关键字。 当 `.EXTERNALHELP` 存在时， [GetHelpCommand](/dotnet/api/Microsoft.PowerShell.Commands.gethelpcommand) cmdlet 不显示基于注释的帮助，即使找不到与关键字的值匹配的帮助文件也是如此。
 
-当脚本模块导出函数时，的值 `.EXTERNALHELP` 应为不带路径的文件名。 `Get-Help`在模块目录的特定于区域设置的子目录中查找文件。 文件名没有任何要求，但最佳做法是使用以下文件名格式： `<ScriptModule>.psm1-help.xml` 。
+当脚本模块导出函数时，的值 `.EXTERNALHELP` 应为不带路径的文件名。 `Get-Help` 在模块目录的特定于区域设置的子目录中查找文件。 文件名没有任何要求，但最佳做法是使用以下文件名格式： `<ScriptModule>.psm1-help.xml` 。
 
 如果函数不与模块相关联，请在关键字的值中包含路径和文件名 `.EXTERNALHELP` 。 如果 XML 文件的指定路径包含特定于 UI 区域性的子目录，则 `Get-Help` 会以递归方式搜索包含脚本或函数名称的 xml 文件的子目录，就像为 Windows 建立的语言回退标准一样。
 
-有关 cmdlet 帮助基于 XML 的帮助文件格式的详细信息，请参阅[编写 Windows PowerShell Cmdlet 帮助](./writing-help-for-windows-powershell-cmdlets.md)。
+有关 cmdlet 帮助基于 XML 的帮助文件格式的详细信息，请参阅 [编写 Windows PowerShell Cmdlet 帮助](./writing-help-for-windows-powershell-cmdlets.md)。

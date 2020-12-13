@@ -1,12 +1,14 @@
 ---
-title: GroupBy (格式) 的标签元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 07b4d037472a9dd2329e94576ec10f5b82f46b34
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Label Element for GroupBy (Format)
+description: Label Element for GroupBy (Format)
+ms.openlocfilehash: ff4b0dec01bb5b472b1813540661791b91568eed
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785772"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649785"
 ---
 # <a name="label-element-for-groupby-format"></a>Label Element for GroupBy (Format)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87785772"
 
 ## <a name="example"></a>示例
 
-下面的示例显示了新组的标签。 显示的标签如下所示：`Service Type: NewValueofProperty`
+下面的示例显示了新组的标签。 显示的标签如下所示： `Service Type: NewValueofProperty`
 
 ```xml
 <GroupBy>
@@ -58,7 +60,7 @@ ms.locfileid: "87785772"
 
 ```
 
-有关包括此元素的完整格式化文件的示例，请参阅[ (GroupBy) 的宽视图](./wide-view-groupby.md)。
+有关包括此元素的完整格式化文件的示例，请参阅 [ (GroupBy) 的宽视图 ](./wide-view-groupby.md)。
 
 ## <a name="see-also"></a>另请参阅
 

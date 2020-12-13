@@ -1,16 +1,14 @@
 ---
-title: 如何创建 Windows PowerShell 提供程序 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- providers [PowerShell Programmer's Guide]
-- providers [PowerShellProgrammer's Guide], creating
-- Windows PowerShell Programmer's Guide, providers
-ms.openlocfilehash: 5e7424c035d22d0f5eb154b369427a6da80b1c49
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何创建 Windows PowerShell 提供程序
+description: 如何创建 Windows PowerShell 提供程序
+ms.openlocfilehash: 51f19bf0dfa5f976a5045ae1342730c8f22f695e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787098"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647481"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>如何创建 Windows PowerShell 提供程序
 
@@ -26,7 +24,7 @@ Windows PowerShell 提供多个提供程序 (如用于访问已知数据存储�
 
 ## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>使用 Windows PowerShell 路径访问存储的数据
 
-Windows powershell 运行时和通过使用 Windows PowerShell 路径以编程方式访问 windows PowerShell 提供程序。 大多数情况下，这些路径用于通过提供程序直接访问数据。 但是，某些路径可解析为提供程序内部路径，该路径允许 cmdlet 使用非 Windows PowerShell 应用程序编程接口 (Api) 访问数据。 有关 Windows powershell 提供程序在 Windows PowerShell 中的运行方式的详细信息，请参阅[Windows powershell 的工作](/previous-versions/ms714658(v=vs.85))原理。
+Windows powershell 运行时和通过使用 Windows PowerShell 路径以编程方式访问 windows PowerShell 提供程序。 大多数情况下，这些路径用于通过提供程序直接访问数据。 但是，某些路径可解析为提供程序内部路径，该路径允许 cmdlet 使用非 Windows PowerShell 应用程序编程接口 (Api) 访问数据。 有关 Windows powershell 提供程序在 Windows PowerShell 中的运行方式的详细信息，请参阅 [Windows powershell 的工作](/previous-versions/ms714658(v=vs.85))原理。
 
 ## <a name="exposing-provider-cmdlets-using-windows-powershell-drives"></a>使用 Windows PowerShell 驱动器公开提供程序 Cmdlet
 

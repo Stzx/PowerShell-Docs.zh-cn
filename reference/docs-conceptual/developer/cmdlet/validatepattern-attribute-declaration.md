@@ -1,16 +1,14 @@
 ---
-title: ValidatePattern 特性声明 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidatePattern
-- ValidatePattern attribute, described
-- ValidatePattern attribute
-ms.openlocfilehash: 713fa7a46a8eeefdbfd679a5e8436285fac085f8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ValidatePattern 属性声明
+description: ValidatePattern 属性声明
+ms.openlocfilehash: 364f63d2c52563eaefe64bcbb2bbae511bccb074
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787795"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646166"
 ---
 # <a name="validatepattern-attribute-declaration"></a>ValidatePattern 属性声明
 
@@ -29,7 +27,7 @@ ValidatePattern 属性指定用于验证 cmdlet 参数的参数的正则表达�
 
 `RegexString`需要[ () 。](/dotnet/api/System.String) 指定用于验证参数参数的正则表达式。
 
-选项 ([system.text.regularexpressions.regexoptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions)) 可选的命名参数。 指定指定正则表达式选项的[system.text.regularexpressions. system.text.regularexpressions.regexoptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions)标志的按位组合。
+选项 ([system.text.regularexpressions.regexoptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions)) 可选的命名参数。 指定指定正则表达式选项的 [system.text.regularexpressions. system.text.regularexpressions.regexoptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions) 标志的按位组合。
 
 ## <a name="remarks"></a>备注
 
@@ -39,7 +37,7 @@ ValidatePattern 属性指定用于验证 cmdlet 参数的参数的正则表达�
 
 - 如果将此特性应用于集合，则集合中的每个元素都必须与模式匹配。
 
-- ValidatePattern 特性是由[Validatepatternattribute](/dotnet/api/System.Management.Automation.ValidatePatternAttribute)类定义的。
+- ValidatePattern 特性是由 [Validatepatternattribute](/dotnet/api/System.Management.Automation.ValidatePatternAttribute) 类定义的。
 
 ## <a name="see-also"></a>另请参阅
 

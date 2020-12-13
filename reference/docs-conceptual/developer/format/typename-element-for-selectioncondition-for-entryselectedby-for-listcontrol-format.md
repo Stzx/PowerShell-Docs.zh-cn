@@ -1,12 +1,14 @@
 ---
-title: ListControl (Format) 的 SelectionCondition for EntrySelectedBy 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: bc58d630e65b316f9223bf3c529f928358e38ebc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for SelectionCondition for EntrySelectedBy for ListControl (Format)
+description: TypeName Element for SelectionCondition for EntrySelectedBy for ListControl (Format)
+ms.openlocfilehash: 2e8246e3ef2cba38824d8f8004acfffc3236df13
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787368"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645553"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>TypeName Element for SelectionCondition for EntrySelectedBy for ListControl (Format)
 
@@ -44,9 +46,9 @@ ms.locfileid: "87787368"
 
 ## <a name="remarks"></a>备注
 
-选择条件可以指定任意数量的 .NET 类型或选择集，但是不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+选择条件可以指定任意数量的 .NET 类型或选择集，但是不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
-有关列表视图的其他组件的详细信息，请参阅[创建列表视图](./creating-a-list-view.md)。
+有关列表视图的其他组件的详细信息，请参阅 [创建列表视图](./creating-a-list-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

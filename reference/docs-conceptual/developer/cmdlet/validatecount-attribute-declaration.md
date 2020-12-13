@@ -1,16 +1,14 @@
 ---
-title: ValidateCount 特性声明 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidateCount
-- ValidateCount attribute, described
-- ValidateCount attribute
-ms.openlocfilehash: c013a354ee339bd14508fe30549673bc79d5c616
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ValidateCount 属性声明
+description: ValidateCount 属性声明
+ms.openlocfilehash: 6acdd02a10ecc1bc2be0e6be88cf2f42a3673eb8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786316"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646267"
 ---
 # <a name="validatecount-attribute-declaration"></a>ValidateCount 属性声明
 
@@ -30,7 +28,7 @@ ValidateCount 属性指定 cmdlet 参数允许的最小和最大参数数量。
 
 ## <a name="remarks"></a>备注
 
-- 有关如何声明此属性的详细信息，请参阅[如何验证参数计数][]。
+- 有关如何声明此属性的详细信息，请参阅 [如何验证参数计数][]。
 
 - 如果未调用此属性，则对应的 cmdlet 参数可以有任意数量的参数。
 
@@ -40,7 +38,7 @@ ValidateCount 属性指定 cmdlet 参数允许的最小和最大参数数量。
 
   - Attribute 参数的值 `MaxLength` 小于 `MinLength` attribute 参数的值。
 
-- ValidateCount 特性是由[ValidateCountAttribute][]类定义的。
+- ValidateCount 特性是由 [ValidateCountAttribute][] 类定义的。
 
 ## <a name="see-also"></a>另请参阅
 

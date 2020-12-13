@@ -1,12 +1,14 @@
 ---
-title: GroupBy (格式) 的 CustomControl 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b8265e872d34ea5dbcedfaa1668d21df8c3b35eb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomControl Element for GroupBy (Format)
+description: CustomControl Element for GroupBy (Format)
+ms.openlocfilehash: 633cfcbd10206dc8d7fb4bc1d0092f19aa5bde7c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786061"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646100"
 ---
 # <a name="customcontrol-element-for-groupby-format"></a>CustomControl Element for GroupBy (Format)
 
@@ -32,13 +34,13 @@ ms.locfileid: "87786061"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomEntries Element for CustomControl for GroupBy (Format)](./customentries-element-for-customcontrol-for-groupby-format.md)|必需的元素。<br /><br /> 提供控件的定义。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[GroupBy Element for View (Format)](./groupby-element-for-view-format.md)|定义 Windows PowerShell 如何显示一组新的对象。|
 

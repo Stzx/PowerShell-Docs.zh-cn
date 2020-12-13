@@ -1,12 +1,14 @@
 ---
-title: 定义选择集 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 58c812b69f92c33304bf7fc7b2891cc2a0227918
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 定义选项集
+description: 定义选项集
+ms.openlocfilehash: d709a368a45623d56fdbf4e98a11a5e5f8a193fa
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774297"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648257"
 ---
 # <a name="defining-selection-sets"></a>定义选项集
 
@@ -32,11 +34,11 @@ ms.locfileid: "87774297"
 
 - 在视图或控件的每个定义中， `EntrySelectedBy` 元素定义使用该定义显示的对象。 通常，视图或控件只有一个定义，因此这些对象由 `ViewSelectedBy` 元素定义。 `EntrySelectedBy`定义的元素包含一个 `SelectionSetName` 指定选择集的子元素。 如果为定义指定选择集，则不能指定元素的任何其他子元素 `EntrySelectedBy` 。
 
-- 在视图或控件的每个定义中， `SelectionCondition` 元素可用于指定使用定义的条件。 `SelectionCondition`元素有一个 `SelectionSetName` 子元素，该元素指定触发条件的选择集。 当显示选择集中定义的任何对象时，将触发该条件。 有关如何设置这些条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+- 在视图或控件的每个定义中， `SelectionCondition` 元素可用于指定使用定义的条件。 `SelectionCondition`元素有一个 `SelectionSetName` 子元素，该元素指定触发条件的选择集。 当显示选择集中定义的任何对象时，将触发该条件。 有关如何设置这些条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="selection-set-example"></a>选择集示例
 
-以下示例显示了直接从 `FileSystem` Windows PowerShell 提供的格式化文件中获取的选项集。 有关其他 Windows PowerShell 格式设置文件的详细信息，请参阅[Windows Powershell 格式设置文件](./powershell-formatting-files.md)。
+以下示例显示了直接从 `FileSystem` Windows PowerShell 提供的格式化文件中获取的选项集。 有关其他 Windows PowerShell 格式设置文件的详细信息，请参阅 [Windows Powershell 格式设置文件](./powershell-formatting-files.md)。
 
 ```xml
 <SelectionSets>
@@ -131,7 +133,7 @@ ms.locfileid: "87774297"
 
 [SelectionSet](./selectionset-element-format.md)
 
-名称
+[名称](./name-element-for-selectionset-format.md)
 
 [类型](./types-element-for-selectionset-format.md)
 

@@ -4,10 +4,10 @@ description: PowerShell $null 通常看起来很简单，但却有很多细微�
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: e0553a5e17450d8044f548792649369e99903850
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "84149470"
 ---
 # <a name="everything-you-wanted-to-know-about-null"></a>关于 $null 的各项须知内容

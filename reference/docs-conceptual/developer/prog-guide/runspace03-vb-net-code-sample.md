@@ -1,19 +1,21 @@
 ---
-title: RunSpace03 (VB.NET) 代码示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 3b4181889ed15e14c59e3f47a09e39a2696df28c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: RunSpace03 (VB.NET) 代码示例
+description: RunSpace03 (VB.NET) 代码示例
+ms.openlocfilehash: 796e550d05de5c425dcabdb5ccf735acfb8f9ff0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784769"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647426"
 ---
 # <a name="runspace03-vbnet-code-sample"></a>RunSpace03 (VB.NET) 代码示例
 
-下面是 "创建运行指定脚本的控制台应用程序" 中所述的控制台应用程序的 VB.NET 源代码。 此示例使用[Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke)类来执行一个脚本，该脚本检索传递到脚本的进程名称列表的进程信息。 它演示如何将输入对象传递给脚本，以及如何检索错误对象以及输出对象。
+下面是 "创建运行指定脚本的控制台应用程序" 中所述的控制台应用程序的 VB.NET 源代码。 此示例使用 [Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) 类来执行一个脚本，该脚本检索传递到脚本的进程名称列表的进程信息。 它演示如何将输入对象传递给脚本，以及如何检索错误对象以及输出对象。
 
 > [!NOTE]
-> 您可以使用适用于 Windows Vista 的 Windows 软件开发工具包和 Microsoft .NET Framework 3.0 运行时组件) 为此示例下载 VB.NET (源文件。 有关下载说明，请参阅[如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
+> 您可以使用适用于 Windows Vista 的 Windows 软件开发工具包和 Microsoft .NET Framework 3.0 运行时组件) 为此示例下载 VB.NET (源文件。 有关下载说明，请参阅 [如何安装 Windows powershell 和下载 Windows POWERSHELL SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk)。
 > 下载的源文件在目录中提供 **\<PowerShell Samples>** 。
 
 ## <a name="code-sample"></a>代码示例

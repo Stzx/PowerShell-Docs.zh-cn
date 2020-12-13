@@ -3,10 +3,10 @@ title: 从 Windows PowerShell 5.1 迁移到 PowerShell 7
 description: 为 Windows 平台从 PowerShell 5.1 更新到 PowerShell 7。
 ms.date: 03/25/2020
 ms.openlocfilehash: cb14a4f159b6dc33f31386da4264c0ebb640aef8
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "83809203"
 ---
 # <a name="migrating-from-windows-powershell-51-to-powershell-7"></a>从 Windows PowerShell 5.1 迁移到 PowerShell 7

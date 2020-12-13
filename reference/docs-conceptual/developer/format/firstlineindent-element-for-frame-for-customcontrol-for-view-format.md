@@ -1,12 +1,14 @@
 ---
-title: CustomControl 的 FirstLineIndent 的框架元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 0d51be5b5fc04bc0ea8442ca96767b1d9d8473a4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: FirstLineIndent Element for Frame for CustomControl for View (Format)
+description: FirstLineIndent Element for Frame for CustomControl for View (Format)
+ms.openlocfilehash: 8dce8b4b072b754c3b7d631b3e5c321a5a3e5a3e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785806"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645888"
 ---
 # <a name="firstlineindent-element-for-frame-for-customcontrol-for-view-format"></a>FirstLineIndent Element for Frame for CustomControl for View (Format)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87785806"
 
 ## <a name="remarks"></a>备注
 
-如果指定此元素，则不能指定[FirstLineHanging](./firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md)元素。
+如果指定此元素，则不能指定 [FirstLineHanging](./firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md) 元素。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的 CustomEntries 的 CustomEntry 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4fc960ab803580f684ce0f224b1db4d7d4af1720
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomEntry Element for CustomEntries for Controls for View (Format)
+description: CustomEntry Element for CustomEntries for Controls for View (Format)
+ms.openlocfilehash: a525b198c8f595e04dc0804d36b5533b94f43c6b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785891"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646081"
 ---
 # <a name="customentry-element-for-customentries-for-controls-for-view-format"></a>CustomEntry Element for CustomEntries for Controls for View (Format)
 
@@ -33,14 +35,14 @@ ms.locfileid: "87785891"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[EntrySelectedBy Element for CustomEntry for Controls for View (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)|可选元素。<br /><br /> 定义使用此控件定义的 .NET 类型或要使用此定义时必须存在的条件。|
 |[CustomItem Element for CustomEntry for Controls for View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)|必需的元素。<br /><br /> 定义控件显示数据的方式。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomEntries Element for CustomControl for View (Format)](./customentries-element-for-customcontrol-for-view-format.md)|提供控件的定义。|
 

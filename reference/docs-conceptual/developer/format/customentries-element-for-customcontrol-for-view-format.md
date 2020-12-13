@@ -1,12 +1,14 @@
 ---
-title: CustomControl 的 CustomEntries 元素 (Format) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c89eb25f6922a92e2c18298d0128c4c2ca93df3d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: CustomEntries Element for CustomControl for View (Format)
+description: CustomEntries Element for CustomControl for View (Format)
+ms.openlocfilehash: 6e757bccdface2503667f8786462a2b43134a07d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785959"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649985"
 ---
 # <a name="customentries-element-for-customcontrol-for-view-format"></a>CustomEntries Element for CustomControl for View (Format)
 
@@ -32,13 +34,13 @@ ms.locfileid: "87785959"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View (格式的 CustomEntries 的 CustomEntry 元素) ](./customentry-element-for-customentries-for-customcontrol-for-view-format.md)|必需的元素。<br /><br /> 提供自定义控件视图的定义。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[CustomControl Element for View (Format)](./customcontrol-element-for-view-format.md)|必需的元素。<br /><br /> 定义视图的自定义控件格式。|
 

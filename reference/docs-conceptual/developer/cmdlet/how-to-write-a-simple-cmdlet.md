@@ -1,12 +1,14 @@
 ---
-title: 如何编写简单的 Cmdlet |Microsoft Docs
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ff0b47454804c9becd6f03ac521946b9596bb8b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何编写简单的 Cmdlet
+description: 如何编写简单的 Cmdlet
+ms.openlocfilehash: 59dce5d797f80647e0b70a1f80faf67198652082
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784055"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646488"
 ---
 # <a name="how-to-write-a-cmdlet"></a>如何编写 cmdlet
 
@@ -14,9 +16,9 @@ ms.locfileid: "87784055"
 
 ## <a name="steps-to-write-a-cmdlet"></a>编写 cmdlet 的步骤
 
-1. 若要将类声明为 cmdlet，请使用**cmdlet**特性。 **Cmdlet**属性指定该 cmdlet 名称的动词和名词。
+1. 若要将类声明为 cmdlet，请使用 **cmdlet** 特性。 **Cmdlet** 属性指定该 cmdlet 名称的动词和名词。
 
-   有关**Cmdlet**特性的详细信息，请参阅[CmdletAttribute 声明](cmdlet-attribute-declaration.md)。
+   有关 **Cmdlet** 特性的详细信息，请参阅 [CmdletAttribute 声明](cmdlet-attribute-declaration.md)。
 
 2. 指定类的名称。
 
@@ -25,13 +27,13 @@ ms.locfileid: "87784055"
    * [System.object。](/dotnet/api/System.Management.Automation.Cmdlet)
    * [System.web. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet)
 
-4. 若要定义 cmdlet 的参数，请使用**Parameter**特性。 在这种情况下，只指定了一个必需的参数。
+4. 若要定义 cmdlet 的参数，请使用 **Parameter** 特性。 在这种情况下，只指定了一个必需的参数。
 
-   有关**参数**属性的详细信息，请参阅[ParameterAttribute 声明](parameter-attribute-declaration.md)。
+   有关 **参数** 属性的详细信息，请参阅 [ParameterAttribute 声明](parameter-attribute-declaration.md)。
 
-5. 重写处理输入的输入处理方法。 在这种情况下，将重写[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法。
+5. 重写处理输入的输入处理方法。 在这种情况下，将重写 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法。
 
-6. 若要编写问候语，请使用方法[WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject)。
+6. 若要编写问候语，请使用方法 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject)。
    该问候语按以下格式显示：
 
    ```Output

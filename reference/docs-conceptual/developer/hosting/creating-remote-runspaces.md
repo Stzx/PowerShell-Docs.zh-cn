@@ -1,20 +1,22 @@
 ---
-title: 正在创建远程运行空间 |Microsoft Docs
 ms.date: 09/12/2016
-ms.openlocfilehash: 2b3c76eeae70de9ef116851313953bba1a1d890f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 创建远程运行空间
+description: 创建远程运行空间
+ms.openlocfilehash: 4a2af4094ff2503fc12ee460d49565f035f0e4fe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779584"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649361"
 ---
 # <a name="creating-remote-runspaces"></a>创建远程运行空间
 
-采用**ComputerName**参数的 PowerShell 命令可以在任何运行 PowerShell 的计算机上运行。 若要运行不带**ComputerName**参数的命令，你可以使用 ws-management 来配置连接到指定计算机的运行空间，并在该计算机上运行命令。
+采用 **ComputerName** 参数的 PowerShell 命令可以在任何运行 PowerShell 的计算机上运行。 若要运行不带 **ComputerName** 参数的命令，你可以使用 WS-Management 来配置连接到指定计算机的运行空间，并在该计算机上运行命令。
 
 ## <a name="using-a-wsmanconnection-to-create-a-remote-runspace"></a>使用 WSManConnection 创建远程运行空间
 
- 若要创建连接到远程计算机的运行空间，请创建一个[WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)对象。 您可以通过设置对象的[WSManConnectionInfo. ConnectionUri](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri)属性来指定连接的目标终结点。 然后，通过调用 CreateRunspace 方法来创建一个运行空间，并将[WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)对象指定为参数。 [RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) ）将指定为 `connectionInfo` 参数。
+ 若要创建连接到远程计算机的运行空间，请创建一个 [WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 对象。 您可以通过设置对象的 [WSManConnectionInfo. ConnectionUri](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri) 属性来指定连接的目标终结点。 然后，通过调用 CreateRunspace 方法来创建一个运行空间，并将[WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)对象指定为参数。 [RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) ）将指定为 `connectionInfo` 参数。
 
  下面的示例演示如何创建连接到远程计算机的运行空间。 在此示例中，用作 `RemoteComputerUri` 远程计算机的实际 URI 的占位符。
 

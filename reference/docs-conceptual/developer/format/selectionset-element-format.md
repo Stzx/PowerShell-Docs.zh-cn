@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的 SelectionSet 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: cf47229993458492c712d28e04913e75d1bde386
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionSet Element (Format)
+description: SelectionSet Element (Format)
+ms.openlocfilehash: 944aa83569ad8ca789746a71f60e5da5c19fbf01
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783392"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647870"
 ---
 # <a name="selectionset-element-format"></a>SelectionSet Element (Format)
 
@@ -48,7 +50,7 @@ ms.locfileid: "87783392"
 
 如果你有一组要通过使用单个名称引用的相关对象（例如通过继承相关的一组对象），则可以使用选择集。 定义视图时，可以使用选择集的名称（而不是列出每个视图中的所有对象）来指定对象集。
 
-常用选择集在定义格式设置文件的视图或视图定义时由其名称指定。 在这些情况下， `SelectionSetName` 和元素的子 `ViewSelectedBy` 元素 `EntrySelectedBy` 指定要使用的集。 有关选择集的详细信息，请参阅[定义对象集](./defining-selection-sets.md)。
+常用选择集在定义格式设置文件的视图或视图定义时由其名称指定。 在这些情况下， `SelectionSetName` 和元素的子 `ViewSelectedBy` 元素 `EntrySelectedBy` 指定要使用的集。 有关选择集的详细信息，请参阅 [定义对象集](./defining-selection-sets.md)。
 
 ## <a name="example"></a>示例
 

@@ -1,12 +1,14 @@
 ---
-title: WideControl (Format) 的 SelectionCondition for EntrySelectedBy 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5021f665b994581f9ff982e13af922d7940ebf2b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for SelectionCondition for EntrySelectedBy for WideControl (Format)
+description: TypeName Element for SelectionCondition for EntrySelectedBy for WideControl (Format)
+ms.openlocfilehash: af6e4782c345b43e16bce59c333bdaaceba0d845
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783307"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645506"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a>TypeName Element for SelectionCondition for EntrySelectedBy for WideControl (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87783307"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[WideEntry (格式的 EntrySelectedBy 的 SelectionCondition 元素) ](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|定义要使用此宽项时必须存在的条件。|
 
@@ -44,9 +46,9 @@ ms.locfileid: "87783307"
 
 ## <a name="remarks"></a>备注
 
-选择条件可以指定 .NET 类型或选择集，但是不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+选择条件可以指定 .NET 类型或选择集，但是不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
-有关大视图的其他组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+有关大视图的其他组件的详细信息，请参阅 [创建宽视图](./creating-a-wide-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,12 +1,14 @@
 ---
-title: 用于) 配置 (格式的控件的 EntrySelectedBy 的 SelectionSetName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 72072d8d13e6ca22afdb9bca2e0237d29ba0594f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionSetName Element for EntrySelectedBy for Controls for Configuration (Format)
+description: SelectionSetName Element for EntrySelectedBy for Controls for Configuration (Format)
+ms.openlocfilehash: b775aa8a3184aa3ebcbda17a8e3191c69d67a700
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787557"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645733"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format"></a>SelectionSetName Element for EntrySelectedBy for Controls for Configuration (Format)
 
@@ -25,9 +27,9 @@ ms.locfileid: "87787557"
 
 以下各节描述了元素的属性、子元素和父元素 `SelectionSetName` 。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
-None
+无
 
 ### <a name="child-elements"></a>子元素
 
@@ -35,7 +37,7 @@ None
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[EntrySelectedBy Element for CustomEntry for Controls for Configuration (Format)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)|定义使用此控件定义的 .NET 类型或要使用此定义时必须存在的条件。|
 
@@ -47,7 +49,7 @@ None
 
 每个控件定义都必须定义至少一个类型名称、选择集或选择条件。
 
-当要定义在多个视图中使用的一组对象时，通常使用选择集。 有关定义选择集的详细信息，请参阅[定义选择集](./defining-selection-sets.md)。
+当要定义在多个视图中使用的一组对象时，通常使用选择集。 有关定义选择集的详细信息，请参阅 [定义选择集](./defining-selection-sets.md)。
 
 ## <a name="see-also"></a>另请参阅
 

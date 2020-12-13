@@ -1,12 +1,14 @@
 ---
-title: 用于) 配置 (格式的控件的 ExpressionBinding 的 EnumerateCollection 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: fc2dd140f77b1ccd40f43094ceb0ab2d044ef3a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EnumerateCollection Element for ExpressionBinding for Controls for Configuration (Format)
+description: EnumerateCollection Element for ExpressionBinding for Controls for Configuration (Format)
+ms.openlocfilehash: 372824835cbfcc92868e46aca43d09dd25762283
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773974"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648226"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-controls-for-configuration-format"></a>EnumerateCollection Element for ExpressionBinding for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87773974"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExpressionBinding Element for CustomItem for Controls for Configuration (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|定义控件显示的数据。|
 
