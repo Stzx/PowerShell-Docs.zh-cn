@@ -1,12 +1,14 @@
 ---
-title: TableControl 的 TableRowEntry 的 Wrap 元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1ef1f6133f9e5e7da685933cfe90d39a0519ff44
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Wrap Element for TableRowEntry for TableControl (Format)
+description: Wrap Element for TableRowEntry for TableControl (Format)
+ms.openlocfilehash: 1937427c9869c3d301faef0bc8ccea42eb0e7365
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779873"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659544"
 ---
 # <a name="wrap-element-for-tablerowentry-for-tablecontrol--format"></a>Wrap Element for TableRowEntry for TableControl (Format)
 
@@ -34,13 +36,13 @@ ms.locfileid: "87779873"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[TableRowEntry Element for TableRowEntries for TableControl (Format)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|定义在表的行中显示的数据。|
 
 ## <a name="remarks"></a>备注
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

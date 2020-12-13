@@ -1,16 +1,18 @@
 ---
-title: Runspace07 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c7cca58a67e522a0e0fb1d362a60c0ca94953f3e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace07 示例
+description: Runspace07 示例
+ms.openlocfilehash: 4356f33a1d962a0a6c5ca1ebb8c3e4c579463022
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783171"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657666"
 ---
 # <a name="runspace07-sample"></a>Runspace07 示例
 
-此示例演示如何创建一个运行空间，然后使用该运行空间通过[使用一个以](/dotnet/api/system.management.automation.powershell)同步方式运行两个 cmdlet。
+此示例演示如何创建一个运行空间，然后使用该运行空间通过 [使用一个以](/dotnet/api/system.management.automation.powershell) 同步方式运行两个 cmdlet。
 
 ## <a name="requirements"></a>要求
 
@@ -22,17 +24,17 @@ ms.locfileid: "87783171"
 
 - 使用[Runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory)类创建一个 system.web. e x.///[运行空间](/dotnet/api/System.Management.Automation.Runspaces.Runspace)对象。
 
-- 创建使用运行空间的[system.web](/dotnet/api/system.management.automation.powershell)对象。
+- 创建使用运行空间的 [system.web](/dotnet/api/system.management.automation.powershell) 对象。
 
-- 将 cmdlet 添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道。
+- 将 cmdlet 添加到 [system.web](/dotnet/api/system.management.automation.powershell) 对象的管道。
 
 - 同步运行 cmdlet。
 
-- 从命令返回的[system.object](/dotnet/api/System.Management.Automation.PSObject)对象中提取属性。
+- 从命令返回的 [system.object](/dotnet/api/System.Management.Automation.PSObject) 对象中提取属性。
 
 ## <a name="example"></a>示例
 
-此示例将创建一个运行空间，该运行空间由[system.web](/dotnet/api/System.Management.Automation.PSObject)对象用于运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[度量值](/powershell/module/microsoft.powershell.utility/measure-object)的 cmdlet。
+此示例将创建一个运行空间，该运行空间由 [system.web](/dotnet/api/System.Management.Automation.PSObject) 对象用于运行 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 和 [度量值](/powershell/module/microsoft.powershell.utility/measure-object) 的 cmdlet。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

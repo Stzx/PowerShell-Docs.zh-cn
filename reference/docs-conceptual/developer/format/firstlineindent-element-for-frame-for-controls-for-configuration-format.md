@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的控件的框架的 FirstLineIndent 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: 9ac1d8dc74af12b87f0b490d7c1f75d028e3521f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: FirstLineIndent Element for Frame for Controls for Configuration (Format)
+description: FirstLineIndent Element for Frame for Controls for Configuration (Format)
+ms.openlocfilehash: 59a41410160879c2414819de4d367ecdedd8e182
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773583"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660158"
 ---
 # <a name="firstlineindent-element-for-frame-for-controls-for-configuration-format"></a>FirstLineIndent Element for Frame for Controls for Configuration (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87773583"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Frame Element for CustomItem for Controls for Configuration (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 
@@ -44,7 +46,7 @@ ms.locfileid: "87773583"
 
 ## <a name="remarks"></a>备注
 
-如果指定此元素，则不能指定[FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md)元素。
+如果指定此元素，则不能指定 [FirstLineHanging](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md) 元素。
 
 ## <a name="see-also"></a>另请参阅
 

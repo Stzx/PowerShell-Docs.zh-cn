@@ -1,12 +1,14 @@
 ---
-title: 用于 SelectionCondition 的控件的 ScriptBlock 元素)  (格式的控件 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e5f4295a989307cb6ffb655c2c39596f3d1ea806
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for SelectionCondition for Controls for View (Format)
+description: ScriptBlock Element for SelectionCondition for Controls for View (Format)
+ms.openlocfilehash: 7eed3b8a06bc45396026b8e2a7454447b3090d74
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785415"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664943"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-controls-for-view-format"></a>ScriptBlock Element for SelectionCondition for Controls for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87785415"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[SelectionCondition Element for EntrySelectedBy for Controls for View (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)|定义要使用的控件定义必须存在的条件。|
 
@@ -44,7 +46,7 @@ ms.locfileid: "87785415"
 
 ## <a name="remarks"></a>备注
 
-选择条件必须指定至少一个要计算的脚本或属性名称，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+选择条件必须指定至少一个要计算的脚本或属性名称，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 

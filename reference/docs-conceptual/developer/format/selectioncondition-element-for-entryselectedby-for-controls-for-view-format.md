@@ -1,12 +1,14 @@
 ---
-title: View (Format) 的控件的 EntrySelectedBy 的 SelectionCondition 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1c14b2638249bdbfe25f7a96e917d66ea10ed239
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionCondition Element for EntrySelectedBy for Controls for View (Format)
+description: SelectionCondition Element for EntrySelectedBy for Controls for View (Format)
+ms.openlocfilehash: 16b048e73195b3d6168724714ff223851dc1b20b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787574"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664845"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-controls-for-view-format"></a>SelectionCondition Element for EntrySelectedBy for Controls for View (Format)
 
@@ -35,7 +37,7 @@ ms.locfileid: "87787574"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[PropertyName Element for SelectionCondition for Controls for View (Format)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定触发条件的 .NET 属性。|
 |[ScriptBlock Element for SelectionCondition for Controls for View (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md)|可选元素。<br /><br /> 指定触发条件的脚本。|
@@ -44,7 +46,7 @@ ms.locfileid: "87787574"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[EntrySelectedBy Element for CustomEntry for Controls for View (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)|定义使用此控件定义的 .NET 类型或要使用此定义时必须存在的条件。|
 
@@ -56,7 +58,7 @@ ms.locfileid: "87787574"
 
 - 选择条件可以指定任意数量的 .NET 类型或选择集，但是不能同时指定两者。
 
-有关如何使用选择条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+有关如何使用选择条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 

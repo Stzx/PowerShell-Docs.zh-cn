@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format) 的帧的 LeftIndent 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4bf848047a01ff61183fb6b3ec5d540ab22b50c9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: LeftIndent Element for Frame for GroupBy (Format)
+description: LeftIndent Element for Frame for GroupBy (Format)
+ms.openlocfilehash: e662a59311bbc8bd66d35087d857067db1c9b2d9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781148"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659999"
 ---
 # <a name="leftindent-element-for-frame-for-groupby-format"></a>LeftIndent Element for Frame for GroupBy (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87781148"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Frame Element for CustomItem for GroupBy (Format)](./frame-element-for-customitem-for-groupby-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 

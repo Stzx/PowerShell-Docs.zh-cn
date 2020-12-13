@@ -1,12 +1,14 @@
 ---
-title: 编写 Windows PowerShell 模块 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d2398a8111a9832af2465d045be0bdefc3cf927a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 编写 Windows PowerShell 模块
+description: 编写 Windows PowerShell 模块
+ms.openlocfilehash: 307241f0fb4d12c1a5cbd651a0ae4d5303098b27
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779142"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659437"
 ---
 # <a name="writing-a-windows-powershell-module"></a>编写 Windows PowerShell 模块
 
@@ -20,7 +22,7 @@ ms.locfileid: "87779142"
 
 模块可用于打包和分发执行常见任务的具有相同功能的库。 通常情况下，这些函数的名称共享一个或多个名词，其中反映了它们所使用的常见任务。 这些函数也可以与 .NET Framework 类类似，因为它们可以拥有公共和私有成员。 例如，库可以包含一组用于文件传输的函数。 在这种情况下，反映常见任务的名词可能是 "file"。
 
-### <a name="configuration"></a>配置
+### <a name="configuration"></a>Configuration
 
 通过添加特定的 cmdlet、提供程序、函数和变量，可使用模块自定义环境。
 

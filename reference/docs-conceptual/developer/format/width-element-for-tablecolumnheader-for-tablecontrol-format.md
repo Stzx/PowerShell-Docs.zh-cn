@@ -1,12 +1,14 @@
 ---
-title: TableControl (Format) 的 Width 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e9540d3d351041ad7cb98a21bb360ebea7eca117
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Width Element for TableColumnHeader for TableControl (Format)
+description: Width Element for TableColumnHeader for TableControl (Format)
+ms.openlocfilehash: bde84f1d33b3d6b3b8c4462f870f978611cb434b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779907"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658252"
 ---
 # <a name="width-element-for-tablecolumnheader-for-tablecontrol-format"></a>Width Element for TableColumnHeader for TableControl (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87779907"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[TableControl (格式的 TableHeaders 的 TableColumnHeader 元素) ](./tablecolumnheader-element-format.md)|定义表的列的数据的标签、宽度和对齐方式。|
 
@@ -44,7 +46,7 @@ ms.locfileid: "87779907"
 
 ## <a name="remarks"></a>备注
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="example"></a>示例
 

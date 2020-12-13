@@ -1,16 +1,18 @@
 ---
-title: Runspace01 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1ac286512f3cb3b97a6b3179c9dd45f1fefe1ecf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace01 示例
+description: Runspace01 示例
+ms.openlocfilehash: f47f79dd507db258119016353dc5a72d110d9252
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772189"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657922"
 ---
 # <a name="runspace01-sample"></a>Runspace01 示例
 
-此示例演示如何使用[system.exception 类以](/dotnet/api/system.management.automation.powershell)同步方式运行[Get Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet。 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 将为在本地计算机上运行的每个进程返回[system.object](/dotnet/api/System.Diagnostics.Process) 。 然后，将从返回的对象中提取[Processname *](/dotnet/api/System.Diagnostics.Process.ProcessName)和[Handlecount *](/dotnet/api/System.Diagnostics.Process.Handlecount)属性的值，并将其显示在控制台窗口中。
+此示例演示如何使用 [system.exception 类以](/dotnet/api/system.management.automation.powershell) 同步方式运行 [Get Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet。 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 将为在本地计算机上运行的每个进程返回[system.object](/dotnet/api/System.Diagnostics.Process) 。 然后，将从返回的对象中提取 [Processname *](/dotnet/api/System.Diagnostics.Process.ProcessName) 和 [Handlecount *](/dotnet/api/System.Diagnostics.Process.Handlecount) 属性的值，并将其显示在控制台窗口中。
 
 ## <a name="requirements"></a>要求
 
@@ -18,17 +20,17 @@ ms.locfileid: "87772189"
 
 ## <a name="demonstrates"></a>演示
 
-- 创建要运行命令的[system.web](/dotnet/api/system.management.automation.powershell)对象。
+- 创建要运行命令的 [system.web](/dotnet/api/system.management.automation.powershell) 对象。
 
-- 将命令添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道。
+- 将命令添加到 [system.web](/dotnet/api/system.management.automation.powershell) 对象的管道。
 
 - 同步运行命令。
 
-- 使用 system.exception 对象从命令返回[的对象中](/dotnet/api/System.Management.Automation.PSObject)提取属性。
+- 使用 system.exception 对象从命令返回 [的对象中](/dotnet/api/System.Management.Automation.PSObject) 提取属性。
 
 ## <a name="example"></a>示例
 
- 此示例在 Windows PowerShell 提供的默认运行空间中以同步方式运行[Get Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet。
+ 此示例在 Windows PowerShell 提供的默认运行空间中以同步方式运行 [Get Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

@@ -1,12 +1,14 @@
 ---
-title: TableControl (Format) 的 TableRowEntries 的 TableRowEntry 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 83076ae5b2c48992ce5e621c65fc9937efb68b87
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableRowEntry Element for TableRowEntries for TableControl (Format)
+description: TableRowEntry Element for TableRowEntries for TableControl (Format)
+ms.openlocfilehash: 60d64b7c14b40e87825ada36e19f52a66fe8b6cb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787404"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659772"
 ---
 # <a name="tablerowentry-element-for-tablerowentries-for-tablecontrol-format"></a>TableRowEntry Element for TableRowEntries for TableControl (Format)
 
@@ -50,11 +52,11 @@ ms.locfileid: "87787404"
 
 `TableColumnItems`必须指定一个元素和一个 `EntrySelectedBy` 元素。
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示一个 `TableRowEntry` 元素，该元素定义一个行，该行显示 system.exception 对象的两[System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process)个属性的值。
+下面的示例演示一个 `TableRowEntry` 元素，该元素定义一个行，该行显示 system.exception 对象的两[](/dotnet/api/System.Diagnostics.Process)个属性的值。
 
 ```xml
 <TableRowEntry>

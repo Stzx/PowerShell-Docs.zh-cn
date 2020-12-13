@@ -1,16 +1,14 @@
 ---
-title: ValidateRange 特性声明 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateRange, described
-- ValidateRange attribute
-- attributes, ValidateRange
-ms.openlocfilehash: 9aeaa6f03c170389ff61a058b505dbcf74df6958
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ValidateRange 属性声明
+description: ValidateRange 属性声明
+ms.openlocfilehash: 1fec9d1bd36cd21b7f0f23bf6d72338d276dce91
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787778"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660610"
 ---
 # <a name="validaterange-attribute-declaration"></a>ValidateRange 属性声明
 
@@ -38,7 +36,7 @@ ValidateRange 属性指定 cmdlet 参数参数 (范围) 的最小值和最大值
 
   - 参数的类型与 `MinRange` 和 `MaxRange` 参数不同。
 
-- ValidateRange 特性是由[Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute)类定义的。
+- ValidateRange 特性是由 [Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute) 类定义的。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,30 +1,30 @@
 ---
-title: 编写 Windows PowerShell 管理单元 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], PSSnapin example
-ms.openlocfilehash: 02603c54fb9852a8b78ecf68e3ee387d1fd418fc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 编写 Windows PowerShell 管理单元
+description: 编写 Windows PowerShell 管理单元
+ms.openlocfilehash: f658c2fa1211bfb77d2e8edd3999ce7f92df13bb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779104"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659450"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>编写 Windows PowerShell 管理单元
 
 此示例演示如何编写可用于在程序集中注册所有 cmdlet 和 Windows PowerShell 提供程序的 Windows PowerShell 管理单元。
 
-对于这种类型的管理单元，不选择要注册的 cmdlet 和提供程序。 若要编写允许您选择注册内容的管理单元，请参阅[编写自定义 Windows PowerShell 管理单元](./writing-a-custom-windows-powershell-snap-in.md)。
+对于这种类型的管理单元，不选择要注册的 cmdlet 和提供程序。 若要编写允许您选择注册内容的管理单元，请参阅 [编写自定义 Windows PowerShell 管理单元](./writing-a-custom-windows-powershell-snap-in.md)。
 
 ### <a name="writing-a-windows-powershell-snap-in"></a>编写 Windows PowerShell 管理单元
 
 1. 添加 RunInstallerAttribute 特性。
 
-2. 创建一个派生自[add-pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn)类的公共类。
+2. 创建一个派生自 [add-pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) 类的公共类。
 
     在此示例中，类名为 "GetProcPSSnapIn01"。
 
-3. 为管理单元的名称添加一个公共属性， (所需的) 。 命名管理单元时，请不要使用以下任何字符： `#` 、 `.` 、 `,` 、 `(` 、 `)` `{` `}` `[` `]` `&` `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、`*`
+3. 为管理单元的名称添加一个公共属性， (所需的) 。 命名管理单元时，请不要使用以下任何字符： `#` 、 `.` 、 `,` 、 `(` 、 `)` `{` `}` `[` `]` `&` `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` `` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、 `*`
 
     在此示例中，管理单元的名称为 "GetProcPSSnapIn01"。
 
@@ -46,7 +46,7 @@ ms.locfileid: "87779104"
 
 ## <a name="example"></a>示例
 
-此示例演示如何编写可用于在 Windows PowerShell shell 中注册 Get-help cmdlet 的 Windows PowerShell 管理单元。 请注意，在此示例中，完整的程序集只包含 GetProcPSSnapIn01 管理单元类和 `Get-Proc` cmdlet 类。
+此示例演示如何编写可用于在 Windows PowerShell shell 中注册 Get-Proc cmdlet 的 Windows PowerShell 管理单元。 请注意，在此示例中，完整的程序集只包含 GetProcPSSnapIn01 管理单元类和 `Get-Proc` cmdlet 类。
 
 ```csharp
 [RunInstaller(true)]

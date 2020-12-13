@@ -1,16 +1,18 @@
 ---
-title: Runspace02 (VB.NET) 代码示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 922d1e8568dad8c02f77e4b76342418bb3b54469
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace02 (VB.NET) 代码示例
+description: Runspace02 (VB.NET) 代码示例
+ms.openlocfilehash: 07197886a062881128655379e4a4b28aaec17163
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771645"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657047"
 ---
 # <a name="runspace02-vbnet-code-sample"></a>Runspace02 (VB.NET) 代码示例
 
-下面是 Runspace02 示例的 VB.NET 源代码。 此示例使用[Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke)类来 `Get-Process` 同步执行 cmdlet。 然后，使用 Windows 窗体和数据绑定在 DataGridView 控件中显示结果。
+下面是 Runspace02 示例的 VB.NET 源代码。 此示例使用 [Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) 类来 `Get-Process` 同步执行 cmdlet。 然后，使用 Windows 窗体和数据绑定在 DataGridView 控件中显示结果。
 
 ## <a name="code-sample"></a>代码示例
 

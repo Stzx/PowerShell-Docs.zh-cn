@@ -1,12 +1,14 @@
 ---
-title: Runspace10 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4d858c432c6221f2347f6de664d1e4ee299f5801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace10 示例
+description: Runspace10 示例
+ms.openlocfilehash: fd58cea553e6b830a56df7edfa7901d39f46a06c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784939"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657570"
 ---
 # <a name="runspace10-sample"></a>Runspace10 示例
 
@@ -20,21 +22,21 @@ ms.locfileid: "87784939"
 
 此示例演示以下各项。
 
-- 创建[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
+- 创建 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象。
 
-- 添加由主机应用程序定义的 cmdlet () 到[System.Management.Automation.Runspaces.Ini的 tialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
+- 添加由主机应用程序定义的 cmdlet () 到 [System.Management.Automation.Runspaces.Ini的 tialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象。
 
-- 创建使用对象的[system.object 工作空间](/dotnet/api/System.Management.Automation.Runspaces.Runspace)对象。
+- 创建使用对象的 [system.object 工作空间](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 对象。
 
 - 创建使用 "system.servicemodel.[管理](/dotnet/api/System.Management.Automation.Runspaces.Runspace)" 对象的 "[管理](/dotnet/api/system.management.automation.powershell)对象" 对象。
 
-- 将命令添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道。
+- 将命令添加到 [system.web](/dotnet/api/system.management.automation.powershell) 对象的管道。
 
-- 从命令返回的[system.object](/dotnet/api/System.Management.Automation.PSObject)对象中提取属性。
+- 从命令返回的 [system.object](/dotnet/api/System.Management.Automation.PSObject) 对象中提取属性。
 
 ## <a name="example"></a>示例
 
-此示例将创建一个运行空间，该运行空间使用[System.Management.Automation.Runspaces.Ini的 tialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象来定义打开运行空间时可用的元素。 在此示例中，由主机应用程序) 定义的 (处理器 cmdlet 将添加到初始会话状态，并且该 cmdlet 通过使用一个[系统管理](/dotnet/api/system.management.automation.powershell)对象进行同步运行。
+此示例将创建一个运行空间，该运行空间使用 [System.Management.Automation.Runspaces.Ini的 tialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象来定义打开运行空间时可用的元素。 在此示例中，由主机应用) 程序定义的 Get-Proc cmdlet (已添加到初始会话状态，该 cmdlet 通过使用[system.exception 对象进行同步运行。](/dotnet/api/system.management.automation.powershell)
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

@@ -1,12 +1,14 @@
 ---
-title: 如何使用模块导入 Cmdlet |Microsoft Docs
 ms.date: 08/28/2019
-ms.openlocfilehash: fa8d629c14b06e3f9e9d6151cf09aa6b4acce358
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何使用模块导入 Cmdlet
+description: 如何使用模块导入 Cmdlet
+ms.openlocfilehash: 485a4be4d2accaf050a6536e7f92a0673f62a30b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779363"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657283"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>如何使用模块导入 Cmdlet
 
@@ -25,15 +27,15 @@ ms.locfileid: "87779363"
 
 1. 将 cmdlet 程序集复制到模块文件夹中。
 
-1. `.psd1`在模块的根文件夹中 () 添加模块清单文件。 PowerShell 使用模块清单导入模块。 有关详细信息，请参阅[如何编写 PowerShell 模块清单](../module/how-to-write-a-powershell-module-manifest.md)。
+1. `.psd1`在模块的根文件夹中 () 添加模块清单文件。 PowerShell 使用模块清单导入模块。 有关详细信息，请参阅 [如何编写 PowerShell 模块清单](../module/how-to-write-a-powershell-module-manifest.md)。
 
 1. 运行以下命令，将 cmdlet 添加到会话：
 
    `Import-Module [Module_Name]`
 
-   此过程可用于测试 cmdlet。 它将程序集中的所有 cmdlet 添加到会话中。 有关模块的详细信息，请参阅[编写 Windows PowerShell 模块](../module/writing-a-windows-powershell-module.md)。
+   此过程可用于测试 cmdlet。 它将程序集中的所有 cmdlet 添加到会话中。 有关模块的详细信息，请参阅 [编写 Windows PowerShell 模块](../module/writing-a-windows-powershell-module.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [如何编写 PowerShell 模块清单](../module/how-to-write-a-powershell-module-manifest.md)
 

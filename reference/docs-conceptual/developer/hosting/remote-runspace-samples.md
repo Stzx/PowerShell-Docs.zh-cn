@@ -1,12 +1,14 @@
 ---
-title: 远程运行空间示例
 ms.date: 09/13/2016
-ms.openlocfilehash: 68248f0ba9e816865b6b92dbf6e7686e2d871370
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 远程运行空间示例
+description: 远程运行空间示例
+ms.openlocfilehash: ba8f89d0369147a96a4f9f518b0784b4ebe7e80e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783222"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658032"
 ---
 # <a name="remote-runspace-samples"></a>远程运行空间示例
 
@@ -15,8 +17,8 @@ ms.locfileid: "87783222"
 ## <a name="in-this-section"></a>本节内容
 
 > [!NOTE]
-> 有关在远程计算机上运行命令的详细信息，请参阅[Windows PowerShell 远程处理](/previous-versions/ms714644(v=vs.85))。
+> 有关在远程计算机上运行命令的详细信息，请参阅 [Windows PowerShell 远程处理](/previous-versions/ms714644(v=vs.85))。
 
- [RemoteRunspace01 示例](./remoterunspace01-sample.md)此示例演示如何创建用于建立远程连接的远程运行空间。
+ [RemoteRunspace01 示例](./remoterunspace01-sample.md) 此示例演示如何创建用于建立远程连接的远程运行空间。
 
- [RemoteRunspacePool01 示例](./remoterunspacepool01-sample.md)此示例演示如何构建远程运行空间池，以及如何使用此池并发运行多个命令。
+ [RemoteRunspacePool01 示例](./remoterunspacepool01-sample.md) 此示例演示如何构建远程运行空间池，以及如何使用此池并发运行多个命令。

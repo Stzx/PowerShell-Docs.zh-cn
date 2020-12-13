@@ -1,18 +1,20 @@
 ---
-title: 在函数中放置基于注释的帮助
 ms.date: 09/12/2016
-ms.openlocfilehash: c7a8f8db6c71fa2ef12aaa4df0f78815626ec8d6
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 在函数中放置基于注释的帮助
+description: 在函数中放置基于注释的帮助
+ms.openlocfilehash: 3bd72f0c71d8f6ad54c43c99f044423c072fdeeb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893197"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658211"
 ---
 # <a name="placing-comment-based-help-in-functions"></a>在函数中放置基于注释的帮助
 
 本主题介绍在何处放置函数的基于注释的帮助，以便该 `Get-Help` cmdlet 将基于注释的帮助主题与正确的函数相关联。
 
-## <a name="where-to-place-comment-based-help-for-a-function"></a>在何处放置函数的基于注释的帮助
+## <a name="where-to-place-comment-based-help-for-a-function"></a>函数 Comment-Based 帮助的位置
 
 - 函数体的开头。
 

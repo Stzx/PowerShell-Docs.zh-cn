@@ -1,12 +1,14 @@
 ---
-title: 用于 TableControl (Format) 的 EntrySelectedBy 的 SelectionCondition 的 ScriptBlock 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a23d3515749393e9f5a2053634a44d1a817ebf38
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for SelectionCondition for EntrySelectedBy for TableControl (Format)
+description: ScriptBlock Element for SelectionCondition for EntrySelectedBy for TableControl (Format)
+ms.openlocfilehash: a984bda6b8fba3a5cb9485576ffd847f0d366d3e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783443"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659884"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>ScriptBlock Element for SelectionCondition for EntrySelectedBy for TableControl (Format)
 
@@ -44,9 +46,9 @@ ms.locfileid: "87783443"
 
 ## <a name="remarks"></a>备注
 
-选择条件必须指定至少一个脚本块或属性名称，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅[定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
+选择条件必须指定至少一个脚本块或属性名称，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅 [定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

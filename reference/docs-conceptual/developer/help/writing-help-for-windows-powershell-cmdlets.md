@@ -1,18 +1,20 @@
 ---
-title: 编写 PowerShell Cmdlet 的帮助
 ms.date: 09/13/2016
-ms.openlocfilehash: 4e1070e90cf3ed83c1d97a3b620e00f65d09989e
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 编写针对 PowerShell Cmdlet 的帮助
+description: 编写针对 PowerShell Cmdlet 的帮助
+ms.openlocfilehash: b1deaa5998dbc54add93764db785d57afcc0a779
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893078"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658100"
 ---
-# <a name="writing-help-for-powershell-cmdlets"></a>编写 PowerShell Cmdlet 的帮助
+# <a name="writing-help-for-powershell-cmdlets"></a>编写针对 PowerShell Cmdlet 的帮助
 
 PowerShell cmdlet 非常有用，但除非帮助主题清楚地说明了 cmdlet 的作用以及使用方式，否则 cmdlet 可能不会被使用，甚至更糟糕的是，它可能会使用户不快。 基于 XML 的 cmdlet 帮助文件格式增强了一致性，但有很大的帮助需要进一步的帮助。
 
-如果你从未编写过 cmdlet 帮助，请查看以下准则。 以下部分介绍了创作 cmdlet 帮助主题所需的 XML 架构。 首先[创建 Cmdlet 帮助文件](./how-to-create-the-cmdlet-help-file.md)。 该主题包括顶级 XML 节点的说明。
+如果你从未编写过 cmdlet 帮助，请查看以下准则。 以下部分介绍了创作 cmdlet 帮助主题所需的 XML 架构。 首先 [创建 Cmdlet 帮助文件](./how-to-create-the-cmdlet-help-file.md)。 该主题包括顶级 XML 节点的说明。
 
 ## <a name="writing-guidelines-for-cmdlet-help"></a>编写 Cmdlet 帮助指南
 
@@ -26,7 +28,7 @@ PowerShell cmdlet 非常有用，但除非帮助主题清楚地说明了 cmdlet 
 
 ### <a name="write-consistently"></a>一致性写入
 
-相关 cmdlet 的帮助应类似（例如，x-blade 和 set-x）。 为标准参数（如**Force**和**InputObject**）使用标准说明。 （从核心 cmdlet 的帮助中复制它们。）使用标准术语。 例如，使用 "参数" 而不是 "参数"，并使用 "cmdlet" 而不是 "命令" 或 "命令-let"。
+相关 cmdlet 的帮助应类似 (例如，x-blade 和集-x) 。 为标准参数（如 **Force** 和 **InputObject**）使用标准说明。  (将其从核心 cmdlet 的帮助中复制。 ) 使用标准术语。 例如，使用 "参数" 而不是 "参数"，并使用 "cmdlet" 而不是 "命令" 或 "命令-let"。
 
 ### <a name="start-the-synopsis-with-a-verb"></a>使用谓词启动摘要
 
@@ -42,15 +44,15 @@ PowerShell cmdlet 非常有用，但除非帮助主题清楚地说明了 cmdlet 
 
 ### <a name="use-conventional-syntax"></a>使用传统语法
 
-使用适用于 Windows 和 UNIX 命令行帮助的标准巴科斯-诺尔范式格式。
+使用 Windows 和 UNIX 命令行帮助中常见的标准 Backus-Naur 格式。
 
 ### <a name="use-microsoft-net-types-for-parameter-values"></a>使用 Microsoft .NET 类型作为参数值
 
-参数值的占位符（在语法和参数说明中）显示参数将接受的对象的 .NET Framework 类型。 PowerShell 团队开发了此约定，以帮助用户了解 .NET Framework。
+语法和参数说明中 (参数值的占位符) 显示参数将接受的对象 .NET Framework 类型。 PowerShell 团队开发了此约定，以帮助用户了解 .NET Framework。
 
 ### <a name="write-complete-parameter-descriptions"></a>编写完整的参数说明
 
-参数说明必须为用户通知两项内容：参数的作用（其效果）以及必须为参数值键入的内容。
+参数说明必须向用户通知两个问题：参数的作用 (其效果) 以及必须为参数值键入的内容。
 
 ### <a name="write-practical-examples"></a>编写实际示例
 

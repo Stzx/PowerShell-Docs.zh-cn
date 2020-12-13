@@ -1,16 +1,18 @@
 ---
-title: Runspace03 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d4fa3bca883fb8d78ca1bc8b0c0f9b70f304be06
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace03 示例
+description: Runspace03 示例
+ms.openlocfilehash: fff699bf0545bb1419aa45b8c46bbd9c2cf0a99e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772172"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657854"
 ---
 # <a name="runspace03-sample"></a>Runspace03 示例
 
-此示例演示如何使用[system.web](/dotnet/api/system.management.automation.powershell)类来同步运行脚本，以及如何处理非终止错误的操作。 该脚本可接收一系列进程名称，然后检索这些进程。 脚本的结果（包括运行脚本时生成的非终止错误）显示在控制台窗口中。
+此示例演示如何使用 [system.web](/dotnet/api/system.management.automation.powershell) 类来同步运行脚本，以及如何处理非终止错误的操作。 该脚本可接收一系列进程名称，然后检索这些进程。 脚本的结果（包括运行脚本时生成的非终止错误）显示在控制台窗口中。
 
 ## <a name="requirements"></a>要求
 
@@ -20,15 +22,15 @@ ms.locfileid: "87772172"
 
 此示例演示以下各项。
 
-- 创建用于运行脚本的[system.object](/dotnet/api/system.management.automation.powershell)对象。
+- 创建用于运行脚本的 [system.object](/dotnet/api/system.management.automation.powershell) 对象。
 
-- 将脚本添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道。
+- 将脚本添加到 [system.web](/dotnet/api/system.management.automation.powershell) 对象的管道。
 
 - 通过调用程序将输入对象传递给脚本。
 
 - 同步运行脚本。
 
-- 使用[system.exception](/dotnet/api/System.Management.Automation.PSObject)对象从脚本返回的对象中提取并显示属性。
+- 使用 [system.exception](/dotnet/api/System.Management.Automation.PSObject) 对象从脚本返回的对象中提取并显示属性。
 
 - 检索和显示在运行脚本时生成的错误记录。
 

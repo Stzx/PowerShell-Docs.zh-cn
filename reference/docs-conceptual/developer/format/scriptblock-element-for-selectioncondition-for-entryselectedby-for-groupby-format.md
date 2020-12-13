@@ -1,12 +1,14 @@
 ---
-title: 用于 EntrySelectedBy 的 SelectionCondition 的 ScriptBlock 元素 (Format) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e70e1555a8f2fe0d15d3e864d80d35527af81b03
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for SelectionCondition for EntrySelectedBy for GroupBy (Format)
+description: ScriptBlock Element for SelectionCondition for EntrySelectedBy for GroupBy (Format)
+ms.openlocfilehash: cc92aa642b42fa3e4c4f974e954d5eac73179de3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785381"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664884"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format"></a>ScriptBlock Element for SelectionCondition for EntrySelectedBy for GroupBy (Format)
 
@@ -44,7 +46,7 @@ ms.locfileid: "87785381"
 
 ## <a name="remarks"></a>备注
 
-选择条件必须指定至少一个要计算的脚本或属性名称，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+选择条件必须指定至少一个要计算的脚本或属性名称，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 

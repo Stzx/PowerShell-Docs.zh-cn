@@ -1,16 +1,18 @@
 ---
-title: Runspace04 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 73f48c797a4ce9bf4bc78ff34abb5efa41cda121
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace04 示例
+description: Runspace04 示例
+ms.openlocfilehash: 5a2e1137963e02def419bb924c63b0d651b0fdfa
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779499"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657744"
 ---
 # <a name="runspace04-sample"></a>Runspace04 示例
 
-此示例演示如何使用[system.web](/dotnet/api/system.management.automation.powershell)类来运行命令，以及如何捕获运行命令时引发的终止错误。 运行了两个命令，最后一个命令传递给了一个无效的参数。 因此，未返回对象并引发了终止错误。
+此示例演示如何使用 [system.web](/dotnet/api/system.management.automation.powershell) 类来运行命令，以及如何捕获运行命令时引发的终止错误。 运行了两个命令，最后一个命令传递给了一个无效的参数。 因此，未返回对象并引发了终止错误。
 
 ## <a name="requirements"></a>要求
 
@@ -20,15 +22,15 @@ ms.locfileid: "87779499"
 
 此示例演示以下各项。
 
-- 正在创建一个[系统管理组件](/dotnet/api/system.management.automation.powershell)对象。
+- 正在创建一个 [系统管理组件](/dotnet/api/system.management.automation.powershell) 对象。
 
-- 将命令添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道。
+- 将命令添加到 [system.web](/dotnet/api/system.management.automation.powershell) 对象的管道。
 
 - 向管道添加参数参数。
 
 - 同步调用命令。
 
-- 使用 system.exception 对象从命令返回[的对象中](/dotnet/api/System.Management.Automation.PSObject)提取并显示属性。
+- 使用 system.exception 对象从命令返回 [的对象中](/dotnet/api/System.Management.Automation.PSObject) 提取并显示属性。
 
 - 检索和显示运行命令时生成的错误记录。
 

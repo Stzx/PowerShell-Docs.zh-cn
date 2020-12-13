@@ -1,12 +1,14 @@
 ---
-title: GetProcessSample03 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 09df93792ab611e167279bc35755d8d6c28e7cf3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProcessSample03 示例
+description: GetProcessSample03 示例
+ms.openlocfilehash: 7827247238f3dad2018b55e396b73d1fa434eb97
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784208"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660719"
 ---
 # <a name="getprocesssample03-sample"></a>GetProcessSample03 示例
 
@@ -60,7 +62,7 @@ ms.locfileid: "87784208"
 
 ## <a name="example"></a>示例
 
-此示例演示了获取处理器 cmdlet 的实现，该 cmdlet 包含 `Name` 接受来自管道的输入的参数。
+此示例演示 Get-Proc cmdlet 的一个实现，该实现包含 `Name` 接受来自管道的输入的参数。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands

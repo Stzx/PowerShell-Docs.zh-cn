@@ -1,23 +1,25 @@
 ---
-title: 如何向 Cmdlet 帮助主题添加 Cmdlet 名称和摘要
 ms.date: 09/13/2016
-ms.openlocfilehash: 399defcb596ff9e9a596f4cd25ebcb6bcb7c34d2
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 如何向 Cmdlet 帮助主题添加 Cmdlet 名称和摘要
+description: 如何向 Cmdlet 帮助主题添加 Cmdlet 名称和摘要
+ms.openlocfilehash: aeeb0cdd1d6d17b88067928ff952dc57a9441917
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892874"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659048"
 ---
 # <a name="how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic"></a>如何向 Cmdlet 帮助主题添加 Cmdlet 名称和摘要
 
-本部分介绍如何添加在 cmdlet 帮助的 "**名称**" 和 "**概要**" 部分中显示的内容。 在帮助文件中，此内容将添加到每个 cmdlet 的命令节点。
+本部分介绍如何添加在 cmdlet 帮助的 " **名称** " 和 " **概要** " 部分中显示的内容。 在帮助文件中，此内容将添加到每个 cmdlet 的命令节点。
 
 > [!NOTE]
 > 若要获取帮助文件的完整视图，请打开 `dll-Help.xml` 位于 PowerShell 安装目录中的文件之一。 例如，该 `Microsoft.PowerShell.Commands.Management.dll-Help.xml` 文件包含多个 PowerShell cmdlet 的内容。
 
 ## <a name="to-add-the-cmdlet-name-and-a-synopsis"></a>添加 Cmdlet 名称和摘要
 
-- Cmdlet 帮助可以为 cmdlet 显示两个描述。 第一个说明是称为 "摘要" 的简短说明。 第二个说明是在[将详细描述添加到 Cmdlet 帮助主题](./how-to-add-a-cmdlet-description.md)中所述的更详细说明。
+- Cmdlet 帮助可以为 cmdlet 显示两个描述。 第一个说明是称为 "摘要" 的简短说明。 第二个说明是在 [将详细描述添加到 Cmdlet 帮助主题](./how-to-add-a-cmdlet-description.md)中所述的更详细说明。
   这两个说明应作为一个段落来编写。
 
 - 在 "摘要" 中，不重复 cmdlet 名称。 通知用户 `Get-Server` cmdlet 获取服务器非常简短，但没有提示信息。 请改用同义词并向说明添加详细信息。

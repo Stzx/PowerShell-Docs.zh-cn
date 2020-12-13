@@ -1,16 +1,18 @@
 ---
-title: Runspace01 代码示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 14e5dfa3b16459c06a2d0c40c76c53d74e5a7094
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace01 代码示例
+description: Runspace01 代码示例
+ms.openlocfilehash: a6710a9b37689b03cc104cca7ee588ffafce5626
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787081"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659210"
 ---
 # <a name="runspace01-code-samples"></a>Runspace01 代码示例
 
-下面是[创建运行指定命令的控制台应用程序](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program)中所述的运行空间的代码示例。 在运行空间中调用的命令是 `Get-Process` cmdlet。
+下面是 [创建运行指定命令的控制台应用程序](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program)中所述的运行空间的代码示例。 在运行空间中调用的命令是 `Get-Process` cmdlet。
 
 有关完整的示例代码，请参阅以下主题。
 

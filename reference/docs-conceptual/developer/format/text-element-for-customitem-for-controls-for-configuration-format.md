@@ -1,12 +1,14 @@
 ---
-title: 用于配置 (格式) 的控件的 CustomItem 的文本元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d9f9687f9fb47f2085b25899193dda85b8fa068b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Text Element for CustomItem for Controls for Configuration (Format)
+description: Text Element for CustomItem for Controls for Configuration (Format)
+ms.openlocfilehash: 9ea70ade8e86d8278ee95bd4d93dfa5ba9d8160b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787387"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664720"
 ---
 # <a name="text-element-for-customitem-for-controls-for-configuration-format"></a>Text Element for CustomItem for Controls for Configuration (Format)
 

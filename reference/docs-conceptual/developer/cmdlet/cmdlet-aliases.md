@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 别名 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: fed4055f09e01c5f3fa87584d48551918606f4eb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 别名
+description: Cmdlet 别名
+ms.openlocfilehash: 734553a9911aef256df563afa6abcdb23d7a62e6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784531"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660790"
 ---
 # <a name="cmdlet-aliases"></a>Cmdlet 别名
 
@@ -18,9 +20,9 @@ ms.locfileid: "87784531"
 
 为 cmdlet 创建内置别名时，请遵循以下准则：
 
-- 在分配别名之前，请启动 Windows PowerShell，然后运行[获取别名](/powershell/module/Microsoft.PowerShell.Utility/Get-Alias)cmdlet 以查看已使用的别名。
+- 在分配别名之前，请启动 Windows PowerShell，然后运行 [获取别名](/powershell/module/Microsoft.PowerShell.Utility/Get-Alias) cmdlet 以查看已使用的别名。
 
-- 包含一个别名前缀，该前缀引用 cmdlet 名称的谓词和引用 cmdlet 名称名词的别名后缀。 例如，cmdlet 的别名 `Import-Module` 为 "ipmo"。 有关所有谓词及其别名的列表，请参阅[Cmdlet 谓词](./approved-verbs-for-windows-powershell-commands.md)。
+- 包含一个别名前缀，该前缀引用 cmdlet 名称的谓词和引用 cmdlet 名称名词的别名后缀。 例如，cmdlet 的别名 `Import-Module` 为 "ipmo"。 有关所有谓词及其别名的列表，请参阅 [Cmdlet 谓词](./approved-verbs-for-windows-powershell-commands.md)。
 
 - 对于具有相同谓词的 cmdlet，请包含相同的别名前缀。 例如，其名称中具有 "Get" 谓词的所有 Windows PowerShell cmdlet 的别名均使用 "g" 前缀。
 

@@ -1,12 +1,14 @@
 ---
-title: 安装 Windows PowerShell SDK
 ms.date: 03/30/2020
-ms.openlocfilehash: 91cf57510bb7f44799cfdaf7cadcc7bcd505c977
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 安装 Windows PowerShell SDK
+description: 安装 Windows PowerShell SDK
+ms.openlocfilehash: 07108ede640b8c6c02bea6d9e2b63116b5b8f969
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771968"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657302"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>安装 Windows PowerShell SDK
 
@@ -74,8 +76,8 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`。 以下部分提供对�
 - Runspace02-演示如何使用 PowerShell 类 `Get-Process` 同步运行和 `Sort-Object` cmdlet。 该 `Get-Process` cmdlet 将返回在本地计算机上运行的每个进程的进程对象，并根据 `Sort-Object` 对象的 Id 属性对对象进行排序。 使用 DataGridView 控件显示这些命令的结果。
 - Runspace03-演示如何使用 PowerShell 类同步运行脚本，以及如何处理非终止错误。 该脚本可接收一系列进程名称，然后检索这些进程。 脚本的结果（包括运行脚本时生成的非终止错误）显示在控制台窗口中。
 - Runspace04-演示如何使用 PowerShell 类来运行命令，以及如何捕获运行命令时引发的终止错误。 运行了两个命令，最后一个命令传递给了一个无效的参数。 因此，未返回对象并引发了终止错误。
-- Runspace05-演示如何将管理单元添加到 InitialSessionState 对象，以便打开运行空间时可以使用管理单元的 cmdlet。 此管理单元提供了一个 (，它是由使用 PowerShell 对象同步运行的 GetProcessSample01 示例) 定义的。
-- Runspace06-演示如何将模块添加到 InitialSessionState 对象，以便在打开运行空间时加载模块。 该模块提供了 (使用 PowerShell 对象同步运行的 GetProcessSample02 示例) 定义的处理器 cmdlet。
+- Runspace05-演示如何将管理单元添加到 InitialSessionState 对象，以便打开运行空间时可以使用管理单元的 cmdlet。 此管理单元提供了一个 Get-Proc cmdlet (使用 PowerShell 对象同步运行的 GetProcessSample01 示例) 。
+- Runspace06-演示如何将模块添加到 InitialSessionState 对象，以便在打开运行空间时加载模块。 该模块提供了一个 Get-Proc cmdlet (使用 PowerShell 对象同步运行的 GetProcessSample02 示例) 。
 - Runspace07-演示如何创建运行空间，并使用该运行空间以同步使用 PowerShell 对象运行两个 cmdlet。
 - Runspace08-演示如何将命令和参数添加到 PowerShell 对象的管道，以及如何同步运行命令。
 - Runspace09-演示如何将脚本添加到 PowerShell 对象的管道，以及如何以异步方式运行脚本。 使用事件处理脚本的输出。

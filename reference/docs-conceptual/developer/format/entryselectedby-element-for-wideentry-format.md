@@ -1,12 +1,14 @@
 ---
-title: WideEntry (Format) 的 EntrySelectedBy 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ba0a776839c39d753d12859335388c5326639fd4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EntrySelectedBy Element for WideEntry (Format)
+description: EntrySelectedBy Element for WideEntry (Format)
+ms.openlocfilehash: 246a1967300ab0551f376c4799deac275068308c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774076"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660251"
 ---
 # <a name="entryselectedby-element-for-wideentry-format"></a>EntrySelectedBy Element for WideEntry (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87774076"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[WideEntry (格式的 EntrySelectedBy 的 SelectionCondition 元素) ](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|可选元素。<br /><br /> 定义要使用此宽视图定义必须存在的条件。|
 |[WideEntry (格式的 EntrySelectedBy 的 SelectionSetName 元素) ](./selectionsetname-element-for-entryselectedby-for-widecontrol-format.md)|可选元素。<br /><br /> 指定一组使用此宽视图定义的 .NET 类型。|
@@ -42,7 +44,7 @@ ms.locfileid: "87774076"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[WideEntry 元素 (格式) ](./wideentry-element-for-widecontrol-format.md)|提供宽视图的定义。|
 
@@ -50,9 +52,9 @@ ms.locfileid: "87774076"
 
 对于宽视图定义，必须至少指定一个类型、选择集或选择条件。 您可以使用的子元素数没有最大限制。
 
-选择条件用于定义要使用的定义必须存在的条件，例如当对象具有特定属性或特定属性值或脚本值的计算结果为时 `true` 。 有关选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+选择条件用于定义要使用的定义必须存在的条件，例如当对象具有特定属性或特定属性值或脚本值的计算结果为时 `true` 。 有关选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
-有关大视图的其他组件的详细信息，请参阅[创建宽视图](./creating-a-wide-view.md)。
+有关大视图的其他组件的详细信息，请参阅 [创建宽视图](./creating-a-wide-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

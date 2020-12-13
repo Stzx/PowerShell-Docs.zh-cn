@@ -1,16 +1,18 @@
 ---
-title: Runspace02 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7a2dce436aceb1d8744377c37671a66398614851
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace02 示例
+description: Runspace02 示例
+ms.openlocfilehash: 0206e1a80f3e5488fd2dd5628985756a5ca343c8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784956"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657895"
 ---
 # <a name="runspace02-sample"></a>Runspace02 示例
 
-此示例演示如何使用[system.exception 类来](/dotnet/api/system.management.automation.powershell)同步运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object)的 cmdlet。 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 将为在本地计算机上运行的每个[进程返回 System.Diagnostics.Process.Id](/dotnet/api/System.Diagnostics.Process) ，并根据对象的 `Sort-Object` [*](/dotnet/api/System.Diagnostics.Process.Id)属性对对象进行排序。 这些命令的结果使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件显示。
+此示例演示如何使用 [system.exception 类来](/dotnet/api/system.management.automation.powershell) 同步运行 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 和 [排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) 的 cmdlet。 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 将为在本地计算机上运行的每个[进程返回 System.Diagnostics.Process.Id](/dotnet/api/System.Diagnostics.Process) ，并根据对象的 `Sort-Object` [*](/dotnet/api/System.Diagnostics.Process.Id)属性对对象进行排序。 这些命令的结果使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件显示。
 
 ## <a name="requirements"></a>要求
 
@@ -20,17 +22,17 @@ ms.locfileid: "87784956"
 
 此示例演示以下各项。
 
-- 创建要运行命令的[system.web](/dotnet/api/system.management.automation.powershell)对象。
+- 创建要运行命令的 [system.web](/dotnet/api/system.management.automation.powershell) 对象。
 
-- 将命令添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道。
+- 将命令添加到 [system.web](/dotnet/api/system.management.automation.powershell) 对象的管道。
 
 - 同步运行命令。
 
-- 使用[system.web](/dotnet/api/System.Windows.Forms.DataGridView)控件在 Windows 窗体应用程序中显示命令的输出。
+- 使用 [system.web](/dotnet/api/System.Windows.Forms.DataGridView) 控件在 Windows 窗体应用程序中显示命令的输出。
 
 ## <a name="example"></a>示例
 
-此示例在 Windows PowerShell 提供的默认运行空间中同步运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object)cmdlet。 使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件以窗体显示输出。
+此示例在 Windows PowerShell 提供的默认运行空间中同步运行 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 和 [排序对象](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlet。 使用 " [system.web](/dotnet/api/System.Windows.Forms.DataGridView) " 控件以窗体显示输出。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

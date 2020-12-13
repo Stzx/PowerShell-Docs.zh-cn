@@ -1,12 +1,14 @@
 ---
-title: 用于 ListControl (Format) 的 EntrySelectedBy 的 SelectionCondition 的 ScriptBlock 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 56bd04c9af74bdaa7a186a208fc15a67cb08b004
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for SelectionCondition for EntrySelectedBy for ListControl (Format)
+description: ScriptBlock Element for SelectionCondition for EntrySelectedBy for ListControl (Format)
+ms.openlocfilehash: ec7691358d0ff3758411317a349221e1704a1895
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772852"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659898"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>ScriptBlock Element for SelectionCondition for EntrySelectedBy for ListControl (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87772852"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ListEntry (格式的 EntrySelectedBy 的 SelectionCondition 元素) ](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|定义要使用此列表项必须存在的条件。|
 
@@ -44,9 +46,9 @@ ms.locfileid: "87772852"
 
 ## <a name="remarks"></a>备注
 
-选择条件必须指定至少一个要计算的脚本或属性名称，但不能同时指定两者。  (有关如何使用选择条件的详细信息，请参阅为[使用视图条目或项定义条件](./defining-conditions-for-displaying-data.md)。 ) 
+选择条件必须指定至少一个要计算的脚本或属性名称，但不能同时指定两者。  (有关如何使用选择条件的详细信息，请参阅为 [使用视图条目或项定义条件](./defining-conditions-for-displaying-data.md)。 ) 
 
-有关列表视图的其他组件的详细信息，请参阅[列表视图](./creating-a-list-view.md)。
+有关列表视图的其他组件的详细信息，请参阅 [列表视图](./creating-a-list-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

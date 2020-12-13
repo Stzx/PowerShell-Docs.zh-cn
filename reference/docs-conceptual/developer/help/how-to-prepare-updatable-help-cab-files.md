@@ -1,16 +1,18 @@
 ---
-title: 如何准备可更新帮助 CAB 文件
 ms.date: 09/03/2012
-ms.openlocfilehash: 7f3ed2fcf03585a41e571eb2a5ebb4d850d64e01
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 如何准备可更新帮助 CAB 文件
+description: 如何准备可更新帮助 CAB 文件
+ms.openlocfilehash: df403bd025601fd88f8384efed9452c139f85a82
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893316"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658904"
 ---
 # <a name="how-to-prepare-updatable-help-cab-files"></a>如何准备可更新帮助 CAB 文件
 
-本主题介绍 Windows PowerShell 可更新帮助中的 cabinet （1）文件的内容和使用。
+本主题介绍 Windows PowerShell 可更新帮助中的 cabinet (1) 文件的内容和使用。
 
 本部分包括以下主题。
 

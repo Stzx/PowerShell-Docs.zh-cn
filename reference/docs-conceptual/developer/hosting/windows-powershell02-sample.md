@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell02 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a82366a88addb08e186eede79e621d90d915c50f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell02 示例
+description: Windows PowerShell02 示例
+ms.openlocfilehash: 61dedd72d93d4000edf9a12f12bbb49fbaeb9f3c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779380"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657351"
 ---
 # <a name="windows-powershell02-sample"></a>Windows PowerShell02 示例
 
@@ -23,8 +25,8 @@ ms.locfileid: "87779380"
 - 创建一个 RunspacePool 对象，该对象具有允许同时打开的最小和最大运行空间。
 - 创建命令列表。
 - 以异步方式运行命令。
-- 调用[Runspacepool. Getavailablerunspaces *](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool.GetAvailableRunspaces)方法以查看有多少个空闲空间。
-- 正在捕获带有[Endinvoke *](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke)方法的命令输出。
+- 调用 [Runspacepool. Getavailablerunspaces *](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool.GetAvailableRunspaces) 方法以查看有多少个空闲空间。
+- 正在捕获带有 [Endinvoke *](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) 方法的命令输出。
 
 ## <a name="example"></a>示例
 

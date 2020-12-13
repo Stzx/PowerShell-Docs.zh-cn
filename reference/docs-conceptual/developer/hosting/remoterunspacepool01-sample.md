@@ -1,12 +1,14 @@
 ---
-title: RemoteRunspacePool01 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 77283008f1c6bce79cec60d426e3933508fced64
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: RemoteRunspacePool01 示例
+description: RemoteRunspacePool01 示例
+ms.openlocfilehash: 6594faca17b472140b6b0843bf8ede8e803675e3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783188"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657960"
 ---
 # <a name="remoterunspacepool01-sample"></a>RemoteRunspacePool01 示例
 
@@ -18,13 +20,13 @@ ms.locfileid: "87783188"
 
 ## <a name="demonstrates"></a>演示
 
-- 正在创建一个[Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)对象。
+- 正在创建一个 [Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 对象。
 
-- 设置 Runspaceconnectioninfo 对象的[Operationtimeout * 和 *](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout)和[Runspaceconnectioninfo.. Opentimeout *](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout)属性的其他[对象的属性](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)的对象的属性的属性。
+- 设置 Runspaceconnectioninfo 对象的 [Operationtimeout * 和 *](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) 和 [Runspaceconnectioninfo.. Opentimeout *](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) 属性的其他 [对象的属性](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 的对象的属性的属性。
 
-- 创建一个使用[Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)对象的远程运行空间来建立远程连接。
+- 创建一个使用 [Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 对象的远程运行空间来建立远程连接。
 
-- 使用远程运行空间池并发运行[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)和[获取服务](/powershell/module/microsoft.powershell.management/get-service)cmdlet。
+- 使用远程运行空间池并发运行 [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 和 [获取服务](/powershell/module/microsoft.powershell.management/get-service) cmdlet。
 
 - 关闭远程运行空间池以释放远程连接。
 

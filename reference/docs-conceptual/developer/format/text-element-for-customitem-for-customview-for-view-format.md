@@ -1,12 +1,14 @@
 ---
-title: CustomItem for CustomView (Format 的 Text 元素) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 94294665b481edabdb8ed920d1a209a609b18fd8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Text Element for CustomItem for CustomView for View (Format)
+description: Text Element for CustomItem for CustomView for View (Format)
+ms.openlocfilehash: b1bbb53473774be56e8422b79db8745fb9700b9b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783375"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659743"
 ---
 # <a name="text-element-for-customitem-for-customview-for-view-format"></a>Text Element for CustomItem for CustomView for View (Format)
 

@@ -1,12 +1,14 @@
 ---
-title: SelectionCondition for CustomControl 的 ScriptBlock 元素 for View (Format) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d3506188d32ce85ad6345dc0d0866dd789a1f293
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ScriptBlock Element for SelectionCondition for CustomControl for View (Format)
+description: ScriptBlock Element for SelectionCondition for CustomControl for View (Format)
+ms.openlocfilehash: 78b977548243b6f3a658f15a0249d8cad12e2f1b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785398"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664917"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format"></a>ScriptBlock Element for SelectionCondition for CustomControl for View (Format)
 
@@ -34,9 +36,9 @@ ms.locfileid: "87785398"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
-|[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|定义要使用的控件定义必须存在的条件。|
+|[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 ](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|定义要使用的控件定义必须存在的条件。|
 
 ## <a name="text-value"></a>文本值
 
@@ -44,10 +46,10 @@ ms.locfileid: "87785398"
 
 ## <a name="remarks"></a>备注
 
-选择条件必须指定至少一个要计算的脚本或属性名称，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+选择条件必须指定至少一个要计算的脚本或属性名称，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
+[用于 CustomControl for View (Format) 的 EntrySelectedBy 的 SelectionCondition 元素 ](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)
 
 [编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

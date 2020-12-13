@@ -1,12 +1,14 @@
 ---
-title: TableControl (Format) 的 SelectionCondition for EntrySelectedBy 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b9367f0ea659b9dce8fe200a5a08873d53bc03a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for SelectionCondition for EntrySelectedBy for TableControl (Format)
+description: TypeName Element for SelectionCondition for EntrySelectedBy for TableControl (Format)
+ms.openlocfilehash: 66e90ab33775cf35d5e98e45266996d2d1a622d7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772580"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659633"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>TypeName Element for SelectionCondition for EntrySelectedBy for TableControl (Format)
 
@@ -44,9 +46,9 @@ ms.locfileid: "87772580"
 
 ## <a name="remarks"></a>备注
 
-选择条件可以指定任意数量的 .NET 类型或选择集，但是不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅[定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
+选择条件可以指定任意数量的 .NET 类型或选择集，但是不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅 [定义使用视图条目或项的条件](./defining-conditions-for-displaying-data.md)。
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -56,6 +58,6 @@ ms.locfileid: "87772580"
 
 [TableRowEntry (格式的 EntrySelectedBy 的 SelectionCondition 元素) ](./selectioncondition-element-for-entryselectedby-for-tablecontrol-format.md)
 
-[用于 EntrySelectedBy for TableRowEntry (Format) 的 SelectionCondition 的 SelectionSetName 元素](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)
+[用于 EntrySelectedBy for TableRowEntry (Format) 的 SelectionCondition 的 SelectionSetName 元素 ](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md)
 
 [编写 PowerShell 格式设置文件](./writing-a-powershell-formatting-file.md)

@@ -1,12 +1,14 @@
 ---
-title: " (格式) 的 ViewDefinitions 元素 |Microsoft Docs"
 ms.date: 09/13/2016
-ms.openlocfilehash: a108c4f8b03e3dec3905181b390aee2c82ab0028
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ViewDefinitions Element (Format)
+description: ViewDefinitions Element (Format)
+ms.openlocfilehash: fceef0e5ec91e8c59a7b2b90fd31ca422ff0c94d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772478"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664587"
 ---
 # <a name="viewdefinitions-element-format"></a>ViewDefinitions Element (Format)
 
@@ -33,13 +35,13 @@ ms.locfileid: "87772478"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[View Element (Format)](./view-element-format.md)|定义用于显示一个或多个 .NET 对象的视图。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Configuration Element (Format)](./configuration-element-format.md)|表示格式设置文件的顶级元素。|
 

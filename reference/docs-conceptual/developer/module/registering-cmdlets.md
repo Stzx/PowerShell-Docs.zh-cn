@@ -1,12 +1,14 @@
 ---
-title: 注册 Cmdlet |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 75853a818b119fbd3335e2fe3889f8ab006cc355
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 注册 Cmdlet
+description: 注册 Cmdlet
+ms.openlocfilehash: 4b48aae4bdd358ec39f482f4a1bd29ed0295cbde
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779244"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664522"
 ---
 # <a name="registering-cmdlets"></a>注册 Cmdlet
 
@@ -14,11 +16,11 @@ ms.locfileid: "87779244"
 
 ## <a name="in-this-section"></a>本节内容
 
-[模块和管理单元](./modules-and-snap-ins.md)描述通过模块和管理单元注册 cmdlet 之间的差异。
+[模块和管理单元](./modules-and-snap-ins.md) 描述通过模块和管理单元注册 cmdlet 之间的差异。
 
-[如何使用模块注册 cmdlet](./how-to-import-cmdlets-using-modules.md)描述如何使用模块注册 cmdlet。
+[如何使用模块注册 cmdlet](./how-to-import-cmdlets-using-modules.md) 描述如何使用模块注册 cmdlet。
 
-[如何创建 Windows PowerShell 管理单元](./how-to-create-a-windows-powershell-snap-in.md)描述如何使用管理单元注册 cmdlet。
+[如何创建 Windows PowerShell 管理单元](./how-to-create-a-windows-powershell-snap-in.md) 描述如何使用管理单元注册 cmdlet。
 
 ## <a name="see-also"></a>另请参阅
 

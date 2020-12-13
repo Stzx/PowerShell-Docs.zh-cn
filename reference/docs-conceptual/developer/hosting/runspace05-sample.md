@@ -1,16 +1,18 @@
 ---
-title: Runspace05 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2d274028d2357a26cd75cf70a033abbf907f5c4d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace05 示例
+description: Runspace05 示例
+ms.openlocfilehash: 67a372eecba30452587471328412e8a2bdd9ec5a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772155"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657723"
 ---
 # <a name="runspace05-sample"></a>Runspace05 示例
 
-此示例演示如何将管理单元添加到[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象，以便打开运行空间时可以使用管理单元的 cmdlet。 此管理单元提供了一个 (的处理器 cmdlet，该 cmdlet 通过使用[GetProcessSample01 示例](../cmdlet/getprocesssample01-sample.md)) 进行同步，该示例通过[System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell)使用
+此示例演示如何将管理单元添加到 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象，以便打开运行空间时可以使用管理单元的 cmdlet。 管理单元提供了一个 Get-Proc cmdlet (由[GetProcessSample01 示例](../cmdlet/getprocesssample01-sample.md)) 定义，该示例通过使用 system.exception 对象进行同步[运行。](/dotnet/api/system.management.automation.powershell)
 
 ## <a name="requirements"></a>要求
 
@@ -20,23 +22,23 @@ ms.locfileid: "87772155"
 
 此示例演示以下各项。
 
-- 创建[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
+- 创建 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象。
 
-- 将管理单元添加到[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
+- 将管理单元添加到 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象。
 
 - 创建使用[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象的[system.object 工作空间](/dotnet/api/System.Management.Automation.Runspaces.Runspace)对象。
 
-- 创建使用运行空间的[system.web](/dotnet/api/system.management.automation.powershell)对象。
+- 创建使用运行空间的 [system.web](/dotnet/api/system.management.automation.powershell) 对象。
 
-- 将管理单元的处理器 cmdlet 添加到[系统管理](/dotnet/api/system.management.automation.powershell)对象的管道中。
+- 将管理单元的处理器 cmdlet 添加到 [系统管理](/dotnet/api/system.management.automation.powershell) 对象的管道中。
 
 - 同步运行命令。
 
-- 从命令返回的[system.object](/dotnet/api/System.Management.Automation.PSObject)对象中提取属性。
+- 从命令返回的 [system.object](/dotnet/api/System.Management.Automation.PSObject) 对象中提取属性。
 
 ## <a name="example"></a>示例
 
-此示例将创建一个运行空间，该运行空间使用[System.Management.Automation.Runspaces.Ini的 tialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象来定义打开运行空间时可用的元素。 在此示例中，将定义一个过程 cmdlet 的管理单元添加到初始会话状态。
+此示例将创建一个运行空间，该运行空间使用 [System.Management.Automation.Runspaces.Ini的 tialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象来定义打开运行空间时可用的元素。 在此示例中，将定义 Get-Proc cmdlet 的管理单元添加到初始会话状态。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

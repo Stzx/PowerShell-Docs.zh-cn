@@ -1,16 +1,18 @@
 ---
-title: Runspace09 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6110fcb96af25f55682064c466ba2add6377902d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace09 示例
+description: Runspace09 示例
+ms.openlocfilehash: 8dedc3e2ee7c1d41f7b7ad367d8cebeb5f58b8e9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783137"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657615"
 ---
 # <a name="runspace09-sample"></a>Runspace09 示例
 
-此示例演示如何将脚本添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道，以及如何以异步方式运行脚本。 使用事件处理脚本的输出。
+此示例演示如何将脚本添加到 [system.web](/dotnet/api/system.management.automation.powershell) 对象的管道，以及如何以异步方式运行脚本。 使用事件处理脚本的输出。
 
 ## <a name="requirements"></a>要求
 
@@ -20,15 +22,15 @@ ms.locfileid: "87783137"
 
 此示例演示以下各项。
 
-- 创建使用运行空间的[system.web](/dotnet/api/system.management.automation.powershell)对象。
+- 创建使用运行空间的 [system.web](/dotnet/api/system.management.automation.powershell) 对象。
 
-- 将脚本添加到[system.web](/dotnet/api/system.management.automation.powershell)对象的管道。
+- 将脚本添加到 [system.web](/dotnet/api/system.management.automation.powershell) 对象的管道。
 
-- 使用[Begininvoke *](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke)方法以异步方式运行该管道。
+- 使用 [Begininvoke *](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) 方法以异步方式运行该管道。
 
-- 使用[系统管理组件](/dotnet/api/system.management.automation.powershell)对象的事件来处理脚本的输出。
+- 使用 [系统管理组件](/dotnet/api/system.management.automation.powershell) 对象的事件来处理脚本的输出。
 
-- 使用[system.web. Stop. Stop *](/dotnet/api/System.Management.Automation.PowerShell.Stop)方法来中断管道的调用。
+- 使用 [system.web. Stop. Stop *](/dotnet/api/System.Management.Automation.PowerShell.Stop) 方法来中断管道的调用。
 
 ## <a name="example"></a>示例
 

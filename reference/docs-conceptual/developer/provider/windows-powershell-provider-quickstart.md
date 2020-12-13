@@ -1,16 +1,18 @@
 ---
-title: Windows PowerShell 提供程序快速入门 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 048812d1a4765b2ff0069698615453f91ee95409
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 提供程序快速入门
+description: Windows PowerShell 提供程序快速入门
+ms.openlocfilehash: f0fe0ad60e9d10efd505cda60af995c597226b92
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783120"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664351"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Windows PowerShell 提供程序快速入门
 
-本主题说明如何创建具有创建新驱动器的基本功能的 Windows PowerShell 提供程序。 有关提供程序的一般信息，请参阅[Windows PowerShell 提供程序概述](./windows-powershell-provider-overview.md)。 有关具有更完整功能的提供程序的示例，请参阅[提供程序示例](./provider-samples.md)。
+本主题说明如何创建具有创建新驱动器的基本功能的 Windows PowerShell 提供程序。 有关提供程序的一般信息，请参阅 [Windows PowerShell 提供程序概述](./windows-powershell-provider-overview.md)。 有关具有更完整功能的提供程序的示例，请参阅 [提供程序示例](./provider-samples.md)。
 
 ## <a name="writing-a-basic-provider"></a>编写基本提供程序
 
@@ -18,7 +20,7 @@ Windows PowerShell 提供程序的最基本功能是创建和删除驱动器。 
 
 当你编写提供程序时，可以指定默认驱动器-在提供程序可用时自动创建的驱动器。 还定义了一个方法来创建使用该提供程序的新驱动器。
 
-本主题中提供的示例基于[AccessDBProviderSample02](./accessdbprovidersample02.md)示例，该示例是将 Access 数据库表示为 Windows PowerShell 驱动器的更大示例的一部分。
+本主题中提供的示例基于 [AccessDBProviderSample02](./accessdbprovidersample02.md) 示例，该示例是将 Access 数据库表示为 Windows PowerShell 驱动器的更大示例的一部分。
 
 ### <a name="setting-up-the-project"></a>设置项目
 
@@ -28,15 +30,15 @@ Windows PowerShell 提供程序的最基本功能是创建和删除驱动器。 
 
 1. 添加 System.web 程序集作为对项目的引用。
 
-2. 单击 "**项目 > AccessDBProviderSample Properties > 调试**"。 在 "**启动项目**" 中，单击 "**启动外部程序**"，并导航到 Windows PowerShell 可执行文件 (通常为 c:\Windows\System32\WindowsPowerShell\v1.0 \\.powershell.exe) 。
+2. 单击 " **项目 > AccessDBProviderSample Properties > 调试**"。 在 " **启动项目**" 中，单击 " **启动外部程序**"，并导航到 Windows PowerShell 可执行文件 (通常为 c:\Windows\System32\WindowsPowerShell\v1.0 \\.powershell.exe) 。
 
-3. 在 "**启动选项**" 下的 "**命令行参数**" 框中输入以下内容：`-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
+3. 在 " **启动选项**" 下的 " **命令行参数** " 框中输入以下内容： `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
 ### <a name="declaring-the-provider-class"></a>声明提供程序类
 
-我们的提供程序派生自[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)类。 大多数提供实际功能 (提供程序的提供程序，可用于访问和操作项、导航数据存储区，以及) 派生自[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类的项的内容。
+我们的提供程序派生自 [Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 类。 大多数提供实际功能 (提供程序的提供程序，可用于访问和操作项、导航数据存储区，以及) 派生自 [Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 类的项的内容。
 
-除了指定类派生自[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)以外，你还必须将其与 Cmdletproviderattribute 中所示的[System.Management.Automation.Provider.Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)修饰，如示例中所示。
+除了指定类派生自[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)以外，你还必须将其与 Cmdletproviderattribute 中所示的[](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)修饰，如示例中所示。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Providers

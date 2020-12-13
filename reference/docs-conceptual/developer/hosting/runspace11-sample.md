@@ -1,16 +1,18 @@
 ---
-title: Runspace11 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e8a4080bb4fb33f7e0d428e24483b5cfac5c70e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace11 示例
+description: Runspace11 示例
+ms.openlocfilehash: bb2fac179d6d3b939ed145fe98c208c202a97623
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784922"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657559"
 ---
 # <a name="runspace11-sample"></a>Runspace11 示例
 
-此示例演示如何使用[Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand)类创建一个代理命令，该命令将调用现有的 cmdlet，但会限制可用参数的集合。 然后，代理命令被添加到用来创建受限运行空间的初始会话状态。 这意味着用户只能通过该代理命令使用该 cmdlet 的功能。
+此示例演示如何使用 [Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand) 类创建一个代理命令，该命令将调用现有的 cmdlet，但会限制可用参数的集合。 然后，代理命令被添加到用来创建受限运行空间的初始会话状态。 这意味着用户只能通过该代理命令使用该 cmdlet 的功能。
 
 ## <a name="requirements"></a>要求
 
@@ -20,13 +22,13 @@ ms.locfileid: "87784922"
 
 此示例演示以下各项。
 
-- 创建描述现有 cmdlet 的元数据的[Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata)对象。
+- 创建描述现有 cmdlet 的元数据的 [Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) 对象。
 
-- 创建[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
+- 创建 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象。
 
 - 修改 cmdlet 元数据以删除 cmdlet 的参数。
 
-- 将 cmdlet 添加到[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象，并将该 cmdlet 设为私有。
+- 将 cmdlet 添加到 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象，并将该 cmdlet 设为私有。
 
 - 创建一个代理函数以调用现有的 cmdlet，但只公开一组受限的参数。
 
@@ -34,7 +36,7 @@ ms.locfileid: "87784922"
 
 - 创建使用 "system.servicemodel.[管理](/dotnet/api/System.Management.Automation.Runspaces.Runspace)" 对象的 "[管理](/dotnet/api/system.management.automation.powershell)对象" 对象。
 
-- 使用一个[system.web](/dotnet/api/system.management.automation.powershell)对象调用私有 cmdlet 和代理函数来演示受约束的运行空间。
+- 使用一个 [system.web](/dotnet/api/system.management.automation.powershell) 对象调用私有 cmdlet 和代理函数来演示受约束的运行空间。
 
 ## <a name="example"></a>示例
 

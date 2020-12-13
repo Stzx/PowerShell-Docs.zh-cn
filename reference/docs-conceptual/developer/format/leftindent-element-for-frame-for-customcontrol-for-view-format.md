@@ -1,12 +1,14 @@
 ---
-title: CustomControl 的 LeftIndent 的框架元素 (格式) |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c11002f92a35ca34a7d2c6aa26924d846076b001
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: LeftIndent Element for Frame for CustomControl for View (Format)
+description: LeftIndent Element for Frame for CustomControl for View (Format)
+ms.openlocfilehash: d3253544c3b4c7f9214222010bfab519564b64fd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783562"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660047"
 ---
 # <a name="leftindent-element-for-frame-for-customcontrol-for-view-format"></a>LeftIndent Element for Frame for CustomControl for View (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87783562"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Frame Element for CustomItem for CustomControl for View (Format)](./frame-element-for-customitem-for-customcontrol-for-view-format.md)|定义数据的显示方式，例如，将数据向左或向右移动。|
 

@@ -1,12 +1,14 @@
 ---
-title: 创建表视图 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: cbe81962a0f68d64506062898a8f21a1596cc29a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 创建表视图
+description: 创建表视图
+ms.openlocfilehash: 035d42f7968a9e8babec692a7a5873e24b36cd97
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786146"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660302"
 ---
 # <a name="creating-a-table-view"></a>创建表视图
 
@@ -14,7 +16,7 @@ ms.locfileid: "87786146"
 
 ## <a name="a-table-view-display"></a>表格视图显示
 
-下面的示例演示 Windows PowerShell 如何显示由[Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) [Cmdlet 返回](/powershell/module/microsoft.powershell.management/get-service)的 system.serviceprocess 对象。 对于此对象，Windows PowerShell 定义了显示属性的表视图 `Status` ， `Name` (此属性的属性为 `ServiceName` 属性) 和属性的别名属性 `DisplayName` 。 表中的每一行表示该 cmdlet 返回的对象。
+下面的示例演示 Windows PowerShell 如何显示由 [Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) [Cmdlet 返回](/powershell/module/microsoft.powershell.management/get-service) 的 system.serviceprocess 对象。 对于此对象，Windows PowerShell 定义了显示属性的表视图 `Status` ， `Name` (此属性的属性为 `ServiceName` 属性) 和属性的别名属性 `DisplayName` 。 表中的每一行表示该 cmdlet 返回的对象。
 
 ```output
 Status   Name               DisplayName
@@ -27,7 +29,7 @@ Running  Appinfo            Application Information
 
 ## <a name="defining-the-table-view"></a>定义表视图
 
-下面的 XML 演示用于显示[system.serviceprocess. Servicecontroller 的表视图架构。Displayproperty = Fullname](/dotnet/api/System.ServiceProcess.ServiceController)对象。 您必须指定要在表视图中显示的每个属性。
+下面的 XML 演示用于显示 [system.serviceprocess. Servicecontroller 的表视图架构。Displayproperty = Fullname](/dotnet/api/System.ServiceProcess.ServiceController) 对象。 您必须指定要在表视图中显示的每个属性。
 
 ```xml
 <View>
@@ -74,13 +76,13 @@ Running  Appinfo            Application Information
 
 - [ViewSelectedBy](./viewselectedby-element-format.md)元素定义使用视图的对象。 此元素是必需的。
 
-- 此示例中未显示[GroupBy](./groupby-element-for-view-format.md)元素 () 定义显示新的对象组的时间。 每当特定属性或脚本的值发生更改时，就会启动一个新组。 此元素为可选元素。
+- 此示例中未显示 [GroupBy](./groupby-element-for-view-format.md) 元素 () 定义显示新的对象组的时间。 每当特定属性或脚本的值发生更改时，就会启动一个新组。 此元素为可选元素。
 
-- 在此示例中不显示[Controls](./controls-element-for-view-format.md)元素 () 定义由表视图定义的自定义控件。 控件使您可以进一步指定数据的显示方式。 此元素为可选元素。 视图可以定义自己的自定义控件，也可以使用可由格式设置文件中的任何视图使用的公共控件。 有关自定义控件的详细信息，请参阅[创建自定义控件](./creating-custom-controls.md)。
+- 在此示例中不显示 [Controls](./controls-element-for-view-format.md) 元素 () 定义由表视图定义的自定义控件。 控件使您可以进一步指定数据的显示方式。 此元素为可选元素。 视图可以定义自己的自定义控件，也可以使用可由格式设置文件中的任何视图使用的公共控件。 有关自定义控件的详细信息，请参阅 [创建自定义控件](./creating-custom-controls.md)。
 
-- 在此示例中， [HideTableHeaders](./hidetableheaders-element-format.md)元素 (不显示) 指定表将不会在表的顶部显示任何标签。 此元素为可选元素。
+- 在此示例中， [HideTableHeaders](./hidetableheaders-element-format.md) 元素 (不显示) 指定表将不会在表的顶部显示任何标签。 此元素为可选元素。
 
-- 定义表的标头和行信息的[TableControl](./tablecontrol-element-format.md)元素。 与所有其他视图类似，表视图可以显示对象属性的值或脚本生成的值。
+- 定义表的标头和行信息的 [TableControl](./tablecontrol-element-format.md) 元素。 与所有其他视图类似，表视图可以显示对象属性的值或脚本生成的值。
 
 ## <a name="defining-column-headers"></a>定义列标题
 
@@ -88,7 +90,7 @@ Running  Appinfo            Application Information
 
 2. [TableColumnHeader](./tablecolumnheader-element-format.md)元素定义在表的列顶部显示的内容。 按您希望标题显示的顺序指定这些元素。
 
-   您可以使用的这些元素的数量没有限制，但表视图中的[TableColumnHeader](./tablecolumnheader-element-format.md)元素数目必须等于您使用的[TableRowEntry](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)元素的数目。
+   您可以使用的这些元素的数量没有限制，但表视图中的 [TableColumnHeader](./tablecolumnheader-element-format.md) 元素数目必须等于您使用的 [TableRowEntry](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md) 元素的数目。
 
 3. [Label](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)元素指定显示的文本。 此元素为可选元素。
 
@@ -98,9 +100,9 @@ Running  Appinfo            Application Information
 
 ## <a name="defining-the-table-rows"></a>定义表行
 
-表视图可以提供一个或多个定义，这些定义通过使用[TableRowEntries](./tablerowentries-element-for-tablecontrol-format.md)元素的子元素来指定在表的行中显示哪些数据。 请注意，您可以为表中的行指定多个定义，但无论使用哪种行定义，行的标头都保持不变。 通常，表只有一个定义。
+表视图可以提供一个或多个定义，这些定义通过使用 [TableRowEntries](./tablerowentries-element-for-tablecontrol-format.md) 元素的子元素来指定在表的行中显示哪些数据。 请注意，您可以为表中的行指定多个定义，但无论使用哪种行定义，行的标头都保持不变。 通常，表只有一个定义。
 
-在下面的示例中，视图提供了一个定义，用于显示系统的多个属性的值[。Displayproperty = Fullname](/dotnet/api/System.Diagnostics.Process)对象。 表视图可以显示属性的值或脚本的值 (未显示在其行的示例) 中。
+在下面的示例中，视图提供了一个定义，用于显示系统的多个属性的值 [。Displayproperty = Fullname](/dotnet/api/System.Diagnostics.Process) 对象。 表视图可以显示属性的值或脚本的值 (未显示在其行的示例) 中。
 
 ```xml
 <TableRowEntries>
@@ -125,29 +127,29 @@ Running  Appinfo            Application Information
 
 - [TableRowEntries](./tablerowentries-element-for-tablecontrol-format.md)元素及其子元素定义在表的行中显示的内容。
 
-- [TableRowEntry](./listentry-element-for-listcontrol-format.md)元素提供行的定义。 至少需要一个[TableRowEntry](./listentry-element-for-listcontrol-format.md) ;但是，可以添加的元素数没有最大限制。 在大多数情况下，视图将只有一个定义。
+- [TableRowEntry](./listentry-element-for-listcontrol-format.md)元素提供行的定义。 至少需要一个 [TableRowEntry](./listentry-element-for-listcontrol-format.md) ;但是，可以添加的元素数没有最大限制。 在大多数情况下，视图将只有一个定义。
 
-- [EntrySelectedBy](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)元素指定由特定定义显示的对象。 此元素是可选的，仅当定义显示不同对象的多个[TableRowEntry](./listentry-element-for-listcontrol-format.md)元素时才需要此元素。
+- [EntrySelectedBy](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)元素指定由特定定义显示的对象。 此元素是可选的，仅当定义显示不同对象的多个 [TableRowEntry](./listentry-element-for-listcontrol-format.md) 元素时才需要此元素。
 
 - [Wrap](./wrap-element-for-tablerowentry-for-tablecontrol-format.md)元素指定超出列宽的文本显示在下一行。 默认情况下，超过列宽的文本将被截断。
 
 - [TableColumnItems](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)元素定义其值显示在行中的属性或脚本。
 
-- [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)元素定义其值显示在行的列中的属性或脚本。 行的每个列都需要一个[TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)元素。 第一项显示在第一列中，第二项显示在第二列，依此类推。
+- [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)元素定义其值显示在行的列中的属性或脚本。 行的每个列都需要一个 [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) 元素。 第一项显示在第一列中，第二项显示在第二列，依此类推。
 
 - [PropertyName](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)元素指定其值显示在行中的属性。 您必须指定属性或脚本，但不能同时指定两者。
 
 - [ScriptBlock](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)元素指定其值在行中显示的脚本。 您必须指定脚本或属性，但不能同时指定两者。
 
-- "格式[字符串](./label-element-for-listitem-for-listcontrol-format.md)" 元素指定定义如何显示属性或脚本值的格式模式。 此元素为可选元素。
+- "格式 [字符串](./label-element-for-listitem-for-listcontrol-format.md) " 元素指定定义如何显示属性或脚本值的格式模式。 此元素为可选元素。
 
 - [对齐](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)元素指定属性或脚本的值的显示方式。 值可以左对齐、右对齐或居中对齐。 此元素为可选元素。
 
 ## <a name="defining-the-objects-that-use-the-table-view"></a>定义使用表视图的对象
 
-可以通过两种方法来定义哪些 .NET 对象使用表视图。 您可以使用[ViewSelectedBy](./viewselectedby-element-format.md)元素来定义可由视图的所有定义显示的对象，也可以使用[EntrySelectedBy](./entryselectedby-element-for-listentry-for-listcontrol-format.md)元素来定义由视图的特定定义显示的对象。 在大多数情况下，视图只有一个定义，因此对象通常由[ViewSelectedBy](./viewselectedby-element-format.md)元素定义。
+可以通过两种方法来定义哪些 .NET 对象使用表视图。 您可以使用 [ViewSelectedBy](./viewselectedby-element-format.md) 元素来定义可由视图的所有定义显示的对象，也可以使用 [EntrySelectedBy](./entryselectedby-element-for-listentry-for-listcontrol-format.md) 元素来定义由视图的特定定义显示的对象。 在大多数情况下，视图只有一个定义，因此对象通常由 [ViewSelectedBy](./viewselectedby-element-format.md) 元素定义。
 
-下面的示例演示如何使用[ViewSelectedBy](./viewselectedby-element-format.md)和[TypeName](./typename-element-for-viewselectedby-format.md)元素定义表视图显示的对象。 对于您可以指定的[TypeName](./typename-element-for-viewselectedby-format.md)元素的数量没有限制，它们的顺序并不重要。
+下面的示例演示如何使用 [ViewSelectedBy](./viewselectedby-element-format.md) 和 [TypeName](./typename-element-for-viewselectedby-format.md) 元素定义表视图显示的对象。 对于您可以指定的 [TypeName](./typename-element-for-viewselectedby-format.md) 元素的数量没有限制，它们的顺序并不重要。
 
 ```xml
 <View>
@@ -165,7 +167,7 @@ Running  Appinfo            Application Information
 
 - [TypeName](./typename-element-for-viewselectedby-format.md)元素指定视图显示的 .net 对象。 完全限定的 .NET 类型名称是必需的。 您必须为视图指定至少一个类型或选择集，但没有可指定的最大元素数。
 
-下面的示例使用[ViewSelectedBy](./viewselectedby-element-format.md)和[SelectionSetName](./selectionsetname-element-for-viewselectedby-format.md)元素。 使用选择集，其中有一组使用多个视图显示的相关对象，例如为同一对象定义列表视图和表视图。 有关如何创建选项集的详细信息，请参阅[定义选择集](./defining-selection-sets.md)。
+下面的示例使用 [ViewSelectedBy](./viewselectedby-element-format.md) 和 [SelectionSetName](./selectionsetname-element-for-viewselectedby-format.md) 元素。 使用选择集，其中有一组使用多个视图显示的相关对象，例如为同一对象定义列表视图和表视图。 有关如何创建选项集的详细信息，请参阅 [定义选择集](./defining-selection-sets.md)。
 
 ```xml
 <View>
@@ -183,7 +185,7 @@ Running  Appinfo            Application Information
 
 - [SelectionSetName](./selectionsetname-element-for-viewselectedby-format.md)元素指定可由视图显示的一组对象。 您必须为视图指定至少一个选择集或类型，但没有可指定的最大元素数。
 
-下面的示例演示如何使用[EntrySelectedBy](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)元素定义表视图的特定定义显示的对象。 使用此元素，可以指定对象的 .NET 类型名称、对象的选择集或指定何时使用定义的选择条件。 有关如何创建选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+下面的示例演示如何使用 [EntrySelectedBy](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md) 元素定义表视图的特定定义显示的对象。 使用此元素，可以指定对象的 .NET 类型名称、对象的选择集或指定何时使用定义的选择条件。 有关如何创建选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 > [!NOTE]
 > 创建表视图的多个定义时，不能指定不同的列标题。 您只能指定在表的行中显示的内容，例如显示的对象。
@@ -202,9 +204,9 @@ Running  Appinfo            Application Information
 
 - [TypeName](./typename-element-for-entryselectedby-for-listcontrol-format.md)元素指定由定义显示的 .net 对象。 使用此元素时，必须提供完全限定的 .NET 类型名称。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。
 
--  (未显示的[SelectionSetName](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)元素) 指定可由此定义显示的一组对象。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。
+-  (未显示的 [SelectionSetName](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md) 元素) 指定可由此定义显示的一组对象。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。
 
--  (未显示的[SelectionCondition](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)元素) 指定要使用此定义必须存在的条件。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。 有关定义选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+-  (未显示的 [SelectionCondition](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md) 元素) 指定要使用此定义必须存在的条件。 您必须为定义至少指定一个类型、选择集或选择条件，但没有可指定的最大元素数。 有关定义选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="using-format-strings"></a>使用格式字符串
 
@@ -219,11 +221,11 @@ Running  Appinfo            Application Information
 
 以下 XML 元素可用于指定格式模式：
 
-- [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)元素定义其值显示在行的列中的属性或脚本。 行的每个列都需要一个[TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)元素。 第一项显示在第一列中，第二项显示在第二列，依此类推。
+- [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)元素定义其值显示在行的列中的属性或脚本。 行的每个列都需要一个 [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) 元素。 第一项显示在第一列中，第二项显示在第二列，依此类推。
 
 - [PropertyName](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)元素指定其值显示在行中的属性。 您必须指定属性或脚本，但不能同时指定两者。
 
-- "格式[字符串](./label-element-for-listitem-for-listcontrol-format.md)" 元素指定定义如何显示属性或脚本值的格式模式。
+- "格式 [字符串](./label-element-for-listitem-for-listcontrol-format.md) " 元素指定定义如何显示属性或脚本值的格式模式。
 
 在下面的示例中， `ToString` 调用方法以设置脚本的值的格式。 脚本可以调用对象的任何方法。 因此，如果对象具有 `ToString` 具有格式参数的方法（如），则脚本可以调用该方法来设置脚本的输出值的格式。
 
@@ -238,7 +240,7 @@ Running  Appinfo            Application Information
 
 以下 XML 元素可用于调用 `ToString` 方法：
 
-- [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)元素定义其值显示在行的列中的属性或脚本。 行的每个列都需要一个[TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)元素。 第一项显示在第一列中，第二项显示在第二列，依此类推。
+- [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)元素定义其值显示在行的列中的属性或脚本。 行的每个列都需要一个 [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) 元素。 第一项显示在第一列中，第二项显示在第二列，依此类推。
 
 - [ScriptBlock](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)元素指定其值在行中显示的脚本。 您必须指定脚本或属性，但不能同时指定两者。
 

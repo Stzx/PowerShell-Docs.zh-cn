@@ -1,12 +1,14 @@
 ---
-title: TableControl (Format) 的 TableColumnItems 的 TableColumnItem 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: beadf771f02519394d799a03db374050e3302321
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableColumnItem Element for TableColumnItems for TableControl (Format)
+description: TableColumnItem Element for TableColumnItems for TableControl (Format)
+ms.openlocfilehash: 8ef5158c9bb9f074d5c58190d4d3b20c10c83744
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785160"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659850"
 ---
 # <a name="tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format"></a>TableColumnItem Element for TableColumnItems for TableControl (Format)
 
@@ -52,11 +54,11 @@ ms.locfileid: "87785160"
 
 可以在行的每个列中指定对象或脚本的属性。 如果未指定子元素，则该项是占位符，不显示任何数据。
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="example"></a>示例
 
-此示例演示一个 `TableColumnItem` 元素，该元素显示 `Status` [system.object](/dotnet/api/System.Diagnostics.Process)对象的属性的值。
+此示例演示一个 `TableColumnItem` 元素，该元素显示 `Status` [system.object](/dotnet/api/System.Diagnostics.Process) 对象的属性的值。
 
 ```xml
 <TableColumnItem>

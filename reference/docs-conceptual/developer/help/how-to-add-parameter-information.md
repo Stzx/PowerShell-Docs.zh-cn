@@ -1,18 +1,20 @@
 ---
-title: 如何添加参数信息
 ms.date: 09/12/2016
-ms.openlocfilehash: 15d0194a1d5449c65977703faf245e449d75d176
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 如何添加参数信息
+description: 如何添加参数信息
+ms.openlocfilehash: 8f4fc46ef256a77b058df4ba506124f80732cb39
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893384"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663056"
 ---
 # <a name="how-to-add-parameter-information"></a>如何添加参数信息
 
-本部分介绍如何添加在 cmdlet 帮助主题的**PARAMETERS**节中显示的内容。 帮助主题的**参数**部分列出了 cmdlet 的每个参数，并提供了每个参数的详细说明。
+本部分介绍如何添加在 cmdlet 帮助主题的 **PARAMETERS** 节中显示的内容。 帮助主题的 **参数** 部分列出了 cmdlet 的每个参数，并提供了每个参数的详细说明。
 
-"**参数**" 部分的内容应与 "帮助" 主题的 "**语法**" 部分的内容一致。 帮助作者负责确保 "**语法**和**Parameters** " 节点包含类似的 XML 元素。
+" **参数** " 部分的内容应与 "帮助" 主题的 " **语法** " 部分的内容一致。 帮助作者负责确保 " **语法** 和 **Parameters** " 节点包含类似的 XML 元素。
 
 > [!NOTE]
 > 若要获取帮助文件的完整视图，请打开 `dll-Help.xml` 位于 PowerShell 安装目录中的文件之一。 例如，该 `Microsoft.PowerShell.Commands.Management.dll-Help.xml` 文件包含多个 PowerShell cmdlet 的内容。
@@ -39,9 +41,9 @@ ms.locfileid: "86893384"
     </command:command>
     ```
 
-1. 在 "参数" 节点中，添加 cmdlet 的每个参数的**参数**节点，如下所示。
+1. 在 "参数" 节点中，添加 cmdlet 的每个参数的 **参数** 节点，如下所示。
 
-   在此示例中，为三个参数添加了**参数**节点。
+   在此示例中，为三个参数添加了 **参数** 节点。
 
     ```xml
     <command:parameters>
@@ -79,7 +81,7 @@ ms.locfileid: "86893384"
     </command:Parameters>
     ```
 
-1. 对于每个**参数**节点，添加参数的描述。 下面是添加到**参数**节点的参数说明的示例。
+1. 对于每个 **参数** 节点，添加参数的描述。 下面是添加到 **参数** 节点的参数说明的示例。
 
     ```xml
     <command:parameters>
@@ -93,9 +95,9 @@ ms.locfileid: "86893384"
     </command:parameters>
     ```
 
-1. 对于每个**参数**节点，添加参数的 .net 类型。 参数类型与参数名称一起显示。
+1. 对于每个 **参数** 节点，添加参数的 .net 类型。 参数类型与参数名称一起显示。
 
-   下面是添加到**参数**节点的 .net 类型参数的示例。
+   下面是添加到 **参数** 节点的 .net 类型参数的示例。
 
     ```xml
     <command:parameters>
@@ -110,9 +112,9 @@ ms.locfileid: "86893384"
     </command:parameters>
     ```
 
-1. 对于每个**参数**节点，添加参数的默认值。 显示内容时，会将以下句子添加到参数说明：默认值为**DefaultValue** 。
+1. 对于每个 **参数** 节点，添加参数的默认值。 显示内容时，会将以下句子添加到参数说明：默认值为 **DefaultValue** 。
 
-   下面是一个将参数默认值添加到**参数**节点的示例。
+   下面是一个将参数默认值添加到 **参数** 节点的示例。
 
     ```xml
     <command:parameters>
@@ -151,7 +153,7 @@ ms.locfileid: "86893384"
 
 下面是添加参数时要记住的一些内容。
 
-- 参数的属性不会显示在 cmdlet 帮助主题的所有视图中。 但是，当用户要求提供主题的**Full** （ `Get-Help <cmdletname> -full` ）或**parameter** （）视图时，它们会按照参数说明显示在表中 `Get-Help <cmdletname> -parameter` 。
+- 参数的属性不会显示在 cmdlet 帮助主题的所有视图中。 但是，当用户要求提供 **完全** () 或参数时，它们将按参数说明显示在一个表中， `Get-Help <cmdletname> -full` ( `Get-Help <cmdletname> -parameter`) 视图。
 
 - 参数说明是 cmdlet 帮助主题最重要的部分之一。 说明应简短，并且是完整的。 另外，请记住，如果参数说明太长，例如两个参数彼此交互，则可以在 cmdlet 帮助主题的 "注释" 部分添加更多内容。
 
@@ -165,13 +167,13 @@ ms.locfileid: "86893384"
 
 如果未在命令行上指定参数，则参数的默认值是使用的值。 请注意，默认值是可选的，对于某些参数（如所需参数）不需要此值。 但是，您应为大多数可选参数指定默认值。
 
-默认值可帮助用户了解不使用参数的影响。 描述非常具体的默认值，如 "当前目录" 或可选路径的 "PowerShell 安装目录（ `$PSHOME` ）"。 还可以编写描述默认值的句子，如用于**passthru**参数的以下句子： "如果未指定 passthru，该 cmdlet 不会将对象向下传递管道。" 另外，由于值与字段名称**默认值**相对显示，因此不需要在条目中包含 "默认值" 一词。
+默认值可帮助用户了解不使用参数的影响。 确切描述默认值，如 "当前目录" 或 "PowerShell 安装目录 (`$PSHOME`) " 中的可选路径。 还可以编写描述默认值的句子，如用于 **passthru** 参数的以下句子： "如果未指定 passthru，该 cmdlet 不会将对象向下传递管道。" 另外，由于值与字段名称 **默认值** 相对显示，因此不需要在条目中包含 "默认值" 一词。
 
-此参数的默认值不会显示在 cmdlet 帮助主题的所有视图中。 但是，当用户要求提供主题的**Full** （ `Get-Help <cmdletname> -full` ）或**parameter** （）视图时，它会显示在参数说明之后的表中（连同参数属性） `Get-Help
-<cmdletname> -parameter` 。
+此参数的默认值不会显示在 cmdlet 帮助主题的所有视图中。 但是，当用户要求) 或参数的 **完整** (`Get-Help <cmdletname> -full` 或 **参数** (`Get-Help
+<cmdletname> -parameter`) 视图时，它会显示在)  (的表中。
 
 下面的 XML 演示 `<dev:defaultValue>` 添加到节点的一对标记 `<command:parameter>` 。
-请注意，默认值紧跟在结束标记之后 `</command:parameterValue>` （指定了参数值时）或参数说明的结束 `</maml:description>` 标记后。 名称。
+请注意，默认值紧跟在结束标记后 `</command:parameterValue>` (在指定参数值时) 或参数说明的结束 `</maml:description>` 标记。 名称。
 
 ```xml
 <command:parameters>

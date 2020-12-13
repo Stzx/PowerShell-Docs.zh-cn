@@ -1,12 +1,14 @@
 ---
-title: 编写基于注释的帮助主题
 ms.date: 09/13/2016
-ms.openlocfilehash: f29a30d27eba2b84883c4c2bd3cee68349c94e19
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 编写基于注释的帮助主题
+description: 编写基于注释的帮助主题
+ms.openlocfilehash: 11bbadfde27a74bde29d336b91516939e7265b3b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893095"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658807"
 ---
 # <a name="writing-comment-based-help-topics"></a>编写基于注释的帮助主题
 
@@ -18,10 +20,10 @@ ms.locfileid: "86893095"
 
 ## <a name="in-this-section"></a>本节内容
 
- [基于注释的帮助的语法](./syntax-of-comment-based-help.md)介绍基于注释的帮助的语法。
+ [Comment-Based 帮助的语法](./syntax-of-comment-based-help.md) 介绍基于注释的帮助的语法。
 
- [基于注释的帮助关键字](./comment-based-help-keywords.md)在基于注释的帮助中列出关键字。
+ [基于注释的帮助关键字](./comment-based-help-keywords.md) 在基于注释的帮助中列出关键字。
 
- [在函数中放置基于注释的帮助](./placing-comment-based-help-in-functions.md)显示为函数设置基于注释的帮助的位置。
+ [在函数中放置 Comment-Based 帮助](./placing-comment-based-help-in-functions.md) 显示为函数设置基于注释的帮助的位置。
 
- [在脚本中放置基于注释的帮助](./placing-comment-based-help-in-scripts.md)显示在何处放置脚本的基于注释的帮助。
+ [在脚本中放置 Comment-Based 帮助](./placing-comment-based-help-in-scripts.md) 显示在何处放置脚本的基于注释的帮助。

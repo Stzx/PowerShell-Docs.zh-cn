@@ -1,12 +1,14 @@
 ---
-title: 对于 GroupBy (Format) ，为 SelectionCondition 的 TypeName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ea1e0cb50c3a749f6c26d13fff4b001240ce6b95
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TypeName Element for SelectionCondition for GroupBy (Format)
+description: TypeName Element for SelectionCondition for GroupBy (Format)
+ms.openlocfilehash: 096d2355e113a7e44cc6ae31ea23efc3f01080a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772546"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664627"
 ---
 # <a name="typename-element-for-selectioncondition-for-groupby-format"></a>TypeName Element for SelectionCondition for GroupBy (Format)
 
@@ -45,7 +47,7 @@ ms.locfileid: "87772546"
 
 ## <a name="remarks"></a>备注
 
-如果指定此元素，则不能指定 `SelectionSetName` 元素。 有关定义选择条件的详细信息，请参阅[定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
+如果指定此元素，则不能指定 `SelectionSetName` 元素。 有关定义选择条件的详细信息，请参阅 [定义用于显示数据的条件](./defining-conditions-for-displaying-data.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 参数的类型 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e704aae6e23568be9935e228752f652929863a98
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 参数的类型
+description: Cmdlet 参数的类型
+ms.openlocfilehash: 8daaa3c778396e06a826de3b93e0610c51160fb4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786367"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660489"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Cmdlet 参数的类型
 
@@ -16,7 +18,7 @@ ms.locfileid: "87786367"
 
 所有 cmdlet 参数都是命名参数或位置参数。 命名参数要求在调用 cmdlet 时键入参数名称和参数。 位置参数只要求按相对顺序键入参数。 然后，系统将第一个未命名的参数映射到第一个位置参数。 系统会将第二个未命名的参数映射到第二个未命名的参数，依此类推。 默认情况下，所有 cmdlet 参数均为命名参数。
 
-若要定义命名参数，请 `Position` 在**参数**属性声明中省略关键字，如下面的参数声明中所示。
+若要定义命名参数，请 `Position` 在 **参数** 属性声明中省略关键字，如下面的参数声明中所示。
 
 ```csharp
 [Parameter(ValueFromPipeline=true)]
@@ -45,7 +47,7 @@ private string userName;
 
 位置和命名参数接受单个参数或用逗号分隔的多个参数。 仅当参数接受集合（如字符串数组）时，才允许使用多个参数。 可以在同一个 cmdlet 中混合位置和命名参数。 在这种情况下，系统首先检索命名参数，然后尝试将其余未命名参数映射到位置参数。
 
-以下命令显示了可为 cmdlet 的参数指定单个和多个参数的不同方法 `Get-Command` 。 请注意，在最后两个示例中， **-name**不需要指定，因为 `Name` 参数被定义为位置参数。
+以下命令显示了可为 cmdlet 的参数指定单个和多个参数的不同方法 `Get-Command` 。 请注意，在最后两个示例中， **-name** 不需要指定，因为 `Name` 参数被定义为位置参数。
 
 ```powershell
 Get-Command -Name get-service
@@ -70,7 +72,7 @@ public string UserName
 private string userName;
 ```
 
-若要定义可选参数，请 `Mandatory` 在**参数**属性声明中省略关键字，如下面的参数声明中所示。
+若要定义可选参数，请 `Mandatory` 在 **参数** 属性声明中省略关键字，如下面的参数声明中所示。
 
 ```csharp
 [Parameter(Position = 0)]
@@ -84,13 +86,13 @@ private string userName;
 
 ## <a name="switch-parameters"></a>开关参数
 
-Windows PowerShell 提供[SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)类型，该类型允许您定义一个参数， `false` 如果在调用 cmdlet 时未指定参数，则此参数的值将自动设置为。 请尽可能使用开关参数代替布尔参数。
+Windows PowerShell 提供 [SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) 类型，该类型允许您定义一个参数， `false` 如果在调用 cmdlet 时未指定参数，则此参数的值将自动设置为。 请尽可能使用开关参数代替布尔参数。
 
 请考虑以下示例。 默认情况下，多个 Windows PowerShell cmdlet 不会将输出对象沿管道向下传递。 但是，这些 cmdlet 具有一个 `PassThru` 用于替代默认行为的开关参数。 如果在 `PassThru` 调用这些 cmdlet 时指定了参数，则该 cmdlet 会将输出对象返回到管道。
 
-如果在调用中未指定参数时，需要参数的默认值为 `true` ，请考虑反转参数的意义。 对于示例，请将属性声明为 SwitchParameter 类型，而不是将参数特性设置为的布尔值， `true` 然后将参数的[System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)默认值设置为 `false` 。
+如果在调用中未指定参数时，需要参数的默认值为 `true` ，请考虑反转参数的意义。 对于示例，请将属性声明为 SwitchParameter 类型，而不是将参数特性设置为的布尔值， `true` 然后将参数的[](/dotnet/api/System.Management.Automation.SwitchParameter)默认值设置为 `false` 。
 
-若要定义开关参数，请将属性声明为[SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)类型，如下面的示例中所示。
+若要定义开关参数，请将属性声明为 [SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) 类型，如下面的示例中所示。
 
 ```csharp
 [Parameter(Position = 1)]

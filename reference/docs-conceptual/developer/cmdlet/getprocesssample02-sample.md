@@ -1,12 +1,14 @@
 ---
-title: GetProcessSample02 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: fa10774508b70f4aab4546cf4d6fbe8978032f1b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProcessSample02 示例
+description: GetProcessSample02 示例
+ms.openlocfilehash: a0f43806b707359cb454817341f2c4972033c46a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784225"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660514"
 ---
 # <a name="getprocesssample02-sample"></a>GetProcessSample02 示例
 
@@ -58,7 +60,7 @@ ms.locfileid: "87784225"
 
 ## <a name="example"></a>示例
 
-此示例演示了包含参数的进程中 cmdlet 的实现 `Name` 。
+此示例演示包含参数的 Get-Proc cmdlet 的实现 `Name` 。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands

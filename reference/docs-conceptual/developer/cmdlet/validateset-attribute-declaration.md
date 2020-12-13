@@ -1,16 +1,14 @@
 ---
-title: ValidateSet 特性声明 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidateSet
-- ValidateSet attribute, described
-- ValidateSet attribute
-ms.openlocfilehash: 0b6833efb0ce8e9474e9d91049fd201fc845cbea
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ValidateSet 属性声明
+description: ValidateSet 属性声明
+ms.openlocfilehash: 7894d00561366ada492911e8147acbd8d3454a55
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787761"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660471"
 ---
 # <a name="validateset-attribute-declaration"></a>ValidateSet 属性声明
 
@@ -42,7 +40,7 @@ ValidateSetAttribute 属性为 cmdlet 参数参数指定一组可能的值。 �
 
 - 如果参数值为数组，则数组的每个元素都必须与属性集的元素匹配。
 
-- ValidateSetAttribute 特性是由[ValidateSetAttribute](/dotnet/api/System.Management.Automation.ValidateSetAttribute)类定义的。
+- ValidateSetAttribute 特性是由 [ValidateSetAttribute](/dotnet/api/System.Management.Automation.ValidateSetAttribute) 类定义的。
 
 ## <a name="see-also"></a>另请参阅
 

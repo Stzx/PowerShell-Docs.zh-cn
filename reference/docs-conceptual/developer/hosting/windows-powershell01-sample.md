@@ -1,16 +1,18 @@
 ---
-title: Windows PowerShell01 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e799f35c0c5e3820c6471b49c8b0d8c47b1c6b2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell01 示例
+description: Windows PowerShell01 示例
+ms.openlocfilehash: 70ae67bfc2da9d3cc085ecb42de9cef4b163418d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771934"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657373"
 ---
 # <a name="windows-powershell01-sample"></a>Windows PowerShell01 示例
 
-此示例演示如何使用[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象来限制运行空间的功能。 此示例的输出演示如何限制运行空间的语言模式，如何将 cmdlet 标记为私有，如何添加和删除 cmdlet 和提供程序，如何添加代理命令等。 此示例重点介绍如何以编程方式限制运行空间。 用于限制运行空间的脚本替代方法包括 $ExecutionContext. LanguageMode 和 Set-pssessionconfiguration 命令。
+此示例演示如何使用 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象来限制运行空间的功能。 此示例的输出演示如何限制运行空间的语言模式，如何将 cmdlet 标记为私有，如何添加和删除 cmdlet 和提供程序，如何添加代理命令等。 此示例重点介绍如何以编程方式限制运行空间。 用于限制运行空间的脚本替代方法包括 $ExecutionContext. LanguageMode 和 Set-pssessionconfiguration 命令。
 
 ## <a name="requirements"></a>要求
 
@@ -20,17 +22,17 @@ ms.locfileid: "87771934"
 
 此示例对下列内容进行了说明：
 
-- 通过设置System.Management.Automation.Runspaces.Initialsessionstate 来限制语言[。Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode)属性。
+- 通过设置System.Management.Automation.Runspaces.Initialsessionstate 来限制语言 [ 。Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) 属性。
 
-- 通过使用 Sessionstatealiasentry，将别名添加到初始会话状态[？Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry)对象。
+- 通过使用 Sessionstatealiasentry，将别名添加到初始会话状态 [？Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) 对象。
 
 - 将命令标记为私有。
 
-- 使用System.Management.Automation.Runspaces.Initialsessionstate 从初始会话状态中删除提供程序[。Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers)属性。
+- 使用System.Management.Automation.Runspaces.Initialsessionstate 从初始会话状态中删除提供程序 [ 。Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) 属性。
 
-- 使用[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands)属性从初始会话状态删除命令。
+- 使用 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) 属性从初始会话状态删除命令。
 
-- 将命令和提供程序添加到[System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)对象。
+- 将命令和提供程序添加到 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 对象。
 
 ## <a name="example"></a>示例
 

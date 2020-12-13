@@ -1,12 +1,14 @@
 ---
-title: 如何创建 Cmdlet 帮助文件 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7ab0404e5d0122a64483883e6e2d4760dfa5038d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 如何创建 Cmdlet 帮助文件
+description: 如何创建 Cmdlet 帮助文件
+ms.openlocfilehash: 40259c8f9496b10380805a78f3711aed6f1bf2e5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779822"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659097"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>如何创建 Cmdlet 帮助文件
 
@@ -25,25 +27,25 @@ ms.locfileid: "87779822"
 
    `<?xml version="1.0" encoding="utf-8" ?> <helpItems xmlns="http://msh" schema="maml">`
 
-1. 将**命令**节点添加到程序集中每个 cmdlet 的 cmdlet 帮助文件。 **命令**节点内的每个节点都与 cmdlet 帮助主题的不同部分相关。
+1. 将 **命令** 节点添加到程序集中每个 cmdlet 的 cmdlet 帮助文件。 **命令** 节点内的每个节点都与 cmdlet 帮助主题的不同部分相关。
 
    下表列出了每个节点的 XML 元素，后跟每个节点的说明。
 
-   |           节点           |                                                                                                     说明                                                                                                     |
+   |           节点           |                                                                                                     描述                                                                                                     |
    | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | `<details>`              | 为 cmdlet 帮助主题的名称和摘要部分添加内容。 有关详细信息，请参阅[如何添加 Cmdlet 名称和摘要](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)。 |
-   | `<maml:description>`     | 添加 cmdlet 帮助主题的 "描述" 部分的内容。 有关详细信息，请参阅[如何将详细描述添加到 Cmdlet 的帮助主题](./how-to-add-a-cmdlet-description.md)。                    |
-   | `<command:syntax>`       | 为 cmdlet 帮助主题的语法部分添加内容。 有关详细信息，请参阅[如何将语法添加到 Cmdlet 的帮助主题](./how-to-add-syntax-to-a-cmdlet-help-topic.md)。                                  |
-   | `<command:parameters>`   | 添加 cmdlet 帮助主题的参数部分的内容。 有关详细信息，请参阅[如何将参数添加到 Cmdlet 的帮助主题](./how-to-add-parameter-information.md)。                                  |
-   | `<command:inputTypes>`   | 添加 cmdlet 帮助主题的 "输入" 部分的内容。 有关详细信息，请参阅[如何将输入类型添加到 Cmdlet 的帮助主题](./how-to-add-input-types-to-a-cmdlet-help-topic.md)。                        |
-   | `<command:returnValues>` | 添加 cmdlet 帮助主题的 "输出" 部分的内容。 有关详细信息，请参阅[如何将返回值添加到 Cmdlet 的帮助主题](./how-to-add-return-values-to-a-cmdlet-help-topic.md)。                   |
-   | `<maml:alertset>`        | 添加 cmdlet 帮助主题的 "注释" 部分的内容。 有关详细信息，请参阅[如何向 Cmdlet 帮助主题添加注释](./how-to-add-notes-to-a-cmdlet-help-topic.md)。                                      |
-   | `<command:examples>`     | 添加 cmdlet 帮助主题的 "示例" 部分的内容。 有关详细信息，请参阅[如何将示例添加到 Cmdlet 的帮助主题](./how-to-add-examples-to-a-cmdlet-help-topic.md)。                            |
-   | `<maml:relatedLinks>`    | 添加 cmdlet 帮助主题的 "相关链接" 部分的内容。 有关详细信息，请参阅[如何将相关链接添加到 Cmdlet 的帮助主题](./how-to-add-related-links-to-a-cmdlet-help-topic.md)。             |
+   | `<details>`              | 为 cmdlet 帮助主题的名称和摘要部分添加内容。 有关详细信息，请参阅 [如何添加 Cmdlet 名称和摘要](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)。 |
+   | `<maml:description>`     | 添加 cmdlet 帮助主题的 "描述" 部分的内容。 有关详细信息，请参阅 [如何将详细描述添加到 Cmdlet 的帮助主题](./how-to-add-a-cmdlet-description.md)。                    |
+   | `<command:syntax>`       | 为 cmdlet 帮助主题的语法部分添加内容。 有关详细信息，请参阅 [如何将语法添加到 Cmdlet 的帮助主题](./how-to-add-syntax-to-a-cmdlet-help-topic.md)。                                  |
+   | `<command:parameters>`   | 添加 cmdlet 帮助主题的参数部分的内容。 有关详细信息，请参阅 [如何将参数添加到 Cmdlet 的帮助主题](./how-to-add-parameter-information.md)。                                  |
+   | `<command:inputTypes>`   | 添加 cmdlet 帮助主题的 "输入" 部分的内容。 有关详细信息，请参阅 [如何将输入类型添加到 Cmdlet 的帮助主题](./how-to-add-input-types-to-a-cmdlet-help-topic.md)。                        |
+   | `<command:returnValues>` | 添加 cmdlet 帮助主题的 "输出" 部分的内容。 有关详细信息，请参阅 [如何将返回值添加到 Cmdlet 的帮助主题](./how-to-add-return-values-to-a-cmdlet-help-topic.md)。                   |
+   | `<maml:alertset>`        | 添加 cmdlet 帮助主题的 "注释" 部分的内容。 有关详细信息，请参阅 [如何向 Cmdlet 帮助主题添加注释](./how-to-add-notes-to-a-cmdlet-help-topic.md)。                                      |
+   | `<command:examples>`     | 添加 cmdlet 帮助主题的 "示例" 部分的内容。 有关详细信息，请参阅 [如何将示例添加到 Cmdlet 的帮助主题](./how-to-add-examples-to-a-cmdlet-help-topic.md)。                            |
+   | `<maml:relatedLinks>`    | 添加 cmdlet 帮助主题的 "相关链接" 部分的内容。 有关详细信息，请参阅 [如何将相关链接添加到 Cmdlet 的帮助主题](./how-to-add-related-links-to-a-cmdlet-help-topic.md)。             |
 
 ## <a name="example"></a>示例
 
- 下面是一个**命令**节点示例，其中包含 cmdlet 帮助主题各个部分的节点。
+ 下面是一个 **命令** 节点示例，其中包含 cmdlet 帮助主题各个部分的节点。
 
 ```xml
 <command:command

@@ -1,12 +1,14 @@
 ---
-title: HelpInfo XML 架构
 ms.date: 09/12/2016
-ms.openlocfilehash: f94d053b8fc558d9efc13e6b9fbd597287970e38
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.topic: reference
+title: HelpInfo XML 架构
+description: HelpInfo XML 架构
+ms.openlocfilehash: 157fd9c0f47c57efbaa9b7888fa174a34ad9567d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86953244"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92662020"
 ---
 # <a name="helpinfo-xml-schema"></a>HelpInfo XML 架构
 
@@ -47,12 +49,12 @@ HelpInfo XML 文件基于以下 XML 架构。
 
 HelpInfo XML 文件包含以下元素。
 
-- **HelpContentURI** -包含模块的帮助 CAB 文件位置的 URI。 URI 必须以 "http" 或 "https" 开头。 URI 应指定 internet 位置，但不得包含 CAB 文件名。 **HelpContentURI**值可以与**HelpInfoURI**值相同或不同。
+- **HelpContentURI** -包含模块的帮助 CAB 文件位置的 URI。 URI 必须以 "http" 或 "https" 开头。 URI 应指定 internet 位置，但不得包含 CAB 文件名。 **HelpContentURI** 值可以与 **HelpInfoURI** 值相同或不同。
 
-- **SupportedUICultures** -表示所有 UI 区域性中的模块帮助文件。 包含**UICulture**元素，其中每个元素都表示一组指定 UI 区域性中的模块的帮助文件。
+- **SupportedUICultures** -表示所有 UI 区域性中的模块帮助文件。 包含 **UICulture** 元素，其中每个元素都表示一组指定 UI 区域性中的模块的帮助文件。
 
-- **UICulture** -表示指定 UI 区域性中的模块的一组帮助文件。 为在其中编写帮助文件的每个 UI 区域性添加一个**UICulture**元素。
+- **UICulture** -表示指定 UI 区域性中的模块的一组帮助文件。 为在其中编写帮助文件的每个 UI 区域性添加一个 **UICulture** 元素。
 
 - **UICultureName** -包含在其中编写帮助文件的 UI 区域性的语言代码。
 
-- **UICultureVersion** -在 "N1。N2.N3.N4 "格式，表示 UI 区域性中 help CAB 文件的版本。 每次上传**UICultureName**指定的 UI 区域性中的新帮助 CAB 文件时，请递增此版本号。 有关此值的详细信息，请参阅[版本类](/dotnet/api/system.version)。
+- **UICultureVersion** -在 "N1。N2.N3.N4 "格式，表示 UI 区域性中 help CAB 文件的版本。 每次上传 **UICultureName** 指定的 UI 区域性中的新帮助 CAB 文件时，请递增此版本号。 有关此值的详细信息，请参阅 [版本类](/dotnet/api/system.version)。

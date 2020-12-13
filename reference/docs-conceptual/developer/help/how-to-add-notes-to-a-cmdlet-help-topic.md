@@ -4,10 +4,10 @@ ms.topic: reference
 title: 如何向 Cmdlet 帮助主题添加备注
 description: 如何向 Cmdlet 帮助主题添加备注
 ms.openlocfilehash: 61363c26ab0172277d1332ed1e9de080d8da200c
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92659561"
 ---
 # <a name="how-to-add-notes-to-a-cmdlet-help-topic"></a>如何向 Cmdlet 帮助主题添加备注

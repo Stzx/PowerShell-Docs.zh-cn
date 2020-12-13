@@ -1,16 +1,14 @@
 ---
-title: 创建 Windows PowerShell 驱动器提供程序 |Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- drive providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], drive provider
-- drives [PowerShell Programmer's Guide]
-ms.openlocfilehash: 2a2178714ed548986fe1a1a4de8828e8e0a938cb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 创建 Windows PowerShell 驱动器提供程序
+description: 创建 Windows PowerShell 驱动器提供程序
+ms.openlocfilehash: 639518fce27d941b7529b091364c5905c91a5c0c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787183"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663032"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>创建 Windows PowerShell 驱动器提供程序
 
@@ -21,45 +19,45 @@ ms.locfileid: "87787183"
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>定义 Windows PowerShell 提供程序类
 
-你的驱动器提供程序必须定义一个从[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)基类派生的 .net 类。 下面是此驱动器提供程序的类定义：
+你的驱动器提供程序必须定义一个从 [Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 基类派生的 .net 类。 下面是此驱动器提供程序的类定义：
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="29-30":::
 
-请注意，在此示例中， [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)属性指定提供程序的用户友好名称，以及提供程序在命令处理过程中向 windows powershell 运行时公开的 windows powershell 特定功能。
-提供程序功能的可能值是由[Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)枚举定义的。 此驱动器提供程序不支持其中任何一种功能。
+请注意，在此示例中， [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 属性指定提供程序的用户友好名称，以及提供程序在命令处理过程中向 windows powershell 运行时公开的 windows powershell 特定功能。
+提供程序功能的可能值是由 [Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 枚举定义的。 此驱动器提供程序不支持其中任何一种功能。
 
 ## <a name="defining-base-functionality"></a>定义基本功能
 
-如[设计你的 Windows PowerShell 提供程序](./designing-your-windows-powershell-provider.md)中所述， [Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)类派生自[Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider)基类，此类定义初始化和取消初始化提供程序所需的方法。 若要实现添加特定于会话的初始化信息以及释放提供程序所用资源的功能，请参阅[创建基本 Windows PowerShell 提供程序](./creating-a-basic-windows-powershell-provider.md)。
+如 [设计你的 Windows PowerShell 提供程序](./designing-your-windows-powershell-provider.md)中所述， [Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 类派生自 [Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 基类，此类定义初始化和取消初始化提供程序所需的方法。 若要实现添加特定于会话的初始化信息以及释放提供程序所用资源的功能，请参阅 [创建基本 Windows PowerShell 提供程序](./creating-a-basic-windows-powershell-provider.md)。
 但是，大多数提供程序 (包括此处所述的提供程序) 可以使用 Windows PowerShell 提供的此功能的默认实现。
 
 ## <a name="creating-drive-state-information"></a>正在创建驱动器状态信息
 
 所有 Windows PowerShell 提供程序都被视为无状态，这意味着驱动器提供程序需要创建 Windows PowerShell 运行时在调用提供程序时所需的任何状态信息。
 
-对于此驱动器提供程序，状态信息包括与数据库的连接，并将其保存为驱动器信息的一部分。 下面的代码演示如何将此信息存储在描述驱动器[System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo)对象中：
+对于此驱动器提供程序，状态信息包括与数据库的连接，并将其保存为驱动器信息的一部分。 下面的代码演示如何将此信息存储在描述驱动器 [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 对象中：
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="130-151":::
 
 ## <a name="creating-a-drive"></a>创建驱动器
 
-若要允许 Windows PowerShell 运行时创建驱动器，驱动器提供程序必须实现[Drivecmdletprovider. Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive)方法。 下面的代码演示了此驱动器提供程序的[Drivecmdletprovider. Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive)方法的实现：
+若要允许 Windows PowerShell 运行时创建驱动器，驱动器提供程序必须实现 [Drivecmdletprovider. Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 方法。 下面的代码演示了此驱动器提供程序的 [Drivecmdletprovider. Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 方法的实现：
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="42-84":::
 
 重写此方法应执行以下操作：
 
-- 验证[System.Management.Automation.PSDriveinfo。Root *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root)成员存在，可以建立与数据存储的连接。
+- 验证 [System.Management.Automation.PSDriveinfo。Root *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) 成员存在，可以建立与数据存储的连接。
 - 创建驱动器并填充连接成员，以支持 `New-PSDrive` cmdlet。
-- 验证建议的驱动器的[System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo)对象。
-- 修改使用任何所需性能或可靠性信息描述驱动器的[System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo)对象，或使用驱动器为调用方提供额外的数据。
-- 使用[Cmdletprovider. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError)方法处理失败，然后再返回 `null` 。
+- 验证建议的驱动器的 [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 对象。
+- 修改使用任何所需性能或可靠性信息描述驱动器的 [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 对象，或使用驱动器为调用方提供额外的数据。
+- 使用 [Cmdletprovider. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) 方法处理失败，然后再返回 `null` 。
 
   此方法返回传递给方法的驱动器信息或其特定于提供程序的版本。
 
 ## <a name="attaching-dynamic-parameters-to-newdrive"></a>将动态参数附加到 NewDrive
 
-`New-PSDrive`驱动器提供商支持的 cmdlet 可能需要其他参数。 若要将这些动态参数附加到 cmdlet，提供程序将实现[Drivecmdletprovider. Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters)方法。 此方法返回一个对象，该对象具有与 cmdlet 类或[Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary)对象类似的分析特性的属性和字段。
+`New-PSDrive`驱动器提供商支持的 cmdlet 可能需要其他参数。 若要将这些动态参数附加到 cmdlet，提供程序将实现 [Drivecmdletprovider. Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) 方法。 此方法返回一个对象，该对象具有与 cmdlet 类或 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 对象类似的分析特性的属性和字段。
 
 此驱动器提供程序不重写此方法。 但是，以下代码显示了此方法的默认实现：
 
@@ -67,9 +65,9 @@ ms.locfileid: "87787183"
 
 ## <a name="removing-a-drive"></a>删除驱动器
 
-若要关闭数据库连接，驱动器提供程序必须实现[Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive)方法。 此方法在清理任何提供程序特定的信息后关闭到驱动器的连接。
+若要关闭数据库连接，驱动器提供程序必须实现 [Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) 方法。 此方法在清理任何提供程序特定的信息后关闭到驱动器的连接。
 
-下面的代码演示了此驱动器提供程序的[Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive)方法的实现：
+下面的代码演示了此驱动器提供程序的 [Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) 方法的实现：
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="91-116":::
 
@@ -77,11 +75,11 @@ ms.locfileid: "87787183"
 
 ## <a name="initializing-default-drives"></a>正在初始化默认驱动器
 
-驱动器提供程序实现[System.Management.Automation.Provider.Drivecmdletprovider.Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives)方法来装入驱动器。 例如，如果计算机加入到域中，Active Directory 提供程序可能会为默认命名上下文装载驱动器。
+驱动器提供程序实现 [System.Management.Automation.Provider.Drivecmdletprovider.Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) 方法来装入驱动器。 例如，如果计算机加入到域中，Active Directory 提供程序可能会为默认命名上下文装载驱动器。
 
-此方法返回有关已初始化驱动器的驱动器信息的集合，或空集合。 对此方法的调用是在 Windows PowerShell 运行时调用[Cmdletprovider *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start)方法以初始化提供程序后进行的。
+此方法返回有关已初始化驱动器的驱动器信息的集合，或空集合。 对此方法的调用是在 Windows PowerShell 运行时调用 [Cmdletprovider *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 方法以初始化提供程序后进行的。
 
-此驱动器提供程序不替代[System.Management.Automation.Provider.Drivecmdletprovider.Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives)方法。 但是，以下代码演示了返回空驱动器集合的默认实现：
+此驱动器提供程序不替代 [System.Management.Automation.Provider.Drivecmdletprovider.Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) 方法。 但是，以下代码演示了返回空驱动器集合的默认实现：
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderinitializedefaultdrives](Msh_samplestestcmdlets#testproviderinitializedefaultdrives)]  -->
 
@@ -91,7 +89,7 @@ ms.locfileid: "87787183"
 
 ## <a name="code-sample"></a>代码示例
 
-有关完整的示例代码，请参阅[AccessDbProviderSample02 代码示例](./accessdbprovidersample02-code-sample.md)。
+有关完整的示例代码，请参阅 [AccessDbProviderSample02 代码示例](./accessdbprovidersample02-code-sample.md)。
 
 ## <a name="testing-the-windows-powershell-drive-provider"></a>测试 Windows PowerShell 驱动器提供程序
 
@@ -99,9 +97,9 @@ ms.locfileid: "87787183"
 
 1. 运行 `Get-PSProvider` cmdlet 以检索提供程序列表，以确保存在 AccessDB 驱动器提供程序：
 
-   **PS>`Get-PSProvider`**
+   **PS> `Get-PSProvider`**
 
-   将显示以下输出：
+   随即显示以下输出：
 
    ```Output
    Name                 Capabilities                  Drives
@@ -114,7 +112,7 @@ ms.locfileid: "87787183"
    Registry             ShouldProcess                 {HKLM, HKCU}
    ```
 
-2. 通过访问操作系统的 "**管理工具**" 的 "**数据源**" 部分，确保数据库的数据库服务器名称 (DSN) 存在。 在 "**用户 DSN** " 表中，双击 " **MS Access 数据库**" 并添加驱动器路径 `C:\ps\northwind.mdb` 。
+2. 通过访问操作系统的 "**管理工具**" 的 "**数据源**" 部分，确保数据库的数据库服务器名称 (DSN) 存在。 在 " **用户 DSN** " 表中，双击 " **MS Access 数据库** " 并添加驱动器路径 `C:\ps\northwind.mdb` 。
 
 3. 使用示例驱动器提供程序创建新驱动器：
 
@@ -122,7 +120,7 @@ ms.locfileid: "87787183"
    new-psdrive -name mydb -root c:\ps\northwind.mdb -psprovider AccessDb`
    ```
 
-   将显示以下输出：
+   随即显示以下输出：
 
    ```Output
    Name     Provider     Root                   CurrentLocation
@@ -130,14 +128,14 @@ ms.locfileid: "87787183"
    mydb     AccessDB     c:\ps\northwind.mdb
    ```
 
-4. 验证连接。 由于连接被定义为驱动器的成员，因此你可以使用 PDDrive cmdlet 检查它。
+4. 验证连接。 由于连接被定义为驱动器的成员，因此你可以使用 Get-PDDrive cmdlet 检查连接。
 
    > [!NOTE]
-   > 用户仍无法作为驱动器与提供程序交互，因为提供程序需要容器功能才能进行该交互。 有关详细信息，请参阅[创建 Windows PowerShell 容器提供程序](./creating-a-windows-powershell-container-provider.md)。
+   > 用户仍无法作为驱动器与提供程序交互，因为提供程序需要容器功能才能进行该交互。 有关详细信息，请参阅 [创建 Windows PowerShell 容器提供程序](./creating-a-windows-powershell-container-provider.md)。
 
    **PS> (new-psdrive mydb) 连接**
 
-   将显示以下输出：
+   随即显示以下输出：
 
    ```Output
    ConnectionString  : Driver={Microsoft Access Driver (*.mdb)};DBQ=c:\ps\northwind.mdb

@@ -1,12 +1,14 @@
 ---
-title: 基于注释的帮助的语法
 ms.date: 09/12/2016
-ms.openlocfilehash: 950afecc39f9d27207f77547679faab700481458
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 基于注释的帮助的语法
+description: 基于注释的帮助的语法
+ms.openlocfilehash: 3866f25b40fc970e8d219af6f423b7a25f5b875c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893214"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659522"
 ---
 # <a name="syntax-of-comment-based-help"></a>基于注释的帮助的语法
 
@@ -30,9 +32,9 @@ ms.locfileid: "86893214"
 
 ## <a name="syntax-description"></a>语法说明
 
- 基于注释的帮助以一系列注释形式编写。 可以在 `#` 每行注释之前键入注释符号（），也可以使用 `<#` 和 `#>` 符号来创建注释块。 注释块内的所有行都解释为注释。
+ 基于注释的帮助以一系列注释形式编写。 你可以在 `#` 每行注释之前键入注释符号 () ，也可以使用 `<#` 和 `#>` 符号来创建注释块。 注释块内的所有行都解释为注释。
 
- 基于注释的帮助的每个部分都由关键字定义，每个关键字前面有一个点（ `.` ）。 关键字可以按任意顺序出现。 关键字名称不区分大小写。
+ 基于注释的帮助的每个部分都由关键字定义，每个关键字前面有一个点 (`.`) 。 关键字可以按任意顺序出现。 关键字名称不区分大小写。
 
  注释块必须包含至少一个 help 关键字。 **例如**，某些关键字可以在同一注释块中出现多次。 每个关键字的帮助内容都从关键字后面的行开始，可以跨多行。
 
