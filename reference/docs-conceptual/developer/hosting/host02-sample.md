@@ -1,12 +1,14 @@
 ---
-title: Host02 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ed95cdcdcf20de6687f463b9d560a69510638c79
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host02 示例
+description: Host02 示例
+ms.openlocfilehash: 7bb07dec3fd6b7ac5844d247a7a06cbda67c619e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772245"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355453"
 ---
 # <a name="host02-sample"></a>Host02 示例
 
@@ -14,21 +16,21 @@ ms.locfileid: "87772245"
 
 ## <a name="requirements"></a>要求
 
- 此示例需要 Windows PowerShell 2.0。
+此示例需要 Windows PowerShell 2.0。
 
 ## <a name="demonstrates"></a>演示
 
-- 创建一个自定义主机，其类派生自[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类、 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)类和 Pshostrawuserinterface 类中的类的类和[System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)类中的类的类。
+- 创建一个自定义主机，其类派生自[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类、 [PSHostUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)类和 PSHostRawUserInterface 类中的类的类和[](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)类中的类的类。
 
 - 创建使用自定义主机的运行空间。
 
 - 将宿主区域性设置为德语。
 
-- 创建一个运行脚本的[system.web](/dotnet/api/system.management.automation.powershell)对象，该对象用于检索和排序进程，然后检索以德语显示的当前日期。
+- 创建一个运行脚本的 [system.web](/dotnet/api/system.management.automation.powershell) 对象，该对象用于检索和排序进程，然后检索以德语显示的当前日期。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
- 下面的代码演示了使用自定义主机的主机应用程序的实现。
+下面的代码演示了使用自定义主机的主机应用程序的实现。
 
 ```csharp
 // Copyright (c) 2006 Microsoft Corporation. All rights reserved.
@@ -125,9 +127,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
- 下面的代码是此主机应用程序所使用的[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
+下面的代码是此主机应用程序所使用的 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -307,9 +309,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-3"></a>示例 3
 
- 下面的代码是此主机应用程序所使用的[Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)类的实现方式。
+下面的代码是此主机应用程序所使用的 [PSHostUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 类的实现方式。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -558,9 +560,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-4"></a>示例 4
 
- 下面的代码是此主机应用程序所使用的[Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
+下面的代码是此主机应用程序所使用的 [PSHostRawUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

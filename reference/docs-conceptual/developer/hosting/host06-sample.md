@@ -1,12 +1,14 @@
 ---
-title: Host06 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5dfcdb2b8a968d91e938c27c6e1e6a8503c90aba
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host06 示例
+description: Host06 示例
+ms.openlocfilehash: 8e94a8cf61e746adcdd22869ec853c0f2a27be91
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783239"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355385"
 ---
 # <a name="host06-sample"></a>Host06 示例
 
@@ -15,34 +17,30 @@ ms.locfileid: "87783239"
 ## <a name="requirements"></a>要求
 
 - 此示例需要 Windows PowerShell 2.0。
-
 - 必须在提升模式下运行此应用程序， (以管理员身份运行) 。
 
 ## <a name="demonstrates"></a>演示
 
-- 创建一个自定义主机，其类派生自[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类、 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)类和 Pshostrawuserinterface 类中的类的类和[System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)类中的类的类。
+- 创建一个自定义主机，其类派生自[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类、 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)类和 Pshostrawuserinterface 类中的类的类和[](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)类中的类的类。
 
 - 构建一个控制台应用程序，该应用程序使用这些主机类来构建交互式 Windows PowerShell shell。
 
 - 创建 `$profile` 变量并加载以下配置文件。
 
   - 当前用户、当前主机
-
   - 当前用户，所有主机
-
   - 所有用户，当前主机
-
   - 所有用户，所有主机
 
-- 实现[Ihostuisupportsmultiplechoiceselection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection)接口的接口。
+- 实现 [IHostUISupportsMultipleChoiceSelection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) 接口的接口。
 
-- 实现[Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession)接口，以支持使用[Enter](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession)和[Exit-pssession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet 的交互式远程处理。
+- 实现 [IHostSupportsInteractiveSession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) 接口，以支持使用 [Enter](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) 和 [Exit-pssession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet 的交互式远程处理。
 
 - 使用标记 API 在命令行类型化时将其着色。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
- 此示例允许用户在命令行中输入命令，处理这些命令，然后输出结果。
+此示例允许用户在命令行中输入命令，处理这些命令，然后输出结果。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -403,9 +401,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
- 下面的代码是此主机应用程序所使用的[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
+下面的代码是此主机应用程序所使用的 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -627,9 +625,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-3"></a>示例 3
 
- 下面的代码是此主机应用程序所使用的[Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)类的实现方式。
+下面的代码是此主机应用程序所使用的 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 类的实现方式。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1145,9 +1143,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-4"></a>示例 4
 
- 下面的代码是此主机应用程序所使用的[Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
+下面的代码是此主机应用程序所使用的 [Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1357,9 +1355,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-5"></a>示例 5
 
- 下面的代码读取命令行并在输入文本时为其着色。 令牌通过使用[Psparser. 标记 *](/dotnet/api/System.Management.Automation.PSParser.Tokenize)方法来确定。
+下面的代码读取命令行并在输入文本时为其着色。 令牌通过使用 [Psparser. 标记 *](/dotnet/api/System.Management.Automation.PSParser.Tokenize) 方法来确定。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: PowerShell 库常见问题解答
 description: 有关 PowerShell 库的常见问题解答
-ms.openlocfilehash: 045db04d49e0c65f807fef254a17bf20bb877ff6
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 52c89d570041e1fce3466f574af7de25f05ec4c5
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92654155"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389886"
 ---
 # <a name="frequently-asked-questions-about-the-powershell-gallery"></a>有关 PowerShell 库的常见问题解答
 
@@ -17,14 +17,14 @@ PowerShell 模块是包含某些 PowerShell 功能的可重复使用程序包。
 
 ## <a name="what-is-a-powershell-script"></a>什么是 PowerShell 脚本？
 
-PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重用和共享。 PowerShell 工作流也是 PowerShell 脚本，可概述任务组和提供这些任务的序列。 有关详细信息，请访问 [Getting Started with PowerShell Workflow](https://technet.microsoft.com/library/jj134242.aspx)（PowerShell 工作流入门）。
+PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重用和共享。 PowerShell 工作流也是 PowerShell 脚本，可概述任务组和提供这些任务的序列。 有关详细信息，请访问 [Getting Started with PowerShell Workflow](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134242(v=ws.11))（PowerShell 工作流入门）。
 
 ## <a name="how-are-powershell-scripts-different-from-powershell-modules"></a>PowerShell 脚本 与 PowerShell 模块有何不同？
 
 通常模块更适合共享，但我们正启用脚本共享使向社区贡献工作流和脚本变得更加容易。 有关详细信息，请参阅以下博客：
 
-- [不编写脚本，编写 PowerShell 模块](https://blogs.technet.microsoft.com/heyscriptingguy/2011/06/27/dont-write-scripts-write-powershell-modules/)
-- [了解 PowerShell 模块](https://blogs.technet.microsoft.com/heyscriptingguy/2015/07/10/understanding-powershell-modules/)
+- [不编写脚本，编写 PowerShell 模块](https://devblogs.microsoft.com/scripting/dont-write-scripts-write-powershell-modules/)
+- [了解 PowerShell 模块](https://devblogs.microsoft.com/scripting/understanding-powershell-modules/)
 
 ## <a name="how-can-i-publish-to-the-powershell-gallery"></a>如何发布到 PowerShell 库？
 
@@ -64,7 +64,7 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>如何创建格式正确的模块清单？
 
-创建模块清单最简单的方法是运行 [New-ModuleManifest][] cmdlet。 PowerShell 5.0 或更高版本中，New-ModuleManifest 会生成格式正确的模块清单，其中包含 **ProjectUri** 、 **LicenseUri** 、 **Tags** 等有用元数据的空白字段。 只需填写空值，或使用生成的清单作为正确格式的示例。
+创建模块清单最简单的方法是运行 [New-ModuleManifest][] cmdlet。 PowerShell 5.0 或更高版本中，New-ModuleManifest 会生成格式正确的模块清单，其中包含 **ProjectUri**、**LicenseUri**、**Tags** 等有用元数据的空白字段。 只需填写空值，或使用生成的清单作为正确格式的示例。
 
 若要验证是否已正确填写所有必需的元数据字段，请使用 [Test-ModuleManifest][] cmdlet。
 
@@ -93,7 +93,7 @@ PowerShell 脚本是存储在.ps1 文件中的一系列命令，用于启用重�
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>如何创建格式正确的脚本文件？
 
-创建格式正确的脚本文件最简单的方法是运行 [New-ScriptFileInfo][] cmdlet。 PowerShell 5.0 中，New-ScriptFileInfo 会生成格式正确的脚本文件，其中包含 **ProjectUri** 、 **LicenseUri** 、 **Tags** 等有用元数据的空白字段。 只需填写空值，或使用生成的脚本文件作为正确格式的示例。
+创建格式正确的脚本文件最简单的方法是运行 [New-ScriptFileInfo][] cmdlet。 PowerShell 5.0 中，New-ScriptFileInfo 会生成格式正确的脚本文件，其中包含 **ProjectUri**、**LicenseUri**、**Tags** 等有用元数据的空白字段。 只需填写空值，或使用生成的脚本文件作为正确格式的示例。
 
 若要验证是否已正确填写所有必需的元数据字段，请使用 [Test-ScriptFileInfo][] cmdlet。
 
@@ -144,9 +144,9 @@ PowerShellGet 使用 NuGet 提供程序支持基于 NuGet 的存储库，例如 
 
 通常，建议选取最新版本的 PowerShellGet 模块（请注意其需要.NET 4.5）。
 
-**PowerShellGet** 模块需要 **PowerShell 3.0 或更高版本** 。
+**PowerShellGet** 模块需要 **PowerShell 3.0 或更高版本**。
 
-因此， **PowerShellGet** 需要以下操作系统之一：
+因此，**PowerShellGet** 需要以下操作系统之一：
 
 - Windows 10
 - Windows 8.1 专业版
@@ -156,7 +156,7 @@ PowerShellGet 使用 NuGet 提供程序支持基于 NuGet 的存储库，例如 
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-**PowerShellGet** 也需要 .NET Framework 4.5 或更高版本。 你可从[此处](https://msdn.microsoft.com/library/5a4x27ek.aspx)安装 .NET Framework 4.5 或更高版本。
+**PowerShellGet** 也需要 .NET Framework 4.5 或更高版本。 有关详细信息，请参阅[安装面向开发人员的 .NET Framework](/dotnet/framework/install/guide-for-developers)。
 
 ## <a name="is-it-possible-to-reserve-names-for-packages-that-will-be-published-in-future"></a>能否保留将来要发布的包的名称？
 

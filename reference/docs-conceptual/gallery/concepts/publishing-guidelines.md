@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 description: 本文介绍了一些推荐步骤，以确保发布到 PowerShell 库的包被广泛采用，并为用户提供高价值包。
 title: PowerShell 库发布指南和最佳做法
-ms.openlocfilehash: 949340aeba36df26c68f92422b8c11869ed3bf11
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 97af3761fad1efb849b7197761a3855c9f1b05a4
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92656155"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391164"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 库发布指南和最佳做法
 
@@ -50,7 +50,7 @@ ms.locfileid: "92656155"
 - 已更正或修复文档中的所有错误。
 - 已查看并在必要时解决所有警告。
 
-强烈建议从 PowerShell 库下载包的用户运行 **PSScriptAnalyzer** ，并评估所有错误和警告。 如果用户看到 PSScriptAnalyzer  报告的错误，他们很有可能会与包所有者进行联系。 如果包有充分理由保留标记为错误的代码，请将相应信息添加到文档中，以免多次回答同一问题。
+强烈建议从 PowerShell 库下载包的用户运行 **PSScriptAnalyzer**，并评估所有错误和警告。 如果用户看到 PSScriptAnalyzer  报告的错误，他们很有可能会与包所有者进行联系。 如果包有充分理由保留标记为错误的代码，请将相应信息添加到文档中，以免多次回答同一问题。
 
 ## <a name="include-documentation-and-examples"></a>添加文档和示例
 
@@ -188,7 +188,7 @@ PowerShell 的创建时间先于 SemVer 发布时间，因此它支持大多数�
 PowerShell 库的设计目标不是成为用于测试发布过程的目标。 测试发布到 PowerShell 库的端到端过程，其最佳方法是自行设置并使用本地存储库。 这可以通过多种方式实现，包括：
 
 - 使用 GitHub 中的 [PS 专用库项目](https://github.com/PowerShell/PSPrivateGallery)设置本地 PowerShell 库实例。 此预览项目有助于设置可控制并用于测试的 PowerShell 库实例。
-- 设置[内部 Nuget 存储库](https://blogs.msdn.microsoft.com/powershell/2014/05/20/setting-up-an-internal-powershellget-repository/)。
+- 设置[内部 Nuget 存储库](https://devblogs.microsoft.com/powershell/setting-up-an-internal-powershellget-repository/)。
   需要执行更多工作才能完成此设置，但具有以下优点：验证更多的要求，特别是验证 API 密钥的使用以及发布时目标中是否存在依赖关系。
 - 将文件共享设置为“存储库”  测试。 此设置很容易完成，但由于是文件共享，因此不会发生如上所示的验证。 这种情况下，一个潜在的优点是文件共享不会检查必需的 API 密钥，因此可以使用发布到 PowerShell 库时所用的密钥。
 

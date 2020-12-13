@@ -1,31 +1,33 @@
 ---
-title: 编写导航提供程序 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2fd27314a2b8547a15dd1bb72aa8f970d40b18cc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 编写导航提供程序
+description: 编写导航提供程序
+ms.openlocfilehash: 3123672d3365c97714557bd0e72a6e444ac228a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786775"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355215"
 ---
 # <a name="writing-a-navigation-provider"></a>编写导航提供程序
 
-本主题介绍如何实现支持嵌套容器 (多级别数据存储) 、移动项和相对路径）的 Windows PowerShell 提供程序的方法。 导航提供程序必须从[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类中派生。
+本主题介绍如何实现支持嵌套容器 (多级别数据存储) 、移动项和相对路径）的 Windows PowerShell 提供程序的方法。 导航提供程序必须从 [Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 类中派生。
 
-本主题中的示例中的提供程序使用 Access 数据库作为其数据存储。 有几个帮助器方法和用于与数据库进行交互的类。 有关包含帮助程序方法的完整示例，请参阅[AccessDBProviderSample05](./accessdbprovidersample05.md)。
+本主题中的示例中的提供程序使用 Access 数据库作为其数据存储。 有几个帮助器方法和用于与数据库进行交互的类。 有关包含帮助程序方法的完整示例，请参阅 [AccessDBProviderSample05](./accessdbprovidersample05.md)。
 
-有关 Windows PowerShell 提供程序的详细信息，请参阅[Windows Powershell 提供程序概述](./windows-powershell-provider-overview.md)。
+有关 Windows PowerShell 提供程序的详细信息，请参阅 [Windows Powershell 提供程序概述](./windows-powershell-provider-overview.md)。
 
 ## <a name="implementing-navigation-methods"></a>实现导航方法
 
-[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类实现支持嵌套的容器、相对路径和移动项的方法。 有关这些方法的完整列表，请参阅[NavigationCmdletProvider 方法](/dotnet/api/system.management.automation.provider.navigationcmdletprovider?view=pscore-6.2.0#methods)。
+[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类实现支持嵌套的容器、相对路径和移动项的方法。 有关这些方法的完整列表，请参阅 [NavigationCmdletProvider 方法](/dotnet/api/system.management.automation.provider.navigationcmdletprovider#methods)。
 
 > [!NOTE]
-> 本主题以[Windows PowerShell 提供程序快速入门](./windows-powershell-provider-quickstart.md)中的信息为基础。 本主题不包含有关如何设置提供程序项目的基本知识，或者如何实现从[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)类继承的方法，这些方法可创建和删除驱动器。 本主题还不介绍如何实现由[Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)或[Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider)类公开的方法的实现方法的实现方法的方法。 有关演示如何实现项 cmdlet 的示例，请参阅[编写项提供程序](./writing-an-item-provider.md)。 有关演示如何实现容器 cmdlet 的示例，请参阅[编写容器提供程序](./writing-a-container-provider.md)。
+> 本主题以 [Windows PowerShell 提供程序快速入门](./windows-powershell-provider-quickstart.md)中的信息为基础。 本主题不包含有关如何设置提供程序项目的基本知识，或者如何实现从 [Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 类继承的方法，这些方法可创建和删除驱动器。 本主题还不介绍如何实现由 [Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 或 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 类公开的方法的实现方法的实现方法的方法。 有关演示如何实现项 cmdlet 的示例，请参阅 [编写项提供程序](./writing-an-item-provider.md)。 有关演示如何实现容器 cmdlet 的示例，请参阅 [编写容器提供程序](./writing-a-container-provider.md)。
 
 ### <a name="declaring-the-provider-class"></a>声明提供程序类
 
-将提供程序声明为派生自[Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)类，并将其与[Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)的修饰进行对其修饰。
+将提供程序声明为派生自 [Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 类，并将其与 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)的修饰进行对其修饰。
 
 ```
 [CmdletProvider("AccessDB", ProviderCapabilities.None)]
@@ -125,7 +127,7 @@ protected override string GetParentPath(string path, string root)
 
 ### <a name="implementing-makepath"></a>实现 MakePath
 
-[Navigationcmdletprovider. Makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath)方法联接指定的父路径和指定的子路径以创建提供程序内部路径 (有关提供程序可以支持的路径类型的信息，请参阅[Windows PowerShell 提供程序概述](./windows-powershell-provider-overview.md)。 当用户调用[JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) cmdlet 时，PowerShell 引擎将调用此方法。
+[Navigationcmdletprovider. Makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath)方法联接指定的父路径和指定的子路径以创建提供程序内部路径 (有关提供程序可以支持的路径类型的信息，请参阅[Windows PowerShell 提供程序概述](./windows-powershell-provider-overview.md)。 当用户调用 [JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) cmdlet 时，PowerShell 引擎将调用此方法。
 
 ```csharp
 protected override string MakePath(string parent, string child)
@@ -214,7 +216,7 @@ protected override string NormalizeRelativePath(string path,
 
 ### <a name="implementing-moveitem"></a>实现 MoveItem
 
-[Navigationcmdletprovider. Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem)方法将项从指定的路径移动到指定的目标路径。 当用户调用[MoveItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.moveitemcommand) cmdlet 时，PowerShell 引擎将调用此方法。
+[Navigationcmdletprovider. Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem)方法将项从指定的路径移动到指定的目标路径。 当用户调用 [MoveItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.moveitemcommand) cmdlet 时，PowerShell 引擎将调用此方法。
 
 ```csharp
 protected override void MoveItem(string path, string destination)

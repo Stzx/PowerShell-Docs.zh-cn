@@ -1,36 +1,38 @@
 ---
-title: Host01 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a2ef53d36697d5637dff3de8a286902984f3c5a1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host01 示例
+description: Host01 示例
+ms.openlocfilehash: b4f1a81044a51855ad7decc25e1f5b1215ab0d62
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772241"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355470"
 ---
 # <a name="host01-sample"></a>Host01 示例
 
-此示例演示如何实现使用自定义主机的主机应用程序。 在此示例中，创建了一个使用自定义主机的运行空间，然后[使用了一个](/dotnet/api/System.Management.Automation.PowerShell)用于运行调用 "exit" 的脚本。 主机应用程序随后查看脚本输出并打印出结果。
+此示例演示如何实现使用自定义主机的主机应用程序。 在此示例中，创建了一个使用自定义主机的运行空间，然后 [使用了一个](/dotnet/api/System.Management.Automation.PowerShell) 用于运行调用 "exit" 的脚本。 主机应用程序随后查看脚本输出并打印出结果。
 
- 此示例使用 Windows PowerShell 提供的默认 UI 功能。 有关实现自定义主机的 UI 功能的详细信息，请参阅[Host02 示例](./host02-sample.md)。
+此示例使用 Windows PowerShell 提供的默认 UI 功能。 有关实现自定义主机的 UI 功能的详细信息，请参阅 [Host02 示例](./host02-sample.md)。
 
 ## <a name="requirements"></a>要求
 
- 此示例需要 Windows PowerShell 2.0。
+此示例需要 Windows PowerShell 2.0。
 
 ## <a name="demonstrates"></a>演示
 
-- 创建一个派生自[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类的自定义宿主类。
+- 创建一个派生自 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 类的自定义宿主类。
 
 - 创建使用自定义宿主类的运行空间。
 
-- 创建运行调用 exit 的脚本的[管理](/dotnet/api/System.Management.Automation.PowerShell)对象。
+- 创建运行调用 exit 的脚本的 [管理](/dotnet/api/System.Management.Automation.PowerShell) 对象。
 
 - 验证退出过程中是否使用了正确的退出代码。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
- 下面的代码演示了使用简单自定义主机接口的宿主应用程序的实现。
+下面的代码演示了使用简单自定义主机接口的宿主应用程序的实现。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -130,9 +132,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
- 下面的代码是此主机应用程序所使用的[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
+下面的代码是此主机应用程序所使用的 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

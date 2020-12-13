@@ -1,31 +1,39 @@
 ---
-title: 写入项提供程序 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1df30e7af1b534756f797b9b5d4e29b689cbc782
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 编写项提供程序
+description: 编写项提供程序
+ms.openlocfilehash: f70c6ee50277988c4e3b7c255dc4548bc30319dd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786758"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355198"
 ---
 # <a name="writing-an-item-provider"></a>编写项提供程序
 
-本主题介绍如何实现访问和操作数据存储区中的项的 Windows PowerShell 提供程序的方法。 若要能够访问项，提供程序必须从[Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)类派生而来。
+本主题介绍如何实现访问和操作数据存储区中的项的 Windows PowerShell 提供程序的方法。 若要能够访问项，提供程序必须从 [Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 类派生而来。
 
-本主题中的示例中的提供程序使用 Access 数据库作为其数据存储。 有几个帮助器方法和用于与数据库进行交互的类。 有关包含帮助程序方法的完整示例，请参阅[AccessDBProviderSample03](./accessdbprovidersample03.md)
+本主题中的示例中的提供程序使用 Access 数据库作为其数据存储。 有几个帮助器方法和用于与数据库进行交互的类。 有关包含帮助程序方法的完整示例，请参阅 [AccessDBProviderSample03](./accessdbprovidersample03.md)
 
-有关 Windows PowerShell 提供程序的详细信息，请参阅[Windows Powershell 提供程序概述](./windows-powershell-provider-overview.md)。
+有关 Windows PowerShell 提供程序的详细信息，请参阅 [Windows Powershell 提供程序概述](./windows-powershell-provider-overview.md)。
 
 ## <a name="implementing-item-methods"></a>实现项方法
 
-[Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)类公开了若干可用于访问和操作数据存储区中的项的方法。 有关这些方法的完整列表，请参阅[ItemCmdletProvider 方法](/dotnet/api/system.management.automation.provider.itemcmdletprovider?view=pscore-6.2.0#methods)。 在此示例中，我们将实现这四种方法。 [Itemcmdletprovider. Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem)将获取指定路径处的项。 Setitem * 设置指定项的值。 [Itemcmdletprovider. *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem)设置指定项的值。 [Itemcmdletprovider. Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists)检查项是否存在于指定的路径。 [Itemcmdletprovider. Isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath)检查路径，查看其是否映射到数据存储中的某个位置。
+[Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)类公开了若干可用于访问和操作数据存储区中的项的方法。
+有关这些方法的完整列表，请参阅 [ItemCmdletProvider 方法](/dotnet/api/system.management.automation.provider.itemcmdletprovider#methods)。
+在此示例中，我们将实现这四种方法。
+[Itemcmdletprovider. Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 将获取指定路径处的项。
+Setitem * 设置指定项的值。 [Itemcmdletprovider. *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem)设置指定项的值。
+[Itemcmdletprovider. Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 检查项是否存在于指定的路径。
+[Itemcmdletprovider. Isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 检查路径，查看其是否映射到数据存储中的某个位置。
 
 > [!NOTE]
-> 本主题以[Windows PowerShell 提供程序快速入门](./windows-powershell-provider-quickstart.md)中的信息为基础。 本主题不包含有关如何设置提供程序项目的基本知识，或者如何实现从[Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)类继承的方法，这些方法可创建和删除驱动器。
+> 本主题以 [Windows PowerShell 提供程序快速入门](./windows-powershell-provider-quickstart.md)中的信息为基础。 本主题不包含有关如何设置提供程序项目的基本知识，或者如何实现从 [Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 类继承的方法，这些方法可创建和删除驱动器。
 
 ### <a name="declaring-the-provider-class"></a>声明提供程序类
 
-将提供程序声明为派生自[Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)类，并将其与[Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)的修饰进行对其修饰。
+将提供程序声明为派生自 [Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 类，并将其与 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute)的修饰进行对其修饰。
 
 ```csharp
 [CmdletProvider("AccessDB", ProviderCapabilities.None)]
@@ -39,7 +47,7 @@ ms.locfileid: "87786758"
 
 ### <a name="implementing-getitem"></a>实现 GetItem
 
-当用户在提供程序上调用[GetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.getitemcommand) cmdlet 时，PowerShell 引擎将调用[Itemcmdletprovider. Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) .. e x * *。 方法返回指定路径处的项。 在 Access 数据库示例中，方法检查项是否为驱动器本身、数据库中的表或数据库中的行。 此方法通过调用[Cmdletprovider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)方法将该项发送到 PowerShell 引擎中。
+当用户在提供程序上调用[GetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.getitemcommand) cmdlet 时，PowerShell 引擎将调用[Itemcmdletprovider. Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) .. e x * *。 方法返回指定路径处的项。 在 Access 数据库示例中，方法检查项是否为驱动器本身、数据库中的表或数据库中的行。 此方法通过调用 [Cmdletprovider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 方法将该项发送到 PowerShell 引擎中。
 
 ```csharp
 protected override void GetItem(string path)
@@ -80,7 +88,7 @@ protected override void GetItem(string path)
 
 当用户调用[SetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.setitemcommand) cmdlet 时，PowerShell 引擎调用会调用[Itemcmdletprovider. Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem)方法。 "*" 方法。 它设置指定路径处的项的值。
 
-在 Access 数据库示例中，只有当项是行时才设置该项的值是有意义的，因此，当项不是行时，方法将引发[NotSupportedException](/dotnet/api/system.notsupportedexception?view=netframework-4.8) 。
+在 Access 数据库示例中，只有当项是行时才设置该项的值是有意义的，因此，当项不是行时，方法将引发 [NotSupportedException](/dotnet/api/system.notsupportedexception) 。
 
 ```csharp
 protected override void SetItem(string path, object values)
@@ -216,7 +224,7 @@ protected override bool IsValidPath(string path)
 
 ## <a name="next-steps"></a>后续步骤
 
-典型的实际提供商可以支持包含其他项目的项目，还可以将项目从驱动器中的某个路径移动到另一个路径。 有关支持容器的提供程序的示例，请参阅[编写容器提供程序](./writing-a-container-provider.md)。 有关支持移动项的提供程序的示例，请参阅[编写导航提供程序](./writing-a-navigation-provider.md)。
+典型的实际提供商可以支持包含其他项目的项目，还可以将项目从驱动器中的某个路径移动到另一个路径。 有关支持容器的提供程序的示例，请参阅 [编写容器提供程序](./writing-a-container-provider.md)。 有关支持移动项的提供程序的示例，请参阅 [编写导航提供程序](./writing-a-navigation-provider.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -7,12 +7,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ChildItem
-ms.openlocfilehash: c29a938fc73b8b69ea1bbf96f12f5d42d16f79bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0bcd46e49559ad625621a7ff81162af695f6f93c
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198845"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661318"
 ---
 # Get-ChildItem
 
@@ -39,7 +39,7 @@ Get-ChildItem [[-Filter] <string>] -LiteralPath <string[]> [-Include <string[]>]
  [-ReadOnly] [-System] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Get-ChildItem`Cmdlet 获取一个或多个指定位置中的项。 如果该项为容器，则此命令将获取容器内的各项（称为子项）。 可以使用 **递归** 参数获取所有子容器中的项，并使用 **Depth** 参数来限制要递归的级别数。
 
@@ -72,7 +72,7 @@ d-----        2/15/2019     08:29                Logs
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-默认情况 `Get-ChildItem` 下，会列出模式 ( **特性** ) 、 **LastWriteTime** 、文件大小 ( **长度** ) 和项的 **名称** 。 **Mode** 属性中的字母可解释如下：
+默认情况 `Get-ChildItem` 下，会列出模式 (**特性**) 、 **LastWriteTime**、文件大小 (**长度**) 和项的 **名称** 。 **Mode** 属性中的字母可解释如下：
 
 - `l` (链接) 
 - `d` (目录) 
@@ -143,7 +143,7 @@ Mode                LastWriteTime         Length Name
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-`Get-ChildItem`Cmdlet 使用 **Path** 参数指定 `C:\Test\*.txt` 。 **Path** 使用 `*`) 通配符 (星号来指定具有文件扩展名的所有文件 `.txt` 。 **递归** 参数会搜索 **Path** 目录的子目录，如 **目录：** 标题中所示。 **Force** 参数显示其模式为 h 的隐藏文件 `hiddenfile.txt` 。 **h**
+`Get-ChildItem`Cmdlet 使用 **Path** 参数指定 `C:\Test\*.txt` 。 **Path** 使用 `*`) 通配符 (星号来指定具有文件扩展名的所有文件 `.txt` 。 **递归** 参数会搜索 **Path** 目录的子目录，如 **目录：** 标题中所示。 **Force** 参数显示其模式为 h 的隐藏文件 `hiddenfile.txt` 。 
 
 ### 示例4：使用 Include 参数获取子项目
 
@@ -173,13 +173,13 @@ Mode                LastWriteTime         Length Name
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-`Get-ChildItem`Cmdlet 使用 **Path** 参数指定目录 **C:\Test** 。 **Path** 参数包含一个尾部星号 (`*`) 通配符，以指定目录的内容。
+`Get-ChildItem`Cmdlet 使用 **Path** 参数指定目录 **C:\Test**。 **Path** 参数包含一个尾部星号 (`*`) 通配符，以指定目录的内容。
 **Include** 参数使用星号 (`*`) 通配符来指定文件扩展名为 **.txt** 的所有文件。
 
-当使用 **Include** 参数时， **Path** 参数需要一个尾部星号 (`*`) 通配符，以指定目录的内容。 例如，`-Path C:\Test\*`。
+当使用 **Include** 参数时， **Path** 参数需要一个尾部星号 (`*`) 通配符，以指定目录的内容。 例如 `-Path C:\Test\*`。
 
 - 如果将 **递归** 参数添加到命令中，则 `*` **Path** 参数中) 的尾随星号 (是可选的。 **递归** 参数从 **路径** 目录及其子目录中获取项。 例如： `-Path C:\Test\ -Recurse -Include *.txt`
-- 如果 `*` **Path** 参数中未包含尾随星号 () ，则该命令不会返回任何输出并返回到 PowerShell 提示符。 例如，`-Path C:\Test\`。
+- 如果 `*` **Path** 参数中未包含尾随星号 () ，则该命令不会返回任何输出并返回到 PowerShell 提示符。 例如 `-Path C:\Test\`。
 
 ### 示例5：使用 Exclude 参数获取子项目
 
@@ -217,7 +217,7 @@ d-----        2/15/2019     13:21                Backup
 ```
 
 `Get-ChildItem`Cmdlet 使用 **Path** 参数来指定目录 `C:\Test\Logs` 。
-**Exclude** 参数使用星号 (`*`) 通配符来指定以或开头的任何文件或目录， **A** 从输出 **a** 中排除。
+**Exclude** 参数使用星号 (`*`) 通配符来指定以或开头的任何文件或目录， 从输出中排除。
 
 使用 **Exclude** 参数时， `*` **Path** 参数中)  (后缀星号是可选的。 例如，`-Path C:\Test\Logs` 或 `-Path C:\Test\Logs\*`。
 
@@ -307,7 +307,7 @@ d-----        2/14/2019     10:22                SubDir_Level3
 -a----        2/13/2019     08:55             26 file.txt
 ```
 
-`Get-ChildItem`Cmdlet 使用 **Path** 参数指定 **C:\Parent** 。 **Depth** 参数指定两个递归级别。 `Get-ChildItem` 显示 **Path** 参数所指定的目录的内容和两个子目录级别。
+`Get-ChildItem`Cmdlet 使用 **Path** 参数指定 **C:\Parent**。 **Depth** 参数指定两个递归级别。 `Get-ChildItem` 显示 **Path** 参数所指定的目录的内容和两个子目录级别。
 
 ### 示例9：获取硬链接信息
 
@@ -317,9 +317,9 @@ d-----        2/14/2019     10:22                SubDir_Level3
 Get-ChildItem -Path C:\PathContainingHardLink | Format-Table -View childrenWithHardLink
 ```
 
-### 示例9：实验性功能 PSUnixFileStat 的输出
+### 示例9：非 Windows 操作系统的输出
 
-在 Unix 系统上的 PowerShell 7 中，实验性功能 **PSUnixFileStat** 提供类似于 Unix 的输出：
+在 Unix 系统上的 PowerShell 7.1 中， `Get-ChildItem` 提供类似于 unix 的输出：
 
 ```powershell
 PS> Get-ChildItem /etc/r*
@@ -349,6 +349,9 @@ lrwxr-xr-x root wheel  11/8/2019 15:35   22 resolv.conf -> /private/var/run/reso
 - **组** 是组的所有者
 - **Size** 是在 Unix 系统上表示的文件或目录的大小
 
+> [!NOTE]
+> 此功能已从实验迁移到 PowerShell 7.1 中的主流。
+
 ## parameters
 
 ### -Attributes
@@ -359,7 +362,7 @@ lrwxr-xr-x root wheel  11/8/2019 15:35   22 resolv.conf -> /private/var/run/reso
 
 `Get-ChildItem -Attributes !Directory+!System+Encrypted, !Directory+!System+Compressed`
 
-若要查找具有常用属性的文件和文件夹，请使用 **attributes** 参数。 或参数 **目录** 、 **文件** 、 **隐藏** 、 **只读** 和 **系统** 。
+若要查找具有常用属性的文件和文件夹，请使用 **attributes** 参数。 或参数 **目录**、 **文件**、 **隐藏**、 **只读** 和 **系统**。
 
 Properties **参数支持** 以下属性：
 
@@ -373,7 +376,7 @@ Properties **参数支持** 以下属性：
 - **正常**
 - **NoScrubData**
 - **NotContentIndexed**
-- **断开**
+- **脱机**
 - **ReadOnly**
 - **ReparsePoint**
 - **SparseFile**
@@ -468,7 +471,7 @@ Accept wildcard characters: True
 
 ### -File
 
-若要获取文件列表，请使用 **File** 参数。 可以将 **递归** 参数用于 **File** 。
+若要获取文件列表，请使用 **File** 参数。 可以将 **递归** 参数用于 **File**。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -550,7 +553,7 @@ Accept wildcard characters: False
 
 ### -Include
 
-指定此 cmdlet 将在操作中包含的一个项或多个项（作为一个字符串数组）。 此参数值使 **Path** 参数有效。 请输入路径元素或模式，例如 `"*.txt"`。 允许使用通配符。 仅 **Include** 当命令包括项的内容时（例如 `C:\Windows\*` ，其中的通配符指定目录的内容），Include 参数才有效 `C:\Windows` 。
+指定此 cmdlet 将在操作中包含的一个项或多个项（作为一个字符串数组）。 此参数值使 **Path** 参数有效。 请输入路径元素或模式，例如 `"*.txt"`。 允许使用通配符。 仅当命令包括项的内容时（例如 `C:\Windows\*` ，其中的通配符指定目录的内容），Include 参数才有效 `C:\Windows` 。
 
 ```yaml
 Type: System.String[]

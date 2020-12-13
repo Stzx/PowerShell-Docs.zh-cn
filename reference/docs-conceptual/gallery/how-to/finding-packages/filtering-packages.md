@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: 筛选搜索结果
 description: 本文介绍用于筛选 PowerShell 库中的内容的用户界面。
-ms.openlocfilehash: cc375f3ddb35c95ed134776500bd326bc3db6b1a
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: a769daae903e614b96be1056e3ff14eca41970bd
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661399"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389821"
 ---
 # <a name="filtering-search-results"></a>筛选搜索结果
 
@@ -22,7 +22,7 @@ ms.locfileid: "92661399"
 - 包括预发行版
 - 仅稳定版
 
-若要了解“预发行版”和“稳定版”，请参阅 PowerShell 团队博客中的[在 PowerShellGet 和 PowerShell 库中添加的预发行版版本控制](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/)。
+若要了解“预发行版”和“稳定版”，请参阅 PowerShell 团队博客中的[在 PowerShellGet 和 PowerShell 库中添加的预发行版版本控制](https://devblogs.microsoft.com/powershell/prerelease-versioning-added-to-powershellget-and-powershell-gallery/)。
 
 使用下拉列表下的复选框，用户可以按下列依据筛选结果：
 

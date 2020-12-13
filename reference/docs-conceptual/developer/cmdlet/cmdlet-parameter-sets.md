@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 参数集
 ms.date: 09/13/2016
-ms.openlocfilehash: 202cdd354693b9b7edaca5c127ae1f7d88ff4a28
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 参数集
+description: Cmdlet 参数集
+ms.openlocfilehash: e84af7faf5b7459d8dbe06847526efe804e2c5e1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784412"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668280"
 ---
 # <a name="cmdlet-parameter-sets"></a>Cmdlet 参数集
 
@@ -14,7 +16,7 @@ PowerShell 使用参数集来编写单个 cmdlet，该 cmdlet 可以针对不同
 
 ## <a name="examples-of-parameter-sets"></a>参数集的示例
 
-例如，PowerShell `Get-EventLog` cmdlet 返回不同的信息，具体取决于用户是否指定了**List**或**LogName**参数。 如果指定了**List**参数，则 cmdlet 将返回有关日志文件本身的信息，而不返回这些日志文件所包含的事件信息。 如果指定了**LogName**参数，则 cmdlet 将返回有关特定事件日志中的事件的信息。 **List**和**LogName**参数标识两个单独的参数集。
+例如，PowerShell `Get-EventLog` cmdlet 返回不同的信息，具体取决于用户是否指定了 **List** 或 **LogName** 参数。 如果指定了 **List** 参数，则 cmdlet 将返回有关日志文件本身的信息，而不返回这些日志文件所包含的事件信息。 如果指定了 **LogName** 参数，则 cmdlet 将返回有关特定事件日志中的事件的信息。 **List** 和 **LogName** 参数标识两个单独的参数集。
 
 ## <a name="unique-parameter"></a>唯一参数
 
@@ -22,7 +24,7 @@ PowerShell 使用参数集来编写单个 cmdlet，该 cmdlet 可以针对不同
 
 ## <a name="multiple-parameter-sets"></a>多个参数集
 
-在下图中，左栏显示了三个有效的参数集。 **参数 A**对于第一个参数集是唯一的，**参数 B**对于第二个参数集是唯一的，而**参数 C**对第三个参数集是唯一的。 在右列中，参数集没有唯一参数。
+在下图中，左栏显示了三个有效的参数集。 **参数 A** 对于第一个参数集是唯一的， **参数 B** 对于第二个参数集是唯一的，而 **参数 C** 对第三个参数集是唯一的。 在右列中，参数集没有唯一参数。
 
 ![参数集的插图](media/cmdlet-parameter-sets/ps-parametersets.gif)
 
@@ -44,13 +46,13 @@ PowerShell 使用参数集来编写单个 cmdlet，该 cmdlet 可以针对不同
 
 ## <a name="default-parameter-sets"></a>默认参数集
 
-如果定义了多个参数集，则可以使用 `DefaultParameterSetName` **Cmdlet**特性的关键字来指定默认参数集。 如果 PowerShell 无法根据命令提供的信息确定要使用的参数集，则它将使用默认参数集。 有关**cmdlet**特性的详细信息，请参阅[cmdlet 特性声明](./cmdlet-attribute-declaration.md)。
+如果定义了多个参数集，则可以使用 `DefaultParameterSetName` **Cmdlet** 特性的关键字来指定默认参数集。 如果 PowerShell 无法根据命令提供的信息确定要使用的参数集，则它将使用默认参数集。 有关 **cmdlet** 特性的详细信息，请参阅 [cmdlet 特性声明](./cmdlet-attribute-declaration.md)。
 
 ## <a name="declaring-parameter-sets"></a>声明参数集
 
-若要创建参数集，您必须在 `ParameterSetName` 为参数集中的每个参数声明**参数**属性时指定关键字。 对于属于多个参数集的参数，请为每个参数集添加一个**参数**特性。 此特性使你能够以不同的方式为每个参数集定义参数。 例如，可以在一组中将参数定义为强制参数，并在另一个集中定义为可选参数。 但是，每个参数集必须包含一个唯一参数。 有关详细信息，请参阅[参数属性声明](parameter-attribute-declaration.md)。
+若要创建参数集，您必须在 `ParameterSetName` 为参数集中的每个参数声明 **参数** 属性时指定关键字。 对于属于多个参数集的参数，请为每个参数集添加一个 **参数** 特性。 此特性使你能够以不同的方式为每个参数集定义参数。 例如，可以在一组中将参数定义为强制参数，并在另一个集中定义为可选参数。 但是，每个参数集必须包含一个唯一参数。 有关详细信息，请参阅 [参数属性声明](parameter-attribute-declaration.md)。
 
-在下面的示例中， **UserName**参数是参数集的唯一参数 `Test01` ， **ComputerName**参数是参数集的唯一参数 `Test02` 。 **SharedParam**参数属于这两个集并且对于参数集是必需的， `Test01` 但对于参数集是可选的 `Test02` 。
+在下面的示例中， **UserName** 参数是参数集的唯一参数 `Test01` ， **ComputerName** 参数是参数集的唯一参数 `Test02` 。 **SharedParam** 参数属于这两个集并且对于参数集是必需的， `Test01` 但对于参数集是可选的 `Test02` 。
 
 ```csharp
 [Parameter(Position = 0, Mandatory = true, ParameterSetName = "Test01")]

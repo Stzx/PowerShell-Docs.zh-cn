@@ -1,12 +1,14 @@
 ---
-title: Host03 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: cba6e82c86da581b676adfebe3409e9555b63c84
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host03 示例
+description: Host03 示例
+ms.openlocfilehash: 8fcdb294f6bf2bea6a7204bd91b003f5789565c3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783290"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355436"
 ---
 # <a name="host03-sample"></a>Host03 示例
 
@@ -14,17 +16,17 @@ ms.locfileid: "87783290"
 
 ## <a name="requirements"></a>要求
 
- 此示例需要 Windows PowerShell 2.0。
+此示例需要 Windows PowerShell 2.0。
 
 ## <a name="demonstrates"></a>演示
 
-- 创建一个自定义主机，其类派生自[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类、 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)类和 Pshostrawuserinterface 类中的类的类和[System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)类中的类的类。
+- 创建一个自定义主机，其类派生自[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类、 [PSHostUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)类和 PSHostRawUserInterface 类中的类的类和[](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)类中的类的类。
 
 - 构建一个控制台应用程序，该应用程序使用这些主机类来构建交互式 Windows PowerShell shell。
 
-## <a name="example"></a>示例
+## <a name="example-1"></a>示例 1
 
- 此示例允许用户在命令行中输入命令，处理这些命令，然后输出结果。
+此示例允许用户在命令行中输入命令，处理这些命令，然后输出结果。
 
 ```csharp
 // Copyright (c) 2006 Microsoft Corporation. All rights reserved.
@@ -310,9 +312,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-2"></a>示例 2
 
- 下面的代码是此主机应用程序所使用的[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost)类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
+下面的代码是此主机应用程序所使用的 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
 
 ```csharp
 // Copyright (c) 2006 Microsoft Corporation. All rights reserved.
@@ -551,9 +553,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-3"></a>示例 3
 
- 下面的代码是此主机应用程序所使用的[Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)类的实现方式。
+下面的代码是此主机应用程序所使用的 [PSHostUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 类的实现方式。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -956,9 +958,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-4"></a>示例 4
 
- 下面的代码是此主机应用程序所使用的[Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
+下面的代码是此主机应用程序所使用的 [PSHostRawUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 类的实现方式。 未实现的那些元素会引发异常或不返回任何内容。
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

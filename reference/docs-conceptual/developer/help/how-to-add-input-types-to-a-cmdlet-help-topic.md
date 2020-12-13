@@ -1,18 +1,20 @@
 ---
-title: 如何向 Cmdlet 帮助主题添加输入类型
 ms.date: 09/12/2016
-ms.openlocfilehash: d41c49ff48cf361c2ba694d11576e84a9367eef5
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 如何向 Cmdlet 帮助主题添加输入类型
+description: 如何向 Cmdlet 帮助主题添加输入类型
+ms.openlocfilehash: f2ad87c54230bcdd7e0ea708e9a1869daef7495f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893418"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94391096"
 ---
 # <a name="how-to-add-input-types-to-a-cmdlet-help-topic"></a>如何向 Cmdlet 帮助主题添加输入类型
 
-本部分介绍如何将**输入**部分添加到 PowerShell cmdlet 帮助主题。 "**输入**" 部分列出了 cmdlet 作为管道的输入接受的对象的 .net 类，可以通过值或按属性名称。
+本部分介绍如何将 **输入** 部分添加到 PowerShell cmdlet 帮助主题。 " **输入** " 部分列出了 cmdlet 作为管道的输入接受的对象的 .net 类，可以通过值或按属性名称。
 
-可以添加到**输入**部分的类的数量没有限制。 输入类型括在 `<command:inputTypes>` 节点中，每个类都包含在元素中 `<command:inputType>` 。
+可以添加到 **输入** 部分的类的数量没有限制。 输入类型括在 `<command:inputTypes>` 节点中，每个类都包含在元素中 `<command:inputType>` 。
 
 架构包括 `<maml:description>` 每个元素中的两个元素 `<command:inputType>` 。
 但是，该 `Get-Help` cmdlet 只显示元素的内容 `<command:inputType>/<maml:description>` 。
@@ -43,8 +45,8 @@ ms.locfileid: "86893418"
 <command:inputTypes>
   <command:inputType>
     <dev:type>
-      <maml:name> System.DateTime </maml:name>
-      <maml:uri>  https://msdn.microsoft.com/library/system.datetime.aspx </maml:uri>
+      <maml:name>System.DateTime</maml:name>
+      <maml:uri>https://docs.microsoft.com/dotnet/api/system.datetime</maml:uri>
       <maml:description/>
     </dev:type>
     <maml:description>

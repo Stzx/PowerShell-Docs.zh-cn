@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 进行 PowerShell 开发
 description: 使用 Visual Studio Code 进行 PowerShell 开发
 ms.date: 11/07/2019
-ms.openlocfilehash: 181746e7d3df2880223d1f15a0c8b99b324f5b98
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: 8a4ceb3da669716915449af2d211aaf2ae61bb4f
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782525"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390282"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>使用 Visual Studio Code 进行 PowerShell 开发
 
@@ -42,9 +42,9 @@ ms.locfileid: "87782525"
 
    每个平台都有安装说明：
 
-   - **Windows**：按照[在 Windows 上运行 Visual Studio Code][vsc-setup-win] 页面上的安装说明进行操作。
-   - **macOS**：请按照[在 macOS 上运行 Visual Studio Code][vsc-setup-macOS] 页面上的安装说明进行操作。
-   - **Linux**：请按照[在 Linux 上运行 Visual Studio Code][vsc-setup-linux] 页面上的安装说明进行操作。
+   - **Windows**：按照 [在 Windows 上运行 Visual Studio Code][vsc-setup-win] 页面上的安装说明进行操作。
+   - **macOS**：请按照 [在 macOS 上运行 Visual Studio Code][vsc-setup-macOS] 页面上的安装说明进行操作。
+   - **Linux**：请按照 [在 Linux 上运行 Visual Studio Code][vsc-setup-linux] 页面上的安装说明进行操作。
 
 1. 安装 PowerShell 扩展。
 
@@ -317,7 +317,7 @@ Visual Studio Code 会在工作区文件夹的根目录中创建一个目录和�
 [getting-started]:        https://devblogs.microsoft.com/scripting/get-started-with-powershell-development-in-visual-studio-code/
 [psdbgblog]:              https://johnpapa.net/debugging-with-visual-studio-code/
 [psdbg-gh]:               https://github.com/PowerShell/vscode-powershell/tree/master/examples
-[pscdn]:                  https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
+[pscdn]:                  https://docs.microsoft.com/archive/blogs/cdndevs/visual-studio-code-powershell-extension
 
 <!-- issues -->
 [GitHub 问题]:          https://github.com/PowerShell/vscode-powershell/issues

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 description: 本文档介绍了一些最佳做法，以帮助工程师部署 DSC 拉取服务器。
 keywords: dsc,powershell,配置,安装程序
 title: 请求服务器最佳做法
-ms.openlocfilehash: 0021baa219a0936405eccf2cc7741e042f8bf09f
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 6c754e6d035cc714a86da86ec916ba2c7f833268
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92664333"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389379"
 ---
 # <a name="pull-server-best-practices"></a>请求服务器最佳做法
 
@@ -72,7 +72,7 @@ Windows Server 2012 R2 包括一种名为 DSC 服务的功能。 DSC 服务功�
 
 ### <a name="dsc-resource"></a>DSC 资源
 
-可以通过使用 DSC 配置脚本设置服务来简化请求服务器部署。 本文档包含可以用于部署生产准备就绪服务器节点的配置脚本。 若要使用配置脚本，需要一个未包含在 Windows Server 中的 DSC 模块。 所需模块名称是 **xPSDesiredStateConfiguration** ，其中包括 DSC 资源 **xDscWebService** 。 可以在[此处](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d)下载 xPSDesiredStateConfiguration 模块。
+可以通过使用 DSC 配置脚本设置服务来简化请求服务器部署。 本文档包含可以用于部署生产准备就绪服务器节点的配置脚本。 若要使用配置脚本，需要一个未包含在 Windows Server 中的 DSC 模块。 所需模块名称是 **xPSDesiredStateConfiguration**，其中包括 DSC 资源 **xDscWebService**。 可以在[此处](https://github.com/dsccommunity/xPSDesiredStateConfiguration)下载 xPSDesiredStateConfiguration 模块。
 
 使用 PowerShellGet 模块中的 `Install-Module` cmdlet。
 

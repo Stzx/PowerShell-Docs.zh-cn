@@ -6,12 +6,12 @@ ms.date: 02/10/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 关于 PSReadLine
-ms.openlocfilehash: 890f8e92172f2d492b6b817b558d4f25c70e8949
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: f5ae99a7c8bdae82372423a3e4d8261d95ab83d5
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93199567"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692201"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -35,10 +35,10 @@ PSReadLine 2.0 为 PowerShell 控制台提供了强大的命令行编辑体验�
 - Emacs yank/kill 循环
 - 基于 PowerShell 令牌的 "word" 移动和终止
 
-类 **[PSConsoleReadLine]** 中提供了以下函数。
-
 > [!NOTE]
 > 从 PowerShell 7.0 开始，如果检测到屏幕阅读器程序，PowerShell 会跳过在 Windows 上自动加载 PSReadLine。 目前，PSReadLine 不能与屏幕阅读器很好地配合使用。 Windows 上 PowerShell 7.0 的默认呈现和格式设置正常。 如有必要，可以手动加载模块。
+
+类 **[PSConsoleReadLine]** 中提供了以下函数。
 
 ## <a name="basic-editing-functions"></a>基本编辑函数
 
@@ -1287,11 +1287,7 @@ bool TryGetArgAsInt(System.Object arg, [ref] int numericArg,
   [ref]$numericArg, 1)
 ```
 
-## <a name="note"></a>注意
-
-### <a name="powershell-compatibility"></a>POWERSHELL 兼容性
-
-PSReadLine 要求安装 PowerShell 3.0 或更高版本，以及控制台主机。 它在 PowerShell ISE 中不起作用。 它在 Visual Studio Code 的控制台中工作。
+## <a name="note"></a>备注
 
 ### <a name="command-history"></a>命令历史记录
 

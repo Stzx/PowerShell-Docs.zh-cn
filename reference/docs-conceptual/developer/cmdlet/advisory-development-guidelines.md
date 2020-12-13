@@ -1,12 +1,14 @@
 ---
-title: 顾问开发指南 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: dc8ef586954106f6d7fbce550dc22cd935018936
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 咨询性的开发指南
+description: 咨询性的开发指南
+ms.openlocfilehash: 1ac18925bbc2506e6a03810d24f58c2f3113fd55
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782423"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668314"
 ---
 # <a name="advisory-development-guidelines"></a>咨询性的开发指南
 
@@ -18,17 +20,17 @@ ms.locfileid: "87782423"
 
 ### <a name="support-an-inputobject-parameter-ad01"></a>支持 (AD01 的 InputObject 参数) 
 
-由于 Windows PowerShell 直接与 Microsoft .NET 框架对象结合使用，因此 .NET Framework 对象通常可用，与用户执行特定操作所需的类型完全匹配。 `InputObject`参数的标准名称，该参数将此类对象作为输入。 例如， [StopProc 教程](./stopproc-tutorial.md)中的示例**停止**过程 cmdlet 定义了 `InputObject` 支持管道输入的进程类型的参数。 用户可以获取一组进程对象，对其进行操作以选择要停止的确切对象，然后将这些对象直接传递给**Stop Proc** cmdlet。
+由于 Windows PowerShell 直接与 Microsoft .NET 框架对象结合使用，因此 .NET Framework 对象通常可用，与用户执行特定操作所需的类型完全匹配。 `InputObject` 参数的标准名称，该参数将此类对象作为输入。 例如， [StopProc 教程](./stopproc-tutorial.md)中的示例 **停止** 过程 cmdlet 定义了 `InputObject` 支持管道输入的进程类型的参数。 用户可以获取一组进程对象，对其进行操作以选择要停止的确切对象，然后将这些对象直接传递给 **Stop Proc** cmdlet。
 
 ### <a name="support-the-force-parameter-ad02"></a>支持 (AD02) 的 Force 参数
 
 有时，cmdlet 需要保护用户执行所请求的操作。 如果用户具有执行操作的权限，则此类 cmdlet 应支持 `Force` 参数以允许用户重写该保护。
 
-例如，[删除项](/powershell/module/microsoft.powershell.management/remove-item)cmdlet 通常不会删除只读文件。 但是，此 cmdlet 支持 `Force` 参数，因此用户可以强制删除只读文件。 如果用户已有权修改只读属性，并且用户删除了该文件，则使用 `Force` 参数可以简化该操作。 但是，如果用户没有删除该文件的权限，则该参数不 `Force` 起作用。
+例如， [删除项](/powershell/module/microsoft.powershell.management/remove-item) cmdlet 通常不会删除只读文件。 但是，此 cmdlet 支持 `Force` 参数，因此用户可以强制删除只读文件。 如果用户已有权修改只读属性，并且用户删除了该文件，则使用 `Force` 参数可以简化该操作。 但是，如果用户没有删除该文件的权限，则该参数不 `Force` 起作用。
 
 ### <a name="handle-credentials-through-windows-powershell-ad03"></a>通过 Windows PowerShell (AD03 处理凭据) 
 
-Cmdlet 应该定义 `Credential` 参数来表示凭据。 此参数[的类型必须](/dotnet/api/System.Management.Automation.PSCredential)为类型，并且必须使用 Credential 特性声明进行定义。 此支持会自动提示用户输入用户名和密码，或者在未直接提供完整凭据时提示用户。 有关 Credential 特性的详细信息，请参阅[Credential 特性声明](./credential-attribute-declaration.md)。
+Cmdlet 应该定义 `Credential` 参数来表示凭据。 此参数 [的类型必须](/dotnet/api/System.Management.Automation.PSCredential) 为类型，并且必须使用 Credential 特性声明进行定义。 此支持会自动提示用户输入用户名和密码，或者在未直接提供完整凭据时提示用户。 有关 Credential 特性的详细信息，请参阅 [Credential 特性声明](./credential-attribute-declaration.md)。
 
 ### <a name="support-encoding-parameters-ad04"></a>支持编码参数 (AD04) 
 
@@ -36,7 +38,7 @@ Cmdlet 应该定义 `Credential` 参数来表示凭据。 此参数[的类型必
 
 ### <a name="test-cmdlets-should-return-a-boolean-ad05"></a>测试 Cmdlet 应返回布尔值 (AD05) 
 
-对其资源执行测试的 cmdlet[应将 system.string 类型返回](/dotnet/api/System.Boolean)到管道，以使它们可用于条件表达式。
+对其资源执行测试的 cmdlet [应将 system.string 类型返回](/dotnet/api/System.Boolean) 到管道，以使它们可用于条件表达式。
 
 ## <a name="code-guidelines"></a>代码准则
 
@@ -52,21 +54,21 @@ Cmdlet 应该定义 `Credential` 参数来表示凭据。 此参数[的类型必
 
 #### <a name="name-the-cmdlet-class-to-match-the-cmdlet-name"></a>将 Cmdlet 类命名为与 Cmdlet 名称匹配
 
-为实现 cmdlet 的 .NET Framework 类命名时，请将类命名为 " *\<Verb>**\<Noun>**\<Command>* "，其中，将 *\<Verb>* 和占位符替换为 *\<Noun>* 用于 cmdlet 名称的动词和名词。 例如，[获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process)cmdlet 由名为的类实现 `GetProcessCommand` 。
+为实现 cmdlet 的 .NET Framework 类命名时，请将类命名为 " *\<Verb>**\<Noun>**\<Command>* "，其中，将 *\<Verb>* 和占位符替换为 *\<Noun>* 用于 cmdlet 名称的动词和名词。 例如， [获取进程](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet 由名为的类实现 `GetProcessCommand` 。
 
 ### <a name="if-no-pipeline-input-override-the-beginprocessing-method-ac02"></a>如果没有管道输入，则不会重写 BeginProcessing 方法 (AC02) 
 
-如果 cmdlet 不接受来自管道的输入，则应在[BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)方法中实现处理。 使用此方法可使 Windows PowerShell 保持 cmdlet 之间的顺序。 管道中的第一个 cmdlet 始终返回其对象，然后管道中的其余 cmdlet 才能开始处理。
+如果 cmdlet 不接受来自管道的输入，则应在 [BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 方法中实现处理。 使用此方法可使 Windows PowerShell 保持 cmdlet 之间的顺序。 管道中的第一个 cmdlet 始终返回其对象，然后管道中的其余 cmdlet 才能开始处理。
 
 ### <a name="to-handle-stop-requests-override-the-stopprocessing-method-ac03"></a>若要处理 Stop 请求，请重写 StopProcessing 方法 (AC03) 
 
-重写[StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing)方法，以使 Cmdlet 能够处理停止信号。 某些 cmdlet 需要很长时间才能完成其操作，并且在对 Windows PowerShell 运行时的调用之间等待较长的时间，例如当 cmdlet 在长时间运行的 RPC 调用中阻止该线程时。 这包括一些 cmdlet，这些 cmdlet 将对[WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject)方法的调用发送到[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)方法，并将其发送到可能需要很长时间才能完成的其他反馈机制。 对于这些情况，用户可能需要将停止信号发送到这些 cmdlet。
+重写 [StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) 方法，以使 Cmdlet 能够处理停止信号。 某些 cmdlet 需要很长时间才能完成其操作，并且在对 Windows PowerShell 运行时的调用之间等待较长的时间，例如当 cmdlet 在长时间运行的 RPC 调用中阻止该线程时。 这包括一些 cmdlet，这些 cmdlet 将对 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 方法的调用发送到 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 方法，并将其发送到可能需要很长时间才能完成的其他反馈机制。 对于这些情况，用户可能需要将停止信号发送到这些 cmdlet。
 
 ### <a name="implement-the-idisposable-interface-ac04"></a>实现 IDisposable 接口 (AC04) 
 
-如果 cmdlet 的对象未释放 (写入到 ProcessRecord 方法) 的管道，则 cmdlet 可能需要额外的对象处理[功能](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)。） 例如，如果你的 cmdlet 打开其[BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)方法中的文件句柄，并使该句柄处于打开状态以供[ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)方法使用，则必须在处理结束时关闭此句柄。
+如果 cmdlet 的对象未释放 (写入到 ProcessRecord 方法) 的管道，则 cmdlet 可能需要额外的对象处理 [功能](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 。） 例如，如果你的 cmdlet 打开其 [BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 方法中的文件句柄，并使该句柄处于打开状态以供 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 方法使用，则必须在处理结束时关闭此句柄。
 
-Windows PowerShell 运行时并不总是调用[system.web. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)方法。 例如，如果 cmdlet 在其操作中间中途取消，或在 cmdlet 的任何部分发生终止错误，则可能不会调用[system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 。 因此，需要对象清理的 cmdlet 的 .NET Framework 类应实现完整的[IDisposable](/dotnet/api/System.IDisposable)接口模式（包括终结器），以便 Windows PowerShell 运行时可以在处理结束时调用[IDisposable 和 *](/dotnet/api/System.IDisposable.Dispose) [方法，这](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)两个方法。
+Windows PowerShell 运行时并不总是调用  [system.web. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 方法。 例如，如果 cmdlet 在其操作中间中途取消，或在 cmdlet 的任何部分发生终止错误，则可能不会调用 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 。 因此，需要对象清理的 cmdlet 的 .NET Framework 类应实现完整的[IDisposable](/dotnet/api/System.IDisposable)接口模式（包括终结器），以便 Windows PowerShell 运行时可以在处理结束时调用[IDisposable 和 *](/dotnet/api/System.IDisposable.Dispose) [方法，这](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)两个方法。
 
 ### <a name="use-serialization-friendly-parameter-types-ac05"></a>使用序列化友好参数类型 (AC05) 
 
@@ -106,7 +108,7 @@ Windows PowerShell 运行时并不总是调用[system.web. EndProcessing](/dotne
 
 ### <a name="use-securestring-for-sensitive-data-ac06"></a>将 SecureString 用于敏感数据 (AC06) 
 
-当处理敏感数据时，始终使用[Securestring](/dotnet/api/System.Security.SecureString)数据类型。 这可能包括参数的管道输入，并将敏感数据返回给管道。
+当处理敏感数据时，始终使用 [Securestring](/dotnet/api/System.Security.SecureString) 数据类型。 这可能包括参数的管道输入，并将敏感数据返回给管道。
 
 ## <a name="see-also"></a>另请参阅
 

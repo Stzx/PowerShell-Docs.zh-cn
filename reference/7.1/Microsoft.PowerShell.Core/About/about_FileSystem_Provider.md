@@ -2,16 +2,16 @@
 description: FileSystem
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 06/18/2019
+ms.date: 11/13/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: FileSystem 提供程序
-ms.openlocfilehash: fb4135663d368867661e87327aa52a9213757d08
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: a1ea71d8ce402c71ae872260e8a38b03de89cf1d
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94391470"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661403"
 ---
 # <a name="filesystem-provider"></a>FileSystem 提供程序
 
@@ -25,7 +25,7 @@ FileSystem
 
 ## <a name="capabilities"></a>功能
 
-**Filter** 、 **ShouldProcess**
+**Filter**、 **ShouldProcess**
 
 ## <a name="short-description"></a>简短说明
 
@@ -40,7 +40,7 @@ PowerShell **FileSystem** 提供程序可让你获取、添加、更改、清除
 名为的驱动器 `TEMP:` 将映射到用户的临时目录路径。
 
 >[!NOTE]
-> TEMP：驱动器中的内容不会由 PowerShell 自动删除，并且由用户或操作系统进行管理。
+> TEMP：驱动器中的内容不会由 PowerShell 自动删除，并且由用户或操作系统进行管理。 此功能已从 PowerShell 版本7.0 中的实验功能中移出
 
 **FileSystem** 提供程序支持以下 cmdlet，本文将对此进行介绍。
 
@@ -65,11 +65,11 @@ PowerShell **FileSystem** 提供程序可让你获取、添加、更改、清除
 
 ## <a name="types-exposed-by-this-provider"></a>此提供程序公开的类型
 
-文件是 [FileInfo](/dotnet/api/system.io.fileinfo) 类的实例。  目录是 [DirectoryInfo](/dotnet/api/system.io.directoryinfo) 类的实例。
+文件是 [FileInfo](/dotnet/api/system.io.fileinfo) 类的实例。 目录是 [DirectoryInfo](/dotnet/api/system.io.directoryinfo) 类的实例。
 
 ## <a name="navigating-the-filesystem-drives"></a>导航 FileSystem 驱动器
 
-**FileSystem** 提供程序通过将计算机上的所有逻辑驱动器映射为 PowerShell 驱动器来公开其数据存储。 若要使用 **FileSystem** 驱动器，你可以将你的位置更改为驱动器 u 驱动器名称后跟冒号 (`:`) 。
+**FileSystem** 提供程序通过将计算机上的所有逻辑驱动器映射为 PowerShell 驱动器来公开其数据存储。 若要使用 **FileSystem** 驱动器，可使用驱动器名称后跟冒号 () ，将位置更改为驱动器 `:` 。
 
 ```powershell
 Set-Location C:
@@ -340,18 +340,18 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 指定文件编码。 默认值为 ASCII。
 
-- **Ascii** ：使用 ascii (7 位) 字符集的编码。
-- **BigEndianUnicode** ：使用大字节序字节顺序对 utf-16 格式进行编码。
-- **String** ：对字符串使用编码类型。
-- **Unicode** ：使用小 endian 字节顺序对 utf-16 格式进行编码。
-- **UTF7** ：用 Utf-7 格式编码。
-- **UTF8** ：以 utf-8 格式进行编码。
-- **UTF8BOM** ：采用 Utf-8 格式编码 (BOM) 
-- **UF8NOBOM** ：用无字节顺序标记的 Utf-8 格式编码 (BOM) 
-- **UTF32** ：以32格式编码。
-- **默认** ：在默认的安装代码页中进行编码。
-- **OEM** ：对 MS-DOS 和控制台程序使用默认编码。
-- **未知** ：编码类型未知或无效。 数据可作为二进制处理。
+- **Ascii**：使用 ascii (7 位) 字符集的编码。
+- **BigEndianUnicode**：使用大字节序字节顺序对 utf-16 格式进行编码。
+- **String**：对字符串使用编码类型。
+- **Unicode**：使用小 endian 字节顺序对 utf-16 格式进行编码。
+- **UTF7**：用 Utf-7 格式编码。
+- **UTF8**：以 utf-8 格式进行编码。
+- **UTF8BOM**：采用 Utf-8 格式编码 (BOM) 
+- **UF8NOBOM**：用无字节顺序标记的 Utf-8 格式编码 (BOM) 
+- **UTF32**：以32格式编码。
+- **默认**：在默认的安装代码页中进行编码。
+- **OEM**：对 MS-DOS 和控制台程序使用默认编码。
+- **未知**：编码类型未知或无效。 数据可作为二进制处理。
 
 #### <a name="cmdlets-supported"></a>支持的 cmdlet
 
@@ -405,7 +405,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 - **Hidden**
 - **正常**
 - **NotContentIndexed**
-- **Offline**
+- **脱机**
 - **ReadOnly**
 - **ReparsePoint**
 - **SparseFile**
@@ -494,7 +494,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 #### <a name="cmdlets-supported"></a>支持的 cmdlet
 
-- [Test-Path](xref:Microsoft.PowerShell.Management.Test-Path)
+- [测试-路径](xref:Microsoft.PowerShell.Management.Test-Path)
 
 ### <a name="olderthan-systemdatetime"></a>OlderThan \<System.DateTime\>
 
@@ -504,7 +504,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 #### <a name="cmdlets-supported"></a>支持的 cmdlet
 
-- [Test-Path](xref:Microsoft.PowerShell.Management.Test-Path)
+- [测试-路径](xref:Microsoft.PowerShell.Management.Test-Path)
 
 ### <a name="stream-systemstring"></a>Stream \<System.String\>
 
@@ -554,7 +554,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 从 Windows PowerShell 3.0 开始，你可以获取有关提供程序 cmdlet 的自定义帮助主题，它们介绍了这些 cmdlet 在文件系统驱动器中的行为方式。
 
-若要获取针对文件系统驱动器进行自定义的帮助主题，请在文件系统驱动器中运行[get-help](xref:Microsoft.PowerShell.Core.Get-Help)命令，或使用 get-help 的 `-Path` 参数来[Get-Help](xref:Microsoft.PowerShell.Core.Get-Help)指定文件系统驱动器。
+若要获取针对文件系统驱动器进行自定义的帮助主题，请在文件系统驱动器中运行[get-help](xref:Microsoft.PowerShell.Core.Get-Help)命令，或使用 get-help 的 `-Path` 参数来[](xref:Microsoft.PowerShell.Core.Get-Help)指定文件系统驱动器。
 
 ```powershell
 Get-Help Get-ChildItem

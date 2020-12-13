@@ -7,12 +7,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-item?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Item
-ms.openlocfilehash: 25d07028430d6ad6719136bd484d39e116d81516
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d9c8d13f992e6631ff5982b4a33542c661991562
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198548"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661352"
 ---
 # Get-Item
 
@@ -35,7 +35,7 @@ Get-Item -LiteralPath <String[]> [-Filter <String>] [-Include <String[]>] [-Excl
  [-Force] [-Credential <PSCredential>] [-Stream <String[]>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Get-Item`Cmdlet 将获取位于指定位置的项。 除非使用通配符 (`*`) 请求该项的所有内容，否则它不会获取位于该位置的项的内容。
 
@@ -130,9 +130,9 @@ Get-Item C:\Windows\*.* -Exclude "w*"
 Get-Item -Path C:\PathWhichIsAHardLink | Format-Table -View childrenWithHardlink
 ```
 
-### 示例9：实验性功能 PSUnixFileStat 的输出
+### 示例9：非 Windows 操作系统的输出
 
-在 Unix 系统上的 PowerShell 7 中，实验性功能 **PSUnixFileStat** 提供类似于 Unix 的输出：
+在 Unix 系统上的 PowerShell 7.1 中， `Get-Item` cmdlet 提供类似于 unix 的输出：
 
 ```powershell
 PS> Get-Item /Users
@@ -152,6 +152,9 @@ drwxr-xr-x  root  admin   12/20/2019 11:46   192   Users
 - **用户** 是文件所有者
 - **组** 是组的所有者
 - **Size** 是在 Unix 系统上表示的文件或目录的大小
+
+> [!NOTE]
+> 此功能已从实验迁移到 PowerShell 7.1 中的主流。
 
 ## PARAMETERS
 
@@ -194,7 +197,7 @@ Accept wildcard characters: False
 
 ### -Exclude
 
-指定为字符串数组，此 cmdlet 在操作中排除的项。 此参数值使 **Path** 参数有效。 请输入路径元素或模式，例如 `*.txt`。 允许使用通配符。 仅 **Exclude** 当命令包括项的内容时（例如 `C:\Windows\*` ，其中的通配符指定目录的内容），Exclude 参数才有效 `C:\Windows` 。
+指定为字符串数组，此 cmdlet 在操作中排除的项。 此参数值使 **Path** 参数有效。 请输入路径元素或模式，例如 `*.txt`。 允许使用通配符。 仅当命令包括项的内容时（例如 `C:\Windows\*` ，其中的通配符指定目录的内容），Exclude 参数才有效 `C:\Windows` 。
 
 ```yaml
 Type: System.String[]
@@ -243,7 +246,7 @@ Accept wildcard characters: False
 
 ### -Include
 
-指定此 cmdlet 将在操作中包含的一个项或多个项（作为一个字符串数组）。 此参数值使 **Path** 参数有效。 请输入路径元素或模式，例如 `*.txt`。 允许使用通配符。 仅 **Include** 当命令包括项的内容时（例如 `C:\Windows\*` ，其中的通配符指定目录的内容），Include 参数才有效 `C:\Windows` 。
+指定此 cmdlet 将在操作中包含的一个项或多个项（作为一个字符串数组）。 此参数值使 **Path** 参数有效。 请输入路径元素或模式，例如 `*.txt`。 允许使用通配符。 仅当命令包括项的内容时（例如 `C:\Windows\*` ，其中的通配符指定目录的内容），Include 参数才有效 `C:\Windows` 。
 
 ```yaml
 Type: System.String[]
@@ -315,7 +318,7 @@ Accept wildcard characters: True
 若要以递归方式获取项的内容，请使用 `Get-ChildItem` 。
 
 若要在注册表中导航，请使用此 cmdlet 获取注册表项，并使用 `Get-ItemProperty` 来获取注册表值和数据。 注册表值被视为注册表项的属性。
-  
+
 此 cmdlet 用于处理由任何提供程序公开的数据。 若要列出会话中可用的提供程序，请键入 `Get-PsProvider`。 有关详细信息，请参阅 [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md)。
 
 ## 相关链接
