@@ -1,31 +1,33 @@
 ---
-title: Windows PowerShell 格式设置文件 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 54fae12163f8d439c2acc24df17ed140a556cba0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 格式设置文件
+description: Windows PowerShell 格式设置文件
+ms.openlocfilehash: 7fa58a3463dc4b2a23d38d161d83387744334d44
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783494"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666359"
 ---
-# <a name="windows-powershell-formatting-files"></a><span data-ttu-id="4d1bd-102">Windows PowerShell 格式设置文件</span><span class="sxs-lookup"><span data-stu-id="4d1bd-102">Windows PowerShell Formatting Files</span></span>
+# <a name="windows-powershell-formatting-files"></a><span data-ttu-id="a5d58-103">Windows PowerShell 格式设置文件</span><span class="sxs-lookup"><span data-stu-id="a5d58-103">Windows PowerShell Formatting Files</span></span>
 
-<span data-ttu-id="4d1bd-103">Windows PowerShell 提供多个格式化文件 ( # B0 xml) 位于安装目录中 (`$pshome`) 。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-103">Windows PowerShell provides several formatting files (.format.ps1xml) that are located in the installation directory (`$pshome`).</span></span> <span data-ttu-id="4d1bd-104">其中每个文件定义一组特定 .NET 对象的默认显示。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-104">Each of these files defines the default display for a specific set of .NET objects.</span></span> <span data-ttu-id="4d1bd-105">永远不应更改这些文件。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-105">These files should never be changed.</span></span> <span data-ttu-id="4d1bd-106">但是，可以将它们用作创建自己的自定义格式设置文件的参考。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-106">However, you can use them as a reference for creating your own custom formatting files.</span></span>
+<span data-ttu-id="a5d58-104">Windows PowerShell 提供多个格式化文件 ( # B0 xml) 位于安装目录中 (`$pshome`) 。</span><span class="sxs-lookup"><span data-stu-id="a5d58-104">Windows PowerShell provides several formatting files (.format.ps1xml) that are located in the installation directory (`$pshome`).</span></span> <span data-ttu-id="a5d58-105">其中每个文件定义一组特定 .NET 对象的默认显示。</span><span class="sxs-lookup"><span data-stu-id="a5d58-105">Each of these files defines the default display for a specific set of .NET objects.</span></span> <span data-ttu-id="a5d58-106">永远不应更改这些文件。</span><span class="sxs-lookup"><span data-stu-id="a5d58-106">These files should never be changed.</span></span> <span data-ttu-id="a5d58-107">但是，可以将它们用作创建自己的自定义格式设置文件的参考。</span><span class="sxs-lookup"><span data-stu-id="a5d58-107">However, you can use them as a reference for creating your own custom formatting files.</span></span>
 
-<span data-ttu-id="4d1bd-107">`Certificate.Format.ps1xml`定义证书存储区中的对象的显示方式，如 x.509 证书和证书存储。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-107">`Certificate.Format.ps1xml` Defines the display of objects in the Certificate store such as x.509 certificates and certificate stores.</span></span>
+<span data-ttu-id="a5d58-108">`Certificate.Format.ps1xml` 定义证书存储区中的对象的显示方式，如 x.509 证书和证书存储。</span><span class="sxs-lookup"><span data-stu-id="a5d58-108">`Certificate.Format.ps1xml` Defines the display of objects in the Certificate store such as x.509 certificates and certificate stores.</span></span>
 
-<span data-ttu-id="4d1bd-108">`DotNetTypes.Format.ps1xml`定义杂项 .NET 对象的显示，例如 CultureInfo、FileVersionInfo 和 EventLogEntry 对象。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-108">`DotNetTypes.Format.ps1xml` Defines the display of miscellaneous .NET objects such as CultureInfo, FileVersionInfo, and EventLogEntry objects.</span></span>
+<span data-ttu-id="a5d58-109">`DotNetTypes.Format.ps1xml` 定义杂项 .NET 对象的显示，例如 CultureInfo、FileVersionInfo 和 EventLogEntry 对象。</span><span class="sxs-lookup"><span data-stu-id="a5d58-109">`DotNetTypes.Format.ps1xml` Defines the display of miscellaneous .NET objects such as CultureInfo, FileVersionInfo, and EventLogEntry objects.</span></span>
 
-<span data-ttu-id="4d1bd-109">`FileSystem.Format.ps1xml`定义文件系统对象（如文件和目录对象）的显示。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-109">`FileSystem.Format.ps1xml` Defines the display of file system objects such as file and directory objects.</span></span>
+<span data-ttu-id="a5d58-110">`FileSystem.Format.ps1xml` 定义文件系统对象（如文件和目录对象）的显示。</span><span class="sxs-lookup"><span data-stu-id="a5d58-110">`FileSystem.Format.ps1xml` Defines the display of file system objects such as file and directory objects.</span></span>
 
-<span data-ttu-id="4d1bd-110">`Help.Format.ps1xml`定义[get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet 使用的不同视图，例如详细、完整、参数和示例视图。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-110">`Help.Format.ps1xml` Defines the different views used by the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet, such as the detailed, full, parameters, and example views.</span></span>
+<span data-ttu-id="a5d58-111">`Help.Format.ps1xml` 定义 [get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet 使用的不同视图，例如详细、完整、参数和示例视图。</span><span class="sxs-lookup"><span data-stu-id="a5d58-111">`Help.Format.ps1xml` Defines the different views used by the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet, such as the detailed, full, parameters, and example views.</span></span>
 
-<span data-ttu-id="4d1bd-111">`PowerShellCore.Format.ps1xml`定义由 Windows PowerShell 核心 cmdlet 生成的对象的显示，例如，由 "[获取成员](/powershell/module/Microsoft.PowerShell.Utility/Get-Member)" 和 "[历史记录](/powershell/module/Microsoft.PowerShell.Core/Get-History)" cmdlet 返回的对象。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-111">`PowerShellCore.Format.ps1xml` Defines the display of the objects generated by Windows PowerShell core cmdlets, such as the objects returned by the [Get-Member](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) and [Get-History](/powershell/module/Microsoft.PowerShell.Core/Get-History) cmdlets.</span></span>
+<span data-ttu-id="a5d58-112">`PowerShellCore.Format.ps1xml` 定义由 Windows PowerShell 核心 cmdlet 生成的对象的显示，例如，由 " [获取成员](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) " 和 " [历史记录](/powershell/module/Microsoft.PowerShell.Core/Get-History) " cmdlet 返回的对象。</span><span class="sxs-lookup"><span data-stu-id="a5d58-112">`PowerShellCore.Format.ps1xml` Defines the display of the objects generated by Windows PowerShell core cmdlets, such as the objects returned by the [Get-Member](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) and [Get-History](/powershell/module/Microsoft.PowerShell.Core/Get-History) cmdlets.</span></span>
 
-<span data-ttu-id="4d1bd-112">`PowerShellTrace.Format.ps1xml`定义跟踪对象的显示，如[trace-Command](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet 生成的对象。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-112">`PowerShellTrace.Format.ps1xml` Defines the display of trace objects such as those generated by the [Trace-Command](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet.</span></span>
+<span data-ttu-id="a5d58-113">`PowerShellTrace.Format.ps1xml` 定义跟踪对象的显示，如 [trace-Command](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet 生成的对象。</span><span class="sxs-lookup"><span data-stu-id="a5d58-113">`PowerShellTrace.Format.ps1xml` Defines the display of trace objects such as those generated by the [Trace-Command](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet.</span></span>
 
-<span data-ttu-id="4d1bd-113">`Registry.Format.ps1xml`定义注册表对象（如 key 和 entry 对象）的显示。</span><span class="sxs-lookup"><span data-stu-id="4d1bd-113">`Registry.Format.ps1xml` Defines the display of registry objects such as key and entry objects.</span></span>
+<span data-ttu-id="a5d58-114">`Registry.Format.ps1xml` 定义注册表对象（如 key 和 entry 对象）的显示。</span><span class="sxs-lookup"><span data-stu-id="a5d58-114">`Registry.Format.ps1xml` Defines the display of registry objects such as key and entry objects.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4d1bd-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4d1bd-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5d58-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a5d58-115">See Also</span></span>
 
-[<span data-ttu-id="4d1bd-115">编写 Windows PowerShell Cmdlet</span><span class="sxs-lookup"><span data-stu-id="4d1bd-115">Writing a Windows PowerShell Cmdlet</span></span>](../cmdlet/writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="a5d58-116">编写 Windows PowerShell Cmdlet</span><span class="sxs-lookup"><span data-stu-id="a5d58-116">Writing a Windows PowerShell Cmdlet</span></span>](../cmdlet/writing-a-windows-powershell-cmdlet.md)

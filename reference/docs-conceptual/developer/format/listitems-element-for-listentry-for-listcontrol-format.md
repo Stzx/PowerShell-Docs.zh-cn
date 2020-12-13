@@ -1,20 +1,22 @@
 ---
-title: ListControl (Format) 的 ListEntry 的 ListItems 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 03b89a3df2ab0498533d0c00f303f643e0039b25
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListItems Element for ListEntry for ListControl (Format)
+description: ListItems Element for ListEntry for ListControl (Format)
+ms.openlocfilehash: 1553c81bc559020223a3c1fea10336baf017c9a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781131"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666529"
 ---
-# <a name="listitems-element-for-listentry-for-listcontrol-format"></a><span data-ttu-id="c930e-102">ListItems Element for ListEntry for ListControl (Format)</span><span class="sxs-lookup"><span data-stu-id="c930e-102">ListItems Element for ListEntry for ListControl (Format)</span></span>
+# <a name="listitems-element-for-listentry-for-listcontrol-format"></a><span data-ttu-id="37093-103">ListItems Element for ListEntry for ListControl (Format)</span><span class="sxs-lookup"><span data-stu-id="37093-103">ListItems Element for ListEntry for ListControl (Format)</span></span>
 
-<span data-ttu-id="c930e-103">定义其值显示在列表视图的行中的属性和脚本。</span><span class="sxs-lookup"><span data-stu-id="c930e-103">Defines the properties and scripts whose values are displayed in the rows of the list view.</span></span>
+<span data-ttu-id="37093-104">定义其值显示在列表视图的行中的属性和脚本。</span><span class="sxs-lookup"><span data-stu-id="37093-104">Defines the properties and scripts whose values are displayed in the rows of the list view.</span></span>
 
-<span data-ttu-id="c930e-104">配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ListControl 元素 (格式) ListEntries 元素对于列表控件 (格式) ListControl (格式) ListItems 元素 (ListControl) 格式</span><span class="sxs-lookup"><span data-stu-id="c930e-104">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) ListControl Element (Format) ListEntries Element for List Control (Format) ListEntry Element for ListControl (Format) ListItems Element for ListControl (Format)</span></span>
+<span data-ttu-id="37093-105">配置元素 (格式) ViewDefinitions 元素 (格式) View 元素 (格式) ListControl 元素 (格式) ListEntries 元素对于列表控件 (格式) ListControl (格式) ListItems 元素 (ListControl) 格式</span><span class="sxs-lookup"><span data-stu-id="37093-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) ListControl Element (Format) ListEntries Element for List Control (Format) ListEntry Element for ListControl (Format) ListItems Element for ListControl (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c930e-105">语法</span><span class="sxs-lookup"><span data-stu-id="c930e-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="37093-106">语法</span><span class="sxs-lookup"><span data-stu-id="37093-106">Syntax</span></span>
 
 ```xml
 <ListItems>
@@ -22,33 +24,33 @@ ms.locfileid: "87781131"
 </ListItems>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="c930e-106">特性和元素</span><span class="sxs-lookup"><span data-stu-id="c930e-106">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="37093-107">特性和元素</span><span class="sxs-lookup"><span data-stu-id="37093-107">Attributes and Elements</span></span>
 
-<span data-ttu-id="c930e-107">以下各节描述了元素的属性、子元素和父元素 `ListItems` 。</span><span class="sxs-lookup"><span data-stu-id="c930e-107">The following sections describe the attributes, child elements, and parent element of the `ListItems` element.</span></span> <span data-ttu-id="c930e-108">对于可以指定的子元素数没有限制。</span><span class="sxs-lookup"><span data-stu-id="c930e-108">There is no limit to the number of child elements that can be specified.</span></span> <span data-ttu-id="c930e-109">子元素的顺序定义值在列表视图中的显示顺序。</span><span class="sxs-lookup"><span data-stu-id="c930e-109">The order of the child elements defines the order that values are displayed in the list view.</span></span>
+<span data-ttu-id="37093-108">以下各节描述了元素的属性、子元素和父元素 `ListItems` 。</span><span class="sxs-lookup"><span data-stu-id="37093-108">The following sections describe the attributes, child elements, and parent element of the `ListItems` element.</span></span> <span data-ttu-id="37093-109">对于可以指定的子元素数没有限制。</span><span class="sxs-lookup"><span data-stu-id="37093-109">There is no limit to the number of child elements that can be specified.</span></span> <span data-ttu-id="37093-110">子元素的顺序定义值在列表视图中的显示顺序。</span><span class="sxs-lookup"><span data-stu-id="37093-110">The order of the child elements defines the order that values are displayed in the list view.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="c930e-110">特性</span><span class="sxs-lookup"><span data-stu-id="c930e-110">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="37093-111">特性</span><span class="sxs-lookup"><span data-stu-id="37093-111">Attributes</span></span>
 
-<span data-ttu-id="c930e-111">无。</span><span class="sxs-lookup"><span data-stu-id="c930e-111">None.</span></span>
+<span data-ttu-id="37093-112">无。</span><span class="sxs-lookup"><span data-stu-id="37093-112">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="c930e-112">子元素</span><span class="sxs-lookup"><span data-stu-id="c930e-112">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="37093-113">子元素</span><span class="sxs-lookup"><span data-stu-id="37093-113">Child Elements</span></span>
 
-|<span data-ttu-id="c930e-113">元素</span><span class="sxs-lookup"><span data-stu-id="c930e-113">Element</span></span>|<span data-ttu-id="c930e-114">说明</span><span class="sxs-lookup"><span data-stu-id="c930e-114">Description</span></span>|
+|<span data-ttu-id="37093-114">元素</span><span class="sxs-lookup"><span data-stu-id="37093-114">Element</span></span>|<span data-ttu-id="37093-115">描述</span><span class="sxs-lookup"><span data-stu-id="37093-115">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="c930e-115">ListControl (格式的元素) </span><span class="sxs-lookup"><span data-stu-id="c930e-115">ListItem Element for ListControl (Format)</span></span>](./listitem-element-for-listitems-for-listcontrol-format.md)|<span data-ttu-id="c930e-116">必需的元素。</span><span class="sxs-lookup"><span data-stu-id="c930e-116">Required element.</span></span><br /><br /> <span data-ttu-id="c930e-117">定义其值由列表视图显示的属性或脚本。</span><span class="sxs-lookup"><span data-stu-id="c930e-117">Defines the property or script whose value is displayed by the list view.</span></span>|
+|[<span data-ttu-id="37093-116">ListControl (格式的元素) </span><span class="sxs-lookup"><span data-stu-id="37093-116">ListItem Element for ListControl (Format)</span></span>](./listitem-element-for-listitems-for-listcontrol-format.md)|<span data-ttu-id="37093-117">必需的元素。</span><span class="sxs-lookup"><span data-stu-id="37093-117">Required element.</span></span><br /><br /> <span data-ttu-id="37093-118">定义其值由列表视图显示的属性或脚本。</span><span class="sxs-lookup"><span data-stu-id="37093-118">Defines the property or script whose value is displayed by the list view.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="c930e-118">父元素</span><span class="sxs-lookup"><span data-stu-id="c930e-118">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="37093-119">父元素</span><span class="sxs-lookup"><span data-stu-id="37093-119">Parent Elements</span></span>
 
-|<span data-ttu-id="c930e-119">元素</span><span class="sxs-lookup"><span data-stu-id="c930e-119">Element</span></span>|<span data-ttu-id="c930e-120">说明</span><span class="sxs-lookup"><span data-stu-id="c930e-120">Description</span></span>|
+|<span data-ttu-id="37093-120">元素</span><span class="sxs-lookup"><span data-stu-id="37093-120">Element</span></span>|<span data-ttu-id="37093-121">描述</span><span class="sxs-lookup"><span data-stu-id="37093-121">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="c930e-121">ListEntry Element for ListControl (Format)</span><span class="sxs-lookup"><span data-stu-id="c930e-121">ListEntry Element for ListControl (Format)</span></span>](./listentry-element-for-listcontrol-format.md)|<span data-ttu-id="c930e-122">提供列表视图的定义。</span><span class="sxs-lookup"><span data-stu-id="c930e-122">Provides a definition of the list view.</span></span>|
+|[<span data-ttu-id="37093-122">ListEntry Element for ListControl (Format)</span><span class="sxs-lookup"><span data-stu-id="37093-122">ListEntry Element for ListControl (Format)</span></span>](./listentry-element-for-listcontrol-format.md)|<span data-ttu-id="37093-123">提供列表视图的定义。</span><span class="sxs-lookup"><span data-stu-id="37093-123">Provides a definition of the list view.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="c930e-123">备注</span><span class="sxs-lookup"><span data-stu-id="c930e-123">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="37093-124">备注</span><span class="sxs-lookup"><span data-stu-id="37093-124">Remarks</span></span>
 
-<span data-ttu-id="c930e-124">有关此类视图的详细信息，请参阅[创建列表视图](./creating-a-list-view.md)。</span><span class="sxs-lookup"><span data-stu-id="c930e-124">For more information about this type of view, see [Creating a List View](./creating-a-list-view.md).</span></span>
+<span data-ttu-id="37093-125">有关此类视图的详细信息，请参阅 [创建列表视图](./creating-a-list-view.md)。</span><span class="sxs-lookup"><span data-stu-id="37093-125">For more information about this type of view, see [Creating a List View](./creating-a-list-view.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="c930e-125">示例</span><span class="sxs-lookup"><span data-stu-id="c930e-125">Example</span></span>
+## <a name="example"></a><span data-ttu-id="37093-126">示例</span><span class="sxs-lookup"><span data-stu-id="37093-126">Example</span></span>
 
-<span data-ttu-id="c930e-126">此示例显示了用于定义列表视图的三行的 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="c930e-126">This example shows the XML elements that define three rows of the list view.</span></span>
+<span data-ttu-id="37093-127">此示例显示了用于定义列表视图的三行的 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="37093-127">This example shows the XML elements that define three rows of the list view.</span></span>
 
 ```xml
 <ListEntry>
@@ -66,12 +68,12 @@ ms.locfileid: "87781131"
   </ListEntry>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c930e-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c930e-127">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37093-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="37093-128">See Also</span></span>
 
-[<span data-ttu-id="c930e-128">ListEntry Element for ListControl (Format)</span><span class="sxs-lookup"><span data-stu-id="c930e-128">ListEntry Element for ListControl (Format)</span></span>](./listentry-element-for-listcontrol-format.md)
+[<span data-ttu-id="37093-129">ListEntry Element for ListControl (Format)</span><span class="sxs-lookup"><span data-stu-id="37093-129">ListEntry Element for ListControl (Format)</span></span>](./listentry-element-for-listcontrol-format.md)
 
-[<span data-ttu-id="c930e-129">ListControl (格式的元素) </span><span class="sxs-lookup"><span data-stu-id="c930e-129">ListItem Element for ListControl (Format)</span></span>](./listitem-element-for-listitems-for-listcontrol-format.md)
+[<span data-ttu-id="37093-130">ListControl (格式的元素) </span><span class="sxs-lookup"><span data-stu-id="37093-130">ListItem Element for ListControl (Format)</span></span>](./listitem-element-for-listitems-for-listcontrol-format.md)
 
-[<span data-ttu-id="c930e-130">创建列表视图</span><span class="sxs-lookup"><span data-stu-id="c930e-130">Creating a List View</span></span>](./creating-a-list-view.md)
+[<span data-ttu-id="37093-131">创建列表视图</span><span class="sxs-lookup"><span data-stu-id="37093-131">Creating a List View</span></span>](./creating-a-list-view.md)
 
-[<span data-ttu-id="c930e-131">编写 PowerShell 格式设置文件</span><span class="sxs-lookup"><span data-stu-id="c930e-131">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="37093-132">编写 PowerShell 格式设置文件</span><span class="sxs-lookup"><span data-stu-id="37093-132">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
