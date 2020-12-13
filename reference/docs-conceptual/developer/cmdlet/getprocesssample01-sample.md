@@ -1,46 +1,48 @@
 ---
-title: GetProcessSample01 示例 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 84956fbafdd58623ca4f332efc940fb93b421c6e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProcessSample01 示例
+description: GetProcessSample01 示例
+ms.openlocfilehash: 159c277d17a8551d2b5c52377a230babacafc9ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784242"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652758"
 ---
-# <a name="getprocesssample01-sample"></a><span data-ttu-id="e4b23-102">GetProcessSample01 示例</span><span class="sxs-lookup"><span data-stu-id="e4b23-102">GetProcessSample01 Sample</span></span>
+# <a name="getprocesssample01-sample"></a><span data-ttu-id="95d30-103">GetProcessSample01 示例</span><span class="sxs-lookup"><span data-stu-id="95d30-103">GetProcessSample01 Sample</span></span>
 
-<span data-ttu-id="e4b23-103">此示例演示如何实现一个用于检索本地计算机上的进程的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="e4b23-103">This sample shows how to implement a cmdlet that retrieves the processes on the local computer.</span></span> <span data-ttu-id="e4b23-104">此 cmdlet 是 `Get-Process` Windows PowerShell 2.0 提供的简化版本的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="e4b23-104">This cmdlet is a simplified version of the `Get-Process` cmdlet that is provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="95d30-104">此示例演示如何实现一个用于检索本地计算机上的进程的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="95d30-104">This sample shows how to implement a cmdlet that retrieves the processes on the local computer.</span></span> <span data-ttu-id="95d30-105">此 cmdlet 是 `Get-Process` Windows PowerShell 2.0 提供的简化版本的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="95d30-105">This cmdlet is a simplified version of the `Get-Process` cmdlet that is provided by Windows PowerShell 2.0.</span></span>
 
-## <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="e4b23-105">如何使用 Visual Studio 生成示例。</span><span class="sxs-lookup"><span data-stu-id="e4b23-105">How to build the sample by using Visual Studio.</span></span>
+## <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="95d30-106">如何使用 Visual Studio 生成示例。</span><span class="sxs-lookup"><span data-stu-id="95d30-106">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="e4b23-106">安装 Windows PowerShell 2.0 SDK 后，导航到 GetProcessSample01 文件夹。</span><span class="sxs-lookup"><span data-stu-id="e4b23-106">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample01 folder.</span></span> <span data-ttu-id="e4b23-107">默认位置为 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01。</span><span class="sxs-lookup"><span data-stu-id="e4b23-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01.</span></span>
+1. <span data-ttu-id="95d30-107">安装 Windows PowerShell 2.0 SDK 后，导航到 GetProcessSample01 文件夹。</span><span class="sxs-lookup"><span data-stu-id="95d30-107">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample01 folder.</span></span> <span data-ttu-id="95d30-108">默认位置为 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01。</span><span class="sxs-lookup"><span data-stu-id="95d30-108">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01.</span></span>
 
-2. <span data-ttu-id="e4b23-108">双击解决方案的图标 ( .sln) 文件。</span><span class="sxs-lookup"><span data-stu-id="e4b23-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="e4b23-109">这会在 Microsoft Visual Studio 中打开示例项目。</span><span class="sxs-lookup"><span data-stu-id="e4b23-109">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="95d30-109">双击解决方案的图标 ( .sln) 文件。</span><span class="sxs-lookup"><span data-stu-id="95d30-109">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="95d30-110">这会在 Microsoft Visual Studio 中打开示例项目。</span><span class="sxs-lookup"><span data-stu-id="95d30-110">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="e4b23-110">在“生成”菜单中选择“生成解决方案” 。</span><span class="sxs-lookup"><span data-stu-id="e4b23-110">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="95d30-111">在“生成”菜单中选择“生成解决方案” 。</span><span class="sxs-lookup"><span data-stu-id="95d30-111">In the **Build** menu, select **Build Solution**.</span></span>
 
-  <span data-ttu-id="e4b23-111">示例库将在默认的 \bin 或 \bin\debug 文件夹中生成。</span><span class="sxs-lookup"><span data-stu-id="e4b23-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+  <span data-ttu-id="95d30-112">示例库将在默认的 \bin 或 \bin\debug 文件夹中生成。</span><span class="sxs-lookup"><span data-stu-id="95d30-112">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="e4b23-112">如何运行示例</span><span class="sxs-lookup"><span data-stu-id="e4b23-112">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="95d30-113">如何运行示例</span><span class="sxs-lookup"><span data-stu-id="95d30-113">How to run the sample</span></span>
 
-1. <span data-ttu-id="e4b23-113">打开命令提示符窗口。</span><span class="sxs-lookup"><span data-stu-id="e4b23-113">Open a Command Prompt window.</span></span>
+1. <span data-ttu-id="95d30-114">打开命令提示符窗口。</span><span class="sxs-lookup"><span data-stu-id="95d30-114">Open a Command Prompt window.</span></span>
 
-2. <span data-ttu-id="e4b23-114">导航到包含示例 .dll 文件的目录。</span><span class="sxs-lookup"><span data-stu-id="e4b23-114">Navigate to the directory containing the sample .dll file.</span></span>
+2. <span data-ttu-id="95d30-115">导航到包含示例 .dll 文件的目录。</span><span class="sxs-lookup"><span data-stu-id="95d30-115">Navigate to the directory containing the sample .dll file.</span></span>
 
-3. <span data-ttu-id="e4b23-115">运行 installutil.exe "GetProcessSample01.dll"。</span><span class="sxs-lookup"><span data-stu-id="e4b23-115">Run installutil "GetProcessSample01.dll".</span></span>
+3. <span data-ttu-id="95d30-116">运行 installutil.exe "GetProcessSample01.dll"。</span><span class="sxs-lookup"><span data-stu-id="95d30-116">Run installutil "GetProcessSample01.dll".</span></span>
 
-4. <span data-ttu-id="e4b23-116">启动 Windows PowerShell。</span><span class="sxs-lookup"><span data-stu-id="e4b23-116">Start Windows PowerShell.</span></span>
+4. <span data-ttu-id="95d30-117">启动 Windows PowerShell。</span><span class="sxs-lookup"><span data-stu-id="95d30-117">Start Windows PowerShell.</span></span>
 
-5. <span data-ttu-id="e4b23-117">运行以下命令，将管理单元添加到 shell 中。</span><span class="sxs-lookup"><span data-stu-id="e4b23-117">Run the following command to add the snap-in to the shell.</span></span>
+5. <span data-ttu-id="95d30-118">运行以下命令，将管理单元添加到 shell 中。</span><span class="sxs-lookup"><span data-stu-id="95d30-118">Run the following command to add the snap-in to the shell.</span></span>
 
    `Add-PSSnapin GetProcPSSnapIn01`
 
-6. <span data-ttu-id="e4b23-118">输入以下命令以运行 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="e4b23-118">Enter the following command to run the cmdlet.</span></span> `get-proc`
+6. <span data-ttu-id="95d30-119">输入以下命令以运行 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="95d30-119">Enter the following command to run the cmdlet.</span></span> `get-proc`
 
    `get-proc`
 
-   <span data-ttu-id="e4b23-119">这是通过以下步骤生成的示例输出。</span><span class="sxs-lookup"><span data-stu-id="e4b23-119">This is a sample output that results from following these steps.</span></span>
+   <span data-ttu-id="95d30-120">这是通过以下步骤生成的示例输出。</span><span class="sxs-lookup"><span data-stu-id="95d30-120">This is a sample output that results from following these steps.</span></span>
 
    ```output
    Id              Name            State      HasMoreData     Location             Command
@@ -57,23 +59,23 @@ ms.locfileid: "87784242"
    A file was created in the TEMP directory
    ```
 
-## <a name="requirements"></a><span data-ttu-id="e4b23-120">要求</span><span class="sxs-lookup"><span data-stu-id="e4b23-120">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="95d30-121">要求</span><span class="sxs-lookup"><span data-stu-id="95d30-121">Requirements</span></span>
 
-<span data-ttu-id="e4b23-121">此示例需要 Windows PowerShell 1.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="e4b23-121">This sample requires Windows PowerShell 1.0 or later.</span></span>
+<span data-ttu-id="95d30-122">此示例需要 Windows PowerShell 1.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="95d30-122">This sample requires Windows PowerShell 1.0 or later.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="e4b23-122">演示</span><span class="sxs-lookup"><span data-stu-id="e4b23-122">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="95d30-123">演示</span><span class="sxs-lookup"><span data-stu-id="95d30-123">Demonstrates</span></span>
 
-<span data-ttu-id="e4b23-123">此示例演示以下各项。</span><span class="sxs-lookup"><span data-stu-id="e4b23-123">This sample demonstrates the following.</span></span>
+<span data-ttu-id="95d30-124">此示例演示以下各项。</span><span class="sxs-lookup"><span data-stu-id="95d30-124">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="e4b23-124">创建基本的示例 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="e4b23-124">Creating a basic sample cmdlet.</span></span>
+- <span data-ttu-id="95d30-125">创建基本的示例 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="95d30-125">Creating a basic sample cmdlet.</span></span>
 
-- <span data-ttu-id="e4b23-125">使用 Cmdlet 特性定义 cmdlet 类。</span><span class="sxs-lookup"><span data-stu-id="e4b23-125">Defining a cmdlet class by using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="95d30-126">使用 Cmdlet 特性定义 cmdlet 类。</span><span class="sxs-lookup"><span data-stu-id="95d30-126">Defining a cmdlet class by using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="e4b23-126">创建适用于 Windows PowerShell 1.0 和 Windows PowerShell 2.0 的管理单元。</span><span class="sxs-lookup"><span data-stu-id="e4b23-126">Creating a snap-in that works with both Windows PowerShell 1.0 and Windows PowerShell 2.0.</span></span> <span data-ttu-id="e4b23-127">后续示例使用模块，而不是管理单元，因此它们需要 Windows PowerShell 2.0。</span><span class="sxs-lookup"><span data-stu-id="e4b23-127">Subsequent samples use modules instead of snap-ins so they require Windows PowerShell 2.0.</span></span>
+- <span data-ttu-id="95d30-127">创建适用于 Windows PowerShell 1.0 和 Windows PowerShell 2.0 的管理单元。</span><span class="sxs-lookup"><span data-stu-id="95d30-127">Creating a snap-in that works with both Windows PowerShell 1.0 and Windows PowerShell 2.0.</span></span> <span data-ttu-id="95d30-128">后续示例使用模块，而不是管理单元，因此它们需要 Windows PowerShell 2.0。</span><span class="sxs-lookup"><span data-stu-id="95d30-128">Subsequent samples use modules instead of snap-ins so they require Windows PowerShell 2.0.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e4b23-128">示例</span><span class="sxs-lookup"><span data-stu-id="e4b23-128">Example</span></span>
+## <a name="example"></a><span data-ttu-id="95d30-129">示例</span><span class="sxs-lookup"><span data-stu-id="95d30-129">Example</span></span>
 
-<span data-ttu-id="e4b23-129">此示例演示如何创建一个简单的 cmdlet 及其管理单元。</span><span class="sxs-lookup"><span data-stu-id="e4b23-129">This sample shows how to create a simple cmdlet and its snap-in.</span></span>
+<span data-ttu-id="95d30-130">此示例演示如何创建一个简单的 cmdlet 及其管理单元。</span><span class="sxs-lookup"><span data-stu-id="95d30-130">This sample shows how to create a simple cmdlet and its snap-in.</span></span>
 
 ```csharp
 using System;
@@ -185,6 +187,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e4b23-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e4b23-130">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95d30-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="95d30-131">See Also</span></span>
 
-[<span data-ttu-id="e4b23-131">编写 Windows PowerShell Cmdlet</span><span class="sxs-lookup"><span data-stu-id="e4b23-131">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="95d30-132">编写 Windows PowerShell Cmdlet</span><span class="sxs-lookup"><span data-stu-id="95d30-132">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
