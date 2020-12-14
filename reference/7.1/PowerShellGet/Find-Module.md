@@ -7,12 +7,12 @@ ms.date: 03/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Module
-ms.openlocfilehash: 22ac0b5651ffa9f055a5c436f56711dc33f95f6e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e499d1d2a32ed3f3cb9d583a1b2d728d15e8df8d
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198359"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891364"
 ---
 # Find-Module
 
@@ -31,7 +31,7 @@ Find-Module [[-Name] <string[]>] [-MinimumVersion <string>] [-MaximumVersion <st
  [-Credential <pscredential>] [-AllowPrerelease] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Find-Module`Cmdlet 可在存储库中查找与指定条件匹配的模块。
 `Find-Module` 返回它找到的每个模块的 **PSRepositoryItemInfo** 对象。 这些对象可通过管道向下发送到 cmdlet，例如 `Install-Module` 。
@@ -39,7 +39,7 @@ Find-Module [[-Name] <string[]>] [-MinimumVersion <string>] [-MaximumVersion <st
 第一次 `Find-Module` 尝试使用存储库时，系统可能会提示您安装更新。
 如果存储库源未注册 `Register-PSRepository` 到 cmdlet，则会返回错误。
 
-`Find-Module` 如果未使用限制版本的参数，则返回模块的最新版本。 若要获取存储库的模块版本的列表，请使用参数 **AllVersions** 。
+`Find-Module` 如果未使用限制版本的参数，则返回模块的最新版本。 若要获取存储库的模块版本的列表，请使用参数 **AllVersions**。
 
 如果指定了 **MinimumVersion** 参数，则将 `Find-Module` 返回等于或大于最小值的模块的版本。 如果存储库中有可用的更新版本，则返回较新版本。
 
@@ -101,7 +101,7 @@ Version   Name             Repository     Description
 2.1.0     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。 **MinimumVersion** 指定版本 **1.6.5** 。 `Find-Module` 返回 PowerShellGet 版本 **2.1.0** ，因为它超过最低版本并且是最新版本。
+`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。 **MinimumVersion** 指定版本 **1.6.5**。 `Find-Module` 返回 PowerShellGet 版本 **2.1.0** ，因为它超过最低版本并且是最新版本。
 
 ### 示例4：查找特定版本的模块
 
@@ -117,7 +117,7 @@ Version   Name             Repository     Description
 1.6.5     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。 **RequiredVersion** 参数指定版本 **1.6.5** 。
+`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。 **RequiredVersion** 参数指定版本 **1.6.5**。
 
 ### 示例5：查找特定存储库中的模块
 
@@ -151,9 +151,9 @@ PSGallery     2.0.0.0   ContosoServer    Cmdlets and DSC resources for managing 
 MySource      1.2.0.0   ContosoClient    Cmdlets and DSC resources for managing Contoso Client...
 ```
 
-`Register-PSRepository`Cmdlet 将注册一个新存储库。 **Name** 参数将命名为 **MySource** 。 **SourceLocation** 参数指定存储库的地址。
+`Register-PSRepository`Cmdlet 将注册一个新存储库。 **Name** 参数将命名为 **MySource**。 **SourceLocation** 参数指定存储库的地址。
 
-`Find-Module`Cmdlet 将 **Name** 参数与星号一起使用 (`*`) 通配符来指定 **Contoso** 模块。 **存储库** 参数指定搜索两个存储库，即 **PSGallery** 和 **MySource** 。
+`Find-Module`Cmdlet 将 **Name** 参数与星号一起使用 (`*`) 通配符来指定 **Contoso** 模块。 **存储库** 参数指定搜索两个存储库，即 **PSGallery** 和 **MySource**。
 
 ### 示例7：查找包含 DSC 资源的模块
 
@@ -174,8 +174,8 @@ Version     Name                            Repository    Description
 3.1.0.0     xPowerShellExecutionPolicy      PSGallery     This DSC resource can change the user...
 ```
 
-`Find-Module`Cmdlet 使用 **存储** 库参数搜索存储库 **PSGallery** 。
-**包含** 参数指定 **get-dscresource** ，它是参数可在存储库中搜索的功能。
+`Find-Module`Cmdlet 使用 **存储** 库参数搜索存储库 **PSGallery**。
+**包含** 参数指定 **get-dscresource**，它是参数可在存储库中搜索的功能。
 
 ### 示例8：查找带有筛选器的模块
 
@@ -194,7 +194,7 @@ Version    Name              Repository           Description
 1.1.0    ClassExplorer       PSGallery            Quickly search the AppDomain for classes...
 ```
 
-`Find-Module`Cmdlet 使用 **筛选器** 参数在存储库中搜索 **AppDomain** 。
+`Find-Module`Cmdlet 使用 **筛选器** 参数在存储库中搜索 **AppDomain**。
 
 ## PARAMETERS
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -AllVersions
 
-指定在结果中包括某个模块的所有版本。 不能将 **AllVersions** 参数与 **MinimumVersion** 、 **MaximumVersion** 或 **RequiredVersion** 参数一起使用。
+指定在结果中包括某个模块的所有版本。 不能将 **AllVersions** 参数与 **MinimumVersion**、 **MaximumVersion** 或 **RequiredVersion** 参数一起使用。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 
 ### -RequiredVersion
 
-指定要包含在结果中的模块的确切版本号。 对于 **MinimumVersion** 或 **MaximumVersion** ，不能在同一命令中使用 **RequiredVersion** 。
+指定要包含在结果中的模块的确切版本号。 对于 **MinimumVersion** 或 **MaximumVersion**，不能在同一命令中使用 **RequiredVersion** 。
 
 ```yaml
 Type: System.String
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 
 ### -Tag
 
-指定标记的数组。 示例标记包括 **DesiredStateConfiguration** 、 **DSC** 、 **DSCResourceKit** 或 **PSModule** 。
+指定标记的数组。 示例标记包括 **DesiredStateConfiguration**、 **DSC**、 **DSCResourceKit** 或 **PSModule**。
 
 ```yaml
 Type: System.String[]
@@ -499,7 +499,12 @@ Accept wildcard characters: False
 
 ## 注释
 
-此 cmdlet 在 powershell 5.0 或更高版本的 PowerShell、Windows 7 或 Windows 2008 R2 及更高版本的 Windows 上运行。
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 
@@ -516,4 +521,3 @@ Accept wildcard characters: False
 [Update-Module](Update-Module.md)
 
 [Register-PSRepository](Register-PSRepository.md)
-

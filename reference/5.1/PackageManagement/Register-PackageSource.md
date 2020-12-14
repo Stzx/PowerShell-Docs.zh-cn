@@ -7,12 +7,12 @@ ms.date: 04/01/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/register-packagesource?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-PackageSource
-ms.openlocfilehash: 01c5130091b0028fb3cd4cc40a1e838156168ae5
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 323d59724507cfec5cde086e3b8e2a2c2f34b96e
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197750"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891306"
 ---
 # Register-PackageSource
 
@@ -46,7 +46,7 @@ Register-PackageSource [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [[-Name]
  [-ScriptSourceLocation <String>] [-ScriptPublishLocation <String>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Register-PackageSource`Cmdlet 为指定的包提供程序添加包源。 包源始终由包提供程序进行管理。 如果包提供程序无法添加或替换包源，则提供程序会生成错误消息。
 
@@ -350,6 +350,13 @@ Accept wildcard characters: False
 ## 输出
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

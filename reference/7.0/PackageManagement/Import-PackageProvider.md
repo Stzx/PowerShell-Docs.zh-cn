@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/import-packageprovider?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-PackageProvider
-ms.openlocfilehash: a4068cd7607868608bce8e334421523325abdfa1
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 570ed2a314c498fe59546d30cba17913bc91b70c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197040"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890468"
 ---
 # Import-PackageProvider
 
@@ -26,7 +26,7 @@ Import-PackageProvider [-Name] <String[]> [-RequiredVersion <String>] [-MinimumV
  [-MaximumVersion <String>] [-Force] [-ForceBootstrap] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Import-PackageProvider`Cmdlet 可将一个或多个包提供程序添加到当前会话中。
 必须在本地计算机上安装导入的提供程序。
@@ -169,6 +169,13 @@ Accept wildcard characters: False
 ## 输出
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

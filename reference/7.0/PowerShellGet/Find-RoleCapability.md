@@ -7,12 +7,12 @@ ms.date: 06/05/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-rolecapability?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-RoleCapability
-ms.openlocfilehash: 00b3bacbb82ee2316896581d2aa9c5998bd8d448
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 1cee4ac54bf83d387f61a4842104a80512a8b223
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93196957"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891518"
 ---
 # Find-RoleCapability
 
@@ -30,7 +30,7 @@ Find-RoleCapability [[-Name] <String[]>] [-ModuleName <String>] [-MinimumVersion
 [-Repository <String[]>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Find-RoleCapability`Cmdlet 可搜索已注册的存储库，以便查找 PowerShell 角色功能和模块。
 
@@ -331,6 +331,13 @@ Accept wildcard characters: False
 `Find-RoleCapability`Cmdlet 将返回 **PSGetRoleCapabilityInfo** 对象。
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

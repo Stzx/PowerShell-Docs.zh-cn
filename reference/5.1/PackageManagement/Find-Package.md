@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Package
-ms.openlocfilehash: 71266e097524847502e9ce2e4e59c4908352c859
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 79a57cdbfda4287ced131e230e88423757617b12
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197768"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890740"
 ---
 # Find-Package
 
@@ -44,7 +44,7 @@ Find-Package [-IncludeDependencies] [-AllVersions] [-Source <String[]>] [-Creden
  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Find-Package` 查找包源中可用的软件包。 `Get-PackageProvider` 并 `Get-PackageSource` 显示有关提供程序的详细信息。
 
@@ -69,7 +69,7 @@ bootstrap          4.3.1     MyNuGet    Bootstrap framework in CSS. Includes fon
 NuGet.Core         2.14.0    MyNuGet    NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` 使用 **provider** 参数指定提供程序 **NuGet** 。
+`Find-Package` 使用 **provider** 参数指定提供程序 **NuGet**。
 
 ### 示例2：从包源中查找包
 
@@ -85,7 +85,7 @@ Name         Version   Source    Summary
 NuGet.Core   2.14.0    MyNuGet   NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` 使用 **Name** 参数指定包名称 **nuget.exe** 。 **Source** 参数指定在 **MyNuGet** 中搜索包。
+`Find-Package` 使用 **Name** 参数指定包名称 **nuget.exe**。 **Source** 参数指定在 **MyNuGet** 中搜索包。
 
 ### 示例3：查找包的所有版本
 
@@ -106,7 +106,7 @@ NuGet.Core    1.1.229.159      MyNuGet      NuGet.Core is the core framework ass
 Nuget.Core    1.0.1120.104     MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` 使用 **Name** 参数指定包 **nuget.exe** 。 **ProviderName** 参数指定在 **MyNuGet** 中搜索包。 **AllVersions** 指定返回所有可用版本。
+`Find-Package` 使用 **Name** 参数指定包 **nuget.exe**。 **ProviderName** 参数指定在 **MyNuGet** 中搜索包。 **AllVersions** 指定返回所有可用版本。
 
 ### 示例4：查找具有特定名称和版本的包
 
@@ -122,7 +122,7 @@ Name          Version          Source       Summary
 NuGet.Core    2.9.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` 使用 **Name** 参数指定包名称 **nuget.exe** 。 **ProviderName** 参数指定在 **NuGet** 中搜索包。 **RequiredVersion** 指定仅返回版本 **2.9.0** 。
+`Find-Package` 使用 **Name** 参数指定包名称 **nuget.exe**。 **ProviderName** 参数指定在 **NuGet** 中搜索包。 **RequiredVersion** 指定仅返回版本 **2.9.0** 。
 
 ### 示例5：在一系列版本中查找包
 
@@ -141,13 +141,13 @@ NuGet.Core    2.8.0            MyNuGet      NuGet.Core is the core framework ass
 NuGet.Core    2.7.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` 使用 **Name** 参数指定包名称 **nuget.exe** 。 **ProviderName** 参数指定在 **NuGet** 中搜索包。 **MinimumVersion** 指定最低版本 **2.7.0** 。 **MaximumVersion** 指定最高版本 **2.9.0** 。
+`Find-Package` 使用 **Name** 参数指定包名称 **nuget.exe**。 **ProviderName** 参数指定在 **NuGet** 中搜索包。 **MinimumVersion** 指定最低版本 **2.7.0**。 **MaximumVersion** 指定最高版本 **2.9.0**。
 **AllVersions** 确定按最小值和最大值指定的范围。
 
 ### 示例6：查找文件系统中的包
 
 此命令查找文件扩展名 `.nupkg` 存储在本地计算机上的包。
-文件是从库（如 **NuGet** ）下载的包。
+文件是从库（如 **NuGet**）下载的包。
 
 ```
 PS> Find-Package -Source C:\LocalPkg
@@ -687,6 +687,13 @@ Accept wildcard characters: False
 `Find-Package` 输出 **softwareidentity.revisionnumber** 对象。
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

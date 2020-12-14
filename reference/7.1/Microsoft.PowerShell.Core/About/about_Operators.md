@@ -6,12 +6,12 @@ ms.date: 10/28/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: a9c589aacfc64495ece2d461687d97f95d885353
-ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
+ms.openlocfilehash: 6f1c87ff7d15190b88d46338b60100057b576f3f
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94483190"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889753"
 ---
 # <a name="about-operators"></a>关于运算符
 
@@ -96,7 +96,7 @@ PowerShell 支持多种类型的运算符来帮助您操作值。
   True
   ```
 
-- 当用作管道的第一段时，用括号将命令或表达式括起来会导致表达式结果的 _枚举_ 。 如果括号环绕 _命令_ ，则在通过管道发送结果之前，将使用 _内存中收集_ 的所有输出运行完成。
+- 当用作管道的第一段时，用括号将命令或表达式括起来会导致表达式结果的 _枚举_ 。 如果括号环绕 _命令_，则在通过管道发送结果之前，将使用 _内存中收集_ 的所有输出运行完成。
 
 #### <a name="subexpression-operator--"></a>子表达式运算符 `$( )`
 
@@ -398,7 +398,7 @@ foreach ($a in 1..$max) {Write-Host $a}
 5..-5 | ForEach-Object {Write-Output $_}
 ```
 
-从 PowerShell 6 开始，range 运算符使用 **字符** 和 **整数** 。
+从 PowerShell 6 开始，range 运算符使用 **字符** 和 **整数**。
 
 若要创建字符范围，请将边界字符括在引号中。
 
@@ -516,7 +516,7 @@ ${a}?.PropName
 100
 ```
 
-下面的示例将返回 null，而不会尝试访问成员名称 **PropName** 。
+下面的示例将返回 null，而不会尝试访问成员名称 **PropName**。
 
 ```powershell
 $a = $null
@@ -544,9 +544,9 @@ ${a}?[0]
 > [!NOTE]
 > 由于 PowerShell 允许 `?` 作为变量名称的一部分，因此使用这些运算符需要变量名称的形式规范。 因此，使用 `{}` 将变量名称括起来（如 `${a}`）或 `?` 是变量名称 `${a?}` 的一部分时需要形式规范。
 >
-> 的变量名语法 `${<name>}` 不应与 `$()` 子表达式运算符混淆。 有关详细信息，请参阅 [about_Variables](about_Variables.md#Variable-names-that-include-special-characters)的变量名称部分。
+> 的变量名语法 `${<name>}` 不应与 `$()` 子表达式运算符混淆。 有关详细信息，请参阅 [about_Variables](about_Variables.md#variable-names-that-include-special-characters)的变量名称部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [about_Arithmetic_Operators](about_Arithmetic_Operators.md)
 

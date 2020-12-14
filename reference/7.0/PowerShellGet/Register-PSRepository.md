@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/register-psrepository?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-PSRepository
-ms.openlocfilehash: be7ffa38a0409fa7ef0d01649b863a32732e34de
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: f0ec2f4bc0ce598b046c1159619aed5555b1bc79
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197201"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890209"
 ---
 # Register-PSRepository
 
@@ -37,7 +37,7 @@ Register-PSRepository [-Default] [-InstallationPolicy <String>] [-Proxy <Uri>]
  [-ProxyCredential <PSCredential>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Register-PSRepository`Cmdlet 为 PowerShell 模块注册默认存储库。 注册存储库后，可以从 `Find-Module` 、 `Install-Module` 和 cmdlet 引用它 `Publish-Module` 。 已注册的存储库将成为和中的默认存储库 `Find-Module` `Install-Module` 。
 
@@ -269,6 +269,13 @@ Accept wildcard characters: False
 ### System.Object
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

@@ -7,12 +7,12 @@ ms.date: 03/29/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-packagesource?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PackageSource
-ms.openlocfilehash: 81b6f94be6293733ec75d48b1f9dd7ac4f4f8d96
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 8428f51c27cf52a7e0910a7b6c759e1f75b89339
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197646"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890107"
 ---
 # Get-PackageSource
 
@@ -36,7 +36,7 @@ Get-PackageSource [[-Name] <String>] [-Location <String>] [-Force] [-ForceBootst
  [-ScriptSourceLocation <String>] [-ScriptPublishLocation <String>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 该 `Get-PackageSource` cmdlet 将获取在本地计算机上向 **PackageManagement** 注册的包源的列表。 如果指定包提供程序，则 `Get-PackageSource` 仅获取与指定的提供程序关联的那些源。 否则，该命令将返回已注册到 **PackageManagement** 的所有包源。
 
@@ -90,7 +90,7 @@ LocalPackages        NuGet            False      C:\LocalPkg\
 MyNuget              NuGet            False      https://www.nuget.org/api/v2
 ```
 
-`Get-PackageProvider` 使用 **Name** 参数指定提供程序名称（ **NuGet** ）。 将对象向下发送到 `Get-PackageSource` 。
+`Get-PackageProvider` 使用 **Name** 参数指定提供程序名称（ **NuGet**）。 将对象向下发送到 `Get-PackageSource` 。
 
 ## PARAMETERS
 
@@ -286,6 +286,13 @@ Accept wildcard characters: False
 
 ## 注释
 
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
+
 ## 相关链接
 
 [about_PackageManagement](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
@@ -301,4 +308,3 @@ Accept wildcard characters: False
 [Set-PackageSource](Set-PackageSource.md)
 
 [Unregister-PackageSource](Unregister-PackageSource.md)
-

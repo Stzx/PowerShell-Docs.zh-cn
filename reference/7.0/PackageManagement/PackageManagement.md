@@ -8,18 +8,25 @@ Module Name: PackageManagement
 ms.date: 06/09/2017
 schema: 2.0.0
 title: PackageManagement
-ms.openlocfilehash: 28138731e65e14ceb4295466891fcbd772333c87
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: 01b1bce187cd0526e56abc812f91b44a2c022a29
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93199511"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890849"
 ---
 # PackageManagement 模块
 
-## 说明
+## 描述
 
 本主题显示包管理 Cmdlet 的帮助主题。
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## PackageManagement Cmdlet
 

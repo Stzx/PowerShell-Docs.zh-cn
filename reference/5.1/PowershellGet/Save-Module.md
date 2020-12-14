@@ -7,12 +7,12 @@ ms.date: 11/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/save-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Module
-ms.openlocfilehash: 1b5bba73a55f92b515113c8b895dcb8af3c52eb6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e058bff552b4460d068909f8bf4ab31b976ef978
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198236"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889719"
 ---
 # Save-Module
 
@@ -55,7 +55,7 @@ Save-Module [-InputObject] <PSObject[]> [-Path] <String> [-Proxy <Uri>]
  [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Save-Module`Cmdlet 从已注册的存储库下载模块和任何依赖项。
 `Save-Module` 下载并保存模块的最新版本。 文件将保存到本地计算机上的指定路径。 未安装该模块，但可以由管理员检查内容。 然后，可以将保存的模块复制到 `$env:PSModulePath` 脱机计算机的相应位置。
@@ -82,11 +82,11 @@ d-----         7/1/2019     13:31                PackageManagement
 d-----         7/1/2019     13:31                PowerShellGet
 ```
 
-`Save-Module` 使用 **Name** 参数指定模块 **PowerShellGet** 。 **Path** 参数指定下载的模块的存储位置。 **存储库** 参数指定已注册的存储库 **PSGallery** 。 下载完成后，将 `Get-ChildItem` 显示存储文件的 **路径** 的内容。
+`Save-Module` 使用 **Name** 参数指定模块 **PowerShellGet**。 **Path** 参数指定下载的模块的存储位置。 **存储库** 参数指定已注册的存储库 **PSGallery**。 下载完成后，将 `Get-ChildItem` 显示存储文件的 **路径** 的内容。
 
 ### 示例2：保存模块的特定版本
 
-此示例演示如何使用参数（如 **MaximumVersion** ）或 **RequiredVersion** 来指定模块版本。
+此示例演示如何使用参数（如 **MaximumVersion**）或 **RequiredVersion** 来指定模块版本。
 
 ```powershell
 Save-Module -Name PowerShellGet -Path C:\Test\Modules -Repository PSGallery -MaximumVersion 2.1.0
@@ -101,7 +101,7 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     13:40                2.1.0
 ```
 
-`Save-Module` 使用 **Name** 参数指定模块 **PowerShellGet** 。 **Path** 参数指定下载的模块的存储位置。 **存储库** 参数指定已注册的存储库 **PSGallery** 。 **MaximumVersion** 指定下载并保存版本 **2.1.0** 。 下载完成后，将 `Get-ChildItem` 显示存储文件的 **路径** 的内容。
+`Save-Module` 使用 **Name** 参数指定模块 **PowerShellGet**。 **Path** 参数指定下载的模块的存储位置。 **存储库** 参数指定已注册的存储库 **PSGallery**。 **MaximumVersion** 指定下载并保存版本 **2.1.0** 。 下载完成后，将 `Get-ChildItem` 显示存储文件的 **路径** 的内容。
 
 ### 示例3：查找并保存模块的特定版本
 
@@ -121,7 +121,7 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     14:04                1.6.5
 ```
 
-`Find-Module` 使用 **Name** 参数指定模块 **PowerShellGet** 。 **存储库** 参数指定已注册的存储库 **PSGallery** 。 **RequiredVersion** 指定版本 **1.6.5** 。
+`Find-Module` 使用 **Name** 参数指定模块 **PowerShellGet**。 **存储库** 参数指定已注册的存储库 **PSGallery**。 **RequiredVersion** 指定版本 **1.6.5**。
 
 将对象向下发送到 `Save-Module` 。 **Path** 参数指定下载的模块的存储位置。 下载完成后，将 `Get-ChildItem` 显示存储文件的 **路径** 的内容。
 
@@ -392,5 +392,12 @@ Accept wildcard characters: False
 ## 输出
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接

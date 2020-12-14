@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-packageprovider?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PackageProvider
-ms.openlocfilehash: 43f70d400cc2d9b81e2bf59a6d2b3bb986737c69
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: d62144be2b3d498e794dbde425313ee0f619efca
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197044"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890536"
 ---
 # Get-PackageProvider
 
@@ -25,7 +25,7 @@ ms.locfileid: "93197044"
 Get-PackageProvider [[-Name] <String[]>] [-ListAvailable] [-Force] [-ForceBootstrap] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 **Install-packageprovider** cmdlet 将返回连接到包管理的包提供程序的列表。
 这些提供程序的示例包括 PSModule、NuGet 和 Chocolatey。
@@ -142,6 +142,13 @@ Accept wildcard characters: False
 ### Install-packageprovider []
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

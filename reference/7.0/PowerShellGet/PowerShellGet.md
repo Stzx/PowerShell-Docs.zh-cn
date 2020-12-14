@@ -8,18 +8,25 @@ Module Name: PowerShellGet
 ms.date: 06/09/2017
 schema: 2.0.0
 title: PowerShellGet
-ms.openlocfilehash: 6da6adf79693929f75d82e1925eb67496dd9b6ef
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: b4988bdfa027c439436073d683e1cc1013294fc8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93199509"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890451"
 ---
 # PowerShellGet 模块
 
-## 说明
+## 描述
 
 PowerShellGet 是一个模块，其中包含用于发现、安装、更新和发布 PowerShell 项目（如模块、DSC 资源、角色功能和脚本）的命令。
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## PowerShellGet Cmdlets
 

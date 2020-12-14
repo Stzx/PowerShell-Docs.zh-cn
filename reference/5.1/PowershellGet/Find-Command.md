@@ -7,12 +7,12 @@ ms.date: 06/03/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-command?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Command
-ms.openlocfilehash: 71ea79cab9bb00c31f1cc78d70b1624f85a5a714
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: eb305801bb6f8c84ffdf0ff34936ec3156ba5b0e
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197735"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891248"
 ---
 # Find-Command
 
@@ -30,7 +30,7 @@ Find-Command [[-Name] <String[]>] [-ModuleName <String>] [-MinimumVersion <Strin
  [-Repository <String[]>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Find-Command`Cmdlet 将查找 cmdlet、别名、函数和工作流等 PowerShell 命令。 `Find-Command` 搜索已注册存储库中的模块。
 
@@ -80,7 +80,7 @@ Get-TargetResource    1.0.0      xInternetExplorerHomePage       PSGallery
 Get-TargetResource    1.2.0.0    SystemLocaleDsc                 PSGallery
 ```
 
-`Find-Command` 使用 **存储库** 参数搜索 **PSGallery** 。 **Name** 参数指定命令 **test-targetresource** 。
+`Find-Command` 使用 **存储库** 参数搜索 **PSGallery**。 **Name** 参数指定命令 **test-targetresource**。
 
 ### 示例3：按名称查找命令并安装模块
 
@@ -98,7 +98,7 @@ Version   Name               Repository   Description
 1.2.0.0   SystemLocaleDsc    PSGallery    This DSC Resource allows configuration of the Windows...
 ```
 
-`Find-Command` 使用 **Name** 参数指定命令 **test-targetresource** 。 **存储库** 参数搜索 **PSGallery** 。 **ModuleName** 参数指定要安装的模块 **SystemLocaleDsc** 。 将对象向下发送到 `Install-Module` ，并安装该模块。 安装完成后，可以使用 `Get-InstalledModule` 来显示结果。
+`Find-Command` 使用 **Name** 参数指定命令 **test-targetresource**。 **存储库** 参数搜索 **PSGallery**。 **ModuleName** 参数指定要安装的模块 **SystemLocaleDsc**。 将对象向下发送到 `Install-Module` ，并安装该模块。 安装完成后，可以使用 `Get-InstalledModule` 来显示结果。
 
 ### 示例 4：查找命令并保存其模块
 
@@ -111,7 +111,7 @@ VERBOSE: Completed downloading 'PSScriptAnalyzer'.
 VERBOSE: Module 'PSScriptAnalyzer' was saved successfully to path 'C:\Test\Modules\PSScriptAnalyzer\1.18.0'.
 ```
 
-`Find-Command`使用 **Name** 和 **Repository** 参数在 **PSGallery** 存储库中搜索命令 **ScriptAnalyzer** 。 将对象向下发送到 `Save-Module` 。 **Path** 参数确定保存模块的位置。 " **详细** " 是一个可选参数，但在 PowerShell 控制台中显示状态输出。 详细输出对于故障排除非常有用。
+`Find-Command`使用 **Name** 和 **Repository** 参数在 **PSGallery** 存储库中搜索命令 **ScriptAnalyzer** 。 将对象向下发送到 `Save-Module` 。 **Path** 参数确定保存模块的位置。 "**详细**" 是一个可选参数，但在 PowerShell 控制台中显示状态输出。 详细输出对于故障排除非常有用。
 
 ## PARAMETERS
 
@@ -321,6 +321,13 @@ Accept wildcard characters: False
 
 ## 注释
 
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
+
 ## 相关链接
 
 [Get-InstalledModule](Get-InstalledModule.md)
@@ -331,4 +338,4 @@ Accept wildcard characters: False
 
 [Select-Object](../Microsoft.PowerShell.Utility/Select-Object.md)
 
-[Uninstall-Module](Uninstall-Module.md)
+[Uninstall-模块](Uninstall-Module.md)

@@ -7,12 +7,12 @@ ms.date: 06/04/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-dscresource?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-DscResource
-ms.openlocfilehash: 9953a7912d29517249fa215b154c1dfae46585d1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2596bf1789f4eb8c7c3983bf64f99ff0c1132b67
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198360"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890039"
 ---
 # Find-DscResource
 
@@ -30,7 +30,7 @@ Find-DscResource [[-Name] <String[]>] [-ModuleName <String>] [-MinimumVersion <S
  [-Repository <String[]>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Find-DscResource`Cmdlet 可搜索已注册的存储库，以查找模块中包含的 DSC 资源。 默认情况下， `Find-DscResource` 搜索所有已注册的存储库。
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -AllVersions
 
-**AllVersions** 参数显示每个 DSC 资源的可用版本。 不能将 **AllVersions** 参数与 **MinimumVersion** 、 **MaximumVersion** 或 **RequiredVersion** 参数一起使用。
+**AllVersions** 参数显示每个 DSC 资源的可用版本。 不能将 **AllVersions** 参数与 **MinimumVersion**、 **MaximumVersion** 或 **RequiredVersion** 参数一起使用。
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -359,6 +359,13 @@ Accept wildcard characters: False
 
 ## 注释
 
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
+
 ## 相关链接
 
 [Get-InstalledModule](Get-InstalledModule.md)
@@ -369,5 +376,4 @@ Accept wildcard characters: False
 
 [Select-Object](../Microsoft.PowerShell.Utility/Select-Object.md)
 
-[Uninstall-Module](Uninstall-Module.md)
-
+[Uninstall-模块](Uninstall-Module.md)

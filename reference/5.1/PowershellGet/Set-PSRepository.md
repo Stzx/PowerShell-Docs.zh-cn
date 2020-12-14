@@ -7,12 +7,12 @@ ms.date: 04/22/2020
 online version: https://docs.microsoft.com/powershell/module/powershellget/set-psrepository?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PSRepository
-ms.openlocfilehash: 0734bda0a3462e39f799570c853cffa3e267c5db
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2b23a121249c5cc9037e0440dfaed17a1a9f76e9
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198234"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891551"
 ---
 # Set-PSRepository
 
@@ -28,7 +28,7 @@ Set-PSRepository [-Name] <String> [[-SourceLocation] <Uri>] [-PublishLocation <U
  [-PackageManagementProvider <String>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Set-PSRepository`Cmdlet 为已注册的模块存储库设置值。 这些设置对于当前用户是永久性的，适用于为该用户安装的所有版本的 PowerShell。
 
@@ -40,7 +40,7 @@ Set-PSRepository [-Name] <String> [[-SourceLocation] <Uri>] [-PublishLocation <U
 Set-PSRepository -Name "myInternalSource" -InstallationPolicy Trusted
 ```
 
-此命令将 **myInternalSource** 存储库的安装策略设置为 " **受信任** "，以便在从此源安装模块之前不会进行提示。
+此命令将 **myInternalSource** 存储库的安装策略设置为 " **受信任**"，以便在从此源安装模块之前不会进行提示。
 
 ### 示例2：设置存储库的源位置和发布位置
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -InstallationPolicy
 
-指定安装策略。 有效值为： **可信** 、 **不受** 信任。
+指定安装策略。 有效值为： **可信**、 **不受** 信任。
 
 ```yaml
 Type: System.String
@@ -228,6 +228,13 @@ Accept wildcard characters: False
 ### System.Object
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

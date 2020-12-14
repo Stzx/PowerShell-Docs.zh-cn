@@ -7,12 +7,12 @@ ms.date: 07/08/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-modulemanifest?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ModuleManifest
-ms.openlocfilehash: 81c58a09cb6c4e6cedcc7abfa832af7bb694b0e1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2ad1f5991920cecf0a5b494bde698510c1c55b94
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198894"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890798"
 ---
 # Update-ModuleManifest
 
@@ -40,7 +40,7 @@ Update-ModuleManifest [-Path] <String> [-NestedModules <Object[]>] [-Guid <Guid>
  [-RequireLicenseAcceptance] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Update-ModuleManifest`Cmdlet () 文件更新模块清单 `.psd1` 。
 
@@ -61,7 +61,7 @@ $Parms = @{
 Update-ModuleManifest @Parms
 ```
 
-`$Parms` 是存储 **路径** 、 **作者** 、 **公司名称** 和 **版权** 的参数值的 splat。 `Update-ModuleManifest` 从获取参数值， `@Parms` 并更新 **TestManifest.psd1** 的模块清单。
+`$Parms` 是存储 **路径**、 **作者**、 **公司名称** 和 **版权** 的参数值的 splat。 `Update-ModuleManifest` 从获取参数值， `@Parms` 并更新 **TestManifest.psd1** 的模块清单。
 
 ## PARAMETERS
 
@@ -707,7 +707,7 @@ Accept wildcard characters: False
 
 若要从 `.psm1` `.dll` 具有清单的模块中的或文件中导出成员，必须在清单中的 **RootModule** 或 **NestedModules** 键的值中指定这些文件的名称。 否则，不会导出它们的成员。
 
-在 PowerShell 2.0 中，此密钥称为 **ModuleToProcess** 。
+在 PowerShell 2.0 中，此密钥称为 **ModuleToProcess**。
 
 ```yaml
 Type: System.String
@@ -822,5 +822,12 @@ Accept wildcard characters: False
 ### System.Object
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接

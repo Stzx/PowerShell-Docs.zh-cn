@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-script?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Script
-ms.openlocfilehash: dd4e8169310f23182697ba6bf4263d916f747b84
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: c8191f8b5bbf6337fdc11dc3d15774991029151b
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197205"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891186"
 ---
 # Install-Script
 
@@ -38,11 +38,11 @@ Install-Script [-InputObject] <PSObject[]> [-Scope <String>] [-NoPathUpdate] [-P
  [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Install-Script`Cmdlet 从存储库获取脚本负载，验证负载是否为有效的 PowerShell 脚本，并将脚本文件复制到指定的安装位置。
 
-针对的默认存储库 `Install-Script` 操作可通过 `Register-PSRepository` 、 `Set-PSRepository` 、 `Unregister-PSRepository` 和 `Get-PSRepository` cmdlet 进行配置。 针对多个存储库进行操作时， `Install-Script` 将从第一个存储库中的 ( **名称** 、 **MinimumVersion** 或 **MaximumVersion** ) 中安装与指定搜索条件相匹配的第一个脚本，而不会出现任何错误。
+针对的默认存储库 `Install-Script` 操作可通过 `Register-PSRepository` 、 `Set-PSRepository` 、 `Unregister-PSRepository` 和 `Get-PSRepository` cmdlet 进行配置。 针对多个存储库进行操作时， `Install-Script` 将从第一个存储库中的 (**名称**、 **MinimumVersion** 或 **MaximumVersion**) 中安装与指定搜索条件相匹配的第一个脚本，而不会出现任何错误。
 
 ## 示例
 
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 
 ### -MinimumVersion
 
-指定要安装的单个脚本的最低版本。 如果尝试安装多个脚本，则无法添加此参数。 MinimumVersion  和 RequiredVersion  参数互斥，不能在同一命令中使用这两个参数。
+指定要安装的单个脚本的最低版本。 如果尝试安装多个脚本，则无法添加此参数。 MinimumVersion 和 RequiredVersion 参数互斥，不能在同一命令中使用这两个参数。
 
 ```yaml
 Type: System.String
@@ -499,6 +499,13 @@ Accept wildcard characters: False
 ### System.Object
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 
