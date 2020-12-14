@@ -1,16 +1,16 @@
 ---
-title: about_Character_Encoding
 description: 描述 PowerShell 如何使用字符串数据的输入和输出的字符编码。
-ms.date: 10/21/2020
 Locale: en-US
+ms.date: 10/21/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_character_encoding?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
-ms.openlocfilehash: 0dff2a2cd3915a84c80627abdd0388e9722df806
-ms.sourcegitcommit: df80c558e9a4b89c9798f084bd04012ece15155c
+title: about_Character_Encoding
+ms.openlocfilehash: f383b985baeae059565f61c700df7a76346497d8
+ms.sourcegitcommit: cc72c40315fd2981d3009b335accbfa52d57640c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "93200719"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96349841"
 ---
 # <a name="about_character_encoding"></a>about_Character_Encoding
 
@@ -43,7 +43,7 @@ Windows 支持 Unicode 和传统字符集。 传统字符集（如 Windows 代�
 
 ## <a name="the-byte-order-mark"></a>字节顺序标记
 
-字节顺序标记 (BOM) 是文件或文本流的前几个字节中的 _Unicode 签名_ ，指示用于数据的 unicode 编码。 有关详细信息，请参阅维基百科中的 [字节顺序标记](https://wikipedia.org/wiki/Byte_order_mark) 文章。
+字节顺序标记 (BOM) 是文件或文本流的前几个字节中的 _Unicode 签名_ ，指示用于数据的 unicode 编码。 有关详细信息，请参阅 [字节顺序标记](/globalization/encoding/byte-order-mark) 文档。
 
 在 Windows PowerShell 中，除之外的任何 Unicode 编码 `UTF7` 都将始终创建 BOM。 所有文本输出的 PowerShell Core 默认值为 `utf8NoBOM` 。
 

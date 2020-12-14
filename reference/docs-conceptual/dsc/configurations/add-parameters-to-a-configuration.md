@@ -3,12 +3,12 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,资源,库,安装程序
 title: 向配置添加参数
 description: DSC 配置可以参数化，以便基于用户输入进行更多动态配置。
-ms.openlocfilehash: aea230d34994a7b20076559c44990abe554d5395
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 72f3cf9efb5d99170e71992bed86a20a57132250
+ms.sourcegitcommit: 62282bb9c36fea3b4290b9263c1cd8e9ac216e29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92656817"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96470326"
 ---
 # <a name="add-parameters-to-a-configuration"></a>向配置添加参数
 
@@ -210,7 +210,7 @@ Configuration TestConfig
         $State="Running",
 
         [String]
-        $ComputerName="localhost",
+        $ComputerName="localhost"
     )
 
     # It is best practice to explicitly import any required resources or modules.

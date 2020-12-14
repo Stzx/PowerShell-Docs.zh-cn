@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/set-packagesource?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PackageSource
-ms.openlocfilehash: 11b56b0f6d58e3a001b77c875eb64195031aac6b
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 67a5a97c4e29556c9b93a17d25576d4bd6eaea0c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197053"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892699"
 ---
 # Set-PackageSource
 
@@ -71,7 +71,7 @@ Set-PackageSource [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [-Credential 
  [-ScriptSourceLocation <String>] [-ScriptPublishLocation <String>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Set-PackageSource`替换指定包提供程序的包源。 包源始终由包提供程序进行管理。
 
@@ -79,7 +79,7 @@ Set-PackageSource [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [-Credential 
 
 ### 示例1：更改包源
 
-此命令更改包源的现有名称。 源设置为 " **受信任** "，这会在安装包时消除用于验证源的提示。
+此命令更改包源的现有名称。 源设置为 " **受信任**"，这会在安装包时消除用于验证源的提示。
 
 ```
 PS C:\> Set-PackageSource -Name MyNuget -NewName NewNuGet -Trusted -ProviderName NuGet
@@ -421,6 +421,13 @@ Accept wildcard characters: False
 ### 此 cmdlet 将不生成任何输出。
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

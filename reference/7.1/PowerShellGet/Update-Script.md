@@ -7,12 +7,12 @@ ms.date: 07/09/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-script?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-Script
-ms.openlocfilehash: 0bf221e28586d4cb3530583255b763ff0d6282df
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 25da03724603b0000c46ae2da69d63cdf2f36cec
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197582"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891677"
 ---
 # Update-Script
 
@@ -29,7 +29,7 @@ Update-Script [[-Name] <String[]>] [-RequiredVersion <String>] [-MaximumVersion 
  [-AllowPrerelease] [-AcceptLicense] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Update-Script`Cmdlet 可更新安装在本地计算机上的脚本。 已更新的脚本将从与安装的版本相同的存储库中下载。
 
@@ -264,6 +264,13 @@ Accept wildcard characters: False
 
 ## 注释
 
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
+
 ## 相关链接
 
 [Find-Script](Find-Script.md)
@@ -274,5 +281,5 @@ Accept wildcard characters: False
 
 [Save-Script](Save-Script.md)
 
-[Uninstall-Script](Uninstall-Script.md)
+[卸载-脚本](Uninstall-Script.md)
 

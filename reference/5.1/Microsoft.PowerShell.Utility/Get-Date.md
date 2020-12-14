@@ -7,12 +7,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: f550d352ca6e400307feba9ec16cea4632603b62
-ms.sourcegitcommit: ea9270bacee7dd1b9df2519384de277576357ce2
+ms.openlocfilehash: cbf87c2a2d6ab0f08e514ba971a622ea9f1904aa
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93199360"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514929"
 ---
 # Get-Date
 
@@ -37,7 +37,7 @@ Get-Date [[-Date] <DateTime>] [-Year <Int32>] [-Month <Int32>] [-Day <Int32>] [-
  [-UFormat <String>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 该 `Get-Date` cmdlet 将获取表示当前日期或指定日期的 **DateTime** 对象。 `Get-Date` 可以采用多种 .NET 和 UNIX 格式设置日期和时间的格式。 您可以使用 `Get-Date` 生成日期或时间字符串，然后将字符串发送到其他 cmdlet 或程序。
 
@@ -59,7 +59,7 @@ Tuesday, June 25, 2019 14:53:32
 
 ### 示例2：获取当前日期和时间的元素
 
-此示例演示如何使用 `Get-Date` 获取日期或时间元素。 参数使用参数 **Date** 、 **Time** 或 **DateTime** 。
+此示例演示如何使用 `Get-Date` 获取日期或时间元素。 参数使用参数 **Date**、 **Time** 或 **DateTime**。
 
 ```powershell
 Get-Date -DisplayHint Date
@@ -140,7 +140,7 @@ Tuesday 06/25/2019 16:19 -07
 366
 ```
 
-`Get-Date` 使用三个参数指定日期： **Year** 、 **Month** 和 **Day** 。 命令用括号括起来，以便 **DayofYear** 属性计算结果。
+`Get-Date` 使用三个参数指定日期： **Year**、 **Month** 和 **Day**。 命令用括号括起来，以便 **DayofYear** 属性计算结果。
 
 ### 示例6：检查是否为夏令时调整了日期
 
@@ -173,7 +173,7 @@ Wednesday June/26/2019 10:45:26 -07
 Wednesday, June 26, 2019 17:45:26
 ```
 
-`Get-Date` 使用带有格式说明符的 **UFormat** 参数显示当前系统日期和时间。 格式说明符 **% Z** 表示 UTC 偏移量 **07** 。
+`Get-Date` 使用带有格式说明符的 **UFormat** 参数显示当前系统日期和时间。 格式说明符 **% Z** 表示 UTC 偏移量 **07**。
 
 `$Time`变量存储当前的系统日期和时间。 `$Time` 使用 **ToUniversalTime ( # B1** 方法，根据计算机的 UTC 偏移量转换时间。
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 指定显示月份中的某一天。 输入一个介于 1 到 31 之间的值。
 
-如果指定的值大于每月的天数，则 PowerShell 会将天数添加到月份。 例如， `Get-Date -Month 2 -Day 31` 显示 3 **月 3** 日，而不是 **2 月31日** 。
+如果指定的值大于每月的天数，则 PowerShell 会将天数添加到月份。 例如， `Get-Date -Month 2 -Day 31` 显示 3 **月 3** 日，而不是 **2 月31日**。
 
 ```yaml
 Type: System.Int32
@@ -246,9 +246,9 @@ Accept wildcard characters: False
 
 接受的值如下所示：
 
-- **Date** ：仅显示日期
-- **Time** ：仅显示时间
-- **DateTime** ：显示日期和时间
+- **Date**：仅显示日期
+- **Time**：仅显示时间
+- **DateTime**：显示日期和时间
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.DisplayHintType
@@ -270,18 +270,18 @@ Accept wildcard characters: False
 
 有关可用的 .NET 格式说明符的列表，请参阅 [自定义日期和时间格式字符串](/dotnet/standard/base-types/custom-date-and-time-format-strings?view=netframework-4.8)。
 
-使用 **Format** 参数时， `Get-Date` 仅获取显示日期所需的 **DateTime** 对象的属性。 因此， **DateTime** 对象的某些属性和方法可能不可用。
+使用 **Format** 参数时， `Get-Date` 仅获取显示日期所需的 **DateTime** 对象的属性。 因此，**DateTime** 对象的某些属性和方法可能不可用。
 
 从 PowerShell 5.0 开始，可以使用以下附加格式作为 **Format** 参数的值。
 
-- **FileDate** 。 以本地时间表示的当前日期的文件或路径友好表示形式。 格式 `yyyyMMdd` (区分大小写，使用四位数年份、2位数月和两位数表示的日期) 。 例如：
+- **FileDate**。 以本地时间表示的当前日期的文件或路径友好表示形式。 格式 `yyyyMMdd` (区分大小写，使用四位数年份、2位数月和两位数表示的日期) 。 例如：
   20190627.
 
-- **FileDateUniversal** 。 在通用时间 (UTC) 的当前日期的文件或路径友好表示形式。 格式 `yyyyMMddZ` (区分大小写，使用四位数的年份、2位数的月份、2位数的日期和字母 `Z` 作为 UTC 指示器) 。 例如：20190627Z。
+- **FileDateUniversal**。 在通用时间 (UTC) 的当前日期的文件或路径友好表示形式。 格式 `yyyyMMddZ` (区分大小写，使用四位数的年份、2位数的月份、2位数的日期和字母 `Z` 作为 UTC 指示器) 。 例如：20190627Z。
 
-- **FileDateTime** 。 以24小时格式表示的当前日期和时间的文件或路径友好表示形式。 格式 `yyyyMMddTHHmmssffff` (区分大小写，使用四位数的年份、2位数的月份、2位数的日期、字母作为时间分隔符、2位数小时、2位数字 `T` 分钟、2位数秒和4位数毫秒) 。 例如：20190627T0840107271。
+- **FileDateTime**。 以24小时格式表示的当前日期和时间的文件或路径友好表示形式。 格式 `yyyyMMddTHHmmssffff` (区分大小写，使用四位数的年份、2位数的月份、2位数的日期、字母作为时间分隔符、2位数小时、2位数字 `T` 分钟、2位数秒和4位数毫秒) 。 例如：20190627T0840107271。
 
-- **FileDateTimeUniversal** 。 以24小时格式 (UTC) 的当前日期和时间的文件或路径友好表示形式。 格式 `yyyyMMddTHHmmssffffZ` (区分大小写，使用四位数的年份、2位数的月份、2位数的日期、字母 `T` 作为时间分隔符、2位数的小时、2位数字的分钟、2位秒、4位数的毫秒以及与 `Z` UTC 指示器) 的字母。 例如：20190627T1540500718Z。
+- **FileDateTimeUniversal**。 以24小时格式 (UTC) 的当前日期和时间的文件或路径友好表示形式。 格式 `yyyyMMddTHHmmssffffZ` (区分大小写，使用四位数的年份、2位数的月份、2位数的日期、字母 `T` 作为时间分隔符、2位数的小时、2位数字的分钟、2位秒、4位数的毫秒以及与 `Z` UTC 指示器) 的字母。 例如：20190627T1540500718Z。
 
 ```yaml
 Type: System.String
@@ -383,7 +383,7 @@ Accept wildcard characters: False
 
 **UFormat** 说明符前面有一个百分号 (`%`) ，例如，、 `%m` `%d` 和 `%Y` 。 " [注释](#notes) " 部分包含有效 **UFormat 说明符** 的表。
 
-使用 **UFormat** 参数时， `Get-Date` 仅获取显示日期所需的 **DateTime** 对象的属性。 因此， **DateTime** 对象的某些属性和方法可能不可用。
+使用 **UFormat** 参数时， `Get-Date` 仅获取显示日期所需的 **DateTime** 对象的属性。 因此，**DateTime** 对象的某些属性和方法可能不可用。
 
 ```yaml
 Type: System.String
@@ -421,7 +421,7 @@ Accept wildcard characters: False
 
 ### 管道输入
 
-`Get-Date` 接受管道输入。 例如，`Get-ChildItem | Get-Date`。
+`Get-Date` 接受管道输入。 例如 `Get-ChildItem | Get-Date`。
 
 ## 输出
 
@@ -434,13 +434,16 @@ Accept wildcard characters: False
 方法 `(Get-Date).ToString()` 将 **DateTime** 对象转换为 **String** 对象。
 
 若要显示对象的属性和方法，请将对象向下发送到 `Get-Member` 。
-例如，`Get-Date | Get-Member`。
+例如 `Get-Date | Get-Member`。
 
 ## 注释
 
 **DateTime** 对象采用系统区域设置的长日期和长时间格式。
 
 下表显示了有效的 **UFormat 说明符** ：
+
+> [!IMPORTANT]
+> 更高版本的 PowerShell 中添加了其他 **UFormat** 说明符。 例如， `%F` 已添加到 PowerShell 6.2 中，因此它在 Windows PowerShell 5.1 或更早版本中不可用。 在设计为在多个 PowerShell 版本上运行的脚本中使用 **UFormat** 说明符时，请牢记这一点。
 
 | 格式说明符 |                                 含义                     |         示例          |
 | ---- | ----------------------------------------------------------------------- | ------------------------ |
@@ -452,7 +455,7 @@ Accept wildcard characters: False
 | `%c` | 日期和时间-缩写                                             | Thu 27 08:44:18 2019 年6月 |
 | `%D` | 日期采用 mm/dd/yy 格式                                                 | 06/27/19                 |
 | `%d` | 每月的第几天-2 位数                                             | 05                       |
-| `%e` | 月份中的第几天，以空格开头                            | \<space\>5               |
+| `%e` | 月份中的第几天，如果只有单个数字，则以空格开头           | \<space\>5               |
 | `%G` | 与 "Y" 相同                                                             |                          |
 | `%g` | 与 "y" 相同                                                             |                          |
 | `%H` | 24小时制格式的小时                                                  | 17                       |

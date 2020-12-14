@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 10/25/2019
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 5647f9bfa909cba9740e7be17f262b6be0e5c8e9
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 758b0a8ef9a5f65f0e7cfa7f3633086cf9f0445d
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94342920"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891762"
 ---
 # New-Service
 
@@ -27,7 +27,7 @@ New-Service [-Name] <String> [-BinaryPathName] <String> [-DisplayName <String>] 
  [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `New-Service`Cmdlet 在注册表和服务数据库中为 Windows 服务创建一个新条目。 新服务需要在服务过程中运行的可执行文件。
 
@@ -38,7 +38,7 @@ New-Service [-Name] <String> [-BinaryPathName] <String> [-DisplayName <String>] 
 ### 示例1：创建服务
 
 ```powershell
-New-Service -Name "TestService" -BinaryPathName "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+New-Service -Name "TestService" -BinaryPathName '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
 ```
 
 此命令创建名为 TestService 的服务。
@@ -48,7 +48,7 @@ New-Service -Name "TestService" -BinaryPathName "C:\WINDOWS\System32\svchost.exe
 ```powershell
 $params = @{
   Name = "TestService"
-  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  BinaryPathName = '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
   DependsOn = "NetLogon"
   DisplayName = "Test Service"
   StartupType = "Manual"
@@ -92,6 +92,12 @@ sc.exe delete TestService
 
 指定服务的可执行文件的路径。 此参数是必需的。
 
+服务二进制文件的完全限定路径。 如果路径包含空格，则必须将其括在引号中，以便对其进行正确解释。 例如， `d:\my share\myservice.exe` 应将指定为 `'"d:\my share\myservice.exe"'` 。
+
+该路径还可以包含自动启动服务的参数。 例如 `'"d:\myshare\myservice.exe arg1 arg2"'`。 这些参数将传递到服务入口点。
+
+有关详细信息，请参阅 [CreateServiceW](/windows/win32/api/winsvc/nf-winsvc-createservicew) API 的 **lpBinaryPathName** 参数。
+
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -108,7 +114,7 @@ Accept wildcard characters: False
 
 将服务使用的帐户指定为 [服务登录帐户](/windows/desktop/ad/about-service-logon-accounts)。
 
-键入用户名（如 **User01** 或 **Domain01\User01** ）或输入 PSCredential 对象，例如由 Cmdlet 生成的一个 **PSCredential** 对象 `Get-Credential` 。 键入用户名时，此 cmdlet 会提示输入密码。
+键入用户名（如 **User01** 或 **Domain01\User01**）或输入 PSCredential 对象，例如由 Cmdlet 生成的一个 **PSCredential** 对象 `Get-Credential` 。 键入用户名时，此 cmdlet 会提示输入密码。
 
 凭据存储在 [PSCredential](/dotnet/api/system.management.automation.pscredential) 对象中，密码存储为 [SecureString](/dotnet/api/system.security.securestring)。
 
@@ -202,7 +208,7 @@ Accept wildcard characters: False
 - **启动** -表示服务是由系统加载程序启动的设备驱动程序。 此值仅对设备驱动程序有效。
 - **系统** -指示服务是由 "IOInitSystem ( # A1" 函数启动的设备驱动程序。 此值仅对设备驱动程序有效。
 
- 默认值为 " **自动** "。
+ 默认值为 " **自动**"。
 
 ```yaml
 Type: System.ServiceProcess.ServiceStartMode
@@ -255,7 +261,7 @@ Accept wildcard characters: False
 
 ## 输入
 
-### None
+### 无
 
 不能通过管道将输入传递给此 cmdlet。
 

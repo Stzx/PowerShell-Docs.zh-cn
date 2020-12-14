@@ -6,12 +6,12 @@ ms.date: 1/11/2019
 online version: https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Classes_and_DSC
-ms.openlocfilehash: 272d6872d096de864044ae41449caff472bb1799
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 00a7d18bb1ccf618b22b61d2197053365ea3f21b
+ms.sourcegitcommit: cc72c40315fd2981d3009b335accbfa52d57640c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93200027"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96349783"
 ---
 # <a name="about-classes-and-desired-state-configuration"></a>关于类和所需状态配置
 
@@ -188,7 +188,7 @@ class FileResource
         $present = $true
 
         $item = Get-ChildItem -LiteralPath $location -ea Ignore
-        if ($item -eq $null)
+        if ($null -eq $item)
         {
             $present = $false
         }
@@ -231,150 +231,6 @@ class FileResource
         if(Test-Path -LiteralPath $this.Path -PathType Container)
         {
             throw "Path $($this.Path) is a directory path"
-        }
-
-        Write-Verbose -Message "Copying $this.SourcePath to $this.Path"
-
-        #DSC engine catches and reports any error that occurs
-        Copy-Item -Path $this.SourcePath -Destination $this.Path -Force
-    }
-}
-# This module defines a class for a DSC "FileResource" provider.
-
-enum Ensure
-{
-    Absent
-    Present
-}
-
-<# This resource manages the file in a specific path.
-[DscResource()] indicates the class is a DSC resource
-#>
-
-[DscResource()]
-class FileResource{
-
-    <# This is a key property
-        [DscResourceKey()] also means the property is required.
-        It is guaranteed to be set, other properties may not
-        be set if the configuration did not specify values.
-    #>
-    [DscResourceKey()]
-    [string]$Path
-
-    <#
-        [DscResourceMandatory()] means the property is required.
-        It is guaranteed to be set, other properties may not be set
-        if the configuration did not specify values.
-    #>
-    [DscResourceMandatory()]
-    [Ensure] $Ensure
-
-    <#
-        [DscResourceMandatory()] means the property is required.
-    #>
-    [DscResourceMandatory()]
-    [string] $SourcePath
-
-    [DscResource
-
-    <#
-        This method replaces the Set-TargetResource DSC script function.
-        It sets the resource to the desired state.
-    #>
-    [void] Set()
-    {
-        $fileExists = Test-Path -path $this.Path -PathType Leaf
-        if($this.ensure -eq [Ensure]::Present)
-        {
-            if(-not $fileExists)
-            {
-                $this.CopyFile()
-            }
-        }
-        else
-        {
-            if($fileExists)
-            {
-                Write-Verbose -Message "Deleting the file $this.Path"
-                Remove-Item -LiteralPath $this.Path
-            }
-        }
-    }
-
-    <#
-
-        This method replaces the Test-TargetResource function.
-        It should return True or False, showing whether the resource
-        is in a desired state.
-    #>
-
-    [bool] Test()
-    {
-        if(Test-Path -path $this.Path -PathType Container)
-        {
-            throw "Path '$this.Path' is a directory path."
-        }
-
-        $fileExists = Test-Path -path $this.Path -PathType Leaf
-
-        if($this.ensure -eq [Ensure]::Present)
-        {
-            return $fileExists
-        }
-
-        return (-not $fileExists)
-    }
-
-    <#
-        This method replaces the Get-TargetResource function.
-        The implementation should use the keys to find appropriate
-        resources. This method returns an instance of this class with the
-        updated key properties.
-    #>
-
-    [FileResource] Get()
-    {
-        $file = Get-item $this.Path
-        return $this
-    }
-
-    <#
-        Helper method to copy file from source to path.
-        Because this resource provider run under system,
-        Only the Administrators and system have full
-        access to the new created directory and file
-    #>
-    CopyFile()
-    {
-        if(Test-Path -path $this.SourcePath -PathType Container)
-        {
-            throw "SourcePath '$this.SourcePath' is a directory path"
-        }
-
-        if( -not (Test-Path -path $this.SourcePath -PathType Leaf))
-        {
-            throw "SourcePath '$this.SourcePath' is not found."
-        }
-
-        [System.IO.FileInfo]
-        $destFileInfo = new-object System.IO.FileInfo($this.Path)
-
-        if (-not $destFileInfo.Directory.Exists)
-        {
-            $FullName = $destFileInfo.Directory.FullName
-            $Message = "Creating directory $FullName"
-
-            Write-Verbose -Message $Message
-
-            #use CreateDirectory instead of New-Item to avoid lines
-            # to handle the non-terminating error
-            [System.IO.Directory]::CreateDirectory($FullName)
-        }
-
-        if(Test-Path -path $this.Path -PathType Container)
-        {
-            throw "Path '$this.Path' is a directory path"
         }
 
         Write-Verbose -Message "Copying $this.SourcePath to $this.Path"
@@ -637,7 +493,7 @@ hidden [type] $classmember = <value>
 
 除非完成发生在定义隐藏成员的类中，否则不会使用 tab 自动补全或 IntelliSense 显示隐藏成员。
 
-添加了新的属性 **system.management.automation.hiddenattribute** ，以便 c # 代码可以在 PowerShell 中具有相同的语义。
+添加了新的属性 **system.management.automation.hiddenattribute**，以便 c # 代码可以在 PowerShell 中具有相同的语义。
 
 有关详细信息，请参阅 [about_Hidden](../../Microsoft.PowerShell.Core/About/about_hidden.md)。
 
@@ -663,7 +519,7 @@ hidden [type] $classmember = <value>
 
 `$s = "hello"`
 
-所有成员都是公开的。 属性要求使用换行符或分号。 如果未指定任何对象类型，则属性类型为 **object** 。
+所有成员都是公开的。 属性要求使用换行符或分号。 如果未指定任何对象类型，则属性类型为 **object**。
 
 ### <a name="constructors-and-instantiation"></a>构造函数和实例化
 
@@ -703,7 +559,7 @@ hashtable new(int capacity, float loadFactor)
 
 ### <a name="methods"></a>方法
 
-PowerShell 类方法被实现为仅有一个结束块的 ScriptBlock  。 所有方法都是公开的。 下面介绍了定义一个名为 **DoSomething** 的方法的示例。
+PowerShell 类方法被实现为仅有一个结束块的 ScriptBlock。 所有方法都是公开的。 下面介绍了定义一个名为 **DoSomething** 的方法的示例。
 
 ```powershell
 class MyClass
@@ -895,7 +751,7 @@ function Style
 function Html ([HTML] $doc) { return $doc }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [about_Enum](../../Microsoft.PowerShell.Core/About/about_Enum.md)
 

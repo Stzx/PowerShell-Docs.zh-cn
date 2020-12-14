@@ -1,17 +1,16 @@
 ---
 description: 允许你指示在会话中使用的命名空间。
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 01/29/2020
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: bfd1208516193adf470a25dbdf3d58563847a26a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 798b7bc9759c7c88eb612d0eb47bdb92c015cc18
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93200031"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892015"
 ---
 # <a name="about-using"></a>关于使用
 
@@ -26,7 +25,7 @@ ms.locfileid: "93200031"
 
 `using`语句不应与 `using:` 变量的作用域修饰符混淆。 有关详细信息，请参阅 [about_Remote_Variables](about_Remote_Variables.md)。
 
-## <a name="syntax"></a>语法
+## <a name="namespace-syntax"></a>命名空间语法
 
 指定要从中解析类型的 .NET 命名空间：
 
@@ -34,19 +33,41 @@ ms.locfileid: "93200031"
 using namespace <.NET-namespace>
 ```
 
+通过指定命名空间，可以更容易地按简称引用类型。
+
+## <a name="module-syntax"></a>模块语法
+
 从 PowerShell 模块加载类：
 
 ```
 using module <module-name>
 ```
 
+的值 `<module-name>` 可以是模块名称、完整的模块规范或模块文件的路径。
+
+当 `<module-name>` 是路径时，路径可以是完全限定路径或相对路径。 相对路径是相对于包含 using 语句的脚本进行解析的。
+
+> [!NOTE]
+> 当相对路径包含正斜杠 () 时 `/` ，PowerShell 会将路径视为相对于当前位置，而不是相对于脚本位置。 此 bug 已在 PowerShell 7.1 中解决。
+
+当 `<module-name>` 是名称或模块规范时，PowerShell 将在 **PSModulePath** 中搜索指定的模块。
+
+模块规范是一个包含以下键的哈希表。
+
+- `ModuleName` - **必需** 指定模块名称。
+- `GUID` - **可选** 指定模块的 GUID。
+- 还 **需要** 指定以下三个键中的一个。 这些密钥不能一起使用。
+  - `ModuleVersion` -指定模块的最低可接受版本。
+  - `RequiredVersion` -指定模块的准确的必需版本。
+  - `MaximumVersion` -指定模块可接受的最大版本。
+
+## <a name="assembly-syntax"></a>程序集语法
+
 若要预加载 .NET 程序集中的类型：
 
 ```
 using assembly <.NET-assembly-path>
 ```
-
-通过指定命名空间，可以更容易地按简称引用类型。
 
 加载程序集时，将从该程序集将 .NET 类型预加载到脚本中的分析时。 这允许你创建新的 PowerShell 类，它们使用预先加载的程序集中的类型。
 

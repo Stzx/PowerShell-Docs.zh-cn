@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Module
-ms.openlocfilehash: e2e4dc34fb84a54fb92cc4c809c84d67beafe576
-ms.sourcegitcommit: 4fc8cf397cb725ae973751d1d5d542f34f0db2d7
+ms.openlocfilehash: 463853778b6f2892ae36d55dcd4d886727b1dd51
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "93199203"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892481"
 ---
 # Install-Module
 
@@ -38,7 +38,7 @@ Install-Module [-InputObject] <PSObject[]> [-Credential <PSCredential>] [-Scope 
  [-AcceptLicense] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Install-Module`Cmdlet 从联机存储库中获取一个或多个满足指定条件的模块。 Cmdlet 验证搜索结果是否为有效的模块，并将模块文件夹复制到安装位置。 安装后，不会自动导入已安装的模块。
 您可以根据指定模块的最小、最大和确切版本来筛选安装的模块。
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 
 ### -MaximumVersion
 
-指定要安装的单个模块的最高版本。 安装的版本必须小于或等于 **MaximumVersion** 。 如果要安装多个模块，则不能使用 **MaximumVersion** 。 不能在同一命令中使用 **MaximumVersion** 和 **RequiredVersion** `Install-Module` 。
+指定要安装的单个模块的最高版本。 安装的版本必须小于或等于 **MaximumVersion**。 如果要安装多个模块，则不能使用 **MaximumVersion**。 不能在同一命令中使用 **MaximumVersion** 和 **RequiredVersion** `Install-Module` 。
 
 ```yaml
 Type: System.String
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -MinimumVersion
 
-指定要安装的单个模块的最低版本。 安装的版本必须大于或等于 **MinimumVersion** 。 如果模块的更新版本可用，则会安装较新版本。 如果要安装多个模块，则不能使用 **MinimumVersion** 。
+指定要安装的单个模块的最低版本。 安装的版本必须大于或等于 **MinimumVersion**。 如果模块的更新版本可用，则会安装较新版本。 如果要安装多个模块，则不能使用 **MinimumVersion**。
 不能在同一命令中使用 **MinimumVersion** 和 **RequiredVersion** `Install-Module` 。
 
 ```yaml
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 ### -RequiredVersion
 
-指定要安装的单个模块的确切版本。 如果指定版本的存储库中没有匹配项，则会显示错误。 如果要安装多个模块，则不能使用 **RequiredVersion** 。 **RequiredVersion** 对于 `Install-Module` **MinimumVersion** 或 **MaximumVersion** ，不能在同一命令中使用 RequiredVersion。
+指定要安装的单个模块的确切版本。 如果指定版本的存储库中没有匹配项，则会显示错误。 如果要安装多个模块，则不能使用 **RequiredVersion**。 对于 `Install-Module` **MinimumVersion** 或 **MaximumVersion**，不能在同一命令中使用 RequiredVersion。
 
 ```yaml
 Type: System.String
@@ -346,7 +346,7 @@ Accept wildcard characters: False
 
 ### -Scope
 
-指定模块的安装范围。 此参数可接受的值为 **AllUsers** 和 **CurrentUser** 。
+指定模块的安装范围。 此参数可接受的值为 **AllUsers** 和 **CurrentUser**。
 
 **AllUsers** 作用域在计算机的所有用户都可以访问的位置中安装模块：
 
@@ -358,8 +358,8 @@ Accept wildcard characters: False
 
 如果未定义 **作用域** ，则将根据 PowerShellGet 版本设置默认值。
 
-- 在 PowerShellGet 版本2.0.0 及更高版本中，默认值为 **CurrentUser** ，无需进行提升即可安装。
-- 在 PowerShellGet 1.x 版本中，默认值为 **AllUsers** ，这需要提升才能进行安装。
+- 在 PowerShellGet 版本2.0.0 及更高版本中，默认值为 **CurrentUser**，无需进行提升即可安装。
+- 在 PowerShellGet 1.x 版本中，默认值为 **AllUsers**，这需要提升才能进行安装。
 
 ```yaml
 Type: System.String
@@ -436,11 +436,18 @@ Accept wildcard characters: False
 
 `Install-Module` 在 Windows 7 或 Windows 2008 R2 及更高版本的 Windows 上的 PowerShell 5.0 或更高版本上运行。
 
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
+
 作为最佳安全方案，请在首次运行任何 cmdlet 或函数之前评估模块的代码。 为防止运行包含恶意代码的模块，安装后不会自动导入已安装的模块。
 
 如果存储库中不存在 **name** 参数指定的模块名称，则会 `Install-Module` 返回错误。
 
-若要安装多个模块，请使用 **Name** 参数，并指定一个逗号分隔的模块名称数组。 如果指定多个模块名称，则不能使用 **MinimumVersion** 、 **MaximumVersion** 或 **RequiredVersion** 。 `Find-Module` 创建可通过管道向下发送的 **PSRepositoryItemInfo** 对象 `Install-Module` 。 管道是在单个命令中指定要安装的多个模块的另一种方法。
+若要安装多个模块，请使用 **Name** 参数，并指定一个逗号分隔的模块名称数组。 如果指定多个模块名称，则不能使用 **MinimumVersion**、 **MaximumVersion** 或 **RequiredVersion**。 `Find-Module` 创建可通过管道向下发送的 **PSRepositoryItemInfo** 对象 `Install-Module` 。 管道是在单个命令中指定要安装的多个模块的另一种方法。
 
 默认情况下， **AllUsers** 作用域的模块安装在中 `$env:ProgramFiles\PowerShell\Modules` 。 默认情况下，在 (DSC) 资源中安装 PowerShell Desired State Configuration 时，会造成混淆。
 

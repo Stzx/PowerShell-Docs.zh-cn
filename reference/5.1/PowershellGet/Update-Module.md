@@ -7,12 +7,12 @@ ms.date: 07/16/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-Module
-ms.openlocfilehash: 719eaa019dd721b156b26d2e38e8790e6b9af584
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: ee94ba7808cb364306826325cfbc3df2cf9834a5
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198222"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892580"
 ---
 # Update-Module
 
@@ -29,7 +29,7 @@ Update-Module [[-Name] <String[]>] [-RequiredVersion <String>] [-MaximumVersion 
  [-Force] [-AllowPrerelease] [-AcceptLicense] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Update-Module`Cmdlet 可从联机库中安装模块的最新版本。 系统会在安装更新之前提示您确认。 只会为在本地计算机上安装的模块安装更新 `Install-Module` 。 `Update-Module` 搜索 `$env:PSModulePath` 已安装的模块。
 
@@ -57,7 +57,7 @@ Update-Module
 Update-Module -Name SpeculationControl
 ```
 
-`Update-Module` 使用 **Name** 参数更新特定模块 **SpeculationControl** 。
+`Update-Module` 使用 **Name** 参数更新特定模块 **SpeculationControl**。
 
 ### 示例3：查看模拟 Update-Module 运行
 
@@ -84,7 +84,7 @@ What if: Performing the operation "Update-Module" on target "Version '1.0.10' of
 Update-Module -Name SpeculationControl -RequiredVersion 1.0.14
 ```
 
-`Update-Module` 使用 **Name** 参数指定模块 **SpeculationControl** 。 **RequiredVersion** 参数指定版本 **1.0.14** 。
+`Update-Module` 使用 **Name** 参数指定模块 **SpeculationControl**。 **RequiredVersion** 参数指定版本 **1.0.14**。
 
 ### 示例5：更新模块而不进行确认
 
@@ -94,7 +94,7 @@ Update-Module -Name SpeculationControl -RequiredVersion 1.0.14
 Update-Module -Name SpeculationControl -Force
 ```
 
-`Update-Module` 使用 **Name** 参数指定模块 **SpeculationControl** 。 **Force** 参数更新模块，而不请求用户确认。
+`Update-Module` 使用 **Name** 参数指定模块 **SpeculationControl**。 **Force** 参数更新模块，而不请求用户确认。
 
 ## PARAMETERS
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 
 ### -RequiredVersion
 
-指定将更新现有已安装模块的确切版本。 **RequiredVersion** 指定的版本必须存在于联机库中，否则将显示错误。 如果在单个命令中更新了多个模块，则不能使用 **RequiredVersion** 。
+指定将更新现有已安装模块的确切版本。 **RequiredVersion** 指定的版本必须存在于联机库中，否则将显示错误。 如果在单个命令中更新了多个模块，则不能使用 **RequiredVersion**。
 
 ```yaml
 Type: System.String
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 
 ### -Scope
 
-指定模块的安装范围。 此参数可接受的值为 **AllUsers** 和 **CurrentUser** 。 如果未指定 **作用域** ，则将在 **CurrentUser** 范围内安装更新。
+指定模块的安装范围。 此参数可接受的值为 **AllUsers** 和 **CurrentUser**。 如果未指定 **作用域** ，则将在 **CurrentUser** 范围内安装更新。
 
 **AllUsers** 作用域需要提升的权限，并将模块安装在计算机的所有用户都可以访问的位置：
 
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 如果未定义 **作用域** ，则将根据 PowerShellGet 版本设置默认值。
 
 - 在 PowerShellGet 版本2.0.0 及更高版本中，在运行提升的会话时默认为 **AllUsers** ，对所有其他版本为 **CurrentUser** 。
-- 在 PowerShellGet 1.x 版本中，默认值为 **AllUsers** ，这需要提升才能进行安装。
+- 在 PowerShellGet 1.x 版本中，默认值为 **AllUsers**，这需要提升才能进行安装。
 
 ```yaml
 Type: System.String
@@ -342,7 +342,14 @@ Accept wildcard characters: False
 
 ## 注释
 
-对于 PowerShell 5.1 或更低的会话，提升会话中的默认作用域为 **AllUsers** ，在非提升会话中为 **CurrentUser** 。 **AllUsers** 的模块更新 `$env:ProgramFiles\PowerShell\Modules` 需要提升的权限。 **CurrentUser** 、的模块更新 `$home\Documents\PowerShell\Modules` 不需要提升的权限。
+对于 PowerShell 5.1 或更低的会话，提升会话中的默认作用域为 **AllUsers**，在非提升会话中为 **CurrentUser**。 **AllUsers** 的模块更新 `$env:ProgramFiles\PowerShell\Modules` 需要提升的权限。 **CurrentUser**、的模块更新 `$home\Documents\PowerShell\Modules` 不需要提升的权限。
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 `Update-Module` 在 Windows 7 或 Windows 2008 R2 及更高版本的 Windows 上的 powershell 3.0 或更高版本上运行。
 
@@ -362,4 +369,4 @@ Accept wildcard characters: False
 
 [Publish-Module](Publish-Module.md)
 
-[Uninstall-Module](Uninstall-Module.md)
+[Uninstall-模块](Uninstall-Module.md)

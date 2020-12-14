@@ -7,12 +7,12 @@ ms.date: 05/22/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Package
-ms.openlocfilehash: aad8b6f033674c65b4cc56708e09e5320bb046dd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bc6ba83a6f0d585e166b1bdc419c8b9c7148e47c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197766"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892876"
 ---
 # Get-Package
 
@@ -29,7 +29,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [-AdditionalArguments <String[]>] [<CommonParameters>]
 ```
 
-### 计划
+### Programs
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -56,7 +56,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Get-Package`Cmdlet 将返回本地计算机上使用 **PackageManagement** 安装的所有软件包的列表。 您可以 `Get-Package` 在远程计算机上运行它，方法是将它作为 `Invoke-Command` 或 `Enter-PSSession` 命令或脚本的一部分运行。
 
@@ -84,7 +84,7 @@ posh-git       0.7.3        https://www.powershellgallery.com/api/v2   PowerShel
 PS> Invoke-Command -ComputerName Server01 -Credential CONTOSO\TestUser -ScriptBlock {Get-Package}
 ```
 
-`Invoke-Command` 使用 **ComputerName** 参数指定远程计算机 **Server01** 。 **Credential** 参数指定有权在计算机上运行命令的域和用户名。 **ScriptBlock** 参数 `Get-Package` 在远程计算机上运行 cmdlet。
+`Invoke-Command` 使用 **ComputerName** 参数指定远程计算机 **Server01**。 **Credential** 参数指定有权在计算机上运行命令的域和用户名。 **ScriptBlock** 参数 `Get-Package` 在远程计算机上运行 cmdlet。
 
 ### 示例3：获取指定提供程序的包
 
@@ -103,7 +103,7 @@ posh-git              0.7.3        https://www.powershellgallery.com/api/v2   Po
 PowerShellGet         2.0.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-`Get-Package` 使用 **ProviderName** 参数指定特定提供程序 **PowerShellGet** 。
+`Get-Package` 使用 **ProviderName** 参数指定特定提供程序 **PowerShellGet**。
 " **所有版本** " 参数显示安装的每个版本。
 
 ### 示例4：获取特定包的确切版本
@@ -120,7 +120,7 @@ Name                  Version      Source                                     Pr
 PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-`Get-Package` 使用 **Name** 参数指定包名称 **PackageManagement** 。 **ProviderName** 参数指定提供程序 **PowerShellGet** 。 **必需的版本** 参数指定已安装的版本。
+`Get-Package` 使用 **Name** 参数指定包名称 **PackageManagement**。 **ProviderName** 参数指定提供程序 **PowerShellGet**。 **必需的版本** 参数指定已安装的版本。
 
 ### 示例5：卸载包
 
@@ -130,7 +130,7 @@ PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   Po
 Get-Package -Name posh-git -RequiredVersion 0.7.3 | Uninstall-Package
 ```
 
-`Get-Package` 使用 **Name** 参数指定包名称 **posh** 。 **RequiredVersion** 参数是包的特定版本。 对象通过管道向下发送到 `Uninstall-Package` cmdlet。 `Uninstall-Package` 删除包。
+`Get-Package` 使用 **Name** 参数指定包名称 **posh**。 **RequiredVersion** 参数是包的特定版本。 对象通过管道向下发送到 `Uninstall-Package` cmdlet。 `Uninstall-Package` 删除包。
 
 ## PARAMETERS
 
@@ -503,6 +503,13 @@ Accept wildcard characters: False
 ## 注释
 
 在命令中包含包提供程序可以使动态参数可用于 cmdlet。 动态参数特定于包提供程序。 `Get-Help`Cmdlet 列出 cmdlet 的参数集，并包括提供程序的参数集。 例如， `Get-Package` 具有 **PowerShellGet** 参数集，其中包括 `-NoPathUpdate` 、 `AllowClobber` 和 `SkipPublisherCheck` 。
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-script?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Script
-ms.openlocfilehash: 21b8dc249c93ae68ad3e43f998ede5dfe7a82766
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: b08f3bafe2f5afeecdb43301f3dd126f18d5d0fe
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197730"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892049"
 ---
 # Find-Script
 
@@ -28,7 +28,7 @@ Find-Script [[-Name] <String[]>] [-MinimumVersion <String>] [-MaximumVersion <St
  [-Repository <String[]>] [-Credential <PSCredential>] [-AllowPrerelease] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 **Find-Script** cmdlet 在已注册的存储库中查找指定的脚本。
 
@@ -306,7 +306,7 @@ Accept wildcard characters: False
 ### -MaximumVersion
 
 指定要查找的最大或最新版本的脚本。
-MaximumVersion  和 RequiredVersion  参数互斥，不能在同一命令中使用这两个参数。
+MaximumVersion 和 RequiredVersion 参数互斥，不能在同一命令中使用这两个参数。
 
 ```yaml
 Type: System.String
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ### -MinimumVersion
 
 指定要查找的脚本的最低版本。
-MinimumVersion  和 RequiredVersion  参数互斥，不能在同一命令中使用这两个参数。
+MinimumVersion 和 RequiredVersion 参数互斥，不能在同一命令中使用这两个参数。
 
 ```yaml
 Type: System.String
@@ -444,6 +444,13 @@ Accept wildcard characters: False
 ### PSRepositoryItemInfo
 
 ## 注释
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

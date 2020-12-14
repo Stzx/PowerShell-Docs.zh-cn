@@ -7,12 +7,12 @@ ms.date: 05/23/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/install-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Package
-ms.openlocfilehash: 058ed7f90e63bd7ca7a29cf6c89864a30255662a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 9fcf71462e1bf411f3c7c5d8322e6b6f3a667b9f
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197753"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892808"
 ---
 # Install-Package
 
@@ -114,7 +114,7 @@ Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <P
  [-SkipPublisherCheck] [-InstallUpdate] [-NoPathUpdate] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Install-Package`Cmdlet 在本地计算机上安装一个或多个软件包。 如果有多个软件源，请使用 `Get-PackageProvider` 和 `Get-PackageSource` 显示有关提供程序的详细信息。
 
@@ -128,7 +128,7 @@ Install-Package [-Credential <PSCredential>] [-Proxy <Uri>] [-ProxyCredential <P
 PS> Install-Package -Name NuGet.Core -Source MyNuGet -Credential Contoso\TestUser
 ```
 
-`Install-Package` 使用参数指定包 **名称** 和 **源** 。 **Credential** 参数使用有权安装包的域用户帐户。 该命令会提示你输入用户帐户密码。
+`Install-Package` 使用参数指定包 **名称** 和 **源**。 **Credential** 参数使用有权安装包的域用户帐户。 该命令会提示你输入用户帐户密码。
 
 ### 示例2：使用 Find-Package 安装包
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-指定有权访问计算机并运行命令的用户帐户。 键入用户名，如 **User01** 、 **Domain01\User01** 或输入由 cmdlet 生成的 **PSCredential** 对象 `Get-Credential` 。 如果键入用户名，系统会提示输入密码。
+指定有权访问计算机并运行命令的用户帐户。 键入用户名，如 **User01**、 **Domain01\User01** 或输入由 cmdlet 生成的 **PSCredential** 对象 `Get-Credential` 。 如果键入用户名，系统会提示输入密码。
 
 如果未指定 **Credential** 参数， `Install-Package` 将使用当前用户。
 
@@ -892,6 +892,13 @@ Accept wildcard characters: False
 ## 注释
 
 在命令中包含包提供程序可以使动态参数可用于 cmdlet。 动态参数特定于包提供程序。 `Get-Help`Cmdlet 列出 cmdlet 的参数集，并包括提供程序的参数集。 例如， `Install-Package` 具有 **PowerShellGet** 参数集，其中包括 `-NoPathUpdate` 、 `AllowClobber` 和 `SkipPublisherCheck` 。
+
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
 
 ## 相关链接
 

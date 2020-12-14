@@ -7,12 +7,12 @@ ms.date: 10/03/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/publish-module?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Publish-Module
-ms.openlocfilehash: 169a286fba9f8ce266294d611437247acc71cff8
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: f167990361a332f3b6f696d934e5d2835de849ed
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197204"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892614"
 ---
 # Publish-Module
 
@@ -40,13 +40,13 @@ Publish-Module -Path <String> [-NuGetApiKey <String>] [-Repository <String>]
  [-SkipAutomaticTags] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 该 `Publish-Module` cmdlet 通过使用 API 密钥（存储在库中的用户配置文件的一部分），将模块发布到基于 NuGet 的联机库。 可根据模块的名称或包含模块的文件夹路径指定要发布的模块。
 
 按名称指定模块时，将 `Publish-Module` 发布通过运行找到的第一个模块 `Get-Module -ListAvailable <Name>` 。 如果您指定要发布的模块的最低版本，将 `Publish-Module` 发布第一个版本大于或等于您指定的最低版本的模块。
 
-发布模块需要在库页面显示的模块的元数据。 所需元数据包括模块名称、版本、说明和作者。 尽管大多数元数据都是从模块清单获取的，但必须在参数中指定某些元数据（如 `Publish-Module` **标记** 、 **ReleaseNote** 、 **IconUri** 、 **ProjectUri** 和 **LicenseUri** ），因为这些参数与基于 NuGet 的库中的字段匹配。
+发布模块需要在库页面显示的模块的元数据。 所需元数据包括模块名称、版本、说明和作者。 尽管大多数元数据都是从模块清单获取的，但必须在参数中指定某些元数据（如 `Publish-Module` **标记**、 **ReleaseNote**、 **IconUri**、 **ProjectUri** 和 **LicenseUri**），因为这些参数与基于 NuGet 的库中的字段匹配。
 
 ## 示例
 
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 
 ### -Repository
 
-指定已通过运行注册的存储库的友好名称 `Register-PSRepository` 。 存储库必须具有 **PublishLocation** ，这是一个有效的 NuGet URI。
+指定已通过运行注册的存储库的友好名称 `Register-PSRepository` 。 存储库必须具有 **PublishLocation**，这是一个有效的 NuGet URI。
 可以通过运行来设置 **PublishLocation** `Set-PSRepository` 。
 
 ```yaml
@@ -378,7 +378,14 @@ Accept wildcard characters: False
 
 `Publish-Module` 在 Windows 7 或 Windows 2008 R2 及更高版本的 Windows 上的 powershell 3.0 或更高版本上运行。
 
-发布模块需要在库页面显示的模块的元数据。 所需元数据包括模块名称、版本、说明和作者。 大多数元数据都是从模块清单获取的，但是可以在参数中指定某些元数据， `Publish-Module` 例如 **标记** 、 **ReleaseNote** 、 **IconUri** 、 **ProjectUri** 和 **LicenseUri** 。 有关详细信息，请参阅 [影响 POWERSHELL 库 UI 的包清单值](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui)。
+> [!IMPORTANT]
+> 从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。 如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。 使用以下命令确保使用的是 TLS 1.2：
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。
+
+发布模块需要在库页面显示的模块的元数据。 所需元数据包括模块名称、版本、说明和作者。 大多数元数据都是从模块清单获取的，但是可以在参数中指定某些元数据， `Publish-Module` 例如 **标记**、 **ReleaseNote**、 **IconUri**、 **ProjectUri** 和 **LicenseUri**。 有关详细信息，请参阅 [影响 POWERSHELL 库 UI 的包清单值](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui)。
 
 ## 相关链接
 
