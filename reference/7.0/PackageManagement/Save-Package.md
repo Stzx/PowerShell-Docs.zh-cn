@@ -7,21 +7,21 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/save-package?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Package
-ms.openlocfilehash: 97ba55f4185d784e4b32bbe669296d44989f72d2
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: b46bf983120a71a530fdc9715b68eff0b1ce3af6
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197036"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892716"
 ---
-# <span data-ttu-id="b6655-103">Save-Package</span><span class="sxs-lookup"><span data-stu-id="b6655-103">Save-Package</span></span>
+# <span data-ttu-id="dd95f-103">Save-Package</span><span class="sxs-lookup"><span data-stu-id="dd95f-103">Save-Package</span></span>
 
-## <span data-ttu-id="b6655-104">摘要</span><span class="sxs-lookup"><span data-stu-id="b6655-104">SYNOPSIS</span></span>
-<span data-ttu-id="b6655-105">将包保存到本地计算机，但不安装它们。</span><span class="sxs-lookup"><span data-stu-id="b6655-105">Saves packages to the local computer without installing them.</span></span>
+## <span data-ttu-id="dd95f-104">摘要</span><span class="sxs-lookup"><span data-stu-id="dd95f-104">SYNOPSIS</span></span>
+<span data-ttu-id="dd95f-105">将包保存到本地计算机，但不安装它们。</span><span class="sxs-lookup"><span data-stu-id="dd95f-105">Saves packages to the local computer without installing them.</span></span>
 
-## <span data-ttu-id="b6655-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="b6655-106">SYNTAX</span></span>
+## <span data-ttu-id="dd95f-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="dd95f-106">SYNTAX</span></span>
 
-### <span data-ttu-id="b6655-107">PackageBySearch</span><span class="sxs-lookup"><span data-stu-id="b6655-107">PackageBySearch</span></span>
+### <span data-ttu-id="dd95f-107">PackageBySearch</span><span class="sxs-lookup"><span data-stu-id="dd95f-107">PackageBySearch</span></span>
 
 ```
 Save-Package [-Name] <String[]> [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -30,7 +30,7 @@ Save-Package [-Name] <String[]> [-RequiredVersion <String>] [-MinimumVersion <St
  [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm] [-ProviderName <String[]>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b6655-108">PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="b6655-108">PackageByInputObject</span></span>
+### <span data-ttu-id="dd95f-108">PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="dd95f-108">PackageByInputObject</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] -InputObject <SoftwareIdentity>
@@ -38,7 +38,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] -InputObject <SoftwareIden
  [-Force] [-ForceBootstrap] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b6655-109">NuGet： PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="b6655-109">NuGet:PackageByInputObject</span></span>
+### <span data-ttu-id="dd95f-109">NuGet： PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="dd95f-109">NuGet:PackageByInputObject</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -47,7 +47,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-Contains <String>] [-AllowPrereleaseVersions] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b6655-110">NuGet</span><span class="sxs-lookup"><span data-stu-id="b6655-110">NuGet</span></span>
+### <span data-ttu-id="dd95f-110">NuGet</span><span class="sxs-lookup"><span data-stu-id="dd95f-110">NuGet</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -56,7 +56,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-Contains <String>] [-AllowPrereleaseVersions] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b6655-111">PowerShellGet： PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="b6655-111">PowerShellGet:PackageByInputObject</span></span>
+### <span data-ttu-id="dd95f-111">PowerShellGet： PackageByInputObject</span><span class="sxs-lookup"><span data-stu-id="dd95f-111">PowerShellGet:PackageByInputObject</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -67,7 +67,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-RoleCapability <String[]>] [-Command <String[]>] [-AcceptLicense] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b6655-112">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="b6655-112">PowerShellGet</span></span>
+### <span data-ttu-id="dd95f-112">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="dd95f-112">PowerShellGet</span></span>
 
 ```
 Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential>] [-Proxy <Uri>]
@@ -78,16 +78,16 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
  [-RoleCapability <String[]>] [-Command <String[]>] [-AcceptLicense] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="b6655-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="b6655-113">DESCRIPTION</span></span>
+## <span data-ttu-id="dd95f-113">说明</span><span class="sxs-lookup"><span data-stu-id="dd95f-113">DESCRIPTION</span></span>
 
-<span data-ttu-id="b6655-114">`Save-Package`Cmdlet 可将包保存到本地计算机，但不会安装包。</span><span class="sxs-lookup"><span data-stu-id="b6655-114">The `Save-Package` cmdlet saves packages to the local computer but doesn't install the packages.</span></span>
-<span data-ttu-id="b6655-115">此 cmdlet 将保存包的最新版本，除非指定了 **RequiredVerion** 。</span><span class="sxs-lookup"><span data-stu-id="b6655-115">This cmdlet saves the newest version of a package unless you specify a **RequiredVerion** .</span></span> <span data-ttu-id="b6655-116">**路径** 和 **LiteralPath** 参数是互斥的，不能添加到同一个命令中。</span><span class="sxs-lookup"><span data-stu-id="b6655-116">The **Path** and **LiteralPath** parameters are mutually exclusive, and cannot be added to the same command.</span></span>
+<span data-ttu-id="dd95f-114">`Save-Package`Cmdlet 可将包保存到本地计算机，但不会安装包。</span><span class="sxs-lookup"><span data-stu-id="dd95f-114">The `Save-Package` cmdlet saves packages to the local computer but doesn't install the packages.</span></span>
+<span data-ttu-id="dd95f-115">此 cmdlet 将保存包的最新版本，除非指定了 **RequiredVerion**。</span><span class="sxs-lookup"><span data-stu-id="dd95f-115">This cmdlet saves the newest version of a package unless you specify a **RequiredVerion**.</span></span> <span data-ttu-id="dd95f-116">**路径** 和 **LiteralPath** 参数是互斥的，不能添加到同一个命令中。</span><span class="sxs-lookup"><span data-stu-id="dd95f-116">The **Path** and **LiteralPath** parameters are mutually exclusive, and cannot be added to the same command.</span></span>
 
-## <span data-ttu-id="b6655-117">示例</span><span class="sxs-lookup"><span data-stu-id="b6655-117">EXAMPLES</span></span>
+## <span data-ttu-id="dd95f-117">示例</span><span class="sxs-lookup"><span data-stu-id="dd95f-117">EXAMPLES</span></span>
 
-### <span data-ttu-id="b6655-118">示例1：将包保存到本地计算机</span><span class="sxs-lookup"><span data-stu-id="b6655-118">Example 1: Save a package to the local computer</span></span>
+### <span data-ttu-id="dd95f-118">示例1：将包保存到本地计算机</span><span class="sxs-lookup"><span data-stu-id="dd95f-118">Example 1: Save a package to the local computer</span></span>
 
-<span data-ttu-id="b6655-119">此示例将包的最新版本保存到本地计算机上的目录中。</span><span class="sxs-lookup"><span data-stu-id="b6655-119">This example saves the newest version of the package to a directory on the local computer.</span></span> <span data-ttu-id="b6655-120">包的依赖项与包一起下载。</span><span class="sxs-lookup"><span data-stu-id="b6655-120">The package's dependencies are download with the package.</span></span>
+<span data-ttu-id="dd95f-119">此示例将包的最新版本保存到本地计算机上的目录中。</span><span class="sxs-lookup"><span data-stu-id="dd95f-119">This example saves the newest version of the package to a directory on the local computer.</span></span> <span data-ttu-id="dd95f-120">包的依赖项与包一起下载。</span><span class="sxs-lookup"><span data-stu-id="dd95f-120">The package's dependencies are download with the package.</span></span>
 
 ```
 PS> Save-Package -Name NuGet.Core -ProviderName NuGet -Path C:\LocalPkg
@@ -100,11 +100,11 @@ Microsoft.Web.Xdt       3.0.0      Nuget     Microsoft Xml Document Transformati
 NuGet.Core              2.14.0     Nuget     NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="b6655-121">`Save-Package` 使用 **Name** 参数指定包。</span><span class="sxs-lookup"><span data-stu-id="b6655-121">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="b6655-122">包从 **ProviderName** 参数指定的存储库下载。</span><span class="sxs-lookup"><span data-stu-id="b6655-122">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="b6655-123">**Path** 参数确定包的保存位置。</span><span class="sxs-lookup"><span data-stu-id="b6655-123">The **Path** parameter determines where the package is saved.</span></span>
+<span data-ttu-id="dd95f-121">`Save-Package` 使用 **Name** 参数指定包。</span><span class="sxs-lookup"><span data-stu-id="dd95f-121">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="dd95f-122">包从 **ProviderName** 参数指定的存储库下载。</span><span class="sxs-lookup"><span data-stu-id="dd95f-122">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="dd95f-123">**Path** 参数确定包的保存位置。</span><span class="sxs-lookup"><span data-stu-id="dd95f-123">The **Path** parameter determines where the package is saved.</span></span>
 
-### <span data-ttu-id="b6655-124">示例2：保存特定包版本</span><span class="sxs-lookup"><span data-stu-id="b6655-124">Example 2: Save a specific package version</span></span>
+### <span data-ttu-id="dd95f-124">示例2：保存特定包版本</span><span class="sxs-lookup"><span data-stu-id="dd95f-124">Example 2: Save a specific package version</span></span>
 
-<span data-ttu-id="b6655-125">此示例指定包版本，并将其保存到本地计算机上的目录中。</span><span class="sxs-lookup"><span data-stu-id="b6655-125">This example specifies the package version and saves it to a directory on the local computer.</span></span>
+<span data-ttu-id="dd95f-125">此示例指定包版本，并将其保存到本地计算机上的目录中。</span><span class="sxs-lookup"><span data-stu-id="dd95f-125">This example specifies the package version and saves it to a directory on the local computer.</span></span>
 
 ```
 PS> Save-Package -Name NuGet.Core -RequiredVersion 2.9.0 -ProviderName NuGet -Path C:\LocalPkg
@@ -117,35 +117,35 @@ Microsoft.Web.Xdt       3.0.0      Nuget     Microsoft Xml Document Transformati
 NuGet.Core              2.9.0      Nuget     NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="b6655-126">`Save-Package` 使用 **Name** 参数指定包。</span><span class="sxs-lookup"><span data-stu-id="b6655-126">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="b6655-127">**RequiredVersion** 指示特定的包版本。</span><span class="sxs-lookup"><span data-stu-id="b6655-127">**RequiredVersion** indicates a specific package version.</span></span> <span data-ttu-id="b6655-128">包从 **ProviderName** 参数指定的存储库下载。</span><span class="sxs-lookup"><span data-stu-id="b6655-128">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="b6655-129">**Path** 参数确定包的保存位置。</span><span class="sxs-lookup"><span data-stu-id="b6655-129">The **Path** parameter determines where the package is saved.</span></span>
+<span data-ttu-id="dd95f-126">`Save-Package` 使用 **Name** 参数指定包。</span><span class="sxs-lookup"><span data-stu-id="dd95f-126">`Save-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="dd95f-127">**RequiredVersion** 指示特定的包版本。</span><span class="sxs-lookup"><span data-stu-id="dd95f-127">**RequiredVersion** indicates a specific package version.</span></span> <span data-ttu-id="dd95f-128">包从 **ProviderName** 参数指定的存储库下载。</span><span class="sxs-lookup"><span data-stu-id="dd95f-128">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="dd95f-129">**Path** 参数确定包的保存位置。</span><span class="sxs-lookup"><span data-stu-id="dd95f-129">The **Path** parameter determines where the package is saved.</span></span>
 
-### <span data-ttu-id="b6655-130">示例3：使用 Find-Package 保存包</span><span class="sxs-lookup"><span data-stu-id="b6655-130">Example 3: Use Find-Package to save a package</span></span>
+### <span data-ttu-id="dd95f-130">示例3：使用 Find-Package 保存包</span><span class="sxs-lookup"><span data-stu-id="dd95f-130">Example 3: Use Find-Package to save a package</span></span>
 
-<span data-ttu-id="b6655-131">此命令使用 `Find-Package` 定位包的最新版本，并将对象发送到 `Save-Package` 。</span><span class="sxs-lookup"><span data-stu-id="b6655-131">This command uses `Find-Package` to locate the newest version of the package and sends the object to `Save-Package`.</span></span>
+<span data-ttu-id="dd95f-131">此命令使用 `Find-Package` 定位包的最新版本，并将对象发送到 `Save-Package` 。</span><span class="sxs-lookup"><span data-stu-id="dd95f-131">This command uses `Find-Package` to locate the newest version of the package and sends the object to `Save-Package`.</span></span>
 
 ```
 PS> Find-Package -Name NuGet.Core -ProviderName NuGet | Save-Package -Path C:\LocalPkg
 ```
 
-<span data-ttu-id="b6655-132">`Find-Package` 使用 **Name** 参数指定包。</span><span class="sxs-lookup"><span data-stu-id="b6655-132">`Find-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="b6655-133">包从 **ProviderName** 参数指定的存储库下载。</span><span class="sxs-lookup"><span data-stu-id="b6655-133">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="b6655-134">将对象向下发送到 `Save-Package` 。</span><span class="sxs-lookup"><span data-stu-id="b6655-134">The object is sent down the pipeline to `Save-Package`.</span></span> <span data-ttu-id="b6655-135">**Path** 参数确定包的保存位置。</span><span class="sxs-lookup"><span data-stu-id="b6655-135">The **Path** parameter determines where the package is saved.</span></span>
+<span data-ttu-id="dd95f-132">`Find-Package` 使用 **Name** 参数指定包。</span><span class="sxs-lookup"><span data-stu-id="dd95f-132">`Find-Package` uses the **Name** parameter to specify the package.</span></span> <span data-ttu-id="dd95f-133">包从 **ProviderName** 参数指定的存储库下载。</span><span class="sxs-lookup"><span data-stu-id="dd95f-133">The package is downloaded from the repository specified by the **ProviderName** parameter.</span></span> <span data-ttu-id="dd95f-134">将对象向下发送到 `Save-Package` 。</span><span class="sxs-lookup"><span data-stu-id="dd95f-134">The object is sent down the pipeline to `Save-Package`.</span></span> <span data-ttu-id="dd95f-135">**Path** 参数确定包的保存位置。</span><span class="sxs-lookup"><span data-stu-id="dd95f-135">The **Path** parameter determines where the package is saved.</span></span>
 
-### <span data-ttu-id="b6655-136">示例4：保存并安装包</span><span class="sxs-lookup"><span data-stu-id="b6655-136">Example 4: Save and install the package</span></span>
+### <span data-ttu-id="dd95f-136">示例4：保存并安装包</span><span class="sxs-lookup"><span data-stu-id="dd95f-136">Example 4: Save and install the package</span></span>
 
-<span data-ttu-id="b6655-137">包及其依赖项的最新版本会在本地计算机上下载并安装。</span><span class="sxs-lookup"><span data-stu-id="b6655-137">The newest version of the package and its dependencies are downloaded and installed on the local computer.</span></span>
+<span data-ttu-id="dd95f-137">包及其依赖项的最新版本会在本地计算机上下载并安装。</span><span class="sxs-lookup"><span data-stu-id="dd95f-137">The newest version of the package and its dependencies are downloaded and installed on the local computer.</span></span>
 
 ```
 PS> Save-Package -Name NuGet.Core -ProviderName NuGet -Path C:\LocalPkg
 PS> Install-Package C:\LocalPkg\NuGet.Core.2.14.0.nupkg
 ```
 
-<span data-ttu-id="b6655-138">`Save-Package` 将包文件及其依赖项下载到本地计算机。</span><span class="sxs-lookup"><span data-stu-id="b6655-138">`Save-Package` downloads the package file and its dependencies to the local computer.</span></span>
-<span data-ttu-id="b6655-139">`Install-Package` 从指定目录安装包和依赖项。</span><span class="sxs-lookup"><span data-stu-id="b6655-139">`Install-Package` installs the package and dependencies from the specified directory.</span></span>
+<span data-ttu-id="dd95f-138">`Save-Package` 将包文件及其依赖项下载到本地计算机。</span><span class="sxs-lookup"><span data-stu-id="dd95f-138">`Save-Package` downloads the package file and its dependencies to the local computer.</span></span>
+<span data-ttu-id="dd95f-139">`Install-Package` 从指定目录安装包和依赖项。</span><span class="sxs-lookup"><span data-stu-id="dd95f-139">`Install-Package` installs the package and dependencies from the specified directory.</span></span>
 
-## <span data-ttu-id="b6655-140">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="b6655-140">PARAMETERS</span></span>
+## <span data-ttu-id="dd95f-140">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="dd95f-140">PARAMETERS</span></span>
 
-### <span data-ttu-id="b6655-141">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="b6655-141">-AcceptLicense</span></span>
+### <span data-ttu-id="dd95f-141">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="dd95f-141">-AcceptLicense</span></span>
 
-<span data-ttu-id="b6655-142">如果包需要许可协议，则在安装过程中自动接受该协议。</span><span class="sxs-lookup"><span data-stu-id="b6655-142">Automatically accept the license agreement during installation if the package requires it.</span></span>
+<span data-ttu-id="dd95f-142">如果包需要许可协议，则在安装过程中自动接受该协议。</span><span class="sxs-lookup"><span data-stu-id="dd95f-142">Automatically accept the license agreement during installation if the package requires it.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -159,9 +159,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-143">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="b6655-143">-AllowPrereleaseVersions</span></span>
+### <span data-ttu-id="dd95f-143">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="dd95f-143">-AllowPrereleaseVersions</span></span>
 
-<span data-ttu-id="b6655-144">允许保存标记为预发布的包。</span><span class="sxs-lookup"><span data-stu-id="b6655-144">Allows packages marked as Prerelease to be saved.</span></span>
+<span data-ttu-id="dd95f-144">允许保存标记为预发布的包。</span><span class="sxs-lookup"><span data-stu-id="dd95f-144">Allows packages marked as Prerelease to be saved.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -175,9 +175,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-145">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="b6655-145">-AllVersions</span></span>
+### <span data-ttu-id="dd95f-145">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="dd95f-145">-AllVersions</span></span>
 
-<span data-ttu-id="b6655-146">指示此 cmdlet 保存包的所有可用版本。</span><span class="sxs-lookup"><span data-stu-id="b6655-146">Indicates that this cmdlet saves all available versions of the package.</span></span>
+<span data-ttu-id="dd95f-146">指示此 cmdlet 保存包的所有可用版本。</span><span class="sxs-lookup"><span data-stu-id="dd95f-146">Indicates that this cmdlet saves all available versions of the package.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -191,9 +191,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-147">-Command</span><span class="sxs-lookup"><span data-stu-id="b6655-147">-Command</span></span>
+### <span data-ttu-id="dd95f-147">-Command</span><span class="sxs-lookup"><span data-stu-id="dd95f-147">-Command</span></span>
 
-<span data-ttu-id="b6655-148">指定包含在包中的一个或多个命令。</span><span class="sxs-lookup"><span data-stu-id="b6655-148">Specifies one or more commands included in the package.</span></span>
+<span data-ttu-id="dd95f-148">指定包含在包中的一个或多个命令。</span><span class="sxs-lookup"><span data-stu-id="dd95f-148">Specifies one or more commands included in the package.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -207,25 +207,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-149">-Read-configfile</span><span class="sxs-lookup"><span data-stu-id="b6655-149">-ConfigFile</span></span>
+### <span data-ttu-id="dd95f-149">-Read-configfile</span><span class="sxs-lookup"><span data-stu-id="dd95f-149">-ConfigFile</span></span>
 
-<span data-ttu-id="b6655-150">指定配置文件。</span><span class="sxs-lookup"><span data-stu-id="b6655-150">Specifies a configuration File.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: NuGet:PackageByInputObject, NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b6655-151">-Contains</span><span class="sxs-lookup"><span data-stu-id="b6655-151">-Contains</span></span>
-
-<span data-ttu-id="b6655-152">`Save-Package` 如果对象的属性值中的任何项与指定值完全匹配，则获取对象。</span><span class="sxs-lookup"><span data-stu-id="b6655-152">`Save-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+<span data-ttu-id="dd95f-150">指定配置文件。</span><span class="sxs-lookup"><span data-stu-id="dd95f-150">Specifies a configuration File.</span></span>
 
 ```yaml
 Type: System.String
@@ -239,9 +223,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-153">-Credential</span><span class="sxs-lookup"><span data-stu-id="b6655-153">-Credential</span></span>
+### <span data-ttu-id="dd95f-151">-Contains</span><span class="sxs-lookup"><span data-stu-id="dd95f-151">-Contains</span></span>
 
-<span data-ttu-id="b6655-154">指定有权从指定的包提供程序或源保存包的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="b6655-154">Specifies a user account that has permission to save a package from a specified package provider or source.</span></span>
+<span data-ttu-id="dd95f-152">`Save-Package` 如果对象的属性值中的任何项与指定值完全匹配，则获取对象。</span><span class="sxs-lookup"><span data-stu-id="dd95f-152">`Save-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NuGet:PackageByInputObject, NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="dd95f-153">-Credential</span><span class="sxs-lookup"><span data-stu-id="dd95f-153">-Credential</span></span>
+
+<span data-ttu-id="dd95f-154">指定有权从指定的包提供程序或源保存包的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="dd95f-154">Specifies a user account that has permission to save a package from a specified package provider or source.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -255,9 +255,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-155">-DscResource</span><span class="sxs-lookup"><span data-stu-id="b6655-155">-DscResource</span></span>
+### <span data-ttu-id="dd95f-155">-DscResource</span><span class="sxs-lookup"><span data-stu-id="dd95f-155">-DscResource</span></span>
 
-<span data-ttu-id="b6655-156">为包 (DSC) 资源指定一个或多个所需状态配置。</span><span class="sxs-lookup"><span data-stu-id="b6655-156">Specifies one or more Desired State Configuration (DSC) resources for the package.</span></span>
+<span data-ttu-id="dd95f-156">为包 (DSC) 资源指定一个或多个所需状态配置。</span><span class="sxs-lookup"><span data-stu-id="dd95f-156">Specifies one or more Desired State Configuration (DSC) resources for the package.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -271,9 +271,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-157">-Filter</span><span class="sxs-lookup"><span data-stu-id="b6655-157">-Filter</span></span>
+### <span data-ttu-id="dd95f-157">-Filter</span><span class="sxs-lookup"><span data-stu-id="dd95f-157">-Filter</span></span>
 
-<span data-ttu-id="b6655-158">指定包的筛选器。</span><span class="sxs-lookup"><span data-stu-id="b6655-158">Specifies a filter for the package.</span></span>
+<span data-ttu-id="dd95f-158">指定包的筛选器。</span><span class="sxs-lookup"><span data-stu-id="dd95f-158">Specifies a filter for the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -287,57 +287,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-159">-FilterOnTag</span><span class="sxs-lookup"><span data-stu-id="b6655-159">-FilterOnTag</span></span>
+### <span data-ttu-id="dd95f-159">-FilterOnTag</span><span class="sxs-lookup"><span data-stu-id="dd95f-159">-FilterOnTag</span></span>
 
-<span data-ttu-id="b6655-160">指定筛选结果的标记。</span><span class="sxs-lookup"><span data-stu-id="b6655-160">Specifies the tag that filters the results.</span></span> <span data-ttu-id="b6655-161">排除不包含指定标记的结果。</span><span class="sxs-lookup"><span data-stu-id="b6655-161">Results that don't contain the specified tag are excluded.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: NuGet:PackageByInputObject, NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b6655-162">-Force</span><span class="sxs-lookup"><span data-stu-id="b6655-162">-Force</span></span>
-
-<span data-ttu-id="b6655-163">强制运行命令而不要求用户确认。</span><span class="sxs-lookup"><span data-stu-id="b6655-163">Forces the command to run without asking for user confirmation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b6655-164">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="b6655-164">-ForceBootstrap</span></span>
-
-<span data-ttu-id="b6655-165">指示 `Save-Package` 强制 **PackageManagement** 为指定的包自动安装包提供程序。</span><span class="sxs-lookup"><span data-stu-id="b6655-165">Indicates that `Save-Package` forces **PackageManagement** to automatically install the package provider for the specified package.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b6655-166">-标头</span><span class="sxs-lookup"><span data-stu-id="b6655-166">-Headers</span></span>
-
-<span data-ttu-id="b6655-167">指定包的标头。</span><span class="sxs-lookup"><span data-stu-id="b6655-167">Specifies the headers for the package.</span></span>
+<span data-ttu-id="dd95f-160">指定筛选结果的标记。</span><span class="sxs-lookup"><span data-stu-id="dd95f-160">Specifies the tag that filters the results.</span></span> <span data-ttu-id="dd95f-161">排除不包含指定标记的结果。</span><span class="sxs-lookup"><span data-stu-id="dd95f-161">Results that don't contain the specified tag are excluded.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -351,9 +303,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-168">-Includes</span><span class="sxs-lookup"><span data-stu-id="b6655-168">-Includes</span></span>
+### <span data-ttu-id="dd95f-162">-Force</span><span class="sxs-lookup"><span data-stu-id="dd95f-162">-Force</span></span>
 
-<span data-ttu-id="b6655-169">指示包包含的资源。</span><span class="sxs-lookup"><span data-stu-id="b6655-169">Indicates the resources that the package includes.</span></span>
+<span data-ttu-id="dd95f-163">强制运行命令而不要求用户确认。</span><span class="sxs-lookup"><span data-stu-id="dd95f-163">Forces the command to run without asking for user confirmation.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="dd95f-164">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="dd95f-164">-ForceBootstrap</span></span>
+
+<span data-ttu-id="dd95f-165">指示 `Save-Package` 强制 **PackageManagement** 为指定的包自动安装包提供程序。</span><span class="sxs-lookup"><span data-stu-id="dd95f-165">Indicates that `Save-Package` forces **PackageManagement** to automatically install the package provider for the specified package.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="dd95f-166">-标头</span><span class="sxs-lookup"><span data-stu-id="dd95f-166">-Headers</span></span>
+
+<span data-ttu-id="dd95f-167">指定包的标头。</span><span class="sxs-lookup"><span data-stu-id="dd95f-167">Specifies the headers for the package.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: NuGet:PackageByInputObject, NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="dd95f-168">-Includes</span><span class="sxs-lookup"><span data-stu-id="dd95f-168">-Includes</span></span>
+
+<span data-ttu-id="dd95f-169">指示包包含的资源。</span><span class="sxs-lookup"><span data-stu-id="dd95f-169">Indicates the resources that the package includes.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -368,9 +368,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-170">-InputObject</span><span class="sxs-lookup"><span data-stu-id="b6655-170">-InputObject</span></span>
+### <span data-ttu-id="dd95f-170">-InputObject</span><span class="sxs-lookup"><span data-stu-id="dd95f-170">-InputObject</span></span>
 
-<span data-ttu-id="b6655-171">表示要保存的包的软件 ID 对象。</span><span class="sxs-lookup"><span data-stu-id="b6655-171">A software ID object that represents the package that you want to save.</span></span> <span data-ttu-id="b6655-172">软件 Id 是 cmdlet 结果的一部分 `Find-Package` 。</span><span class="sxs-lookup"><span data-stu-id="b6655-172">Software IDs are part of the results of the `Find-Package` cmdlet.</span></span>
+<span data-ttu-id="dd95f-171">表示要保存的包的软件 ID 对象。</span><span class="sxs-lookup"><span data-stu-id="dd95f-171">A software ID object that represents the package that you want to save.</span></span> <span data-ttu-id="dd95f-172">软件 Id 是 cmdlet 结果的一部分 `Find-Package` 。</span><span class="sxs-lookup"><span data-stu-id="dd95f-172">Software IDs are part of the results of the `Find-Package` cmdlet.</span></span>
 
 ```yaml
 Type: Microsoft.PackageManagement.Packaging.SoftwareIdentity
@@ -384,9 +384,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-173">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="b6655-173">-LiteralPath</span></span>
+### <span data-ttu-id="dd95f-173">-LiteralPath</span><span class="sxs-lookup"><span data-stu-id="dd95f-173">-LiteralPath</span></span>
 
-<span data-ttu-id="b6655-174">指定要将包保存到的文本路径。</span><span class="sxs-lookup"><span data-stu-id="b6655-174">Specifies the literal path to which you want to save the package.</span></span> <span data-ttu-id="b6655-175">不能将此参数和 **Path** 参数添加到同一个命令中。</span><span class="sxs-lookup"><span data-stu-id="b6655-175">You cannot add both this parameter and the **Path** parameter to the same command.</span></span>
+<span data-ttu-id="dd95f-174">指定要将包保存到的文本路径。</span><span class="sxs-lookup"><span data-stu-id="dd95f-174">Specifies the literal path to which you want to save the package.</span></span> <span data-ttu-id="dd95f-175">不能将此参数和 **Path** 参数添加到同一个命令中。</span><span class="sxs-lookup"><span data-stu-id="dd95f-175">You cannot add both this parameter and the **Path** parameter to the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -400,25 +400,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-176">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="b6655-176">-MaximumVersion</span></span>
+### <span data-ttu-id="dd95f-176">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="dd95f-176">-MaximumVersion</span></span>
 
-<span data-ttu-id="b6655-177">指定要保存的包的最大版本。</span><span class="sxs-lookup"><span data-stu-id="b6655-177">Specifies the maximum version of the package that you want to save.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PackageBySearch
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b6655-178">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="b6655-178">-MinimumVersion</span></span>
-
-<span data-ttu-id="b6655-179">指定要查找的包的最低版本。</span><span class="sxs-lookup"><span data-stu-id="b6655-179">Specifies the minimum version of the package that you want to find.</span></span>
+<span data-ttu-id="dd95f-177">指定要保存的包的最大版本。</span><span class="sxs-lookup"><span data-stu-id="dd95f-177">Specifies the maximum version of the package that you want to save.</span></span>
 
 ```yaml
 Type: System.String
@@ -432,9 +416,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-180">-Name</span><span class="sxs-lookup"><span data-stu-id="b6655-180">-Name</span></span>
+### <span data-ttu-id="dd95f-178">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="dd95f-178">-MinimumVersion</span></span>
 
-<span data-ttu-id="b6655-181">指定一个或多个包名称。</span><span class="sxs-lookup"><span data-stu-id="b6655-181">Specifies one or more package names.</span></span>
+<span data-ttu-id="dd95f-179">指定要查找的包的最低版本。</span><span class="sxs-lookup"><span data-stu-id="dd95f-179">Specifies the minimum version of the package that you want to find.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PackageBySearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="dd95f-180">-Name</span><span class="sxs-lookup"><span data-stu-id="dd95f-180">-Name</span></span>
+
+<span data-ttu-id="dd95f-181">指定一个或多个包名称。</span><span class="sxs-lookup"><span data-stu-id="dd95f-181">Specifies one or more package names.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -448,9 +448,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-182">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="b6655-182">-PackageManagementProvider</span></span>
+### <span data-ttu-id="dd95f-182">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="dd95f-182">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="b6655-183">指定包管理提供程序。</span><span class="sxs-lookup"><span data-stu-id="b6655-183">Specifies a package management provider.</span></span>
+<span data-ttu-id="dd95f-183">指定包管理提供程序。</span><span class="sxs-lookup"><span data-stu-id="dd95f-183">Specifies a package management provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -464,9 +464,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-184">-Path</span><span class="sxs-lookup"><span data-stu-id="b6655-184">-Path</span></span>
+### <span data-ttu-id="dd95f-184">-Path</span><span class="sxs-lookup"><span data-stu-id="dd95f-184">-Path</span></span>
 
-<span data-ttu-id="b6655-185">指定本地计算机上用于存储包的位置。</span><span class="sxs-lookup"><span data-stu-id="b6655-185">Specifies the location on the local computer to store the package.</span></span>
+<span data-ttu-id="dd95f-185">指定本地计算机上用于存储包的位置。</span><span class="sxs-lookup"><span data-stu-id="dd95f-185">Specifies the location on the local computer to store the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -480,9 +480,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-186">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="b6655-186">-ProviderName</span></span>
+### <span data-ttu-id="dd95f-186">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="dd95f-186">-ProviderName</span></span>
 
-<span data-ttu-id="b6655-187">指定一个或多个提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="b6655-187">Specifies one or more provider names.</span></span>
+<span data-ttu-id="dd95f-187">指定一个或多个提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="dd95f-187">Specifies one or more provider names.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -497,9 +497,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-188">-Proxy</span><span class="sxs-lookup"><span data-stu-id="b6655-188">-Proxy</span></span>
+### <span data-ttu-id="dd95f-188">-Proxy</span><span class="sxs-lookup"><span data-stu-id="dd95f-188">-Proxy</span></span>
 
-<span data-ttu-id="b6655-189">为请求指定代理服务器，而不是直接连接到 internet 资源。</span><span class="sxs-lookup"><span data-stu-id="b6655-189">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
+<span data-ttu-id="dd95f-189">为请求指定代理服务器，而不是直接连接到 internet 资源。</span><span class="sxs-lookup"><span data-stu-id="dd95f-189">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -513,9 +513,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-190">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="b6655-190">-ProxyCredential</span></span>
+### <span data-ttu-id="dd95f-190">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="dd95f-190">-ProxyCredential</span></span>
 
-<span data-ttu-id="b6655-191">指定有权使用由 **Proxy** 参数指定的代理服务器的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="b6655-191">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="dd95f-191">指定有权使用由 **Proxy** 参数指定的代理服务器的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="dd95f-191">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -529,9 +529,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-192">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="b6655-192">-PublishLocation</span></span>
+### <span data-ttu-id="dd95f-192">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="dd95f-192">-PublishLocation</span></span>
 
-<span data-ttu-id="b6655-193">指定发布位置。</span><span class="sxs-lookup"><span data-stu-id="b6655-193">Specifies the publish location.</span></span>
+<span data-ttu-id="dd95f-193">指定发布位置。</span><span class="sxs-lookup"><span data-stu-id="dd95f-193">Specifies the publish location.</span></span>
 
 ```yaml
 Type: System.String
@@ -545,9 +545,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-194">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="b6655-194">-RequiredVersion</span></span>
+### <span data-ttu-id="dd95f-194">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="dd95f-194">-RequiredVersion</span></span>
 
-<span data-ttu-id="b6655-195">指定要保存的包的确切版本。</span><span class="sxs-lookup"><span data-stu-id="b6655-195">Specifies the exact version of the package to save.</span></span>
+<span data-ttu-id="dd95f-195">指定要保存的包的确切版本。</span><span class="sxs-lookup"><span data-stu-id="dd95f-195">Specifies the exact version of the package to save.</span></span>
 
 ```yaml
 Type: System.String
@@ -561,9 +561,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-196">-Find-rolecapability</span><span class="sxs-lookup"><span data-stu-id="b6655-196">-RoleCapability</span></span>
+### <span data-ttu-id="dd95f-196">-Find-rolecapability</span><span class="sxs-lookup"><span data-stu-id="dd95f-196">-RoleCapability</span></span>
 
-<span data-ttu-id="b6655-197">指定角色功能的数组。</span><span class="sxs-lookup"><span data-stu-id="b6655-197">Specifies an array of role capabilities.</span></span>
+<span data-ttu-id="dd95f-197">指定角色功能的数组。</span><span class="sxs-lookup"><span data-stu-id="dd95f-197">Specifies an array of role capabilities.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -577,25 +577,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-198">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="b6655-198">-ScriptPublishLocation</span></span>
+### <span data-ttu-id="dd95f-198">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="dd95f-198">-ScriptPublishLocation</span></span>
 
-<span data-ttu-id="b6655-199">指定脚本发布位置。</span><span class="sxs-lookup"><span data-stu-id="b6655-199">Specifies the script publish location.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b6655-200">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="b6655-200">-ScriptSourceLocation</span></span>
-
-<span data-ttu-id="b6655-201">指定脚本源位置。</span><span class="sxs-lookup"><span data-stu-id="b6655-201">Specifies the script source location.</span></span>
+<span data-ttu-id="dd95f-199">指定脚本发布位置。</span><span class="sxs-lookup"><span data-stu-id="dd95f-199">Specifies the script publish location.</span></span>
 
 ```yaml
 Type: System.String
@@ -609,9 +593,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-202">-SkipValidate</span><span class="sxs-lookup"><span data-stu-id="b6655-202">-SkipValidate</span></span>
+### <span data-ttu-id="dd95f-200">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="dd95f-200">-ScriptSourceLocation</span></span>
 
-<span data-ttu-id="b6655-203">跳过验证包凭据的开关。</span><span class="sxs-lookup"><span data-stu-id="b6655-203">Switch that skips validating the credentials of a package.</span></span>
+<span data-ttu-id="dd95f-201">指定脚本源位置。</span><span class="sxs-lookup"><span data-stu-id="dd95f-201">Specifies the script source location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet:PackageByInputObject, PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="dd95f-202">-SkipValidate</span><span class="sxs-lookup"><span data-stu-id="dd95f-202">-SkipValidate</span></span>
+
+<span data-ttu-id="dd95f-203">跳过验证包凭据的开关。</span><span class="sxs-lookup"><span data-stu-id="dd95f-203">Switch that skips validating the credentials of a package.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -625,9 +625,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-204">-Source</span><span class="sxs-lookup"><span data-stu-id="b6655-204">-Source</span></span>
+### <span data-ttu-id="dd95f-204">-Source</span><span class="sxs-lookup"><span data-stu-id="dd95f-204">-Source</span></span>
 
-<span data-ttu-id="b6655-205">指定一个或多个包源。</span><span class="sxs-lookup"><span data-stu-id="b6655-205">Specifies one or more package sources.</span></span>
+<span data-ttu-id="dd95f-205">指定一个或多个包源。</span><span class="sxs-lookup"><span data-stu-id="dd95f-205">Specifies one or more package sources.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -641,9 +641,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-206">-Tag</span><span class="sxs-lookup"><span data-stu-id="b6655-206">-Tag</span></span>
+### <span data-ttu-id="dd95f-206">-Tag</span><span class="sxs-lookup"><span data-stu-id="dd95f-206">-Tag</span></span>
 
-<span data-ttu-id="b6655-207">指定要在包元数据中搜索的标记。</span><span class="sxs-lookup"><span data-stu-id="b6655-207">Specifies a tag to search for within the package metadata.</span></span>
+<span data-ttu-id="dd95f-207">指定要在包元数据中搜索的标记。</span><span class="sxs-lookup"><span data-stu-id="dd95f-207">Specifies a tag to search for within the package metadata.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -657,9 +657,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-208">-Type</span><span class="sxs-lookup"><span data-stu-id="b6655-208">-Type</span></span>
+### <span data-ttu-id="dd95f-208">-Type</span><span class="sxs-lookup"><span data-stu-id="dd95f-208">-Type</span></span>
 
-<span data-ttu-id="b6655-209">指定是使用模块、脚本还是搜索包。</span><span class="sxs-lookup"><span data-stu-id="b6655-209">Specifies whether to search for packages with a module, a script, or either.</span></span>
+<span data-ttu-id="dd95f-209">指定是使用模块、脚本还是搜索包。</span><span class="sxs-lookup"><span data-stu-id="dd95f-209">Specifies whether to search for packages with a module, a script, or either.</span></span>
 
 ```yaml
 Type: System.String
@@ -674,9 +674,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-210">-Confirm</span><span class="sxs-lookup"><span data-stu-id="b6655-210">-Confirm</span></span>
+### <span data-ttu-id="dd95f-210">-Confirm</span><span class="sxs-lookup"><span data-stu-id="dd95f-210">-Confirm</span></span>
 
-<span data-ttu-id="b6655-211">提示你在运行 cmdlet 之前进行确认。</span><span class="sxs-lookup"><span data-stu-id="b6655-211">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="dd95f-211">提示你在运行 cmdlet 之前进行确认。</span><span class="sxs-lookup"><span data-stu-id="dd95f-211">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -690,9 +690,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-212">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="b6655-212">-WhatIf</span></span>
+### <span data-ttu-id="dd95f-212">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="dd95f-212">-WhatIf</span></span>
 
-<span data-ttu-id="b6655-213">显示运行该 cmdlet 时会发生什么情况。</span><span class="sxs-lookup"><span data-stu-id="b6655-213">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="b6655-214">此 cmdlet 未运行。</span><span class="sxs-lookup"><span data-stu-id="b6655-214">The cmdlet is not run.</span></span>
+<span data-ttu-id="dd95f-213">显示运行该 cmdlet 时会发生什么情况。</span><span class="sxs-lookup"><span data-stu-id="dd95f-213">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="dd95f-214">此 cmdlet 未运行。</span><span class="sxs-lookup"><span data-stu-id="dd95f-214">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -706,28 +706,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b6655-215">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b6655-215">CommonParameters</span></span>
+### <span data-ttu-id="dd95f-215">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="dd95f-215">CommonParameters</span></span>
 
-<span data-ttu-id="b6655-216">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="b6655-216">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b6655-217">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="b6655-217">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="dd95f-216">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="dd95f-216">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="dd95f-217">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="dd95f-217">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="b6655-218">输入</span><span class="sxs-lookup"><span data-stu-id="b6655-218">INPUTS</span></span>
+## <span data-ttu-id="dd95f-218">输入</span><span class="sxs-lookup"><span data-stu-id="dd95f-218">INPUTS</span></span>
 
-### <span data-ttu-id="b6655-219">`Save-Package` 接受管道中的对象。</span><span class="sxs-lookup"><span data-stu-id="b6655-219">`Save-Package` accepts objects from the pipeline.</span></span>
+### <span data-ttu-id="dd95f-219">`Save-Package` 接受管道中的对象。</span><span class="sxs-lookup"><span data-stu-id="dd95f-219">`Save-Package` accepts objects from the pipeline.</span></span>
 
-## <span data-ttu-id="b6655-220">输出</span><span class="sxs-lookup"><span data-stu-id="b6655-220">OUTPUTS</span></span>
+## <span data-ttu-id="dd95f-220">输出</span><span class="sxs-lookup"><span data-stu-id="dd95f-220">OUTPUTS</span></span>
 
-### <span data-ttu-id="b6655-221">此 cmdlet 将不生成任何输出。</span><span class="sxs-lookup"><span data-stu-id="b6655-221">This cmdlet does not generate any output.</span></span>
+### <span data-ttu-id="dd95f-221">此 cmdlet 将不生成任何输出。</span><span class="sxs-lookup"><span data-stu-id="dd95f-221">This cmdlet does not generate any output.</span></span>
 
-## <span data-ttu-id="b6655-222">注释</span><span class="sxs-lookup"><span data-stu-id="b6655-222">NOTES</span></span>
+## <span data-ttu-id="dd95f-222">注释</span><span class="sxs-lookup"><span data-stu-id="dd95f-222">NOTES</span></span>
 
-## <span data-ttu-id="b6655-223">相关链接</span><span class="sxs-lookup"><span data-stu-id="b6655-223">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="dd95f-223">从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。</span><span class="sxs-lookup"><span data-stu-id="dd95f-223">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="dd95f-224">如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。</span><span class="sxs-lookup"><span data-stu-id="dd95f-224">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="dd95f-225">使用以下命令确保使用的是 TLS 1.2：</span><span class="sxs-lookup"><span data-stu-id="dd95f-225">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="dd95f-226">有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。</span><span class="sxs-lookup"><span data-stu-id="dd95f-226">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="b6655-224">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="b6655-224">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="dd95f-227">相关链接</span><span class="sxs-lookup"><span data-stu-id="dd95f-227">RELATED LINKS</span></span>
 
-[<span data-ttu-id="b6655-225">Get-Package</span><span class="sxs-lookup"><span data-stu-id="b6655-225">Get-Package</span></span>](Get-Package.md)
+[<span data-ttu-id="dd95f-228">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="dd95f-228">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="b6655-226">Install-Package</span><span class="sxs-lookup"><span data-stu-id="b6655-226">Install-Package</span></span>](Install-Package.md)
+[<span data-ttu-id="dd95f-229">Get-Package</span><span class="sxs-lookup"><span data-stu-id="dd95f-229">Get-Package</span></span>](Get-Package.md)
 
-[<span data-ttu-id="b6655-227">Save-Package</span><span class="sxs-lookup"><span data-stu-id="b6655-227">Save-Package</span></span>](Save-Package.md)
+[<span data-ttu-id="dd95f-230">Install-Package</span><span class="sxs-lookup"><span data-stu-id="dd95f-230">Install-Package</span></span>](Install-Package.md)
 
-[<span data-ttu-id="b6655-228">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="b6655-228">Uninstall-Package</span></span>](Uninstall-Package.md)
+[<span data-ttu-id="dd95f-231">Save-Package</span><span class="sxs-lookup"><span data-stu-id="dd95f-231">Save-Package</span></span>](Save-Package.md)
+
+[<span data-ttu-id="dd95f-232">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="dd95f-232">Uninstall-Package</span></span>](Uninstall-Package.md)

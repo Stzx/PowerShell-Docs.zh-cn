@@ -7,21 +7,21 @@ ms.date: 03/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-module?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Module
-ms.openlocfilehash: 33b7861f4e776b992d3483b9b0776c32a88599fc
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: c6468d2f8226cb26ec5385c7d5a8a895155ad673
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93196960"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892648"
 ---
-# <span data-ttu-id="24f24-103">Find-Module</span><span class="sxs-lookup"><span data-stu-id="24f24-103">Find-Module</span></span>
+# <span data-ttu-id="c8d06-103">Find-Module</span><span class="sxs-lookup"><span data-stu-id="c8d06-103">Find-Module</span></span>
 
-## <span data-ttu-id="24f24-104">摘要</span><span class="sxs-lookup"><span data-stu-id="24f24-104">SYNOPSIS</span></span>
-<span data-ttu-id="24f24-105">查找存储库中与指定条件匹配的模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-105">Finds modules in a repository that match specified criteria.</span></span>
+## <span data-ttu-id="c8d06-104">摘要</span><span class="sxs-lookup"><span data-stu-id="c8d06-104">SYNOPSIS</span></span>
+<span data-ttu-id="c8d06-105">查找存储库中与指定条件匹配的模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-105">Finds modules in a repository that match specified criteria.</span></span>
 
-## <span data-ttu-id="24f24-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="24f24-106">SYNTAX</span></span>
+## <span data-ttu-id="c8d06-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="c8d06-106">SYNTAX</span></span>
 
-### <span data-ttu-id="24f24-107">全部</span><span class="sxs-lookup"><span data-stu-id="24f24-107">All</span></span>
+### <span data-ttu-id="c8d06-107">全部</span><span class="sxs-lookup"><span data-stu-id="c8d06-107">All</span></span>
 
 ```
 Find-Module [[-Name] <string[]>] [-MinimumVersion <string>] [-MaximumVersion <string>]
@@ -31,29 +31,29 @@ Find-Module [[-Name] <string[]>] [-MinimumVersion <string>] [-MaximumVersion <st
  [-Credential <pscredential>] [-AllowPrerelease] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="24f24-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="24f24-108">DESCRIPTION</span></span>
+## <span data-ttu-id="c8d06-108">说明</span><span class="sxs-lookup"><span data-stu-id="c8d06-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="24f24-109">`Find-Module`Cmdlet 可在存储库中查找与指定条件匹配的模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-109">The `Find-Module` cmdlet finds modules in a repository that match the specified criteria.</span></span>
-<span data-ttu-id="24f24-110">`Find-Module` 返回它找到的每个模块的 **PSRepositoryItemInfo** 对象。</span><span class="sxs-lookup"><span data-stu-id="24f24-110">`Find-Module` returns a **PSRepositoryItemInfo** object for each module it finds.</span></span> <span data-ttu-id="24f24-111">这些对象可通过管道向下发送到 cmdlet，例如 `Install-Module` 。</span><span class="sxs-lookup"><span data-stu-id="24f24-111">The objects can be sent down the pipeline to cmdlets such as `Install-Module`.</span></span>
+<span data-ttu-id="c8d06-109">`Find-Module`Cmdlet 可在存储库中查找与指定条件匹配的模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-109">The `Find-Module` cmdlet finds modules in a repository that match the specified criteria.</span></span>
+<span data-ttu-id="c8d06-110">`Find-Module` 返回它找到的每个模块的 **PSRepositoryItemInfo** 对象。</span><span class="sxs-lookup"><span data-stu-id="c8d06-110">`Find-Module` returns a **PSRepositoryItemInfo** object for each module it finds.</span></span> <span data-ttu-id="c8d06-111">这些对象可通过管道向下发送到 cmdlet，例如 `Install-Module` 。</span><span class="sxs-lookup"><span data-stu-id="c8d06-111">The objects can be sent down the pipeline to cmdlets such as `Install-Module`.</span></span>
 
-<span data-ttu-id="24f24-112">第一次 `Find-Module` 尝试使用存储库时，系统可能会提示您安装更新。</span><span class="sxs-lookup"><span data-stu-id="24f24-112">The first time `Find-Module` attempts to use a repository, you might be prompted to install updates.</span></span>
-<span data-ttu-id="24f24-113">如果存储库源未注册 `Register-PSRepository` 到 cmdlet，则会返回错误。</span><span class="sxs-lookup"><span data-stu-id="24f24-113">If the repository source is not registered with `Register-PSRepository` cmdlet, an error is returned.</span></span>
+<span data-ttu-id="c8d06-112">第一次 `Find-Module` 尝试使用存储库时，系统可能会提示您安装更新。</span><span class="sxs-lookup"><span data-stu-id="c8d06-112">The first time `Find-Module` attempts to use a repository, you might be prompted to install updates.</span></span>
+<span data-ttu-id="c8d06-113">如果存储库源未注册 `Register-PSRepository` 到 cmdlet，则会返回错误。</span><span class="sxs-lookup"><span data-stu-id="c8d06-113">If the repository source is not registered with `Register-PSRepository` cmdlet, an error is returned.</span></span>
 
-<span data-ttu-id="24f24-114">`Find-Module` 如果未使用限制版本的参数，则返回模块的最新版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-114">`Find-Module` returns the newest version of a module if no parameters are used that limit the version.</span></span> <span data-ttu-id="24f24-115">若要获取存储库的模块版本的列表，请使用参数 **AllVersions** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-115">To get a repository's list of a module's versions, use the parameter **AllVersions** .</span></span>
+<span data-ttu-id="c8d06-114">`Find-Module` 如果未使用限制版本的参数，则返回模块的最新版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-114">`Find-Module` returns the newest version of a module if no parameters are used that limit the version.</span></span> <span data-ttu-id="c8d06-115">若要获取存储库的模块版本的列表，请使用参数 **AllVersions**。</span><span class="sxs-lookup"><span data-stu-id="c8d06-115">To get a repository's list of a module's versions, use the parameter **AllVersions**.</span></span>
 
-<span data-ttu-id="24f24-116">如果指定了 **MinimumVersion** 参数，则将 `Find-Module` 返回等于或大于最小值的模块的版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-116">If the **MinimumVersion** parameter is specified, `Find-Module` returns the module's version that is equal to or greater than the minimum.</span></span> <span data-ttu-id="24f24-117">如果存储库中有可用的更新版本，则返回较新版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-117">If there is a newer version available in the repository, the newer version is returned.</span></span>
+<span data-ttu-id="c8d06-116">如果指定了 **MinimumVersion** 参数，则将 `Find-Module` 返回等于或大于最小值的模块的版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-116">If the **MinimumVersion** parameter is specified, `Find-Module` returns the module's version that is equal to or greater than the minimum.</span></span> <span data-ttu-id="c8d06-117">如果存储库中有可用的更新版本，则返回较新版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-117">If there is a newer version available in the repository, the newer version is returned.</span></span>
 
-<span data-ttu-id="24f24-118">如果指定了 **MaximumVersion** 参数，则将 `Find-Module` 返回最新版本的模块，该模块不超过指定的版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-118">If the **MaximumVersion** parameter is specified, `Find-Module` returns the newest version of the module that does not exceed the version specified.</span></span>
+<span data-ttu-id="c8d06-118">如果指定了 **MaximumVersion** 参数，则将 `Find-Module` 返回最新版本的模块，该模块不超过指定的版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-118">If the **MaximumVersion** parameter is specified, `Find-Module` returns the newest version of the module that does not exceed the version specified.</span></span>
 
-<span data-ttu-id="24f24-119">如果指定了 **RequiredVersion** 参数，则 `Find-Module` 仅返回与指定版本完全匹配的模块版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-119">If the **RequiredVersion** parameter is specified, `Find-Module` only returns the module version that is an exact match to the specified version.</span></span> <span data-ttu-id="24f24-120">`Find-Module` 搜索所有可用的模块，因为源之间的名称冲突可能会发生。</span><span class="sxs-lookup"><span data-stu-id="24f24-120">`Find-Module` searches through all available modules, because name conflicts between sources can occur.</span></span>
+<span data-ttu-id="c8d06-119">如果指定了 **RequiredVersion** 参数，则 `Find-Module` 仅返回与指定版本完全匹配的模块版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-119">If the **RequiredVersion** parameter is specified, `Find-Module` only returns the module version that is an exact match to the specified version.</span></span> <span data-ttu-id="c8d06-120">`Find-Module` 搜索所有可用的模块，因为源之间的名称冲突可能会发生。</span><span class="sxs-lookup"><span data-stu-id="c8d06-120">`Find-Module` searches through all available modules, because name conflicts between sources can occur.</span></span>
 
-<span data-ttu-id="24f24-121">下面的示例使用 [PowerShell 库](https://www.powershellgallery.com/) 作为唯一的已注册存储库。</span><span class="sxs-lookup"><span data-stu-id="24f24-121">The following examples use the [PowerShell Gallery](https://www.powershellgallery.com/) as the only registered repository.</span></span> <span data-ttu-id="24f24-122">`Get-PSRepository` 显示已注册的存储库。</span><span class="sxs-lookup"><span data-stu-id="24f24-122">`Get-PSRepository` displays the registered repositories.</span></span> <span data-ttu-id="24f24-123">如果有多个已注册的存储库，请使用 `-Repository` 参数指定存储库的名称。</span><span class="sxs-lookup"><span data-stu-id="24f24-123">If you have multiple registered repositories, use the `-Repository` parameter to specify the repository's name.</span></span>
+<span data-ttu-id="c8d06-121">下面的示例使用 [PowerShell 库](https://www.powershellgallery.com/) 作为唯一的已注册存储库。</span><span class="sxs-lookup"><span data-stu-id="c8d06-121">The following examples use the [PowerShell Gallery](https://www.powershellgallery.com/) as the only registered repository.</span></span> <span data-ttu-id="c8d06-122">`Get-PSRepository` 显示已注册的存储库。</span><span class="sxs-lookup"><span data-stu-id="c8d06-122">`Get-PSRepository` displays the registered repositories.</span></span> <span data-ttu-id="c8d06-123">如果有多个已注册的存储库，请使用 `-Repository` 参数指定存储库的名称。</span><span class="sxs-lookup"><span data-stu-id="c8d06-123">If you have multiple registered repositories, use the `-Repository` parameter to specify the repository's name.</span></span>
 
-## <span data-ttu-id="24f24-124">示例</span><span class="sxs-lookup"><span data-stu-id="24f24-124">EXAMPLES</span></span>
+## <span data-ttu-id="c8d06-124">示例</span><span class="sxs-lookup"><span data-stu-id="c8d06-124">EXAMPLES</span></span>
 
-### <span data-ttu-id="24f24-125">示例1：按名称查找模块</span><span class="sxs-lookup"><span data-stu-id="24f24-125">Example 1: Find a module by name</span></span>
+### <span data-ttu-id="c8d06-125">示例1：按名称查找模块</span><span class="sxs-lookup"><span data-stu-id="c8d06-125">Example 1: Find a module by name</span></span>
 
-<span data-ttu-id="24f24-126">此示例查找默认存储库中的模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-126">This example finds a module in the default repository.</span></span>
+<span data-ttu-id="c8d06-126">此示例查找默认存储库中的模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-126">This example finds a module in the default repository.</span></span>
 
 ```powershell
 Find-Module -Name PowerShellGet
@@ -65,11 +65,11 @@ Version   Name              Repository           Description
 2.1.0     PowerShellGet     PSGallery            PowerShell module with commands for discovering...
 ```
 
-<span data-ttu-id="24f24-127">`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-127">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span>
+<span data-ttu-id="c8d06-127">`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-127">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span>
 
-### <span data-ttu-id="24f24-128">示例2：查找具有类似名称的模块</span><span class="sxs-lookup"><span data-stu-id="24f24-128">Example 2: Find modules with similar names</span></span>
+### <span data-ttu-id="c8d06-128">示例2：查找具有类似名称的模块</span><span class="sxs-lookup"><span data-stu-id="c8d06-128">Example 2: Find modules with similar names</span></span>
 
-<span data-ttu-id="24f24-129">此示例使用 `*`) 通配符 (星号来查找具有类似名称的模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-129">This example uses the asterisk (`*`) wildcard to find modules with similar names.</span></span>
+<span data-ttu-id="c8d06-129">此示例使用 `*`) 通配符 (星号来查找具有类似名称的模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-129">This example uses the asterisk (`*`) wildcard to find modules with similar names.</span></span>
 
 ```powershell
 Find-Module -Name PowerShell*
@@ -85,11 +85,11 @@ Version   Name                            Repository    Description
 4.0       PowerShellISEModule             PSGallery     a module that adds capability to the ISE
 ```
 
-<span data-ttu-id="24f24-130">`Find-Module`Cmdlet 将 **Name** 参数与星号一起使用 (`*`) 通配符来查找包含 **PowerShell** 的所有模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-130">The `Find-Module` cmdlet uses the **Name** parameter with the asterisk (`*`) wildcard to find all modules that contain **PowerShell** .</span></span>
+<span data-ttu-id="c8d06-130">`Find-Module`Cmdlet 将 **Name** 参数与星号一起使用 (`*`) 通配符来查找包含 **PowerShell** 的所有模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-130">The `Find-Module` cmdlet uses the **Name** parameter with the asterisk (`*`) wildcard to find all modules that contain **PowerShell**.</span></span>
 
-### <span data-ttu-id="24f24-131">示例3：按最低版本查找模块</span><span class="sxs-lookup"><span data-stu-id="24f24-131">Example 3: Find a module by minimum version</span></span>
+### <span data-ttu-id="c8d06-131">示例3：按最低版本查找模块</span><span class="sxs-lookup"><span data-stu-id="c8d06-131">Example 3: Find a module by minimum version</span></span>
 
-<span data-ttu-id="24f24-132">此示例将搜索模块的最低版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-132">This example searches for a module's minimum version.</span></span> <span data-ttu-id="24f24-133">如果存储库包含较新版本的模块，则返回较新版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-133">If the repository contains a newer version of the module, the newer version is returned.</span></span>
+<span data-ttu-id="c8d06-132">此示例将搜索模块的最低版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-132">This example searches for a module's minimum version.</span></span> <span data-ttu-id="c8d06-133">如果存储库包含较新版本的模块，则返回较新版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-133">If the repository contains a newer version of the module, the newer version is returned.</span></span>
 
 ```powershell
 Find-Module -Name PowerShellGet -MinimumVersion 1.6.5
@@ -101,11 +101,11 @@ Version   Name             Repository     Description
 2.1.0     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-<span data-ttu-id="24f24-134">`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-134">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="24f24-135">**MinimumVersion** 指定版本 **1.6.5** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-135">The **MinimumVersion** specifies version **1.6.5** .</span></span> <span data-ttu-id="24f24-136">`Find-Module` 返回 PowerShellGet 版本 **2.1.0** ，因为它超过最低版本并且是最新版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-136">`Find-Module` returns PowerShellGet version **2.1.0** because it exceeds the minimum version and is the most current version.</span></span>
+<span data-ttu-id="c8d06-134">`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-134">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="c8d06-135">**MinimumVersion** 指定版本 **1.6.5**。</span><span class="sxs-lookup"><span data-stu-id="c8d06-135">The **MinimumVersion** specifies version **1.6.5**.</span></span> <span data-ttu-id="c8d06-136">`Find-Module` 返回 PowerShellGet 版本 **2.1.0** ，因为它超过最低版本并且是最新版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-136">`Find-Module` returns PowerShellGet version **2.1.0** because it exceeds the minimum version and is the most current version.</span></span>
 
-### <span data-ttu-id="24f24-137">示例4：查找特定版本的模块</span><span class="sxs-lookup"><span data-stu-id="24f24-137">Example 4: Find a module by specific version</span></span>
+### <span data-ttu-id="c8d06-137">示例4：查找特定版本的模块</span><span class="sxs-lookup"><span data-stu-id="c8d06-137">Example 4: Find a module by specific version</span></span>
 
-<span data-ttu-id="24f24-138">此示例将返回一个对象，该对象表示模块的特定版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-138">This example returns an object that represents a module's specific version.</span></span> <span data-ttu-id="24f24-139">如果找不到指定版本，则会返回错误。</span><span class="sxs-lookup"><span data-stu-id="24f24-139">If the specified version is not found, an error is returned.</span></span>
+<span data-ttu-id="c8d06-138">此示例将返回一个对象，该对象表示模块的特定版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-138">This example returns an object that represents a module's specific version.</span></span> <span data-ttu-id="c8d06-139">如果找不到指定版本，则会返回错误。</span><span class="sxs-lookup"><span data-stu-id="c8d06-139">If the specified version is not found, an error is returned.</span></span>
 
 ```powershell
 Find-Module -Name PowerShellGet -RequiredVersion 1.6.5
@@ -117,11 +117,11 @@ Version   Name             Repository     Description
 1.6.5     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-<span data-ttu-id="24f24-140">`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-140">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="24f24-141">**RequiredVersion** 参数指定版本 **1.6.5** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-141">The **RequiredVersion** parameter specifies version **1.6.5** .</span></span>
+<span data-ttu-id="c8d06-140">`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-140">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="c8d06-141">**RequiredVersion** 参数指定版本 **1.6.5**。</span><span class="sxs-lookup"><span data-stu-id="c8d06-141">The **RequiredVersion** parameter specifies version **1.6.5**.</span></span>
 
-### <span data-ttu-id="24f24-142">示例5：查找特定存储库中的模块</span><span class="sxs-lookup"><span data-stu-id="24f24-142">Example 5: Find a module in a specific repository</span></span>
+### <span data-ttu-id="c8d06-142">示例5：查找特定存储库中的模块</span><span class="sxs-lookup"><span data-stu-id="c8d06-142">Example 5: Find a module in a specific repository</span></span>
 
-<span data-ttu-id="24f24-143">此示例使用 **存储库** 参数查找特定存储库中的模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-143">This example uses the **Repository** parameter to find a module in a specific repository.</span></span>
+<span data-ttu-id="c8d06-143">此示例使用 **存储库** 参数查找特定存储库中的模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-143">This example uses the **Repository** parameter to find a module in a specific repository.</span></span>
 
 ```powershell
 Find-Module -Name PowerShellGet -Repository PSGallery
@@ -133,11 +133,11 @@ Version   Name             Repository     Description
 2.1.0     PowerShellGet    PSGallery      PowerShell module with commands for discovering...
 ```
 
-<span data-ttu-id="24f24-144">`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-144">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="24f24-145">**存储库** 参数指定搜索 **PSGallery** 存储库。</span><span class="sxs-lookup"><span data-stu-id="24f24-145">The **Repository** parameter specifies to search the **PSGallery** repository.</span></span>
+<span data-ttu-id="c8d06-144">`Find-Module`Cmdlet 使用 **Name** 参数来指定 **PowerShellGet** 模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-144">The `Find-Module` cmdlet uses the **Name** parameter to specify the **PowerShellGet** module.</span></span> <span data-ttu-id="c8d06-145">**存储库** 参数指定搜索 **PSGallery** 存储库。</span><span class="sxs-lookup"><span data-stu-id="c8d06-145">The **Repository** parameter specifies to search the **PSGallery** repository.</span></span>
 
-### <span data-ttu-id="24f24-146">示例6：在多个存储库中查找模块</span><span class="sxs-lookup"><span data-stu-id="24f24-146">Example 6: Find a module in multiple repositories</span></span>
+### <span data-ttu-id="c8d06-146">示例6：在多个存储库中查找模块</span><span class="sxs-lookup"><span data-stu-id="c8d06-146">Example 6: Find a module in multiple repositories</span></span>
 
-<span data-ttu-id="24f24-147">此示例使用 `Register-PSRepository` 指定存储库。</span><span class="sxs-lookup"><span data-stu-id="24f24-147">This example uses the `Register-PSRepository` to specify a repository.</span></span> <span data-ttu-id="24f24-148">`Find-Module` 使用存储库搜索模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-148">`Find-Module` uses the repository to search for a module.</span></span>
+<span data-ttu-id="c8d06-147">此示例使用 `Register-PSRepository` 指定存储库。</span><span class="sxs-lookup"><span data-stu-id="c8d06-147">This example uses the `Register-PSRepository` to specify a repository.</span></span> <span data-ttu-id="c8d06-148">`Find-Module` 使用存储库搜索模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-148">`Find-Module` uses the repository to search for a module.</span></span>
 
 ```powershell
 Register-PSRepository -Name MySource -SourceLocation https://www.myget.org/F/powershellgetdemo/
@@ -151,13 +151,13 @@ PSGallery     2.0.0.0   ContosoServer    Cmdlets and DSC resources for managing 
 MySource      1.2.0.0   ContosoClient    Cmdlets and DSC resources for managing Contoso Client...
 ```
 
-<span data-ttu-id="24f24-149">`Register-PSRepository`Cmdlet 将注册一个新存储库。</span><span class="sxs-lookup"><span data-stu-id="24f24-149">The `Register-PSRepository` cmdlet registers a new repository.</span></span> <span data-ttu-id="24f24-150">**Name** 参数将命名为 **MySource** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-150">The **Name** parameter assigns the name **MySource** .</span></span> <span data-ttu-id="24f24-151">**SourceLocation** 参数指定存储库的地址。</span><span class="sxs-lookup"><span data-stu-id="24f24-151">The **SourceLocation** parameter specifies the repository's address.</span></span>
+<span data-ttu-id="c8d06-149">`Register-PSRepository`Cmdlet 将注册一个新存储库。</span><span class="sxs-lookup"><span data-stu-id="c8d06-149">The `Register-PSRepository` cmdlet registers a new repository.</span></span> <span data-ttu-id="c8d06-150">**Name** 参数将命名为 **MySource**。</span><span class="sxs-lookup"><span data-stu-id="c8d06-150">The **Name** parameter assigns the name **MySource**.</span></span> <span data-ttu-id="c8d06-151">**SourceLocation** 参数指定存储库的地址。</span><span class="sxs-lookup"><span data-stu-id="c8d06-151">The **SourceLocation** parameter specifies the repository's address.</span></span>
 
-<span data-ttu-id="24f24-152">`Find-Module`Cmdlet 将 **Name** 参数与星号一起使用 (`*`) 通配符来指定 **Contoso** 模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-152">The `Find-Module` cmdlet uses the **Name** parameter with the asterisk (`*`) wildcard to specify the **Contoso** module.</span></span> <span data-ttu-id="24f24-153">**存储库** 参数指定搜索两个存储库，即 **PSGallery** 和 **MySource** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-153">The **Repository** parameter specifies to search two repositories, **PSGallery** and **MySource** .</span></span>
+<span data-ttu-id="c8d06-152">`Find-Module`Cmdlet 将 **Name** 参数与星号一起使用 (`*`) 通配符来指定 **Contoso** 模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-152">The `Find-Module` cmdlet uses the **Name** parameter with the asterisk (`*`) wildcard to specify the **Contoso** module.</span></span> <span data-ttu-id="c8d06-153">**存储库** 参数指定搜索两个存储库，即 **PSGallery** 和 **MySource**。</span><span class="sxs-lookup"><span data-stu-id="c8d06-153">The **Repository** parameter specifies to search two repositories, **PSGallery** and **MySource**.</span></span>
 
-### <span data-ttu-id="24f24-154">示例7：查找包含 DSC 资源的模块</span><span class="sxs-lookup"><span data-stu-id="24f24-154">Example 7: Find a module that contains a DSC resource</span></span>
+### <span data-ttu-id="c8d06-154">示例7：查找包含 DSC 资源的模块</span><span class="sxs-lookup"><span data-stu-id="c8d06-154">Example 7: Find a module that contains a DSC resource</span></span>
 
-<span data-ttu-id="24f24-155">此命令返回包含 DSC 资源的模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-155">This command returns modules that contain DSC resources.</span></span> <span data-ttu-id="24f24-156">**包含** 参数具有四个用于搜索存储库的预定义功能。</span><span class="sxs-lookup"><span data-stu-id="24f24-156">The **Includes** parameter has four predefined functionalities that are used to search the repository.</span></span> <span data-ttu-id="24f24-157">使用 "选项卡-完成" 显示 **包含** 参数支持的四项功能。</span><span class="sxs-lookup"><span data-stu-id="24f24-157">Use tab-complete to display the four functionalities supported by the **Includes** parameter.</span></span>
+<span data-ttu-id="c8d06-155">此命令返回包含 DSC 资源的模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-155">This command returns modules that contain DSC resources.</span></span> <span data-ttu-id="c8d06-156">**包含** 参数具有四个用于搜索存储库的预定义功能。</span><span class="sxs-lookup"><span data-stu-id="c8d06-156">The **Includes** parameter has four predefined functionalities that are used to search the repository.</span></span> <span data-ttu-id="c8d06-157">使用 "选项卡-完成" 显示 **包含** 参数支持的四项功能。</span><span class="sxs-lookup"><span data-stu-id="c8d06-157">Use tab-complete to display the four functionalities supported by the **Includes** parameter.</span></span>
 
 ```powershell
 Find-Module -Repository PSGallery -Includes DscResource
@@ -174,14 +174,14 @@ Version     Name                            Repository    Description
 3.1.0.0     xPowerShellExecutionPolicy      PSGallery     This DSC resource can change the user...
 ```
 
-<span data-ttu-id="24f24-158">`Find-Module`Cmdlet 使用 **存储** 库参数搜索存储库 **PSGallery** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-158">The `Find-Module` cmdlet uses the **Repository** parameter to search the repository, **PSGallery** .</span></span>
-<span data-ttu-id="24f24-159">**包含** 参数指定 **get-dscresource** ，它是参数可在存储库中搜索的功能。</span><span class="sxs-lookup"><span data-stu-id="24f24-159">The **Includes** parameter specifies **DscResource** , which is a functionality that the parameter can search for in the repository.</span></span>
+<span data-ttu-id="c8d06-158">`Find-Module`Cmdlet 使用 **存储** 库参数搜索存储库 **PSGallery**。</span><span class="sxs-lookup"><span data-stu-id="c8d06-158">The `Find-Module` cmdlet uses the **Repository** parameter to search the repository, **PSGallery**.</span></span>
+<span data-ttu-id="c8d06-159">**包含** 参数指定 **get-dscresource**，它是参数可在存储库中搜索的功能。</span><span class="sxs-lookup"><span data-stu-id="c8d06-159">The **Includes** parameter specifies **DscResource**, which is a functionality that the parameter can search for in the repository.</span></span>
 
-### <span data-ttu-id="24f24-160">示例8：查找带有筛选器的模块</span><span class="sxs-lookup"><span data-stu-id="24f24-160">Example 8: Find a module with a filter</span></span>
+### <span data-ttu-id="c8d06-160">示例8：查找带有筛选器的模块</span><span class="sxs-lookup"><span data-stu-id="c8d06-160">Example 8: Find a module with a filter</span></span>
 
-<span data-ttu-id="24f24-161">在此示例中，若要查找模块，请使用筛选器搜索存储库。</span><span class="sxs-lookup"><span data-stu-id="24f24-161">In this example, to find modules, a filter is used to search the repository.</span></span>
+<span data-ttu-id="c8d06-161">在此示例中，若要查找模块，请使用筛选器搜索存储库。</span><span class="sxs-lookup"><span data-stu-id="c8d06-161">In this example, to find modules, a filter is used to search the repository.</span></span>
 
-<span data-ttu-id="24f24-162">对于基于 NuGet 的存储库， **筛选器** 参数会搜索参数的名称、说明和标记。</span><span class="sxs-lookup"><span data-stu-id="24f24-162">For a NuGet-based repository, the **Filter** parameter searches through the name, description, and tags for the argument.</span></span>
+<span data-ttu-id="c8d06-162">对于基于 NuGet 的存储库， **筛选器** 参数会搜索参数的名称、说明和标记。</span><span class="sxs-lookup"><span data-stu-id="c8d06-162">For a NuGet-based repository, the **Filter** parameter searches through the name, description, and tags for the argument.</span></span>
 
 ```powershell
 Find-Module -Filter AppDomain
@@ -194,13 +194,13 @@ Version    Name              Repository           Description
 1.1.0    ClassExplorer       PSGallery            Quickly search the AppDomain for classes...
 ```
 
-<span data-ttu-id="24f24-163">`Find-Module`Cmdlet 使用 **筛选器** 参数在存储库中搜索 **AppDomain** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-163">The `Find-Module` cmdlet uses the **Filter** parameter to search the repository for **AppDomain** .</span></span>
+<span data-ttu-id="c8d06-163">`Find-Module`Cmdlet 使用 **筛选器** 参数在存储库中搜索 **AppDomain**。</span><span class="sxs-lookup"><span data-stu-id="c8d06-163">The `Find-Module` cmdlet uses the **Filter** parameter to search the repository for **AppDomain**.</span></span>
 
-## <span data-ttu-id="24f24-164">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="24f24-164">PARAMETERS</span></span>
+## <span data-ttu-id="c8d06-164">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="c8d06-164">PARAMETERS</span></span>
 
-### <span data-ttu-id="24f24-165">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="24f24-165">-AllowPrerelease</span></span>
+### <span data-ttu-id="c8d06-165">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="c8d06-165">-AllowPrerelease</span></span>
 
-<span data-ttu-id="24f24-166">包含在标记为预发行版的结果模块中。</span><span class="sxs-lookup"><span data-stu-id="24f24-166">Includes in the results modules marked as a pre-release.</span></span>
+<span data-ttu-id="c8d06-166">包含在标记为预发行版的结果模块中。</span><span class="sxs-lookup"><span data-stu-id="c8d06-166">Includes in the results modules marked as a pre-release.</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -214,9 +214,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-167">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="24f24-167">-AllVersions</span></span>
+### <span data-ttu-id="c8d06-167">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="c8d06-167">-AllVersions</span></span>
 
-<span data-ttu-id="24f24-168">指定在结果中包括某个模块的所有版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-168">Specifies to include all versions of a module in the results.</span></span> <span data-ttu-id="24f24-169">不能将 **AllVersions** 参数与 **MinimumVersion** 、 **MaximumVersion** 或 **RequiredVersion** 参数一起使用。</span><span class="sxs-lookup"><span data-stu-id="24f24-169">You cannot use the **AllVersions** parameter with the **MinimumVersion** , **MaximumVersion** , or **RequiredVersion** parameters.</span></span>
+<span data-ttu-id="c8d06-168">指定在结果中包括某个模块的所有版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-168">Specifies to include all versions of a module in the results.</span></span> <span data-ttu-id="c8d06-169">不能将 **AllVersions** 参数与 **MinimumVersion**、 **MaximumVersion** 或 **RequiredVersion** 参数一起使用。</span><span class="sxs-lookup"><span data-stu-id="c8d06-169">You cannot use the **AllVersions** parameter with the **MinimumVersion**, **MaximumVersion**, or **RequiredVersion** parameters.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -230,9 +230,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-170">-Command</span><span class="sxs-lookup"><span data-stu-id="24f24-170">-Command</span></span>
+### <span data-ttu-id="c8d06-170">-Command</span><span class="sxs-lookup"><span data-stu-id="c8d06-170">-Command</span></span>
 
-<span data-ttu-id="24f24-171">指定要在模块中查找的命令数组。</span><span class="sxs-lookup"><span data-stu-id="24f24-171">Specifies an array of commands to find in modules.</span></span> <span data-ttu-id="24f24-172">命令可以是函数或工作流。</span><span class="sxs-lookup"><span data-stu-id="24f24-172">A command can be a function or workflow.</span></span>
+<span data-ttu-id="c8d06-171">指定要在模块中查找的命令数组。</span><span class="sxs-lookup"><span data-stu-id="c8d06-171">Specifies an array of commands to find in modules.</span></span> <span data-ttu-id="c8d06-172">命令可以是函数或工作流。</span><span class="sxs-lookup"><span data-stu-id="c8d06-172">A command can be a function or workflow.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -246,9 +246,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-173">-Credential</span><span class="sxs-lookup"><span data-stu-id="24f24-173">-Credential</span></span>
+### <span data-ttu-id="c8d06-173">-Credential</span><span class="sxs-lookup"><span data-stu-id="c8d06-173">-Credential</span></span>
 
-<span data-ttu-id="24f24-174">指定有权为指定的包提供程序或源安装模块的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="24f24-174">Specifies a user account that has rights to install a module for a specified package provider or source.</span></span>
+<span data-ttu-id="c8d06-174">指定有权为指定的包提供程序或源安装模块的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="c8d06-174">Specifies a user account that has rights to install a module for a specified package provider or source.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -262,9 +262,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-175">-DscResource</span><span class="sxs-lookup"><span data-stu-id="24f24-175">-DscResource</span></span>
+### <span data-ttu-id="c8d06-175">-DscResource</span><span class="sxs-lookup"><span data-stu-id="c8d06-175">-DscResource</span></span>
 
-<span data-ttu-id="24f24-176">指定包含 DSC 资源的模块的名称或名称的一部分。</span><span class="sxs-lookup"><span data-stu-id="24f24-176">Specifies the name, or part of the name, of modules that contain DSC resources.</span></span> <span data-ttu-id="24f24-177">在提供多个参数时，按 PowerShell 约定执行 **或** 搜索。</span><span class="sxs-lookup"><span data-stu-id="24f24-177">Per PowerShell conventions, performs an **OR** search when you provide multiple arguments.</span></span>
+<span data-ttu-id="c8d06-176">指定包含 DSC 资源的模块的名称或名称的一部分。</span><span class="sxs-lookup"><span data-stu-id="c8d06-176">Specifies the name, or part of the name, of modules that contain DSC resources.</span></span> <span data-ttu-id="c8d06-177">在提供多个参数时，按 PowerShell 约定执行 **或** 搜索。</span><span class="sxs-lookup"><span data-stu-id="c8d06-177">Per PowerShell conventions, performs an **OR** search when you provide multiple arguments.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -278,9 +278,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-178">-Filter</span><span class="sxs-lookup"><span data-stu-id="24f24-178">-Filter</span></span>
+### <span data-ttu-id="c8d06-178">-Filter</span><span class="sxs-lookup"><span data-stu-id="c8d06-178">-Filter</span></span>
 
-<span data-ttu-id="24f24-179">基于 **PackageManagement** 提供程序特定的搜索语法指定筛选器。</span><span class="sxs-lookup"><span data-stu-id="24f24-179">Specifies a filter based on the **PackageManagement** provider-specific search syntax.</span></span> <span data-ttu-id="24f24-180">对于 NuGet 模块，此参数等效于使用 [PowerShell 库](https://www.powershellgallery.com/) 网站上的搜索栏进行搜索。</span><span class="sxs-lookup"><span data-stu-id="24f24-180">For NuGet modules, this parameter is the equivalent of searching by using the Search bar on the [PowerShell Gallery](https://www.powershellgallery.com/) website.</span></span>
+<span data-ttu-id="c8d06-179">基于 **PackageManagement** 提供程序特定的搜索语法指定筛选器。</span><span class="sxs-lookup"><span data-stu-id="c8d06-179">Specifies a filter based on the **PackageManagement** provider-specific search syntax.</span></span> <span data-ttu-id="c8d06-180">对于 NuGet 模块，此参数等效于使用 [PowerShell 库](https://www.powershellgallery.com/) 网站上的搜索栏进行搜索。</span><span class="sxs-lookup"><span data-stu-id="c8d06-180">For NuGet modules, this parameter is the equivalent of searching by using the Search bar on the [PowerShell Gallery](https://www.powershellgallery.com/) website.</span></span>
 
 ```yaml
 Type: System.String
@@ -294,9 +294,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-181">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="24f24-181">-IncludeDependencies</span></span>
+### <span data-ttu-id="c8d06-181">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="c8d06-181">-IncludeDependencies</span></span>
 
-<span data-ttu-id="24f24-182">指示此操作包含依赖于在 **Name** 参数中指定的模块的所有模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-182">Indicates that this operation includes all modules that are dependent upon the module specified in the **Name** parameter.</span></span>
+<span data-ttu-id="c8d06-182">指示此操作包含依赖于在 **Name** 参数中指定的模块的所有模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-182">Indicates that this operation includes all modules that are dependent upon the module specified in the **Name** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -310,14 +310,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-183">-Includes</span><span class="sxs-lookup"><span data-stu-id="24f24-183">-Includes</span></span>
+### <span data-ttu-id="c8d06-183">-Includes</span><span class="sxs-lookup"><span data-stu-id="c8d06-183">-Includes</span></span>
 
-<span data-ttu-id="24f24-184">仅返回那些包含特定类型的 PowerShell 功能的模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-184">Returns only those modules that include specific kinds of PowerShell functionality.</span></span> <span data-ttu-id="24f24-185">例如，你可能只想查找包含 **get-dscresource** 的模块。</span><span class="sxs-lookup"><span data-stu-id="24f24-185">For example, you might only want to find modules that include **DSCResource** .</span></span> <span data-ttu-id="24f24-186">此参数可接受的值如下所示：</span><span class="sxs-lookup"><span data-stu-id="24f24-186">The acceptable values for this parameter are as follows:</span></span>
+<span data-ttu-id="c8d06-184">仅返回那些包含特定类型的 PowerShell 功能的模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-184">Returns only those modules that include specific kinds of PowerShell functionality.</span></span> <span data-ttu-id="c8d06-185">例如，你可能只想查找包含 **get-dscresource** 的模块。</span><span class="sxs-lookup"><span data-stu-id="c8d06-185">For example, you might only want to find modules that include **DSCResource**.</span></span> <span data-ttu-id="c8d06-186">此参数可接受的值如下所示：</span><span class="sxs-lookup"><span data-stu-id="c8d06-186">The acceptable values for this parameter are as follows:</span></span>
 
-- <span data-ttu-id="24f24-187">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="24f24-187">Cmdlet</span></span>
-- <span data-ttu-id="24f24-188">DscResource</span><span class="sxs-lookup"><span data-stu-id="24f24-188">DscResource</span></span>
-- <span data-ttu-id="24f24-189">函数</span><span class="sxs-lookup"><span data-stu-id="24f24-189">Function</span></span>
-- <span data-ttu-id="24f24-190">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="24f24-190">RoleCapability</span></span>
+- <span data-ttu-id="c8d06-187">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="c8d06-187">Cmdlet</span></span>
+- <span data-ttu-id="c8d06-188">DscResource</span><span class="sxs-lookup"><span data-stu-id="c8d06-188">DscResource</span></span>
+- <span data-ttu-id="c8d06-189">函数</span><span class="sxs-lookup"><span data-stu-id="c8d06-189">Function</span></span>
+- <span data-ttu-id="c8d06-190">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="c8d06-190">RoleCapability</span></span>
 
 ```yaml
 Type: System.String[]
@@ -332,26 +332,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-191">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="24f24-191">-MaximumVersion</span></span>
+### <span data-ttu-id="c8d06-191">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="c8d06-191">-MaximumVersion</span></span>
 
-<span data-ttu-id="24f24-192">指定要包括在搜索结果中的模块的最大或最新版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-192">Specifies the maximum, or latest, version of the module to include in the search results.</span></span>
-<span data-ttu-id="24f24-193">不能在同一命令中使用 **MaximumVersion** 和 **RequiredVersion** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-193">**MaximumVersion** and **RequiredVersion** cannot be used in the same command.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="24f24-194">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="24f24-194">-MinimumVersion</span></span>
-
-<span data-ttu-id="24f24-195">指定要包括在结果中的模块的最低版本。</span><span class="sxs-lookup"><span data-stu-id="24f24-195">Specifies the minimum version of the module to include in results.</span></span> <span data-ttu-id="24f24-196">不能在同一命令中使用 **MinimumVersion** 和 **RequiredVersion** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-196">**MinimumVersion** and **RequiredVersion** cannot be used in the same command.</span></span>
+<span data-ttu-id="c8d06-192">指定要包括在搜索结果中的模块的最大或最新版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-192">Specifies the maximum, or latest, version of the module to include in the search results.</span></span>
+<span data-ttu-id="c8d06-193">不能在同一命令中使用 **MaximumVersion** 和 **RequiredVersion** 。</span><span class="sxs-lookup"><span data-stu-id="c8d06-193">**MaximumVersion** and **RequiredVersion** cannot be used in the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -365,9 +349,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-197">-Name</span><span class="sxs-lookup"><span data-stu-id="24f24-197">-Name</span></span>
+### <span data-ttu-id="c8d06-194">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="c8d06-194">-MinimumVersion</span></span>
 
-<span data-ttu-id="24f24-198">指定要在存储库中搜索的模块的名称。</span><span class="sxs-lookup"><span data-stu-id="24f24-198">Specifies the names of modules to search for in the repository.</span></span> <span data-ttu-id="24f24-199">接受以逗号分隔的模块名称列表。</span><span class="sxs-lookup"><span data-stu-id="24f24-199">A comma-separated list of module names is accepted.</span></span> <span data-ttu-id="24f24-200">可以使用通配符。</span><span class="sxs-lookup"><span data-stu-id="24f24-200">Wildcards are accepted.</span></span>
+<span data-ttu-id="c8d06-195">指定要包括在结果中的模块的最低版本。</span><span class="sxs-lookup"><span data-stu-id="c8d06-195">Specifies the minimum version of the module to include in results.</span></span> <span data-ttu-id="c8d06-196">不能在同一命令中使用 **MinimumVersion** 和 **RequiredVersion** 。</span><span class="sxs-lookup"><span data-stu-id="c8d06-196">**MinimumVersion** and **RequiredVersion** cannot be used in the same command.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c8d06-197">-Name</span><span class="sxs-lookup"><span data-stu-id="c8d06-197">-Name</span></span>
+
+<span data-ttu-id="c8d06-198">指定要在存储库中搜索的模块的名称。</span><span class="sxs-lookup"><span data-stu-id="c8d06-198">Specifies the names of modules to search for in the repository.</span></span> <span data-ttu-id="c8d06-199">接受以逗号分隔的模块名称列表。</span><span class="sxs-lookup"><span data-stu-id="c8d06-199">A comma-separated list of module names is accepted.</span></span> <span data-ttu-id="c8d06-200">可以使用通配符。</span><span class="sxs-lookup"><span data-stu-id="c8d06-200">Wildcards are accepted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -381,9 +381,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="24f24-201">-Proxy</span><span class="sxs-lookup"><span data-stu-id="24f24-201">-Proxy</span></span>
+### <span data-ttu-id="c8d06-201">-Proxy</span><span class="sxs-lookup"><span data-stu-id="c8d06-201">-Proxy</span></span>
 
-<span data-ttu-id="24f24-202">为请求指定代理服务器，而不是直接连接到 Internet 资源。</span><span class="sxs-lookup"><span data-stu-id="24f24-202">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
+<span data-ttu-id="c8d06-202">为请求指定代理服务器，而不是直接连接到 Internet 资源。</span><span class="sxs-lookup"><span data-stu-id="c8d06-202">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -397,9 +397,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-203">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="24f24-203">-ProxyCredential</span></span>
+### <span data-ttu-id="c8d06-203">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="c8d06-203">-ProxyCredential</span></span>
 
-<span data-ttu-id="24f24-204">指定有权使用由 **Proxy** 参数指定的代理服务器的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="24f24-204">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="c8d06-204">指定有权使用由 **Proxy** 参数指定的代理服务器的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="c8d06-204">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -413,9 +413,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-205">-Repository</span><span class="sxs-lookup"><span data-stu-id="24f24-205">-Repository</span></span>
+### <span data-ttu-id="c8d06-205">-Repository</span><span class="sxs-lookup"><span data-stu-id="c8d06-205">-Repository</span></span>
 
-<span data-ttu-id="24f24-206">使用 " **存储库** " 参数可以指定要搜索模块的存储库。</span><span class="sxs-lookup"><span data-stu-id="24f24-206">Use the **Repository** parameter to specify which repository to search for a module.</span></span> <span data-ttu-id="24f24-207">当注册多个存储库时使用。</span><span class="sxs-lookup"><span data-stu-id="24f24-207">Used when multiple repositories are registered.</span></span> <span data-ttu-id="24f24-208">接受以逗号分隔的存储库列表。</span><span class="sxs-lookup"><span data-stu-id="24f24-208">Accepts a comma-separated list of repositories.</span></span> <span data-ttu-id="24f24-209">若要注册存储库，请使用 `Register-PSRepository` 。</span><span class="sxs-lookup"><span data-stu-id="24f24-209">To register a repository, use `Register-PSRepository`.</span></span> <span data-ttu-id="24f24-210">若要显示已注册的存储库，请使用 `Get-PSRepository` 。</span><span class="sxs-lookup"><span data-stu-id="24f24-210">To display registered repositories, use `Get-PSRepository`.</span></span>
+<span data-ttu-id="c8d06-206">使用 " **存储库** " 参数可以指定要搜索模块的存储库。</span><span class="sxs-lookup"><span data-stu-id="c8d06-206">Use the **Repository** parameter to specify which repository to search for a module.</span></span> <span data-ttu-id="c8d06-207">当注册多个存储库时使用。</span><span class="sxs-lookup"><span data-stu-id="c8d06-207">Used when multiple repositories are registered.</span></span> <span data-ttu-id="c8d06-208">接受以逗号分隔的存储库列表。</span><span class="sxs-lookup"><span data-stu-id="c8d06-208">Accepts a comma-separated list of repositories.</span></span> <span data-ttu-id="c8d06-209">若要注册存储库，请使用 `Register-PSRepository` 。</span><span class="sxs-lookup"><span data-stu-id="c8d06-209">To register a repository, use `Register-PSRepository`.</span></span> <span data-ttu-id="c8d06-210">若要显示已注册的存储库，请使用 `Get-PSRepository` 。</span><span class="sxs-lookup"><span data-stu-id="c8d06-210">To display registered repositories, use `Get-PSRepository`.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -429,9 +429,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-211">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="24f24-211">-RequiredVersion</span></span>
+### <span data-ttu-id="c8d06-211">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="c8d06-211">-RequiredVersion</span></span>
 
-<span data-ttu-id="24f24-212">指定要包含在结果中的模块的确切版本号。</span><span class="sxs-lookup"><span data-stu-id="24f24-212">Specifies the exact version number of the module to include in the results.</span></span> <span data-ttu-id="24f24-213">对于 **MinimumVersion** 或 **MaximumVersion** ，不能在同一命令中使用 **RequiredVersion** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-213">**RequiredVersion** cannot be used in the same command as **MinimumVersion** or **MaximumVersion** .</span></span>
+<span data-ttu-id="c8d06-212">指定要包含在结果中的模块的确切版本号。</span><span class="sxs-lookup"><span data-stu-id="c8d06-212">Specifies the exact version number of the module to include in the results.</span></span> <span data-ttu-id="c8d06-213">对于 **MinimumVersion** 或 **MaximumVersion**，不能在同一命令中使用 **RequiredVersion** 。</span><span class="sxs-lookup"><span data-stu-id="c8d06-213">**RequiredVersion** cannot be used in the same command as **MinimumVersion** or **MaximumVersion**.</span></span>
 
 ```yaml
 Type: System.String
@@ -445,25 +445,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-214">-Find-rolecapability</span><span class="sxs-lookup"><span data-stu-id="24f24-214">-RoleCapability</span></span>
+### <span data-ttu-id="c8d06-214">-Find-rolecapability</span><span class="sxs-lookup"><span data-stu-id="c8d06-214">-RoleCapability</span></span>
 
-<span data-ttu-id="24f24-215">指定角色功能的数组。</span><span class="sxs-lookup"><span data-stu-id="24f24-215">Specifies an array of role capabilities.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="24f24-216">-Tag</span><span class="sxs-lookup"><span data-stu-id="24f24-216">-Tag</span></span>
-
-<span data-ttu-id="24f24-217">指定标记的数组。</span><span class="sxs-lookup"><span data-stu-id="24f24-217">Specifies an array of tags.</span></span> <span data-ttu-id="24f24-218">示例标记包括 **DesiredStateConfiguration** 、 **DSC** 、 **DSCResourceKit** 或 **PSModule** 。</span><span class="sxs-lookup"><span data-stu-id="24f24-218">Example tags include **DesiredStateConfiguration** , **DSC** , **DSCResourceKit** , or **PSModule** .</span></span>
+<span data-ttu-id="c8d06-215">指定角色功能的数组。</span><span class="sxs-lookup"><span data-stu-id="c8d06-215">Specifies an array of role capabilities.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -477,42 +461,63 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="24f24-219">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="24f24-219">CommonParameters</span></span>
+### <span data-ttu-id="c8d06-216">-Tag</span><span class="sxs-lookup"><span data-stu-id="c8d06-216">-Tag</span></span>
 
-<span data-ttu-id="24f24-220">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="24f24-220">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="24f24-221">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="24f24-221">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="c8d06-217">指定标记的数组。</span><span class="sxs-lookup"><span data-stu-id="c8d06-217">Specifies an array of tags.</span></span> <span data-ttu-id="c8d06-218">示例标记包括 **DesiredStateConfiguration**、 **DSC**、 **DSCResourceKit** 或 **PSModule**。</span><span class="sxs-lookup"><span data-stu-id="c8d06-218">Example tags include **DesiredStateConfiguration**, **DSC**, **DSCResourceKit**, or **PSModule**.</span></span>
 
-## <span data-ttu-id="24f24-222">输入</span><span class="sxs-lookup"><span data-stu-id="24f24-222">INPUTS</span></span>
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
 
-### <span data-ttu-id="24f24-223">System.String[]</span><span class="sxs-lookup"><span data-stu-id="24f24-223">System.String[]</span></span>
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-### <span data-ttu-id="24f24-224">System.String</span><span class="sxs-lookup"><span data-stu-id="24f24-224">System.String</span></span>
+### <span data-ttu-id="c8d06-219">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c8d06-219">CommonParameters</span></span>
 
-### <span data-ttu-id="24f24-225">System.Uri</span><span class="sxs-lookup"><span data-stu-id="24f24-225">System.Uri</span></span>
+<span data-ttu-id="c8d06-220">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="c8d06-220">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c8d06-221">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="c8d06-221">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-### <span data-ttu-id="24f24-226">System.Management.Automation.PSCredential</span><span class="sxs-lookup"><span data-stu-id="24f24-226">System.Management.Automation.PSCredential</span></span>
+## <span data-ttu-id="c8d06-222">输入</span><span class="sxs-lookup"><span data-stu-id="c8d06-222">INPUTS</span></span>
 
-## <span data-ttu-id="24f24-227">输出</span><span class="sxs-lookup"><span data-stu-id="24f24-227">OUTPUTS</span></span>
+### <span data-ttu-id="c8d06-223">System.String[]</span><span class="sxs-lookup"><span data-stu-id="c8d06-223">System.String[]</span></span>
 
-### <span data-ttu-id="24f24-228">PSRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="24f24-228">PSRepositoryItemInfo</span></span>
+### <span data-ttu-id="c8d06-224">System.String</span><span class="sxs-lookup"><span data-stu-id="c8d06-224">System.String</span></span>
 
-<span data-ttu-id="24f24-229">`Find-Module` 创建可通过管道向下发送到 cmdlet （如）的 **PSRepositoryItemInfo** 对象 `Install-Module` 。</span><span class="sxs-lookup"><span data-stu-id="24f24-229">`Find-Module` creates **PSRepositoryItemInfo** objects that can be sent down the pipeline to cmdlets such as `Install-Module`.</span></span>
+### <span data-ttu-id="c8d06-225">System.Uri</span><span class="sxs-lookup"><span data-stu-id="c8d06-225">System.Uri</span></span>
 
-## <span data-ttu-id="24f24-230">注释</span><span class="sxs-lookup"><span data-stu-id="24f24-230">NOTES</span></span>
+### <span data-ttu-id="c8d06-226">System.Management.Automation.PSCredential</span><span class="sxs-lookup"><span data-stu-id="c8d06-226">System.Management.Automation.PSCredential</span></span>
 
-<span data-ttu-id="24f24-231">此 cmdlet 在 powershell 5.0 或更高版本的 PowerShell、Windows 7 或 Windows 2008 R2 及更高版本的 Windows 上运行。</span><span class="sxs-lookup"><span data-stu-id="24f24-231">This cmdlet runs on PowerShell 5.0 or later releases of PowerShell, on Windows 7, or Windows 2008 R2 and later releases of Windows.</span></span>
+## <span data-ttu-id="c8d06-227">输出</span><span class="sxs-lookup"><span data-stu-id="c8d06-227">OUTPUTS</span></span>
 
-## <span data-ttu-id="24f24-232">相关链接</span><span class="sxs-lookup"><span data-stu-id="24f24-232">RELATED LINKS</span></span>
+### <span data-ttu-id="c8d06-228">PSRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="c8d06-228">PSRepositoryItemInfo</span></span>
 
-[<span data-ttu-id="24f24-233">Get-PSRepository</span><span class="sxs-lookup"><span data-stu-id="24f24-233">Get-PSRepository</span></span>](Get-PSRepository.md)
+<span data-ttu-id="c8d06-229">`Find-Module` 创建可通过管道向下发送到 cmdlet （如）的 **PSRepositoryItemInfo** 对象 `Install-Module` 。</span><span class="sxs-lookup"><span data-stu-id="c8d06-229">`Find-Module` creates **PSRepositoryItemInfo** objects that can be sent down the pipeline to cmdlets such as `Install-Module`.</span></span>
 
-[<span data-ttu-id="24f24-234">Install-Module</span><span class="sxs-lookup"><span data-stu-id="24f24-234">Install-Module</span></span>](Install-Module.md)
+## <span data-ttu-id="c8d06-230">注释</span><span class="sxs-lookup"><span data-stu-id="c8d06-230">NOTES</span></span>
 
-[<span data-ttu-id="24f24-235">Publish-Module</span><span class="sxs-lookup"><span data-stu-id="24f24-235">Publish-Module</span></span>](Publish-Module.md)
+> [!IMPORTANT]
+> <span data-ttu-id="c8d06-231">从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。</span><span class="sxs-lookup"><span data-stu-id="c8d06-231">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="c8d06-232">如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。</span><span class="sxs-lookup"><span data-stu-id="c8d06-232">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="c8d06-233">使用以下命令确保使用的是 TLS 1.2：</span><span class="sxs-lookup"><span data-stu-id="c8d06-233">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="c8d06-234">有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。</span><span class="sxs-lookup"><span data-stu-id="c8d06-234">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="24f24-236">Save-Module</span><span class="sxs-lookup"><span data-stu-id="24f24-236">Save-Module</span></span>](Save-Module.md)
+## <span data-ttu-id="c8d06-235">相关链接</span><span class="sxs-lookup"><span data-stu-id="c8d06-235">RELATED LINKS</span></span>
 
-[<span data-ttu-id="24f24-237">Uninstall-Module</span><span class="sxs-lookup"><span data-stu-id="24f24-237">Uninstall-Module</span></span>](Uninstall-Module.md)
+[<span data-ttu-id="c8d06-236">Get-PSRepository</span><span class="sxs-lookup"><span data-stu-id="c8d06-236">Get-PSRepository</span></span>](Get-PSRepository.md)
 
-[<span data-ttu-id="24f24-238">Update-Module</span><span class="sxs-lookup"><span data-stu-id="24f24-238">Update-Module</span></span>](Update-Module.md)
+[<span data-ttu-id="c8d06-237">Install-Module</span><span class="sxs-lookup"><span data-stu-id="c8d06-237">Install-Module</span></span>](Install-Module.md)
 
-[<span data-ttu-id="24f24-239">Register-PSRepository</span><span class="sxs-lookup"><span data-stu-id="24f24-239">Register-PSRepository</span></span>](Register-PSRepository.md)
+[<span data-ttu-id="c8d06-238">Publish-Module</span><span class="sxs-lookup"><span data-stu-id="c8d06-238">Publish-Module</span></span>](Publish-Module.md)
+
+[<span data-ttu-id="c8d06-239">Save-Module</span><span class="sxs-lookup"><span data-stu-id="c8d06-239">Save-Module</span></span>](Save-Module.md)
+
+[<span data-ttu-id="c8d06-240">Uninstall-Module</span><span class="sxs-lookup"><span data-stu-id="c8d06-240">Uninstall-Module</span></span>](Uninstall-Module.md)
+
+[<span data-ttu-id="c8d06-241">Update-Module</span><span class="sxs-lookup"><span data-stu-id="c8d06-241">Update-Module</span></span>](Update-Module.md)
+
+[<span data-ttu-id="c8d06-242">Register-PSRepository</span><span class="sxs-lookup"><span data-stu-id="c8d06-242">Register-PSRepository</span></span>](Register-PSRepository.md)
