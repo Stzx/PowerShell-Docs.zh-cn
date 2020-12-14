@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 08/18/2020
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Csv
-ms.openlocfilehash: ad2b2a2b32fa1dfbf722ff0af25bfafaf57de84a
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: f920130ec8354b61b0bb3617e061520271df0eed
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93199350"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913230"
 ---
 # Export-Csv
 
@@ -38,7 +37,7 @@ Export-Csv -InputObject <PSObject> [[-Path] <String>] [-LiteralPath <String>] [-
  [-QuoteFields <String[]>] [-UseQuotes <QuoteKind>] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Export-CSV`Cmdlet 可创建你提交的对象的 CSV 文件。 每个对象都是一个行，其中包含以逗号分隔的对象属性值列表。 可以使用 `Export-CSV` cmdlet 创建电子表格并与接受 CSV 文件作为输入的程序共享数据。
 
@@ -342,7 +341,7 @@ Accept wildcard characters: False
 
 ### -Encoding
 
-为导出的 CSV 文件指定编码。 默认值是 `utf8NoBOM`。
+为导出的 CSV 文件指定编码。 默认值为 `utf8NoBOM`。
 
 此参数可接受的值如下所示：
 
@@ -360,7 +359,7 @@ Accept wildcard characters: False
 从 PowerShell 6.2 开始， **Encoding** 参数还允许已注册代码页的数字 id (如 `-Encoding 1251` (如) 所注册代码页的) 或字符串名称 `-Encoding "windows-1251"` 。 有关详细信息，请参阅 .NET 文档中的[编码。](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2)
 
 > [!NOTE]
-> 不建议使用 **utf-7** *。 在 PowerShell 7.1 中，如果 `utf7` 为 **编码** 参数指定，则会写入警告。
+> 不建议使用 **utf-7** _ _。 在 PowerShell 7.1 中，如果 `utf7` 为 _ *Encoding** 参数指定，则会写入警告。
 
 ```yaml
 Type: System.Text.Encoding
@@ -395,7 +394,7 @@ Accept wildcard characters: False
 
 ### -IncludeTypeInformation
 
-使用此参数时，CSV 输出的第一行包含 **#TYPE** 后跟对象类型的完全限定名称。 例如， **#TYPE** "。
+使用此参数时，CSV 输出的第一行包含 **#TYPE** 后跟对象类型的完全限定名称。 例如， **#TYPE**"。
 
 此参数是在 PowerShell 6.0 中引入的。
 
@@ -429,7 +428,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 
-指定指向 CSV 输出文件的路径。 与 **Path** 不同， **LiteralPath** 参数的值严格按照所键入的形式使用。 不会将任何字符解释为通配符。 如果路径包含转义符，请使用单引号。 单引号指示 PowerShell 不要将任何字符解释为转义序列。
+指定指向 CSV 输出文件的路径。 与 **Path** 不同，**LiteralPath** 参数的值严格按照所键入的形式使用。 不会将任何字符解释为通配符。 如果路径包含转义符，请使用单引号。 单引号指示 PowerShell 不要将任何字符解释为转义序列。
 
 ```yaml
 Type: System.String
@@ -541,7 +540,7 @@ Accept wildcard characters: False
 
 ### -QuoteFields
 
-指定应括起来的列的名称。 使用此参数时，只有指定的列被括起来。
+指定应括起来的列的名称。 使用此参数时，只有指定的列被括起来。 此参数是在 PowerShell 7.0 中添加的。
 
 ```yaml
 Type: System.String[]
@@ -557,11 +556,13 @@ Accept wildcard characters: False
 
 ### -UseQuotes
 
-指定在 CSV 文件中使用引号的时间。 可能的值包括：
+指定在 CSV 文件中使用引号的时间。 可能的值为：
 
 - 从不-不引用任何内容
 - 始终将所有内容都括 (默认行为) 
 - AsNeeded-仅包含分隔符字符的引号字段
+
+此参数是在 PowerShell 7.0 中添加的。
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -600,7 +601,7 @@ CSV 列表将发送到 Path 参数中指定的文件。
 CSV 字符串的输出如下所示：
 
 - 如果使用了 **IncludeTypeInformation** ，则第一个字符串包含后跟对象类型的完全限定名称的 **#TYPE** 信息标头。
-  例如， **#TYPE** "。
+  例如， **#TYPE**"。
 - 如果未使用 **IncludeTypeInformation** ，则第一个字符串包括列标题。 标头以逗号分隔的列表的形式包含第一个对象的属性名称。
 - 其余字符串包含每个对象的属性值的逗号分隔列表。
 
@@ -623,4 +624,3 @@ CSV 字符串的输出如下所示：
 [Import-Csv](Import-Csv.md)
 
 [Select-Object](Select-Object.md)
-

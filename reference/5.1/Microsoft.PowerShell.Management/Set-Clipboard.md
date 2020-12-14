@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 06/09/2017
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-clipboard?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Clipboard
-ms.openlocfilehash: f3230c247296d5fd907d580e719cbbbc560183a9
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: c1cf126e41a5e918afffbc41d30f957e650efdf5
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198047"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564496"
 ---
 # Set-Clipboard
 
@@ -27,13 +26,13 @@ ms.locfileid: "93198047"
 Set-Clipboard [-Append] [-AsHtml] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### Value
+### 值
 
 ```
 Set-Clipboard [-Value] <String[]> [-Append] [-AsHtml] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### `Path`
+### 路径
 
 ```
 Set-Clipboard [-Append] -Path <String[]> [-AsHtml] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -45,7 +44,7 @@ Set-Clipboard [-Append] -Path <String[]> [-AsHtml] [-WhatIf] [-Confirm] [<Common
 Set-Clipboard [-Append] -LiteralPath <String[]> [-AsHtml] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Set-Clipboard`Cmdlet 用于设置当前 Windows 剪贴板条目。
 
@@ -59,10 +58,18 @@ Set-Clipboard -Value "This is a test string"
 
 ### 示例2：将目录的内容复制到剪贴板
 
-此命令将指定文件夹的内容复制到剪贴板。
+此示例将指定文件夹的内容复制到剪贴板。
 
 ```powershell
 Set-Clipboard -Path "C:\Staging\"
+```
+
+### 示例3：将文件的内容复制到剪贴板
+
+此示例将文件的内容传输到剪贴板。 在此示例中，我们将获得一个公共 ssh 密钥，以便可以将其粘贴到其他应用程序（例如 GitHub）中。
+
+```powershell
+Get-Content C:\Users\user1\.ssh\id_ed25519.pub | Set-Clipboard
 ```
 
 ## PARAMETERS
@@ -101,7 +108,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 
-指定复制到剪贴板的项的路径。 不同于 **Path** ， **LiteralPath** 的值严格按照所键入的形式使用。 不会将任何字符解释为通配符。 如果路径包括转义符，请将其括在单引号中。 单引号会告知 Windows PowerShell 不要将所有字符都解释为转义序列。
+指定复制到剪贴板的项的路径。 不同于 **Path**，**LiteralPath** 的值严格按照所键入的形式使用。 不会将任何字符解释为通配符。 如果路径包括转义符，请将其括在单引号中。 单引号会告知 Windows PowerShell 不要将所有字符都解释为转义序列。
 
 ```yaml
 Type: System.String[]

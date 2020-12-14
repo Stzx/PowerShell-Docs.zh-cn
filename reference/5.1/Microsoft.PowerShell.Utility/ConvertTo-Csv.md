@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 1/7/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: 7d399661e4514c0a39ad00601d554c41c2897ff9
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: be590368539f396f0aac694e9565674393543f2c
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197964"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913196"
 ---
 # ConvertTo-Csv
 
@@ -34,7 +33,7 @@ ConvertTo-Csv [-InputObject] <psobject> [[-Delimiter] <char>] [-NoTypeInformatio
 ConvertTo-Csv [-InputObject] <psobject> [-UseCulture] [-NoTypeInformation] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `ConvertTo-CSV`Cmdlet 将返回一系列逗号分隔值 (CSV) 字符串，这些字符串表示你提交的对象。 然后，可以使用 `ConvertFrom-Csv` cmdlet 从 CSV 字符串重新创建对象。 从 CSV 转换的对象是包含属性值和没有方法的原始对象的字符串值。
 
@@ -180,7 +179,7 @@ CSV 输出将作为字符串集合返回。
 
 CSV 字符串的输出如下所示：
 
-- 默认情况下，第一个字符串包含后跟对象类型的完全限定名称的 **#TYPE** 信息标头。 例如， **#TYPE** "。
+- 默认情况下，第一个字符串包含后跟对象类型的完全限定名称的 **#TYPE** 信息标头。 例如， **#TYPE**"。
 - 如果使用 **NoTypeInformation** ，则第一个字符串包括列标题。 标头以逗号分隔的列表的形式包含第一个对象的属性名称。
 - 其余字符串包含每个对象的属性值的逗号分隔列表。
 
@@ -190,6 +189,6 @@ CSV 字符串的输出如下所示：
 
 [ConvertFrom-Csv](ConvertFrom-Csv.md)
 
-[Export-Csv](Export-Csv.md)
+[导出-Csv](Export-Csv.md)
 
 [Import-Csv](Import-Csv.md)

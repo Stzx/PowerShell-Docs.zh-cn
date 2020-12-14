@@ -1,23 +1,22 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 5/15/2019
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Module
-ms.openlocfilehash: cd04565f427cdf8aebf585d978e0e8d2a5b28c09
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 971f6efcbdec06ed5733e005ef0e95452d6c31a0
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94391215"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564514"
 ---
 # Get-Module
 
 ## 摘要
-获取已导入或可导入到当前会话的模块。
+列出在当前会话中导入的模块或可以从 PSModulePath 导入的模块。
 
 ## SYNTAX
 
@@ -49,21 +48,20 @@ Get-Module [[-Name] <String[]>] [-FullyQualifiedName <ModuleSpecification[]>] [-
  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
-该 `Get-Module` cmdlet 将获取已导入或可导入到 powershell 会话中的 powershell 模块。 返回的 module 对象 `Get-Module` 包含有关模块的重要信息。 还可以通过管道将模块对象传递给其他 cmdlet，如 `Import-Module` 和 `Remove-Module` cmdlet。
+`Get-Module`Cmdlet 列出已导入或可导入到 powershell 会话中的 powershell 模块。 如果没有参数， `Get-Module` 将获取已导入到当前会话中的模块。 **ListAvailable** 参数用于列出可以从在 PSModulePath 环境变量中指定的路径导入的模块 (`$env:PSModulePath`) 。
 
-如果没有参数， `Get-Module` 将获取已导入到当前会话中的模块。 若要获取所有已安装的模块，请指定 **ListAvailable** 参数。
+返回的 module 对象 `Get-Module` 包含有关模块的重要信息。 还可以通过管道将模块对象传递给其他 cmdlet，如 `Import-Module` 和 `Remove-Module` cmdlet。
 
-`Get-Module` 获取模块，但不导入它们。 从 Windows PowerShell 3.0 开始，当你使用模块中的命令时，将自动导入模块，但命令不会 `Get-Module` 触发自动导入。 你还可以使用 cmdlet 将模块导入到会话中 `Import-Module` 。
+`Get-Module` 列出模块，但不导入它们。 从 Windows PowerShell 3.0 开始，当你使用模块中的命令时，将自动导入模块，但命令不会 `Get-Module` 触发自动导入。 你还可以使用 cmdlet 将模块导入到会话中 `Import-Module` 。
 
 从 Windows PowerShell 3.0 开始，可以从远程会话中获取模块，然后将其导入到本地会话中。 此策略使用 PowerShell 的隐式远程处理功能，等效于使用 `Import-PSSession` cmdlet。 当你在从另一个会话导入的模块中使用命令时，这些命令将在远程会话中隐式运行。 此功能使你可以从本地会话管理远程计算机。
 
-此外，从 Windows PowerShell 3.0 开始，你可以使用 `Get-Module` 和 `Import-Module` 来获取和导入通用信息模型 (CIM) 模块，其中 Cmdlet 在 CMDLET 定义 XML (CDXML) 文件中定义。 此功能允许你使用在非托管代码程序集中实现的 cmdlet，如用 c + + 编写的程序集。
+此外，从 Windows PowerShell 3.0 开始，你可以使用 `Get-Module` 和 `Import-Module` 来获取和导入通用信息模型 (CIM) 模块。 CIM 模块在 Cmdlet 定义 XML (CDXML) 文件中定义 cmdlet。 此功能允许你使用在非托管代码程序集中实现的 cmdlet，如用 c + + 编写的程序集。
 
-借助这些新功能， `Get-Module` 和 `Import-Module` cmdlet 成为管理异类企业的主要工具，包括运行 Windows 操作系统的计算机和运行其他操作系统的计算机。
-
-若要管理运行启用了 PowerShell 和 PowerShell 远程处理的 Windows 操作系统的远程计算机，请在远程计算机上创建 **PSSession** ，然后使用的 **Pssession** 参数 `Get-Module` 获取 **pssession** 中的 PowerShell 模块。 在导入模块，然后在当前会话中使用导入的命令时，命令将在远程计算机上的 **PSSession** 中隐式运行。 你可以将此策略用于管理远程计算机。
+隐式远程处理可用于管理启用了 PowerShell 远程处理的远程计算机。
+在远程计算机上创建 **PSSession** ，然后使用的 **pssession** 参数 `Get-Module` 获取远程会话中的 PowerShell 模块。 从远程会话导入模块时，导入的命令将在远程计算机上的会话中运行。
 
 你可以使用类似的策略来管理未启用 PowerShell 远程处理的计算机。
 其中包括未运行 Windows 操作系统的计算机，以及安装了 PowerShell 但未启用 PowerShell 远程处理的计算机。
@@ -166,7 +164,7 @@ Version
 
 可以使用属性来对模块对象进行格式设置和筛选。 有关属性的详细信息，请参阅 [PSModuleInfo properties](/dotnet/api/system.management.automation.psmoduleinfo)。
 
-输出包含 Windows PowerShell 3.0 中引入的新属性（如 **Author** 和 **公司名称** ）。
+输出包含 Windows PowerShell 3.0 中引入的新属性（如 **Author** 和 **公司名称**）。
 
 ### 示例6：按名称对所有模块分组
 
@@ -455,8 +453,8 @@ Accept wildcard characters: True
 
 此参数的可接受值为：
 
-- 桌面
-- 核心版
+- 桌面型
+- 核心
 
 Get-Module cmdlet 检查 **PSModuleInfo** 对象的 **CompatiblePSEditions** 属性中是否存在指定的值，并仅返回已设置了该属性的模块。
 
@@ -479,7 +477,7 @@ Accept wildcard characters: False
 
 ### -PSSession
 
-获取 ( **PSSession** ) 的指定用户管理的 PowerShell 会话中的模块。 输入包含会话的变量、获取会话的命令（如 `Get-PSSession` 命令）或创建会话的命令（如 `New-PSSession` 命令）。
+获取 (**PSSession**) 的指定用户管理的 PowerShell 会话中的模块。 输入包含会话的变量、获取会话的命令（如 `Get-PSSession` 命令）或创建会话的命令（如 `New-PSSession` 命令）。
 
 如果会话连接到远程计算机，则必须指定 **ListAvailable** 参数。
 
@@ -505,7 +503,7 @@ Accept wildcard characters: False
 
 此参数旨在用于开发和测试方案，在这些方案中，模块的内容自会话启动后已发生更改。
 
-在命令中指定 **Refresh** 参数时，必须指定 **ListAvailable** 。
+在命令中指定 **Refresh** 参数时，必须指定 **ListAvailable**。
 
 已在 Windows PowerShell 3.0 中引入了此参数。
 
@@ -562,24 +560,25 @@ Accept wildcard characters: False
 
 ## 注释
 
-- 从 Windows PowerShell 3.0 开始，PowerShell 中包含的核心命令打包在模块中。 异常是 Add-pssnapin **，它是一个** 管理单元， ( **PSSnapin** ) 。 默认情况下，仅将 **Microsoft.PowerShell.Core** 管理单元添加到会话中。
-首次使用时自动导入模块，你可以使用 `Import-Module` cmdlet 将其导入。
-- 从 Windows PowerShell 3.0 开始，随 PowerShell 一起安装的核心命令打包在模块中。 在 Windows PowerShell 2.0 和在 PowerShell 的更高版本中创建旧样式会话的主机程序中，核心命令打包在 ( **PSSnapins** ) 的管理单元中。 **Microsoft.PowerShell.Core** 是例外情况，它始终是一个管理单元。 远程会话（如 cmdlet 启动的会话） `New-PSSession` 是包含核心管理单元的旧样式会话。
+- 从 Windows PowerShell 3.0 开始，PowerShell 中包含的核心命令打包在模块中。 异常是 Add-pssnapin **，它是一个** 管理单元， () 。 默认情况下，仅将 **Microsoft.PowerShell.Core** 管理单元添加到会话中。 首次使用时自动导入模块，你可以使用 `Import-Module` cmdlet 将其导入。
+
+- 在 Windows PowerShell 2.0 和在 PowerShell 的更高版本中创建旧样式会话的主机程序中，核心命令打包在 (**PSSnapins**) 的管理单元中。 **Microsoft.PowerShell.Core** 是例外情况，它始终是一个管理单元。 远程会话（如 cmdlet 启动的会话） `New-PSSession` 是包含核心管理单元的旧样式会话。
 
   有关 **CreateDefault2** 方法的详细信息，请参阅 [CreateDefault2 方法](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2)。
 
-- `Get-Module` 仅在存储在 **PSModulePath** 环境变量的值中的位置获取模块 ($Env:P smodulepath) 。 您可以使用该 cmdlet 的 **Path** 参数将 `Import-Module` 模块导入其他位置，但不能使用 `Get-Module` cmdlet 来获取它们。
-- 此外，从 PowerShell 3.0 开始，新的属性已添加到返回的对象，以便在 `Get-Module` 导入模块之前更容易了解模块。 导入之前会填充所有属性。 其中包括列出模块导出的命令的 **ExportedCommands** 、 **ExportedCmdlets** 和 **ExportedFunctions** 属性。
+- `Get-Module` 仅在存储在 **PSModulePath** 环境变量的值中的位置获取模块 ($Env:P smodulepath) 。 `Import-Module`Cmdlet 可以将模块导入其他位置，但不能使用 `Get-Module` cmdlet 来获取它们。
+
+- 此外，从 PowerShell 3.0 开始，新的属性已添加到返回的对象，以便在 `Get-Module` 导入模块之前更容易了解模块。 导入之前会填充所有属性。 其中包括列出模块导出的命令的 **ExportedCommands**、 **ExportedCmdlets** 和 **ExportedFunctions** 属性。
+
 - **ListAvailable** 参数仅获取格式正确的模块，即包含至少一个文件（其基名称与模块文件夹的名称相同）的文件夹。 基名称是不带文件扩展名的名称。 如果文件夹包含具有不同名称的文件，则这些文件夹将被视为容器，而不是模块。
 
-  若要获取作为 .dll 文件实现但未包含在模块文件夹中的模块，请同时指定 **ListAvailable** 和 **All** 参数。
+  若要获取作为 DLL 文件实现但未包含在模块文件夹中的模块，请同时指定 **ListAvailable** 和 **All** 参数。
 
 - 若要使用 CIM 会话功能，远程计算机必须具有 WS-Management 远程处理和 Windows Management Instrumentation (WMI)，后者是通用信息模型 (CIM) 标准的 Microsoft 实现。 计算机必须还具有模块发现 WMI 提供程序或具有相同基本功能的备用 WMI 提供程序。
 
   你可以在未运行 Windows 操作系统的计算机和具有 PowerShell 但未启用 PowerShell 远程处理的 Windows 计算机上使用 CIM 会话功能。
 
-  你还可以使用 CIM 参数从启用了 PowerShell 远程处理的计算机中获取 CIM 模块。 这包括本地计算机。
-在本地计算机上创建 CIM 会话时，PowerShell 将使用 DCOM 而不是 WMI 来创建会话。
+  你还可以使用 CIM 参数从启用了 PowerShell 远程处理的计算机中获取 CIM 模块。 这包括本地计算机。 在本地计算机上创建 CIM 会话时，PowerShell 将使用 DCOM 而不是 WMI 来创建会话。
 
 ## 相关链接
 

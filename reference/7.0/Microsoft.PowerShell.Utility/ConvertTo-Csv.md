@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 1/7/2019
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: 858ae1098d271d28fd9b758855f0952a6307eb95
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9638577ef63a6f5d81fa1f84aee355c080ab6538
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197197"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913370"
 ---
 # ConvertTo-Csv
 
@@ -35,7 +34,7 @@ ConvertTo-Csv [-InputObject] <PSObject> [-UseCulture] [-IncludeTypeInformation] 
  [-QuoteFields <String[]>] [-UseQuotes <QuoteKind>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `ConvertTo-CSV`Cmdlet 将返回一系列逗号分隔值 (CSV) 字符串，这些字符串表示你提交的对象。 然后，可以使用 `ConvertFrom-Csv` cmdlet 从 CSV 字符串重新创建对象。 从 CSV 转换的对象是包含属性值和没有方法的原始对象的字符串值。
 
@@ -139,7 +138,7 @@ Accept wildcard characters: False
 
 ### -IncludeTypeInformation
 
-使用此参数时，输出的第一行将包含 **#TYPE** 后跟对象类型的完全限定名称。 例如， **#TYPE** "。
+使用此参数时，输出的第一行将包含 **#TYPE** 后跟对象类型的完全限定名称。 例如， **#TYPE**"。
 
 此参数是在 PowerShell 6.0 中引入的。
 
@@ -205,7 +204,7 @@ Accept wildcard characters: False
 
 ### -QuoteFields
 
-指定应括起来的列的名称。 如果使用此参数，则仅将指定的列括起来。
+指定应括起来的列的名称。 如果使用此参数，则仅将指定的列括起来。 此参数是在 PowerShell 7.0 中添加的。
 
 ```yaml
 Type: System.String[]
@@ -221,11 +220,13 @@ Accept wildcard characters: False
 
 ### -UseQuotes
 
-指定在 CSV 文件中使用引号的时间。 可能的值包括：
+指定在 CSV 文件中使用引号的时间。 可能的值为：
 
 - 从不-不引用任何内容
 - 始终将所有内容都括 (默认行为) 
 - AsNeeded-仅包含分隔符字符的引号字段
+
+此参数是在 PowerShell 7.0 中添加的。
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -261,7 +262,7 @@ CSV 输出将作为字符串集合返回。
 
 CSV 字符串的输出如下所示：
 
-- 如果使用了 **IncludeTypeInformation** ，则第一个字符串将包含 **#TYPE** 后跟对象类型的完全限定名称。 例如， **#TYPE** "。
+- 如果使用了 **IncludeTypeInformation** ，则第一个字符串将包含 **#TYPE** 后跟对象类型的完全限定名称。 例如， **#TYPE**"。
 - 如果未使用 **IncludeTypeInformation** ，则第一个字符串包括列标题。 标头以逗号分隔的列表的形式包含第一个对象的属性名称。
 - 其余字符串包含每个对象的属性值的逗号分隔列表。
 
@@ -273,6 +274,6 @@ CSV 字符串的输出如下所示：
 
 [ConvertFrom-Csv](ConvertFrom-Csv.md)
 
-[Export-Csv](Export-Csv.md)
+[导出-Csv](Export-Csv.md)
 
 [Import-Csv](Import-Csv.md)

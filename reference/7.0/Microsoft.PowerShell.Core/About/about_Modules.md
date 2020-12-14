@@ -1,17 +1,16 @@
 ---
 description: 介绍如何安装、导入和使用 PowerShell 模块。
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 09/15/2020
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Modules
-ms.openlocfilehash: 79fdfe018539f804933cad2354e11e45f89f724e
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: ab4e9658ed4820c3ae84ac1cd9a55b59cc8017ab
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93200171"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564473"
 ---
 # <a name="about-modules"></a>关于模块
 
@@ -20,7 +19,7 @@ ms.locfileid: "93200171"
 
 ## <a name="long-description"></a>详细说明
 
-模块是一个包，其中包含 PowerShell 命令，例如 cmdlet、提供程序、函数、工作流、变量和别名。
+模块是一个包，其中包含 PowerShell 成员，例如 cmdlet、提供程序、函数、工作流、变量和别名。
 
 编写命令的人可以使用模块来组织其命令并与他人共享。 接收模块的人可以将模块中的命令添加到其 PowerShell 会话，并像使用内置命令一样使用它们。
 
@@ -28,13 +27,13 @@ ms.locfileid: "93200171"
 
 ## <a name="what-is-a-module"></a>什么是模块？
 
-模块是一个命令包。 会话中的所有 cmdlet 和提供程序均由模块或管理单元添加。
+模块是一个包，其中包含 PowerShell 成员，例如 cmdlet、提供程序、函数、工作流、变量和别名。 此包的成员可以在 PowerShell 脚本、已编译的 DLL 或二者的组合中实现。 这些文件通常在单个目录中组合在一起。 有关详细信息，请参阅 SDK 文档中的 [了解 Windows PowerShell 模块](/powershell/scripting/developer/module/understanding-a-windows-powershell-module) 。
 
 ## <a name="module-auto-loading"></a>模块自动加载
 
 从 PowerShell 3.0 开始，在已安装的模块中首次运行任何命令时，PowerShell 会自动导入模块。 现在，你可以在没有任何设置或配置文件配置的情况下使用模块中的命令，因此在计算机上安装模块后，无需再对其进行管理。
 
-模块中的命令也更易于查找。 该 `Get-Command` cmdlet 现在获取所有已安装模块中的所有命令，即使它们尚未包含在会话中，你也可以在不导入的情况下找到并使用该命令。
+模块中的命令也更易于查找。 该 `Get-Command` cmdlet 现在获取所有已安装模块中的所有命令，即使它们尚未处于会话中也是如此。 你可以找到命令并使用它，而无需首先导入模块。
 
 下面的每个示例都将使包含的 CimCmdlets 模块 `Get-CimInstance` 导入到会话中。
 
@@ -307,7 +306,7 @@ $Env:PSModulePath += ":/usr/local/Fabrikam/Modules"
 
 若要防止名称冲突，请使用 cmdlet 的 **NoClobber** 或 **Prefix** 参数 `Import-Module` 。 **Prefix** 参数将前缀添加到已导入命令的名称，以便它们在会话中是唯一的。 **NoClobber** 参数不会导入任何将隐藏或替换会话中的现有命令的命令。
 
-你还可以使用的 **Alias** 、 **Cmdlet** 、 **Function** 和 **Variable** 参数 `Import-Module` 来仅选择要导入的命令，并且可以排除在会话中引起名称冲突的命令。
+你还可以使用的 **Alias**、 **Cmdlet**、 **Function** 和 **Variable** 参数 `Import-Module` 来仅选择要导入的命令，并且可以排除在会话中引起名称冲突的命令。
 
 模块作者可以通过使用模块清单的 **DefaultCommandPrefix** 属性来将默认前缀添加到所有命令名称，从而防止名称冲突。
 **Prefix** 参数的值优先于 **DefaultCommandPrefix** 的值。

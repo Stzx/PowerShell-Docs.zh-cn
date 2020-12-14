@@ -1,17 +1,17 @@
 ---
-external help file: ThreadJob.dll-Help.xml
+external help file: Microsoft.PowerShell.ThreadJob.dll-Help.xml
 Locale: en-US
 Module Name: ThreadJob
-ms.date: 01/28/2020
+ms.date: 12/05/2020
 online version: https://docs.microsoft.com/powershell/module/threadjob/start-threadjob?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ThreadJob
-ms.openlocfilehash: 9ac0570a5e26de47438a48817785836348de19cd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bced2b87c3843833414ebfd189d003e83af9718f
+ms.sourcegitcommit: f9d855dd73b916559a22e337672dea3fbb11c634
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197583"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96777741"
 ---
 # Start-ThreadJob
 
@@ -24,17 +24,19 @@ ms.locfileid: "93197583"
 
 ```
 Start-ThreadJob [-ScriptBlock] <ScriptBlock> [-Name <String>] [-InitializationScript <ScriptBlock>]
- [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>]
+ [-StreamingHost <PSHost>] [<CommonParameters>]
 ```
 
 ### 文件路径
 
 ```
 Start-ThreadJob [-FilePath] <String> [-Name <String>] [-InitializationScript <ScriptBlock>]
- [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>]
+ [-StreamingHost <PSHost>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Start-ThreadJob` 创建类似于 cmdlet 的后台作业 `Start-Job` 。 主要区别在于，创建的作业在本地进程中的单独线程中运行。 默认情况下，作业使用启动了作业的调用方的当前工作目录。
 
@@ -105,6 +107,29 @@ $j | Wait-Job | Receive-Job
      94   145.80     159.02      18.31   18276   1 pwsh
     101   163.30     222.05      29.00   35928   1 pwsh
 ```
+
+### 示例 4-将作业输出流到父主机
+
+使用 **StreamingHost** 参数可以将所有主机输出定向到特定主机。 如果没有此参数，输出将转到作业数据流集合，而不会在主机控制台中显示，直到收到作业的输出。
+
+在此示例中，当前主机 `Start-ThreadJob` 使用自动变量传递给 `$Host` 。
+
+```powershell
+PS> Start-ThreadJob -ScriptBlock { Read-Host 'Say hello'; Write-Warning 'Warning output' } -StreamingHost $Host
+
+Id   Name   PSJobTypeName   State         HasMoreData     Location      Command
+--   ----   -------------   -----         -----------     --------      -------
+7    Job7   ThreadJob       NotStarted    False           PowerShell    Read-Host 'Say hello'; �
+
+PS> Say hello: Hello
+WARNING: Warning output
+PS> Receive-Job -Id 7
+Hello
+WARNING: Warning output
+PS>
+```
+
+请注意， `Read-Host` 会显示的提示，并且您可以键入 input。 然后，将显示来自的消息 `Write-Warning` 。 该 `Receive-Job` cmdlet 将返回作业的所有输出。
 
 ## PARAMETERS
 
@@ -267,4 +292,3 @@ Accept wildcard characters: False
 [Stop-Job](../Microsoft.PowerShell.Core/Stop-Job.md)
 
 [Receive-Job](../Microsoft.PowerShell.Core/Receive-Job.md)
-

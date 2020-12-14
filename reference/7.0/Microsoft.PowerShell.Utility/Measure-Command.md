@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 01/24/2020
+ms.date: 12/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/measure-command?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Measure-Command
-ms.openlocfilehash: 970c72d5661796c25d6beb30eb08b6cd7032ceb1
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: a7aed986ccd94472fe2dc89a43cc6b4d054494ca
+ms.sourcegitcommit: 165d10405d9db3a68c417a239d3181378fd02b9b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93197226"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96935912"
 ---
 # Measure-Command
 
@@ -25,7 +25,7 @@ ms.locfileid: "93197226"
 Measure-Command [-InputObject <PSObject>] [-Expression] <ScriptBlock> [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 该 `Measure-Command` cmdlet 在内部运行脚本块或 cmdlet，执行操作的时间，并返回执行时间。
 

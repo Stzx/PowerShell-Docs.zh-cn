@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Csv
-ms.openlocfilehash: 5a76f8ec454ad8144f193d8927f913b89a429fec
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 17c3ef3046ba8f0cca9a85cf41aaf683212a58e9
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197940"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913335"
 ---
 # Export-Csv
 
@@ -37,7 +36,7 @@ Export-Csv [[-Path] <string>] -InputObject <psobject> [-LiteralPath <string>] [-
  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Export-CSV`Cmdlet 可创建你提交的对象的 CSV 文件。 每个对象都是一个行，其中包含以逗号分隔的对象属性值列表。 可以使用 `Export-CSV` cmdlet 创建电子表格并与接受 CSV 文件作为输入的程序共享数据。
 
@@ -313,7 +312,7 @@ Accept wildcard characters: False
 
 ### -Encoding
 
-指定目标文件的编码类型。 默认值是 `ASCII`。
+指定目标文件的编码类型。 默认值为 `ASCII`。
 
 此参数可接受的值如下所示：
 
@@ -375,7 +374,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 
-指定指向 CSV 输出文件的路径。 与 **Path** 不同， **LiteralPath** 参数的值严格按照所键入的形式使用。 不会将任何字符解释为通配符。 如果路径包含转义符，请使用单引号。 单引号指示 PowerShell 不要将任何字符解释为转义序列。
+指定指向 CSV 输出文件的路径。 与 **Path** 不同，**LiteralPath** 参数的值严格按照所键入的形式使用。 不会将任何字符解释为通配符。 如果路径包含转义符，请使用单引号。 单引号指示 PowerShell 不要将任何字符解释为转义序列。
 
 ```yaml
 Type: System.String
@@ -509,7 +508,7 @@ CSV 列表将发送到 Path 参数中指定的文件。
 
 CSV 字符串的输出如下所示：
 
-- 默认情况下，第一个字符串包含后跟对象类型的完全限定名称的 **#TYPE** 信息标头。 例如， **#TYPE** "。
+- 默认情况下，第一个字符串包含后跟对象类型的完全限定名称的 **#TYPE** 信息标头。 例如， **#TYPE**"。
 - 如果使用 **NoTypeInformation** ，则第一个字符串包括列标题。 标头以逗号分隔的列表的形式包含第一个对象的属性名称。
 - 其余字符串包含每个对象的属性值的逗号分隔列表。
 

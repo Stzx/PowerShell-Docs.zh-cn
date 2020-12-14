@@ -1,18 +1,17 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/08/2020
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/import-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-Module
-ms.openlocfilehash: 70453f50e727f89012a3e2077557bff7a81ff000
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d041d63c7af185e62a902ebaa362809cddfb4659
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198851"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564572"
 ---
 # Import-Module
 
@@ -107,20 +106,20 @@ Import-Module [-Global] [-Prefix <String>] [-Function <String[]>] [-Cmdlet <Stri
  [-NoClobber] [-Scope <String>]  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 `Import-Module`Cmdlet 可将一个或多个模块添加到当前会话中。 从 PowerShell 3.0 开始，当你使用模块中的任何命令或提供程序时，已安装的模块将自动导入到会话中。 但是，您仍然可以使用 `Import-Module` 命令导入模块。
 您可以使用首选项变量来禁用自动模块导入 `$PSModuleAutoloadingPreference` 。 有关变量的详细信息 `$PSModuleAutoloadingPreference` ，请参阅 [about_Preference_Variables](About/about_Preference_Variables.md)。
 
 模块是一个包，其中包含可在 PowerShell 中使用的成员。 成员包括 cmdlet、提供程序、脚本、函数、变量和其他工具和文件。 导入模块后，你可以在会话中使用模块成员。 有关模块的详细信息，请参阅 [about_Modules](About/about_Modules.md)。
 
-默认情况下， `Import-Module` 导入模块导出的所有成员，但是可以使用 **Alias** 、 **Function** 、 **Cmdlet** 和 **Variable** 参数来限制导入的成员。 **NoClobber** 参数阻止 `Import-Module` 导入与当前会话中的成员具有相同名称的成员。
+默认情况下， `Import-Module` 导入模块导出的所有成员，但是可以使用 **Alias**、 **Function**、 **Cmdlet** 和 **Variable** 参数来限制导入的成员。 **NoClobber** 参数阻止 `Import-Module` 导入与当前会话中的成员具有相同名称的成员。
 
 `Import-Module` 仅将模块导入到当前会话中。 若要将模块导入到每个新会话中，请将 `Import-Module` 命令添加到 PowerShell 配置文件。 有关配置文件的详细信息，请参阅 [about_Profiles](About/about_Profiles.md)。
 
-你可以通过在远程计算机上创建 **PSSession** 来管理启用了 PowerShell 远程处理的远程 Windows 计算机。 然后，使用的 **PSSession** 参数 `Import-Module` 导入远程计算机上安装的模块。 你现在可以在当前会话中使用导入的命令。 命令在远程计算机上隐式运行。
+你可以通过在远程计算机上创建 **PSSession** 来管理启用了 PowerShell 远程处理的远程 Windows 计算机。 然后，使用的 **PSSession** 参数 `Import-Module` 导入远程计算机上安装的模块。 在当前会话中使用导入的命令时，命令将在远程计算机上隐式运行。
 
-从 Windows PowerShell 3.0 开始，你可以使用 `Import-Module` 导入通用信息模型 (CIM) 模块，其中 cmdlet 在 Cmdlet 定义 XML (CDXML) 文件中定义。 此功能允许你使用在非托管代码程序集（例如采用 C++ 编写的程序集）中实现的 cmdlet。
+从 Windows PowerShell 3.0 开始，你可以使用 `Import-Module` 导入通用信息模型 (CIM) 模块。 CIM 模块在 Cmdlet 定义 XML (CDXML) 文件中定义 cmdlet。 此功能允许你使用在非托管代码程序集中实现的 cmdlet，如用 c + + 编写的程序集。
 
 对于未启用 PowerShell 远程处理的远程计算机，包括未运行 Windows 操作系统的计算机，可以使用的 **CIMSession** 参数 `Import-Module` 从远程计算机导入 CIM 模块。 导入的命令将在远程计算机上隐式运行。 **CIMSession** 是与远程计算机上的 WMI) Windows Management Instrumentation (的连接。
 
@@ -172,11 +171,11 @@ VERBOSE: Exporting function 'Get-SpecDetails'.
 ```
 
 使用 **Verbose** 参数会导致在 `Import-Module` 加载模块时报告进度。
-在导入模块时，如果没有 **Verbose** 、 **PassThru** 或 **AsCustomObject** 参数， `Import-Module` 则不会生成任何输出。
+在导入模块时，如果没有 **Verbose**、 **PassThru** 或 **AsCustomObject** 参数， `Import-Module` 则不会生成任何输出。
 
 ### 示例5：限制导入到会话中的模块成员
 
-此示例显示了如何限制导入到会话中的模块成员以及此命令对会话的影响。 **函数** 参数限制从模块导入的成员。 你还可以使用 **别名** 、 **变量** 和 **Cmdlet** 参数来限制模块导入的其他成员。
+此示例显示了如何限制导入到会话中的模块成员以及此命令对会话的影响。 **函数** 参数限制从模块导入的成员。 你还可以使用 **别名**、 **变量** 和 **Cmdlet** 参数来限制模块导入的其他成员。
 
 `Get-Module`Cmdlet 可获取表示 **PSDiagnostics** 模块的对象。 **ExportedCmdlets** 属性列出模块导出的所有 cmdlet，即使它们并非全部导入。
 
@@ -250,7 +249,7 @@ Function        Stop-xTrace                            6.1.0.0    PSDiagnostics
 
 ### 示例7：获取并使用自定义对象
 
-此示例演示如何获取和使用 **import-module** 返回的自定义对象。
+此示例演示如何获取和使用由返回的自定义对象 `Import-Module` 。
 
 自定义对象包括表示每个导入的模块成员的合成成员。 例如，模块中的 cmdlet 和函数将转换为自定义对象的脚本方法。
 
@@ -292,15 +291,15 @@ Show-Calendar ScriptMethod System.Object Show-Calendar();
 $a."Show-Calendar"()
 ```
 
-使用 **AsCustomObject** 参数导入 **显示日历** 脚本模块以请求自定义对象，使用 **PassThru** 参数返回对象。 生成的自定义对象保存在 `$a` 变量中。
+`Show-Calendar`脚本模块是使用 **AsCustomObject** 参数导入的，用来请求自定义对象，使用 **PassThru** 参数来返回对象。 生成的自定义对象保存在 `$a` 变量中。
 
-将 `$a` 变量传递给 cmdlet 以 `Get-Member` 显示已保存对象的属性和方法。 输出显示了一个 **显示日历** 脚本方法。
+将 `$a` 变量传递给 cmdlet 以 `Get-Member` 显示已保存对象的属性和方法。 输出显示 `Show-Calendar` 脚本方法。
 
-若要调用 **显示日历** 脚本方法，方法名称必须用引号引起来，因为该名称包含连字符。
+若要调用该 `Show-Calendar` 脚本方法，方法名称必须用引号引起来，因为该名称包含连字符。
 
 ### 示例8：将模块导入同一会话
 
-此示例演示如何在将 **Force** `Import-Module` 模块重新导入到同一会话中时使用 Force 参数。 **Force** 参数将删除已加载的模块，然后再次导入它。
+此示例演示如何在将 `Import-Module` 模块重新导入到同一会话中时使用 Force 参数。 **Force** 参数将删除已加载的模块，然后再次导入它。
 
 ```powershell
 Import-Module PSDiagnostics
@@ -455,7 +454,7 @@ Windows Remote Management (HTTP-In)                      WINRM-HTTP-In-TCP-PUBLI
 Windows Remote Management - Compatibility Mode (HTTP-In) WINRM-HTTP-Compat-In-TCP
 ```
 
-`New-PSSession` ( **PSSession** ) 创建到 Server01 计算机的远程会话。 **PSSession** 保存在 `$s` 变量中。
+`New-PSSession` (**PSSession**) 创建到 Server01 计算机的远程会话。 **PSSession** 保存在 `$s` 变量中。
 
 `Get-Module`使用 **PSSession** 参数运行时，将显示 **NetSecurity** 模块已安装并在远程计算机上可用。 此命令等效于使用 `Invoke-Command` cmdlet `Get-Module` 在远程会话中运行命令。 例如： (`Invoke-Command $s {Get-Module -ListAvailable -Name NetSecurity`
 
@@ -468,7 +467,7 @@ Windows Remote Management - Compatibility Mode (HTTP-In) WINRM-HTTP-Compat-In-TC
 在此示例中，计算机的管理员已安装模块发现 WMI 提供程序，该提供程序允许你使用为提供程序设计的 CIM 命令。
 
 `New-CimSession`Cmdlet 在远程计算机上创建一个名为 RSDGF03 的会话。 会话连接到远程计算机上的 WMI 服务。 CIM 会话保存在 `$cs` 变量中。
-`Import-Module`使用中 **CimSession** 的 CIMSESSION `$cs` 从 RSDGF03 计算机中导入 **存储** CIM 模块。
+`Import-Module`使用中的 CIMSESSION `$cs` 从 RSDGF03 计算机中导入 **存储** CIM 模块。
 
 `Get-Command`Cmdlet 将 `Get-Disk` 在 **存储** 模块中显示该命令。 将 CIM 模块导入到本地会话中时，PowerShell 会将每个命令的 CDXML 文件转换为 PowerShell 脚本，这些脚本在本地会话中显示为函数。
 
@@ -779,7 +778,7 @@ Accept wildcard characters: False
 
 ### -MinimumVersion
 
-指定最低版本。 此 cmdlet 仅导入大于或等于指定值的模块版本。 使用 **MinimumVersion** 参数名或它的别名 **Version** 。 如果没有合格的版本， `Import-Module` 将生成错误。
+指定最低版本。 此 cmdlet 仅导入大于或等于指定值的模块版本。 使用 **MinimumVersion** 参数名或它的别名 **Version**。 如果没有合格的版本， `Import-Module` 将生成错误。
 
 若要指定确切的版本，请使用 **RequiredVersion** 参数。 你还可以使用 **#Requires** 关键字的 **module** 和 **Version** 参数来要求在脚本中使用特定版本的模块。
 
@@ -820,6 +819,9 @@ Accept wildcard characters: False
 如果省略路径，则会 `Import-Module` 在环境变量中保存的路径中查找模块 `$env:PSModulePath` 。
 
 在可能的情况下，仅指定模块名称。 指定文件名时，将仅导入在该文件中实现的成员。 如果模块包含其他文件，则不会导入它们，并且你可能会丢失模块的重要成员。
+
+> [!NOTE]
+> 尽管可以导入脚本 (`.ps1`) 文件作为模块，但脚本文件通常不像脚本模块文件 () 文件中那样进行结构化 `.psm1` 。 导入脚本文件并不能保证它可用作模块。 有关详细信息，请参阅 [about_Modules](about/about_Modules.md)。
 
 ```yaml
 Type: System.String[]
@@ -893,7 +895,7 @@ Accept wildcard characters: False
 
 ### -PSSession
 
-指定 ( **PSSession** ) 的 PowerShell 用户管理的会话，此 cmdlet 从中将模块导入到当前会话中。 输入包含 **pssession** 的变量或获取 **pssession** 的命令（如 `Get-PSSession` 命令）。
+指定 (**PSSession**) 的 PowerShell 用户管理的会话，此 cmdlet 从中将模块导入到当前会话中。 输入包含 **pssession** 的变量或获取 **pssession** 的命令（如 `Get-PSSession` 命令）。
 
 将其他会话中的模块导入当前会话中时，你可以在当前会话中使用来自模块的 cmdlet，就像你使用来自本地模块的 cmdlet 一样。 使用远程 cmdlet 的命令在远程会话中运行，但是远程处理详细信息由 PowerShell 在后台进行管理。
 
@@ -945,14 +947,14 @@ Accept wildcard characters: False
 
 此参数的可接受值为：
 
-- **全局** 。 可供会话中所有的命令使用。 等效于 **Global** 参数。
-- **Local** 。 仅在当前作用域中可用。
+- **全局**。 可供会话中所有的命令使用。 等效于 **Global** 参数。
+- **Local**。 仅在当前作用域中可用。
 
-默认情况下，当 `Import-Module` 从命令提示符、脚本文件或 scriptblock 调用 cmdlet 时，所有命令都将导入全局会话状态。 你可以将 **-Scope** 参数与 **Local** 值一起使用，以将模块内容导入到脚本或 scriptblock 范围。
+默认情况下，当 `Import-Module` 从命令提示符、脚本文件或 scriptblock 调用 cmdlet 时，所有命令都将导入全局会话状态。 可以使用参数将 `-Scope Local` 模块内容导入到脚本或 scriptblock 范围。
 
 从另一个模块调用时，cmdlet 会将 `Import-Module` 模块中的命令（包括来自嵌套模块的命令）导入到调用方的会话状态中。 指定 `-Scope Global` 或 `-Global` 指示此 cmdlet 将模块导入全局会话状态，以便它们可用于会话中的所有命令。
 
-**Global** 参数等效于值为 Global 的 **作用域** 参数。
+**Global** 参数等效于值为 **Global** 的 **Scope** 参数。
 
 已在 Windows PowerShell 3.0 中引入了此参数。
 
@@ -1056,19 +1058,17 @@ Accept wildcard characters: False
 
 - 若要更新已从模块导入的命令的格式设置数据，请使用 `Update-FormatData` cmdlet。 `Update-FormatData` 还会更新会话中从模块导入的命令的格式设置数据。 如果模块的格式化文件发生更改，则可以运行 `Update-FormatData` 命令来更新导入命令的格式设置数据。 不需要再次导入该模块。
 
-- 从 Windows PowerShell 3.0 开始，随 PowerShell 一起安装的核心命令打包在模块中。 在 Windows PowerShell 2.0 和在 PowerShell 的更高版本中创建旧样式会话的主机程序中，核心命令打包在 ( **PSSnapins** ) 的管理单元中。 **Microsoft.PowerShell.Core** 是例外情况，它始终是一个管理单元。 远程会话（如 cmdlet 启动的会话） `New-PSSession` 是包含核心管理单元的旧样式会话。
+- 从 Windows PowerShell 3.0 开始，随 PowerShell 一起安装的核心命令打包在模块中。 在 Windows PowerShell 2.0 和在 PowerShell 的更高版本中创建旧样式会话的主机程序中，核心命令打包在 (**PSSnapins**) 的管理单元中。 **Microsoft.PowerShell.Core** 是例外情况，它始终是一个管理单元。 远程会话（如 cmdlet 启动的会话） `New-PSSession` 是包含核心管理单元的旧样式会话。
 
   有关 **CreateDefault2** 方法的信息，该方法可创建带有核心模块的更新样式的会话，请参阅 [CreateDefault2 方法](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2)。
 
-- `Import-Module` 无法从另一个会话导入 PowerShell Core 模块。 PowerShell Core 模块的名称以开头 `Microsoft.PowerShell` 。
+- 在 Windows PowerShell 2.0 中，在导入模块之前，不会填充 module 对象的某些属性值，例如 **ExportedCmdlets** 和 **NestedModules** 属性值。
 
-- 在 Windows PowerShell 2.0 中，在导入模块之前，不会填充 module 对象的某些属性值（如 **ExportedCmdlets** 和 **NestedModules** 属性值），并且该模块在 **PassThru** 参数返回的 module 对象上不可用。 在 Windows PowerShell 3.0 中，将填充所有模块属性值。
-
-- 如果尝试导入的模块包含与 Windows PowerShell 3.0 不兼容的混合模式程序集，将 `Import-Module` 返回如下错误消息。
+- 如果尝试导入的模块包含与 Windows PowerShell 3.0 + 不兼容的混合模式程序集，将 `Import-Module` 返回如下错误消息。
 
   > Import-Module：混合模式程序集是根据运行时的版本 "2.0.50727" 生成的，无法在4.0 运行时中加载，无需其他配置信息。
 
-  如果为 Windows PowerShell 2.0 设计的模块包含至少一个混合模块程序集，即包含托管和非托管代码的程序集（如 c + + 和 c #），则会发生此错误。
+  如果为 Windows PowerShell 2.0 设计的模块至少包含一个混合模块程序集，则会出现此错误。 混合模块程序集，其中包括托管和非托管代码，例如 c + + 和 c #。
 
   若要导入包含混合模式程序集的模块，请使用以下命令启动 Windows PowerShell 2.0，然后重试该 `Import-Module` 命令。
 
@@ -1087,9 +1087,11 @@ Accept wildcard characters: False
   > [!NOTE]
   > `Get-Module` 显示当前会话中加载的所有模块。 这包括在后代范围本地加载的模块。 使用 `Get-Command -Module modulename` 查看当前范围中加载的成员。
 
-  如果模块包括类和枚举定义，请 `using module` 在脚本的开头使用。 这会导入脚本，包括类和枚举定义。 有关详细信息，请参阅 [about_Using](About/about_Using.md)。
+  `Import-Module` 不加载模块中的类和枚举定义。 使用 `using module` 脚本开头的语句。 这会导入模块，包括类和枚举定义。 有关详细信息，请参阅 [about_Using](About/about_Using.md)。
 
 ## 相关链接
+
+[about_Modules](about/about_Modules.md)
 
 [Export-ModuleMember](Export-ModuleMember.md)
 
@@ -1100,4 +1102,3 @@ Accept wildcard characters: False
 [Remove-Module](Remove-Module.md)
 
 [about_PowerShell_Editions](About/about_PowerShell_Editions.md)
-

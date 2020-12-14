@@ -1,17 +1,16 @@
 ---
 description: 描述在 PowerShell 中比较值的运算符。
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 01/16/2020
+ms.date: 12/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: fe00608edd4cbada275112cb3ce7c20b34f5c5c6
-ms.sourcegitcommit: c9e56ec489522c706b8d6b8733f3f015d6d7e893
+ms.openlocfilehash: ea48d5928f71983f6d035f0e5e6074ce36754d80
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "93200566"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97090505"
 ---
 # <a name="about-comparison-operators"></a>关于比较运算符
 
@@ -26,7 +25,7 @@ PowerShell 包含以下比较运算符：
 
 | 类型        | 运算符    | 说明                                 |
 | ----------- | ------------ | --------------------------------------------|
-| 等式    | -eq          | equals                                      |
+| 相等    | -eq          | equals                                      |
 |             | -ne          | 不等于                                  |
 |             | -gt          | 大于                                |
 |             | -ge          | 大于或等于                       |
@@ -80,13 +79,13 @@ System.Object[]
 > hello
 > ```
 
-### <a name="equality-operators"></a>相等运算符
+## <a name="equality-operators"></a>相等运算符
 
 相等运算符 (`-eq` ， `-ne`) 在一个或多个输入值与指定模式相同时返回值或匹配项。 整个模式必须匹配整个值。
 
 示例：
 
-#### <a name="-eq"></a>-eq
+### <a name="-eq"></a>-eq
 
 说明：等于。 包含相同的值。
 
@@ -111,7 +110,7 @@ PS> "abc", "def" -eq "abc"
 abc
 ```
 
-#### <a name="-ne"></a>-ne
+### <a name="-ne"></a>-ne
 
 说明：不等于。 包含不同的值。
 
@@ -131,7 +130,7 @@ PS> "abc", "def" -ne "abc"
 def
 ```
 
-#### <a name="-gt"></a>-gt
+### <a name="-gt"></a>-gt
 
 说明：大于。
 
@@ -148,7 +147,7 @@ PS> 7, 8, 9 -gt 8
 > [!NOTE]
 > 这不应与 `>` 其他许多编程语言中的大于运算符混淆。 在 PowerShell 中， `>` 用于重定向。 有关详细信息，请参阅 [About_redirection](about_Redirection.md#potential-confusion-with-comparison-operators)。
 
-#### <a name="-ge"></a>-ge
+### <a name="-ge"></a>-ge
 
 说明：大于或等于。
 
@@ -163,7 +162,7 @@ PS> 7, 8, 9 -ge 8
 9
 ```
 
-#### <a name="-lt"></a>-lt
+### <a name="-lt"></a>-lt
 
 说明：小于。
 
@@ -178,7 +177,7 @@ PS> 7, 8, 9 -lt 8
 7
 ```
 
-#### <a name="-le"></a>-le
+### <a name="-le"></a>-le
 
 说明：小于或等于。
 
@@ -193,7 +192,7 @@ PS> 7, 8, 9 -le 8
 8
 ```
 
-### <a name="matching-operators"></a>匹配运算符
+## <a name="matching-operators"></a>匹配运算符
 
 Like 运算符 (`-like` 和 `-notlike`) 使用通配符表达式查找匹配或与指定模式不匹配的元素。
 
@@ -215,7 +214,7 @@ Like 运算符 (`-like` 和 `-notlike`) 使用通配符表达式查找匹配或�
 <string[]> -notmatch <regular-expression>
 ```
 
-#### <a name="-like"></a>-like
+### <a name="-like"></a>-like
 
 说明：使用通配符)  (匹配 \* 。
 
@@ -229,7 +228,7 @@ PS> "PowerShell", "Server" -like "*shell"
 PowerShell
 ```
 
-#### <a name="-notlike"></a>-notlike
+### <a name="-notlike"></a>-notlike
 
 说明：使用通配符 () 不匹配 \* 。
 
@@ -259,7 +258,7 @@ PS> $Matches
 PS>
 ```
 
-与此相反，以下命令将单个字符串提交给 `-match` 运算符。 `-match`运算符返回布尔值并填充 `$Matches` 自动变量。 `$Matches`自动变量是 **哈希表** 。 如果未使用分组或捕获，则只填充一个键。
+与此相反，以下命令将单个字符串提交给 `-match` 运算符。 `-match`运算符返回布尔值并填充 `$Matches` 自动变量。 `$Matches`自动变量是 **哈希表**。 如果未使用分组或捕获，则只填充一个键。
 `0`键表示匹配的所有文本。 有关使用正则表达式进行分组和捕获的详细信息，请参阅 [about_Regular_Expressions](about_Regular_Expressions.md)。
 
 ```powershell
@@ -287,7 +286,7 @@ Name                           Value
 ```
 
 > [!IMPORTANT]
-> `0`该键是一个 **整数** 。 您可以使用任何 **哈希表** 方法来访问存储的值。
+> `0`该键是一个 **整数**。 您可以使用任何 **哈希表** 方法来访问存储的值。
 >
 > ```powershell
 > PS> "Good Dog" -match "Dog"
@@ -322,7 +321,7 @@ Name                           Value
 0                              day
 ```
 
-#### <a name="-notmatch"></a>-notmatch
+### <a name="-notmatch"></a>-notmatch
 
 说明：不匹配字符串。 使用正则表达式。 当输入是标量时，它将填充 `$Matches` 自动变量。
 
@@ -341,13 +340,13 @@ PS> "Sunday", "Monday" -notmatch "sun"
 Monday
 ```
 
-### <a name="containment-operators"></a>包含运算符
+## <a name="containment-operators"></a>包含运算符
 
 包含运算符 (`-contains` 和 `-notcontains`) 类似于相等运算符。 但是，包含运算符始终返回布尔值，即使输入是集合也是如此。
 
 另外，与相等运算符不同，包含运算符在检测到第一个匹配项后就会返回一个值。 相等运算符计算所有输入，然后返回集合中的所有匹配项。
 
-#### <a name="-contains"></a>-contains
+### <a name="-contains"></a>-contains
 
 Description：包含运算符。 指示引用值的集合是否包含一个测试值。 始终返回一个布尔值。 仅当测试值与至少一个引用值完全匹配时才返回 TRUE。
 
@@ -382,7 +381,7 @@ PS> $a, "ghi" -contains $a
 True
 ```
 
-#### <a name="-notcontains"></a>-notcontains
+### <a name="-notcontains"></a>-notcontains
 
 Description：包含运算符。 指示引用值的集合是否包含一个测试值。 始终返回一个布尔值。 如果测试值不是至少一个引用值的完全匹配项，则返回 TRUE。
 
@@ -421,7 +420,7 @@ Tee
 Where
 ```
 
-#### <a name="-in"></a>-in
+### <a name="-in"></a>-in
 
 说明： In 运算符。 指示测试值是否显示在引用值的集合中。 始终以布尔值的形式返回。 仅当测试值与至少一个引用值完全匹配时才返回 TRUE。
 
@@ -458,7 +457,7 @@ PS> $thisComputer -in  $domainServers
 True
 ```
 
-#### <a name="-notin"></a>-notin
+### <a name="-notin"></a>-notin
 
 说明：指示测试值是否显示在引用值的集合中。 始终返回一个布尔值。 如果测试值不是至少一个引用值的完全匹配项，则返回 TRUE。
 
@@ -497,51 +496,94 @@ Tee
 Where
 ```
 
-### <a name="replacement-operator"></a>替换运算符
+## <a name="replacement-operator"></a>替换运算符
 
-`-replace`使用正则表达式将运算符替换为指定值的全部或部分值。 `-replace`对于许多管理任务（如重命名文件），都可以使用运算符。 例如，以下命令将所有 .txt 文件的文件扩展名更改为 .log：
+`-replace`运算符具有以下语法：
+
+`<input> -replace <original>, <substitute>`
+
+`<original>`占位符是与要替换的字符匹配的正则表达式。 `<substitute>`占位符是替换它们的文本字符串。
+
+使用正则表达式将运算符替换为指定值的全部或部分值。 对于许多管理任务（如重命名文件），都可以使用运算符。 例如，以下命令将所有文件的文件扩展名更改 `.txt` 为 `.log` ：
 
 ```powershell
 Get-ChildItem *.txt | Rename-Item -NewName { $_.name -replace '\.txt$','.log' }
 ```
 
-运算符的语法如下所示 `-replace` ，其中 `<original>` 占位符表示要替换的字符， `<substitute>` 占位符表示将替换它们的字符：
-
-`<input> <operator> <original>, <substitute>`
+### <a name="case-sensitive-matches"></a>区分大小写的匹配
 
 默认情况下， `-replace` 运算符不区分大小写。 若要区分大小写，请使用 `-creplace` 。 若要使它显式不区分大小写，请使用 `-ireplace` 。
 
-请考虑以下示例：
+请开考虑以下示例：
 
 ```powershell
 PS> "book" -replace "B", "C"
-```
-
-```Output
 Cook
 ```
 
 ```powershell
-"book" -ireplace "B", "C"
-```
-
-```Output
+PS> "book" -ireplace "B", "C"
 Cook
 ```
 
 ```powershell
-"book" -creplace "B", "C"
-```
-
-```Output
+PS> "book" -creplace "B", "C"
 book
 ```
 
-还可以使用正则表达式，使用捕获组和替换动态替换文本。 有关详细信息，请参阅 [about_Regular_Expressions](about_Regular_Expressions.md)。
+### <a name="substitutions-in-regular-expressions"></a>正则表达式中的替换
+
+还可以使用正则表达式，使用捕获组和替换动态替换文本。 可以 `<substitute>` 使用分组标识符之前的美元符号 () 字符，在字符串中引用捕获组 `$` 。
+
+捕获组可以按 **数字** 或 **名称** 引用
+
+- 按 **编号** 捕获组按从左到右的顺序进行编号。
+
+  ```powershell
+  PS> "John D. Smith" -replace "(\w+) (\w+)\. (\w+)", '$1.$2.$3@contoso.com'
+  John.D.Smith@contoso.com
+  ```
+
+- 通过 **名称** ，也可以按名称引用捕获组。
+
+  ```powershell
+  PS> "CONTOSO\Administrator" -replace '\w+\\(?<user>\w+)', 'FABRIKAM\${user}'
+  FABRIKAM\Administrator
+  ```
+
+> [!WARNING]
+> 由于 `$` 字符是在字符串扩展中使用的，因此必须使用文本字符串或对字符进行转义 `$` 。
+>
+> ```powershell
+> PS> 'Hello World' -replace '(\w+) \w+', "`$1 Universe"
+> Hello Universe
+> ```
+>
+> 此外，由于 `$` 字符用于替换，因此必须对字符串中的任何实例进行转义。
+>
+> ```powershell
+> PS> '5.72' -replace '(.+)', '$$$1'
+> $5.72
+> ```
+
+若要了解详细信息，请参阅[正则表达式中的](/dotnet/standard/base-types/substitutions-in-regular-expressions) [about_Regular_Expressions](about_Regular_Expressions.md)和替换
+
+### <a name="substituting-in-a-collection"></a>在集合中替换
+
+如果 `<input>` 到运算符为 `-replace` 集合，则 PowerShell 会将替换应用于集合中的每个值。 例如：
+
+```powershell
+"B1","B2","B3","B4","B5" -replace "B", 'a'
+a1
+a2
+a3
+a4
+a5
+```
 
 ### <a name="scriptblock-substitutions"></a>ScriptBlock 替换
 
-从 PowerShell 6 开始，可以将 **ScriptBlock** 参数用于 *替代* 文本。 将对 *输入* 字符串中找到的每个匹配项执行 **ScriptBlock** 。
+从 PowerShell 6 开始，可以将 **ScriptBlock** 参数用于 _替代_ 文本。 将对 _输入_ 字符串中找到的每个匹配项执行 **ScriptBlock** 。
 
 在 **ScriptBlock** 内，使用 `$_` 自动变量来引用当前的 **system.text.regularexpressions** 对象。 **Match** 对象使您可以访问要替换的当前输入文本以及其他有用信息。
 
@@ -552,11 +594,11 @@ PS> "072101108108111" -replace "\d{3}", {[char][int]$_.Value}
 Hello
 ```
 
-### <a name="type-comparison"></a>类型比较
+## <a name="type-comparison"></a>类型比较
 
  (和) 的类型比较运算符 `-is` `-isnot` 用于确定对象是否为特定类型。
 
-#### <a name="-is"></a>-为
+### <a name="-is"></a>-为
 
 语法：
 
@@ -573,7 +615,7 @@ PS> $a -is $b.GetType()
 False
 ```
 
-#### <a name="-isnot"></a>-isnot
+### <a name="-isnot"></a>-isnot
 
 语法：
 
@@ -590,7 +632,7 @@ PS> $b -isnot [int]
 True
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [about_Operators](about_Operators.md)
 - [about_Regular_Expressions](about_Regular_Expressions.md)

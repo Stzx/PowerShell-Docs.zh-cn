@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 01/24/2020
+ms.date: 12/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/measure-command?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Measure-Command
-ms.openlocfilehash: f0a45a4b7360c0870cbcd0702066380df4c21b80
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4fb4553a75bf6cd5e458cc7d87c37e9a13ce0ea2
+ms.sourcegitcommit: 165d10405d9db3a68c417a239d3181378fd02b9b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197890"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96935929"
 ---
 # Measure-Command
 
@@ -25,7 +25,7 @@ ms.locfileid: "93197890"
 Measure-Command [-InputObject <PSObject>] [-Expression] <ScriptBlock> [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## 说明
 
 该 `Measure-Command` cmdlet 在内部运行脚本块或 cmdlet，执行操作的时间，并返回执行时间。
 
@@ -93,7 +93,7 @@ TotalMilliseconds : 1140.9189
 ```powershell
 # Perform a simple operation to demonstrate the InputObject parameter
 # Note that no output is displayed.
-10, 20, 50 | Measure-Command -Expression { for ($i=0; $i -lt $_ i++) {$i} }
+10, 20, 50 | Measure-Command -Expression { for ($i=0; $i -lt $_; $i++) {$i} }
 ```
 
 ```Output
