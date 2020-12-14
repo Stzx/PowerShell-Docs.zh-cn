@@ -7,21 +7,21 @@ ms.date: 05/22/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-package?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Package
-ms.openlocfilehash: 89525867f9c3377cc0129daefd3f54f2a10d5d82
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d635a1f037194380c143190e48d654e828f88bc8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197650"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890158"
 ---
-# <span data-ttu-id="05258-103">Get-Package</span><span class="sxs-lookup"><span data-stu-id="05258-103">Get-Package</span></span>
+# <span data-ttu-id="74c65-103">Get-Package</span><span class="sxs-lookup"><span data-stu-id="74c65-103">Get-Package</span></span>
 
-## <span data-ttu-id="05258-104">摘要</span><span class="sxs-lookup"><span data-stu-id="05258-104">SYNOPSIS</span></span>
-<span data-ttu-id="05258-105">返回使用 **PackageManagement** 安装的所有软件包的列表。</span><span class="sxs-lookup"><span data-stu-id="05258-105">Returns a list of all software packages that were installed with **PackageManagement** .</span></span>
+## <span data-ttu-id="74c65-104">摘要</span><span class="sxs-lookup"><span data-stu-id="74c65-104">SYNOPSIS</span></span>
+<span data-ttu-id="74c65-105">返回使用 **PackageManagement** 安装的所有软件包的列表。</span><span class="sxs-lookup"><span data-stu-id="74c65-105">Returns a list of all software packages that were installed with **PackageManagement**.</span></span>
 
-## <span data-ttu-id="05258-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="05258-106">SYNTAX</span></span>
+## <span data-ttu-id="74c65-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="74c65-106">SYNTAX</span></span>
 
-### <span data-ttu-id="05258-107">NuGet</span><span class="sxs-lookup"><span data-stu-id="05258-107">NuGet</span></span>
+### <span data-ttu-id="74c65-107">NuGet</span><span class="sxs-lookup"><span data-stu-id="74c65-107">NuGet</span></span>
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -30,7 +30,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="05258-108">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="05258-108">PowerShellGet</span></span>
+### <span data-ttu-id="74c65-108">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="74c65-108">PowerShellGet</span></span>
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -40,15 +40,15 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="05258-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="05258-109">DESCRIPTION</span></span>
+## <span data-ttu-id="74c65-109">说明</span><span class="sxs-lookup"><span data-stu-id="74c65-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="05258-110">`Get-Package`Cmdlet 将返回本地计算机上使用 **PackageManagement** 安装的所有软件包的列表。</span><span class="sxs-lookup"><span data-stu-id="05258-110">The `Get-Package` cmdlet returns a list of all software packages on the local computer that were installed with **PackageManagement** .</span></span> <span data-ttu-id="05258-111">您可以 `Get-Package` 在远程计算机上运行它，方法是将它作为 `Invoke-Command` 或 `Enter-PSSession` 命令或脚本的一部分运行。</span><span class="sxs-lookup"><span data-stu-id="05258-111">You can run `Get-Package` on remote computers by running it as part of an `Invoke-Command` or `Enter-PSSession` command or script.</span></span>
+<span data-ttu-id="74c65-110">`Get-Package`Cmdlet 将返回本地计算机上使用 **PackageManagement** 安装的所有软件包的列表。</span><span class="sxs-lookup"><span data-stu-id="74c65-110">The `Get-Package` cmdlet returns a list of all software packages on the local computer that were installed with **PackageManagement**.</span></span> <span data-ttu-id="74c65-111">您可以 `Get-Package` 在远程计算机上运行它，方法是将它作为 `Invoke-Command` 或 `Enter-PSSession` 命令或脚本的一部分运行。</span><span class="sxs-lookup"><span data-stu-id="74c65-111">You can run `Get-Package` on remote computers by running it as part of an `Invoke-Command` or `Enter-PSSession` command or script.</span></span>
 
-## <span data-ttu-id="05258-112">示例</span><span class="sxs-lookup"><span data-stu-id="05258-112">EXAMPLES</span></span>
+## <span data-ttu-id="74c65-112">示例</span><span class="sxs-lookup"><span data-stu-id="74c65-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="05258-113">示例1：获取所有已安装的包</span><span class="sxs-lookup"><span data-stu-id="05258-113">Example 1: Get all installed packages</span></span>
+### <span data-ttu-id="74c65-113">示例1：获取所有已安装的包</span><span class="sxs-lookup"><span data-stu-id="74c65-113">Example 1: Get all installed packages</span></span>
 
-<span data-ttu-id="05258-114">该 `Get-Package` cmdlet 将获取在本地计算机上安装的所有包。</span><span class="sxs-lookup"><span data-stu-id="05258-114">The `Get-Package` cmdlet gets all packages that are installed on the local computer.</span></span>
+<span data-ttu-id="74c65-114">该 `Get-Package` cmdlet 将获取在本地计算机上安装的所有包。</span><span class="sxs-lookup"><span data-stu-id="74c65-114">The `Get-Package` cmdlet gets all packages that are installed on the local computer.</span></span>
 
 ```powershell
 Get-Package
@@ -60,19 +60,19 @@ Name           Version      Source                                     ProviderN
 posh-git       0.7.3        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-### <span data-ttu-id="05258-115">示例2：获取远程计算机上安装的包</span><span class="sxs-lookup"><span data-stu-id="05258-115">Example 2: Get packages that are installed on a remote computer</span></span>
+### <span data-ttu-id="74c65-115">示例2：获取远程计算机上安装的包</span><span class="sxs-lookup"><span data-stu-id="74c65-115">Example 2: Get packages that are installed on a remote computer</span></span>
 
-<span data-ttu-id="05258-116">此命令获取由 **PackageManagement** 在远程计算机上安装的包的列表。</span><span class="sxs-lookup"><span data-stu-id="05258-116">This command gets a list of packages that were installed by **PackageManagement** on a remote computer.</span></span> <span data-ttu-id="05258-117">此命令会提示你提供指定用户的密码。</span><span class="sxs-lookup"><span data-stu-id="05258-117">This command prompts you to provide the specified user's password.</span></span>
+<span data-ttu-id="74c65-116">此命令获取由 **PackageManagement** 在远程计算机上安装的包的列表。</span><span class="sxs-lookup"><span data-stu-id="74c65-116">This command gets a list of packages that were installed by **PackageManagement** on a remote computer.</span></span> <span data-ttu-id="74c65-117">此命令会提示你提供指定用户的密码。</span><span class="sxs-lookup"><span data-stu-id="74c65-117">This command prompts you to provide the specified user's password.</span></span>
 
 ```
 PS> Invoke-Command -ComputerName Server01 -Credential CONTOSO\TestUser -ScriptBlock {Get-Package}
 ```
 
-<span data-ttu-id="05258-118">`Invoke-Command` 使用 **ComputerName** 参数指定远程计算机 **Server01** 。</span><span class="sxs-lookup"><span data-stu-id="05258-118">`Invoke-Command` uses the **ComputerName** parameter to specify a remote computer, **Server01** .</span></span> <span data-ttu-id="05258-119">**Credential** 参数指定有权在计算机上运行命令的域和用户名。</span><span class="sxs-lookup"><span data-stu-id="05258-119">The **Credential** parameter specifies a domain and user name with permissions to run commands on the computer.</span></span> <span data-ttu-id="05258-120">**ScriptBlock** 参数 `Get-Package` 在远程计算机上运行 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="05258-120">The **ScriptBlock** parameter runs the `Get-Package` cmdlet on the remote computer.</span></span>
+<span data-ttu-id="74c65-118">`Invoke-Command` 使用 **ComputerName** 参数指定远程计算机 **Server01**。</span><span class="sxs-lookup"><span data-stu-id="74c65-118">`Invoke-Command` uses the **ComputerName** parameter to specify a remote computer, **Server01**.</span></span> <span data-ttu-id="74c65-119">**Credential** 参数指定有权在计算机上运行命令的域和用户名。</span><span class="sxs-lookup"><span data-stu-id="74c65-119">The **Credential** parameter specifies a domain and user name with permissions to run commands on the computer.</span></span> <span data-ttu-id="74c65-120">**ScriptBlock** 参数 `Get-Package` 在远程计算机上运行 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="74c65-120">The **ScriptBlock** parameter runs the `Get-Package` cmdlet on the remote computer.</span></span>
 
-### <span data-ttu-id="05258-121">示例3：获取指定提供程序的包</span><span class="sxs-lookup"><span data-stu-id="05258-121">Example 3: Get packages for a specified provider</span></span>
+### <span data-ttu-id="74c65-121">示例3：获取指定提供程序的包</span><span class="sxs-lookup"><span data-stu-id="74c65-121">Example 3: Get packages for a specified provider</span></span>
 
-<span data-ttu-id="05258-122">此命令从特定提供程序获取在本地计算机上安装的软件包。</span><span class="sxs-lookup"><span data-stu-id="05258-122">This command gets software packages installed on the local computer from a specific provider.</span></span>
+<span data-ttu-id="74c65-122">此命令从特定提供程序获取在本地计算机上安装的软件包。</span><span class="sxs-lookup"><span data-stu-id="74c65-122">This command gets software packages installed on the local computer from a specific provider.</span></span>
 
 ```powershell
 Get-Package -ProviderName PowerShellGet -AllVersions
@@ -87,12 +87,12 @@ posh-git              0.7.3        https://www.powershellgallery.com/api/v2   Po
 PowerShellGet         2.0.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-<span data-ttu-id="05258-123">`Get-Package` 使用 **ProviderName** 参数指定特定提供程序 **PowerShellGet** 。</span><span class="sxs-lookup"><span data-stu-id="05258-123">`Get-Package` uses the **ProviderName** parameter to specify a specific provider, **PowerShellGet** .</span></span>
-<span data-ttu-id="05258-124">" **所有版本** " 参数显示安装的每个版本。</span><span class="sxs-lookup"><span data-stu-id="05258-124">The **All-Versions** parameter displays each version that is installed.</span></span>
+<span data-ttu-id="74c65-123">`Get-Package` 使用 **ProviderName** 参数指定特定提供程序 **PowerShellGet**。</span><span class="sxs-lookup"><span data-stu-id="74c65-123">`Get-Package` uses the **ProviderName** parameter to specify a specific provider, **PowerShellGet**.</span></span>
+<span data-ttu-id="74c65-124">" **所有版本** " 参数显示安装的每个版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-124">The **All-Versions** parameter displays each version that is installed.</span></span>
 
-### <span data-ttu-id="05258-125">示例4：获取特定包的确切版本</span><span class="sxs-lookup"><span data-stu-id="05258-125">Example 4: Get an exact version of a specific package</span></span>
+### <span data-ttu-id="74c65-125">示例4：获取特定包的确切版本</span><span class="sxs-lookup"><span data-stu-id="74c65-125">Example 4: Get an exact version of a specific package</span></span>
 
-<span data-ttu-id="05258-126">此命令将获取已安装包的特定版本。</span><span class="sxs-lookup"><span data-stu-id="05258-126">This command gets a specific version of an installed package.</span></span> <span data-ttu-id="05258-127">可以安装多个版本的包。</span><span class="sxs-lookup"><span data-stu-id="05258-127">More than one version of a package can be installed.</span></span>
+<span data-ttu-id="74c65-126">此命令将获取已安装包的特定版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-126">This command gets a specific version of an installed package.</span></span> <span data-ttu-id="74c65-127">可以安装多个版本的包。</span><span class="sxs-lookup"><span data-stu-id="74c65-127">More than one version of a package can be installed.</span></span>
 
 ```powershell
 Get-Package -Name PackageManagement -ProviderName PowerShellGet -RequiredVersion 1.3.1
@@ -104,39 +104,23 @@ Name                  Version      Source                                     Pr
 PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-<span data-ttu-id="05258-128">`Get-Package` 使用 **Name** 参数指定包名称 **PackageManagement** 。</span><span class="sxs-lookup"><span data-stu-id="05258-128">`Get-Package` uses **Name** parameter to specify the package name, **PackageManagement** .</span></span> <span data-ttu-id="05258-129">**ProviderName** 参数指定提供程序 **PowerShellGet** 。</span><span class="sxs-lookup"><span data-stu-id="05258-129">The **ProviderName** parameter specifies the provider, **PowerShellGet** .</span></span> <span data-ttu-id="05258-130">**必需的版本** 参数指定已安装的版本。</span><span class="sxs-lookup"><span data-stu-id="05258-130">The **Required-Version** parameter specifies an installed version.</span></span>
+<span data-ttu-id="74c65-128">`Get-Package` 使用 **Name** 参数指定包名称 **PackageManagement**。</span><span class="sxs-lookup"><span data-stu-id="74c65-128">`Get-Package` uses **Name** parameter to specify the package name, **PackageManagement**.</span></span> <span data-ttu-id="74c65-129">**ProviderName** 参数指定提供程序 **PowerShellGet**。</span><span class="sxs-lookup"><span data-stu-id="74c65-129">The **ProviderName** parameter specifies the provider, **PowerShellGet**.</span></span> <span data-ttu-id="74c65-130">**必需的版本** 参数指定已安装的版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-130">The **Required-Version** parameter specifies an installed version.</span></span>
 
-### <span data-ttu-id="05258-131">示例5：卸载包</span><span class="sxs-lookup"><span data-stu-id="05258-131">Example 5: Uninstall a package</span></span>
+### <span data-ttu-id="74c65-131">示例5：卸载包</span><span class="sxs-lookup"><span data-stu-id="74c65-131">Example 5: Uninstall a package</span></span>
 
-<span data-ttu-id="05258-132">此示例将获取包信息，然后卸载包。</span><span class="sxs-lookup"><span data-stu-id="05258-132">This example gets package information and then uninstalls the package.</span></span>
+<span data-ttu-id="74c65-132">此示例将获取包信息，然后卸载包。</span><span class="sxs-lookup"><span data-stu-id="74c65-132">This example gets package information and then uninstalls the package.</span></span>
 
 ```powershell
 Get-Package -Name posh-git -RequiredVersion 0.7.3 | Uninstall-Package
 ```
 
-<span data-ttu-id="05258-133">`Get-Package` 使用 **Name** 参数指定包名称 **posh** 。</span><span class="sxs-lookup"><span data-stu-id="05258-133">`Get-Package` uses the **Name** parameter to specify the package name, **posh-git** .</span></span> <span data-ttu-id="05258-134">**RequiredVersion** 参数是包的特定版本。</span><span class="sxs-lookup"><span data-stu-id="05258-134">The **RequiredVersion** parameter is a specific version of the package.</span></span> <span data-ttu-id="05258-135">对象通过管道向下发送到 `Uninstall-Package` cmdlet。</span><span class="sxs-lookup"><span data-stu-id="05258-135">The object is sent down the pipeline to the `Uninstall-Package` cmdlet.</span></span> <span data-ttu-id="05258-136">`Uninstall-Package` 删除包。</span><span class="sxs-lookup"><span data-stu-id="05258-136">`Uninstall-Package` removes the package.</span></span>
+<span data-ttu-id="74c65-133">`Get-Package` 使用 **Name** 参数指定包名称 **posh**。</span><span class="sxs-lookup"><span data-stu-id="74c65-133">`Get-Package` uses the **Name** parameter to specify the package name, **posh-git**.</span></span> <span data-ttu-id="74c65-134">**RequiredVersion** 参数是包的特定版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-134">The **RequiredVersion** parameter is a specific version of the package.</span></span> <span data-ttu-id="74c65-135">对象通过管道向下发送到 `Uninstall-Package` cmdlet。</span><span class="sxs-lookup"><span data-stu-id="74c65-135">The object is sent down the pipeline to the `Uninstall-Package` cmdlet.</span></span> <span data-ttu-id="74c65-136">`Uninstall-Package` 删除包。</span><span class="sxs-lookup"><span data-stu-id="74c65-136">`Uninstall-Package` removes the package.</span></span>
 
-## <span data-ttu-id="05258-137">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="05258-137">PARAMETERS</span></span>
+## <span data-ttu-id="74c65-137">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="74c65-137">PARAMETERS</span></span>
 
-### <span data-ttu-id="05258-138">-AllowClobber</span><span class="sxs-lookup"><span data-stu-id="05258-138">-AllowClobber</span></span>
+### <span data-ttu-id="74c65-138">-AllowClobber</span><span class="sxs-lookup"><span data-stu-id="74c65-138">-AllowClobber</span></span>
 
-<span data-ttu-id="05258-139">替代与现有命令冲突有关的警告消息。</span><span class="sxs-lookup"><span data-stu-id="05258-139">Overrides warning messages about conflicts with existing commands.</span></span> <span data-ttu-id="05258-140">覆盖与模块安装的命令同名的现有命令。</span><span class="sxs-lookup"><span data-stu-id="05258-140">Overwrites existing commands that have the same name as commands being installed by a module.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: PowerShellGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="05258-141">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="05258-141">-AllowPrereleaseVersions</span></span>
-
-<span data-ttu-id="05258-142">在结果中包括标记为预发行版本的包。</span><span class="sxs-lookup"><span data-stu-id="05258-142">Includes packages marked as a prerelease in the results.</span></span>
+<span data-ttu-id="74c65-139">替代与现有命令冲突有关的警告消息。</span><span class="sxs-lookup"><span data-stu-id="74c65-139">Overrides warning messages about conflicts with existing commands.</span></span> <span data-ttu-id="74c65-140">覆盖与模块安装的命令同名的现有命令。</span><span class="sxs-lookup"><span data-stu-id="74c65-140">Overwrites existing commands that have the same name as commands being installed by a module.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -150,9 +134,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-143">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="05258-143">-AllVersions</span></span>
+### <span data-ttu-id="74c65-141">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="74c65-141">-AllowPrereleaseVersions</span></span>
 
-<span data-ttu-id="05258-144">指示 `Get-Package` 返回包的所有可用版本。</span><span class="sxs-lookup"><span data-stu-id="05258-144">Indicates that `Get-Package` returns all available versions of the package.</span></span> <span data-ttu-id="05258-145">默认情况下， `Get-Package` 仅返回最新的可用版本。</span><span class="sxs-lookup"><span data-stu-id="05258-145">By default, `Get-Package` only returns the newest available version.</span></span>
+<span data-ttu-id="74c65-142">在结果中包括标记为预发行版本的包。</span><span class="sxs-lookup"><span data-stu-id="74c65-142">Includes packages marked as a prerelease in the results.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="74c65-143">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="74c65-143">-AllVersions</span></span>
+
+<span data-ttu-id="74c65-144">指示 `Get-Package` 返回包的所有可用版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-144">Indicates that `Get-Package` returns all available versions of the package.</span></span> <span data-ttu-id="74c65-145">默认情况下， `Get-Package` 仅返回最新的可用版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-145">By default, `Get-Package` only returns the newest available version.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -166,9 +166,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-146">-Destination</span><span class="sxs-lookup"><span data-stu-id="05258-146">-Destination</span></span>
+### <span data-ttu-id="74c65-146">-Destination</span><span class="sxs-lookup"><span data-stu-id="74c65-146">-Destination</span></span>
 
-<span data-ttu-id="05258-147">指定包含提取的包文件的目录的路径。</span><span class="sxs-lookup"><span data-stu-id="05258-147">Specifies the path to a directory that contains extracted package files.</span></span>
+<span data-ttu-id="74c65-147">指定包含提取的包文件的目录的路径。</span><span class="sxs-lookup"><span data-stu-id="74c65-147">Specifies the path to a directory that contains extracted package files.</span></span>
 
 ```yaml
 Type: System.String
@@ -182,9 +182,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-148">-ExcludeVersion</span><span class="sxs-lookup"><span data-stu-id="05258-148">-ExcludeVersion</span></span>
+### <span data-ttu-id="74c65-148">-ExcludeVersion</span><span class="sxs-lookup"><span data-stu-id="74c65-148">-ExcludeVersion</span></span>
 
-<span data-ttu-id="05258-149">切换到排除文件夹路径中的版本号。</span><span class="sxs-lookup"><span data-stu-id="05258-149">Switch to exclude the version number in the folder path.</span></span>
+<span data-ttu-id="74c65-149">切换到排除文件夹路径中的版本号。</span><span class="sxs-lookup"><span data-stu-id="74c65-149">Switch to exclude the version number in the folder path.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -198,25 +198,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-150">-Force</span><span class="sxs-lookup"><span data-stu-id="05258-150">-Force</span></span>
+### <span data-ttu-id="74c65-150">-Force</span><span class="sxs-lookup"><span data-stu-id="74c65-150">-Force</span></span>
 
-<span data-ttu-id="05258-151">强制运行命令而不要求用户确认。</span><span class="sxs-lookup"><span data-stu-id="05258-151">Forces the command to run without asking for user confirmation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="05258-152">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="05258-152">-ForceBootstrap</span></span>
-
-<span data-ttu-id="05258-153">指示 `Get-Package` 强制 **PackageManagement** 自动安装包提供程序。</span><span class="sxs-lookup"><span data-stu-id="05258-153">Indicates that `Get-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
+<span data-ttu-id="74c65-151">强制运行命令而不要求用户确认。</span><span class="sxs-lookup"><span data-stu-id="74c65-151">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -230,9 +214,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-154">-InstallUpdate</span><span class="sxs-lookup"><span data-stu-id="05258-154">-InstallUpdate</span></span>
+### <span data-ttu-id="74c65-152">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="74c65-152">-ForceBootstrap</span></span>
 
-<span data-ttu-id="05258-155">指示此 cmdlet 安装更新。</span><span class="sxs-lookup"><span data-stu-id="05258-155">Indicates that this cmdlet installs updates.</span></span>
+<span data-ttu-id="74c65-153">指示 `Get-Package` 强制 **PackageManagement** 自动安装包提供程序。</span><span class="sxs-lookup"><span data-stu-id="74c65-153">Indicates that `Get-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="74c65-154">-InstallUpdate</span><span class="sxs-lookup"><span data-stu-id="74c65-154">-InstallUpdate</span></span>
+
+<span data-ttu-id="74c65-155">指示此 cmdlet 安装更新。</span><span class="sxs-lookup"><span data-stu-id="74c65-155">Indicates that this cmdlet installs updates.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -246,25 +246,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-156">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="05258-156">-MaximumVersion</span></span>
+### <span data-ttu-id="74c65-156">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="74c65-156">-MaximumVersion</span></span>
 
-<span data-ttu-id="05258-157">指定要查找的最大包版本。</span><span class="sxs-lookup"><span data-stu-id="05258-157">Specifies the maximum package version that you want to find.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="05258-158">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="05258-158">-MinimumVersion</span></span>
-
-<span data-ttu-id="05258-159">指定要查找的最小包版本。</span><span class="sxs-lookup"><span data-stu-id="05258-159">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="05258-160">如果有更高版本，则返回该版本。</span><span class="sxs-lookup"><span data-stu-id="05258-160">If a higher version is available, that version is returned.</span></span>
+<span data-ttu-id="74c65-157">指定要查找的最大包版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-157">Specifies the maximum package version that you want to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -278,9 +262,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-161">-Name</span><span class="sxs-lookup"><span data-stu-id="05258-161">-Name</span></span>
+### <span data-ttu-id="74c65-158">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="74c65-158">-MinimumVersion</span></span>
 
-<span data-ttu-id="05258-162">指定一个或多个包名称或包名称，其中包含通配符。</span><span class="sxs-lookup"><span data-stu-id="05258-162">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="05258-163">用逗号分隔多个包名称。</span><span class="sxs-lookup"><span data-stu-id="05258-163">Separate multiple package names with commas.</span></span>
+<span data-ttu-id="74c65-159">指定要查找的最小包版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-159">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="74c65-160">如果有更高版本，则返回该版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-160">If a higher version is available, that version is returned.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="74c65-161">-Name</span><span class="sxs-lookup"><span data-stu-id="74c65-161">-Name</span></span>
+
+<span data-ttu-id="74c65-162">指定一个或多个包名称或包名称，其中包含通配符。</span><span class="sxs-lookup"><span data-stu-id="74c65-162">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="74c65-163">用逗号分隔多个包名称。</span><span class="sxs-lookup"><span data-stu-id="74c65-163">Separate multiple package names with commas.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -294,9 +294,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="05258-164">-NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="05258-164">-NoPathUpdate</span></span>
+### <span data-ttu-id="74c65-164">-NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="74c65-164">-NoPathUpdate</span></span>
 
-<span data-ttu-id="05258-165">**NoPathUpdate** 仅适用于 `Install-Script` cmdlet。</span><span class="sxs-lookup"><span data-stu-id="05258-165">**NoPathUpdate** only applies to the `Install-Script` cmdlet.</span></span> <span data-ttu-id="05258-166">**NoPathUpdate** 是由提供程序添加的动态参数，不受支持 `Get-Package` 。</span><span class="sxs-lookup"><span data-stu-id="05258-166">**NoPathUpdate** is a dynamic parameter added by the provider and isn't supported by `Get-Package`.</span></span>
+<span data-ttu-id="74c65-165">**NoPathUpdate** 仅适用于 `Install-Script` cmdlet。</span><span class="sxs-lookup"><span data-stu-id="74c65-165">**NoPathUpdate** only applies to the `Install-Script` cmdlet.</span></span> <span data-ttu-id="74c65-166">**NoPathUpdate** 是由提供程序添加的动态参数，不受支持 `Get-Package` 。</span><span class="sxs-lookup"><span data-stu-id="74c65-166">**NoPathUpdate** is a dynamic parameter added by the provider and isn't supported by `Get-Package`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -310,9 +310,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-167">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="05258-167">-PackageManagementProvider</span></span>
+### <span data-ttu-id="74c65-167">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="74c65-167">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="05258-168">指定包管理提供程序的名称。</span><span class="sxs-lookup"><span data-stu-id="05258-168">Specifies the name of a package management provider.</span></span>
+<span data-ttu-id="74c65-168">指定包管理提供程序的名称。</span><span class="sxs-lookup"><span data-stu-id="74c65-168">Specifies the name of a package management provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -326,10 +326,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-169">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="05258-169">-ProviderName</span></span>
+### <span data-ttu-id="74c65-169">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="74c65-169">-ProviderName</span></span>
 
-<span data-ttu-id="05258-170">指定一个或多个包提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="05258-170">Specifies one or more package provider names.</span></span> <span data-ttu-id="05258-171">用逗号分隔多个包提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="05258-171">Separate multiple package provider names with commas.</span></span>
-<span data-ttu-id="05258-172">使用 `Get-PackageProvider` 获取可用包提供程序的列表。</span><span class="sxs-lookup"><span data-stu-id="05258-172">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
+<span data-ttu-id="74c65-170">指定一个或多个包提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="74c65-170">Specifies one or more package provider names.</span></span> <span data-ttu-id="74c65-171">用逗号分隔多个包提供程序名称。</span><span class="sxs-lookup"><span data-stu-id="74c65-171">Separate multiple package provider names with commas.</span></span>
+<span data-ttu-id="74c65-172">使用 `Get-PackageProvider` 获取可用包提供程序的列表。</span><span class="sxs-lookup"><span data-stu-id="74c65-172">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -344,9 +344,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-173">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="05258-173">-RequiredVersion</span></span>
+### <span data-ttu-id="74c65-173">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="74c65-173">-RequiredVersion</span></span>
 
-<span data-ttu-id="05258-174">指定要查找的包的确切版本。</span><span class="sxs-lookup"><span data-stu-id="05258-174">Specifies the exact version of the package to find.</span></span>
+<span data-ttu-id="74c65-174">指定要查找的包的确切版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-174">Specifies the exact version of the package to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -360,9 +360,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-175">-Scope</span><span class="sxs-lookup"><span data-stu-id="05258-175">-Scope</span></span>
+### <span data-ttu-id="74c65-175">-Scope</span><span class="sxs-lookup"><span data-stu-id="74c65-175">-Scope</span></span>
 
-<span data-ttu-id="05258-176">指定包的搜索范围。</span><span class="sxs-lookup"><span data-stu-id="05258-176">Specifies the search scope for the package.</span></span>
+<span data-ttu-id="74c65-176">指定包的搜索范围。</span><span class="sxs-lookup"><span data-stu-id="74c65-176">Specifies the search scope for the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -377,9 +377,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-177">-SkipDependencies</span><span class="sxs-lookup"><span data-stu-id="05258-177">-SkipDependencies</span></span>
+### <span data-ttu-id="74c65-177">-SkipDependencies</span><span class="sxs-lookup"><span data-stu-id="74c65-177">-SkipDependencies</span></span>
 
-<span data-ttu-id="05258-178">指定跳过查找任何包依赖关系的开关。</span><span class="sxs-lookup"><span data-stu-id="05258-178">Switch that specifies to skip finding any package dependencies.</span></span>
+<span data-ttu-id="74c65-178">指定跳过查找任何包依赖关系的开关。</span><span class="sxs-lookup"><span data-stu-id="74c65-178">Switch that specifies to skip finding any package dependencies.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -393,9 +393,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-179">-SkipPublisherCheck</span><span class="sxs-lookup"><span data-stu-id="05258-179">-SkipPublisherCheck</span></span>
+### <span data-ttu-id="74c65-179">-SkipPublisherCheck</span><span class="sxs-lookup"><span data-stu-id="74c65-179">-SkipPublisherCheck</span></span>
 
-<span data-ttu-id="05258-180">允许你获取比你安装的版本更新的包版本。</span><span class="sxs-lookup"><span data-stu-id="05258-180">Allows you to get a package version that is newer than your installed version.</span></span> <span data-ttu-id="05258-181">例如，由受信任的发布者进行数字签名，但未对新版本进行数字签名的已安装包。</span><span class="sxs-lookup"><span data-stu-id="05258-181">For example, an installed package that is digitally signed by a trusted publisher but a new version isn't digitally signed.</span></span>
+<span data-ttu-id="74c65-180">允许你获取比你安装的版本更新的包版本。</span><span class="sxs-lookup"><span data-stu-id="74c65-180">Allows you to get a package version that is newer than your installed version.</span></span> <span data-ttu-id="74c65-181">例如，由受信任的发布者进行数字签名，但未对新版本进行数字签名的已安装包。</span><span class="sxs-lookup"><span data-stu-id="74c65-181">For example, an installed package that is digitally signed by a trusted publisher but a new version isn't digitally signed.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -409,9 +409,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-182">-Type</span><span class="sxs-lookup"><span data-stu-id="05258-182">-Type</span></span>
+### <span data-ttu-id="74c65-182">-Type</span><span class="sxs-lookup"><span data-stu-id="74c65-182">-Type</span></span>
 
-<span data-ttu-id="05258-183">指定是使用模块、脚本还是搜索包。</span><span class="sxs-lookup"><span data-stu-id="05258-183">Specifies whether to search for packages with a module, a script, or either.</span></span>
+<span data-ttu-id="74c65-183">指定是使用模块、脚本还是搜索包。</span><span class="sxs-lookup"><span data-stu-id="74c65-183">Specifies whether to search for packages with a module, a script, or either.</span></span>
 
 ```yaml
 Type: System.String
@@ -426,39 +426,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="05258-184">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="05258-184">CommonParameters</span></span>
+### <span data-ttu-id="74c65-184">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="74c65-184">CommonParameters</span></span>
 
-<span data-ttu-id="05258-185">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="05258-185">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="05258-186">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="05258-186">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="74c65-185">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="74c65-185">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="74c65-186">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="74c65-186">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="05258-187">输入</span><span class="sxs-lookup"><span data-stu-id="05258-187">INPUTS</span></span>
+## <span data-ttu-id="74c65-187">输入</span><span class="sxs-lookup"><span data-stu-id="74c65-187">INPUTS</span></span>
 
-## <span data-ttu-id="05258-188">输出</span><span class="sxs-lookup"><span data-stu-id="05258-188">OUTPUTS</span></span>
+## <span data-ttu-id="74c65-188">输出</span><span class="sxs-lookup"><span data-stu-id="74c65-188">OUTPUTS</span></span>
 
-### <span data-ttu-id="05258-189">SoftwareIdentity[]</span><span class="sxs-lookup"><span data-stu-id="05258-189">SoftwareIdentity[]</span></span>
+### <span data-ttu-id="74c65-189">SoftwareIdentity[]</span><span class="sxs-lookup"><span data-stu-id="74c65-189">SoftwareIdentity[]</span></span>
 
-## <span data-ttu-id="05258-190">注释</span><span class="sxs-lookup"><span data-stu-id="05258-190">NOTES</span></span>
+## <span data-ttu-id="74c65-190">注释</span><span class="sxs-lookup"><span data-stu-id="74c65-190">NOTES</span></span>
 
-<span data-ttu-id="05258-191">在命令中包含包提供程序可以使动态参数可用于 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="05258-191">Including a package provider in a command can make dynamic parameters available to a cmdlet.</span></span> <span data-ttu-id="05258-192">动态参数特定于包提供程序。</span><span class="sxs-lookup"><span data-stu-id="05258-192">Dynamic parameters are specific to a package provider.</span></span> <span data-ttu-id="05258-193">`Get-Help`Cmdlet 列出 cmdlet 的参数集，并包括提供程序的参数集。</span><span class="sxs-lookup"><span data-stu-id="05258-193">The `Get-Help` cmdlet lists a cmdlet's parameter sets and includes the provider's parameter set.</span></span> <span data-ttu-id="05258-194">例如， `Get-Package` 具有 **PowerShellGet** 参数集，其中包括 `-NoPathUpdate` 、 `AllowClobber` 和 `SkipPublisherCheck` 。</span><span class="sxs-lookup"><span data-stu-id="05258-194">For example, `Get-Package` has the **PowerShellGet** parameter set that includes `-NoPathUpdate`, `AllowClobber`, and `SkipPublisherCheck`.</span></span>
+<span data-ttu-id="74c65-191">在命令中包含包提供程序可以使动态参数可用于 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="74c65-191">Including a package provider in a command can make dynamic parameters available to a cmdlet.</span></span> <span data-ttu-id="74c65-192">动态参数特定于包提供程序。</span><span class="sxs-lookup"><span data-stu-id="74c65-192">Dynamic parameters are specific to a package provider.</span></span> <span data-ttu-id="74c65-193">`Get-Help`Cmdlet 列出 cmdlet 的参数集，并包括提供程序的参数集。</span><span class="sxs-lookup"><span data-stu-id="74c65-193">The `Get-Help` cmdlet lists a cmdlet's parameter sets and includes the provider's parameter set.</span></span> <span data-ttu-id="74c65-194">例如， `Get-Package` 具有 **PowerShellGet** 参数集，其中包括 `-NoPathUpdate` 、 `AllowClobber` 和 `SkipPublisherCheck` 。</span><span class="sxs-lookup"><span data-stu-id="74c65-194">For example, `Get-Package` has the **PowerShellGet** parameter set that includes `-NoPathUpdate`, `AllowClobber`, and `SkipPublisherCheck`.</span></span>
 
-## <span data-ttu-id="05258-195">相关链接</span><span class="sxs-lookup"><span data-stu-id="05258-195">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="74c65-195">从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。</span><span class="sxs-lookup"><span data-stu-id="74c65-195">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="74c65-196">如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。</span><span class="sxs-lookup"><span data-stu-id="74c65-196">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="74c65-197">使用以下命令确保使用的是 TLS 1.2：</span><span class="sxs-lookup"><span data-stu-id="74c65-197">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="74c65-198">有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。</span><span class="sxs-lookup"><span data-stu-id="74c65-198">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="05258-196">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="05258-196">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="74c65-199">相关链接</span><span class="sxs-lookup"><span data-stu-id="74c65-199">RELATED LINKS</span></span>
 
-[<span data-ttu-id="05258-197">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="05258-197">Enter-PSSession</span></span>](../Microsoft.PowerShell.Core/Enter-PSSession.md)
+[<span data-ttu-id="74c65-200">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="74c65-200">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="05258-198">Find-Package</span><span class="sxs-lookup"><span data-stu-id="05258-198">Find-Package</span></span>](Find-Package.md)
+[<span data-ttu-id="74c65-201">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="74c65-201">Enter-PSSession</span></span>](../Microsoft.PowerShell.Core/Enter-PSSession.md)
 
-[<span data-ttu-id="05258-199">Get-Help</span><span class="sxs-lookup"><span data-stu-id="05258-199">Get-Help</span></span>](../Microsoft.PowerShell.Core/Get-Help.md)
+[<span data-ttu-id="74c65-202">Find-Package</span><span class="sxs-lookup"><span data-stu-id="74c65-202">Find-Package</span></span>](Find-Package.md)
 
-[<span data-ttu-id="05258-200">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="05258-200">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+[<span data-ttu-id="74c65-203">Get-Help</span><span class="sxs-lookup"><span data-stu-id="74c65-203">Get-Help</span></span>](../Microsoft.PowerShell.Core/Get-Help.md)
 
-[<span data-ttu-id="05258-201">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="05258-201">Get-PackageSource</span></span>](Get-PackageSource.md)
+[<span data-ttu-id="74c65-204">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="74c65-204">Get-PackageProvider</span></span>](Get-PackageProvider.md)
 
-[<span data-ttu-id="05258-202">Install-Package</span><span class="sxs-lookup"><span data-stu-id="05258-202">Install-Package</span></span>](Install-Package.md)
+[<span data-ttu-id="74c65-205">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="74c65-205">Get-PackageSource</span></span>](Get-PackageSource.md)
 
-[<span data-ttu-id="05258-203">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="05258-203">Invoke-Command</span></span>](../Microsoft.PowerShell.Core/Invoke-Command.md)
+[<span data-ttu-id="74c65-206">Install-Package</span><span class="sxs-lookup"><span data-stu-id="74c65-206">Install-Package</span></span>](Install-Package.md)
 
-[<span data-ttu-id="05258-204">Save-Package</span><span class="sxs-lookup"><span data-stu-id="05258-204">Save-Package</span></span>](Save-Package.md)
+[<span data-ttu-id="74c65-207">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="74c65-207">Invoke-Command</span></span>](../Microsoft.PowerShell.Core/Invoke-Command.md)
 
-[<span data-ttu-id="05258-205">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="05258-205">Uninstall-Package</span></span>](Uninstall-Package.md)
+[<span data-ttu-id="74c65-208">Save-Package</span><span class="sxs-lookup"><span data-stu-id="74c65-208">Save-Package</span></span>](Save-Package.md)
 
+[<span data-ttu-id="74c65-209">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="74c65-209">Uninstall-Package</span></span>](Uninstall-Package.md)

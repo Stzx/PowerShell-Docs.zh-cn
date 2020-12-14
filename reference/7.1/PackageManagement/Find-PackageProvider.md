@@ -7,19 +7,19 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-packageprovider?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-PackageProvider
-ms.openlocfilehash: 664e6064580f9212c25632a1146d1ac67f2308bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 1a31fa29d9baa17f5bc1c2f48b9179c2ce071310
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93197660"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890175"
 ---
-# <span data-ttu-id="5470f-103">Find-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="5470f-103">Find-PackageProvider</span></span>
+# <span data-ttu-id="455d2-103">Find-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="455d2-103">Find-PackageProvider</span></span>
 
-## <span data-ttu-id="5470f-104">摘要</span><span class="sxs-lookup"><span data-stu-id="5470f-104">SYNOPSIS</span></span>
-<span data-ttu-id="5470f-105">返回可供安装的包管理包提供程序的列表。</span><span class="sxs-lookup"><span data-stu-id="5470f-105">Returns a list of Package Management package providers available for installation.</span></span>
+## <span data-ttu-id="455d2-104">摘要</span><span class="sxs-lookup"><span data-stu-id="455d2-104">SYNOPSIS</span></span>
+<span data-ttu-id="455d2-105">返回可供安装的包管理包提供程序的列表。</span><span class="sxs-lookup"><span data-stu-id="455d2-105">Returns a list of Package Management package providers available for installation.</span></span>
 
-## <span data-ttu-id="5470f-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="5470f-106">SYNTAX</span></span>
+## <span data-ttu-id="455d2-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="455d2-106">SYNTAX</span></span>
 
 ```
 Find-PackageProvider [[-Name] <String[]>] [-AllVersions] [-Source <String[]>] [-IncludeDependencies]
@@ -27,48 +27,48 @@ Find-PackageProvider [[-Name] <String[]>] [-AllVersions] [-Source <String[]>] [-
  [-MinimumVersion <String>] [-MaximumVersion <String>] [-Force] [-ForceBootstrap] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="5470f-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="5470f-107">DESCRIPTION</span></span>
+## <span data-ttu-id="455d2-107">说明</span><span class="sxs-lookup"><span data-stu-id="455d2-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="5470f-108">**Install-packageprovider** cmdlet 查找匹配的 PackageManagement 提供程序，这些提供程序在使用 PowerShellGet 注册的包源中可用。</span><span class="sxs-lookup"><span data-stu-id="5470f-108">The **Find-PackageProvider** cmdlet finds matching PackageManagement providers that are available in package sources registered with PowerShellGet.</span></span>
-<span data-ttu-id="5470f-109">这些包提供程序都能用 Install-PackageProvider cmdlet 直接进行安装。</span><span class="sxs-lookup"><span data-stu-id="5470f-109">These are package providers available for installation with the Install-PackageProvider cmdlet.</span></span>
-<span data-ttu-id="5470f-110">默认情况下，这包括在使用 **PackageManagement** 和 **提供程序** 标记的 PowerShell 库中可用的模块。</span><span class="sxs-lookup"><span data-stu-id="5470f-110">By default, this includes modules available in the PowerShell Gallery with the **PackageManagement** and **Provider** tags.</span></span>
+<span data-ttu-id="455d2-108">**Install-packageprovider** cmdlet 查找匹配的 PackageManagement 提供程序，这些提供程序在使用 PowerShellGet 注册的包源中可用。</span><span class="sxs-lookup"><span data-stu-id="455d2-108">The **Find-PackageProvider** cmdlet finds matching PackageManagement providers that are available in package sources registered with PowerShellGet.</span></span>
+<span data-ttu-id="455d2-109">这些包提供程序都能用 Install-PackageProvider cmdlet 直接进行安装。</span><span class="sxs-lookup"><span data-stu-id="455d2-109">These are package providers available for installation with the Install-PackageProvider cmdlet.</span></span>
+<span data-ttu-id="455d2-110">默认情况下，这包括在使用 **PackageManagement** 和 **提供程序** 标记的 PowerShell 库中可用的模块。</span><span class="sxs-lookup"><span data-stu-id="455d2-110">By default, this includes modules available in the PowerShell Gallery with the **PackageManagement** and **Provider** tags.</span></span>
 
-<span data-ttu-id="5470f-111">**Install-packageprovider** 还查找包管理 Azure Blob 存储中提供的匹配包管理提供程序。</span><span class="sxs-lookup"><span data-stu-id="5470f-111">**Find-PackageProvider** also finds matching Package Management providers that are available in the Package Management Azure Blob store.</span></span>
-<span data-ttu-id="5470f-112">使用引导程序提供程序查找并安装它们。</span><span class="sxs-lookup"><span data-stu-id="5470f-112">Use the bootstrapper provider to find and install them.</span></span>
+<span data-ttu-id="455d2-111">**Install-packageprovider** 还查找包管理 Azure Blob 存储中提供的匹配包管理提供程序。</span><span class="sxs-lookup"><span data-stu-id="455d2-111">**Find-PackageProvider** also finds matching Package Management providers that are available in the Package Management Azure Blob store.</span></span>
+<span data-ttu-id="455d2-112">使用引导程序提供程序查找并安装它们。</span><span class="sxs-lookup"><span data-stu-id="455d2-112">Use the bootstrapper provider to find and install them.</span></span>
 
-## <span data-ttu-id="5470f-113">示例</span><span class="sxs-lookup"><span data-stu-id="5470f-113">EXAMPLES</span></span>
+## <span data-ttu-id="455d2-113">示例</span><span class="sxs-lookup"><span data-stu-id="455d2-113">EXAMPLES</span></span>
 
-### <span data-ttu-id="5470f-114">示例1：查找所有可用的包提供程序</span><span class="sxs-lookup"><span data-stu-id="5470f-114">Example 1: Find all available package providers</span></span>
+### <span data-ttu-id="455d2-114">示例1：查找所有可用的包提供程序</span><span class="sxs-lookup"><span data-stu-id="455d2-114">Example 1: Find all available package providers</span></span>
 
 ```
 PS C:\> Find-PackageProvider
 ```
 
-<span data-ttu-id="5470f-115">此命令获取包管理支持的存储库中可用的所有包提供程序的列表。</span><span class="sxs-lookup"><span data-stu-id="5470f-115">This command gets a list of all package providers that are available on the repositories supported by Package Management.</span></span>
-<span data-ttu-id="5470f-116">默认情况下，这些包提供程序在 PowerShell 库上提供，并使用包管理引导应用程序。</span><span class="sxs-lookup"><span data-stu-id="5470f-116">By default, those package providers are available on the PowerShell Gallery and by using the Package Management bootstrapping application.</span></span>
+<span data-ttu-id="455d2-115">此命令获取包管理支持的存储库中可用的所有包提供程序的列表。</span><span class="sxs-lookup"><span data-stu-id="455d2-115">This command gets a list of all package providers that are available on the repositories supported by Package Management.</span></span>
+<span data-ttu-id="455d2-116">默认情况下，这些包提供程序在 PowerShell 库上提供，并使用包管理引导应用程序。</span><span class="sxs-lookup"><span data-stu-id="455d2-116">By default, those package providers are available on the PowerShell Gallery and by using the Package Management bootstrapping application.</span></span>
 
-### <span data-ttu-id="5470f-117">示例2：查找提供程序的所有版本</span><span class="sxs-lookup"><span data-stu-id="5470f-117">Example 2: Find all versions of a provider</span></span>
+### <span data-ttu-id="455d2-117">示例2：查找提供程序的所有版本</span><span class="sxs-lookup"><span data-stu-id="455d2-117">Example 2: Find all versions of a provider</span></span>
 
 ```
 PS C:\> Find-PackageProvider -Name "Nuget" -AllVersions
 ```
 
-<span data-ttu-id="5470f-118">此命令将查找名为 Nuget 的包提供程序的所有版本。</span><span class="sxs-lookup"><span data-stu-id="5470f-118">This command finds all versions of the package provider named Nuget.</span></span>
+<span data-ttu-id="455d2-118">此命令将查找名为 Nuget 的包提供程序的所有版本。</span><span class="sxs-lookup"><span data-stu-id="455d2-118">This command finds all versions of the package provider named Nuget.</span></span>
 
-### <span data-ttu-id="5470f-119">示例3：从指定的源查找提供程序</span><span class="sxs-lookup"><span data-stu-id="5470f-119">Example 3: Find a provider from a specified source</span></span>
+### <span data-ttu-id="455d2-119">示例3：从指定的源查找提供程序</span><span class="sxs-lookup"><span data-stu-id="455d2-119">Example 3: Find a provider from a specified source</span></span>
 
 ```
 PS C:\> Find-PackageProvider -Name "Gistprovider" -Source "PSGallery"
 ```
 
-<span data-ttu-id="5470f-120">此命令使用指定的包源查找可用的包提供程序。</span><span class="sxs-lookup"><span data-stu-id="5470f-120">This command finds a package provider available by using a specified package source.</span></span>
+<span data-ttu-id="455d2-120">此命令使用指定的包源查找可用的包提供程序。</span><span class="sxs-lookup"><span data-stu-id="455d2-120">This command finds a package provider available by using a specified package source.</span></span>
 
-## <span data-ttu-id="5470f-121">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="5470f-121">PARAMETERS</span></span>
+## <span data-ttu-id="455d2-121">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="455d2-121">PARAMETERS</span></span>
 
-### <span data-ttu-id="5470f-122">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="5470f-122">-AllVersions</span></span>
+### <span data-ttu-id="455d2-122">-AllVersions</span><span class="sxs-lookup"><span data-stu-id="455d2-122">-AllVersions</span></span>
 
-<span data-ttu-id="5470f-123">指示此 cmdlet 返回包提供程序的所有可用版本。</span><span class="sxs-lookup"><span data-stu-id="5470f-123">Indicates that this cmdlet returns all available versions of the package provider.</span></span>
-<span data-ttu-id="5470f-124">默认情况下， **install-packageprovider** 仅返回最新的可用版本。</span><span class="sxs-lookup"><span data-stu-id="5470f-124">By default, **Find-PackageProvider** only returns the newest available version.</span></span>
+<span data-ttu-id="455d2-123">指示此 cmdlet 返回包提供程序的所有可用版本。</span><span class="sxs-lookup"><span data-stu-id="455d2-123">Indicates that this cmdlet returns all available versions of the package provider.</span></span>
+<span data-ttu-id="455d2-124">默认情况下， **install-packageprovider** 仅返回最新的可用版本。</span><span class="sxs-lookup"><span data-stu-id="455d2-124">By default, **Find-PackageProvider** only returns the newest available version.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -82,9 +82,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-125">-Credential</span><span class="sxs-lookup"><span data-stu-id="5470f-125">-Credential</span></span>
+### <span data-ttu-id="455d2-125">-Credential</span><span class="sxs-lookup"><span data-stu-id="455d2-125">-Credential</span></span>
 
-<span data-ttu-id="5470f-126">指定有权搜索包提供程序的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="5470f-126">Specifies a user account that has permission to search for package providers.</span></span>
+<span data-ttu-id="455d2-126">指定有权搜索包提供程序的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="455d2-126">Specifies a user account that has permission to search for package providers.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -98,26 +98,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-127">-Force</span><span class="sxs-lookup"><span data-stu-id="5470f-127">-Force</span></span>
+### <span data-ttu-id="455d2-127">-Force</span><span class="sxs-lookup"><span data-stu-id="455d2-127">-Force</span></span>
 
-<span data-ttu-id="5470f-128">强制运行命令而不要求用户确认。</span><span class="sxs-lookup"><span data-stu-id="5470f-128">Forces the command to run without asking for user confirmation.</span></span>
-<span data-ttu-id="5470f-129">目前，这等效于 *ForceBootstrap* 参数。</span><span class="sxs-lookup"><span data-stu-id="5470f-129">Currently, this is equivalent to the *ForceBootstrap* parameter.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="5470f-130">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="5470f-130">-ForceBootstrap</span></span>
-
-<span data-ttu-id="5470f-131">指示此 cmdlet 强制包管理自动安装包提供程序。</span><span class="sxs-lookup"><span data-stu-id="5470f-131">Indicates that this cmdlet forces Package Management to automatically install the package provider.</span></span>
+<span data-ttu-id="455d2-128">强制运行命令而不要求用户确认。</span><span class="sxs-lookup"><span data-stu-id="455d2-128">Forces the command to run without asking for user confirmation.</span></span>
+<span data-ttu-id="455d2-129">目前，这等效于 *ForceBootstrap* 参数。</span><span class="sxs-lookup"><span data-stu-id="455d2-129">Currently, this is equivalent to the *ForceBootstrap* parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -131,9 +115,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-132">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="5470f-132">-IncludeDependencies</span></span>
+### <span data-ttu-id="455d2-130">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="455d2-130">-ForceBootstrap</span></span>
 
-<span data-ttu-id="5470f-133">指示此 cmdlet 包含依赖项。</span><span class="sxs-lookup"><span data-stu-id="5470f-133">Indicates that this cmdlet includes dependencies.</span></span>
+<span data-ttu-id="455d2-131">指示此 cmdlet 强制包管理自动安装包提供程序。</span><span class="sxs-lookup"><span data-stu-id="455d2-131">Indicates that this cmdlet forces Package Management to automatically install the package provider.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -147,10 +131,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-134">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="5470f-134">-MaximumVersion</span></span>
+### <span data-ttu-id="455d2-132">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="455d2-132">-IncludeDependencies</span></span>
 
-<span data-ttu-id="5470f-135">指定要查找的包提供程序的最大允许版本。</span><span class="sxs-lookup"><span data-stu-id="5470f-135">Specifies the maximum allowed version of the package provider that you want to find.</span></span>
-<span data-ttu-id="5470f-136">如果未添加此参数，则 **install-packageprovider** 将查找提供程序的最高可用版本。</span><span class="sxs-lookup"><span data-stu-id="5470f-136">If you do not add this parameter, **Find-PackageProvider** finds the highest available version of the provider.</span></span>
+<span data-ttu-id="455d2-133">指示此 cmdlet 包含依赖项。</span><span class="sxs-lookup"><span data-stu-id="455d2-133">Indicates that this cmdlet includes dependencies.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="455d2-134">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="455d2-134">-MaximumVersion</span></span>
+
+<span data-ttu-id="455d2-135">指定要查找的包提供程序的最大允许版本。</span><span class="sxs-lookup"><span data-stu-id="455d2-135">Specifies the maximum allowed version of the package provider that you want to find.</span></span>
+<span data-ttu-id="455d2-136">如果未添加此参数，则 **install-packageprovider** 将查找提供程序的最高可用版本。</span><span class="sxs-lookup"><span data-stu-id="455d2-136">If you do not add this parameter, **Find-PackageProvider** finds the highest available version of the provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -164,10 +164,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-137">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="5470f-137">-MinimumVersion</span></span>
+### <span data-ttu-id="455d2-137">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="455d2-137">-MinimumVersion</span></span>
 
-<span data-ttu-id="5470f-138">指定要查找的包提供程序的最小允许版本。</span><span class="sxs-lookup"><span data-stu-id="5470f-138">Specifies the minimum allowed version of the package provider that you want to find.</span></span>
-<span data-ttu-id="5470f-139">如果未添加此参数，则 **install-packageprovider** 将查找同时满足 *MaximumVersion* 参数指定的任何最大指定版本的包的最高可用版本。</span><span class="sxs-lookup"><span data-stu-id="5470f-139">If you do not add this parameter, **Find-PackageProvider** finds the highest available version of the package that also satisfies any maximum specified version specified by the *MaximumVersion* parameter.</span></span>
+<span data-ttu-id="455d2-138">指定要查找的包提供程序的最小允许版本。</span><span class="sxs-lookup"><span data-stu-id="455d2-138">Specifies the minimum allowed version of the package provider that you want to find.</span></span>
+<span data-ttu-id="455d2-139">如果未添加此参数，则 **install-packageprovider** 将查找同时满足 *MaximumVersion* 参数指定的任何最大指定版本的包的最高可用版本。</span><span class="sxs-lookup"><span data-stu-id="455d2-139">If you do not add this parameter, **Find-PackageProvider** finds the highest available version of the package that also satisfies any maximum specified version specified by the *MaximumVersion* parameter.</span></span>
 
 ```yaml
 Type: System.String
@@ -181,10 +181,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-140">-Name</span><span class="sxs-lookup"><span data-stu-id="5470f-140">-Name</span></span>
+### <span data-ttu-id="455d2-140">-Name</span><span class="sxs-lookup"><span data-stu-id="455d2-140">-Name</span></span>
 
-<span data-ttu-id="5470f-141">指定一个或多个包提供程序模块名称或提供程序名称和通配符。</span><span class="sxs-lookup"><span data-stu-id="5470f-141">Specifies one or more package provider module names, or provider names with wildcard characters.</span></span>
-<span data-ttu-id="5470f-142">用逗号分隔多个包名称。</span><span class="sxs-lookup"><span data-stu-id="5470f-142">Separate multiple package names with commas.</span></span>
+<span data-ttu-id="455d2-141">指定一个或多个包提供程序模块名称或提供程序名称和通配符。</span><span class="sxs-lookup"><span data-stu-id="455d2-141">Specifies one or more package provider module names, or provider names with wildcard characters.</span></span>
+<span data-ttu-id="455d2-142">用逗号分隔多个包名称。</span><span class="sxs-lookup"><span data-stu-id="455d2-142">Separate multiple package names with commas.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -198,9 +198,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="5470f-143">-Proxy</span><span class="sxs-lookup"><span data-stu-id="5470f-143">-Proxy</span></span>
+### <span data-ttu-id="455d2-143">-Proxy</span><span class="sxs-lookup"><span data-stu-id="455d2-143">-Proxy</span></span>
 
-<span data-ttu-id="5470f-144">为请求指定代理服务器，而不是直接连接到 Internet 资源。</span><span class="sxs-lookup"><span data-stu-id="5470f-144">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
+<span data-ttu-id="455d2-144">为请求指定代理服务器，而不是直接连接到 Internet 资源。</span><span class="sxs-lookup"><span data-stu-id="455d2-144">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -214,9 +214,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-145">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="5470f-145">-ProxyCredential</span></span>
+### <span data-ttu-id="455d2-145">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="455d2-145">-ProxyCredential</span></span>
 
-<span data-ttu-id="5470f-146">指定有权使用由 **Proxy** 参数指定的代理服务器的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="5470f-146">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="455d2-146">指定有权使用由 **Proxy** 参数指定的代理服务器的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="455d2-146">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -230,10 +230,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-147">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="5470f-147">-RequiredVersion</span></span>
+### <span data-ttu-id="455d2-147">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="455d2-147">-RequiredVersion</span></span>
 
-<span data-ttu-id="5470f-148">指定要查找的包提供程序的确切允许版本。</span><span class="sxs-lookup"><span data-stu-id="5470f-148">Specifies the exact allowed version of the package provider that you want to find.</span></span>
-<span data-ttu-id="5470f-149">如果未添加此参数，则 **install-packageprovider** 将查找同时满足 *MaximumVersion* 参数指定的任何最高版本的提供程序的最高可用版本。</span><span class="sxs-lookup"><span data-stu-id="5470f-149">If you do not add this parameter, **Find-PackageProvider** finds the highest available version of the provider that also satisfies any maximum version specified by the *MaximumVersion* parameter.</span></span>
+<span data-ttu-id="455d2-148">指定要查找的包提供程序的确切允许版本。</span><span class="sxs-lookup"><span data-stu-id="455d2-148">Specifies the exact allowed version of the package provider that you want to find.</span></span>
+<span data-ttu-id="455d2-149">如果未添加此参数，则 **install-packageprovider** 将查找同时满足 *MaximumVersion* 参数指定的任何最高版本的提供程序的最高可用版本。</span><span class="sxs-lookup"><span data-stu-id="455d2-149">If you do not add this parameter, **Find-PackageProvider** finds the highest available version of the provider that also satisfies any maximum version specified by the *MaximumVersion* parameter.</span></span>
 
 ```yaml
 Type: System.String
@@ -247,10 +247,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-150">-Source</span><span class="sxs-lookup"><span data-stu-id="5470f-150">-Source</span></span>
+### <span data-ttu-id="455d2-150">-Source</span><span class="sxs-lookup"><span data-stu-id="455d2-150">-Source</span></span>
 
-<span data-ttu-id="5470f-151">指定一个或多个包源。</span><span class="sxs-lookup"><span data-stu-id="5470f-151">Specifies one or more package sources.</span></span>
-<span data-ttu-id="5470f-152">可以通过使用 Get-PackageSource cmdlet 获取可用包源的列表。</span><span class="sxs-lookup"><span data-stu-id="5470f-152">You can get a list of available package sources by using the Get-PackageSource cmdlet.</span></span>
+<span data-ttu-id="455d2-151">指定一个或多个包源。</span><span class="sxs-lookup"><span data-stu-id="455d2-151">Specifies one or more package sources.</span></span>
+<span data-ttu-id="455d2-152">可以通过使用 Get-PackageSource cmdlet 获取可用包源的列表。</span><span class="sxs-lookup"><span data-stu-id="455d2-152">You can get a list of available package sources by using the Get-PackageSource cmdlet.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -264,30 +264,36 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5470f-153">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5470f-153">CommonParameters</span></span>
+### <span data-ttu-id="455d2-153">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="455d2-153">CommonParameters</span></span>
 
-<span data-ttu-id="5470f-154">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="5470f-154">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5470f-155">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="5470f-155">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="455d2-154">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="455d2-154">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="455d2-155">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="455d2-155">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="5470f-156">输入</span><span class="sxs-lookup"><span data-stu-id="5470f-156">INPUTS</span></span>
+## <span data-ttu-id="455d2-156">输入</span><span class="sxs-lookup"><span data-stu-id="455d2-156">INPUTS</span></span>
 
-## <span data-ttu-id="5470f-157">输出</span><span class="sxs-lookup"><span data-stu-id="5470f-157">OUTPUTS</span></span>
+## <span data-ttu-id="455d2-157">输出</span><span class="sxs-lookup"><span data-stu-id="455d2-157">OUTPUTS</span></span>
 
-### <span data-ttu-id="5470f-158">Softwareidentity.revisionnumber。</span><span class="sxs-lookup"><span data-stu-id="5470f-158">Microsoft.PackageManagement.Packaging.SoftwareIdentity</span></span>
+### <span data-ttu-id="455d2-158">Softwareidentity.revisionnumber。</span><span class="sxs-lookup"><span data-stu-id="455d2-158">Microsoft.PackageManagement.Packaging.SoftwareIdentity</span></span>
 
-<span data-ttu-id="5470f-159">此 cmdlet 将返回 **softwareidentity.revisionnumber** 对象。</span><span class="sxs-lookup"><span data-stu-id="5470f-159">This cmdlet returns a **SoftwareIdentity** object.</span></span>
-<span data-ttu-id="5470f-160">可以通过管道将 **softwareidentity.revisionnumber** 对象传递到 **install-packageprovider** 中，以安装 **install-packageprovider** 的结果。</span><span class="sxs-lookup"><span data-stu-id="5470f-160">A **SoftwareIdentity** object can be piped into **Install-PackageProvider** to install the results of **Find-PackageProvider** .</span></span>
+<span data-ttu-id="455d2-159">此 cmdlet 将返回 **softwareidentity.revisionnumber** 对象。</span><span class="sxs-lookup"><span data-stu-id="455d2-159">This cmdlet returns a **SoftwareIdentity** object.</span></span>
+<span data-ttu-id="455d2-160">可以通过管道将 **softwareidentity.revisionnumber** 对象传递到 **install-packageprovider** 中，以安装 **install-packageprovider** 的结果。</span><span class="sxs-lookup"><span data-stu-id="455d2-160">A **SoftwareIdentity** object can be piped into **Install-PackageProvider** to install the results of **Find-PackageProvider**.</span></span>
 
-## <span data-ttu-id="5470f-161">注释</span><span class="sxs-lookup"><span data-stu-id="5470f-161">NOTES</span></span>
+## <span data-ttu-id="455d2-161">注释</span><span class="sxs-lookup"><span data-stu-id="455d2-161">NOTES</span></span>
 
-## <span data-ttu-id="5470f-162">相关链接</span><span class="sxs-lookup"><span data-stu-id="5470f-162">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="455d2-162">从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。</span><span class="sxs-lookup"><span data-stu-id="455d2-162">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="455d2-163">如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。</span><span class="sxs-lookup"><span data-stu-id="455d2-163">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="455d2-164">使用以下命令确保使用的是 TLS 1.2：</span><span class="sxs-lookup"><span data-stu-id="455d2-164">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="455d2-165">有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。</span><span class="sxs-lookup"><span data-stu-id="455d2-165">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="5470f-163">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="5470f-163">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="455d2-166">相关链接</span><span class="sxs-lookup"><span data-stu-id="455d2-166">RELATED LINKS</span></span>
 
-[<span data-ttu-id="5470f-164">Unregister-PackageSource</span><span class="sxs-lookup"><span data-stu-id="5470f-164">Unregister-PackageSource</span></span>](Unregister-PackageSource.md)
+[<span data-ttu-id="455d2-167">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="455d2-167">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="5470f-165">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="5470f-165">Get-PackageSource</span></span>](Get-PackageSource.md)
+[<span data-ttu-id="455d2-168">Unregister-PackageSource</span><span class="sxs-lookup"><span data-stu-id="455d2-168">Unregister-PackageSource</span></span>](Unregister-PackageSource.md)
 
-[<span data-ttu-id="5470f-166">Register-PackageSource</span><span class="sxs-lookup"><span data-stu-id="5470f-166">Register-PackageSource</span></span>](Register-PackageSource.md)
+[<span data-ttu-id="455d2-169">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="455d2-169">Get-PackageSource</span></span>](Get-PackageSource.md)
 
-[<span data-ttu-id="5470f-167">Install-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="5470f-167">Install-PackageProvider</span></span>](Install-PackageProvider.md)
+[<span data-ttu-id="455d2-170">Register-PackageSource</span><span class="sxs-lookup"><span data-stu-id="455d2-170">Register-PackageSource</span></span>](Register-PackageSource.md)
 
+[<span data-ttu-id="455d2-171">Install-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="455d2-171">Install-PackageProvider</span></span>](Install-PackageProvider.md)

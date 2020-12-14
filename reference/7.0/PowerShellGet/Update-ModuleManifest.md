@@ -7,21 +7,21 @@ ms.date: 07/08/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-modulemanifest?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ModuleManifest
-ms.openlocfilehash: 81c58a09cb6c4e6cedcc7abfa832af7bb694b0e1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2ad1f5991920cecf0a5b494bde698510c1c55b94
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93198894"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890798"
 ---
-# <span data-ttu-id="b415f-103">Update-ModuleManifest</span><span class="sxs-lookup"><span data-stu-id="b415f-103">Update-ModuleManifest</span></span>
+# <span data-ttu-id="0c484-103">Update-ModuleManifest</span><span class="sxs-lookup"><span data-stu-id="0c484-103">Update-ModuleManifest</span></span>
 
-## <span data-ttu-id="b415f-104">摘要</span><span class="sxs-lookup"><span data-stu-id="b415f-104">SYNOPSIS</span></span>
-<span data-ttu-id="b415f-105">更新模块清单文件。</span><span class="sxs-lookup"><span data-stu-id="b415f-105">Updates a module manifest file.</span></span>
+## <span data-ttu-id="0c484-104">摘要</span><span class="sxs-lookup"><span data-stu-id="0c484-104">SYNOPSIS</span></span>
+<span data-ttu-id="0c484-105">更新模块清单文件。</span><span class="sxs-lookup"><span data-stu-id="0c484-105">Updates a module manifest file.</span></span>
 
-## <span data-ttu-id="b415f-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="b415f-106">SYNTAX</span></span>
+## <span data-ttu-id="0c484-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="0c484-106">SYNTAX</span></span>
 
-### <span data-ttu-id="b415f-107">全部</span><span class="sxs-lookup"><span data-stu-id="b415f-107">All</span></span>
+### <span data-ttu-id="0c484-107">全部</span><span class="sxs-lookup"><span data-stu-id="0c484-107">All</span></span>
 
 ```
 Update-ModuleManifest [-Path] <String> [-NestedModules <Object[]>] [-Guid <Guid>] [-Author <String>]
@@ -40,15 +40,15 @@ Update-ModuleManifest [-Path] <String> [-NestedModules <Object[]>] [-Guid <Guid>
  [-RequireLicenseAcceptance] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="b415f-108">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="b415f-108">DESCRIPTION</span></span>
+## <span data-ttu-id="0c484-108">说明</span><span class="sxs-lookup"><span data-stu-id="0c484-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="b415f-109">`Update-ModuleManifest`Cmdlet () 文件更新模块清单 `.psd1` 。</span><span class="sxs-lookup"><span data-stu-id="b415f-109">The `Update-ModuleManifest` cmdlet updates a module manifest (`.psd1`) file.</span></span>
+<span data-ttu-id="0c484-109">`Update-ModuleManifest`Cmdlet () 文件更新模块清单 `.psd1` 。</span><span class="sxs-lookup"><span data-stu-id="0c484-109">The `Update-ModuleManifest` cmdlet updates a module manifest (`.psd1`) file.</span></span>
 
-## <span data-ttu-id="b415f-110">示例</span><span class="sxs-lookup"><span data-stu-id="b415f-110">EXAMPLES</span></span>
+## <span data-ttu-id="0c484-110">示例</span><span class="sxs-lookup"><span data-stu-id="0c484-110">EXAMPLES</span></span>
 
-### <span data-ttu-id="b415f-111">示例1：更新模块清单</span><span class="sxs-lookup"><span data-stu-id="b415f-111">Example 1: Update a module manifest</span></span>
+### <span data-ttu-id="0c484-111">示例1：更新模块清单</span><span class="sxs-lookup"><span data-stu-id="0c484-111">Example 1: Update a module manifest</span></span>
 
-<span data-ttu-id="b415f-112">此示例更新现有的模块清单文件。</span><span class="sxs-lookup"><span data-stu-id="b415f-112">This example updates an existing module manifest file.</span></span> <span data-ttu-id="b415f-113">展开用于将参数值传递给 `Update-ModuleManifest` 。</span><span class="sxs-lookup"><span data-stu-id="b415f-113">Splatting is used to pass parameter values to `Update-ModuleManifest`.</span></span> <span data-ttu-id="b415f-114">有关详细信息，请参阅 [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md)。</span><span class="sxs-lookup"><span data-stu-id="b415f-114">For more information, see [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md).</span></span>
+<span data-ttu-id="0c484-112">此示例更新现有的模块清单文件。</span><span class="sxs-lookup"><span data-stu-id="0c484-112">This example updates an existing module manifest file.</span></span> <span data-ttu-id="0c484-113">展开用于将参数值传递给 `Update-ModuleManifest` 。</span><span class="sxs-lookup"><span data-stu-id="0c484-113">Splatting is used to pass parameter values to `Update-ModuleManifest`.</span></span> <span data-ttu-id="0c484-114">有关详细信息，请参阅 [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md)。</span><span class="sxs-lookup"><span data-stu-id="0c484-114">For more information, see [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md).</span></span>
 
 ```powershell
 $Parms = @{
@@ -61,15 +61,15 @@ $Parms = @{
 Update-ModuleManifest @Parms
 ```
 
-<span data-ttu-id="b415f-115">`$Parms` 是存储 **路径** 、 **作者** 、 **公司名称** 和 **版权** 的参数值的 splat。</span><span class="sxs-lookup"><span data-stu-id="b415f-115">`$Parms` is a splat that stores the parameter values for **Path** , **Author** , **CompanyName** , and **Copyright** .</span></span> <span data-ttu-id="b415f-116">`Update-ModuleManifest` 从获取参数值， `@Parms` 并更新 **TestManifest.psd1** 的模块清单。</span><span class="sxs-lookup"><span data-stu-id="b415f-116">`Update-ModuleManifest` gets the parameter values from `@Parms` and updates the module manifest, **TestManifest.psd1** .</span></span>
+<span data-ttu-id="0c484-115">`$Parms` 是存储 **路径**、 **作者**、 **公司名称** 和 **版权** 的参数值的 splat。</span><span class="sxs-lookup"><span data-stu-id="0c484-115">`$Parms` is a splat that stores the parameter values for **Path**, **Author**, **CompanyName**, and **Copyright**.</span></span> <span data-ttu-id="0c484-116">`Update-ModuleManifest` 从获取参数值， `@Parms` 并更新 **TestManifest.psd1** 的模块清单。</span><span class="sxs-lookup"><span data-stu-id="0c484-116">`Update-ModuleManifest` gets the parameter values from `@Parms` and updates the module manifest, **TestManifest.psd1**.</span></span>
 
-## <span data-ttu-id="b415f-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="b415f-117">PARAMETERS</span></span>
+## <span data-ttu-id="0c484-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="0c484-117">PARAMETERS</span></span>
 
-### <span data-ttu-id="b415f-118">-AliasesToExport</span><span class="sxs-lookup"><span data-stu-id="b415f-118">-AliasesToExport</span></span>
+### <span data-ttu-id="0c484-118">-AliasesToExport</span><span class="sxs-lookup"><span data-stu-id="0c484-118">-AliasesToExport</span></span>
 
-<span data-ttu-id="b415f-119">指定模块导出的别名。</span><span class="sxs-lookup"><span data-stu-id="b415f-119">Specifies the aliases that the module exports.</span></span> <span data-ttu-id="b415f-120">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="b415f-120">Wildcards are permitted.</span></span>
+<span data-ttu-id="0c484-119">指定模块导出的别名。</span><span class="sxs-lookup"><span data-stu-id="0c484-119">Specifies the aliases that the module exports.</span></span> <span data-ttu-id="0c484-120">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="0c484-120">Wildcards are permitted.</span></span>
 
-<span data-ttu-id="b415f-121">使用此参数来限制由模块导出的别名。</span><span class="sxs-lookup"><span data-stu-id="b415f-121">Use this parameter to restrict the aliases that are exported by the module.</span></span> <span data-ttu-id="b415f-122">**AliasesToExport** 可以从导出的别名列表中删除别名，但不能将别名添加到该列表中。</span><span class="sxs-lookup"><span data-stu-id="b415f-122">**AliasesToExport** can remove aliases from the list of exported aliases, but it can't add aliases to the list.</span></span>
+<span data-ttu-id="0c484-121">使用此参数来限制由模块导出的别名。</span><span class="sxs-lookup"><span data-stu-id="0c484-121">Use this parameter to restrict the aliases that are exported by the module.</span></span> <span data-ttu-id="0c484-122">**AliasesToExport** 可以从导出的别名列表中删除别名，但不能将别名添加到该列表中。</span><span class="sxs-lookup"><span data-stu-id="0c484-122">**AliasesToExport** can remove aliases from the list of exported aliases, but it can't add aliases to the list.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -83,9 +83,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="b415f-123">-作者</span><span class="sxs-lookup"><span data-stu-id="b415f-123">-Author</span></span>
+### <span data-ttu-id="0c484-123">-作者</span><span class="sxs-lookup"><span data-stu-id="0c484-123">-Author</span></span>
 
-<span data-ttu-id="b415f-124">指定模块作者。</span><span class="sxs-lookup"><span data-stu-id="b415f-124">Specifies the module author.</span></span>
+<span data-ttu-id="0c484-124">指定模块作者。</span><span class="sxs-lookup"><span data-stu-id="0c484-124">Specifies the module author.</span></span>
 
 ```yaml
 Type: System.String
@@ -99,9 +99,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-125">-ClrVersion</span><span class="sxs-lookup"><span data-stu-id="b415f-125">-ClrVersion</span></span>
+### <span data-ttu-id="0c484-125">-ClrVersion</span><span class="sxs-lookup"><span data-stu-id="0c484-125">-ClrVersion</span></span>
 
-<span data-ttu-id="b415f-126">指定模块需要的 Microsoft .NET Framework 的公共语言运行时 (CLR) 的最低版本。</span><span class="sxs-lookup"><span data-stu-id="b415f-126">Specifies the minimum version of the Common Language Runtime (CLR) of the Microsoft .NET Framework that the module requires.</span></span>
+<span data-ttu-id="0c484-126">指定模块需要的 Microsoft .NET Framework 的公共语言运行时 (CLR) 的最低版本。</span><span class="sxs-lookup"><span data-stu-id="0c484-126">Specifies the minimum version of the Common Language Runtime (CLR) of the Microsoft .NET Framework that the module requires.</span></span>
 
 ```yaml
 Type: System.Version
@@ -115,11 +115,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-127">-CmdletsToExport</span><span class="sxs-lookup"><span data-stu-id="b415f-127">-CmdletsToExport</span></span>
+### <span data-ttu-id="0c484-127">-CmdletsToExport</span><span class="sxs-lookup"><span data-stu-id="0c484-127">-CmdletsToExport</span></span>
 
-<span data-ttu-id="b415f-128">指定模块导出的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="b415f-128">Specifies the cmdlets that the module exports.</span></span> <span data-ttu-id="b415f-129">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="b415f-129">Wildcards are permitted.</span></span>
+<span data-ttu-id="0c484-128">指定模块导出的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="0c484-128">Specifies the cmdlets that the module exports.</span></span> <span data-ttu-id="0c484-129">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="0c484-129">Wildcards are permitted.</span></span>
 
-<span data-ttu-id="b415f-130">使用此参数来限制由模块导出的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="b415f-130">Use this parameter to restrict the cmdlets that are exported by the module.</span></span> <span data-ttu-id="b415f-131">**CmdletsToExport** 可以从导出的 cmdlet 列表中删除 cmdlet，但不能将 cmdlet 添加到该列表中。</span><span class="sxs-lookup"><span data-stu-id="b415f-131">**CmdletsToExport** can remove cmdlets from the list of exported cmdlets, but it can't add cmdlets to the list.</span></span>
+<span data-ttu-id="0c484-130">使用此参数来限制由模块导出的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="0c484-130">Use this parameter to restrict the cmdlets that are exported by the module.</span></span> <span data-ttu-id="0c484-131">**CmdletsToExport** 可以从导出的 cmdlet 列表中删除 cmdlet，但不能将 cmdlet 添加到该列表中。</span><span class="sxs-lookup"><span data-stu-id="0c484-131">**CmdletsToExport** can remove cmdlets from the list of exported cmdlets, but it can't add cmdlets to the list.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -133,9 +133,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="b415f-132">-公司名称</span><span class="sxs-lookup"><span data-stu-id="b415f-132">-CompanyName</span></span>
+### <span data-ttu-id="0c484-132">-公司名称</span><span class="sxs-lookup"><span data-stu-id="0c484-132">-CompanyName</span></span>
 
-<span data-ttu-id="b415f-133">指定创建该模块的公司或供应商。</span><span class="sxs-lookup"><span data-stu-id="b415f-133">Specifies the company or vendor who created the module.</span></span>
+<span data-ttu-id="0c484-133">指定创建该模块的公司或供应商。</span><span class="sxs-lookup"><span data-stu-id="0c484-133">Specifies the company or vendor who created the module.</span></span>
 
 ```yaml
 Type: System.String
@@ -149,9 +149,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-134">-CompatiblePSEditions</span><span class="sxs-lookup"><span data-stu-id="b415f-134">-CompatiblePSEditions</span></span>
+### <span data-ttu-id="0c484-134">-CompatiblePSEditions</span><span class="sxs-lookup"><span data-stu-id="0c484-134">-CompatiblePSEditions</span></span>
 
-<span data-ttu-id="b415f-135">指定模块的兼容 **PSEditions** 。</span><span class="sxs-lookup"><span data-stu-id="b415f-135">Specifies the compatible **PSEditions** of the module.</span></span> <span data-ttu-id="b415f-136">有关 **PSEdition** 的信息，请参阅 [具有兼容的 PowerShell 版本的模块](/powershell/scripting/gallery/concepts/module-psedition-support)。</span><span class="sxs-lookup"><span data-stu-id="b415f-136">For information about **PSEdition** , see [Modules with compatible PowerShell Editions](/powershell/scripting/gallery/concepts/module-psedition-support).</span></span>
+<span data-ttu-id="0c484-135">指定模块的兼容 **PSEditions** 。</span><span class="sxs-lookup"><span data-stu-id="0c484-135">Specifies the compatible **PSEditions** of the module.</span></span> <span data-ttu-id="0c484-136">有关 **PSEdition** 的信息，请参阅 [具有兼容的 PowerShell 版本的模块](/powershell/scripting/gallery/concepts/module-psedition-support)。</span><span class="sxs-lookup"><span data-stu-id="0c484-136">For information about **PSEdition**, see [Modules with compatible PowerShell Editions](/powershell/scripting/gallery/concepts/module-psedition-support).</span></span>
 
 ```yaml
 Type: System.String[]
@@ -166,9 +166,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-137">-Confirm</span><span class="sxs-lookup"><span data-stu-id="b415f-137">-Confirm</span></span>
+### <span data-ttu-id="0c484-137">-Confirm</span><span class="sxs-lookup"><span data-stu-id="0c484-137">-Confirm</span></span>
 
-<span data-ttu-id="b415f-138">在运行之前提示你进行确认 `Update-ModuleManifest` 。</span><span class="sxs-lookup"><span data-stu-id="b415f-138">Prompts you for confirmation before running `Update-ModuleManifest`.</span></span>
+<span data-ttu-id="0c484-138">在运行之前提示你进行确认 `Update-ModuleManifest` 。</span><span class="sxs-lookup"><span data-stu-id="0c484-138">Prompts you for confirmation before running `Update-ModuleManifest`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -182,25 +182,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-139">-版权所有</span><span class="sxs-lookup"><span data-stu-id="b415f-139">-Copyright</span></span>
+### <span data-ttu-id="0c484-139">-版权所有</span><span class="sxs-lookup"><span data-stu-id="0c484-139">-Copyright</span></span>
 
-<span data-ttu-id="b415f-140">指定模块的版权声明。</span><span class="sxs-lookup"><span data-stu-id="b415f-140">Specifies a copyright statement for the module.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b415f-141">-DefaultCommandPrefix</span><span class="sxs-lookup"><span data-stu-id="b415f-141">-DefaultCommandPrefix</span></span>
-
-<span data-ttu-id="b415f-142">指定默认命令前缀。</span><span class="sxs-lookup"><span data-stu-id="b415f-142">Specifies the default command prefix.</span></span>
+<span data-ttu-id="0c484-140">指定模块的版权声明。</span><span class="sxs-lookup"><span data-stu-id="0c484-140">Specifies a copyright statement for the module.</span></span>
 
 ```yaml
 Type: System.String
@@ -214,9 +198,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-143">-Description</span><span class="sxs-lookup"><span data-stu-id="b415f-143">-Description</span></span>
+### <span data-ttu-id="0c484-141">-DefaultCommandPrefix</span><span class="sxs-lookup"><span data-stu-id="0c484-141">-DefaultCommandPrefix</span></span>
 
-<span data-ttu-id="b415f-144">指定模块的说明。</span><span class="sxs-lookup"><span data-stu-id="b415f-144">Specifies a description of the module.</span></span>
+<span data-ttu-id="0c484-142">指定默认命令前缀。</span><span class="sxs-lookup"><span data-stu-id="0c484-142">Specifies the default command prefix.</span></span>
 
 ```yaml
 Type: System.String
@@ -230,9 +214,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-145">-DotNetFrameworkVersion</span><span class="sxs-lookup"><span data-stu-id="b415f-145">-DotNetFrameworkVersion</span></span>
+### <span data-ttu-id="0c484-143">-Description</span><span class="sxs-lookup"><span data-stu-id="0c484-143">-Description</span></span>
 
-<span data-ttu-id="b415f-146">指定模块需要的 Microsoft .NET Framework 的最低版本。</span><span class="sxs-lookup"><span data-stu-id="b415f-146">Specifies the minimum version of the Microsoft .NET Framework that the module requires.</span></span>
+<span data-ttu-id="0c484-144">指定模块的说明。</span><span class="sxs-lookup"><span data-stu-id="0c484-144">Specifies a description of the module.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0c484-145">-DotNetFrameworkVersion</span><span class="sxs-lookup"><span data-stu-id="0c484-145">-DotNetFrameworkVersion</span></span>
+
+<span data-ttu-id="0c484-146">指定模块需要的 Microsoft .NET Framework 的最低版本。</span><span class="sxs-lookup"><span data-stu-id="0c484-146">Specifies the minimum version of the Microsoft .NET Framework that the module requires.</span></span>
 
 ```yaml
 Type: System.Version
@@ -246,25 +246,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-147">-DscResourcesToExport</span><span class="sxs-lookup"><span data-stu-id="b415f-147">-DscResourcesToExport</span></span>
+### <span data-ttu-id="0c484-147">-DscResourcesToExport</span><span class="sxs-lookup"><span data-stu-id="0c484-147">-DscResourcesToExport</span></span>
 
-<span data-ttu-id="b415f-148">指定模块导出 (DSC) 资源的所需状态配置。</span><span class="sxs-lookup"><span data-stu-id="b415f-148">Specifies the Desired State Configuration (DSC) resources that the module exports.</span></span> <span data-ttu-id="b415f-149">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="b415f-149">Wildcards are permitted.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b415f-150">-ExternalModuleDependencies</span><span class="sxs-lookup"><span data-stu-id="b415f-150">-ExternalModuleDependencies</span></span>
-
-<span data-ttu-id="b415f-151">指定外部模块依赖项的数组。</span><span class="sxs-lookup"><span data-stu-id="b415f-151">Specifies an array of external module dependencies.</span></span>
+<span data-ttu-id="0c484-148">指定模块导出 (DSC) 资源的所需状态配置。</span><span class="sxs-lookup"><span data-stu-id="0c484-148">Specifies the Desired State Configuration (DSC) resources that the module exports.</span></span> <span data-ttu-id="0c484-149">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="0c484-149">Wildcards are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -278,28 +262,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-152">-FileList</span><span class="sxs-lookup"><span data-stu-id="b415f-152">-FileList</span></span>
+### <span data-ttu-id="0c484-150">-ExternalModuleDependencies</span><span class="sxs-lookup"><span data-stu-id="0c484-150">-ExternalModuleDependencies</span></span>
 
-<span data-ttu-id="b415f-153">指定模块中包括的所有项。</span><span class="sxs-lookup"><span data-stu-id="b415f-153">Specifies all items that are included in the module.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b415f-154">-FormatsToProcess</span><span class="sxs-lookup"><span data-stu-id="b415f-154">-FormatsToProcess</span></span>
-
-<span data-ttu-id="b415f-155">指定 `.ps1xml` 导入模块时运行)  (格式设置文件。</span><span class="sxs-lookup"><span data-stu-id="b415f-155">Specifies the formatting files (`.ps1xml`) that run when the module is imported.</span></span>
-
-<span data-ttu-id="b415f-156">导入模块时，PowerShell 将 `Update-FormatData` 使用指定的文件运行 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="b415f-156">When you import a module, PowerShell runs the `Update-FormatData` cmdlet with the specified files.</span></span>
-<span data-ttu-id="b415f-157">由于格式设置文件没有作用域，因此它们会影响会话中的所有会话状态。</span><span class="sxs-lookup"><span data-stu-id="b415f-157">Because formatting files aren't scoped, they affect all session states in the session.</span></span>
+<span data-ttu-id="0c484-151">指定外部模块依赖项的数组。</span><span class="sxs-lookup"><span data-stu-id="0c484-151">Specifies an array of external module dependencies.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -313,11 +278,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-158">-FunctionsToExport</span><span class="sxs-lookup"><span data-stu-id="b415f-158">-FunctionsToExport</span></span>
+### <span data-ttu-id="0c484-152">-FileList</span><span class="sxs-lookup"><span data-stu-id="0c484-152">-FileList</span></span>
 
-<span data-ttu-id="b415f-159">指定模块导出的函数。</span><span class="sxs-lookup"><span data-stu-id="b415f-159">Specifies the functions that the module exports.</span></span> <span data-ttu-id="b415f-160">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="b415f-160">Wildcards are permitted.</span></span>
+<span data-ttu-id="0c484-153">指定模块中包括的所有项。</span><span class="sxs-lookup"><span data-stu-id="0c484-153">Specifies all items that are included in the module.</span></span>
 
-<span data-ttu-id="b415f-161">使用此参数来限制由模块导出的函数。</span><span class="sxs-lookup"><span data-stu-id="b415f-161">Use this parameter to restrict the functions that are exported by the module.</span></span> <span data-ttu-id="b415f-162">**FunctionsToExport** 可以从导出的别名列表中删除函数，但不能将函数添加到列表。</span><span class="sxs-lookup"><span data-stu-id="b415f-162">**FunctionsToExport** can remove functions from the list of exported aliases, but it can't add functions to the list.</span></span>
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0c484-154">-FormatsToProcess</span><span class="sxs-lookup"><span data-stu-id="0c484-154">-FormatsToProcess</span></span>
+
+<span data-ttu-id="0c484-155">指定 `.ps1xml` 导入模块时运行)  (格式设置文件。</span><span class="sxs-lookup"><span data-stu-id="0c484-155">Specifies the formatting files (`.ps1xml`) that run when the module is imported.</span></span>
+
+<span data-ttu-id="0c484-156">导入模块时，PowerShell 将 `Update-FormatData` 使用指定的文件运行 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="0c484-156">When you import a module, PowerShell runs the `Update-FormatData` cmdlet with the specified files.</span></span>
+<span data-ttu-id="0c484-157">由于格式设置文件没有作用域，因此它们会影响会话中的所有会话状态。</span><span class="sxs-lookup"><span data-stu-id="0c484-157">Because formatting files aren't scoped, they affect all session states in the session.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0c484-158">-FunctionsToExport</span><span class="sxs-lookup"><span data-stu-id="0c484-158">-FunctionsToExport</span></span>
+
+<span data-ttu-id="0c484-159">指定模块导出的函数。</span><span class="sxs-lookup"><span data-stu-id="0c484-159">Specifies the functions that the module exports.</span></span> <span data-ttu-id="0c484-160">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="0c484-160">Wildcards are permitted.</span></span>
+
+<span data-ttu-id="0c484-161">使用此参数来限制由模块导出的函数。</span><span class="sxs-lookup"><span data-stu-id="0c484-161">Use this parameter to restrict the functions that are exported by the module.</span></span> <span data-ttu-id="0c484-162">**FunctionsToExport** 可以从导出的别名列表中删除函数，但不能将函数添加到列表。</span><span class="sxs-lookup"><span data-stu-id="0c484-162">**FunctionsToExport** can remove functions from the list of exported aliases, but it can't add functions to the list.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -331,9 +331,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="b415f-163">-Guid</span><span class="sxs-lookup"><span data-stu-id="b415f-163">-Guid</span></span>
+### <span data-ttu-id="0c484-163">-Guid</span><span class="sxs-lookup"><span data-stu-id="0c484-163">-Guid</span></span>
 
-<span data-ttu-id="b415f-164">指定模块的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="b415f-164">Specifies a unique identifier for the module.</span></span> <span data-ttu-id="b415f-165">可以使用 GUID 来区分名称相同的模块。</span><span class="sxs-lookup"><span data-stu-id="b415f-165">The GUID can be used to distinguish among modules with the same name.</span></span>
+<span data-ttu-id="0c484-164">指定模块的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="0c484-164">Specifies a unique identifier for the module.</span></span> <span data-ttu-id="0c484-165">可以使用 GUID 来区分名称相同的模块。</span><span class="sxs-lookup"><span data-stu-id="0c484-165">The GUID can be used to distinguish among modules with the same name.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -347,30 +347,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-166">-HelpInfoUri</span><span class="sxs-lookup"><span data-stu-id="b415f-166">-HelpInfoUri</span></span>
+### <span data-ttu-id="0c484-166">-HelpInfoUri</span><span class="sxs-lookup"><span data-stu-id="0c484-166">-HelpInfoUri</span></span>
 
-<span data-ttu-id="b415f-167">指定模块的 **HELPINFO XML** 文件的 internet 地址。</span><span class="sxs-lookup"><span data-stu-id="b415f-167">Specifies the internet address of the module's **HelpInfo XML** file.</span></span> <span data-ttu-id="b415f-168">输入以 **http** 或 **HTTPS** 开头 (URI) 的统一资源标识符。</span><span class="sxs-lookup"><span data-stu-id="b415f-168">Enter a Uniform Resource Identifier (URI) that begins with **http** or **https** .</span></span>
+<span data-ttu-id="0c484-167">指定模块的 **HELPINFO XML** 文件的 internet 地址。</span><span class="sxs-lookup"><span data-stu-id="0c484-167">Specifies the internet address of the module's **HelpInfo XML** file.</span></span> <span data-ttu-id="0c484-168">输入以 **http** 或 **HTTPS** 开头 (URI) 的统一资源标识符。</span><span class="sxs-lookup"><span data-stu-id="0c484-168">Enter a Uniform Resource Identifier (URI) that begins with **http** or **https**.</span></span>
 
-<span data-ttu-id="b415f-169">**HELPINFO XML** 文件支持 PowerShell 版本3.0 中引入的可更新帮助功能。</span><span class="sxs-lookup"><span data-stu-id="b415f-169">The **HelpInfo XML** file supports the Updatable Help feature that was introduced in PowerShell version 3.0.</span></span> <span data-ttu-id="b415f-170">它包含有关该模块的可下载帮助文件的位置，以及每个支持的区域设置最新帮助文件的版本号的信息。</span><span class="sxs-lookup"><span data-stu-id="b415f-170">It contains information about the location of the module's downloadable help files and the version numbers of the newest help files for each supported locale.</span></span>
+<span data-ttu-id="0c484-169">**HELPINFO XML** 文件支持 PowerShell 版本3.0 中引入的可更新帮助功能。</span><span class="sxs-lookup"><span data-stu-id="0c484-169">The **HelpInfo XML** file supports the Updatable Help feature that was introduced in PowerShell version 3.0.</span></span> <span data-ttu-id="0c484-170">它包含有关该模块的可下载帮助文件的位置，以及每个支持的区域设置最新帮助文件的版本号的信息。</span><span class="sxs-lookup"><span data-stu-id="0c484-170">It contains information about the location of the module's downloadable help files and the version numbers of the newest help files for each supported locale.</span></span>
 
-<span data-ttu-id="b415f-171">有关可更新帮助的信息，请参阅 [about_Updatable_Help](../Microsoft.PowerShell.Core/About/about_Updatable_Help.md)。</span><span class="sxs-lookup"><span data-stu-id="b415f-171">For information about Updatable Help, see [about_Updatable_Help](../Microsoft.PowerShell.Core/About/about_Updatable_Help.md).</span></span>
-<span data-ttu-id="b415f-172">有关 **HELPINFO XML** 文件的信息，请参阅 [支持可更新的帮助](/powershell/scripting/developer/module/supporting-updatable-help)。</span><span class="sxs-lookup"><span data-stu-id="b415f-172">For information about the **HelpInfo XML** file, see [Supporting Updatable Help](/powershell/scripting/developer/module/supporting-updatable-help).</span></span>
-
-```yaml
-Type: System.Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b415f-173">-IconUri</span><span class="sxs-lookup"><span data-stu-id="b415f-173">-IconUri</span></span>
-
-<span data-ttu-id="b415f-174">指定模块的图标的 URL。</span><span class="sxs-lookup"><span data-stu-id="b415f-174">Specifies the URL of an icon for the module.</span></span> <span data-ttu-id="b415f-175">指定的图标显示在模块的库网页上。</span><span class="sxs-lookup"><span data-stu-id="b415f-175">The specified icon is displayed on the gallery web page for the module.</span></span>
+<span data-ttu-id="0c484-171">有关可更新帮助的信息，请参阅 [about_Updatable_Help](../Microsoft.PowerShell.Core/About/about_Updatable_Help.md)。</span><span class="sxs-lookup"><span data-stu-id="0c484-171">For information about Updatable Help, see [about_Updatable_Help](../Microsoft.PowerShell.Core/About/about_Updatable_Help.md).</span></span>
+<span data-ttu-id="0c484-172">有关 **HELPINFO XML** 文件的信息，请参阅 [支持可更新的帮助](/powershell/scripting/developer/module/supporting-updatable-help)。</span><span class="sxs-lookup"><span data-stu-id="0c484-172">For information about the **HelpInfo XML** file, see [Supporting Updatable Help](/powershell/scripting/developer/module/supporting-updatable-help).</span></span>
 
 ```yaml
 Type: System.Uri
@@ -384,9 +368,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-176">-LicenseUri</span><span class="sxs-lookup"><span data-stu-id="b415f-176">-LicenseUri</span></span>
+### <span data-ttu-id="0c484-173">-IconUri</span><span class="sxs-lookup"><span data-stu-id="0c484-173">-IconUri</span></span>
 
-<span data-ttu-id="b415f-177">指定模块的许可条款 URL。</span><span class="sxs-lookup"><span data-stu-id="b415f-177">Specifies the URL of licensing terms for the module.</span></span>
+<span data-ttu-id="0c484-174">指定模块的图标的 URL。</span><span class="sxs-lookup"><span data-stu-id="0c484-174">Specifies the URL of an icon for the module.</span></span> <span data-ttu-id="0c484-175">指定的图标显示在模块的库网页上。</span><span class="sxs-lookup"><span data-stu-id="0c484-175">The specified icon is displayed on the gallery web page for the module.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -400,13 +384,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-178">-ModuleList</span><span class="sxs-lookup"><span data-stu-id="b415f-178">-ModuleList</span></span>
+### <span data-ttu-id="0c484-176">-LicenseUri</span><span class="sxs-lookup"><span data-stu-id="0c484-176">-LicenseUri</span></span>
 
-<span data-ttu-id="b415f-179">指定模块中包含的模块的数组。</span><span class="sxs-lookup"><span data-stu-id="b415f-179">Specifies an array of modules that are included in the module.</span></span>
+<span data-ttu-id="0c484-177">指定模块的许可条款 URL。</span><span class="sxs-lookup"><span data-stu-id="0c484-177">Specifies the URL of licensing terms for the module.</span></span>
 
-<span data-ttu-id="b415f-180">以字符串形式或具有 **ModuleName** 和 **ModuleVersion** 键的哈希表形式输入每个模块名称。</span><span class="sxs-lookup"><span data-stu-id="b415f-180">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="b415f-181">哈希表也可能具有一个可选的 **GUID** 键。</span><span class="sxs-lookup"><span data-stu-id="b415f-181">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="b415f-182">可以将字符串和哈希表组合到参数值中。</span><span class="sxs-lookup"><span data-stu-id="b415f-182">You can combine strings and hash tables in the parameter value.</span></span>
+```yaml
+Type: System.Uri
+Parameter Sets: (All)
+Aliases:
 
-<span data-ttu-id="b415f-183">此键专门用于充当模块清单。</span><span class="sxs-lookup"><span data-stu-id="b415f-183">This key is designed to act as a module inventory.</span></span> <span data-ttu-id="b415f-184">不会自动处理此键的值中列出的模块。</span><span class="sxs-lookup"><span data-stu-id="b415f-184">The modules that are listed in the value of this key aren't automatically processed.</span></span>
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0c484-178">-ModuleList</span><span class="sxs-lookup"><span data-stu-id="0c484-178">-ModuleList</span></span>
+
+<span data-ttu-id="0c484-179">指定模块中包含的模块的数组。</span><span class="sxs-lookup"><span data-stu-id="0c484-179">Specifies an array of modules that are included in the module.</span></span>
+
+<span data-ttu-id="0c484-180">以字符串形式或具有 **ModuleName** 和 **ModuleVersion** 键的哈希表形式输入每个模块名称。</span><span class="sxs-lookup"><span data-stu-id="0c484-180">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="0c484-181">哈希表也可能具有一个可选的 **GUID** 键。</span><span class="sxs-lookup"><span data-stu-id="0c484-181">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="0c484-182">可以将字符串和哈希表组合到参数值中。</span><span class="sxs-lookup"><span data-stu-id="0c484-182">You can combine strings and hash tables in the parameter value.</span></span>
+
+<span data-ttu-id="0c484-183">此键专门用于充当模块清单。</span><span class="sxs-lookup"><span data-stu-id="0c484-183">This key is designed to act as a module inventory.</span></span> <span data-ttu-id="0c484-184">不会自动处理此键的值中列出的模块。</span><span class="sxs-lookup"><span data-stu-id="0c484-184">The modules that are listed in the value of this key aren't automatically processed.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -420,9 +420,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-185">-ModuleVersion</span><span class="sxs-lookup"><span data-stu-id="b415f-185">-ModuleVersion</span></span>
+### <span data-ttu-id="0c484-185">-ModuleVersion</span><span class="sxs-lookup"><span data-stu-id="0c484-185">-ModuleVersion</span></span>
 
-<span data-ttu-id="b415f-186">指定模块的版本。</span><span class="sxs-lookup"><span data-stu-id="b415f-186">Specifies the version of the module.</span></span>
+<span data-ttu-id="0c484-186">指定模块的版本。</span><span class="sxs-lookup"><span data-stu-id="0c484-186">Specifies the version of the module.</span></span>
 
 ```yaml
 Type: System.Version
@@ -436,11 +436,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-187">-NestedModules</span><span class="sxs-lookup"><span data-stu-id="b415f-187">-NestedModules</span></span>
+### <span data-ttu-id="0c484-187">-NestedModules</span><span class="sxs-lookup"><span data-stu-id="0c484-187">-NestedModules</span></span>
 
-<span data-ttu-id="b415f-188">指定脚本模块 (`.psm1` `.dll` 导入模块的会话状态中 () 的) 和二进制模块。</span><span class="sxs-lookup"><span data-stu-id="b415f-188">Specifies script modules (`.psm1`) and binary modules (`.dll`) that are imported into the module's session state.</span></span> <span data-ttu-id="b415f-189">**NestedModules** 键中的文件按照其在值中的列出顺序运行。</span><span class="sxs-lookup"><span data-stu-id="b415f-189">The files in the **NestedModules** key run in the order in which they're listed in the value.</span></span>
+<span data-ttu-id="0c484-188">指定脚本模块 (`.psm1` `.dll` 导入模块的会话状态中 () 的) 和二进制模块。</span><span class="sxs-lookup"><span data-stu-id="0c484-188">Specifies script modules (`.psm1`) and binary modules (`.dll`) that are imported into the module's session state.</span></span> <span data-ttu-id="0c484-189">**NestedModules** 键中的文件按照其在值中的列出顺序运行。</span><span class="sxs-lookup"><span data-stu-id="0c484-189">The files in the **NestedModules** key run in the order in which they're listed in the value.</span></span>
 
-<span data-ttu-id="b415f-190">以字符串形式或具有 **ModuleName** 和 **ModuleVersion** 键的哈希表形式输入每个模块名称。</span><span class="sxs-lookup"><span data-stu-id="b415f-190">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="b415f-191">哈希表也可能具有一个可选的 **GUID** 键。</span><span class="sxs-lookup"><span data-stu-id="b415f-191">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="b415f-192">可以将字符串和哈希表组合到参数值中。</span><span class="sxs-lookup"><span data-stu-id="b415f-192">You can combine strings and hash tables in the parameter value.</span></span>
+<span data-ttu-id="0c484-190">以字符串形式或具有 **ModuleName** 和 **ModuleVersion** 键的哈希表形式输入每个模块名称。</span><span class="sxs-lookup"><span data-stu-id="0c484-190">Enter each module name as a string or as a hash table with **ModuleName** and **ModuleVersion** keys.</span></span> <span data-ttu-id="0c484-191">哈希表也可能具有一个可选的 **GUID** 键。</span><span class="sxs-lookup"><span data-stu-id="0c484-191">The hash table can also have an optional **GUID** key.</span></span> <span data-ttu-id="0c484-192">可以将字符串和哈希表组合到参数值中。</span><span class="sxs-lookup"><span data-stu-id="0c484-192">You can combine strings and hash tables in the parameter value.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -454,9 +454,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-193">-PackageManagementProviders</span><span class="sxs-lookup"><span data-stu-id="b415f-193">-PackageManagementProviders</span></span>
+### <span data-ttu-id="0c484-193">-PackageManagementProviders</span><span class="sxs-lookup"><span data-stu-id="0c484-193">-PackageManagementProviders</span></span>
 
-<span data-ttu-id="b415f-194">指定包管理提供程序的数组。</span><span class="sxs-lookup"><span data-stu-id="b415f-194">Specifies an array of package management providers.</span></span>
+<span data-ttu-id="0c484-194">指定包管理提供程序的数组。</span><span class="sxs-lookup"><span data-stu-id="0c484-194">Specifies an array of package management providers.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -470,9 +470,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-195">-PassThru</span><span class="sxs-lookup"><span data-stu-id="b415f-195">-PassThru</span></span>
+### <span data-ttu-id="0c484-195">-PassThru</span><span class="sxs-lookup"><span data-stu-id="0c484-195">-PassThru</span></span>
 
-<span data-ttu-id="b415f-196">返回一个对象，该对象表示正在处理的项。</span><span class="sxs-lookup"><span data-stu-id="b415f-196">Returns an object representing the item with which you're working.</span></span> <span data-ttu-id="b415f-197">默认情况下， `Update-ModuleManifest` 不会生成任何输出。</span><span class="sxs-lookup"><span data-stu-id="b415f-197">By default, `Update-ModuleManifest` doesn't generate any output.</span></span>
+<span data-ttu-id="0c484-196">返回一个对象，该对象表示正在处理的项。</span><span class="sxs-lookup"><span data-stu-id="0c484-196">Returns an object representing the item with which you're working.</span></span> <span data-ttu-id="0c484-197">默认情况下， `Update-ModuleManifest` 不会生成任何输出。</span><span class="sxs-lookup"><span data-stu-id="0c484-197">By default, `Update-ModuleManifest` doesn't generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -486,15 +486,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-198">-Path</span><span class="sxs-lookup"><span data-stu-id="b415f-198">-Path</span></span>
+### <span data-ttu-id="0c484-198">-Path</span><span class="sxs-lookup"><span data-stu-id="0c484-198">-Path</span></span>
 
-<span data-ttu-id="b415f-199">指定模块清单的路径和文件名。</span><span class="sxs-lookup"><span data-stu-id="b415f-199">Specifies the path and file name of the module manifest.</span></span> <span data-ttu-id="b415f-200">输入文件扩展名为的路径和文件名 `.psd1` ，例如 `$PSHOME\Modules\MyModule\MyModule.psd1` 。</span><span class="sxs-lookup"><span data-stu-id="b415f-200">Enter a path and file name with a `.psd1` file name extension, such as `$PSHOME\Modules\MyModule\MyModule.psd1`.</span></span>
+<span data-ttu-id="0c484-199">指定模块清单的路径和文件名。</span><span class="sxs-lookup"><span data-stu-id="0c484-199">Specifies the path and file name of the module manifest.</span></span> <span data-ttu-id="0c484-200">输入文件扩展名为的路径和文件名 `.psd1` ，例如 `$PSHOME\Modules\MyModule\MyModule.psd1` 。</span><span class="sxs-lookup"><span data-stu-id="0c484-200">Enter a path and file name with a `.psd1` file name extension, such as `$PSHOME\Modules\MyModule\MyModule.psd1`.</span></span>
 
-<span data-ttu-id="b415f-201">如果指定了现有文件的路径，则将 `Update-ModuleManifest` 替换该文件而不发出警告，除非该文件具有只读属性。</span><span class="sxs-lookup"><span data-stu-id="b415f-201">If you specify the path to an existing file, `Update-ModuleManifest` replaces the file without warning unless the file has the read-only attribute.</span></span>
+<span data-ttu-id="0c484-201">如果指定了现有文件的路径，则将 `Update-ModuleManifest` 替换该文件而不发出警告，除非该文件具有只读属性。</span><span class="sxs-lookup"><span data-stu-id="0c484-201">If you specify the path to an existing file, `Update-ModuleManifest` replaces the file without warning unless the file has the read-only attribute.</span></span>
 
-<span data-ttu-id="b415f-202">清单应位于模块的目录中，清单文件的名称应与模块目录名称相同，但具有 `.psd1` 扩展名。</span><span class="sxs-lookup"><span data-stu-id="b415f-202">The manifest should be located in the module's directory, and the manifest file name should be the same as the module directory name, but with a `.psd1` extension.</span></span>
+<span data-ttu-id="0c484-202">清单应位于模块的目录中，清单文件的名称应与模块目录名称相同，但具有 `.psd1` 扩展名。</span><span class="sxs-lookup"><span data-stu-id="0c484-202">The manifest should be located in the module's directory, and the manifest file name should be the same as the module directory name, but with a `.psd1` extension.</span></span>
 
-<span data-ttu-id="b415f-203">不能使用变量（如 `$PSHOME` 或 `$HOME` ）来响应 **Path** 参数值的提示。</span><span class="sxs-lookup"><span data-stu-id="b415f-203">You can't use variables, such as `$PSHOME` or `$HOME`, in response to a prompt for a **Path** parameter value.</span></span> <span data-ttu-id="b415f-204">若要使用变量，请将 **Path** 参数包含在命令中。</span><span class="sxs-lookup"><span data-stu-id="b415f-204">To use a variable, include the **Path** parameter in the command.</span></span>
+<span data-ttu-id="0c484-203">不能使用变量（如 `$PSHOME` 或 `$HOME` ）来响应 **Path** 参数值的提示。</span><span class="sxs-lookup"><span data-stu-id="0c484-203">You can't use variables, such as `$PSHOME` or `$HOME`, in response to a prompt for a **Path** parameter value.</span></span> <span data-ttu-id="0c484-204">若要使用变量，请将 **Path** 参数包含在命令中。</span><span class="sxs-lookup"><span data-stu-id="0c484-204">To use a variable, include the **Path** parameter in the command.</span></span>
 
 ```yaml
 Type: System.String
@@ -508,59 +508,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-205">-PowerShellHostName</span><span class="sxs-lookup"><span data-stu-id="b415f-205">-PowerShellHostName</span></span>
+### <span data-ttu-id="0c484-205">-PowerShellHostName</span><span class="sxs-lookup"><span data-stu-id="0c484-205">-PowerShellHostName</span></span>
 
-<span data-ttu-id="b415f-206">指定模块所需的 PowerShell 主机程序的名称。</span><span class="sxs-lookup"><span data-stu-id="b415f-206">Specifies the name of the PowerShell host program that the module requires.</span></span> <span data-ttu-id="b415f-207">输入主机程序的名称，例如 PowerShell ISE Host 或 ConsoleHost。</span><span class="sxs-lookup"><span data-stu-id="b415f-207">Enter the name of the host program, such as PowerShell ISE Host or ConsoleHost.</span></span> <span data-ttu-id="b415f-208">不允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="b415f-208">Wildcards aren't permitted.</span></span>
+<span data-ttu-id="0c484-206">指定模块所需的 PowerShell 主机程序的名称。</span><span class="sxs-lookup"><span data-stu-id="0c484-206">Specifies the name of the PowerShell host program that the module requires.</span></span> <span data-ttu-id="0c484-207">输入主机程序的名称，例如 PowerShell ISE Host 或 ConsoleHost。</span><span class="sxs-lookup"><span data-stu-id="0c484-207">Enter the name of the host program, such as PowerShell ISE Host or ConsoleHost.</span></span> <span data-ttu-id="0c484-208">不允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="0c484-208">Wildcards aren't permitted.</span></span>
 
-<span data-ttu-id="b415f-209">若要查找主机程序的名称，请在 "程序" 中键入 `$Host.Name` 。</span><span class="sxs-lookup"><span data-stu-id="b415f-209">To find the name of a host program, in the program, type `$Host.Name`.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b415f-210">-PowerShellHostVersion</span><span class="sxs-lookup"><span data-stu-id="b415f-210">-PowerShellHostVersion</span></span>
-
-<span data-ttu-id="b415f-211">指定适用于该模块的 PowerShell 主机程序的最低版本。</span><span class="sxs-lookup"><span data-stu-id="b415f-211">Specifies the minimum version of the PowerShell host program that works with the module.</span></span> <span data-ttu-id="b415f-212">输入版本号，例如 1.1。</span><span class="sxs-lookup"><span data-stu-id="b415f-212">Enter a version number, such as 1.1.</span></span>
-
-```yaml
-Type: System.Version
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b415f-213">-PowerShellVersion</span><span class="sxs-lookup"><span data-stu-id="b415f-213">-PowerShellVersion</span></span>
-
-<span data-ttu-id="b415f-214">指定将用于此模块的 PowerShell 的最低版本。</span><span class="sxs-lookup"><span data-stu-id="b415f-214">Specifies the minimum version of PowerShell that will work with this module.</span></span> <span data-ttu-id="b415f-215">例如，可以将3.0、4.0 或5.0 指定为此参数的值。</span><span class="sxs-lookup"><span data-stu-id="b415f-215">For example, you can specify 3.0, 4.0, or 5.0 as the value of this parameter.</span></span>
-
-```yaml
-Type: System.Version
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b415f-216">-预发行版</span><span class="sxs-lookup"><span data-stu-id="b415f-216">-Prerelease</span></span>
-
-<span data-ttu-id="b415f-217">指示模块为预发行版。</span><span class="sxs-lookup"><span data-stu-id="b415f-217">Indicates the module is prerelease.</span></span>
+<span data-ttu-id="0c484-209">若要查找主机程序的名称，请在 "程序" 中键入 `$Host.Name` 。</span><span class="sxs-lookup"><span data-stu-id="0c484-209">To find the name of a host program, in the program, type `$Host.Name`.</span></span>
 
 ```yaml
 Type: System.String
@@ -574,9 +526,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-218">-PrivateData</span><span class="sxs-lookup"><span data-stu-id="b415f-218">-PrivateData</span></span>
+### <span data-ttu-id="0c484-210">-PowerShellHostVersion</span><span class="sxs-lookup"><span data-stu-id="0c484-210">-PowerShellHostVersion</span></span>
 
-<span data-ttu-id="b415f-219">指定导入模块时传递给模块的数据。</span><span class="sxs-lookup"><span data-stu-id="b415f-219">Specifies data that is passed to the module when it's imported.</span></span>
+<span data-ttu-id="0c484-211">指定适用于该模块的 PowerShell 主机程序的最低版本。</span><span class="sxs-lookup"><span data-stu-id="0c484-211">Specifies the minimum version of the PowerShell host program that works with the module.</span></span> <span data-ttu-id="0c484-212">输入版本号，例如 1.1。</span><span class="sxs-lookup"><span data-stu-id="0c484-212">Enter a version number, such as 1.1.</span></span>
+
+```yaml
+Type: System.Version
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0c484-213">-PowerShellVersion</span><span class="sxs-lookup"><span data-stu-id="0c484-213">-PowerShellVersion</span></span>
+
+<span data-ttu-id="0c484-214">指定将用于此模块的 PowerShell 的最低版本。</span><span class="sxs-lookup"><span data-stu-id="0c484-214">Specifies the minimum version of PowerShell that will work with this module.</span></span> <span data-ttu-id="0c484-215">例如，可以将3.0、4.0 或5.0 指定为此参数的值。</span><span class="sxs-lookup"><span data-stu-id="0c484-215">For example, you can specify 3.0, 4.0, or 5.0 as the value of this parameter.</span></span>
+
+```yaml
+Type: System.Version
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0c484-216">-预发行版</span><span class="sxs-lookup"><span data-stu-id="0c484-216">-Prerelease</span></span>
+
+<span data-ttu-id="0c484-217">指示模块为预发行版。</span><span class="sxs-lookup"><span data-stu-id="0c484-217">Indicates the module is prerelease.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0c484-218">-PrivateData</span><span class="sxs-lookup"><span data-stu-id="0c484-218">-PrivateData</span></span>
+
+<span data-ttu-id="0c484-219">指定导入模块时传递给模块的数据。</span><span class="sxs-lookup"><span data-stu-id="0c484-219">Specifies data that is passed to the module when it's imported.</span></span>
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -590,18 +590,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-220">-ProcessorArchitecture</span><span class="sxs-lookup"><span data-stu-id="b415f-220">-ProcessorArchitecture</span></span>
+### <span data-ttu-id="0c484-220">-ProcessorArchitecture</span><span class="sxs-lookup"><span data-stu-id="0c484-220">-ProcessorArchitecture</span></span>
 
-<span data-ttu-id="b415f-221">指定模块需要的处理器体系结构。</span><span class="sxs-lookup"><span data-stu-id="b415f-221">Specifies the processor architecture that the module requires.</span></span>
+<span data-ttu-id="0c484-221">指定模块需要的处理器体系结构。</span><span class="sxs-lookup"><span data-stu-id="0c484-221">Specifies the processor architecture that the module requires.</span></span>
 
-<span data-ttu-id="b415f-222">此参数的可接受值为：</span><span class="sxs-lookup"><span data-stu-id="b415f-222">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="0c484-222">此参数的可接受值为：</span><span class="sxs-lookup"><span data-stu-id="0c484-222">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="b415f-223">Amd64</span><span class="sxs-lookup"><span data-stu-id="b415f-223">Amd64</span></span>
-- <span data-ttu-id="b415f-224">Arm</span><span class="sxs-lookup"><span data-stu-id="b415f-224">Arm</span></span>
-- <span data-ttu-id="b415f-225">IA64</span><span class="sxs-lookup"><span data-stu-id="b415f-225">IA64</span></span>
-- <span data-ttu-id="b415f-226">MSIL</span><span class="sxs-lookup"><span data-stu-id="b415f-226">MSIL</span></span>
-- <span data-ttu-id="b415f-227">无 (未知或未指定的) </span><span class="sxs-lookup"><span data-stu-id="b415f-227">None (unknown or unspecified)</span></span>
-- <span data-ttu-id="b415f-228">X86</span><span class="sxs-lookup"><span data-stu-id="b415f-228">X86</span></span>
+- <span data-ttu-id="0c484-223">Amd64</span><span class="sxs-lookup"><span data-stu-id="0c484-223">Amd64</span></span>
+- <span data-ttu-id="0c484-224">Arm</span><span class="sxs-lookup"><span data-stu-id="0c484-224">Arm</span></span>
+- <span data-ttu-id="0c484-225">IA64</span><span class="sxs-lookup"><span data-stu-id="0c484-225">IA64</span></span>
+- <span data-ttu-id="0c484-226">MSIL</span><span class="sxs-lookup"><span data-stu-id="0c484-226">MSIL</span></span>
+- <span data-ttu-id="0c484-227">无 (未知或未指定的) </span><span class="sxs-lookup"><span data-stu-id="0c484-227">None (unknown or unspecified)</span></span>
+- <span data-ttu-id="0c484-228">X86</span><span class="sxs-lookup"><span data-stu-id="0c484-228">X86</span></span>
 
 ```yaml
 Type: System.Reflection.ProcessorArchitecture
@@ -616,9 +616,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-229">-ProjectUri</span><span class="sxs-lookup"><span data-stu-id="b415f-229">-ProjectUri</span></span>
+### <span data-ttu-id="0c484-229">-ProjectUri</span><span class="sxs-lookup"><span data-stu-id="0c484-229">-ProjectUri</span></span>
 
-<span data-ttu-id="b415f-230">指定有关此项目的网页的 URL。</span><span class="sxs-lookup"><span data-stu-id="b415f-230">Specifies the URL of a web page about this project.</span></span>
+<span data-ttu-id="0c484-230">指定有关此项目的网页的 URL。</span><span class="sxs-lookup"><span data-stu-id="0c484-230">Specifies the URL of a web page about this project.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -632,28 +632,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-231">-ReleaseNotes</span><span class="sxs-lookup"><span data-stu-id="b415f-231">-ReleaseNotes</span></span>
+### <span data-ttu-id="0c484-231">-ReleaseNotes</span><span class="sxs-lookup"><span data-stu-id="0c484-231">-ReleaseNotes</span></span>
 
-<span data-ttu-id="b415f-232">指定一个字符串数组，其中包含要用于此版本的脚本的发行说明或注释。</span><span class="sxs-lookup"><span data-stu-id="b415f-232">Specifies a string array that contains release notes or comments that you want available for this version of the script.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b415f-233">-RequiredAssemblies</span><span class="sxs-lookup"><span data-stu-id="b415f-233">-RequiredAssemblies</span></span>
-
-<span data-ttu-id="b415f-234">指定模块需要的程序集 (`.dll`) 文件。</span><span class="sxs-lookup"><span data-stu-id="b415f-234">Specifies the assembly (`.dll`) files that the module requires.</span></span> <span data-ttu-id="b415f-235">输入程序集文件名。</span><span class="sxs-lookup"><span data-stu-id="b415f-235">Enter the assembly file names.</span></span>
-<span data-ttu-id="b415f-236">PowerShell 在更新类型或格式、导入嵌套模块或导入在 **RootModule** 项的值中指定的模块文件之前加载指定的程序集。</span><span class="sxs-lookup"><span data-stu-id="b415f-236">PowerShell loads the specified assemblies before updating types or formats, importing nested modules, or importing the module file that is specified in the value of the **RootModule** key.</span></span>
-
-<span data-ttu-id="b415f-237">使用此参数可指定模块所需的所有程序集，包括必须加载以便更新 **FormatsToProcess** 或 **TypesToProcess** 键中列出的任何格式设置或类型文件的程序集，即使这些程序集也在 **NestedModules** 项中作为二进制模块列出也是如此。</span><span class="sxs-lookup"><span data-stu-id="b415f-237">Use this parameter to specify all the assemblies that the module requires, including assemblies that must be loaded to update any formatting or type files that are listed in the **FormatsToProcess** or **TypesToProcess** keys, even if those assemblies are also listed as binary modules in the **NestedModules** key.</span></span>
+<span data-ttu-id="0c484-232">指定一个字符串数组，其中包含要用于此版本的脚本的发行说明或注释。</span><span class="sxs-lookup"><span data-stu-id="0c484-232">Specifies a string array that contains release notes or comments that you want available for this version of the script.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -667,9 +648,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-238">-RequiredModules</span><span class="sxs-lookup"><span data-stu-id="b415f-238">-RequiredModules</span></span>
+### <span data-ttu-id="0c484-233">-RequiredAssemblies</span><span class="sxs-lookup"><span data-stu-id="0c484-233">-RequiredAssemblies</span></span>
 
-<span data-ttu-id="b415f-239">指定必须处于全局会话状态的模块。</span><span class="sxs-lookup"><span data-stu-id="b415f-239">Specifies modules that must be in the global session state.</span></span> <span data-ttu-id="b415f-240">如果所需模块未处于全局会话状态，则 PowerShell 会将其导入。</span><span class="sxs-lookup"><span data-stu-id="b415f-240">If the required modules aren't in the global session state, PowerShell imports them.</span></span> <span data-ttu-id="b415f-241">如果所需模块不可用，则该 `Import-Module` 命令将失败。</span><span class="sxs-lookup"><span data-stu-id="b415f-241">If the required modules aren't available, the `Import-Module` command fails.</span></span>
+<span data-ttu-id="0c484-234">指定模块需要的程序集 (`.dll`) 文件。</span><span class="sxs-lookup"><span data-stu-id="0c484-234">Specifies the assembly (`.dll`) files that the module requires.</span></span> <span data-ttu-id="0c484-235">输入程序集文件名。</span><span class="sxs-lookup"><span data-stu-id="0c484-235">Enter the assembly file names.</span></span>
+<span data-ttu-id="0c484-236">PowerShell 在更新类型或格式、导入嵌套模块或导入在 **RootModule** 项的值中指定的模块文件之前加载指定的程序集。</span><span class="sxs-lookup"><span data-stu-id="0c484-236">PowerShell loads the specified assemblies before updating types or formats, importing nested modules, or importing the module file that is specified in the value of the **RootModule** key.</span></span>
+
+<span data-ttu-id="0c484-237">使用此参数可指定模块所需的所有程序集，包括必须加载以便更新 **FormatsToProcess** 或 **TypesToProcess** 键中列出的任何格式设置或类型文件的程序集，即使这些程序集也在 **NestedModules** 项中作为二进制模块列出也是如此。</span><span class="sxs-lookup"><span data-stu-id="0c484-237">Use this parameter to specify all the assemblies that the module requires, including assemblies that must be loaded to update any formatting or type files that are listed in the **FormatsToProcess** or **TypesToProcess** keys, even if those assemblies are also listed as binary modules in the **NestedModules** key.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0c484-238">-RequiredModules</span><span class="sxs-lookup"><span data-stu-id="0c484-238">-RequiredModules</span></span>
+
+<span data-ttu-id="0c484-239">指定必须处于全局会话状态的模块。</span><span class="sxs-lookup"><span data-stu-id="0c484-239">Specifies modules that must be in the global session state.</span></span> <span data-ttu-id="0c484-240">如果所需模块未处于全局会话状态，则 PowerShell 会将其导入。</span><span class="sxs-lookup"><span data-stu-id="0c484-240">If the required modules aren't in the global session state, PowerShell imports them.</span></span> <span data-ttu-id="0c484-241">如果所需模块不可用，则该 `Import-Module` 命令将失败。</span><span class="sxs-lookup"><span data-stu-id="0c484-241">If the required modules aren't available, the `Import-Module` command fails.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -683,9 +683,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-242">-RequireLicenseAcceptance</span><span class="sxs-lookup"><span data-stu-id="b415f-242">-RequireLicenseAcceptance</span></span>
+### <span data-ttu-id="0c484-242">-RequireLicenseAcceptance</span><span class="sxs-lookup"><span data-stu-id="0c484-242">-RequireLicenseAcceptance</span></span>
 
-<span data-ttu-id="b415f-243">指定模块需要接受许可证。</span><span class="sxs-lookup"><span data-stu-id="b415f-243">Specifies that a license acceptance is required for the module.</span></span>
+<span data-ttu-id="0c484-243">指定模块需要接受许可证。</span><span class="sxs-lookup"><span data-stu-id="0c484-243">Specifies that a license acceptance is required for the module.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -699,15 +699,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-244">-RootModule</span><span class="sxs-lookup"><span data-stu-id="b415f-244">-RootModule</span></span>
+### <span data-ttu-id="0c484-244">-RootModule</span><span class="sxs-lookup"><span data-stu-id="0c484-244">-RootModule</span></span>
 
-<span data-ttu-id="b415f-245">指定模块的主文件或根文件。</span><span class="sxs-lookup"><span data-stu-id="b415f-245">Specifies the primary or root file of the module.</span></span> <span data-ttu-id="b415f-246">输入脚本的文件名 (`.ps1`) 、脚本模块 (`.psm1`) 、模块清单 () `.psd1` 、程序集 (`.dll`) 、cmdlet 定义 XML 文件 (`.cdxml`) 或 () 工作流 `.xaml` 。</span><span class="sxs-lookup"><span data-stu-id="b415f-246">Enter the file name of a script (`.ps1`), a script module (`.psm1`), a module manifest (`.psd1`), an assembly (`.dll`), a cmdlet definition XML file (`.cdxml`), or a workflow (`.xaml`).</span></span> <span data-ttu-id="b415f-247">导入模块时，从根模块文件导出的成员将导入到调用方的会话状态中。</span><span class="sxs-lookup"><span data-stu-id="b415f-247">When the module is imported, the members that are exported from the root module file are imported into the caller's session state.</span></span>
+<span data-ttu-id="0c484-245">指定模块的主文件或根文件。</span><span class="sxs-lookup"><span data-stu-id="0c484-245">Specifies the primary or root file of the module.</span></span> <span data-ttu-id="0c484-246">输入脚本的文件名 (`.ps1`) 、脚本模块 (`.psm1`) 、模块清单 () `.psd1` 、程序集 (`.dll`) 、cmdlet 定义 XML 文件 (`.cdxml`) 或 () 工作流 `.xaml` 。</span><span class="sxs-lookup"><span data-stu-id="0c484-246">Enter the file name of a script (`.ps1`), a script module (`.psm1`), a module manifest (`.psd1`), an assembly (`.dll`), a cmdlet definition XML file (`.cdxml`), or a workflow (`.xaml`).</span></span> <span data-ttu-id="0c484-247">导入模块时，从根模块文件导出的成员将导入到调用方的会话状态中。</span><span class="sxs-lookup"><span data-stu-id="0c484-247">When the module is imported, the members that are exported from the root module file are imported into the caller's session state.</span></span>
 
-<span data-ttu-id="b415f-248">如果某个模块具有清单文件，并且未在 **RootModule** 项中指定任何根文件，则该清单将成为该模块的主文件。</span><span class="sxs-lookup"><span data-stu-id="b415f-248">If a module has a manifest file and no root file has been specified in the **RootModule** key, the manifest becomes the primary file for the module.</span></span> <span data-ttu-id="b415f-249">而且，模块将成为清单模块 (ModuleType = Manifest) 。</span><span class="sxs-lookup"><span data-stu-id="b415f-249">And, the module becomes a manifest module (ModuleType = Manifest).</span></span>
+<span data-ttu-id="0c484-248">如果某个模块具有清单文件，并且未在 **RootModule** 项中指定任何根文件，则该清单将成为该模块的主文件。</span><span class="sxs-lookup"><span data-stu-id="0c484-248">If a module has a manifest file and no root file has been specified in the **RootModule** key, the manifest becomes the primary file for the module.</span></span> <span data-ttu-id="0c484-249">而且，模块将成为清单模块 (ModuleType = Manifest) 。</span><span class="sxs-lookup"><span data-stu-id="0c484-249">And, the module becomes a manifest module (ModuleType = Manifest).</span></span>
 
-<span data-ttu-id="b415f-250">若要从 `.psm1` `.dll` 具有清单的模块中的或文件中导出成员，必须在清单中的 **RootModule** 或 **NestedModules** 键的值中指定这些文件的名称。</span><span class="sxs-lookup"><span data-stu-id="b415f-250">To export members from `.psm1` or `.dll` files in a module that has a manifest, the names of those files must be specified in the values of the **RootModule** or **NestedModules** keys in the manifest.</span></span> <span data-ttu-id="b415f-251">否则，不会导出它们的成员。</span><span class="sxs-lookup"><span data-stu-id="b415f-251">Otherwise, their members aren't exported.</span></span>
+<span data-ttu-id="0c484-250">若要从 `.psm1` `.dll` 具有清单的模块中的或文件中导出成员，必须在清单中的 **RootModule** 或 **NestedModules** 键的值中指定这些文件的名称。</span><span class="sxs-lookup"><span data-stu-id="0c484-250">To export members from `.psm1` or `.dll` files in a module that has a manifest, the names of those files must be specified in the values of the **RootModule** or **NestedModules** keys in the manifest.</span></span> <span data-ttu-id="0c484-251">否则，不会导出它们的成员。</span><span class="sxs-lookup"><span data-stu-id="0c484-251">Otherwise, their members aren't exported.</span></span>
 
-<span data-ttu-id="b415f-252">在 PowerShell 2.0 中，此密钥称为 **ModuleToProcess** 。</span><span class="sxs-lookup"><span data-stu-id="b415f-252">In PowerShell 2.0, this key was called **ModuleToProcess** .</span></span>
+<span data-ttu-id="0c484-252">在 PowerShell 2.0 中，此密钥称为 **ModuleToProcess**。</span><span class="sxs-lookup"><span data-stu-id="0c484-252">In PowerShell 2.0, this key was called **ModuleToProcess**.</span></span>
 
 ```yaml
 Type: System.String
@@ -721,28 +721,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-253">-ScriptsToProcess</span><span class="sxs-lookup"><span data-stu-id="b415f-253">-ScriptsToProcess</span></span>
+### <span data-ttu-id="0c484-253">-ScriptsToProcess</span><span class="sxs-lookup"><span data-stu-id="0c484-253">-ScriptsToProcess</span></span>
 
-<span data-ttu-id="b415f-254">指定 `.ps1` 导入模块时，在调用方的会话状态中运行的脚本 () 文件。</span><span class="sxs-lookup"><span data-stu-id="b415f-254">Specifies script (`.ps1`) files that run in the caller's session state when the module is imported.</span></span>
-<span data-ttu-id="b415f-255">可以像使用登录脚本一样使用这些脚本来准备环境。</span><span class="sxs-lookup"><span data-stu-id="b415f-255">You can use these scripts to prepare an environment, just as you might use a login script.</span></span>
+<span data-ttu-id="0c484-254">指定 `.ps1` 导入模块时，在调用方的会话状态中运行的脚本 () 文件。</span><span class="sxs-lookup"><span data-stu-id="0c484-254">Specifies script (`.ps1`) files that run in the caller's session state when the module is imported.</span></span>
+<span data-ttu-id="0c484-255">可以像使用登录脚本一样使用这些脚本来准备环境。</span><span class="sxs-lookup"><span data-stu-id="0c484-255">You can use these scripts to prepare an environment, just as you might use a login script.</span></span>
 
-<span data-ttu-id="b415f-256">若要指定在模块的会话状态中运行的脚本，请使用 **NestedModules** 键。</span><span class="sxs-lookup"><span data-stu-id="b415f-256">To specify scripts that run in the module's session state, use the **NestedModules** key.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="b415f-257">-Tags</span><span class="sxs-lookup"><span data-stu-id="b415f-257">-Tags</span></span>
-
-<span data-ttu-id="b415f-258">指定标记的数组。</span><span class="sxs-lookup"><span data-stu-id="b415f-258">Specifies an array of tags.</span></span>
+<span data-ttu-id="0c484-256">若要指定在模块的会话状态中运行的脚本，请使用 **NestedModules** 键。</span><span class="sxs-lookup"><span data-stu-id="0c484-256">To specify scripts that run in the module's session state, use the **NestedModules** key.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -756,12 +740,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-259">-TypesToProcess</span><span class="sxs-lookup"><span data-stu-id="b415f-259">-TypesToProcess</span></span>
+### <span data-ttu-id="0c484-257">-Tags</span><span class="sxs-lookup"><span data-stu-id="0c484-257">-Tags</span></span>
 
-<span data-ttu-id="b415f-260">指定 `.ps1xml` 导入模块时运行)  (类型文件。</span><span class="sxs-lookup"><span data-stu-id="b415f-260">Specifies the type files (`.ps1xml`) that run when the module is imported.</span></span>
-
-<span data-ttu-id="b415f-261">导入模块时，PowerShell 将运行 `Update-TypeData` 具有指定文件的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="b415f-261">When you import the module, PowerShell runs the `Update-TypeData` cmdlet with the specified files.</span></span>
-<span data-ttu-id="b415f-262">由于类型文件不作用域，因此它们会影响会话中的所有会话状态。</span><span class="sxs-lookup"><span data-stu-id="b415f-262">Because type files aren't scoped, they affect all session states in the session.</span></span>
+<span data-ttu-id="0c484-258">指定标记的数组。</span><span class="sxs-lookup"><span data-stu-id="0c484-258">Specifies an array of tags.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -775,11 +756,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-263">-VariablesToExport</span><span class="sxs-lookup"><span data-stu-id="b415f-263">-VariablesToExport</span></span>
+### <span data-ttu-id="0c484-259">-TypesToProcess</span><span class="sxs-lookup"><span data-stu-id="0c484-259">-TypesToProcess</span></span>
 
-<span data-ttu-id="b415f-264">指定模块导出的变量。</span><span class="sxs-lookup"><span data-stu-id="b415f-264">Specifies the variables that the module exports.</span></span> <span data-ttu-id="b415f-265">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="b415f-265">Wildcards are permitted.</span></span>
+<span data-ttu-id="0c484-260">指定 `.ps1xml` 导入模块时运行)  (类型文件。</span><span class="sxs-lookup"><span data-stu-id="0c484-260">Specifies the type files (`.ps1xml`) that run when the module is imported.</span></span>
 
-<span data-ttu-id="b415f-266">使用此参数来限制由模块导出的变量。</span><span class="sxs-lookup"><span data-stu-id="b415f-266">Use this parameter to restrict the variables that are exported by the module.</span></span> <span data-ttu-id="b415f-267">**VariablesToExport** 可以从导出的变量列表中删除变量，但不能将变量添加到该列表中。</span><span class="sxs-lookup"><span data-stu-id="b415f-267">**VariablesToExport** can remove variables from the list of exported variables, but it can't add variables to the list.</span></span>
+<span data-ttu-id="0c484-261">导入模块时，PowerShell 将运行 `Update-TypeData` 具有指定文件的 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="0c484-261">When you import the module, PowerShell runs the `Update-TypeData` cmdlet with the specified files.</span></span>
+<span data-ttu-id="0c484-262">由于类型文件不作用域，因此它们会影响会话中的所有会话状态。</span><span class="sxs-lookup"><span data-stu-id="0c484-262">Because type files aren't scoped, they affect all session states in the session.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0c484-263">-VariablesToExport</span><span class="sxs-lookup"><span data-stu-id="0c484-263">-VariablesToExport</span></span>
+
+<span data-ttu-id="0c484-264">指定模块导出的变量。</span><span class="sxs-lookup"><span data-stu-id="0c484-264">Specifies the variables that the module exports.</span></span> <span data-ttu-id="0c484-265">允许使用通配符。</span><span class="sxs-lookup"><span data-stu-id="0c484-265">Wildcards are permitted.</span></span>
+
+<span data-ttu-id="0c484-266">使用此参数来限制由模块导出的变量。</span><span class="sxs-lookup"><span data-stu-id="0c484-266">Use this parameter to restrict the variables that are exported by the module.</span></span> <span data-ttu-id="0c484-267">**VariablesToExport** 可以从导出的变量列表中删除变量，但不能将变量添加到该列表中。</span><span class="sxs-lookup"><span data-stu-id="0c484-267">**VariablesToExport** can remove variables from the list of exported variables, but it can't add variables to the list.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -793,9 +793,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="b415f-268">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="b415f-268">-WhatIf</span></span>
+### <span data-ttu-id="0c484-268">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="0c484-268">-WhatIf</span></span>
 
-<span data-ttu-id="b415f-269">显示运行时将发生 `Update-ModuleManifest` 的情况。</span><span class="sxs-lookup"><span data-stu-id="b415f-269">Shows what would happen if `Update-ModuleManifest` runs.</span></span> <span data-ttu-id="b415f-270">cmdlet 未运行。</span><span class="sxs-lookup"><span data-stu-id="b415f-270">The cmdlet isn't run.</span></span>
+<span data-ttu-id="0c484-269">显示运行时将发生 `Update-ModuleManifest` 的情况。</span><span class="sxs-lookup"><span data-stu-id="0c484-269">Shows what would happen if `Update-ModuleManifest` runs.</span></span> <span data-ttu-id="0c484-270">cmdlet 未运行。</span><span class="sxs-lookup"><span data-stu-id="0c484-270">The cmdlet isn't run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -809,18 +809,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b415f-271">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b415f-271">CommonParameters</span></span>
+### <span data-ttu-id="0c484-271">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="0c484-271">CommonParameters</span></span>
 
-<span data-ttu-id="b415f-272">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="b415f-272">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b415f-273">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="b415f-273">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="0c484-272">此 cmdlet 支持以下常见参数：-Debug、-ErrorAction、-ErrorVariable、-InformationAction、-InformationVariable、-OutVariable、-OutBuffer、-PipelineVariable、-Verbose、-WarningAction 和 -WarningVariable。</span><span class="sxs-lookup"><span data-stu-id="0c484-272">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="0c484-273">有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。</span><span class="sxs-lookup"><span data-stu-id="0c484-273">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="b415f-274">输入</span><span class="sxs-lookup"><span data-stu-id="b415f-274">INPUTS</span></span>
+## <span data-ttu-id="0c484-274">输入</span><span class="sxs-lookup"><span data-stu-id="0c484-274">INPUTS</span></span>
 
-### <span data-ttu-id="b415f-275">System.String</span><span class="sxs-lookup"><span data-stu-id="b415f-275">System.String</span></span>
+### <span data-ttu-id="0c484-275">System.String</span><span class="sxs-lookup"><span data-stu-id="0c484-275">System.String</span></span>
 
-## <span data-ttu-id="b415f-276">输出</span><span class="sxs-lookup"><span data-stu-id="b415f-276">OUTPUTS</span></span>
+## <span data-ttu-id="0c484-276">输出</span><span class="sxs-lookup"><span data-stu-id="0c484-276">OUTPUTS</span></span>
 
-### <span data-ttu-id="b415f-277">System.Object</span><span class="sxs-lookup"><span data-stu-id="b415f-277">System.Object</span></span>
+### <span data-ttu-id="0c484-277">System.Object</span><span class="sxs-lookup"><span data-stu-id="0c484-277">System.Object</span></span>
 
-## <span data-ttu-id="b415f-278">注释</span><span class="sxs-lookup"><span data-stu-id="b415f-278">NOTES</span></span>
+## <span data-ttu-id="0c484-278">注释</span><span class="sxs-lookup"><span data-stu-id="0c484-278">NOTES</span></span>
 
-## <span data-ttu-id="b415f-279">相关链接</span><span class="sxs-lookup"><span data-stu-id="b415f-279">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="0c484-279">从2020年4月起，PowerShell 库不再支持传输层安全 (TLS) 版本1.0 和1.1。</span><span class="sxs-lookup"><span data-stu-id="0c484-279">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="0c484-280">如果使用的不是 TLS 1.2 或更高版本，则在尝试访问 PowerShell 库时，会收到错误。</span><span class="sxs-lookup"><span data-stu-id="0c484-280">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="0c484-281">使用以下命令确保使用的是 TLS 1.2：</span><span class="sxs-lookup"><span data-stu-id="0c484-281">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="0c484-282">有关详细信息，请参阅 PowerShell 博客中的 [公告](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 。</span><span class="sxs-lookup"><span data-stu-id="0c484-282">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
+
+## <span data-ttu-id="0c484-283">相关链接</span><span class="sxs-lookup"><span data-stu-id="0c484-283">RELATED LINKS</span></span>
