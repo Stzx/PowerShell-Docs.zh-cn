@@ -4,10 +4,10 @@ ms.topic: reference
 title: 安装 PowerShell 模块
 description: 安装 PowerShell 模块
 ms.openlocfilehash: 3c7a4413168934ca4de1912c9615a6ae0fc45788
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92645332"
 ---
 # <a name="installing-a-powershell-module"></a>安装 PowerShell 模块
@@ -205,7 +205,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-完成这些步骤后， [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet 的 **ListAvailable** 参数将获取这两个 Fabrikam 模块。 若要导入特定模块，则使用 [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet 的 `MinimumVersion` 或 `RequiredVersion` 参数。
+完成这些步骤后，[Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet 的 **ListAvailable** 参数将获取这两个 Fabrikam 模块。 若要导入特定模块，则使用 [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet 的 `MinimumVersion` 或 `RequiredVersion` 参数。
 
 如果两个模块都导入到了同一会话中，并且两个模块都包含相同名称的 cmdlet，则最后导入的 cmdlet 将在会话中生效。
 

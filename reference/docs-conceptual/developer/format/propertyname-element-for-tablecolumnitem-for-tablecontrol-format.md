@@ -1,12 +1,14 @@
 ---
-title: 用于 TableControl (Format) 的 TableColumnItem 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: bf267eeb83aef59abea2d945af12e849252309c8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for TableColumnItem for TableControl (Format)
+description: PropertyName Element for TableColumnItem for TableControl (Format)
+ms.openlocfilehash: e83bbdb96d2755013cb9fe065cb98731ba44917f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772971"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665577"
 ---
 # <a name="propertyname-element-for-tablecolumnitem-for-tablecontrol-format"></a>PropertyName Element for TableColumnItem for TableControl (Format)
 
@@ -34,7 +36,7 @@ ms.locfileid: "87772971"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[TableColumnItem 元素 (格式) ](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)|定义其值显示在行的列中的属性或脚本。|
 
@@ -44,11 +46,11 @@ ms.locfileid: "87772971"
 
 ## <a name="remarks"></a>备注
 
-有关表视图的组件的详细信息，请参阅[创建表视图](./creating-a-table-view.md)。
+有关表视图的组件的详细信息，请参阅 [创建表视图](./creating-a-table-view.md)。
 
 ## <a name="example"></a>示例
 
-此示例演示一个 `TableColumnItem` 元素，该元素指定了 `Status` [system.object](/dotnet/api/System.Diagnostics.Process)对象的属性。
+此示例演示一个 `TableColumnItem` 元素，该元素指定了 `Status` [system.object](/dotnet/api/System.Diagnostics.Process) 对象的属性。
 
 ```xml
 <TableColumnItem>

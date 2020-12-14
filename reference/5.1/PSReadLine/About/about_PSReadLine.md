@@ -2,16 +2,16 @@
 description: PSReadLine 在 PowerShell 控制台中提供改进的命令行编辑体验。
 keywords: powershell
 Locale: en-US
-ms.date: 02/10/2020
+ms.date: 11/16/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 关于 PSReadLine
-ms.openlocfilehash: ad6e85a30f866cb332c89a4c36f42231f511f5ae
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 25fc3a9a814728057b1ebc7e721d3fba84ae72c2
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93200660"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692303"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -34,6 +34,8 @@ PSReadLine 2.0 为 PowerShell 控制台提供了强大的命令行编辑体验�
 - 在 Cmd 模式下，Bash 样式完成 (可选，默认值为 Emacs 模式) 
 - Emacs yank/kill 循环
 - 基于 PowerShell 令牌的 "word" 移动和终止
+
+PSReadLine 要求安装 PowerShell 3.0 或更高版本，以及控制台主机。 它在 PowerShell ISE 中不起作用。 它在 Visual Studio Code 的控制台中工作。
 
 类 **[PSConsoleReadLine]** 中提供了以下函数。
 
@@ -1284,11 +1286,7 @@ bool TryGetArgAsInt(System.Object arg, [ref] int numericArg,
   [ref]$numericArg, 1)
 ```
 
-## <a name="note"></a>注意
-
-### <a name="powershell-compatibility"></a>POWERSHELL 兼容性
-
-PSReadLine 要求安装 PowerShell 3.0 或更高版本，以及控制台主机。 它在 PowerShell ISE 中不起作用。 它在 Visual Studio Code 的控制台中工作。
+## <a name="note"></a>备注
 
 ### <a name="command-history"></a>命令历史记录
 

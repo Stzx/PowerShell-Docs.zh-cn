@@ -1,12 +1,14 @@
 ---
-title: WideEntry (Format) 的 SelectionCondition for EntrySelectedBy 的 PropertyName 元素 |Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ca2106dbbd8da345e71e83a3ead3cf7a1cb44cb4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PropertyName Element for SelectionCondition for EntrySelectedBy for WideEntry (Format)
+description: PropertyName Element for SelectionCondition for EntrySelectedBy for WideEntry (Format)
+ms.openlocfilehash: bda34b0c1e97fb85536132bedcec3986072801b7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773107"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665696"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format"></a>PropertyName Element for SelectionCondition for EntrySelectedBy for WideEntry (Format)
 
@@ -38,7 +40,7 @@ ms.locfileid: "87773107"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[WideEntry (格式的 EntrySelectedBy 的 SelectionCondition 元素) ](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|定义要使用此定义必须存在的条件。|
 
@@ -48,9 +50,9 @@ ms.locfileid: "87773107"
 
 ## <a name="remarks"></a>备注
 
-选择条件必须指定至少一个要计算的属性名称或脚本，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为[数据显示定义条件](./defining-conditions-for-displaying-data.md)。
+选择条件必须指定至少一个要计算的属性名称或脚本，但不能同时指定两者。 有关如何使用选择条件的详细信息，请参阅为 [数据显示定义条件](./defining-conditions-for-displaying-data.md)。
 
-有关大视图的其他组件的详细信息，请参阅[宽视图](./creating-a-wide-view.md)。
+有关大视图的其他组件的详细信息，请参阅 [宽视图](./creating-a-wide-view.md)。
 
 ## <a name="see-also"></a>另请参阅
 

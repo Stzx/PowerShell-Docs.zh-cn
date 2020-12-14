@@ -1,18 +1,20 @@
 ---
-title: 在脚本中放置基于注释的帮助
 ms.date: 09/12/2016
-ms.openlocfilehash: a3ade6c3138826b924939056b9d1ffb233006d44
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 在脚本中放置基于注释的帮助
+description: 在脚本中放置基于注释的帮助
+ms.openlocfilehash: b0d32b7ab063269085899a643b0c3a17da2073fc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893180"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645431"
 ---
 # <a name="placing-comment-based-help-in-scripts"></a>在脚本中放置基于注释的帮助
 
 本主题介绍在何处放置脚本的基于注释的帮助，以便该 `Get-Help` cmdlet 将基于注释的帮助主题与脚本关联，而不是与脚本中可能包含的任何函数关联。
 
-## <a name="where-to-place-comment-based-help-for-a-script"></a>在何处放置脚本的基于注释的帮助
+## <a name="where-to-place-comment-based-help-for-a-script"></a>在何处放置脚本 Comment-Based 帮助
 
 - 位于脚本文件的开头。
 
@@ -20,7 +22,7 @@ ms.locfileid: "86893180"
 
 - 脚本文件末尾。
 
-  如果脚本正文中的第一项（帮助下的第一项）是函数声明，则脚本的末尾和函数声明之间必须至少有两个空行。 否则，"帮助" 将被解释为该函数的帮助，而不是脚本的帮助。
+  如果在 "帮助") 后 (脚本正文中的第一项是函数声明，则脚本的末尾和函数声明之间必须至少有两个空行。 否则，"帮助" 将被解释为该函数的帮助，而不是脚本的帮助。
 
 ## <a name="examples-of-help-placement-in-a-script"></a>脚本中帮助位置的示例
 
