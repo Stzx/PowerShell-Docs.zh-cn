@@ -1,24 +1,24 @@
 ---
 title: 在 macOS 上安装 PowerShell
 description: 介绍如何在 macOS 上安装 PowerShell
-ms.date: 09/23/2020
-ms.openlocfilehash: 86647888910fb27528fb78c46a457fa1da856eb0
-ms.sourcegitcommit: 51104c7932a185b4d3293dbca306625369687468
+ms.date: 11/11/2020
+ms.openlocfilehash: 1ce96e993d8fc87edd93fca840ede250d5632577
+ms.sourcegitcommit: 3ab2951a5460a39ca5fb3d25ffcb1d8868f4e011
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91224678"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535094"
 ---
 # <a name="installing-powershell-on-macos"></a>在 macOS 上安装 PowerShell
 
-PowerShell 支持 macOS 10.12 及更高版本。 PowerShell 7.0.3 及更高版本和 PowerShell 预览版 7.1.0 及更高版本需要 macOS 10.13 及更高版本。 GitHub [版本][]页面上提供有所有可用包。 安装包以后，从终端运行 `pwsh`。
+PowerShell 7.0 或更高版本需要 macOS 10.13 或更高版本。 GitHub [版本][]页面上提供有所有可用包。 安装包以后，从终端运行 `pwsh`。
 
 > [!NOTE]
-> PowerShell 7 是就地升级，升级后会删除 PowerShell Core 6.x。
+> PowerShell 7.1 是就地升级，升级后会删除 PowerShell Core 6.x 和 7.0。
 >
 > `/usr/local/microsoft/powershell/6` 文件夹被替换为 `/usr/local/microsoft/powershell/7`。
 >
-> 如果需要与 PowerShell 7 并行运行 PowerShell 6，请使用[二进制存档](#binary-archives)方法重新安装 PowerShell 6。
+> 如果需要使用 PowerShell 7.1 并行运行 PowerShell Core 的更早版本，请使用[二进制存档](#binary-archives)方法安装所需的版本。
 
 可采用多种方法在 macOS 上安装 PowerShell。 选择下列方法之一：
 
@@ -35,7 +35,7 @@ PowerShell 支持 macOS 10.12 及更高版本。 PowerShell 7.0.3 及更高版�
 现在，可以开始安装 PowerShell：
 
 ```sh
-brew cask install powershell
+brew install --cask powershell
 ```
 
 最后，验证安装是否正常运行：
@@ -67,7 +67,7 @@ brew tap homebrew/cask-versions
 现在，可以开始安装 PowerShell：
 
 ```sh
-brew cask install powershell-preview
+brew install --cask powershell-preview
 ```
 
 最后，验证安装是否正常运行：
@@ -112,12 +112,12 @@ brew upgrade powershell
 
 ## <a name="installation-via-direct-download"></a>通过直接下载安装
 
-请从[版本][]页中将 PKG 包 `powershell-lts-7.0.3-osx-x64.pkg` 下载到 CentOS 计算机。
+请从[版本][]页中将 PKG 包 `powershell-7.1.0-osx-x64.pkg` 下载到 CentOS 计算机。
 
 可以双击文件并按照提示操作，或者从终端安装：
 
 ```sh
-sudo installer -pkg powershell-lts-7.0.3-osx-x64.pkg -target /
+sudo installer -pkg powershell-7.1.0-osx-x64.pkg -target /
 ```
 
 安装 [OpenSSL](#installing-dependencies). PowerShell 远程处理和 CIM 操作均需要 OpenSSL。
@@ -144,19 +144,19 @@ dotnet 工具安装程序将 `~/.dotnet/tools` 添加到 `PATH` 环境变量中�
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/7.0.3
+sudo mkdir -p /usr/local/microsoft/powershell/7.1.0
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.0.3
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.1.0
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/7.0.3/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/7.1.0/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/7.0.3/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/7.1.0/pwsh /usr/local/bin/pwsh
 ```
 
 ## <a name="installing-dependencies"></a>安装依赖关系
@@ -204,7 +204,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 ## <a name="paths"></a>路径
 
-- `$PSHOME` 是 `/usr/local/microsoft/powershell/7.0.3/`
+- `$PSHOME` 是 `/usr/local/microsoft/powershell/7.1.0/`
 - 将从 `~/.config/powershell/profile.ps1` 中读取用户配置文件
 - 将从 `$PSHOME/profile.ps1` 中读取默认配置文件
 - 将从 `~/.local/share/powershell/Modules` 中读取用户模块
@@ -216,7 +216,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 PowerShell 采用 macOS 上的 [XDG Base Directory 规范][xdg-bds]。
 
-由于 macOS 派生自 BSD，因此前缀为 `/usr/local`而不是 `/opt`。 因此，`$PSHOME` 是 `/usr/local/microsoft/powershell/7.0.3/`，且符号链接位于 `/usr/local/bin/pwsh` 中。
+由于 macOS 派生自 BSD，因此前缀为 `/usr/local`而不是 `/opt`。 因此，`$PSHOME` 是 `/usr/local/microsoft/powershell/7.1.0/`，且符号链接位于 `/usr/local/bin/pwsh` 中。
 
 ## <a name="installation-support"></a>安装支持
 

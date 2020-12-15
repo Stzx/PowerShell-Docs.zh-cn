@@ -2,12 +2,12 @@
 ms.date: 12/31/2019
 title: ISEOptions 对象
 description: ISEOptions 对象代表 Windows PowerShell ISE 的各种设置。
-ms.openlocfilehash: 4f790550796f40c7a2d4882cc0444fa7a55eeee9
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 9823a4a0ea32420d830735a0a61a6c03a6458fb7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661035"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391504"
 ---
 # <a name="the-iseoptions-object"></a>ISEOptions 对象
 
@@ -492,7 +492,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense = $true
 
 在 Windows PowerShell ISE 3.0 和更高版本中受支持，但不存在于早期版本中。
 
-指定将光标置于关键字中并按 <kbd>F1</kbd> 时是显示本地安装的帮助还是联机 TechNet 库帮助。 如果设置为 `$true`，那么弹出窗口会显示本地安装的帮助中的内容。 可以通过运行 `Update-Help` 命令安装帮助文件。 如果设置为 `$false`，则你的浏览器会在 TechNet 库中打开一个页面。
+指定将光标置于关键字中并按 <kbd>F1</kbd> 时，是显示本地安装的帮助还是联机帮助。 如果设置为 `$true`，那么弹出窗口会显示本地安装的帮助中的内容。 可以通过运行 `Update-Help` 命令安装帮助文件。 如果设置为 `$false`，则你的浏览器会在 docs.microsoft.com 上打开一个页面。
 
 ```powershell
 # Sets the option for the online help to be displayed.

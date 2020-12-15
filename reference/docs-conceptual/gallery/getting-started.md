@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: PowerShell 库入门
 description: 本文介绍如何开始使用 PowerShell 库和 PowerShellGet cmdlet
-ms.openlocfilehash: 02d84c64e39245b2a16c03029982796a74301bd6
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: a5045e4ecee2eb8bc9aa373a6b8ec3a940b4de33
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661417"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913266"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>PowerShell 库入门
 
@@ -90,10 +90,14 @@ PowerShell 库是一个包存储库，包含脚本、模块以及可供下载和
 PowerShell 库使用以下主机名。
 
 - `psg-prod-eastus.azureedge.net` - CDN 主机名
+- `az818661.vo.msecnd.net` - CDN 主机名
 - `devopsgallerystorage.blob.core.windows.net` - 存储帐户主机名
 - `*.powershellgallery.com` - 网站
+- `go.microsoft.com` - 重定向服务
 
 应将这些主机名添加到控制网络访问权限的允许列表中。
+
+[!INCLUDE [TLS 1.2 Requirement](../../includes/tls-gallery.md)]
 
 [Find-DscResource]: /powershell/module/powershellget/Find-DscResource
 [Find-Module]: /powershell/module/powershellget/Find-Module

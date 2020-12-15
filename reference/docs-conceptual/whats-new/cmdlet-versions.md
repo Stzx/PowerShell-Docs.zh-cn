@@ -3,23 +3,18 @@ ms.date: 02/03/2020
 keywords: powershell, 核心
 title: 模块和 cmdlet 发行历史记录
 description: 本文列出了 PowerShell 的各种版本包含的模块和 cmdlet。
-ms.openlocfilehash: 43ea0cde106e9f0aafe9c18726589f931724b35f
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: e79735e516c9aaa485c6513fb80de623014f06f5
+ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94342852"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810345"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>模块和 cmdlet 发行历史记录
 
 本文列出了 PowerShell 的各种版本包含的模块和 cmdlet。 这是发行说明中信息的摘要。 如需了解更多详情，请参阅发行说明：
 
 - [PowerShell 7.0 中的新增功能](what-s-new-in-powershell-70.md)
-- [PowerShell 6.2 中的新增功能](what-s-new-in-powershell-core-62.md)
-- [PowerShell 6.1 中的新增功能](what-s-new-in-powershell-core-61.md)
-- [PowerShell 6.0 中的新增功能](what-s-new-in-powershell-core-60.md)
-- [PowerShell 6.0 的中断性变更](breaking-changes-ps6.md)
-- [PowerShell 6.0 的已知问题](known-issues-ps6.md)
 
 本文正在编写中。 请帮助我们不断更新此信息。
 
@@ -45,7 +40,8 @@ ms.locfileid: "94342852"
 | PSDesiredStateConfiguration               | &check; | &check; | &check; | &check; |              |
 | PSDiagnostics                             | &check; | &check; | &check; | &check; | 仅限 Windows |
 | PSReadline 1.x                            | &check; |         |         |         | 仅限 Windows |
-| PSReadline 2.x                            |         | &check; | &check; | &check; |              |
+| PSReadline 2.0                            |         | &check; | &check; |         |              |
+| PSReadline 2.1                            |         |         |         | &check; |              |
 | PSScheduledJob                            | &check; |         |         |         | 仅限 Windows |
 | PSWorkflow                                | &check; |         |         |         | 仅限 Windows |
 | PSWorkflowUtility                         | &check; |         |         |         | 仅限 Windows |

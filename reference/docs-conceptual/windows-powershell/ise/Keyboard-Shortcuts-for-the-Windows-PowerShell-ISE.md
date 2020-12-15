@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 title: Windows PowerShell ISE 的键盘快捷方式
 description: 本文列出了在 PowerShell ISE 中使用的键盘快捷方式。
-ms.openlocfilehash: b7749f49d3ac2923b097e2ab94488263436980bd
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: d4e78c5e8e8e172ef3cdd30b0099d56ce6b6b01e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92663456"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391198"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Windows PowerShell ISE 的键盘快捷方式
 
@@ -19,7 +19,7 @@ ms.locfileid: "92663456"
 
 |              操作              |       键盘快捷方式       |                                                                                                                                                 用于                                                                                                                                                 |
 | -------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **帮助**                         | <kbd>F1</kbd>                  | 脚本窗格“ **重要提示** ”：你可以指定 <kbd>F1</kbd> 帮助来自 Web 上的 TechNet 库或下载的帮助（请参阅“`Update-Help`”）。 若要选择，请单击“工具”、“选项”，然后在“常规设置”选项卡上，设置或清除“使用本地帮助内容，而不是联机内容”。     |
+| **帮助**                         | <kbd>F1</kbd>                  | 脚本窗格“**重要提示**”：你可以指定 <kbd>F1</kbd> 帮助来自 docs.microsoft.com 还是下载的帮助（请参阅“`Update-Help`”）。 若要选择，请单击“工具”、“选项”，然后在“常规设置”选项卡上，设置或清除“使用本地帮助内容，而不是联机内容”。     |
 | **Copy**                         | <kbd>CTRL</kbd>+<kbd>C</kbd>   | 脚本窗格、命令窗格、输出窗格                                                                                                                                                                                                                                                                 |
 | **剪切**                          | <kbd>CTRL</kbd>+<kbd>X</kbd>   | 脚本窗格、命令窗格                                                                                                                                                                                                                                                                              |
 | **展开或折叠大纲** | <kbd>CTRL</kbd>+<kbd>M</kbd>   | 脚本窗格                                                                                                                                                                                                                                                                                            |
@@ -46,8 +46,8 @@ ms.locfileid: "92663456"
 | **运行**                      | <kbd>F5</kbd>                                                                                                                                                                                                                             |
 | **运行选定内容**            | <kbd>F8</kbd>                                                                                                                                                                                                                             |
 | **停止执行**           | <kbd>CTRL</kbd>+<kbd>BREAK</kbd>。 可以在上下文不明确时（未选定任何文本时）使用 <kbd>CTRL</kbd>+<kbd>C</kbd>。                                                                                              |
-| **Tab** （切换到下一个脚本）     | <kbd>CTRL</kbd>+<kbd>TAB</kbd> **注意：** 按 Tab 键切换到下一个脚本仅适用于打开一个 Windows PowerShell 选项卡或打开多个 Windows PowerShell 选项卡，但焦点在脚本窗格中的情况。               |
-| **Tab** （切换到上一个脚本） | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd> **注意：** 按 Tab 键切换到上一个脚本适用于仅打开一个 Windows PowerShell 选项卡或打开多个 Windows PowerShell 选项卡，但焦点在脚本窗格中的情况。 |
+| **Tab**（切换到下一个脚本）     | <kbd>CTRL</kbd>+<kbd>TAB</kbd> **注意：** 按 Tab 键切换到下一个脚本仅适用于打开一个 Windows PowerShell 选项卡或打开多个 Windows PowerShell 选项卡，但焦点在脚本窗格中的情况。               |
+| **Tab**（切换到上一个脚本） | <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>TAB</kbd> **注意：** 按 Tab 键切换到上一个脚本适用于仅打开一个 Windows PowerShell 选项卡或打开多个 Windows PowerShell 选项卡，但焦点在脚本窗格中的情况。 |
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>自定义视图的键盘快捷方式
 

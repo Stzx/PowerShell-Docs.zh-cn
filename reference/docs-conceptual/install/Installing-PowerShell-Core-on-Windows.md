@@ -1,13 +1,13 @@
 ---
 title: 在 Windows 上安装 PowerShell
 description: 介绍如何在 Windows 上安装 PowerShell
-ms.date: 10/30/2020
-ms.openlocfilehash: 825c9066d0a4e4734b9255514520b32f0876ecea
-ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
+ms.date: 11/11/2020
+ms.openlocfilehash: 039db904a315bd3ad3f4e1358d414c98c3a84be5
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93296382"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661420"
 ---
 # <a name="installing-powershell-on-windows"></a>在 Windows 上安装 PowerShell
 
@@ -30,8 +30,8 @@ Windows 7 SP1、Server 2008 R2 及更高版本支持最新版 PowerShell。
 
 MSI 文件如下所示：`PowerShell-<version>-win-<os-arch>.msi`。 例如：
 
-- `PowerShell-7.0.3-win-x64.msi`
-- `PowerShell-7.0.3-win-x86.msi`
+- `PowerShell-7.1.0-win-x64.msi`
+- `PowerShell-7.1.0-win-x86.msi`
 
 下载后，双击安装程序并按照提示进行操作。
 
@@ -41,13 +41,14 @@ MSI 文件如下所示：`PowerShell-<version>-win-<os-arch>.msi`。 例如：
 - 可以通过“开始”菜单或 `$env:ProgramFiles\PowerShell\<version>\pwsh.exe` 启动 PowerShell
 
 > [!NOTE]
-> PowerShell 7 安装到新目录，并与 Windows PowerShell 5.1 并行运行。 对于 PowerShell Core 6.x，PowerShell 7 是删除 PowerShell Core 6.x 的就地升级。
+> PowerShell 7.1 安装到新目录，并与 Windows PowerShell 5.1 并行运行。
+> PowerShell 7.1 是就地升级，升级后会替换 PowerShell 6.x 或 PowerShell 7.0。
 >
-> - PowerShell 7 安装到 `$env:ProgramFiles\PowerShell\7`
+> - PowerShell 7.1 安装到 `$env:ProgramFiles\PowerShell\7`
 > - `$env:ProgramFiles\PowerShell\7` 文件夹已添加到 `$env:PATH`
 > - `$env:ProgramFiles\PowerShell\6` 文件夹已删除
 >
-> 如果需要与 PowerShell 7 并行运行 PowerShell 6，请使用 [ZIP 安装](#zip)方法重新安装 PowerShell 6。
+> 如果需要与其他版本并行运行 PowerShell 7.1，请使用 [ZIP 安装](#zip)方法将其他版本安装到其他文件夹。
 
 ### <a name="administrative-install-from-the-command-line"></a>通过命令行进行管理安装
 
@@ -60,7 +61,7 @@ MSI 文件如下所示：`PowerShell-<version>-win-<os-arch>.msi`。 例如：
 下面的示例展示了如何在启用所有安装选项的情况下无提示安装 PowerShell。
 
 ```powershell
-msiexec.exe /package PowerShell-7.0.3-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.1.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 ```
 
 有关 `Msiexec.exe` 命令行选项的完整列表，请参阅[命令行选项](/windows/desktop/Msi/command-line-options)。
@@ -78,29 +79,14 @@ msiexec.exe /package PowerShell-7.0.3-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_ME
 
 管理员和开发人员可以使用此值查找 PowerShell 的路径。 所有预览版本和次要版本的 `<GUID>` 值都是相同的。 每个主要版本的 `<GUID>` 值都有所变化。
 
-## <a name="installing-the-msix-package"></a><a id="msix" />安装 MSIX 包
-
-> [!NOTE]
-> 目前并未正式支持 MSIX 包。 我们将继续构建此包，但仅会将其用于内部测试。
-
-要在 Windows 10 客户端上手动安装 MSIX 包，请从 GitHub [版本][版本]页下载 MSIX 包。 向下滚动到要安装的版本的“资产”部分。  “资产”部分可能处于折叠状态，因此可能需要单击使其展开。
-
-MSIX 文件类似于 - `PowerShell-<version>-win-<os-arch>.msix`
-
-必须使用 `Add-AppxPackage` cmdlet，才能安装此包。
-
-```powershell
-Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
-```
-
 ## <a name="installing-the-zip-package"></a><a id="zip" />安装 ZIP 包
 
 提供有 PowerShell 二进制 ZIP 存档，从而支持高级部署方案。 从[版本][版本]页下载以下 ZIP 存档之一。
 
-- PowerShell-7.0.3-win-x64.zip
-- PowerShell-7.0.3-win-x86.zip
-- PowerShell-7.0.3-win-arm64.zip
-- PowerShell-7.0.3-win-arm32.zip
+- PowerShell-7.1.0-win-x64.zip
+- PowerShell-7.1.0-win-x86.zip
+- PowerShell-7.1.0-win-arm64.zip
+- PowerShell-7.1.0-win-arm32.zip
 
 根据该文件的下载方式，你可能需要使用 `Unblock-File` cmdlet 解锁。 将内容解压到你选择的位置，然后从该位置运行 `pwsh.exe`。 与安装 MSI 包不一样，安装 ZIP 存档不会检查先决条件。 为了让使用 WSMan 的远程处理能够正常运行，请确保已满足[先决条件](#prerequisites)。
 
@@ -239,7 +225,7 @@ dotnet 工具安装程序将 `$env:USERPROFILE\dotnet\tools` 添加到 `$env:PAT
    ```Output
    Name               Id                           Version
    ---------------------------------------------------------------
-   PowerShell         Microsoft.PowerShell         7.0.3
+   PowerShell         Microsoft.PowerShell         7.1.0
    PowerShell-Preview Microsoft.PowerShell-Preview 7.1.0-preview.5
    ```
 
@@ -249,6 +235,39 @@ dotnet 工具安装程序将 `$env:USERPROFILE\dotnet\tools` 添加到 `$env:PAT
    winget install --name PowerShell --exact
    winget install --name PowerShell-Preview --exact
    ```
+
+## <a name="installing-from-the-microsoft-store"></a><a id="msix" />从 Microsoft Store 安装
+
+PowerShell 7.1 已发布到 Microsoft Store。 你可以在 [Microsoft Store](https://www.microsoft.com/store/apps/9MZ1SNWT0N5D) 网站上或在 Windows 应用商店应用程序中找到 PowerShell 版本。
+
+Microsoft Store 包的权益：
+
+- 直接内置于 Windows 10 的自动更新
+- 与其他软件分发机制（如 Intune 和 SCCM）集成
+
+的限制：
+
+MSIX 包在应用程序沙盒中运行，后者用于虚拟化对某些文件系统和注册表位置的访问。
+
+- HKEY_CURRENT_USER 下的所有注册表更改都将在写入到专用、每个用户、每个应用位置时进行复制。 因此，这些值不能用于其他应用程序。
+- 不能修改存储在 `$PSHOME` 中的任何系统级配置设置。 其中包括 WSMAN 配置。 这可以防止远程会话连接到 PowerShell 的基于应用商店的安装。 支持用户级配置和 SSH 远程处理。
+
+有关详细信息，请参阅[了解打包的桌面应用如何在 Windows 上运行](/windows/msix/desktop/desktop-to-uwp-behind-the-scenes)。
+
+### <a name="using-the-msix-package"></a>使用 MSIX 包
+
+> [!NOTE]
+> PowerShell 的预览版本包含一个 MSIX 包。 MSIX 包尚未获得正式支持。 生成此包的目的是为了在预览期间进行测试。
+
+要在 Windows 10 客户端上手动安装 MSIX 包，请从 GitHub [版本][版本]页下载 MSIX 包。 向下滚动到要安装的版本的“资产”部分。  “资产”部分可能处于折叠状态，因此可能需要单击使其展开。
+
+MSIX 文件类似于 - `PowerShell-<version>-win-<os-arch>.msix`
+
+必须使用 `Add-AppxPackage` cmdlet，才能安装此包。
+
+```powershell
+Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
+```
 
 ## <a name="how-to-create-a-remoting-endpoint"></a>如何创建远程处理终结点
 

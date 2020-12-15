@@ -1,14 +1,14 @@
 ---
-ms.date: 06/12/2017
+ms.date: 11/09/2020
 keywords: dsc,powershell,配置,安装程序
 title: 初始启动时使用 DSC 配置虚拟机
 description: 本文介绍了如何在初始启动时使用 DSC 配置虚拟机
-ms.openlocfilehash: 9fa8c4a21486aaef87e1c0a3097e5983a378d98d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 09449053ff085209dec6ccbfa800e5d112d1c769
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92656205"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389991"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>初始启动时使用 DSC 配置虚拟机
 
@@ -18,11 +18,11 @@ ms.locfileid: "92656205"
 ## <a name="requirements"></a>要求
 
 > [!NOTE]
-> 本主题所述的 DSCAutomationHostEnabled 注册表项在 PowerShell 4.0 中不可用。 有关如何在初始启动时于 PowerShell 4.0 中配置新虚拟机的信息，请参阅[想要在初始启动时使用 DSC 自动配置计算机？](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
+> 本主题所述的 DSCAutomationHostEnabled 注册表项在 PowerShell 4.0 中不可用。 有关如何在初始启动时于 PowerShell 4.0 中配置新虚拟机的信息，请参阅[想要在初始启动时使用 DSC 自动配置计算机？](https://devblogs.microsoft.com/powershell/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
 
 若要运行这些示例，则需要：
 
-- 要使用的可启动 VHD。 可以在 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)下载具有 Windows Server 2016 评估副本的 ISO。
+- 要使用的可启动 VHD。 可以在[评估中心](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)下载具有 Windows Server 2016 评估副本的 ISO。
   可以在[创建可启动虚拟硬盘](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10))处找到有关如何从 ISO 映像创建 VHD 的说明。
 - 已启用 Hyper-V 的主计算机。 有关信息，请参阅 [Hyper-V 概述](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))。
 
@@ -69,7 +69,7 @@ Configuration SampleIISInstall
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
    ```
 
-1. 在运行 PowerShell 5.0 或更高版本的计算机上，将以上配置 ( **SampleIISInstall** ) 保存为 PowerShell 脚本 (.ps1) 文件。
+1. 在运行 PowerShell 5.0 或更高版本的计算机上，将以上配置 (**SampleIISInstall**) 保存为 PowerShell 脚本 (.ps1) 文件。
 
 1. 在 PowerShell 控制台中，导航到保存 .ps1 文件的文件夹。
 
@@ -101,7 +101,7 @@ Configuration SampleIISInstall
 
 还可通过将元配置注入 VHD 作为其 `MetaConfig.mof` 文件，从而在初始启动时配置计算机以请求配置（请参阅[配置本地配置管理器 (LCM)](../managing-nodes/metaConfig.md)）。 如果将 DSCAutomationHostEnabled 注册表项设置为 2（默认值），则在首次启动计算机时，DSC 会将由 `MetaConfig.mof` 定义的元配置应用到 LCM。 如果元配置指定 LCM 应从请求服务器请求配置，则计算机将尝试在初始启动时从该请求服务器请求配置。 有关设置 DSC 请求服务器的信息，请参阅[设置 DSC Web 请求服务器](../pull-server/pullServer.md)。
 
-对于此示例，我们将使用上一节中所述的配置 ( **SampleIISInstall** )，以及以下元配置：
+对于此示例，我们将使用上一节中所述的配置 (**SampleIISInstall**)，以及以下元配置：
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -135,7 +135,7 @@ configuration PullClientBootstrap
 
 1. [设置 DSC Web 请求服务器](../pull-server/pullServer.md)，并将 SampleIISInstall 配置保存到相应的文件夹。
 
-1. 在运行 PowerShell 5.0 或更高版本的计算机上，将以上元配置 ( **PullClientBootstrap** ) 保存为 PowerShell 脚本 (.ps1) 文件。
+1. 在运行 PowerShell 5.0 或更高版本的计算机上，将以上元配置 (**PullClientBootstrap**) 保存为 PowerShell 脚本 (.ps1) 文件。
 
 1. 在 PowerShell 控制台中，导航到保存 .ps1 文件的文件夹。
 
@@ -177,25 +177,18 @@ configuration PullClientBootstrap
 1. 通过调用 `reg load` 从 VHD 加载注册表 `HKLM\Software` 子项。
 
    ```powershell
-   reg load HKLM\Vhd E:\Windows\System32\Config\Software`
+   reg load HKLM\Vhd E:\Windows\System32\Config\Software
    ```
 
-1. 使用 PowerShell 注册表提供程序导航到 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`。
+1. 在加载的配置单元中将 `DSCAutomationHostEnabled` 的值更改为 0。
 
    ```powershell
-   Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System`
+   reg add "HKLM\Vhd\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DSCAutomationHostEnabled /t REG_DWORD /d 0 /f
    ```
 
-1. 将 `DSCAutomationHostEnabled` 的值更改为 0。
+1. 通过运行以下命令来卸载注册表：
 
    ```powershell
-   Set-ItemProperty -Path . -Name DSCAutomationHostEnabled -Value 0
-   ```
-
-5. 通过运行以下命令来卸载注册表：
-
-   ```powershell
-   [gc]::Collect()
    reg unload HKLM\Vhd
    ```
 

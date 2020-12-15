@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 12/01/2020
 title: 联系库管理员
 description: 本文介绍了如何以及何时与 PowerShell 库的管理员联系
-ms.openlocfilehash: 500fff8ccc8f595d92b66e79c64ebf5e66185313
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 6e3dccc44242e451fc6062aad6b8ae5a0ca54a9d
+ms.sourcegitcommit: 62282bb9c36fea3b4290b9263c1cd8e9ac216e29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661173"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96470360"
 ---
 # <a name="contact-gallery-administrators"></a>联系库管理员
 
@@ -25,4 +25,4 @@ ms.locfileid: "92661173"
 
 1. 向我们 (cgadmin@microsoft.com) 发送电子邮件。
 1. 如果要报告包的滥用行为，可在左面板上的包信息下方找到“报告滥用行为”链接。
-1. 有关库的其他常规问题，请将问题提交到 [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell)
+1. 有关库的任何其他常规问题，请将问题提交到 GitHub 上的 [PowerShell 库问题](https://github.com/PowerShell/PowerShellGallery/issues)页面。

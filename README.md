@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d94024926a8ff8c33df08b4a8b58e9f8b0430f9b
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 61a70db9ae7a38d6731f1cefb011072c12d1e39a
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514912"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开放源代码行为准则
 
@@ -34,9 +34,9 @@ ms.locfileid: "93239878"
 - `assets` - 包含文档中链接的可下载文件
 - `reference` - 包含发布到 [docs.microsoft.com]([https://docs.microsoft.com/powershell/scripting/) 的文档。 这包括引用和概念内容。
   - `5.1` - 包含 PowerShell 5.1 的 cmdlet 参考和“关于”主题
-  - `6` - 包含 PowerShell 6 的 cmdlet 参考和“关于”主题
   - `7.0` - 包含 PowerShell 7.0 的 cmdlet 参考和“关于”主题
   - `7.1` - 包含 PowerShell 7.1 的 cmdlet 参考和“关于”主题
+  - `7.2` - 包含 PowerShell 7.2 的 cmdlet 参考和“关于”主题（预览版）
   - `bread` - 包含用于痕迹导航的 TOC
   - `docs-conceptual` - 包含发布到 Docs 站点的概念文章。 通常，文件夹结构会建立目录 (TOC) 镜像。
   - `mapping` - 包含生成系统使用的版本映射配置

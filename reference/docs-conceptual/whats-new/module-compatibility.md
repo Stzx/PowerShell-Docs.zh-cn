@@ -2,12 +2,12 @@
 title: PowerShell 7 模块兼容性
 ms.date: 02/03/2020
 description: 本文列出了 PowerShell 7 的状态，其中包含为其他 Microsoft 产品发布的 Powershell 模块。
-ms.openlocfilehash: f845b33881c93fa076d97adf101f4f3e006df73b
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 718ba0f502a23bc2c2a9268d65d3b8129de0af49
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501620"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661369"
 ---
 # <a name="powershell-7-module-compatibility"></a>PowerShell 7 模块兼容性
 
@@ -75,7 +75,7 @@ Install-WindowsFeature -Name ActiveDirectory
 | AppBackgroundTask                  | 本机兼容                  | Windows 10 1903+                   |
 | AppLocker                          | 未使用兼容性层进行测试    |                                    |
 | AppvClient                         | 未使用兼容性层进行测试    |                                    |
-| Appx                               | 本机兼容                  | Windows Server 1809+<br>Windows 10 1809+ |
+| Appx                               | 本机兼容**                | Windows Server 1809+<br>Windows 10 1809+<br>**必须在 PowerShell 7.1 中使用兼容性层 |
 | AssignedAccess                     | 本机兼容                  | Windows 10 1809+                   |
 | BestPractices                      | 不受兼容性层支持 |                                    |
 | BitLocker                          | 本机兼容                  | 具有 BitLocker 的 Windows Server 1809+<br>Windows 10 1809+ |

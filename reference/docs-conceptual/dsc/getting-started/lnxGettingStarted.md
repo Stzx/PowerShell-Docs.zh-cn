@@ -1,14 +1,14 @@
 ---
-ms.date: 06/12/2017
+ms.date: 11/20/2020
 keywords: dsc,powershell,配置,安装程序
 title: 适用于 Linux 的 Desired State Configuration (DSC) 入门
 description: 本主题说明如何开始使用适用于 Linux 的 PowerShell Desired State Configuration (DSC)。
-ms.openlocfilehash: 826707654a297306c39d4dfcfd3941f56b7cf91d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: df9cab07284a7d6fa199f5524a8719ea490192d0
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92651116"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514994"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>适用于 Linux 的 Desired State Configuration (DSC) 入门
 
@@ -24,7 +24,7 @@ ms.locfileid: "92651116"
 - Oracle Linux 5、6 和 7 (x86/x64)
 - Red Hat Enterprise Linux Server 5、6 和 7 (x86/x64)
 - SUSE Linux Enterprise Server 10、11 和 12 (x86/x64)
-- Ubuntu Server 12.04 LTS、14.04 LTS 和 16.04 LTS (x86/x64)
+- Ubuntu Server 12.04 LTS、14.04 LTS、16.04 LTS、18.04 (x86/x64)
 
 ## <a name="installing-dsc-for-linux"></a>安装适用于 Linux 的 DSC
 
@@ -45,7 +45,7 @@ ms.locfileid: "92651116"
 
 ### <a name="installing-dsc"></a>安装 DSC
 
-适用于 Linux 的 DSC 可从存储库中的 [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294) 存储库下载。
+适用于 Linux 的 DSC 可从存储库中的 [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-926) 存储库下载。
 
 若要安装 DSC，请安装适用于 Linux 系统（.rpm 或.deb）和 OpenSSL 版本（ssl_098 或 ssl_100）以及体系结构 (x64/x86) 的程序包。 RPM 程序包适用于 CentOS、Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Oracle Linux。 DEB 程序包适用于 Debian GNU/Linux 和 Ubuntu Server。 ssl_098 程序包适用于安装了 OpenSSL 0.9.8 的计算机，而 ssl_100 程序包适用于安装了 OpenSSL 1.0 的计算机。
 

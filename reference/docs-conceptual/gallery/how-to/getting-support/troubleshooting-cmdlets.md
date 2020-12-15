@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 12/01/2020
 title: cmdlet 故障排除
 description: 本文提供了有关使用 PowerShell 库排查错误的信息和步骤
-ms.openlocfilehash: db9e58c185c6f3bca26ff3639af85fa2dba48909
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 980da8ea7b8a09513f33a9939d512c437b755d8d
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661056"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913312"
 ---
 # <a name="troubleshooting-cmdlets"></a>cmdlet 故障排除
 
@@ -21,12 +21,15 @@ Launch new PowerShell Console
 Update-Module Azure -Verbose
 ```
 
-### <a name="required-network-endpoints"></a>所需的网络终结点
+## <a name="required-network-endpoints"></a>所需的网络终结点
 
 安装和更新 cmdlet 需要通过 Internet 访问连接 PowerShell 库使用的网络终结点。 请确保网络访问策略允许连接以下终结点。
 
-- oneget.org
-- go.microsoft.com
-- az818661.vo.msecnd.net
-- www.powershellgallery.com
-- devopsgallerystorage.blob.core.windows.net
+- `psg-prod-eastus.azureedge.net` - CDN 主机名
+- `az818661.vo.msecnd.net` - CDN 主机名
+- `devopsgallerystorage.blob.core.windows.net` - 存储帐户主机名
+- `*.powershellgallery.com` - 网站
+- `go.microsoft.com` - 重定向服务
+
+> [!NOTE]
+> 当 PowerShell 库服务发生中断时，与 PowerShell 库进行交互的 cmdlet 可能会失败，并出现意外错误。 若要查看 PowerShell 库的当前状态，请参阅 GitHub 上的 [PowerShell 库状态](https://github.com/PowerShell/PowerShellGallery/blob/master/psgallery_status.md)页面。

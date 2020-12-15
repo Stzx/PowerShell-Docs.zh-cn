@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 创建自定义输入框
 description: 本文介绍如何使用 Windows PowerShell 中的 .NET Framework 窗体构建功能创建自定义输入框。
-ms.openlocfilehash: 18fba743b169010936d2ea83dca4e95203664fe9
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: b7786706d2461c329da429c1bd4971d7dc874d6d
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500549"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390076"
 ---
 # <a name="creating-a-custom-input-box"></a>创建自定义输入框
 
@@ -66,7 +66,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-该脚本首先加载两个 .NET Framework 类： **System.Drawing** 和 **System.Windows.Forms** 。 然后，启动 .NET Framework 类 **System.Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
+该脚本首先加载两个 .NET Framework 类：**System.Drawing** 和 **System.Windows.Forms**。 然后，启动 .NET Framework 类 **System.Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
 
 ```powershell
 $form = New-Object System.Windows.Forms.Form
@@ -78,7 +78,7 @@ $form = New-Object System.Windows.Forms.Form
 
 - **大小。** 这是窗体的大小（以像素为单位）。 上述脚本创建的窗体大小为宽 300 像素、高 200 像素。
 
-- **StartingPosition。** 在上述脚本中，此可选属性将设置为 **CenterScreen** 。
+- **StartingPosition。** 在上述脚本中，此可选属性将设置为 **CenterScreen**。
   如果未添加此属性，Windows 将在窗体打开时选择一个位置。 通过将 StartingPosition 设置为 CenterScreen，可使窗体在每次加载时都自动显示在屏幕中间 。
 
 ```powershell
@@ -121,7 +121,7 @@ $label.Text = 'Please enter the information in the space below:'
 $form.Controls.Add($label)
 ```
 
-添加控件（在本例中为文本框），从而让用户提供你在标签文本中描述的信息。 除了文本框，你还可以应用许多其他控件；有关更多控件，请参阅 MSDN 上的 [System.Windows.Forms 命名空间](/dotnet/api/system.windows.forms)。
+添加控件（在本例中为文本框），从而让用户提供你在标签文本中描述的信息。 除了文本框，你还可以应用许多其他控件；有关更多控件，请参阅 [System.Windows.Forms 命名空间](/dotnet/api/system.windows.forms)。
 
 ```powershell
 $textBox = New-Object System.Windows.Forms.TextBox
@@ -148,7 +148,7 @@ $form.Add_Shown({$textBox.Select()})
 $result = $form.ShowDialog()
 ```
 
-最后，  按钮或按“Enter”  键后，Windows 应如何处理该窗体。
+最后，**If** 块内的代码指示在用户在文本框中提供文本，然后单击“确定”按钮或按“Enter”键后，Windows 应如何处理该窗体。
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)

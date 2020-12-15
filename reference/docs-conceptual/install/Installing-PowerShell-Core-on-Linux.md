@@ -1,13 +1,13 @@
 ---
 title: 在 Linux 上安装 PowerShell
 description: 介绍如何在各种 Linux 分发版上安装 PowerShell
-ms.date: 07/30/2020
-ms.openlocfilehash: f35366b5b1a0f54ce2c90d0e3cba59be7b9ce82c
-ms.sourcegitcommit: 2ca12827dc64198b4263e8873a45b9466f22a67c
+ms.date: 12/10/2020
+ms.openlocfilehash: 1bf96bc6bfb3f6544d8a4fd5b287dd6d659691ec
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92079789"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97069863"
 ---
 # <a name="installing-powershell-on-linux"></a>在 Linux 上安装 PowerShell
 
@@ -25,10 +25,21 @@ GitHub [版本][]页面上提供有所有可用包。 安装包以后，从终�
 [snap]: #snap-package
 [tar]: #binary-archives
 
-官方支持的版本
+<!-- TODO: Update for supported releases v7.0 & v7.1 -->
+
+适用于 PowerShell 7.1 的官方支持平台版本
+
+- Ubuntu 16.04/18.04/20.04（包括 ARM64）
+- Ubuntu 19.10（通过 Snap 包）
+- Debian 9/10
+- CentOS 和 RHEL 7/8
+- Fedora 30
+- Alpine 3.11+（包括 ARM64）
+
+适用于 PowerShell 7.0 的官方支持平台版本
 
 - Ubuntu 16.04
-- Ubuntu 18.04
+- Ubuntu 18.04 和 20.04
 - Debian 8
 - Debian 9
 - Debian 10
@@ -44,7 +55,7 @@ GitHub [版本][]页面上提供有所有可用包。 安装包以后，从终�
 社区支持的版本
 
 - Ubuntu 18.10
-- Ubuntu 19.04
+- Ubuntu 19.10 和 20.10
 - Arch Linux
 - Kali
 - Raspbian（试验版）
@@ -54,13 +65,6 @@ GitHub [版本][]页面上提供有所有可用包。 安装包以后，从终�
 - Snap 包
 - 二进制存档
 - .NET 全局工具
-
-目前不支持
-
-- Ubuntu 20.04
-
-> [!NOTE]
-> PowerShell 仅支持 .NET 支持的发行版。 有关支持的发行版列表，请参阅 [.NET Core 发行说明][distros]。 如果有未在此处列出的 .NET 支持的发行版，可以请求添加对该发行版的支持。 请使用[发行版支持请求][]模板来提交请求。
 
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
@@ -74,7 +78,7 @@ GitHub [版本][]页面上提供有所有可用包。 安装包以后，从终�
 # Update the list of packages
 sudo apt-get update
 # Install pre-requisite packages.
-sudo apt-get install -y wget apt-transport-https
+sudo apt-get install -y wget apt-transport-https software-properties-common
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 # Register the Microsoft repository GPG keys
@@ -91,12 +95,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>通过直接下载进行安装 - Ubuntu 16.04
 
-从[版本][]页中将 Debian 包 `powershell-lts_7.0.3-1.ubuntu.16.04_amd64.deb` 下载到 Ubuntu 计算机。
+从[版本][]页中将 Debian 包 `powershell_7.1.0-1.ubuntu.16.04_amd64.deb` 下载到 Ubuntu 计算机。
 
 然后在终端中执行以下命令：
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.3-1.ubuntu.16.04_amd64.deb
+sudo dpkg -i powershell_7.1.0-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -121,7 +125,7 @@ sudo apt-get remove powershell
 # Update the list of packages
 sudo apt-get update
 # Install pre-requisite packages.
-sudo apt-get install -y wget apt-transport-https
+sudo apt-get install -y wget apt-transport-https software-properties-common
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 # Register the Microsoft repository GPG keys
@@ -140,12 +144,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>通过直接下载安装 - Ubuntu 18.04
 
-从[版本][]页中将 Debian 包 `powershell-lts_7.0.3-1.ubuntu.18.04_amd64.deb` 下载到 Ubuntu 计算机。
+从[版本][]页中将 Debian 包 `powershell_7.1.0-1.ubuntu.18.04_amd64.deb` 下载到 Ubuntu 计算机。
 
 然后在终端中执行以下命令：
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.3-1.ubuntu.18.04_amd64.deb
+sudo dpkg -i powershell_7.1.0-1.ubuntu.18.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -158,6 +162,55 @@ sudo apt-get install -f
 sudo apt-get remove powershell
 ```
 
+## <a name="ubuntu-2004"></a>Ubuntu 20.04
+
+### <a name="installation-via-package-repository---ubuntu-2004"></a>通过包存储库安装 - Ubuntu 20.04
+
+为简化安装和更新，已将适用于 Linux 的 PowerShell 发布到包存储库。
+
+首选方法如下所示：
+
+```sh
+# Update the list of packages
+sudo apt-get update
+# Install pre-requisite packages.
+sudo apt-get install -y wget apt-transport-https software-properties-common
+# Download the Microsoft repository GPG keys
+wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
+# Register the Microsoft repository GPG keys
+sudo dpkg -i packages-microsoft-prod.deb
+# Update the list of products
+sudo apt-get update
+# Enable the "universe" repositories
+sudo add-apt-repository universe
+# Install PowerShell
+sudo apt-get install -y powershell
+# Start PowerShell
+pwsh
+```
+
+以超级用户身份注册 Microsoft 存储库一次。 注册后，可以通过 `sudo apt-get install powershell` 更新 PowerShell。
+
+### <a name="installation-via-direct-download---ubuntu-2004"></a>通过直接下载进行安装 - Ubuntu 20.04
+
+从[版本][]页中将 Debian 包 `powershell_7.1.0-1.ubuntu.20.04_amd64.deb` 下载到 Ubuntu 计算机。
+
+然后在终端中执行以下命令：
+
+```sh
+sudo dpkg -i powershell_7.1.0-1.ubuntu.20.04_amd64.deb
+sudo apt-get install -f
+```
+
+> [!NOTE]
+> `dpkg -i` 命令失败，未满足依赖项。 下一命令 `apt-get install -f` 解决此类问题，然后完成 PowerShell 包配置。
+
+### <a name="uninstallation---ubuntu-2004"></a>卸载 - Ubuntu 20.04
+
+```sh
+sudo apt-get remove powershell
+```
+
 ## <a name="ubuntu-1810"></a>Ubuntu 18.10
 
 安装是通过 `snapd` 受到支持。 有关说明，请参阅 [Snap 包][snap]。
@@ -165,16 +218,12 @@ sudo apt-get remove powershell
 > [!NOTE]
 > Ubuntu 18.10 是[支持社区](../powershell-support-lifecycle.md)的[过渡版本](https://www.ubuntu.com/about/release-cycle)。
 
-## <a name="ubuntu-1904"></a>Ubuntu 19.04
+## <a name="ubuntu-1910-and-2010"></a>Ubuntu 19.10 和 20.10
 
 安装是通过 `snapd` 受到支持。 有关说明，请参阅 [Snap 包][snap]。
 
 > [!NOTE]
-> Ubuntu 19.04 是[社区支持](../powershell-support-lifecycle.md)的[过渡版本](https://www.ubuntu.com/about/release-cycle)。
-
-## <a name="ubuntu-2004"></a>Ubuntu 20.04
-
-Ubuntu 20.04 是一个 LTS 版本。 PowerShell 当前不支持此版本。 正在考虑在 PowerShell 7.1 中添加对此版本此支持。 如果希望支持 Ubuntu 20.04，请投票支持此[请求](https://github.com/PowerShell/PowerShell/issues/12626)。
+> Ubuntu 19.10 是[社区支持](../powershell-support-lifecycle.md)的[过渡版本](https://www.ubuntu.com/about/release-cycle)。
 
 ## <a name="debian-8"></a>Debian 8
 
@@ -240,12 +289,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-9"></a>通过直接下载进行安装 - Debian 9
 
-从[版本][]页中将 Debian 包 `powershell-lts_7.0.3-1.debian.9_amd64.deb` 下载到 Debian 计算机。
+从[版本][]页中将 Debian 包 `powershell_7.1.0-1.debian.9_amd64.deb` 下载到 Debian 计算机。
 
 然后在终端中执行以下命令：
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.3-1.debian.9_amd64.deb
+sudo dpkg -i powershell_7.1.0-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -285,7 +334,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-10"></a>通过直接下载进行安装 - Debian 10
 
-从[版本][]页中将 tar.gz 包 `powershell-7.0.3-linux-x64.tar.gz` 下载到 Debian 计算机。
+从[版本][]页中将 tar.gz 包 `powershell-7.1.0-linux-x64.tar.gz` 下载到 Debian 计算机。
 
 然后在终端中执行以下命令：
 
@@ -307,7 +356,7 @@ sudo apt-get install -y \
         curl
 
 # Download the powershell '.tar.gz' archive
-curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -332,7 +381,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>通过直接下载进行安装 - Alpine 3.9 和 3.10
 
-从[版本][]页中将 tar.gz 包 `powershell-7.0.3-linux-alpine-x64.tar.gz` 下载到 Alpine 计算机。
+从[版本][]页中将 tar.gz 包 `powershell-7.1.0-linux-alpine-x64.tar.gz` 下载到 Alpine 计算机。
 
 然后在终端中执行以下命令：
 
@@ -357,7 +406,7 @@ sudo apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache \
     lttng-ust
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -399,18 +448,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---centos-7"></a>通过直接下载进行安装 - CentOS 7
 
-使用 [CentOS 7][]时，请从[版本][]页中将 RPM 包 `powershell-lts-7.0.3-1.rhel.7.x86_64.rpm` 下载到 CentOS 计算机。
+使用 [CentOS 7][]时，请从[版本][]页中将 RPM 包 `powershell-7.1.0-1.rhel.7.x86_64.rpm` 下载到 CentOS 计算机。
 
 然后在终端中执行以下命令：
 
 ```sh
-sudo yum install powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 无需该中间下载步骤即可安装 RPM：
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---centos-7"></a>卸载 - CentOS 7
@@ -442,18 +491,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>通过直接下载进行安装 - Red Hat Enterprise Linux (RHEL) 7
 
-从[版本][]页中将 RPM 包 `powershell-lts-7.0.3-1.rhel.7.x86_64.rpm` 下载到 Red Hat Enterprise Linux 计算机。
+从[版本][]页中将 RPM 包 `powershell-7.1.0-1.rhel.7.x86_64.rpm` 下载到 Red Hat Enterprise Linux 计算机。
 
 然后在终端中执行以下命令：
 
 ```sh
-sudo yum install powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 无需该中间下载步骤即可安装 RPM：
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a>卸载 - Red Hat Enterprise Linux (RHEL) 7
@@ -471,7 +520,7 @@ sudo yum remove powershell
 zypper update && zypper --non-interactive install curl tar libicu52_1
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -496,7 +545,7 @@ pwsh
 zypper update && zypper --non-interactive install curl tar gzip libopenssl1_0_0 libicu60_2
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -554,20 +603,20 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-28-29-and-30"></a>通过直接下载进行安装 - Fedora 28、Fedora 29 和 Fedora 30
 
-从[版本][]页中将 RPM 包 `powershell-7.0.3-1.rhel.7.x86_64.rpm` 下载到 Fedora 计算机。
+从[版本][]页中将 RPM 包 `powershell-7.1.0-1.rhel.7.x86_64.rpm` 下载到 Fedora 计算机。
 
 然后在终端中执行以下命令：
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install powershell-7.0.3-1.rhel.7.x86_64.rpm
+sudo dnf install powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 无需该中间下载步骤即可安装 RPM：
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-1.rhel.7.x86_64.rpm
+sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---fedora-28-29-and-30"></a>卸载 - Fedora 28、Fedora 29 和 Fedora 30
@@ -690,13 +739,13 @@ sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
 # Download and extract PowerShell
 
 # Grab the latest tar.gz
-wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-arm32.tar.gz
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-arm32.tar.gz
 
 # Make folder to put powershell
 mkdir ~/powershell
 
 # Unpack the tar.gz file
-tar -xvf ./powershell-7.0.3-linux-arm32.tar.gz -C ~/powershell
+tar -xvf ./powershell-7.1.0-linux-arm32.tar.gz -C ~/powershell
 
 # Start PowerShell
 ~/powershell/pwsh
@@ -776,7 +825,7 @@ PowerShell 为所有 Linux 分发版生成可移植二进制文件。 但是对�
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -819,4 +868,4 @@ Microsoft 支持本文档中的安装方法。 其他源可能会提供其他安
 [版本]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 [distros]: https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md#linux
-[发行版支持请求]: https://github.com/PowerShell/PowerShell/issues/new?assignees=&labels=Distribution-Request&template=Distribution_Request.md&title=Distribution+Support+Request
+[Distribution Support Request]: https://github.com/PowerShell/PowerShell/issues/new?assignees=&labels=Distribution-Request&template=Distribution_Request.md&title=Distribution+Support+Request

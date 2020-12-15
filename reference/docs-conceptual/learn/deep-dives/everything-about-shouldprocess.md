@@ -3,12 +3,12 @@ title: 关于 ShouldProcess 的各项须知内容
 description: ShouldProcess 是一项经常被忽略的重要功能。 借助 WhatIf 和 Confirm 参数，可以将其轻松添加到函数中。
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 6bd4dbd5255203f2daf804163aa2a84d992d6697
-ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
+ms.openlocfilehash: 4f11ad84f5c89423fe56cfe438ed3cb1587ce59e
+ms.sourcegitcommit: be1df0bf757d734975a9aa021727608a396059ee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86469729"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616040"
 ---
 # <a name="everything-you-wanted-to-know-about-shouldprocess"></a>关于 ShouldProcess 的各项须知内容
 
@@ -128,7 +128,7 @@ What if: Performing the operation "Remove File" on target "C:\Temp\myfile1.txt".
 function Test-ShouldProcess {
     [CmdletBinding(SupportsShouldProcess)]
     param()
-    Remove-Item .\myfile1.txt -WhatIf:$WhatIf
+    Remove-Item .\myfile1.txt -WhatIf:$WhatIfPreference
 }
 ```
 
@@ -228,7 +228,7 @@ What if: MESSAGE
 
 ### <a name="shouldprocessreason"></a>ShouldProcessReason
 
-第四个重载比其他重载的功能更强大。 它可获取执行 `ShouldProcess` 的原因。 我在这里添加此内容只是为了内容完整，因为我们也可以直接查看 `$WhatIf` 是否为 `$true`。
+第四个重载比其他重载的功能更强大。 它可获取执行 `ShouldProcess` 的原因。 我在这里添加此内容只是为了内容完整，因为我们也可以直接查看 `$WhatIfPreference` 是否为 `$true`。
 
 ```powershell
 $reason = ''
@@ -428,7 +428,7 @@ Error: Test-ShouldProcess: A parameter cannot be found that matches parameter na
 Test-ShouldProcess -Confirm:$false
 ```
 
-并非每个人都能意识到他们需要这么做，`-Confirm:$false` 并不会取消 `ShouldContinue`。
+并非每个人都能意识到他们需要这么做，`-Force` 并不会取消 `ShouldContinue`。
 所以，我们应实现 `-Force` 以使用户易于理解。 请看下面的完整示例：
 
 ```powershell
@@ -441,7 +441,7 @@ function Test-ShouldProcess {
         [Switch]$Force
     )
 
-    if ($Force -and -not $Confirm){
+    if ($Force){
         $ConfirmPreference = 'None'
     }
 
@@ -451,7 +451,7 @@ function Test-ShouldProcess {
 }
 ```
 
-我们添加自己的 `-Force` 开关作为参数，并使用 `$Confirm` 自动参数，该参数在 `CmdletBinding` 中添加 `SupportsShouldProcess` 时可用。
+我们添加自己的 `-Force` 开关作为一个参数。 在 `CmdletBinding` 中使用 `SupportsShouldProcess` 时，会自动添加 `-Confirm` 参数。
 
 ```powershell
 [CmdletBinding(
@@ -466,15 +466,15 @@ param(
 请关注这里的 `-Force` 逻辑：
 
 ```powershell
-if ($Force -and -not $Confirm){
+if ($Force){
     $ConfirmPreference = 'None'
 }
 ```
 
-如果用户指定了 `-Force`，我们希望取消确认提示，除非他们还指定了 `-Confirm`。 这允许用户强制进行更改，但仍会确认更改。 然后我们在本地作用域中设置 `$ConfirmPreference`，在这里我们调用 `ShouldProcess` 来发现它。
+如果用户指定了 `-Force`，我们希望取消确认提示，除非他们还指定了 `-Confirm`。 这允许用户强制进行更改，但仍会确认更改。 然后，在本地作用域中设置 `$ConfirmPreference`。 现在，使用 `-Force` 参数暂时将 `$ConfirmPreference` 设置为“none”，以禁用确认提示。
 
 ```powershell
-if ($PSCmdlet.ShouldProcess('TARGET')){
+if ($Force -or $PSCmdlet.ShouldProcess('TARGET')){
         Write-Output "Some Action"
     }
 ```

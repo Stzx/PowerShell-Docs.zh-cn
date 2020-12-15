@@ -2,14 +2,14 @@
 ms.date: 01/02/2020
 title: 探究 Windows PowerShell ISE
 description: 本文概述了 Windows PowerShell ISE 的功能
-ms.topic: landing-page
+ms.topic: conceptual
 ms.custom: ISE-F1-page
-ms.openlocfilehash: 4ef3f471f11c2f1de818491a193fcf34201cb04a
-ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
+ms.openlocfilehash: 91161763c817972a62b4da1558a7ca119d8c8616
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93296359"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97090440"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>探究 Windows PowerShell ISE
 
@@ -17,7 +17,7 @@ ms.locfileid: "93296359"
 
 ## <a name="menu-bar"></a>菜单栏
 
-菜单栏包含“ **文件** ”、“ **编辑** ”、“ **视图** ”、“ **工具** ”、“ **调试** ”、“ **加载项** ”和“ **帮助** ”菜单。 菜单上的按钮允许执行与编写和运行脚本以及在 Windows PowerShell ISE 中运行命令相关的任务。 此外，可以运行使用 [ISE 对象模型层次结构](object-model/The-ISE-Object-Model-Hierarchy.md)的脚本，将[加载项工具](object-model/The-ISEAddOnTool-Object.md)置于菜单栏中。
+菜单栏包含“**文件**”、“**编辑**”、“**视图**”、“**工具**”、“**调试**”、“**加载项**”和“**帮助**”菜单。 菜单上的按钮允许执行与编写和运行脚本以及在 Windows PowerShell ISE 中运行命令相关的任务。 此外，可以运行使用 [ISE 对象模型层次结构](object-model/The-ISE-Object-Model-Hierarchy.md)的脚本，将[加载项工具](object-model/The-ISEAddOnTool-Object.md)置于菜单栏中。
 
 ## <a name="windows-powershell-tabs"></a>Windows PowerShell 选项卡
 
@@ -79,7 +79,8 @@ Windows PowerShell 选项卡是 Windows PowerShell 脚本可在其中运行的�
 
 ## <a name="help"></a>帮助
 
-可在 Web 上的 TechNet 库中找到有关 Windows PowerShell ISE 的帮助。 可以通过单击“帮助”菜单上的“Windows PowerShell ISE 帮助”打开帮助，或通过在任意位置（光标在脚本窗格或控制台窗格中的 cmdlet 名称上时除外）按 <kbd>F1</kbd> 键打开帮助。 从“帮助”菜单还可以运行 `Update-Help` cmdlet 和显示命令窗口，该命令窗口可显示某个 cmdlet 的所有参数并允许你在易于使用的窗体中填写参数，从而帮助你构造命令。
+可在 docs.microsoft.com 上找到有关 Windows PowerShell ISE 的帮助。 可以通过单击“帮助”菜单上的“Windows PowerShell ISE 帮助”打开帮助，或通过在任意位置（光标在脚本窗格或控制台窗格中的 cmdlet 名称上时除外）按 <kbd>F1</kbd> 键打开帮助。
+从“帮助”菜单还可以运行 `Update-Help` cmdlet 和显示命令窗口，该命令窗口可显示某个 cmdlet 的所有参数并允许你在易于使用的窗体中填写参数，从而帮助你构造命令。
 
 ## <a name="see-also"></a>另请参阅
 

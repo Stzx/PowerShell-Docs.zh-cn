@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 从列表框中选择项
 description: 本文介绍如何使用 Windows PowerShell 中的 .NET Framework 窗体构建功能创建列表框控件。
-ms.openlocfilehash: cfd6110a9cfcc3cea891d68d8ce7be5b332a949a
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: d6f881f0b92f294da105ae7df5e25e8c20ce5094
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501042"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391232"
 ---
 # <a name="selecting-items-from-a-list-box"></a>从列表框中选择项
 
@@ -75,7 +75,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-该脚本首先加载两个 .NET Framework 类： **System.Drawing** 和 **System.Windows.Forms** 。 然后，启动 .NET Framework 类 **System.Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
+该脚本首先加载两个 .NET Framework 类：**System.Drawing** 和 **System.Windows.Forms**。 然后，启动 .NET Framework 类 **System.Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms
@@ -88,7 +88,7 @@ Add-Type -AssemblyName System.Drawing
 
 - **大小。** 这是窗体的大小（以像素为单位）。 上述脚本创建的窗体大小为宽 300 像素、高 200 像素。
 
-- **StartingPosition。** 在上述脚本中，此可选属性将设置为 **CenterScreen** 。
+- **StartingPosition。** 在上述脚本中，此可选属性将设置为 **CenterScreen**。
   如果未添加此属性，Windows 将在窗体打开时选择一个位置。 通过将 StartingPosition 设置为 CenterScreen，可使窗体在每次加载时都自动显示在屏幕中间 。
 
 ```powershell
@@ -131,7 +131,7 @@ $label.Text = 'Please select a computer:'
 $form.Controls.Add($label)
 ```
 
-添加控件（在本例中为列表框），从而让用户提供你在标签文本中描述的信息。 除了文本框，你还可以应用许多其他控件；有关更多控件，请参阅 MSDN 上的 [System.Windows.Forms 命名空间](/dotnet/api/system.windows.forms)。
+添加控件（在本例中为列表框），从而让用户提供你在标签文本中描述的信息。 除了列表框，你还可以应用许多其他控件；有关更多控件，请参阅 [System.Windows.Forms 命名空间](/dotnet/api/system.windows.forms)。
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.ListBox
@@ -168,7 +168,7 @@ $form.Topmost = $true
 $result = $form.ShowDialog()
 ```
 
-最后，  按钮或按“Enter”  键后，Windows 应如何处理该窗体。
+最后，**If** 块内的代码指示在用户从列表框中选择某个选项，然后单击“确定”按钮或按“Enter”键后，Windows 应如何处理该窗体。
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
@@ -181,4 +181,4 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ## <a name="see-also"></a>另请参阅
 
 - [GitHub：Dave Wyatt 的 WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell 本周提示：从列表框中选择项](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))
+- [本周 Windows PowerShell 提示：从列表框中选择项](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))

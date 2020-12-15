@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 多选列表框
 description: 本文介绍如何使用 Windows PowerShell 中的 .NET Framework 窗体构建功能创建多选列表框控件。
-ms.openlocfilehash: e11d1f545f748e0503b92c02bc7a101d8014bd96
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 2724188695f054d1115b385987cda8a578c102de
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500277"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391521"
 ---
 # <a name="multiple-selection-list-boxes"></a>多选列表框
 
@@ -74,7 +74,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-该脚本首先加载两个 .NET Framework 类： **System.Drawing** 和 **System.Windows.Forms** 。 然后，启动 .NET Framework 类 **System.Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
+该脚本首先加载两个 .NET Framework 类：**System.Drawing** 和 **System.Windows.Forms**。 然后，启动 .NET Framework 类 **System.Windows.Forms.Form** 的新实例；它提供一个可以开始添加控件的空白窗体或窗口。
 
 ```powershell
 $form = New-Object System.Windows.Forms.Form
@@ -86,7 +86,8 @@ $form = New-Object System.Windows.Forms.Form
 
 - **大小。** 这是窗体的大小（以像素为单位）。 上述脚本创建的窗体大小为宽 300 像素、高 200 像素。
 
-- **StartingPosition。** 在上述脚本中，此可选属性将设置为 **CenterScreen** 。 如果未添加此属性，Windows 将在窗体打开时选择一个位置。 通过将 StartingPosition 设置为 CenterScreen，可使窗体在每次加载时都自动显示在屏幕中间 。
+- **StartingPosition。** 在上述脚本中，此可选属性将设置为 **CenterScreen**。
+  如果未添加此属性，Windows 将在窗体打开时选择一个位置。 通过将 StartingPosition 设置为 CenterScreen，可使窗体在每次加载时都自动显示在屏幕中间 。
 
 ```powershell
 $form.Text = 'Data Entry Form'
@@ -128,7 +129,7 @@ $label.Text = 'Please make a selection from the list below:'
 $form.Controls.Add($label)
 ```
 
-添加控件（在本例中为列表框），从而让用户提供你在标签文本中描述的信息。 除了文本框，你还可以应用许多其他控件；有关更多控件，请参阅 MSDN 上的 [System.Windows.Forms 命名空间](https://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx)。
+添加控件（在本例中为列表框），从而让用户提供你在标签文本中描述的信息。 除了文本框，你还可以应用许多其他控件；有关更多控件，请参阅 [System.Windows.Forms 命名空间](/dotnet/api/system.windows.forms)。
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.Listbox
@@ -171,7 +172,7 @@ $form.Topmost = $true
 $result = $form.ShowDialog()
 ```
 
-最后， **If** 块内的代码指示在用户从列表框中选择一个或多个选项，然后单击“确定”  按钮或按“Enter”  键后，Windows 应如何处理该窗体。
+最后，**If** 块内的代码指示在用户从列表框中选择一个或多个选项，然后单击“确定”  按钮或按“Enter”  键后，Windows 应如何处理该窗体。
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
@@ -183,6 +184,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>另请参阅
 
-- [周末脚本编写器：修复 PowerShell GUI 示例](https://go.microsoft.com/fwlink/?LinkId=506644)
+- [周末脚本编写器：修复 PowerShell GUI 示例](https://devblogs.microsoft.com/scripting/weekend-scripter-fixing-powershell-gui-examples/)
 - [GitHub：Dave Wyatt 的 WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell 本周提示：多选列表框 - 还有更多！](https://technet.microsoft.com/library/ff730950.aspx)
+- [本周 Windows PowerShell 提示：多选列表框 - 还有更多！](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730950(v=technet.10))

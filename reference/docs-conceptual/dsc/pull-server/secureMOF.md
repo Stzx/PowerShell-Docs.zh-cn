@@ -3,12 +3,12 @@ ms.date: 07/06/2020
 keywords: dsc,powershell,配置,安装程序
 title: 保护 MOF 文件
 description: 本文介绍了如何确保目标节点已加密 MOF 文件。
-ms.openlocfilehash: e8b495a5c3c18dca5cde29cbbcf7d3f3cdab8f48
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: ca94a901468626e5644880574457d899a012d311
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92662792"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97090341"
 ---
 # <a name="securing-the-mof-file"></a>保护 MOF 文件
 
@@ -25,10 +25,10 @@ DSC 通过应用存储于 MOF 文件中的信息来管理服务器节点的配�
 
 要成功加密所用凭据以保护 DSC 配置，请确保你有以下各项：
 
-- **颁发和分发证书的方法** 。 本主题及其中示例假定你使用 Active Directory 证书颁发机构。 有关 Active Directory 证书服务的更多背景信息，请参阅 [Active Directory 证书服务概述](https://technet.microsoft.com/library/hh831740.aspx)和 [Windows Server 2008 中的 Active Directory 证书服务](https://technet.microsoft.com/windowsserver/dd448615.aspx)。
-- **对目标节点的管理访问权限** 。
-- **每个目标节点的个人存储区中均保存了可加密的证书** 。 在 Windows PowerShell 中，该存储区的路径为 Cert:\LocalMachine\My。 本主题中的示例使用“工作站身份验证”模板，你可以在[默认证书模板](https://technet.microsoft.com/library/cc740061(v=WS.10).aspx)中找到它（以及其他证书模板）。
-- 如果你将在计算机而不是目标节点上运行此配置，请 **导出证书的公钥** ，然后将其导入到你将要从中运行配置的计算机。 请确保仅导出 **公** 钥；保护私钥安全。
+- **颁发和分发证书的方法**。 本主题及其中示例假定你使用 Active Directory 证书颁发机构。 有关 Active Directory 证书服务的更多背景信息，请参阅 [Active Directory 证书服务概述](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))。
+- **对目标节点的管理访问权限**。
+- **每个目标节点的个人存储区中均保存了可加密的证书**。 在 Windows PowerShell 中，该存储区的路径为 Cert:\LocalMachine\My。 本主题中的示例使用“工作站身份验证”模板，你可以在[默认证书模板](/previous-versions/windows/it-pro/windows-server-2003/cc740061(v=ws.10))中找到它（以及其他证书模板）。
+- 如果你将在计算机而不是目标节点上运行此配置，请 **导出证书的公钥**，然后将其导入到你将要从中运行配置的计算机。 请确保仅导出 **公** 钥；保护私钥安全。
 
 > [!NOTE]
 > 当涉及加密时，脚本资源具有限制。 有关详细信息，请参阅[脚本资源](../reference/resources/windows/scriptResource.md#known-limitations)
@@ -46,10 +46,10 @@ DSC 通过应用存储于 MOF 文件中的信息来管理服务器节点的配�
 
 若要执行凭据加密，公钥证书必须在受用于创作 DSC 配置的计算机 **信任** 的 _目标节点_ 上可用。 若要将此公钥证书用于 DSC 凭据加密，它需具有以下特定要求：
 
-1. **密钥用法** ：
+1. **密钥用法**：
    - 必须包含：“KeyEncipherment”和“DataEncipherment”。
    - 不应包含：“数字签名”。
-1. **增强型密钥用法** ：
+1. **增强型密钥用法**：
    - 必须包含：文档加密 (1.3.6.1.4.1.311.80.1)。
    - 不应包含：客户端身份验证 (1.3.6.1.5.5.7.3.2) 和服务器身份验证 (1.3.6.1.5.5.7.3.1)。
 1. 证书的私钥在*目标节点_上可用。
@@ -88,12 +88,12 @@ $cert = New-SelfSignedCertificate -Type DocumentEncryptionCertLegacyCsp -DnsName
 $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 ```
 
-一旦导出完成，需要将 `DscPublicKey.cer` 复制到 **创作节点** 。
+一旦导出完成，需要将 `DscPublicKey.cer` 复制到 **创作节点**。
 
 > 目标节点：Windows Server 2012 R2/Windows 8.1 及更早版本
 
 > [!WARNING]
-> 因为 Windows 10 和 Windows Server 2016 之前版本的 Windows 操作系统上的 `New-SelfSignedCertificate` cmdlet 不支持 Type 参数，因此，在这些操作系统上创建此证书需要其他方法。 在这种情况下，可以使用 `makecert.exe` 或者 `certutil.exe` 来创建证书。 一种替代方法是从 Microsoft 脚本中心下载 [New-SelfSignedCertificateEx.ps1](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 脚本并改为使用它来创建证书：
+> 因为 Windows 10 和 Windows Server 2016 之前版本的 Windows 操作系统上的 `New-SelfSignedCertificate` cmdlet 不支持 Type 参数，因此，在这些操作系统上创建此证书需要其他方法。 在这种情况下，可以使用 `makecert.exe` 或者 `certutil.exe` 来创建证书。 本示例使用 Microsoft 脚本中心中的 [New-SelfSignedCertificateEx.ps1](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 脚本作为创建证书的替代方法。 PowerShell 库的 [PSPKI](https://www.powershellgallery.com/packages/PSPKI/) 模块中提供了此脚本的更新版本。
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session
@@ -119,7 +119,7 @@ $Cert = Get-ChildItem -Path cert:\LocalMachine\My | Where-Object {
 $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 ```
 
-一旦导出完成，需要将 ```DscPublicKey.cer``` 复制到 **创作节点** 。
+一旦导出完成，需要将 ```DscPublicKey.cer``` 复制到 **创作节点**。
 
 #### <a name="on-the-authoring-node-import-the-certs-public-key"></a>在创作节点上：导入证书的公钥
 
@@ -154,7 +154,7 @@ $cert | Remove-Item -Force
 Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cert:\LocalMachine\My
 ```
 
-一旦导出完成，需要将 `DscPrivateKey.pfx` 复制到 **目标节点** 。
+一旦导出完成，需要将 `DscPrivateKey.pfx` 复制到 **目标节点**。
 
 > 目标节点：Windows Server 2012 R2/Windows 8.1 及更早版本
 
