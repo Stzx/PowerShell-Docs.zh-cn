@@ -287,7 +287,7 @@ Microsoft 支持本文档中的安装方法。 其他源可能会提供其他安
 <!-- link references -->
 
 [版本]: https://github.com/PowerShell/PowerShell/releases
-[latest]: https://github.com/PowerShell/PowerShell/releases/latest
+[最新]: https://github.com/PowerShell/PowerShell/releases/latest
 [ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
